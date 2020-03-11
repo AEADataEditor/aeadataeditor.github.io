@@ -7,14 +7,20 @@ The AEA Data Editor defines and monitors the AEA's approach to data and reproduc
 
 > Most readers will want to continue to the [Detailed guidance on various topics](aea-de-guidance/).
 
-- Various reports by the AEA Data Editor
+## Editor
+
+The current Data Editor (2018-) is [Lars Vilhuber](https://lars.vilhuber.com) ([Cornell University](https://www.ilr.cornell.edu/people/lars-vilhuber)). 
+
+## Important information
+The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). Data and code deposits by the AEA Data Editor can be [found here](https://www.openicpsr.org/openicpsr/search/aea/studies?start=0&ARCHIVE=aea&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=vilhuber).
+
+## Various reports by the AEA Data Editor
   - [2018 report](https://github.com/AEADataEditor/report-aea-data-editor-2018) ([published version](https://doi.org/10.1257/pandp.109.718))
   - [2019 report](https://github.com/AEADataEditor/report-aea-data-editor-2019-final) (published version)
   - [Report on migration of supplements](aea-supplement-migration/programs/aea201910-migration.html)
 
-The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). Data and code deposits by the AEA Data Editor can be [found here](https://www.openicpsr.org/openicpsr/search/aea/studies?start=0&ARCHIVE=aea&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=vilhuber).
-
-The current Data Editor (2018-) is [Lars Vilhuber](https://lars.vilhuber.com) ([Cornell University](https://www.ilr.cornell.edu/people/lars-vilhuber)). 
+## Selected other documents and statements by the AEA Data Editor
+- [My formal response](https://www.aeaweb.org/content/file?id=11689) to OSTP’s "[Request for Public Comment on Draft Desirable Characteristics of Repositories for Managing and Sharing Data Resulting from Federally Funded Research](https://www.federalregister.gov/documents/2020/01/17/2020-00689/request-for-public-comment-on-draft-desirable-characteristics-of-repositories-for-managing-and)" ([85 FR 3085](https://www.federalregister.gov/documents/2020/01/17/2020-00689/request-for-public-comment-on-draft-desirable-characteristics-of-repositories-for-managing-and))
 
 
 <a href="https://twitter.com/aeadata?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aeadata</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
