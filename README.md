@@ -3,9 +3,19 @@
 
 These  web pages provide unofficial and developing guidance on the implementation of the American Economic Association (AEA)'s Data and Code Availability Policy. 
 
-The AEA Data Editor defines and monitors the AEA's approach to data and reproducibility. The [2019 Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code), which was [announced on July 16, 2019](https://www.aeaweb.org/news/member-announcements-july-16-2019), outlines specifics for authors. [Data citations](https://www.aeaweb.org/journals/policies/sample-references) are an important component of the policy, as is [compliance with registration requirements](https://www.aeaweb.org/journals/policies/rct-registry).
+The AEA Data Editor defines and monitors the AEA's approach to data and reproducibility. The [2019 Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code) (also [here](/DCAP/)), which was [announced on July 16, 2019](https://www.aeaweb.org/news/member-announcements-july-16-2019), outlines specifics for authors. [Data citations](https://www.aeaweb.org/journals/policies/sample-references) are an important component of the policy, as is [compliance with registration requirements](https://www.aeaweb.org/journals/policies/rct-registry).
+
+---
+
+## Quicklinks
 
 > Most readers will want to continue to the [Detailed guidance on various topics](aea-de-guidance/).
+> -  **[template README](aea-de-guidance/template-README.md)**
+> - [Data Citation Guidance](aea-de-guidance/addtl-data-citation-guidance.md)
+> - [Replication template](replication-template/REPLICATION.md)
+> - **[FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)** and  **[additional (draft) FAQ on this site](aea-de-guidance/FAQ.md)**
+
+---
 
 ## Editor
 
