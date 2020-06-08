@@ -27,7 +27,7 @@ The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/ae
 
 ## Various reports by the AEA Data Editor
   - [2018 report](https://github.com/AEADataEditor/report-aea-data-editor-2018) ([published version](https://doi.org/10.1257/pandp.109.718))
-  - [2019 report](https://github.com/AEADataEditor/report-aea-data-editor-2019-final) (published version)
+  - [2019 report](https://github.com/AEADataEditor/report-aea-data-editor-2019-final) ([published version](https://doi.org/10.1257/pandp.110.764)
   - [Report on migration of supplements](aea-supplement-migration/programs/aea201910-migration.html)
 
 ## Selected other documents and statements by the AEA Data Editor
