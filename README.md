@@ -27,10 +27,12 @@ The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/ae
 
 ## Various reports by the AEA Data Editor
   - [2018 report](https://github.com/AEADataEditor/report-aea-data-editor-2018) ([published version](https://doi.org/10.1257/pandp.109.718))
-  - [2019 report](https://github.com/AEADataEditor/report-aea-data-editor-2019-final) ([published version](https://doi.org/10.1257/pandp.110.764)
+  - [2019 report](https://github.com/AEADataEditor/report-aea-data-editor-2019-final) ([published version](https://doi.org/10.1257/pandp.110.764))
   - [Report on migration of supplements](aea-supplement-migration/programs/aea201910-migration.html)
 
 ## Selected other documents and statements by the AEA Data Editor
+- [Joint statement](assets/Final_AEACGR_DataEditor_Comment-EPA-20200417.pdf) with the [AEA Committee on Economic Statistics](https://www.aeaweb.org/about-aea/committees/economic-statistics) on EPA's proposed rulemaking on Strengthening Transparency in Regulatory
+Science ([Docket No. EPA-HQ-OA-2018-0259](https://www.federalregister.gov/documents/2020/03/18/2020-05012/strengthening-transparency-in-regulatory-science))
 - [My formal response](https://www.aeaweb.org/content/file?id=11689) to OSTP’s "[Request for Public Comment on Draft Desirable Characteristics of Repositories for Managing and Sharing Data Resulting from Federally Funded Research](https://www.federalregister.gov/documents/2020/01/17/2020-00689/request-for-public-comment-on-draft-desirable-characteristics-of-repositories-for-managing-and)" ([85 FR 3085](https://www.federalregister.gov/documents/2020/01/17/2020-00689/request-for-public-comment-on-draft-desirable-characteristics-of-repositories-for-managing-and))
 
 
