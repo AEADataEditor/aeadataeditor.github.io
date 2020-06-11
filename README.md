@@ -10,11 +10,11 @@ The AEA Data Editor defines and monitors the AEA's approach to data and reproduc
 ## Quicklinks
 
 > Most readers will want to continue to the [Detailed guidance on various topics](aea-de-guidance/).
-> -  **[Template README](aea-de-guidance/template-README.md)**
-> - [Data Citation Guidance](aea-de-guidance/addtl-data-citation-guidance.md)
-> - [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) and [detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.md)
+> -  **[Template README](https://social-science-data-editors.github.io/guidance/template-README.html)**
+> - [Data Citation Guidance](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)
+> - [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) and [detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.html)
 > - [Replication template](replication-template/REPLICATION.md)
-> - **[FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)** and  **[additional (draft) FAQ on this site](aea-de-guidance/FAQ.md)**
+> - **[FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)** and  **[additional (draft) FAQ on this site](aea-de-guidance/FAQ.html)**
 
 ---
 
@@ -23,7 +23,7 @@ The AEA Data Editor defines and monitors the AEA's approach to data and reproduc
 The current Data Editor (2018-) is [Lars Vilhuber](https://lars.vilhuber.com) ([Cornell University](https://www.ilr.cornell.edu/people/lars-vilhuber)). 
 
 ## Important information
-The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). [Detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.md) is available. Data and code deposits by the AEA Data Editor can be [found here](https://www.openicpsr.org/openicpsr/search/aea/studies?start=0&ARCHIVE=aea&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=vilhuber).
+The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). [Detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.html) is available. Data and code deposits by the AEA Data Editor can be [found here](https://www.openicpsr.org/openicpsr/search/aea/studies?start=0&ARCHIVE=aea&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=vilhuber).
 
 ## Various reports by the AEA Data Editor
   - [2018 report](https://github.com/AEADataEditor/report-aea-data-editor-2018) ([published version](https://doi.org/10.1257/pandp.109.718))
