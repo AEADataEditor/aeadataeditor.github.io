@@ -16,7 +16,7 @@ The data underlying the analysis is administrative data from various state agenc
 
 ![AEJ:Policy 20170262 README](../assets/aejpolicy-2020-05-leung-readme.png)
 
-We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution ([@Upjohninstitute](https://www.upjohn.org)) who was not involved in the research.
+We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution ([@Upjohninstitute](https://www.upjohn.org)) who was not involved in the original research.
 
 The authors connected us with a research associate at their institution who had legal access to the data. The procedure happened, as much as possible, at arms-length: the 3rd-party replicator followed only written instructions that are publicly available, as per our [protocol](https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html).
 
@@ -24,7 +24,7 @@ In fact, all information and code came from the researchers' replication archive
 
 ![AEJ:Policy 20170262 openICPSR](../assets/aejpolicy-2020-05-leung-openicpsr.png)
 
-That's because the replicator identified and suggested multiple (small) edits to README and programs, to make the replication easier for subsequent replicators. 
+That's because the replicator identified and suggested multiple (small, but meaningful) edits to README and programs, to make the replication easier for subsequent replicators. 
 
 They also identified (minor) various numerical discrepancies, typically at the 3rd decimal place, that we tracked down to  differences in the versions of the Stata package [`rdrobust`](https://sites.google.com/site/rdpackages/rdrobust). After discussions with `rdrobust` authors and manuscript authors, the replication package now contains the exact version of `rdrobust` used for the analysis. 
 
