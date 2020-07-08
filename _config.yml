@@ -6,3 +6,6 @@ show_downloads: false
 collections:
         next:
                 output: true
+gems:
+        - jekyll-relative-links
+
