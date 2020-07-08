@@ -14,7 +14,7 @@ See the [Social Science Data Editors' Licensing Guidance](https://social-science
 
 ### Openness required
 
-For the purpose of replicability, the AEA will insist on an open license that allows for replication by researchers unconnected to the original parties, to the extent allowed by other agreements and the law.
+For the purpose of replicability, the AEA will require on an open license that allows for replication by researchers unconnected to the original parties, to the extent allowed by other agreements and the law.
 
 ### Data-only repositories
 
