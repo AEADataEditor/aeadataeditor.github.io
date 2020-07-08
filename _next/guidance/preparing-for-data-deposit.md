@@ -4,7 +4,7 @@ layout: withtoc
 ---
 
 This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here
-is not specific to our journals - in fact, we will link to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
+is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
 
 ## Data Citations
 
@@ -13,10 +13,11 @@ manuscript.
 
 ### What to cite
 
-All datasets actively used in your replication package must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit.
+All datasets actively used in your replication package must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
 
-- Guidance for data citations
-- Guidance on how to cite the data you collected
+- [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#distributor)
+- [Guidance on how to cite the data you collected](data-deposit-aea.html#citing)
+
 
 ### Where to cite
 
@@ -74,9 +75,16 @@ Ideally, once you have prepared your replication package, you should re-run the 
 
 Once you are done preparing your replication package, you should upload it:
 
-- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see list), but replication packages should meet the [display guidelines](guidelines-other-repositories.md). 
-- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see this FAQ).
+- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](../policy/guidelines-other-repositories.md). 
+- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](../faq.html)).
 - if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it **must** be made available on a trusted repository - other methods are then no longer acceptable.
 
-If you are ready, you can proceed to [upload to the AEA Data and Code Repository].
+Before proceeding, do check:
+
+- [ ] your manuscript includes data citations 
+- [ ] you have prepared a README that provides all the relevant information, as per the [README template](https://social-science-data-editors.github.io/guidance/template-README.html) 
+- [ ] your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.
+- [ ] your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.
+
+If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea.md).
 

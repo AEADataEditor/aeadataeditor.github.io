@@ -1,12 +1,12 @@
 ---
-title: Special rules for  papers conducting experiments and collecting primary data
+title: Supplemental policy for  papers conducting experiments and collecting primary data
 layout: withtoc
 ---
 
 For experimental papers and papers that collect primary data via surveys, additional rules apply. 
 We normally expect authors of such articles to supply the following supplementary
-materials (any exceptions to this policy should be requested at the time
-of submission):
+materials, in addition to the materials required by the standard [Data and Code Availability Policy](dcap2020.md). Any exceptions to this policy should be requested at the time
+of submission.
 
 Original Instructions
 ---------------------
