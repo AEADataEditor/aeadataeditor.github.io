@@ -1,4 +1,7 @@
-# Data and Code Availability Policy: Frequently Asked Questions
+---
+title: Data and Code Availability Policy: Frequently Asked Questions
+layout: withtoc
+---
 
 ## Administrative questions
 

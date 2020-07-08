@@ -1,3 +1,7 @@
+---
+title: Index of drafts
+---
+
 - [faq.md](faq.md)
 - [guidance/policy-application.md](guidance/policy-application.md)
 - [guidance/data-deposit-aea.md](guidance/data-deposit-aea.md)

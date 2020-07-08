@@ -1,4 +1,7 @@
-# Policy and Protocol for Third-party Verifications
+---
+title: Policy and Protocol for Third-party Verifications
+layout: withtoc
+---
 
 This protocol describes how third parties can, at the request of the AEA Data Editor, conduct a reproducibility check of materials that are part of an AEA publication. 
 

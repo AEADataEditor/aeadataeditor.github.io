@@ -1,2 +1,6 @@
 #!/bin/bash
-find  -name \*.md | sed 's+\./++' | awk ' { print "- [" $1 "](" $1 ")" } ' > index.md
+echo "---
+title: Index of drafts
+---" > index.md
+
+find  -name \*.md | sed 's+\./++' | awk ' { print "- [" $1 "](" $1 ")" } ' >> index.md

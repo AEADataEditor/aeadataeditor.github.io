@@ -1,5 +1,7 @@
-Special rules for  papers conducting experiments and collecting primary data
-===========================================================================
+---
+title: Special rules for  papers conducting experiments and collecting primary data
+layout: withtoc
+---
 
 For experimental papers and papers that collect primary data via surveys, additional rules apply. 
 We normally expect authors of such articles to supply the following supplementary
