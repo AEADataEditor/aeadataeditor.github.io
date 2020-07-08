@@ -6,6 +6,7 @@ show_downloads: false
 collections:
         next:
                 output: true
-gems:
+plugins:
         - jekyll-relative-links
+        - jekyll-redirect-from
 
