@@ -3,3 +3,6 @@ title: AEA Data Editor
 description: The AEA Data Editor's mission is to design and oversee the AEA journals' strategy for archiving and curating research data and promoting reproducible research.
 logo: assets/thumbnail_website_logo.jpg
 show_downloads: false
+collections:
+        next:
+                output: true
