@@ -15,7 +15,8 @@ The following steps outline what you should expect after conditional acceptance 
    - If changes need to be made, the report is communicated to the authors, who make changes, until the replication package is accepted.
 
 
-```mermaid
+
+<div class="mermaid">
 sequenceDiagram;
     autonumber;
     participant Author;
@@ -51,5 +52,4 @@ sequenceDiagram;
     note right of Editorial Office: copyediting;
     Editorial Office -->> ICPSR: Publishes deposit;
 
-```
-
+</div>
