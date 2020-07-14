@@ -62,6 +62,9 @@ When the replication package relies on confidential data that cannot be shared, 
 - prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved))
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
 - ensure that replicators have detailed instructions on how to combine the two packages 
+- specify  which (if any) of the results in their paper can be reproduced without the confidential data. 
+
+Authors might want to investigate the  possibility of providing "fake" data that might allow replicators to run code, without obtaining meaningful results (functionality test). 
 
 The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed) describes a related issue.
 
