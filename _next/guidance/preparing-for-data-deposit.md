@@ -16,7 +16,7 @@ manuscript.
 All datasets actively used in your replication package must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
 
 - [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#distributor)
-- [Guidance on how to cite the data you collected](data-deposit-aea.html#citing)
+- [Guidance on how to cite the data you collected](data-deposit-aea.html#citing-your-deposit)
 
 
 ### Where to cite
