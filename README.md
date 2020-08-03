@@ -18,6 +18,12 @@ The AEA Data Editor defines and monitors the AEA's approach to data and reproduc
 
 ---
 
+## Ongoing Projects
+
+- Migration of legacy replication packages (pending last packages). See [results from previous migration](https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html)
+- Improvement of metadata on migrated packages (see [additional info](surveys/improving-metadata.md))
+- development of standardized README for social science journals (draft [README](https://social-science-data-editors.github.io/template_README/) available)
+
 ## Editor
 
 The current Data Editor (2018-) is [Lars Vilhuber](https://lars.vilhuber.com) ([Cornell University](https://www.ilr.cornell.edu/people/lars-vilhuber)). 
