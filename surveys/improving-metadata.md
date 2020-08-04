@@ -28,3 +28,25 @@ While immediately making these replication packages findable through [Google Dat
 ## Request to Authors
 
 Authors have the best knowledge of the data they used. We are thus asking authors to enter additional metadata through an online form. Once the project is completed, all metadata provided will be integrated with the openICPSR database, and will henceforth become available publicly.
+
+## Frequently asked questions
+
+Also see the [Twitter thread on this topic](https://twitter.com/AeaData/status/1290465041498726400).
+
+### FAQ 1
+
+> Deposit is not actually a data set, just code that simulates data
+
+*Answer*: Still a deposit. Add "program source code" under "Data type.
+
+### FAQ 2
+
+> The replication package does not contain data (confidentiality). I cannot share the data from that paper.
+
+*Answer*: You can still identify metadata like **geographic area** and **time period** covered by the replication package.
+
+### FAQ 3
+
+> I don’t know what you mean by providing additional metadata for a set of *.do files and README with no data.
+
+*Answer*: See [FAQ 1], and add info about the **data sources** into the metadata (it's not searchable if hidden in the README)
