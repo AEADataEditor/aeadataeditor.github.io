@@ -49,12 +49,14 @@ The AEA Data Editor will review the metadata associated with the new version. Ho
 
 ### Version of Record and Linking
 
-The version of record is immutable. However, the AEA manuscript landing page and associated metadata will link to an updated deposit if
+The AEA manuscript landing page and associated metadata will link to the version of record. The version of record is the version as of publication of the article.
 
-- the changes are minimal (e.g. clarity of documentation in README or code)
-- unambiguously do not affect the computation of the tables and figures in the manuscript
+However, the AEA will adjust the version of record if 
 
-The AEA manuscript landing page and associated metadata will link to the original version of record if
+- the changes to the deposit are minimal (e.g. clarity of documentation in README or code)
+- the changes to the deposit unambiguously do not affect the computation of the tables and figures in the manuscript
+
+The AEA manuscript landing page and associated metadata will not change the version of record if
 
 - any new data or code is provided, even if it improves the overall reproducibility of the package
 - any modification to code or data has the potential to change tables and figures, even if it improves the overall reproducibility of the package
