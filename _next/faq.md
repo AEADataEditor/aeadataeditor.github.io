@@ -95,8 +95,26 @@ This deposit does not need to be at the AEA Data and Code Repository - it can be
 
 ## Reproducibility checks
 
+Code and data should be reproducible and replicable. How do we test that?
 
-
+- Generic guidance is provided at the [Social Science Data Editors' Guidance](https://social-science-data-editors.github.io/guidance/) website. 
+- At the AEA, 
+  - we use **[this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)** to guide our replicators. 
+     - [Filled out example](https://aeadataeditor.github.io/aea-de-guidance/sample-report.html)
+  - We assess 
+    - software availability
+    - data availability
+    - code availability and clarity
+    - needed computational resources
+    - time needed to acquire or use all of the above, and conduct the reproducibility check
+  - When some of the conditions are not met with our own resources, we may ask others to conduct a reproducibility exercise for us. 
+    - We may ask others to do so because
+      - They are experts
+      - They have access to the software
+      - They have access to the data
+      - They have access to computational resources needed
+    - Our [PROTOCOL](policy/protocol-3rd-party-replication.md) is outlined here.
+    
 Also see various points under [restricted-access data].
 
 ## Software questions
@@ -117,9 +135,9 @@ As part of our reproducibility checks, we may find these, and non-compliance can
 ### Do you support Docker/ Jupyter/ etc.?
 
 The generic answer is yes. The key is to make it clear in the README how to run the software. Most economists know how to run Stata, Matlab, and probably figure out how to run R or Julia even if it is not their native programming environment. For software that is less standard (GIS, SQL databases, Docker, Jupyter notebooks, cloud-based compute clusters), we suggest pointing to (citing) an introductory tutorial on the web in the README, and providing a barebones set of instructions on how to get started.
-The picture below illustrates what software can be considered to be "common" amongst economists (credit: Patrick Baylis, [doi.org/10.5281/zenodo.1456185](http://doi.org/10.5281/zenodo.1456185)).
+The picture below illustrates what software can be considered to be "common" amongst economists:
 
-![software usage](assets/aer_programs_by_year.png)
+![software usage](/assets/figure_software_years_pct.png)
 
 ## Restricted-access data
 
@@ -132,9 +150,9 @@ controls. You can find additional guidance
 
 ### I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?
 
-Per the [PSID website](https://psidonline.isr.umich.edu/Guide/FAQ.aspx?Type=8), authors are not allowed to post extracts of their data online. The reason is that any user needs to agree to the PSID terms of use before being given access to the data. However, the PSID has provided authors with the ability to deposit their data extracts and/or [their derived data in a repository](https://www.openicpsr.org/openicpsr/psid), precisely for the purpose of allowing for sharing in compliance with their [Terms of use](http://simba.isr.umich.edu/U/CondUse.aspx). 
+Authors are [not allowed to post extracts of PSID data online](https://psidonline.isr.umich.edu/Guide/FAQ.aspx?Type=8), with one exception: they are allowed to deposit their data extracts and/or their derived data in [the PSID data repository](https://www.openicpsr.org/openicpsr/psid). Doing so allows authors to remain in compliance with the PSID's [Terms of use](http://simba.isr.umich.edu/U/CondUse.aspx). Any other deposit, including in the AEA Data and Code Repository, is not allowed.
 
-Somewhat confusingly for some users, [this PSID repository](https://www.openicpsr.org/openicpsr/psid) is also hosted at openICPSR, just as the AEA repository. However, the two repositories do not have the same Terms of Use, and are distinct.
+Somewhat confusingly for some users, [thi PSID repository](https://www.openicpsr.org/openicpsr/psid) is also hosted at openICPSR, just as the AEA repository. However, the two repositories do not have the same Terms of Use, and are distinct.
 
 In order to comply with the [PSID Terms of use](http://simba.isr.umich.edu/U/CondUse.aspx), you should do the following:
 
