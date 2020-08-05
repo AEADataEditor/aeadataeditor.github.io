@@ -40,8 +40,34 @@ purposes. If in doubt, contact the AEA Data Editor.
 Yes, within reasonable limits of time and computing resources, we will
 run your code, and verify that the results produced by your code and
 data correspond with the publishable results in your article, prior to
-acceptance. Guidance on what we check can be found
-[here](https://social-science-data-editors.github.io/guidance/Verification_guidance.html).
+acceptance. 
+
+
+### Reproducibility checks
+
+Code and data should be reproducible and replicable. How do we test that?
+
+- Generic guidance is provided at the [Social Science Data Editors' Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html).
+
+- At the AEA, 
+  - we use **[this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)** to guide our replicators. 
+     - [Filled out example](https://aeadataeditor.github.io/aea-de-guidance/sample-report.html)
+  - We assess 
+    - software availability
+    - data availability
+    - code availability and clarity
+    - needed computational resources
+    - time needed to acquire or use all of the above, and conduct the reproducibility check
+  - When some of the conditions are not met with our own resources, we may ask others to conduct a reproducibility exercise for us. 
+    - We may ask others to do so because
+      - They are experts
+      - They have access to the software
+      - They have access to the data
+      - They have access to computational resources needed
+    - Our [PROTOCOL](policy/protocol-3rd-party-replication.md) is outlined here.
+    
+Also see various points under [restricted-access data].
+
 
 ## Uploading 
 
@@ -91,31 +117,6 @@ Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), we [provide 
 In general, yes. However, if you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. In certain cases where the data is original (you collected the data) or otherwise of high value (you made substantial usability or other improvements to the data), we may suggest that you deposit the data in their own, unique data deposit, to better highlight and make accessible the data.
 
 This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the [Social Science Data Editor's guide to Data and Code Hosting](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html). Once deposited, and published, the data should be cited in your manuscript, in accordance with the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references). 
-
-
-## Reproducibility checks
-
-Code and data should be reproducible and replicable. How do we test that?
-
-- Generic guidance is provided at the [Social Science Data Editors' Guidance](https://social-science-data-editors.github.io/guidance/) website. 
-- At the AEA, 
-  - we use **[this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)** to guide our replicators. 
-     - [Filled out example](https://aeadataeditor.github.io/aea-de-guidance/sample-report.html)
-  - We assess 
-    - software availability
-    - data availability
-    - code availability and clarity
-    - needed computational resources
-    - time needed to acquire or use all of the above, and conduct the reproducibility check
-  - When some of the conditions are not met with our own resources, we may ask others to conduct a reproducibility exercise for us. 
-    - We may ask others to do so because
-      - They are experts
-      - They have access to the software
-      - They have access to the data
-      - They have access to computational resources needed
-    - Our [PROTOCOL](policy/protocol-3rd-party-replication.md) is outlined here.
-    
-Also see various points under [restricted-access data].
 
 ## Software questions
 
