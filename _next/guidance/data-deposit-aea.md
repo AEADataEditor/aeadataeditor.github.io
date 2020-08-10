@@ -3,11 +3,6 @@ layout: withtoc
 title: Guidance on how to deposit data at the AEA Data and Code Repository
 ---
 
-### Warning
-
-<img src="../../assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
-<img src="../../assets/publish-button.png" height="40" alt="Publish button">
-
 ### Fill out the Metadata 
 
 Start by providing the metadata (descriptors) for the data and code you are uploading.
@@ -144,6 +139,16 @@ LICENSE.txt
 ```
 (the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses upon publication. See [our licensing guidance](Licensing_guidance.md) for other options).
 
+### Submitting to the Data Editor
+
+Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should **submit** the deposit, by changing the **status** of the deposit:
+
+![submit project](../../assets/project-submit.png)
+
+Choose "Submit to AEA" under "Change Status".
+
+Should you have forgotten something, you can "recall" the submission. 
+
 
 ### Citing Your Deposit
 
@@ -195,11 +200,6 @@ function myFunction() {
   
 }
 </script>
-
-### Sundry other items
-
-- <img src="../../assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
-<img src="../../assets/publish-button.png" height="40" alt="Publish button">
 
 
 ### Ready to submit manuscript
