@@ -5,6 +5,20 @@ title:  "A discussion about various things"
 
 In this post, I'll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).
 
+## Starting a project
+
+> [Judy Chevalier](https://twitter.com/judy_chevalier/status/1346259253955354624) What do I do before I even start the project? What do I do if I am accessing a big public dataset and it is always at risk of being changed or cleaned or updated?
+
+Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html - in particular the first part https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html can be done at any time!
+
+## IRB, consent, and distributing sensitive data
+
+> [David Cutler](https://twitter.com/Cutler_econ/status/1346261440899018752) IRB rules are becoming more complex over time. It would be good for economists to understand them better.
+
+> [Adam Sacarny](https://twitter.com/asacarny/status/1346262290354614274) I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…
+
+Excellent points. Longish answer during Fireside Chat.
+
 ## Code Persistence or Code Rot
 
 > [John Horton](https://twitter.com/johnjhorton/status/1346260871429971970): If you are relying on lots of open source packages subject to change, how do we prevent “code rot”? Might it make sense for AEA to collect & store docker images or virtual machines?
@@ -41,4 +55,16 @@ Answer coming soon.
 
 > (via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.
 
-Longish answer coming. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called "my memory" and a database of data citations.
+Longish answer coming in the Fireside Chat. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called "my memory" and a database of data citations.
+
+> [Elizabeth Weber Handwerker](https://twitter.com/ElizWebHand/status/1346258970827218946) I'm a government economist, working with some data outside researchers can access only through an application process, and some data they can't access at all (Massachusetts QCEW, etc.). What do AEA requirements for data & code look like in each case?
+
+Answer coming live during Fireside Chat. Short answer: The same. 
+
+See talk at the [University of Waterloo / Canadian Research Data Center](https://doi.org/10.5281/zenodo.4250890). I have also had talks with Census Bureau folks, and have ongoing private and public talks with institutions that have access to restricted-data.
+
+## Replicability and Reproducibility in Institutions
+
+> [@fibbyccino](https://twitter.com/fibbyccino/status/1346262249854275585) What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?
+
+Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at [Brookings](https://doi.org/10.5281/zenodo.4311917) and [St. Louis Fed](https://doi.org/10.5281/zenodo.4281633) (also [video](https://research.stlouisfed.org/conferences/beyond-the-numbers/). 
