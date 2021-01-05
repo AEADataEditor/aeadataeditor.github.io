@@ -30,3 +30,15 @@ The key, however, is the willingness of the data provider to participate. The AE
 > [John Horton](https://twitter.com/johnjhorton/status/1346262118904029184) Many of the code & data problems are essentially solved software engineering problems (version control, makefiles, unit tests, etc) - how do we incorporate these practices into PhD education so next generation is better than us?
 
 Good question... Efforts at [BITSS](https://bitss.github.io/ACRE/), [Carpentries](https://carpentries.org/), various data-science oriented classes, [my own efforts at Cornell](https://labordynamicsinstitute.github.io/computing4economists/web/#/) only scratch the surface. They train a minority of volunteering students. I would actually argue that these best practices should be taught at the undergraduate level, and should be a compulsory part of graduate education the same way we require math proficiency. But we are a long way off of that.
+
+## Time capsules and other data access options
+
+> [John Horton](https://twitter.com/johnjhorton/status/1346263273432354816) Could AEA help credibly create “time capsule” data agreements where it will release a public dataset X years in the future? Some companies are willing to share data but not until it has lost its competitive value. A long lived institution like AEA is well positioned for this.
+
+Answer coming soon.
+
+## Verifying papers with restricted-access data
+
+> (via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.
+
+Longish answer coming. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called "my memory" and a database of data citations.
