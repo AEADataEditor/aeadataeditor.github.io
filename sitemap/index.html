@@ -837,37 +837,6 @@
     
     <p class="archive__item-excerpt" itemprop="description"><p>I wanted to highlight a recently (2020-04-30) published article in the <a href="https://www.aeaweb.org/journals/pol">AEJ:Economic Policy</a> as an example of reproducibility checking when data is restricted-access.
 
-<blockquote>
-  Leung, Pauline, and Christopher O’Leary. 2020. “Unemployment Insurance and Means-Tested Program Interactions: Evidence from Administrative Data.” American Economic Journal: Economic Policy, 12 (2): 159-92. <a href="https://doi.org/10.1257/pol.20170262">https://doi.org/10.1257/pol.20170262</a>
-</blockquote>
-
-<img src="/assets/aejpolicy-2020-05-leung.png" alt="AEJ:Policy 20170262" />
-
-This manuscript was part of our earliest reproducibility checks - it was assigned to us in early April 2019. But with one caveat that I’ll hold till the end, it is an excellent example of a well-documented, and as it turns out, reproducible article. Even if the data is confidential and restricted-access!
-
-The data underlying the analysis is administrative data from various state agencies in Michigan, and it would have been difficult and time-consuming for us replicators to request access.
-
-<img src="/assets/aejpolicy-2020-05-leung-readme.png" alt="AEJ:Policy 20170262 README" />
-
-We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution (<a href="https://www.upjohn.org">@Upjohninstitute</a>) who was not involved in the original research.
-
-The authors connected us with a research associate at their institution who had legal access to the data. The procedure happened, as much as possible, at arms-length: the 3rd-party replicator followed only written instructions that are publicly available, as per our <a href="https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html">protocol</a>.
-
-In fact, all information and code came from the researchers’ replication archive at openICPSR, which is now available at <a href="https://doi.org/10.3886/E109704V1">https://doi.org/10.3886/E109704V1</a>. However, the replicator had access prior to publication of the archive, and what you see now is not what they had access to.
-
-<img src="/assets/aejpolicy-2020-05-leung-openicpsr.png" alt="AEJ:Policy 20170262 openICPSR" />
-
-That’s because the replicator identified and suggested multiple (small, but meaningful) edits to README and programs, to make the replication easier for subsequent replicators.
-
-They also identified (minor) various numerical discrepancies, typically at the 3rd decimal place, that we tracked down to  differences in the versions of the Stata package <a href="https://sites.google.com/site/rdpackages/rdrobust"><code class="language-plaintext highlighter-rouge">rdrobust</code></a>. After discussions with <code class="language-plaintext highlighter-rouge">rdrobust</code> authors and manuscript authors, the replication package now contains the exact version of <code class="language-plaintext highlighter-rouge">rdrobust</code> used for the analysis.
-
-Overall, the report received from the 3rd party replicator was useful confirmation that the code that anybody can see would work well on the data that few people can see, and materially improved the replication package.
-
-Take-away message: While we cannot do reproducibility checks on restricted-access data in a timely fashion for all papers that use restricted-access data, there are still many opportunities to do so, and we will always attempt to do so.
-
-In fact, since that paper was reproduced, we have been able to make similar attempts at reproduction for about a dozen other papers, for which we reached out to various individuals or institutions. We have also signed NDA or DUA for various datasets, to obtain copies ourselves. Not all attempts succeed, but expect to see more such verifications in the future.
-
-Caveat I alluded to: We were still refining our various checks and guidance documents. While the authors did an excellent job citing various data sources (in the <a href="https://www.aeaweb.org/doi/10.1257/pol.20170262.appx">online appendix</a>), we did not ask them to add a data citation for the core confidential data. That would be different today.
 <strong><a href="https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted" rel="permalink"> Read more</a></strong></p></p>
     
     
@@ -898,6 +867,9 @@ Caveat I alluded to: We were still refining our various checks and guidance docu
     
     <p class="archive__item-excerpt" itemprop="description"><p>Since July 16, 2019, the American Economic Association has used the <a href="https://www.openicpsr.org/openicpsr/aea">AEA Data and Code Repository</a>  as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository. Between Oct 11 and Oct 13, 2019, openICPSR ingested 2,552 historical supplements. Additional supplements were ingested in December 2019.
 
+<ul>
+  <li><a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">results from first part of migration</a></li>
+</ul>
 <strong><a href="https://aeadataeditor.github.io/projects/project2" rel="permalink"> Read more</a></strong></p></p>
     
     
@@ -926,6 +898,10 @@ Caveat I alluded to: We were still refining our various checks and guidance docu
     
     <p class="archive__item-excerpt" itemprop="description"><p>Improvement of metadata on migrated packages, those deposited before July 2019.
 
+<ul>
+  <li>see <a href="/surveys/improving-metadata">additional info</a> if you received a request to contribute</li>
+  <li>migration is described <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">here</a></li>
+</ul>
 <strong><a href="https://aeadataeditor.github.io/projects/project1" rel="permalink"> Read more</a></strong></p></p>
     
     
