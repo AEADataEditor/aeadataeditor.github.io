@@ -13,13 +13,14 @@ redirect_from:
 
 These  web pages provide unofficial and developing guidance on the implementation of the American Economic Association (AEA)'s Data and Code Availability Policy. 
 
-The AEA Data Editor defines and monitors the AEA's approach to data and reproducibility. The [2019 Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code) (also [here](/DCAP/)), which was [announced on July 16, 2019](https://www.aeaweb.org/news/member-announcements-july-16-2019), outlines specifics for authors. [Data citations](https://www.aeaweb.org/journals/policies/sample-references) are an important component of the policy, as is [compliance with registration requirements](https://www.aeaweb.org/journals/policies/rct-registry).
+The AEA Data Editor defines and monitors the AEA's approach to data and reproducibility. The [Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code) outlines specifics for authors. [Data citations](https://www.aeaweb.org/journals/policies/sample-references) are an important component of the policy, as is [compliance with registration requirements](https://www.aeaweb.org/journals/policies/rct-registry). Following the structure of the **[template README](https://social-science-data-editors.github.io/template_README/)** is strongly suggested, and will become a required element in May 2021.
 
 
 The current Data Editor (2018-) is [Lars Vilhuber](https://lars.vilhuber.com) ([Cornell University](https://www.ilr.cornell.edu/people/lars-vilhuber)). 
 
 
 ## Important information
+
 The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). [Detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.html) is available. Data and code deposits by the AEA Data Editor can be [found here](https://www.openicpsr.org/openicpsr/search/aea/studies?start=0&ARCHIVE=aea&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=vilhuber).
 
 
@@ -36,7 +37,7 @@ The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/ae
 > -  **[Template README](https://social-science-data-editors.github.io/guidance/template-README.html)**
 > - [Data Citation Guidance](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)
 > - [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) and [detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.html)
-> - [Replication template](replication-template/REPLICATION.md)
+> - [Replication template](replication-template/REPLICATION.md) used by our replicator team.
 > - **[FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)** and  **[additional (draft) FAQ on this site](aea-de-guidance/FAQ.html)**
 
 ---
