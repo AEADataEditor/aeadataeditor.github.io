@@ -1,1 +1,1 @@
-Sitemap: https://aeadataeditor.github.io/testpage/sitemap.xml
+Sitemap: https://aeadataeditor.github.io/sitemap.xml
