@@ -1,9 +1,15 @@
 ---
-layout: post
 title:  "A discussion about various things"
+date: 2021-01-05
+tags:
+  - FAQ
+  - Twitter
+  - Fireside Chat
 ---
 
 In this post, I'll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).
+
+
 
 ## Starting a project
 
@@ -17,7 +23,7 @@ Answer coming. Short answer: Keep track of what you do. Set up the project corre
 
 > [Adam Sacarny](https://twitter.com/asacarny/status/1346262290354614274) I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…
 
-Excellent points. Longish answer during Fireside Chat.
+Excellent points. Longish answer during Fireplace Chat.
 
 ## Code Persistence or Code Rot
 
@@ -51,6 +57,16 @@ Good question... Efforts at [BITSS](https://bitss.github.io/ACRE/), [Carpentries
 
 Answer coming soon.
 
+## Accessing data
+
+> [Chris Conlon](https://twitter.com/conlon_chris/status/1346473098518773760) Several boilerplate data agreements that meet AEA requirements?
+
+> [Chris Conlon](https://twitter.com/conlon_chris/status/1346474319283593218) negotiate terms with some of the commonly used data ACADEMIC data providers (WRDS? Kilts?).
+
+Ongoing ([Kilts](https://marketingdata.chicagobooth.edu/Anonymous/Welcome), [German SOEP](https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607), [German Scientific Use Files](https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx)). Repeatedly requesting ([DHS](https://dhsprogram.com/data/), [Afrobarometer](https://www.afrobarometer.org/)) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA). 
+
+Typical answer: "We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers]." 
+
 ## Verifying papers with restricted-access data
 
 > (via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.
@@ -67,4 +83,4 @@ See talk at the [University of Waterloo / Canadian Research Data Center](https:/
 
 > [@fibbyccino](https://twitter.com/fibbyccino/status/1346262249854275585) What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?
 
-Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at [Brookings](https://doi.org/10.5281/zenodo.4311917) and [St. Louis Fed](https://doi.org/10.5281/zenodo.4281633) (also [video](https://research.stlouisfed.org/conferences/beyond-the-numbers/). 
+Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at [Brookings](https://doi.org/10.5281/zenodo.4311917) and [St. Louis Fed](https://doi.org/10.5281/zenodo.4281633) (also [video](https://research.stlouisfed.org/conferences/beyond-the-numbers/).

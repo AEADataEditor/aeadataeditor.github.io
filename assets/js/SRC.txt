@@ -1,1 +1,0 @@
-https://unpkg.com/browse/mermaid@8.5.2/dist/

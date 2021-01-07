@@ -1,0 +1,21 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Projects"
+    url: /projects/    
+
+  - title: "Surveys"
+    url: /surveys/    
+    
+  - title: "Blog Posts"
+    url: /year-archive/
+
+  - title: "Guidance" 
+    url: https://aeadataeditor.github.io/aea-de-guidance/
+
+  - title: "START REPLICATION PACKAGE"
+    url: https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html
+  
+  

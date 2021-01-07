@@ -1,0 +1,39 @@
+# Publish to gh-pages
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: Build website
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+    # change this to (see https://github.com/ruby/setup-ruby#versioning):
+    # uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Build Jekyll website
+      run: |
+        set -xo pipefail
+        rm -rf _site/*
+        gem install bundler
+        bundle install
+        bundle exec jekyll build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3.7.0-8
+      with:
+         github_token:  ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: _site
+         user_name: 'Github Action Bot'
+         user_email: 'lars.vilhuber@cornell.edu'
+         publish_branch: gh-pages
+         keep_files: false
