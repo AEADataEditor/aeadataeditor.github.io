@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/testpage/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/testpage/" rel="alternate" type="text/html" /><updated>2021-01-06T21:04:04-05:00</updated><id>https://aeadataeditor.github.io/testpage/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>personal description</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">A discussion about various things</title><link href="https://aeadataeditor.github.io/testpage/posts/2021-01-05-answers-to-questions" rel="alternate" type="text/html" title="A discussion about various things" /><published>2021-01-05T00:00:00-05:00</published><updated>2021-01-05T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/testpage/posts/Answers-to-questions</id><content type="html" xml:base="https://aeadataeditor.github.io/testpage/posts/2021-01-05-answers-to-questions">&lt;p&gt;In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-a-project&quot;&gt;Starting a project&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/judy_chevalier/status/1346259253955354624&quot;&gt;Judy Chevalier&lt;/a&gt; What do I do before I even start the project? What do I do if I am accessing a big public dataset and it is always at risk of being changed or cleaned or updated?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html - in particular the first part https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html can be done at any time!&lt;/p&gt;
+
+&lt;h2 id=&quot;irb-consent-and-distributing-sensitive-data&quot;&gt;IRB, consent, and distributing sensitive data&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/Cutler_econ/status/1346261440899018752&quot;&gt;David Cutler&lt;/a&gt; IRB rules are becoming more complex over time. It would be good for economists to understand them better.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/asacarny/status/1346262290354614274&quot;&gt;Adam Sacarny&lt;/a&gt; I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Excellent points. Longish answer during Fireplace Chat.&lt;/p&gt;
+
+&lt;h2 id=&quot;code-persistence-or-code-rot&quot;&gt;Code Persistence or Code Rot&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/johnjhorton/status/1346260871429971970&quot;&gt;John Horton&lt;/a&gt;: If you are relying on lots of open source packages subject to change, how do we prevent “code rot”? Might it make sense for AEA to collect &amp;amp; store docker images or virtual machines?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are two assumptions embedded within the question, which I’ll address at the end. The easy answer to this is: We already have a mechanism to store code, docker images, and virtual machines, it’s called the “&lt;a href=&quot;https://www.openicpsr.org/openicpsr/search/aea/studies&quot;&gt;AEA Data and Code Repository&lt;/a&gt;” where all replication packages are stored.&lt;/p&gt;
+
+&lt;p&gt;The two assumptions are: “open source packages” and “researcher-provided docker images/VMs”. Most economics code is written in Stata or Matlab, which are not open-source software, but which often have open-source (or imprecisely licensed) add-ons (packages, etc.) (I will address “packages” later). The best practice we have found is for copies of those packages to be distributed with the replication package, pre-installed, for two key reasons: Stata package repositories (&lt;a href=&quot;https://ideas.repec.org/s/boc/bocode.html&quot;&gt;SSC&lt;/a&gt;) are not versioned (old versions disappear), Matlab has no package repository, and Github (often used as an alternative, in particular for a small subset of Stata packages) is not persistent in the same way the “&lt;a href=&quot;https://www.openicpsr.org/openicpsr/search/aea/studies&quot;&gt;AEA Data and Code Repository&lt;/a&gt;” is. The AEA guidelines may require this in the future, but currently only suggest it.&lt;/p&gt;
+
+&lt;p&gt;The second assumption is that researchers provide Docker images and VMS. &lt;strong&gt;They don’t&lt;/strong&gt;. Not in the social sciences. It is beyond the scope of what we do to create it for them, at this point (we are looking into ways of doing that, though).&lt;/p&gt;
+
+&lt;h2 id=&quot;proprietary-data-from-unknown-sources&quot;&gt;Proprietary Data from Unknown Sources&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/johnjhorton/status/1346261392983285761&quot;&gt;John Horton&lt;/a&gt; For proprietary data where the source of the data is not disclosed but known to the authors, is there a way to facilitate access for other researchers to the data without divulging source publicly?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is an excellent idea, variants of which we have investigated before. It hinges primarily on the willingness of the original data provider to entertain this. We don’t actually have many cases where the provider is anonymous. I can think of two right now: one has a researcher-mediated access mechanism via a Non-disclosure Agreement - a group of researchers maintains the data, protects anonymity, but is willing to provide access to the data for replication and possibly for research purposes. A second one implemented an email-moderated mechanism that hides the identity of the data provider. In both cases, the persistence of the data, and of the access mechanism is not guaranteed.&lt;/p&gt;
+
+&lt;p&gt;The ideal scenario is for researchers to obtain approval from the data provider to deposit data under a restrictive access mechanism mediated by a third party. &lt;a href=&quot;https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/&quot;&gt;ICPSR&lt;/a&gt; is one such entity, and there are not many others. A grander scenario are industry-specific restricted-access data centers, such as &lt;a href=&quot;http://www.privatecapitalresearchinstitute.org/research.php&quot;&gt;PCRI&lt;/a&gt;, where access is possible, and the identity of (multiple) data providers is hidden.&lt;/p&gt;
+
+&lt;p&gt;The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-bring-solved-problems-to-the-next-generation&quot;&gt;How to bring solved problems to the next generation?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/johnjhorton/status/1346262118904029184&quot;&gt;John Horton&lt;/a&gt; Many of the code &amp;amp; data problems are essentially solved software engineering problems (version control, makefiles, unit tests, etc) - how do we incorporate these practices into PhD education so next generation is better than us?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Good question… Efforts at &lt;a href=&quot;https://bitss.github.io/ACRE/&quot;&gt;BITSS&lt;/a&gt;, &lt;a href=&quot;https://carpentries.org/&quot;&gt;Carpentries&lt;/a&gt;, various data-science oriented classes, &lt;a href=&quot;https://labordynamicsinstitute.github.io/computing4economists/web/#/&quot;&gt;my own efforts at Cornell&lt;/a&gt; only scratch the surface. They train a minority of volunteering students. I would actually argue that these best practices should be taught at the undergraduate level, and should be a compulsory part of graduate education the same way we require math proficiency. But we are a long way off of that.&lt;/p&gt;
+
+&lt;h2 id=&quot;time-capsules-and-other-data-access-options&quot;&gt;Time capsules and other data access options&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/johnjhorton/status/1346263273432354816&quot;&gt;John Horton&lt;/a&gt; Could AEA help credibly create “time capsule” data agreements where it will release a public dataset X years in the future? Some companies are willing to share data but not until it has lost its competitive value. A long lived institution like AEA is well positioned for this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Answer coming soon.&lt;/p&gt;
+
+&lt;h2 id=&quot;accessing-data&quot;&gt;Accessing data&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/conlon_chris/status/1346473098518773760&quot;&gt;Chris Conlon&lt;/a&gt; Several boilerplate data agreements that meet AEA requirements?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/conlon_chris/status/1346474319283593218&quot;&gt;Chris Conlon&lt;/a&gt; negotiate terms with some of the commonly used data ACADEMIC data providers (WRDS? Kilts?).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ongoing (&lt;a href=&quot;https://marketingdata.chicagobooth.edu/Anonymous/Welcome&quot;&gt;Kilts&lt;/a&gt;, &lt;a href=&quot;https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607&quot;&gt;German SOEP&lt;/a&gt;, &lt;a href=&quot;https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx&quot;&gt;German Scientific Use Files&lt;/a&gt;). Repeatedly requesting (&lt;a href=&quot;https://dhsprogram.com/data/&quot;&gt;DHS&lt;/a&gt;, &lt;a href=&quot;https://www.afrobarometer.org/&quot;&gt;Afrobarometer&lt;/a&gt;) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA).&lt;/p&gt;
+
+&lt;p&gt;Typical answer: “We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers].”&lt;/p&gt;
+
+&lt;h2 id=&quot;verifying-papers-with-restricted-access-data&quot;&gt;Verifying papers with restricted-access data&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Longish answer coming in the Fireside Chat. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called “my memory” and a database of data citations.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/ElizWebHand/status/1346258970827218946&quot;&gt;Elizabeth Weber Handwerker&lt;/a&gt; I’m a government economist, working with some data outside researchers can access only through an application process, and some data they can’t access at all (Massachusetts QCEW, etc.). What do AEA requirements for data &amp;amp; code look like in each case?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Answer coming live during Fireside Chat. Short answer: The same.&lt;/p&gt;
+
+&lt;p&gt;See talk at the &lt;a href=&quot;https://doi.org/10.5281/zenodo.4250890&quot;&gt;University of Waterloo / Canadian Research Data Center&lt;/a&gt;. I have also had talks with Census Bureau folks, and have ongoing private and public talks with institutions that have access to restricted-data.&lt;/p&gt;
+
+&lt;h2 id=&quot;replicability-and-reproducibility-in-institutions&quot;&gt;Replicability and Reproducibility in Institutions&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/fibbyccino/status/1346262249854275585&quot;&gt;@fibbyccino&lt;/a&gt; What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at &lt;a href=&quot;https://doi.org/10.5281/zenodo.4311917&quot;&gt;Brookings&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.5281/zenodo.4281633&quot;&gt;St. Louis Fed&lt;/a&gt; (also &lt;a href=&quot;https://research.stlouisfed.org/conferences/beyond-the-numbers/&quot;&gt;video&lt;/a&gt;.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Fireside Chat" /><summary type="html">In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).</summary></entry><entry><title type="html">An example of reproducibility checking when data is restricted-access</title><link href="https://aeadataeditor.github.io/testpage/posts/2020-06-30-example-of-reproducible-restricted" rel="alternate" type="text/html" title="An example of reproducibility checking when data is restricted-access" /><published>2020-06-30T00:00:00-04:00</published><updated>2020-06-30T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/testpage/posts/Example-of-reproducible-restricted</id><content type="html" xml:base="https://aeadataeditor.github.io/testpage/posts/2020-06-30-example-of-reproducible-restricted">&lt;p&gt;I wanted to highlight a recently (2020-04-30) published article in the &lt;a href=&quot;https://www.aeaweb.org/journals/pol&quot;&gt;AEJ:Economic Policy&lt;/a&gt; as an example of reproducibility checking when data is restricted-access.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Leung, Pauline, and Christopher O’Leary. 2020. “Unemployment Insurance and Means-Tested Program Interactions: Evidence from Administrative Data.” American Economic Journal: Economic Policy, 12 (2): 159-92. &lt;a href=&quot;https://doi.org/10.1257/pol.20170262&quot;&gt;https://doi.org/10.1257/pol.20170262&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/aejpolicy-2020-05-leung.png&quot; alt=&quot;AEJ:Policy 20170262&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This manuscript was part of our earliest reproducibility checks - it was assigned to us in early April 2019. But with one caveat that I’ll hold till the end, it is an excellent example of a well-documented, and as it turns out, reproducible article. Even if the data is confidential and restricted-access!&lt;/p&gt;
+
+&lt;p&gt;The data underlying the analysis is administrative data from various state agencies in Michigan, and it would have been difficult and time-consuming for us replicators to request access.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/aejpolicy-2020-05-leung-readme.png&quot; alt=&quot;AEJ:Policy 20170262 README&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution (&lt;a href=&quot;https://www.upjohn.org&quot;&gt;@Upjohninstitute&lt;/a&gt;) who was not involved in the original research.&lt;/p&gt;
+
+&lt;p&gt;The authors connected us with a research associate at their institution who had legal access to the data. The procedure happened, as much as possible, at arms-length: the 3rd-party replicator followed only written instructions that are publicly available, as per our &lt;a href=&quot;https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html&quot;&gt;protocol&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In fact, all information and code came from the researchers’ replication archive at openICPSR, which is now available at &lt;a href=&quot;https://doi.org/10.3886/E109704V1&quot;&gt;https://doi.org/10.3886/E109704V1&lt;/a&gt;. However, the replicator had access prior to publication of the archive, and what you see now is not what they had access to.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/aejpolicy-2020-05-leung-openicpsr.png&quot; alt=&quot;AEJ:Policy 20170262 openICPSR&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s because the replicator identified and suggested multiple (small, but meaningful) edits to README and programs, to make the replication easier for subsequent replicators.&lt;/p&gt;
+
+&lt;p&gt;They also identified (minor) various numerical discrepancies, typically at the 3rd decimal place, that we tracked down to  differences in the versions of the Stata package &lt;a href=&quot;https://sites.google.com/site/rdpackages/rdrobust&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdrobust&lt;/code&gt;&lt;/a&gt;. After discussions with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdrobust&lt;/code&gt; authors and manuscript authors, the replication package now contains the exact version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdrobust&lt;/code&gt; used for the analysis.&lt;/p&gt;
+
+&lt;p&gt;Overall, the report received from the 3rd party replicator was useful confirmation that the code that anybody can see would work well on the data that few people can see, and materially improved the replication package.&lt;/p&gt;
+
+&lt;p&gt;Take-away message: While we cannot do reproducibility checks on restricted-access data in a timely fashion for all papers that use restricted-access data, there are still many opportunities to do so, and we will always attempt to do so.&lt;/p&gt;
+
+&lt;p&gt;In fact, since that paper was reproduced, we have been able to make similar attempts at reproduction for about a dozen other papers, for which we reached out to various individuals or institutions. We have also signed NDA or DUA for various datasets, to obtain copies ourselves. Not all attempts succeed, but expect to see more such verifications in the future.&lt;/p&gt;
+
+&lt;p&gt;Caveat I alluded to: We were still refining our various checks and guidance documents. While the authors did an excellent job citing various data sources (in the &lt;a href=&quot;https://www.aeaweb.org/doi/10.1257/pol.20170262.appx&quot;&gt;online appendix&lt;/a&gt;), we did not ask them to add a data citation for the core confidential data. That would be different today.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="restricted-access" /><category term="AEJPolicy" /><summary type="html">I wanted to highlight a recently (2020-04-30) published article in the AEJ:Economic Policy as an example of reproducibility checking when data is restricted-access. Leung, Pauline, and Christopher O’Leary. 2020. “Unemployment Insurance and Means-Tested Program Interactions: Evidence from Administrative Data.” American Economic Journal: Economic Policy, 12 (2): 159-92. https://doi.org/10.1257/pol.20170262 This manuscript was part of our earliest reproducibility checks - it was assigned to us in early April 2019. But with one caveat that I’ll hold till the end, it is an excellent example of a well-documented, and as it turns out, reproducible article. Even if the data is confidential and restricted-access! The data underlying the analysis is administrative data from various state agencies in Michigan, and it would have been difficult and time-consuming for us replicators to request access. We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution (@Upjohninstitute) who was not involved in the original research. The authors connected us with a research associate at their institution who had legal access to the data. The procedure happened, as much as possible, at arms-length: the 3rd-party replicator followed only written instructions that are publicly available, as per our protocol. In fact, all information and code came from the researchers’ replication archive at openICPSR, which is now available at https://doi.org/10.3886/E109704V1. However, the replicator had access prior to publication of the archive, and what you see now is not what they had access to. That’s because the replicator identified and suggested multiple (small, but meaningful) edits to README and programs, to make the replication easier for subsequent replicators. They also identified (minor) various numerical discrepancies, typically at the 3rd decimal place, that we tracked down to differences in the versions of the Stata package rdrobust. After discussions with rdrobust authors and manuscript authors, the replication package now contains the exact version of rdrobust used for the analysis. Overall, the report received from the 3rd party replicator was useful confirmation that the code that anybody can see would work well on the data that few people can see, and materially improved the replication package. Take-away message: While we cannot do reproducibility checks on restricted-access data in a timely fashion for all papers that use restricted-access data, there are still many opportunities to do so, and we will always attempt to do so. In fact, since that paper was reproduced, we have been able to make similar attempts at reproduction for about a dozen other papers, for which we reached out to various individuals or institutions. We have also signed NDA or DUA for various datasets, to obtain copies ourselves. Not all attempts succeed, but expect to see more such verifications in the future. Caveat I alluded to: We were still refining our various checks and guidance documents. While the authors did an excellent job citing various data sources (in the online appendix), we did not ask them to add a data citation for the core confidential data. That would be different today.</summary></entry></feed>
