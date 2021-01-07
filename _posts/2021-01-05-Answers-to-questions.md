@@ -15,7 +15,7 @@ In this post, I'll pick up questions that have been asked over Twitter or during
 
 > [Judy Chevalier](https://twitter.com/judy_chevalier/status/1346259253955354624) What do I do before I even start the project? What do I do if I am accessing a big public dataset and it is always at risk of being changed or cleaned or updated?
 
-Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html - in particular the first part https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html can be done at any time!
+Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  <https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html> - in particular the first part <https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html> can be done at any time!
 
 ## IRB, consent, and distributing sensitive data
 
