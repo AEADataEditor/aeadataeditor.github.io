@@ -8,6 +8,7 @@ tags:
 
 I wanted to highlight a recently (2020-04-30) published article in the [AEJ:Economic Policy](https://www.aeaweb.org/journals/pol) as an example of reproducibility checking when data is restricted-access.
 
+<!-- more -->
 
 > Leung, Pauline, and Christopher O'Leary. 2020. "Unemployment Insurance and Means-Tested Program Interactions: Evidence from Administrative Data." American Economic Journal: Economic Policy, 12 (2): 159-92. [https://doi.org/10.1257/pol.20170262](https://doi.org/10.1257/pol.20170262)
 

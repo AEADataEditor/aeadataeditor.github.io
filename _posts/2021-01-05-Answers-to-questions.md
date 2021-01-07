@@ -9,7 +9,7 @@ tags:
 
 In this post, I'll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).
 
-
+<!-- more -->
 
 ## Starting a project
 
