@@ -45,6 +45,49 @@ The ideal scenario is for researchers to obtain approval from the data provider 
 
 The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.
 
+## Data citations - how to do it
+
+> [Elizabeth Weber Handwerker](https://twitter.com/ElizWebHand/status/1347602931210739718) I'm trying to create a bibtex entry for a dataset (the journal says to "reference datasets" and can't find any examples of how to do this. 
+
+Try these examples: 
+
+- <https://zotero.org/groups/2245704/fsrdc>, <https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib> for confidential data, 
+- <https://github.com/larsvilhuber/MobZ/blob/master/data.bib> for a variety of different data. 
+
+Standard AEA bib style does not show URLs properly, use <https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst> or the "econ" style. The quick solution: use @techreport
+{} in a Bibtex file. [doi.org/10.5281/zenodo.4073995](https://doi.org/10.5281/zenodo.4073995), starting around pg. 37, discusses the basic ideas. Short take-away: It's simple. (and @techreport or @misc
+ has all the necessary fields).
+
+Some examples:
+
+```
+@techreport{bea_table30_2019,
+  title = {Table 30: {{Economic Profile}} by {{County}}, 1969-2018},
+  author = {{Bureau of Economic Analysis}},
+  year = {2019},
+  institution = {{U.S. Department of Commerce  [producer]}},
+  url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
+  timestamp = {2020-09-08T00:42:24Z},
+  type = {[Datafile]}
+}
+
+@misc{BLS_QCEW_2020,
+  title = {Quarterly {{Census}} of {{Employment}} and {{Wages}} -- {{Data Files}}},
+  shorttitle = {{{QCEW Data Files}}},
+  author = {{Bureau of Labor Statistics}},
+  year = {2020},
+  publisher = {{Department of Labor [distributor]}},
+  url = {https://www.bls.gov/cew/downloadable-data-files.htm},
+  urldate = {2020-09-20},
+  abstract = {Quarterly Census of Employment and Wages -- Data Files},
+  language = {en},
+  number = {1990-2019},
+  timestamp = {2020-09-20T19:26:12Z},
+  type = {[Datafiles]}
+}
+```
+
+
 ## How to bring solved problems to the next generation?
 
 > [John Horton](https://twitter.com/johnjhorton/status/1346262118904029184) Many of the code & data problems are essentially solved software engineering problems (version control, makefiles, unit tests, etc) - how do we incorporate these practices into PhD education so next generation is better than us?
