@@ -44,10 +44,11 @@ layout: default
                    <a href="https://doi.org/{{ page.doi }}" alt="Slides"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="image of DOI"></a></li>
               {% endif %}
               {% if page.maindoi %}
-              <li> Part of a <a href="https://doi.org/{{ page.maindoi }}" alt="Series DOI">series</a> </li>
+                <li> Part of a <a href="https://doi.org/{{ page.maindoi }}" alt="Series DOI">series</a> </li>
               {% endif %}
               {% if page.mainurl %}
-              <li>For more information, see <a href="{{ page.mainurl }}" alt="mainpage">{{ page.mainurl }}</a> </li>
+                <li>For more information, see <a href="{{ page.mainurl }}" alt="mainpage">{{ page.mainurl }}</a> </li>
+              {% endif %}
             </ul>
 
 
