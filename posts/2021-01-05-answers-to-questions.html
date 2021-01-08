@@ -186,7 +186,7 @@
 
 
   
-	  7 minute read
+	  9 minute read
 	
 </p>
           
@@ -250,6 +250,51 @@
 <p>The ideal scenario is for researchers to obtain approval from the data provider to deposit data under a restrictive access mechanism mediated by a third party. <a href="https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/">ICPSR</a> is one such entity, and there are not many others. A grander scenario are industry-specific restricted-access data centers, such as <a href="http://www.privatecapitalresearchinstitute.org/research.php">PCRI</a>, where access is possible, and the identity of (multiple) data providers is hidden.</p>
 
 <p>The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.</p>
+
+<h2 id="data-citations---how-to-do-it">Data citations - how to do it</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/ElizWebHand/status/1347602931210739718">Elizabeth Weber Handwerker</a> I’m trying to create a bibtex entry for a dataset (the journal says to “reference datasets” and can’t find any examples of how to do this.</p>
+</blockquote>
+
+<p>Try these examples:</p>
+
+<ul>
+  <li><a href="https://zotero.org/groups/2245704/fsrdc">https://zotero.org/groups/2245704/fsrdc</a>, <a href="https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib">https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib</a> for confidential data,</li>
+  <li><a href="https://github.com/larsvilhuber/MobZ/blob/master/data.bib">https://github.com/larsvilhuber/MobZ/blob/master/data.bib</a> for a variety of different data.</li>
+</ul>
+
+<p>Standard AEA bib style does not show URLs properly, use <a href="https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst">https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst</a> or the “econ” style. The quick solution: use @techreport
+{} in a Bibtex file. <a href="https://doi.org/10.5281/zenodo.4073995">doi.org/10.5281/zenodo.4073995</a>, starting around pg. 37, discusses the basic ideas. Short take-away: It’s simple. (and @techreport or @misc
+ has all the necessary fields).</p>
+
+<p>Some examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@techreport{bea_table30_2019,
+  title = {Table 30:  by , 1969-2018},
+  author = ,
+  year = {2019},
+  institution = ,
+  url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
+  timestamp = {2020-09-08T00:42:24Z},
+  type = {[Datafile]}
+}
+
+@misc{BLS_QCEW_2020,
+  title = {Quarterly  of  and  -- },
+  shorttitle = },
+  author = ,
+  year = {2020},
+  publisher = ,
+  url = {https://www.bls.gov/cew/downloadable-data-files.htm},
+  urldate = {2020-09-20},
+  abstract = {Quarterly Census of Employment and Wages -- Data Files},
+  language = {en},
+  number = {1990-2019},
+  timestamp = {2020-09-20T19:26:12Z},
+  type = {[Datafiles]}
+}
+</code></pre></div></div>
 
 <h2 id="how-to-bring-solved-problems-to-the-next-generation">How to bring solved problems to the next generation?</h2>
 

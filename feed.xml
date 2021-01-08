@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-01-07T20:55:19-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">A discussion about various things</title><link href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="alternate" type="text/html" title="A discussion about various things" /><published>2021-01-05T00:00:00-05:00</published><updated>2021-01-05T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/Answers-to-questions</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions">&lt;p&gt;In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-01-08T13:38:22-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">A discussion about various things</title><link href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="alternate" type="text/html" title="A discussion about various things" /><published>2021-01-05T00:00:00-05:00</published><updated>2021-01-05T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/Answers-to-questions</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions">&lt;p&gt;In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -45,6 +45,51 @@
 &lt;p&gt;The ideal scenario is for researchers to obtain approval from the data provider to deposit data under a restrictive access mechanism mediated by a third party. &lt;a href=&quot;https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/&quot;&gt;ICPSR&lt;/a&gt; is one such entity, and there are not many others. A grander scenario are industry-specific restricted-access data centers, such as &lt;a href=&quot;http://www.privatecapitalresearchinstitute.org/research.php&quot;&gt;PCRI&lt;/a&gt;, where access is possible, and the identity of (multiple) data providers is hidden.&lt;/p&gt;
 
 &lt;p&gt;The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-citations---how-to-do-it&quot;&gt;Data citations - how to do it&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://twitter.com/ElizWebHand/status/1347602931210739718&quot;&gt;Elizabeth Weber Handwerker&lt;/a&gt; I’m trying to create a bibtex entry for a dataset (the journal says to “reference datasets” and can’t find any examples of how to do this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Try these examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zotero.org/groups/2245704/fsrdc&quot;&gt;https://zotero.org/groups/2245704/fsrdc&lt;/a&gt;, &lt;a href=&quot;https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib&quot;&gt;https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib&lt;/a&gt; for confidential data,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/larsvilhuber/MobZ/blob/master/data.bib&quot;&gt;https://github.com/larsvilhuber/MobZ/blob/master/data.bib&lt;/a&gt; for a variety of different data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Standard AEA bib style does not show URLs properly, use &lt;a href=&quot;https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst&quot;&gt;https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst&lt;/a&gt; or the “econ” style. The quick solution: use @techreport
+{} in a Bibtex file. &lt;a href=&quot;https://doi.org/10.5281/zenodo.4073995&quot;&gt;doi.org/10.5281/zenodo.4073995&lt;/a&gt;, starting around pg. 37, discusses the basic ideas. Short take-away: It’s simple. (and @techreport or @misc
+ has all the necessary fields).&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@techreport{bea_table30_2019,
+  title = {Table 30:  by , 1969-2018},
+  author = ,
+  year = {2019},
+  institution = ,
+  url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
+  timestamp = {2020-09-08T00:42:24Z},
+  type = {[Datafile]}
+}
+
+@misc{BLS_QCEW_2020,
+  title = {Quarterly  of  and  -- },
+  shorttitle = },
+  author = ,
+  year = {2020},
+  publisher = ,
+  url = {https://www.bls.gov/cew/downloadable-data-files.htm},
+  urldate = {2020-09-20},
+  abstract = {Quarterly Census of Employment and Wages -- Data Files},
+  language = {en},
+  number = {1990-2019},
+  timestamp = {2020-09-20T19:26:12Z},
+  type = {[Datafiles]}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;how-to-bring-solved-problems-to-the-next-generation&quot;&gt;How to bring solved problems to the next generation?&lt;/h2&gt;
 
