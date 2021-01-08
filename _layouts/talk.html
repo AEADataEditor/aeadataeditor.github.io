@@ -35,7 +35,24 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+
+        {% if page.talk_type %}
+          <p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} 
+            <ul>
+              {% if page.doi %}
+              <li> <a href="https://doi.org/{{ page.doi }}" alt="Slides">Slides</a> 
+                   <a href="https://doi.org/{{ page.doi }}" alt="Slides"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="image of DOI"></a></li>
+              {% endif %}
+              {% if page.maindoi %}
+              <li> Part of a <a href="https://doi.org/{{ page.maindoi }}" alt="Series DOI">series</a> </li>
+              {% endif %}
+              {% if page.mainurl %}
+              <li>For more information, see <a href="{{ page.mainurl }}" alt="mainpage">{{ page.mainurl }}</a> </li>
+            </ul>
+
+
+
+        {% endif %}
 
         </header>
       {% endunless %}
@@ -57,22 +74,6 @@ layout: default
       {% include post_pagination.html %}
     </div>
 
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      {% if site.data.ui-text[site.locale].related_label %}
-        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      {% endif %}
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
 </div>
