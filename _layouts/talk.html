@@ -36,7 +36,7 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
 
-        {% if page.type %}
+        <!-- {% if page.type %} -->
           <p>{{page.type}} at {{ page.venue }},  {{page.location}} 
             <ul>
               {% if page.doi %}
@@ -50,10 +50,8 @@ layout: default
                 <li>For more information, see <a href="{{ page.mainurl }}" alt="mainpage">{{ page.mainurl }}</a> </li>
               {% endif %}
             </ul>
-
-
-
-        {% endif %}
+          </p>
+        <!-- {% endif %} -->
 
         </header>
       {% endunless %}
