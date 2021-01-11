@@ -1,5 +1,6 @@
 ---
 title:  "A discussion about various things"
+layout: single-withtoc
 date: 2021-01-05
 tags:
   - FAQ
