@@ -7,7 +7,7 @@ tags:
   - Fireside Chat
 ---
 
-In this post, I'll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium).
+In this post, I'll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.
 
 <!-- more -->
 
@@ -109,6 +109,17 @@ Answer coming soon.
 Ongoing ([Kilts](https://marketingdata.chicagobooth.edu/Anonymous/Welcome), [German SOEP](https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607), [German Scientific Use Files](https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx)). Repeatedly requesting ([DHS](https://dhsprogram.com/data/), [Afrobarometer](https://www.afrobarometer.org/)) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA). 
 
 Typical answer: "We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers]." 
+
+## Gazillion files
+
+> (via email) We have 26,000 files in our deposit. How should we proceed (openICPSR only handles up to 1,000 files)?
+
+We get this question regularly. There are multiple partial answers:
+
+- When the data provider has assigned a DOI, no need to provide the data. An example is the TERRA/MODIS climate data is such an example, see <https://dx.doi.org/10.5067/MODIS/MOD08_M3.061>. 
+- If the data provider has not assigned a DOI, we encourage authors to ask their data provider to do so. This is the right approach... but it is unlikely to yield a result prior to publication. Fallback solutions below.
+- If you have the interest and time to provide a public good, deposit the data separately, thus creating a DOI. While the AEA uses openICPSR to handle its replication packages, you can deposit the pure data deposit anywhere. A good option (as of January 2021) is [Zenodo](https://zenodo.org), which has an excellent API allowing to download metadata and large quantities of files. You would describe the data, and publish a deposit, thus creating a DOI. No need to then provide the data as part of the AEA Replication package - just cite it. Bonus: use the API to read-in the data for your own research.
+- If all else fails, it is acceptable to ZIP up files by sub-directory (e.g., "zip -rp weather_CPCG.zip weather_CPCG/*" and then describe, as part of setup/processing, how and where to unzip the files. Caution: ZIP files on different platforms include addtional directory levels sometimes, so be precise about the directory structure you want. Also, the default Windows and Linux zip utilities can only handle ZIP archives up to 2GB, whereas modern macOS archives can handle larger ZIP packages. We suggest using 7zip, which is free and cross-platform.
 
 ## Verifying papers with restricted-access data
 
