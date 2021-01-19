@@ -1,7 +1,7 @@
 ---
 title:  "A discussion about various things"
 layout: single-withtoc
-date: 2021-01-05
+date: 2021-01-19
 tags:
   - FAQ
   - Twitter
@@ -139,3 +139,108 @@ See talk at the [University of Waterloo / Canadian Research Data Center](https:/
 > [@fibbyccino](https://twitter.com/fibbyccino/status/1346262249854275585) What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?
 
 Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at [Brookings](https://doi.org/10.5281/zenodo.4311917) and [St. Louis Fed](https://doi.org/10.5281/zenodo.4281633) (also [video](https://research.stlouisfed.org/conferences/beyond-the-numbers/).
+
+AEA Fireside Chat Q&A
+----------------------
+
+## Data Cleaning Code
+
+> Ludovica Gazze: For proprietary data, are you looking for cleaning code, too? Or only the analysis code that produces tables and figures?
+
+We are looking for all codes including the cleaning codes.
+
+> Natasha Ahuja: For data collected through field work, is it recommended to provide an already cleaned dataset with the code to replicate the tables or would you recommend providing the raw data (without pii) along with the cleaning code.
+
+> Sonja Settele: I have a self collected online survey data set underlying my analysis. Is it ok/common to do some initial cleaning to my raw data set, such as dropping test observations, incomplete observations or bots (these are all observations not included in the final data obviously).
+
+We recommend providing the raw data with the cleaning code. 
+
+## Piece-Wise Output
+
+> Sonja Settele: I have tables for which I "manually" stack, say, Panels A, B and C. Would it be ok for my replication do-file to produce three separate panels which should the same results as the one joint table that is visible in the paper? Thank you!
+
+Yes. It is okay, as long as that the replication code or the README clearly states that the panels will be separately produced and saved, and the produced output and the codes are mapped.
+
+## Github as an Archive
+
+> Hauke Roggenkamp: Can GitHub serve as a sufficient archive for code and data (if the data is allowed to be shared)?       
+
+In general, GitLab and similar tools are not archives. You can find more detailed explanation here: https://www.aeaweb.org/journals/data/faq#existing
+
+## Versions of Public Data
+
+> William Wheeler: Some public datasets are routinely updated but they earlier versions are not archived. Should we be providing copies of the data we use or is it sufficient to note when we accessed the data (seems like the latter may not lead to replication)?
+
+If possible (when the authors have the authorities and licenses to), providing the copies would be ideal in addition to the latest access date. However, in case it is not possible, specifying the latest date of access would be okay.
+
+## Synthetic Data
+
+> Ana Martinovici: For situations when the original dataset cannot be shared (e.g. due to NDAs): would synthetic datasets be a good enough alternative? This way, readers can check the methods described in the paper and obtain close-enough results as those based on the original dataset.
+
+In general, it is always preferable for us to access the exact data used in the original analysis to allow for a full reproducibility check on all Tables and Figures in the paper. If this is not possible, and existing synthetic data is a readily available option, this is a useful tool for ensuring the integrity of the code. 
+
+## What is Verified
+
+> Anonymous: Do you check that code does what it is supposed to do/is logically correct, or just that it produces the results in the paper?
+
+We do a comprehensive check from if the code runs through and if the produced output are the same as the ones in the paper.
+
+## Ado Files
+
+> Sonja Settele: Related to the "computational empathy" point: Is it ok to use ado files to produce tables, as long as I submit the ado files in my replication package?
+
+Yes, with some description in the README of the fact that ado file is a computational requirement.
+
+## In-text Numbers
+
+> Sonja Settele: Should I only replicate results shown in exhibits, or also (secondary) evidence that is only mentioned in the text? 
+
+We request providing the programs to produce in-text numbers as well.
+
+## Discrepencies in Replication Results
+
+> Ana Martinovici: What happens if during the check you find some error than after being corrected leads to some results becoming no longer statistically significant? Note that the error is not in the method itself, but in how the method was implemented (e.g. a missing comma or an extra comma in the wrong place in the code). At this point, the paper was conditionally accepted so that shows the theory and RQ are interesting enough. Does the change in statistical significance impact the acceptance decision?
+
+We do not change the journal acceptance decision just because of non-replicability of the code. If the replicated results differ from what was presented in the paper, we ask the authors to update the codes.
+
+## Updates During R&R
+
+> Senan Hogan-Hennessy: How will we deal with archiving of the project and updates during R&R?  Will we archive only upon final acceptance to a journal, or archive separately at every stage of submission?
+
+Archiving can happen before the paper is published. In openICPSR deposit where AEA data deposit is, you can update the deposit upon the author has a new version.
+
+## Timeline
+
+> Anonymous: When should one expect to hear back from the data editor after submitting all the replication files? Thanks.
+
+Our goal for standard manuscripts is 2-3 weeks from the time we are assigned the paper by the editiorial office.
+
+## Example Report
+
+> Anonymous: Are examples of the reports you create during the process (which Lars just mentioned) accessible to the public?
+
+## Transforming Data Under a NDA
+
+> José Bayoán: Does it make sense for transforming the data limited in scope such that it can be “exported from the NDA”? For example, using anonymized social network data but rather than providing the anonymized data, we provide the edge-list for the networks?
+
+
+
+Additional Resources
+---------------------
+
+- Social science data editor's [page](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#not-acceptable)
+
+- Github [Tips](https://guides.github.com/introduction/git-handbook/)
+
+- AEA [Guidance](https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html)
+
+- AEA Data and Code Policies [Guidance](https://www.aeaweb.org/journals/data/)
+
+
+
+
+
+
+
+
+
