@@ -1,0 +1,606 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+<title> Office of the AEA Data Editor
+  
+  - A discussion about various things
+  
+</title>
+
+
+<link href="https://aeadataeditor.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+    
+
+<!-- start custom head snippets -->
+
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://aeadataeditor.github.io/">Office of the AEA Data Editor</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/publications/">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/talks/">Talks</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/projects/">Projects</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/surveys/">Surveys</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/year-archive/">Blog Posts</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/">Guidance</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="https://aeadataeditor.github.io/images/thumbnail_website_logo.jpg" class="author__avatar" alt="AEA Data Editor">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">AEA Data Editor</h3>
+    <p class="author__bio">The AEA Data Editor's mission is to design and oversee the AEA journals' strategy for archiving and curating research data and promoting reproducible research.</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+      
+      
+      
+      
+       
+      
+        <li><a href="https://twitter.com/AEAData"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/aeadataeditor"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A discussion about various things">
+    <meta itemprop="description" content="In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.">
+    <meta itemprop="datePublished" content="January 19, 2021">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">A discussion about various things
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  10 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-19T00:00:00-05:00">January 19, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <div>
+          On this page:
+          <ul id="my_toc" class="inline_toc">
+  <li><a href="#starting-a-project">Starting a project</a></li>
+  <li><a href="#irb-consent-and-distributing-sensitive-data">IRB, consent, and distributing sensitive data</a></li>
+  <li><a href="#code-persistence-or-code-rot">Code Persistence or Code Rot</a></li>
+  <li><a href="#proprietary-data-from-unknown-sources">Proprietary Data from Unknown Sources</a></li>
+  <li><a href="#data-citations---how-to-do-it">Data citations - how to do it</a></li>
+  <li><a href="#how-to-bring-solved-problems-to-the-next-generation">How to bring solved problems to the next generation?</a></li>
+  <li><a href="#time-capsules-and-other-data-access-options">Time capsules and other data access options</a></li>
+  <li><a href="#accessing-data">Accessing data</a></li>
+  <li><a href="#gazillion-files">Gazillion files</a></li>
+  <li><a href="#verifying-papers-with-restricted-access-data">Verifying papers with restricted-access data</a></li>
+  <li><a href="#replicability-and-reproducibility-in-institutions">Replicability and Reproducibility in Institutions</a></li>
+</ul>
+        </div>
+        <p>In this post, I’ll pick up questions that have been asked over Twitter or during the <a href="https://aeadataeditor.github.io/talks/2021-01-19-cswep">2021-01-19 Fireside chat</a>, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.</p>
+
+<!-- more -->
+
+<h2 id="starting-a-project">Starting a project</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/judy_chevalier/status/1346259253955354624">Judy Chevalier</a> What do I do before I even start the project? What do I do if I am accessing a big public dataset and it is always at risk of being changed or cleaned or updated?</p>
+</blockquote>
+
+<p>Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  <a href="https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html">https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html</a> - in particular the first part <a href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html">https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html</a> can be done at any time!</p>
+
+<h2 id="irb-consent-and-distributing-sensitive-data">IRB, consent, and distributing sensitive data</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/Cutler_econ/status/1346261440899018752">David Cutler</a> IRB rules are becoming more complex over time. It would be good for economists to understand them better.</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://twitter.com/asacarny/status/1346262290354614274">Adam Sacarny</a> I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…</p>
+</blockquote>
+
+<p>Excellent points. Longish answer during Fireplace Chat.</p>
+
+<h2 id="code-persistence-or-code-rot">Code Persistence or Code Rot</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/johnjhorton/status/1346260871429971970">John Horton</a>: If you are relying on lots of open source packages subject to change, how do we prevent “code rot”? Might it make sense for AEA to collect &amp; store docker images or virtual machines?</p>
+</blockquote>
+
+<p>There are two assumptions embedded within the question, which I’ll address at the end. The easy answer to this is: We already have a mechanism to store code, docker images, and virtual machines, it’s called the “<a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>” where all replication packages are stored.</p>
+
+<p>The two assumptions are: “open source packages” and “researcher-provided docker images/VMs”. Most economics code is written in Stata or Matlab, which are not open-source software, but which often have open-source (or imprecisely licensed) add-ons (packages, etc.) (I will address “packages” later). The best practice we have found is for copies of those packages to be distributed with the replication package, pre-installed, for two key reasons: Stata package repositories (<a href="https://ideas.repec.org/s/boc/bocode.html">SSC</a>) are not versioned (old versions disappear), Matlab has no package repository, and Github (often used as an alternative, in particular for a small subset of Stata packages) is not persistent in the same way the “<a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>” is. The AEA guidelines may require this in the future, but currently only suggest it.</p>
+
+<p>The second assumption is that researchers provide Docker images and VMS. <strong>They don’t</strong>. Not in the social sciences. It is beyond the scope of what we do to create it for them, at this point (we are looking into ways of doing that, though).</p>
+
+<h2 id="proprietary-data-from-unknown-sources">Proprietary Data from Unknown Sources</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/johnjhorton/status/1346261392983285761">John Horton</a> For proprietary data where the source of the data is not disclosed but known to the authors, is there a way to facilitate access for other researchers to the data without divulging source publicly?</p>
+</blockquote>
+
+<p>This is an excellent idea, variants of which we have investigated before. It hinges primarily on the willingness of the original data provider to entertain this. We don’t actually have many cases where the provider is anonymous. I can think of two right now: one has a researcher-mediated access mechanism via a Non-disclosure Agreement - a group of researchers maintains the data, protects anonymity, but is willing to provide access to the data for replication and possibly for research purposes. A second one implemented an email-moderated mechanism that hides the identity of the data provider. In both cases, the persistence of the data, and of the access mechanism is not guaranteed.</p>
+
+<p>The ideal scenario is for researchers to obtain approval from the data provider to deposit data under a restrictive access mechanism mediated by a third party. <a href="https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/">ICPSR</a> is one such entity, and there are not many others. A grander scenario are industry-specific restricted-access data centers, such as <a href="http://www.privatecapitalresearchinstitute.org/research.php">PCRI</a>, where access is possible, and the identity of (multiple) data providers is hidden.</p>
+
+<p>The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.</p>
+
+<h2 id="data-citations---how-to-do-it">Data citations - how to do it</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/ElizWebHand/status/1347602931210739718">Elizabeth Weber Handwerker</a> I’m trying to create a bibtex entry for a dataset (the journal says to “reference datasets” and can’t find any examples of how to do this.</p>
+</blockquote>
+
+<p>Try these examples:</p>
+
+<ul>
+  <li><a href="https://zotero.org/groups/2245704/fsrdc">https://zotero.org/groups/2245704/fsrdc</a>, <a href="https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib">https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib</a> for confidential data,</li>
+  <li><a href="https://github.com/larsvilhuber/MobZ/blob/master/data.bib">https://github.com/larsvilhuber/MobZ/blob/master/data.bib</a> for a variety of different data.</li>
+</ul>
+
+<p>Standard AEA bib style does not show URLs properly, use <a href="https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst">https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst</a> or the “econ” style. The quick solution: use @techreport
+{} in a Bibtex file. <a href="https://doi.org/10.5281/zenodo.4073995">doi.org/10.5281/zenodo.4073995</a>, starting around pg. 37, discusses the basic ideas. Short take-away: It’s simple. (and @techreport or @misc
+ has all the necessary fields).</p>
+
+<p>Some examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@techreport{bea_table30_2019,
+  title = {Table 30:  by , 1969-2018},
+  author = ,
+  year = {2019},
+  institution = ,
+  url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
+  timestamp = {2020-09-08T00:42:24Z},
+  type = {[Datafile]}
+}
+
+@misc{BLS_QCEW_2020,
+  title = {Quarterly  of  and  -- },
+  shorttitle = },
+  author = ,
+  year = {2020},
+  publisher = ,
+  url = {https://www.bls.gov/cew/downloadable-data-files.htm},
+  urldate = {2020-09-20},
+  abstract = {Quarterly Census of Employment and Wages -- Data Files},
+  language = {en},
+  number = {1990-2019},
+  timestamp = {2020-09-20T19:26:12Z},
+  type = {[Datafiles]}
+}
+</code></pre></div></div>
+
+<h2 id="how-to-bring-solved-problems-to-the-next-generation">How to bring solved problems to the next generation?</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/johnjhorton/status/1346262118904029184">John Horton</a> Many of the code &amp; data problems are essentially solved software engineering problems (version control, makefiles, unit tests, etc) - how do we incorporate these practices into PhD education so next generation is better than us?</p>
+</blockquote>
+
+<p>Good question… Efforts at <a href="https://bitss.github.io/ACRE/">BITSS</a>, <a href="https://carpentries.org/">Carpentries</a>, various data-science oriented classes, <a href="https://labordynamicsinstitute.github.io/computing4economists/web/#/">my own efforts at Cornell</a> only scratch the surface. They train a minority of volunteering students. I would actually argue that these best practices should be taught at the undergraduate level, and should be a compulsory part of graduate education the same way we require math proficiency. But we are a long way off of that.</p>
+
+<h2 id="time-capsules-and-other-data-access-options">Time capsules and other data access options</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/johnjhorton/status/1346263273432354816">John Horton</a> Could AEA help credibly create “time capsule” data agreements where it will release a public dataset X years in the future? Some companies are willing to share data but not until it has lost its competitive value. A long lived institution like AEA is well positioned for this.</p>
+</blockquote>
+
+<p>Answer coming soon.</p>
+
+<h2 id="accessing-data">Accessing data</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/conlon_chris/status/1346473098518773760">Chris Conlon</a> Several boilerplate data agreements that meet AEA requirements?</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://twitter.com/conlon_chris/status/1346474319283593218">Chris Conlon</a> negotiate terms with some of the commonly used data ACADEMIC data providers (WRDS? Kilts?).</p>
+</blockquote>
+
+<p>Ongoing (<a href="https://marketingdata.chicagobooth.edu/Anonymous/Welcome">Kilts</a>, <a href="https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607">German SOEP</a>, <a href="https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx">German Scientific Use Files</a>). Repeatedly requesting (<a href="https://dhsprogram.com/data/">DHS</a>, <a href="https://www.afrobarometer.org/">Afrobarometer</a>) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA).</p>
+
+<p>Typical answer: “We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers].”</p>
+
+<h2 id="gazillion-files">Gazillion files</h2>
+
+<blockquote>
+  <p>(via email) We have 26,000 files in our deposit. How should we proceed (openICPSR only handles up to 1,000 files)?</p>
+</blockquote>
+
+<p>We get this question regularly. There are multiple partial answers:</p>
+
+<ul>
+  <li>When the data provider has assigned a DOI, no need to provide the data. An example is the TERRA/MODIS climate data is such an example, see <a href="https://dx.doi.org/10.5067/MODIS/MOD08_M3.061">https://dx.doi.org/10.5067/MODIS/MOD08_M3.061</a>.</li>
+  <li>If the data provider has not assigned a DOI, we encourage authors to ask their data provider to do so. This is the right approach… but it is unlikely to yield a result prior to publication. Fallback solutions below.</li>
+  <li>If you have the interest and time to provide a public good, deposit the data separately, thus creating a DOI. While the AEA uses openICPSR to handle its replication packages, you can deposit the pure data deposit anywhere. A good option (as of January 2021) is <a href="https://zenodo.org">Zenodo</a>, which has an excellent API allowing to download metadata and large quantities of files. You would describe the data, and publish a deposit, thus creating a DOI. No need to then provide the data as part of the AEA Replication package - just cite it. Bonus: use the API to read-in the data for your own research.</li>
+  <li>If all else fails, it is acceptable to ZIP up files by sub-directory (e.g., “zip -rp weather_CPCG.zip weather_CPCG/*” and then describe, as part of setup/processing, how and where to unzip the files. Caution: ZIP files on different platforms include addtional directory levels sometimes, so be precise about the directory structure you want. Also, the default Windows and Linux zip utilities can only handle ZIP archives up to 2GB, whereas modern macOS archives can handle larger ZIP packages. We suggest using 7zip, which is free and cross-platform.</li>
+</ul>
+
+<h2 id="verifying-papers-with-restricted-access-data">Verifying papers with restricted-access data</h2>
+
+<blockquote>
+  <p>(via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.</p>
+</blockquote>
+
+<p>Longish answer coming in the Fireside Chat. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called “my memory” and a database of data citations.</p>
+
+<blockquote>
+  <p><a href="https://twitter.com/ElizWebHand/status/1346258970827218946">Elizabeth Weber Handwerker</a> I’m a government economist, working with some data outside researchers can access only through an application process, and some data they can’t access at all (Massachusetts QCEW, etc.). What do AEA requirements for data &amp; code look like in each case?</p>
+</blockquote>
+
+<p>Answer coming live during Fireside Chat. Short answer: The same.</p>
+
+<p>See talk at the <a href="https://doi.org/10.5281/zenodo.4250890">University of Waterloo / Canadian Research Data Center</a>. I have also had talks with Census Bureau folks, and have ongoing private and public talks with institutions that have access to restricted-data.</p>
+
+<h2 id="replicability-and-reproducibility-in-institutions">Replicability and Reproducibility in Institutions</h2>
+
+<blockquote>
+  <p><a href="https://twitter.com/fibbyccino/status/1346262249854275585">@fibbyccino</a> What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?</p>
+</blockquote>
+
+<p>Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at <a href="https://doi.org/10.5281/zenodo.4311917">Brookings</a> and <a href="https://doi.org/10.5281/zenodo.4281633">St. Louis Fed</a> (also <a href="https://research.stlouisfed.org/conferences/beyond-the-numbers/">video</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#fireside-chat" class="page__taxonomy-item" rel="tag">Fireside Chat</a><span class="sep">, </span>
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
+    
+    </span>
+  </p>
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" class="pagination--pager" title="A discussion about various things
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="permalink">A discussion about various things
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-05T00:00:00-05:00">January 05, 2021</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>Moved to later post.
+<strong><a href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="permalink"> Read more</a></strong></p></p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted" rel="permalink">An example of reproducibility checking when data is restricted-access
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2020-06-30T00:00:00-04:00">June 30, 2020</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>I wanted to highlight a recently (2020-04-30) published article in the <a href="https://www.aeaweb.org/journals/pol">AEJ:Economic Policy</a> as an example of reproducibility checking when data is restricted-access.
+
+<strong><a href="https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted" rel="permalink"> Read more</a></strong></p></p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/AEAData"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="http://github.com/aeadataeditor"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://aeadataeditor.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="https://aeadataeditor.github.io/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+  </body>
+</html>
