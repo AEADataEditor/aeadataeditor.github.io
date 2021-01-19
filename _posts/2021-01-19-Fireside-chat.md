@@ -1,5 +1,5 @@
 ---
-title:  "A discussion about various things"
+title:  "Follow-up to Fireside Chat"
 layout: single-withtoc
 date: 2021-01-19
 tags:
