@@ -13,6 +13,8 @@ I wanted to illustrate the range of the various topics that a Data Editor might 
 
 <!-- more -->
 
+## A day in the life...
+
 All in all, I worked on 15 different papers - some for quite a while, others only briefly. 
 Naturally, I signed off on a few reports - some were first round (yes!), some were second round. I'm late on quite a few, because ...
 
@@ -43,4 +45,6 @@ Used a Docker image to run revised R code from author team. The revised README n
 
 Never a dull day!
 
+## On Twitter
 
+<https://twitter.com/AeaData/status/1356106537673089024>
