@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <title> Office of the AEA Data Editor
   
-  - Blog posts
+  - Reproducible GIS
   
 </title>
 
@@ -99,6 +99,8 @@
 
 
 
+
+
 <div id="main" role="main">
   
 
@@ -168,70 +170,211 @@
   </div>
 
 
-  <div class="archive">
-    
-      <h1 class="page__title">Blog posts</h1>
-    
-    
-
-
-  
-  
-    <h2 id="2021" class="archive__subtitle">2021</h2>
-    
-  
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Reproducible GIS">
+    <meta itemprop="description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+    <meta itemprop="datePublished" content="February 10, 2021">
     
 
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="permalink">Reproducible GIS
-</a>
-      
-    </h2>
-    
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+        <header>
+          <h1 class="page__title" itemprop="headline">Reproducible GIS
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
 
   
 	  1 minute read
 	
 </p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-02-10T00:00:00-05:00">February 10, 2021</time></p>
+        
+        
+             
+        
     
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <div>
+          On this page:
+          <ul id="my_toc" class="inline_toc">
+  <li><a href="#reproducibility-and-gis">Reproducibility and GIS</a></li>
+  <li><a href="#checklist-for-reproducible-maps">Checklist for reproducible maps</a></li>
+  <li><a href="#resources">Resources</a>
+    <ul>
+      <li><a href="#stata">Stata</a></li>
+      <li><a href="#r">R</a></li>
+      <li><a href="#python">Python</a></li>
+      <li><a href="#arcgis">ArcGIS</a></li>
+      <li><a href="#qgis">QGIS</a></li>
+    </ul>
+  </li>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#ps">PS</a></li>
+  <li><a href="#follow-the-conversation">Follow the conversation</a></li>
+</ul>
+        </div>
+        <p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.</p>
+
+<!-- more -->
+
+<h2 id="reproducibility-and-gis">Reproducibility and GIS</h2>
+
+<p>Reproducibility means that the inputs and methods can be repeated by a (somewhat) knowledgeable person. For GIS, that <em>might</em> (should) mean code, but it <em>definitely</em> means at least SOME instructions. Even if they are manual….</p>
+
+<p>Maps are data. While your typical Stata/Matlab/R/Julia graph is data projected into Cartesian coordinates, maps are data projected into geographic coordinates. So at a minimum, we need to know what the inputs to the map are, same as we need to know inputs to graphs.</p>
+
+<p>So “data + code” + “<code class="language-plaintext highlighter-rouge">graph twoway scatter x y</code>” -&gt; 📈📉,</p>
+
+<p><img src="https://pbs.twimg.com/media/Et31MkpXcAQg8Nw.png" alt="" /></p>
+
+<p>and “data + code” + “<code class="language-plaintext highlighter-rouge">maptile x, geo(state)</code>” -&gt; 🗺️. Or “data + code” + “<em>instructions(ArcGIS)</em>” -&gt; 🗺️.</p>
+
+<p><img src="https://pbs.twimg.com/media/Et3048TXcAIx20f.png" alt="" /></p>
+
+<p>Note that for a map, “data” includes shapefiles (including provenance of the shapefile)</p>
+
+<h2 id="checklist-for-reproducible-maps">Checklist for reproducible maps</h2>
+
+<ul>
+  <li>✅ data (+ provenance)</li>
+  <li>✅ code (manipulates data)</li>
+  <li>✅ shapefile (provides coordinates)</li>
+  <li>✅ code (preferred) or instructions (sufficient)</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<p>A few tentative resources are collected at <a href="https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html">https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html</a> (please suggest improvements!), with some other links below:</p>
+
+<h3 id="stata">Stata</h3>
+
+<p><a href="https://www.stata.com/support/faqs/graphics/spmap-and-maps/">Stata FAQ on maps</a>, including the <a href="https://ideas.repec.org/c/boc/bocode/s456812.html">spmap package</a> and the <a href="https://michaelstepner.com/maptile/">maptile package</a> by <a href="https://twitter.com/michaelstepner">@michaelstepner</a></p>
+
+<h3 id="r">R</h3>
+
+<p>The core <a href="https://r-spatial.github.io/sf/">sf library</a>, <a href="https://staff.washington.edu/phurvitz/r_gis/">reproducible GIS practices in R</a>  and interactions with GIS software (and integrated as a dependency into many great packages)</p>
+<h3 id="python">Python</h3>
+
+<p><a href="https://geopandas.org/">GeoPandas</a> and others</p>
+
+<h3 id="arcgis">ArcGIS</h3>
+
+<p>ArcGIS can also be scripted (via python) and now <a href="https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/pro-notebooks.htm">integrates Jupyter-like notebooks</a></p>
+
+<h3 id="qgis">QGIS</h3>
+
+<p>Staying #opensource: <a href="https://www.qgis.org/">QGIS</a> has “<a href="https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html">Graphical Modeler</a>”, and look for tutorials on “<a href="https://courses.spatialthoughts.com/">Automating GIS Workflows</a>”</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Please try to create scripted maps, but always describe what data you are mapping, and where you got the shapefiles from (note: copyrights might apply, permissions might need to be obtained!)</p>
+
+<h2 id="ps">PS</h2>
+
+<p>And for those exceptions from scripting: a 2-3 sentence description of what you did would be sufficient. And for the unscripted ArcGIS which you did before you learned how to script stuff: a 4-5 sentence description may be sufficient as well.</p>
+
+<h2 id="follow-the-conversation">Follow the conversation</h2>
+
+<p>Slightly modified from
+<a href="https://twitter.com/AeaData/status/1359516297990701057">https://twitter.com/AeaData/status/1359516297990701057</a></p>
 
         
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-02-10T00:00:00-05:00">February 10, 2021</time></p>
+      </section>
+
+      <footer class="page__meta">
+        
         
 
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.
 
-<strong><a href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
+  
 
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#gis" class="page__taxonomy-item" rel="tag">GIS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="https://aeadataeditor.github.io/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
+    
+    </span>
+  </p>
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" class="pagination--pager" title="A Day in the Life of a Data Editor
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
-
 
   
   
-  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
 
 
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
@@ -267,16 +410,14 @@
   </article>
 </div>
 
-
-  
-  
-  
+        
+          
 
 
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
@@ -312,16 +453,14 @@
   </article>
 </div>
 
-
-  
-  
-  
+        
+          
 
 
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
@@ -356,19 +495,14 @@
   </article>
 </div>
 
-
-  
-  
-    <h2 id="2020" class="archive__subtitle">2020</h2>
-    
-  
-  
+        
+          
 
 
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
@@ -404,9 +538,10 @@
   </article>
 </div>
 
-
-
-  </div>
+        
+      </div>
+    </div>
+  
 </div>
 
 

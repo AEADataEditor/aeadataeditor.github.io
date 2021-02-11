@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-02-02T11:30:09-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">A Day in the Life of a Data Editor</title><link href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="alternate" type="text/html" title="A Day in the Life of a Data Editor" /><published>2021-01-31T00:00:00-05:00</published><updated>2021-01-31T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/day-in-the-life</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life">&lt;p&gt;I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-02-11T08:53:21-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Reproducible GIS</title><link href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="alternate" type="text/html" title="Reproducible GIS" /><published>2021-02-10T00:00:00-05:00</published><updated>2021-02-10T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/reproducible-gis</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">&lt;p&gt;A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;reproducibility-and-gis&quot;&gt;Reproducibility and GIS&lt;/h2&gt;
+
+&lt;p&gt;Reproducibility means that the inputs and methods can be repeated by a (somewhat) knowledgeable person. For GIS, that &lt;em&gt;might&lt;/em&gt; (should) mean code, but it &lt;em&gt;definitely&lt;/em&gt; means at least SOME instructions. Even if they are manual….&lt;/p&gt;
+
+&lt;p&gt;Maps are data. While your typical Stata/Matlab/R/Julia graph is data projected into Cartesian coordinates, maps are data projected into geographic coordinates. So at a minimum, we need to know what the inputs to the map are, same as we need to know inputs to graphs.&lt;/p&gt;
+
+&lt;p&gt;So “data + code” + “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph twoway scatter x y&lt;/code&gt;” -&amp;gt; 📈📉,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/Et31MkpXcAQg8Nw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and “data + code” + “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maptile x, geo(state)&lt;/code&gt;” -&amp;gt; 🗺️. Or “data + code” + “&lt;em&gt;instructions(ArcGIS)&lt;/em&gt;” -&amp;gt; 🗺️.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/Et3048TXcAIx20f.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that for a map, “data” includes shapefiles (including provenance of the shapefile)&lt;/p&gt;
+
+&lt;h2 id=&quot;checklist-for-reproducible-maps&quot;&gt;Checklist for reproducible maps&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;✅ data (+ provenance)&lt;/li&gt;
+  &lt;li&gt;✅ code (manipulates data)&lt;/li&gt;
+  &lt;li&gt;✅ shapefile (provides coordinates)&lt;/li&gt;
+  &lt;li&gt;✅ code (preferred) or instructions (sufficient)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;A few tentative resources are collected at &lt;a href=&quot;https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html&quot;&gt;https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html&lt;/a&gt; (please suggest improvements!), with some other links below:&lt;/p&gt;
+
+&lt;h3 id=&quot;stata&quot;&gt;Stata&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.stata.com/support/faqs/graphics/spmap-and-maps/&quot;&gt;Stata FAQ on maps&lt;/a&gt;, including the &lt;a href=&quot;https://ideas.repec.org/c/boc/bocode/s456812.html&quot;&gt;spmap package&lt;/a&gt; and the &lt;a href=&quot;https://michaelstepner.com/maptile/&quot;&gt;maptile package&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/michaelstepner&quot;&gt;@michaelstepner&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;r&quot;&gt;R&lt;/h3&gt;
+
+&lt;p&gt;The core &lt;a href=&quot;https://r-spatial.github.io/sf/&quot;&gt;sf library&lt;/a&gt;, &lt;a href=&quot;https://staff.washington.edu/phurvitz/r_gis/&quot;&gt;reproducible GIS practices in R&lt;/a&gt;  and interactions with GIS software (and integrated as a dependency into many great packages)&lt;/p&gt;
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://geopandas.org/&quot;&gt;GeoPandas&lt;/a&gt; and others&lt;/p&gt;
+
+&lt;h3 id=&quot;arcgis&quot;&gt;ArcGIS&lt;/h3&gt;
+
+&lt;p&gt;ArcGIS can also be scripted (via python) and now &lt;a href=&quot;https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/pro-notebooks.htm&quot;&gt;integrates Jupyter-like notebooks&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;qgis&quot;&gt;QGIS&lt;/h3&gt;
+
+&lt;p&gt;Staying #opensource: &lt;a href=&quot;https://www.qgis.org/&quot;&gt;QGIS&lt;/a&gt; has “&lt;a href=&quot;https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html&quot;&gt;Graphical Modeler&lt;/a&gt;”, and look for tutorials on “&lt;a href=&quot;https://courses.spatialthoughts.com/&quot;&gt;Automating GIS Workflows&lt;/a&gt;”&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Please try to create scripted maps, but always describe what data you are mapping, and where you got the shapefiles from (note: copyrights might apply, permissions might need to be obtained!)&lt;/p&gt;
+
+&lt;h2 id=&quot;ps&quot;&gt;PS&lt;/h2&gt;
+
+&lt;p&gt;And for those exceptions from scripting: a 2-3 sentence description of what you did would be sufficient. And for the unscripted ArcGIS which you did before you learned how to script stuff: a 4-5 sentence description may be sufficient as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;follow-the-conversation&quot;&gt;Follow the conversation&lt;/h2&gt;
+
+&lt;p&gt;Slightly modified from
+&lt;a href=&quot;https://twitter.com/AeaData/status/1359516297990701057&quot;&gt;https://twitter.com/AeaData/status/1359516297990701057&lt;/a&gt;&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="GIS" /><summary type="html">A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.</summary></entry><entry><title type="html">A Day in the Life of a Data Editor</title><link href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="alternate" type="text/html" title="A Day in the Life of a Data Editor" /><published>2021-01-31T00:00:00-05:00</published><updated>2021-01-31T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/day-in-the-life</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life">&lt;p&gt;I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
