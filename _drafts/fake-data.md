@@ -2,6 +2,7 @@
 
 - [synthpop](https://cran.r-project.org/package=synthpop) ([paper](https://doi.org/10.18637/jss.v074.i11)) @SCADR_data - used frequently in statistics, well-maintained
   - (untested) Python version https://github.com/hazy/synthpop @hazy_ai
+  - [tutorial](https://www.r-bloggers.com/2019/01/generating-synthetic-data-sets-with-synthpop-in-r/)
 - [fakeR](https://cran.r-project.org/package=fakeR)
 - [fabricatr](https://cran.r-project.org/package=fabricatr) (see also [DeclareDesign](https://declaredesign.org/r/fabricatr/)) "designs" data
 - [corr2data](https://www.stata.com/manuals/dcorr2data.pdf) to create a dataset with specified correlation structure
