@@ -15,4 +15,5 @@ matrix V = corr(R)
 corr2data x y z, n(`obs') cov(R) means(M)
 regress x y z
 ```
+- [Synthetic Data Vault](https://github.com/sdv-dev/SDV) in Python
 
