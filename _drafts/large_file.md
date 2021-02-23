@@ -1,0 +1,9 @@
+If this were a paper in one of our journals (and if you intend to submit, or if you want to do "the right thing", or re-use the data in various papers), here's what you would do (again, to be clear: not required for P&P)
+
+- create a separate deposit just for the EPA data. Because EPA does not curate data (can move it at any time, or, as has happened in the past, delete it), you want to preserve it. However, this is relatively easy - use datalumos.org, which was set up precisely for the purpose of curating gov't data at risk of being lost.
+- You then reference the separate deposit in your README/paper as the data source ("EPA. 2017. ... Distributed via datalumos.org. https://doi.org/..."), and as now, only provide the extract code and the intermediate 2MB file.
+
+To create a separate deposit, you have several options. I'll highlight three of them:
+- work with your local ICPSR representative (usually somebody in the libraries) to deposit it at the regular ICPSR. This might take several months, but should cost nothing to either you or the university. That is the best option.
+- self-deposit on Datalumos.org. This is likely to be the fastest option, but you are subject to the same limitations as on the AEA repository at openICPSR - which is the same underlying platform. You could zip up the unique files by some logical structure (days, weeks, geography, etc.) to reduce the file count, but you may still need to request an increase in the quota.
+- self-deposit on Zenodo.org - a European repository. Limitation of 50GB per deposit (you can have multiple ones, and you can request an increase in quota for a particular deposit), no limitations in terms of files, and they have an API. I would still suggest zipping up by some logical order, and possibly getting below the 50GB limit in doing so.
