@@ -37,7 +37,7 @@ The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/ae
 > -  **[Template README](https://social-science-data-editors.github.io/guidance/template-README.html)**
 > - [Data Citation Guidance](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)
 > - [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) and [detailed deposit guidance](aea-de-guidance/data-deposit-aea-guidance.html)
-> - [Replication template](replication-template/REPLICATION.md) used by our replicator team.
+> - [Replication template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md) used by our replicator team.
 > - **[FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)** and  **[additional (draft) FAQ on this site](aea-de-guidance/FAQ.html)**
 
 ---
