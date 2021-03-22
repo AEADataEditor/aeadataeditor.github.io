@@ -6,8 +6,7 @@ date: 2020-10-09
 location: "Online"
 venue: "Cornell Libraries"
 mainurl: https://github.com/labordynamicsinstitute/practices-presentation-2020
-doi: 10.5281/zenodo.4311917
-maindoi: 10.5281/zenodo.4048571
+doi: 10.5281/zenodo.4073995
 ---
 
 ## Abstract
