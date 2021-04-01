@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <title> Office of the AEA Data Editor
   
-  - A Day in the Life of a Data Editor
+  - What data to provide
   
 </title>
 
@@ -171,29 +171,29 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="A Day in the Life of a Data Editor">
-    <meta itemprop="description" content="I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.">
-    <meta itemprop="datePublished" content="January 31, 2021">
+    <meta itemprop="headline" content="What data to provide">
+    <meta itemprop="description" content="What do we mean by “data”?">
+    <meta itemprop="datePublished" content="March 31, 2021">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">A Day in the Life of a Data Editor
+          <h1 class="page__title" itemprop="headline">What data to provide
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
 
   
-	  3 minute read
+	  5 minute read
 	
 </p>
           
         
         
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-31T00:00:00-05:00">January 31, 2021</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-03-31T00:00:00-04:00">March 31, 2021</time></p>
         
         
              
@@ -206,49 +206,122 @@
         <div>
           On this page:
           <ul id="my_toc" class="inline_toc">
-  <li><a href="#a-day-in-the-life">A day in the life…</a></li>
-  <li><a href="#on-twitter">On Twitter</a></li>
+  <li><a href="#what-data-should-be-provided">What data should be provided?</a></li>
+  <li><a href="#the-short-answer">The short answer</a></li>
+  <li><a href="#the-longer-answer">The longer answer</a></li>
+  <li><a href="#problems">Problems?</a></li>
+  <li><a href="#solutions">Solutions?</a>
+    <ul>
+      <li><a href="#psid">PSID</a></li>
+    </ul>
+  </li>
+  <li><a href="#counter-point">Counter point</a></li>
+  <li><a href="#and-those-analysis-files">And those analysis files?</a></li>
+  <li><a href="#and-just-contact-us">And just contact us</a></li>
 </ul>
         </div>
-        <p>I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.</p>
+        <p>What do we mean by “data”?</p>
 
 <!-- more -->
 
-<h2 id="a-day-in-the-life">A day in the life…</h2>
+<h2 id="what-data-should-be-provided">What data should be provided?</h2>
 
-<p>All in all, I worked on 15 different papers - some for quite a while, others only briefly. 
-Naturally, I signed off on a few reports - some were first round (yes!), some were second round. I’m late on quite a few, because …</p>
+<p>One of my data editor colleagues at <a href="https://social-science-data-editors.github.io/">Social Science Data Editors</a> relayed a question to me recently (“asking for a friend…”): “do extract files need to be included in AEA data replication submissions?”</p>
 
-<p>I’ve spent a good chunk of the week onboarding a cohort of 11 new RAs. We wrapped up 15 hours of lecture and hands-on training. They did really well!</p>
+<p>They noted “The closest I could find was <a href="https://www.aeaweb.org/journals/data/data-code-policy#content">https://www.aeaweb.org/journals/data/data-code-policy#content</a> which has a blanket request for “data” but it might help to distinguish between “extracts” and “analysis” files.</p>
 
-<p>I sent off a reminder to an author. Deposit was withdrawn, because it contained data in infringement of his DUA. The data provider contacted us (“take down request”), we are waiting for the author to update deposit so we can republish.
-<img src="/images/openICPSR-study-unpublished.png" alt="Unpublished study" /></p>
+<h2 id="the-short-answer">The short answer</h2>
 
-<p>I contacted a commercial data provider to request permission to post a data extract provided by author. Author had not asked for permission. I believe we will not get permission. This avoids a “take down request” later.</p>
+<p>It depends.</p>
 
-<p>Can a Data Editor (or any data-oriented referee) be considered a “consultant” with “material participation/engagement” for the purposes of a confidentiality and data use agreement? Question sent to IRB (thanks to the author for bringing this up early!)</p>
+<ul>
+  <li>extract (raw) data can be reliably re-acquired today?</li>
+  <li>extract (raw) data can be reliably re-acquired in the future?</li>
+  <li>analysis data can be reproduced with reasonable resources?</li>
+</ul>
 
-<p>How do you cross-list replication packages or data from a trusted repository that is not the journal’s repository? We would like to be able to search “all the journal’s packages” even when they are legitimately deposited elsewhere? Backend technical.</p>
+<h2 id="the-longer-answer">The longer answer</h2>
 
-<p>Identified one new request for replication (with restricted-access data) that I can delegate to a third-party replicator. Handled getting them started. <a href="https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html">https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html</a></p>
+<p>For the raw input data (which may be an extract - that’s actually not the key criterion), we require that the <strong>acquisition</strong> of the data be reproducible.</p>
 
-<p>First paper that uses Google Colab to run and disseminate package - guide RA, and figure out response to authors, since we still need a copy of the Jupyter notebooks in the archive (they did not provide a README). <a href="https://social-science-data-editors.github.io/template_README/">https://social-science-data-editors.github.io/template_README/</a></p>
+<p>You don’t have to provide <strong>any</strong> data, if</p>
 
-<p>Assigned additional resources (extended reservation) for the Linux Cluster so the job that another RA is running can finish.  Note that we are skipping the part that uses 2000 nodes (as per README) in the interest of time (and $$).</p>
+<ul>
+  <li>the results can be reproduced by downloading precisely specified raw data,</li>
+  <li>can reproduce analysis files reliably - subject to a reasonableness constraint.</li>
+</ul>
 
-<p>Assessed whether we need to boot up the (pre-configured) Windows VM to run a Matlab + Dynare job, or whether we can run it on the existing Cornell Windows cluster.</p>
+<p>But you might also have to provide <strong>all</strong> the data.</p>
 
-<p>Helped RA debug a problem where Matlab interfaces with an external (Fortran-compiled) binary that is not producing output - the code contained no checks for that situation, and gave a misleading error message several steps later.</p>
+<p>Reproducibility, now and in the future, is key, not whether the data is part of the package or not.</p>
 
-<p>Alerted the journal editor to an issue where even the authors’ revision still leads to numerical discrepancies, despite authors’ greatly improved efforts to specify exactly how to run (and our standard setup is fully compliant). Is this another Stata bug?</p>
+<p>But: this is not always straightforward. Take IPUMS as a (frequent) example.</p>
 
-<p>Used a Docker image to run revised R code from author team. The revised README now specifies exactly the version of R, and Docker happens to be the best way to compartmentalize the whole package (the authors did not use Docker). <a href="https://github.com/AEADataEditor/docker-r-starter">https://github.com/AEADataEditor/docker-r-starter</a></p>
+<ol>
+  <li>IPUMS curates its entire database (assign a DOI), so the “reliably in the future” part is OK ✅</li>
+  <li>But IPUMS has a purely (as of today) manual data extract system. There is no computer code that can reliably re-acquire an extract today or in the (near) future. ❌
+    <ul>
+      <li>And even manual extraction is fraught with the potential for error (and can be quite tedious)  ❌</li>
+    </ul>
+  </li>
+  <li>And very importantly: this is allowed by their <a href="https://ipums.org/about/terms">terms of use</a> for MOST but not all of their datasets. ✅</li>
+</ol>
 
-<p>Never a dull day!</p>
+<p>We thus prefer to have a copy of IPUMS extracts - and the read-in code, and the data dictionary that they provide with every extract (if you didn’t grab yours, go back into the IPUMS system and download it now!) The AEA’s Data and Code Repository can curate as well as IPUMS, but make the data more easily available, lowering the cost of reproducibility for all future researchers.</p>
 
-<h2 id="on-twitter">On Twitter</h2>
+<h2 id="problems">Problems?</h2>
 
-<p><a href="https://twitter.com/AeaData/status/1356106537673089024">https://twitter.com/AeaData/status/1356106537673089024</a></p>
+<p>Of course, there can be impediments. For instance, we would prefer to curate the data when the data provider does NOT curate the data (has no preservation policy, assigns no DOI). But the third condition (terms of use) is just as important, and often prevents us from taking custody of an extract (or even of the analysis data).</p>
+
+<p>We ask for extracts from various online query systems (WDI, OECD, etc.) because the precise query cannot be saved, or is complicated, etc.</p>
+
+<h2 id="solutions">Solutions?</h2>
+
+<p>One obvious solution is for all data query systems to have some system to save or export query code.</p>
+
+<h3 id="psid">PSID</h3>
+
+<p>A nice (simple, but not perfect) example for such a stored-query system is the PSID:</p>
+
+<ol>
+  <li>They do curate their database, though no DOIs are assigned, and you need to know to ask (meh… but OK: ✅)</li>
+  <li>While they do not assign DOIs to historical queries, you can (as a user) share a query, see <a href="https://simba.isr.umich.edu/DC/c.aspx">https://simba.isr.umich.edu/DC/c.aspx</a>. ✅</li>
+  <li>Which is good, since you are not allowed to share the data itself! ❌</li>
+</ol>
+
+<h2 id="counter-point">Counter point</h2>
+
+<p>The obvious corollary is:</p>
+
+<ol>
+  <li>If a data provider curates the data (say, at a trusted repository, or with a credible preservation policy) (for which a DOI is a signal, but not a condition) ✅</li>
+  <li>and the data can be downloaded, or queried through an API or something similar ✅</li>
+  <li>regardless of their license and terms of use</li>
+</ol>
+
+<p>we will REJECT your data deposit - leave it where it is!</p>
+
+<p>But cite it, and provide precise instructions on how to get it (if a simple click is not sufficient).</p>
+
+<h2 id="and-those-analysis-files">And those analysis files?</h2>
+
+<p>So when do we want analysis (intermediate) files?</p>
+
+<ul>
+  <li>when we cannot reliably get the raw data, and there are no issues with redistributing the analysis files</li>
+  <li>when the raw data can be redistributed, but are too large to acquire (at the AEA, that boundary is around 30GB)</li>
+  <li>when the raw data can be redistributed, but the analysis data are already the result of a very resource (computer count or time) intensive processing</li>
+</ul>
+
+<p>In all of those cases, we want the analysis data.</p>
+
+<p>When do we NOT want the analysis data? Well, if the raw data can be trivially acquired (download, API), and can be reasonably quickly processed, then we (and future researchers) do not need your copy of the analysis data. But it also doesn’t hurt…</p>
+
+<p>BTW, “reasonably” means we are not using more than maybe 50 compute cores. “Quickly” means that it runs no longer than 2-3 weeks - to produce the analysis data.</p>
+
+<h2 id="and-just-contact-us">And just contact us</h2>
+
+<p>In all cases, if you have questions, concerns, or doubts, do contact me - as many others have already done.</p>
 
         
       </section>
@@ -273,11 +346,11 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
     
       
       
-      <a href="https://aeadataeditor.github.io/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+      <a href="https://aeadataeditor.github.io/tags/#data" class="page__taxonomy-item" rel="tag">Data</a><span class="sep">, </span>
     
       
       
-      <a href="https://aeadataeditor.github.io/tags/#tasks" class="page__taxonomy-item" rel="tag">Tasks</a><span class="sep">, </span>
+      <a href="https://aeadataeditor.github.io/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
     
       
       
@@ -298,11 +371,11 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/posts/2021-03-31-what-data" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/posts/2021-03-31-what-data" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/posts/2021-03-31-what-data" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
       
@@ -310,12 +383,11 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
 
   <nav class="pagination">
     
-      <a href="https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" class="pagination--pager" title="Follow-up to Fireside Chat
+      <a href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="pagination--pager" title="Reproducible GIS
 ">Previous</a>
     
     
-      <a href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="pagination--pager" title="Reproducible GIS
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -331,49 +403,6 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
         <h4 class="page__related-title">You May Also Enjoy</h4>
       
       <div class="grid__wrapper">
-        
-          
-
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="permalink">What data to provide
-</a>
-      
-    </h2>
-    
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-  
-	  5 minute read
-	
-</p>
-    
-
-        
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-03-31T00:00:00-04:00">March 31, 2021</time></p>
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>What do we mean by “data”?
-
-<strong><a href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
-
-  </article>
-</div>
-
         
           
 
@@ -410,6 +439,49 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
     <p class="archive__item-excerpt" itemprop="description"><p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.
 
 <strong><a href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="permalink"> Read more</a></strong></p></p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="permalink">A Day in the Life of a Data Editor
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-31T00:00:00-05:00">January 31, 2021</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.
+
+<strong><a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="permalink"> Read more</a></strong></p></p>
     
     
     
