@@ -5,7 +5,7 @@ permalink: /splash-page/
 date: 2016-03-23T11:48:41-04:00
 excerpt: "The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/)' approach to data and reproducibility."
 intro: 
-  - excerpt: 'The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/)' approach to data and reproducibility.'
+  - excerpt: 'The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/) approach to data and reproducibility.'
 feature_row:
   - image_path: assets/project-submit.png
     alt: "placeholder image 1"

@@ -63,21 +63,21 @@ Some examples:
 
 ```
 @techreport{bea_table30_2019,
-  title = {Table 30: {{Economic Profile}} by {{County}}, 1969-2018},
-  author = {{Bureau of Economic Analysis}},
+  title = {Table 30:  {Economic Profile}  by  {County} , 1969-2018},
+  author = { {Bureau of Economic Analysis} },
   year = {2019},
-  institution = {{U.S. Department of Commerce  [producer]}},
+  institution = { {U.S. Department of Commerce  [producer]} },
   url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
   timestamp = {2020-09-08T00:42:24Z},
   type = {[Datafile]}
 }
 
 @misc{BLS_QCEW_2020,
-  title = {Quarterly {{Census}} of {{Employment}} and {{Wages}} -- {{Data Files}}},
-  shorttitle = {{{QCEW Data Files}}},
-  author = {{Bureau of Labor Statistics}},
+  title = {Quarterly {Census} of {Employment} and {Wages} -- {Data Files} },
+  shorttitle = { {QCEW Data Files} },
+  author = { {Bureau of Labor Statistics} },
   year = {2020},
-  publisher = {{Department of Labor [distributor]}},
+  publisher = { {Department of Labor [distributor]} },
   url = {https://www.bls.gov/cew/downloadable-data-files.htm},
   urldate = {2020-09-20},
   abstract = {Quarterly Census of Employment and Wages -- Data Files},
