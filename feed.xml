@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-04-01T11:27:44-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">What data to provide</title><link href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="alternate" type="text/html" title="What data to provide" /><published>2021-03-31T00:00:00-04:00</published><updated>2021-03-31T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/what-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-03-31-what-data">&lt;p&gt;What do we mean by “data”?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-04-05T22:10:55-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">What data to provide</title><link href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="alternate" type="text/html" title="What data to provide" /><published>2021-03-31T00:00:00-04:00</published><updated>2021-03-31T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/what-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-03-31-what-data">&lt;p&gt;What do we mean by “data”?&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -25,7 +25,7 @@
 &lt;p&gt;You don’t have to provide &lt;strong&gt;any&lt;/strong&gt; data, if&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;the results can be reproduced by downloading precisely specified raw data,&lt;/li&gt;
+  &lt;li&gt;the results can be reproduced by downloading precisely specified raw data (reasonableness constraint)&lt;/li&gt;
   &lt;li&gt;can reproduce analysis files reliably - subject to a reasonableness constraint.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -42,10 +42,12 @@
       &lt;li&gt;And even manual extraction is fraught with the potential for error (and can be quite tedious)  ❌&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;And very importantly: this is allowed by their &lt;a href=&quot;https://ipums.org/about/terms&quot;&gt;terms of use&lt;/a&gt; for MOST but not all of their datasets. ✅&lt;/li&gt;
+  &lt;li&gt;And very importantly: providing extracts is allowed by their &lt;a href=&quot;https://ipums.org/about/terms&quot;&gt;terms of use&lt;/a&gt; for MOST but not all of their datasets. ✅&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;We thus prefer to have a copy of IPUMS extracts - and the read-in code, and the data dictionary that they provide with every extract (if you didn’t grab yours, go back into the IPUMS system and download it now!) The AEA’s Data and Code Repository can curate as well as IPUMS, but make the data more easily available, lowering the cost of reproducibility for all future researchers.&lt;/p&gt;
+
+&lt;p&gt;If IPUMS were to allow for sharing or archiving of machine-actionable extract specs (not an easy problem), we would reconsider and NOT request extracts!&lt;/p&gt;
 
 &lt;h2 id=&quot;problems&quot;&gt;Problems?&lt;/h2&gt;
 
@@ -64,7 +66,7 @@
 &lt;ol&gt;
   &lt;li&gt;They do curate their database, though no DOIs are assigned, and you need to know to ask (meh… but OK: ✅)&lt;/li&gt;
   &lt;li&gt;While they do not assign DOIs to historical queries, you can (as a user) share a query, see &lt;a href=&quot;https://simba.isr.umich.edu/DC/c.aspx&quot;&gt;https://simba.isr.umich.edu/DC/c.aspx&lt;/a&gt;. ✅&lt;/li&gt;
-  &lt;li&gt;Which is good, since you are not allowed to share the data itself! ❌&lt;/li&gt;
+  &lt;li&gt;Which is good, since you are not allowed to share the data itself! ❌ (Actually, you can, via &lt;a href=&quot;https://www.openicpsr.org/openicpsr/psid&quot;&gt;https://www.openicpsr.org/openicpsr/psid&lt;/a&gt;)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;counter-point&quot;&gt;Counter point&lt;/h2&gt;
@@ -72,12 +74,12 @@
 &lt;p&gt;The obvious corollary is:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;If a data provider curates the data (say, at a trusted repository, or with a credible preservation policy) (for which a DOI is a signal, but not a condition) ✅&lt;/li&gt;
-  &lt;li&gt;and the data can be downloaded, or queried through an API or something similar ✅&lt;/li&gt;
+  &lt;li&gt;If a data &lt;strong&gt;provider curates the data&lt;/strong&gt; (say, at a trusted repository, or with a credible preservation policy) (for which a DOI is a signal, but not a condition) ✅&lt;/li&gt;
+  &lt;li&gt;and the &lt;strong&gt;data can be downloaded&lt;/strong&gt;, or queried through an API&lt;sup id=&quot;fnref:API&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:API&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; or something similar ✅&lt;/li&gt;
   &lt;li&gt;regardless of their license and terms of use&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;we will REJECT your data deposit - leave it where it is!&lt;/p&gt;
+&lt;p&gt;we will &lt;strong&gt;REJECT&lt;/strong&gt; your data deposit - please simply leave it where it is!&lt;/p&gt;
 
 &lt;p&gt;But cite it, and provide precise instructions on how to get it (if a simple click is not sufficient).&lt;/p&gt;
 
@@ -86,20 +88,28 @@
 &lt;p&gt;So when do we want analysis (intermediate) files?&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;when we cannot reliably get the raw data, and there are no issues with redistributing the analysis files&lt;/li&gt;
-  &lt;li&gt;when the raw data can be redistributed, but are too large to acquire (at the AEA, that boundary is around 30GB)&lt;/li&gt;
-  &lt;li&gt;when the raw data can be redistributed, but the analysis data are already the result of a very resource (computer count or time) intensive processing&lt;/li&gt;
+  &lt;li&gt;when we cannot &lt;strong&gt;reliably&lt;/strong&gt; get the raw data, and there are no issues with redistributing the analysis files&lt;/li&gt;
+  &lt;li&gt;when the raw data can be redistributed, but are “&lt;strong&gt;too large&lt;/strong&gt;” to acquire (at the AEA, that boundary is around 30GB)&lt;/li&gt;
+  &lt;li&gt;when the raw data can be redistributed, but the analysis data are already the result of a very &lt;strong&gt;resource&lt;/strong&gt; (computer count or time) &lt;strong&gt;intensive&lt;/strong&gt; processing&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In all of those cases, we want the analysis data.&lt;/p&gt;
+&lt;p&gt;In all of those cases, we &lt;strong&gt;want&lt;/strong&gt; the analysis data.&lt;/p&gt;
 
-&lt;p&gt;When do we NOT want the analysis data? Well, if the raw data can be trivially acquired (download, API), and can be reasonably quickly processed, then we (and future researchers) do not need your copy of the analysis data. But it also doesn’t hurt…&lt;/p&gt;
+&lt;p&gt;When do we &lt;strong&gt;NOT want&lt;/strong&gt; the analysis data? Well, if the raw data can be trivially acquired (download, API&lt;sup id=&quot;fnref:API:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:API&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;), and can be reasonably quickly processed, then we (and future researchers) do not need your copy of the analysis data. But it also doesn’t hurt…&lt;/p&gt;
 
 &lt;p&gt;BTW, “reasonably” means we are not using more than maybe 50 compute cores. “Quickly” means that it runs no longer than 2-3 weeks - to produce the analysis data.&lt;/p&gt;
 
 &lt;h2 id=&quot;and-just-contact-us&quot;&gt;And just contact us&lt;/h2&gt;
 
-&lt;p&gt;In all cases, if you have questions, concerns, or doubts, do contact me - as many others have already done.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><summary type="html">What do we mean by “data”?</summary></entry><entry><title type="html">Reproducible GIS</title><link href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="alternate" type="text/html" title="Reproducible GIS" /><published>2021-02-10T00:00:00-05:00</published><updated>2021-02-10T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/reproducible-gis</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">&lt;p&gt;A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.&lt;/p&gt;
+&lt;p&gt;In all cases, if you have questions, concerns, or doubts, do contact me - as many others have already done.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:API&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;P.S. That footnote for API? Well, APIs get deprecated over time, so we actually prefer to have the &lt;strong&gt;raw&lt;/strong&gt; data saved, but it’s probably OK to skip the analysis data. &lt;a href=&quot;#fnref:API&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:API:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><summary type="html">What do we mean by “data”?</summary></entry><entry><title type="html">Reproducible GIS</title><link href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="alternate" type="text/html" title="Reproducible GIS" /><published>2021-02-10T00:00:00-05:00</published><updated>2021-02-10T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/reproducible-gis</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">&lt;p&gt;A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -268,21 +278,21 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
 &lt;p&gt;Some examples:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@techreport{bea_table30_2019,
-  title = {Table 30:  by , 1969-2018},
-  author = ,
+  title = {Table 30:  {Economic Profile}  by  {County} , 1969-2018},
+  author = { {Bureau of Economic Analysis} },
   year = {2019},
-  institution = ,
+  institution = { {U.S. Department of Commerce  [producer]} },
   url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
   timestamp = {2020-09-08T00:42:24Z},
   type = {[Datafile]}
 }
 
 @misc{BLS_QCEW_2020,
-  title = {Quarterly  of  and  -- },
-  shorttitle = },
-  author = ,
+  title = {Quarterly {Census} of {Employment} and {Wages} -- {Data Files} },
+  shorttitle = { {QCEW Data Files} },
+  author = { {Bureau of Labor Statistics} },
   year = {2020},
-  publisher = ,
+  publisher = { {Department of Labor [distributor]} },
   url = {https://www.bls.gov/cew/downloadable-data-files.htm},
   urldate = {2020-09-20},
   abstract = {Quarterly Census of Employment and Wages -- Data Files},
