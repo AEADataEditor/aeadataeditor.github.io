@@ -9,5 +9,18 @@ then
 then build a container specifically for the website:
 
     docker build -t aeaweb .
-    docker run --volume="$PWD:/usr/src/app" -p 4000:4000 -t aeaweb
+    docker run --volume="$PWD:/usr/src/app" -p 4000:4000 -it aeaweb
+
+To enable Github variables,
+
+- Generate token: https://github.com/settings/tokens
+- Stick it into $HOME/Dropbox/.myconfig/github-docker-secret
+- Make that location the env variable "key"
+- Include 
+
+  JEKYLL_GITHUB_TOKEN=$(cat $key) 
+
+in your Jekyll environment, for instance passing it with "-e" to the docker environment.
+
+
 
