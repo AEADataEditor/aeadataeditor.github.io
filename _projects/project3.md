@@ -1,5 +1,5 @@
 ---
-Title: Development of standardized README for social science journals
+title: Development of standardized README for social science journals
 collection: projects
 type: "projects"
 date: 2020-12-01

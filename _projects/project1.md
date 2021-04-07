@@ -1,5 +1,5 @@
 ---
-Title: Improving metadata of migrated replication pacakges
+title: Improving metadata of migrated replication packages
 collection: projects
 type: "projects"
 date: 2020-07-01

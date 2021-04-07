@@ -1,5 +1,5 @@
 ---
-Title: Migration of legacy replication packages (pending last packages)
+title: Migration of legacy replication packages (pending last packages)
 collection: projects
 type: "projects"
 date: 2020-05-15
