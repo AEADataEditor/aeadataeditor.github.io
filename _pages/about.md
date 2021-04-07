@@ -1,10 +1,9 @@
 ---
-permalink: /
-title: "Office of the Data Editor of the American Economic Association"
+permalink: /about/
+title: "About: AEA Data Editor"
 excerpt: "AEA Data Editor"
 author_profile: true
 redirect_from: 
-  - /about/
   - /about.html
 ---
 

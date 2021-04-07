@@ -118,6 +118,10 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - Dockerfile
+  - Dockerfile.init
+  - Dockerfile.step2
+  - test.sh
 keep_files:
   - .git
   - .svn
