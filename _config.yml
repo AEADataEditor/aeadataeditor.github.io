@@ -166,6 +166,9 @@ collections:
   posts:
     output: true
     permalink: /:collection/:name
+  guidance:
+    output: true
+    permalink: /aea-de-guidance/:title
 
 
 # Defaults
@@ -216,6 +219,14 @@ defaults:
       type: talks
     values:
       layout: talk
+      author_profile: true
+      share: true
+  # _guidance
+  - scope:
+      path: ""
+      type: guidance
+    values:
+      layout: single
       author_profile: true
       share: true
 
