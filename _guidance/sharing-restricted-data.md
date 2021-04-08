@@ -1,5 +1,4 @@
 ---
-layout: withtoc
 title: Sharing restricted-access data with the AEA Data Editor
 ---
 

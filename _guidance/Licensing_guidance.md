@@ -1,5 +1,4 @@
 ---
-layout: withtoc
 title: Licensing Guidance
 ---
 

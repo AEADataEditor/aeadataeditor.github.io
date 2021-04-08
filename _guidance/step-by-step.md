@@ -1,6 +1,5 @@
 ---
 title: Step by step guidance
-layout: withtoc
 ---
 
 The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code):
@@ -15,4 +14,4 @@ The following steps outline what you should expect after conditional acceptance 
    - If changes need to be made, the report is communicated to the authors, who make changes, until the replication package is accepted.
 
 
-![Diagram](assets/mermaid-diagram-20200713113652.png)
+![Diagram](images/mermaid-diagram-20200713113652.png)

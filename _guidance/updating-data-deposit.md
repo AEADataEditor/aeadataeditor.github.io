@@ -1,5 +1,4 @@
 ---
-layout: withtoc
 title: "Updating Materials available on the AEA Data and Code Repository"
 ---
 

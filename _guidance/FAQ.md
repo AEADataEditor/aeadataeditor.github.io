@@ -1,5 +1,4 @@
 ---
-layout: withtoc
 title: "Frequently Asked Questions"
 ---
 ... although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the [official list of FAQ](https://www.aeaweb.org/journals/data/faq) first. Should you have other questions not appearing on either page, please [create a new issue on Github](https://github.com/AEADataEditor/aea-de-guidance/issues/new), ask the question on [Twitter](https://twitter.com/aeadata), or send an email to the [AEA Data Editor](mailto:dataeditor@aeapubs.org).
@@ -7,7 +6,7 @@ title: "Frequently Asked Questions"
 ### What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?
 
  Generically, each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
- ![Image of number](assets/project-number.png) 
+ ![Image of number](images/project-number.png) 
  Then
 
 - if the openICPSR project has not been published, then the DOI will be "http://doi.org/10.3886/E" + number + "V1" (e.g. http://doi.org/10.3886/E109622V1)
@@ -107,23 +106,23 @@ The [AEA RCT registry](https://www.socialscienceregistry.org) has a field that c
 
 - The RCT registry will show the DOI of your registration at the bottom of its public page. [Example](https://www.socialscienceregistry.org/trials/156):
 
-![RCT DOI](assets/aearct-doi-citation.png)
+![RCT DOI](images/aearct-doi-citation.png)
 
 - You can then enter that DOI (e.g., `10.1257/rct.156-1.1`) into the "Related Publication" field of the deposit on the AEA Data and Code Repository:
 
-![Entering related publication](assets/project-related-icpsr.png)
+![Entering related publication](images/project-related-icpsr.png)
 
 - Choose the "Import via DOI" button:
 
-![Selecting import via DOI](assets/project-related-icpsr-modal1.png)
+![Selecting import via DOI](images/project-related-icpsr-modal1.png)
 
 - Fill in the DOI (e.g., `10.1257/rct.156-1.1`) and press "Import":
 
-![Importing via DOI](assets/project-related-icpsr-modal2.png)
+![Importing via DOI](images/project-related-icpsr-modal2.png)
 
 - Select "`is supplemented by`" and press "Save and Apply"
 
-![Selecting relationship](assets/project-related-icpsr-modal3.png)
+![Selecting relationship](images/project-related-icpsr-modal3.png)
 
 ### I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything
 
@@ -133,7 +132,7 @@ When you first submitted to the AEA, your deposit became locked. There are two w
 
 On the right, under " Change status", choose "Recall submission"
 
-![recall](assets/recall-submission-icpsr.png)
+![recall](images/recall-submission-icpsr.png)
 You should then be able to upload and make changes.
 
 Once you are done, choose "Re-submit" from the same menu.
@@ -182,6 +181,6 @@ The copyright of older deposits was transferred (&copy; AEA), together with the 
 
 Migrated deposits are (&copy; AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit's LICENSE file). Most deposits are under a [mixed CC-BY/BSD](https://aeadataeditor.github.io/aea-de-guidance/LICENSE-template.html) license, or under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license. 
 
-![License on openICPSR website](assets/project-license-icpsr.png)
+![License on openICPSR website](images/project-license-icpsr.png)
 
 Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  [sample references](https://www.aeaweb.org/journals/policies/sample-references), example no. 3.

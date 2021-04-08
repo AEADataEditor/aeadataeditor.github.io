@@ -1,6 +1,5 @@
 ---
 title: Preparing your files for verification
-layout: withtoc
 ---
 
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
@@ -121,7 +120,7 @@ You should assume
   - Stata, Matlab, some others are commonly used
   - Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline
 
-![software usage](assets/figure_software_years_pct.png)
+![software usage](images/figure_software_years_pct.png)
 
 You can assume
 

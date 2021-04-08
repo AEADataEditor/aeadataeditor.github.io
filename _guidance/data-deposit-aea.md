@@ -1,5 +1,4 @@
 ---
-layout: withtoc
 title: Guidance on how to deposit data at the AEA Data and Code Repository
 ---
 
@@ -11,7 +10,7 @@ For a video tutorial on this process, see [this Youtube video](https://youtu.be/
 
 Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), and start the process:
 
-[![Start process](assets/icpsr-start-process.png)](https://www.openicpsr.org/openicpsr/aea)
+[![Start process](images/icpsr-start-process.png)](https://www.openicpsr.org/openicpsr/aea)
 
 ---
 
@@ -55,7 +54,7 @@ Start by providing the metadata (descriptors) for the data and code you are uplo
 
 #### Describe the project
 
-![screenshot of project description](assets/project-description-icpsr.png)
+![screenshot of project description](images/project-description-icpsr.png)
 
   - The **title** should be "`Data and Code for: [Title of article]`"
   - The **authors** should be those who compiled the data and code. This may differ (if necessary) from the article. 
@@ -67,12 +66,12 @@ Start by providing the metadata (descriptors) for the data and code you are uplo
 
 To fill out the required metadata elements **Subject Terms**, **JEL Classification**, and **Manuscript Number**, open the "Scope of Project" section:
 
-![metadata of project](assets/project-metadata-icpsr.png)
+![metadata of project](images/project-metadata-icpsr.png)
 
 **Click on each + to open the related section:**
 
 
-![scope of project](assets/project-scope-of-project-icpsr.png)
+![scope of project](images/project-scope-of-project-icpsr.png)
 
   - Authors **MUST** provide additional subject terms (keywords). You do not need to repeat JEL codes.
   - Authors **MUST** provide JEL codes (under "Scope of Project")
@@ -84,11 +83,11 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
       - data type(s)
   - Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., `1999-2019` and `2004-2019`). Just click "add value" next to the time period field for each time period.
   - This information can also be provided when only code is made available.
-  - When only code is produced, authors should choose `data type = program source code`: ![program source code](../../assets/project-data-type-icpsr.png)
+  - When only code is produced, authors should choose `data type = program source code`: ![program source code](../../images/project-data-type-icpsr.png)
 
 #### Methodology section
 
-  ![methodology section](assets/project-methodology-icpsr.png)
+  ![methodology section](images/project-methodology-icpsr.png)
   
   - Methodology is particularly relevant for survey or experimental data:
     - response rates, sampling rates, etc.
@@ -97,7 +96,7 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
 
 #### Related publications section
 
-![related publications](assets/project-related-icpsr.png)
+![related publications](images/project-related-icpsr.png)
 
 - The AEA editorial office will provide an entry for this field that links back to the **published manuscript** - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)
 - Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data. 
@@ -137,7 +136,7 @@ Do not upload data that you do not want published! Contact the AEA Data Editor i
 
 #### Tips
 
-![screenshot of upload and import options](assets/upload-import-icpsr.png)
+![screenshot of upload and import options](images/upload-import-icpsr.png)
 
 - It is possible to **IMPORT a ZIP file** (do **NOT** upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
   - A well prepared ZIP file has NO folder in the root
@@ -171,7 +170,7 @@ LICENSE.txt
 
 Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should **submit** the deposit, by changing the **status** of the deposit:
 
-![submit project](assets/project-submit.png)
+![submit project](images/project-submit.png)
 
 Choose "Submit to AEA" under "Change Status".
 
@@ -184,7 +183,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 
 - Each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
 
- ![Image of number](assets/project-number.png) 
+ ![Image of number](images/project-number.png) 
 
 - if the openICPSR project has not been published, then the DOI will be "http://doi.org/10.3886/E" + number + "V1" (e.g. **http://doi.org/10.3886/E109622V1**)
 - if the project has already been published before, and you are updating it, then the "V1" will be incremented. See [our FAQ](FAQ.md)
