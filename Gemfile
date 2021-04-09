@@ -26,4 +26,5 @@ group :jekyll_plugins do
   gem 'hawkins'
   gem 'jekyll-scholar'
   gem 'jekyll-paginate'
+  gem 'jekyll-include-cache'
 end
