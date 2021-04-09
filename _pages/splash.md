@@ -5,26 +5,25 @@ permalink: /
 date: 2021-03-23T11:48:41-04:00
 excerpt: "The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/)' approach to data and reproducibility."
 intro: 
-  - image_path: thumbnail_website_logo.jpg
-    excerpt: 'The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/) approach to data and reproducibility. <br/>
+  - excerpt: 'The AEA Data Editor defines and monitors the [AEA journals](https://www.aeaweb.org/journals/) approach to data and reproducibility. <br/>
   
   The current Data Editor (2018-) is <a href="https://lars.vilhuber.com/">Lars Vilhuber</a> (Cornell University).'
 feature_row:
-  - image_path: noun_about_3836218.png
+  - image_path: /images/noun_about_3836218.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
     title: "Read"
     url: "https://www.aeaweb.org/journals/data"
     excerpt: "Read the AEA Data and Code Availability Policy and find relevant documents"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: noun_Check_3836232.png
+  - image_path: /images/noun_Check_3836232.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
     title: "Guidance"
     excerpt: "What you need to know to prepare and submit your compliant replication package."
-    url: "/aea-de-guidance/step-by-step.html"
+    url: "/aea-de-guidance/"
     btn_label: "Read More"
     btn_class: "btn--primary btn--center"
-  - image_path: noun_talk_3836230.png
+  - image_path: /images/noun_talk_3836230.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
     title: "Discussion"
     excerpt: "FAQ, talks, and informative posts by the AEA Data Editor"
@@ -35,16 +34,19 @@ feature_row2:
   - title: "AEA Data and Code Repository"
     excerpt: 'The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). '
     url: "https://www.openicpsr.org/openicpsr/search/aea/studies"
+    image_path: /images/icpsr-start-process-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
   - title: "Template README"
-    excerpt: 'Use the standard Economics [README template]((https://social-science-data-editors.github.io/guidance/template-README.html)) for better compliance.'
+    excerpt: 'Use the standard Economics [README template](https://social-science-data-editors.github.io/guidance/template-README.html) for better compliance.'
     url: "https://social-science-data-editors.github.io/guidance/template-README.html"
+    image_path: /images/template-readme-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
   - title: "Data citations"
     excerpt: 'Data citations can be tricky. Find guidance by [Social Science Data Editors](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)'
     url: "https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html"
+    image_path: /images/data-citations-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
 twitter_row:

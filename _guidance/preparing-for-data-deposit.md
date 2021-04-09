@@ -1,9 +1,21 @@
 ---
 title: Preparing your files for verification
+toc: true
+date: 2021-04-08
 ---
 
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
 is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
+
+### Describing the contents of your replication package
+
+Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
+
+- The AEA requires that the README follow a prescribed schema.  Please use the [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/).
+
+![template README](/images/template-readme-700x433.png)
+
+Follow the instructions within the template README, and provide it as part of your replication package.
 
 ### Data Citations
 
@@ -12,17 +24,18 @@ manuscript.
 
 #### What to cite
 
-All datasets actively used in your replication package must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
+All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
 
-- [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#distributor)
+- [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - [Guidance on how to cite the data you collected](data-deposit-aea.html#citing-your-deposit)
+- [Some additional considerations](/posts/2021-03-31-what-data)
 
 
 #### Where to cite
 
 Every citation has an in-text entry (`Smith (2020)` or `(Smith, 2020)`), and a list entry in the Reference section (see the [Chicago Manual of Style Quick Guide](https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html)). This is true for data citations as well. 
 
-- Your data citations should be listed in the Reference section of the manuscript. 
+- Your data citations should be listed in the **Reference section** of the **manuscript**. 
 
 In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should **also** appear in the README, including with a separate Reference section.
 
@@ -30,13 +43,6 @@ In rare circumstances, when there are too many data citations to accomodate succ
 
 In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [additional guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html).
 
-### Describing the contents of your replication package
-
-Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
-
-- The AEA requires that the README follow a prescribed schema.  Please use the [template README for social science replication packages](https://social-science-data-editors.github.io/guidance/template-README.html).
-
-Follow the instructions within the template README, and provide it as part of your replication package.
 
 ### Ideal structure of a replication package
 
@@ -91,7 +97,7 @@ The replication package should reproduce the tables and figures, as well as any 
 
 > The only exception to this rule is a single change to set a small number of program and data directory paths.
 
-While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is not acceptable to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper. 
+While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is **not acceptable** to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper. 
 
 #### Structure in the presence of confidential (unpublished) data
 
@@ -106,7 +112,7 @@ When the replication package relies on confidential data that cannot be shared, 
 
 Authors might want to investigate the  possibility of providing "fake" data that might allow replicators to run code, without obtaining meaningful results (functionality test). 
 
-The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed) describes a related issue.
+- The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed) describes a related issue.
 
 
 
@@ -120,7 +126,7 @@ You should assume
   - Stata, Matlab, some others are commonly used
   - Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline
 
-![software usage](images/figure_software_years_pct.png)
+![software usage](/images/figure_software_years_pct.png)
 
 You can assume
 
@@ -143,9 +149,17 @@ You should NOT assume
   - For instance, running R code using Rstudio may behave differently than running it with `rscript`
 
 For less frequently used software, provide a URL where the software can be obtained. 
+
   - essentially, if not listed in the figure above, provide information on how to obtain software
   - if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.
   - as of 2021, the AEA Data Editor has access to the software on [this list](https://ciser.cornell.edu/computing/computing-account-software/), and any open-source (free) software that can be installed on Windows, Linux, and macOS.
+
+### Choosing a license
+
+By default, the openICPSR deposit attributes a [Creative Commons Attribution 4.0 International Public License](http://creativecommons.org/licenses/by/4.0/) to your deposit, but you can choose a different license. If you do, you must add a file called "LICENSE.txt" (by convention capitalized) to the deposit. 
+
+- See our [Licensing guidance](licensing-guidance) for more details.
+
 
 ### Re-run your replication package
 
@@ -165,12 +179,12 @@ Once you are done preparing your replication package, you should upload it:
 
 Before proceeding, do check:
 
+- [ ] you have prepared a README that provides all the relevant information, as per the [README template](https://social-science-data-editors.github.io/template_README/) 
 - [ ] your manuscript includes data citations 
-- [ ] you have prepared a README that provides all the relevant information, as per the [README template](https://social-science-data-editors.github.io/guidance/template-README.html) 
 - [ ] your data and code deposit contains all code, including code to read in raw data, *even when the data cannot be provided*.
 - [ ] your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.
 
 ### Next step
 
-If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea.md).
+If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea).
 

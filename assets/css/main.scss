@@ -6,3 +6,16 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.greedy-nav {
+   font-size: 0.8em;
+}
+
+
+.archive__item-teaser img {
+  width: 80%;
+}
+
+html {
+  font-size: 1.2em;
+}

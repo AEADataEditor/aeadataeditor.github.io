@@ -1,7 +1,13 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "START REPLICATION PACKAGE"
+    url: /aea-de-guidance/step-by-step.html
+  
+  - title: "FAQ" 
+    url: /aea-de-guidance/faq.html
+
+  - title: "Blog Posts"
+    url: /year-archive/
 
   - title: "Talks"
     url: /talks/
@@ -12,13 +18,6 @@ main:
   - title: "Surveys"
     url: /surveys/    
     
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Publications"
+    url: /publications/
 
-  - title: "Guidance" 
-    url: https://aeadataeditor.github.io/aea-de-guidance/
-
-  - title: "START REPLICATION PACKAGE"
-    url: https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html
-  
-  

@@ -1,5 +1,7 @@
 ---
 title: Licensing Guidance
+toc: true
+date: 2020-11-20
 ---
 
 > This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate.

@@ -1,0 +1,71 @@
+---
+title: Step by step guidance
+layout: splash
+permalink: /aea-de-guidance/
+redirect_from:
+  - "/aea-de-guidance/step-by-step.html"
+intro: 
+  - excerpt: 'The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code):'
+feature_row:
+  - image_path: /images/noun_One_2010363.png
+    alt: "1"
+    title: "Prepare"
+    url: "/aea-de-guidance/preparing-for-data-deposit.html"
+    excerpt: "Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the AEA journals."
+    btn_label: "Start"
+    btn_class: "btn--primary"
+  - image_path: /images/noun_two_2010370.png
+    alt: "2"
+    title: "Upload"
+    excerpt: "Provide metadata and upload the replication package, for verification and subsequently publication"
+    url: "/aea-de-guidance/data-deposit-aea.html"
+    btn_label: "Do it!"
+    btn_class: "btn--primary btn--center"
+  - image_path: /images/noun_three_2010367.png
+    alt: "3"
+    title: "Submit"
+    excerpt: "Submit the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability) together with your manuscript native files as instructed, and as per guidelines at your journal (for example, [AER guidelines](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide))."
+    btn_label: "Ready to submit?"
+    btn_class: "btn--primary"
+    url: "https://www.aeaweb.org/journals/"
+feature_row2:
+  - title: "Assignment"
+    image_path: /images/noun_Four_2010371.png
+    alt: "4"
+    excerpt: 'The editorial office assigns the manuscript to the AEA Data Editor. '
+  - title: "Verification"
+    image_path: /images/noun_five_2010369.png
+    alt: "5"
+    excerpt: 'The AEA Data Editor team downloads materials, [conducts reproducibility checks](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) , writes [report](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md). If changes need to be made, the report is communicated to the authors, who make changes and re-submit, until the replication package is accepted.'
+    url: "/aea-de-guidance/reproducibility-checks"
+    btn_label: "Learn more"
+    btn_class: "btn--primary"
+  - title: "Forthcoming"
+    image_path: /images/noun_Check_3836232.png
+    alt: "Done!"
+    excerpt: 'The accepted report is communicated to the editorial office and the Editor of the journal. This starts the copy-editing process. Small changes can still be incorporated at this stage. Once completed, the manuscript and the data deposit are published together.'
+    btn_label: "Celebrate!"
+    btn_class: "btn--primary"
+intermediate:
+  - title: "What to expect next"
+    excerpt: 'The next steps happen behind the scenes, until you receive the replication report:'
+last:
+  - image_path: /images/mermaid-diagram-20200713113652.png
+    title: 'Approximate process flow'
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+
+{% include feature_row id="intermediate" type="center" %}
+
+{% include feature_row id="feature_row2" %}
+
+{% include feature_row id="last" type="center" %}
+
+
+
+
+<!-- Icons by Michał Kamiński from the Noun Project Creative Commons License -->
