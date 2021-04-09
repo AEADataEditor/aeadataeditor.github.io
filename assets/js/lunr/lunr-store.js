@@ -41,6 +41,12 @@ var store = [{
         "url": "/aea-de-guidance/",
         "teaser": null
       },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor. Verification The AEA Data Editor team downloads materials, conducts reproducibility checks , writes report. If changes need to be made, the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
+        "teaser": null
+      },{
         "title": "Preparing your files for verification",
         "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
         "tags": [],
