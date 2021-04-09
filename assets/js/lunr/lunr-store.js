@@ -119,6 +119,12 @@ var store = [{
         "url": "/posts/2021-03-31-what-data",
         "teaser": null
       },{
+        "title": "File paths in statistical software",
+        "excerpt":"A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software. Comment in a recent reply to one of our replication reports (note: this was not actually a problem): “We use a HPC and a Linux environment. Therefore, the folders are separated...","categories": [],
+        "tags": ["FAQ","Twitter","Data","Code"],
+        "url": "/posts/2021-04-09-paths",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

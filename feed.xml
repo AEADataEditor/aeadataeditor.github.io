@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-04-09T11:53:50-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">What data to provide</title><link href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="alternate" type="text/html" title="What data to provide" /><published>2021-03-31T00:00:00-04:00</published><updated>2021-03-31T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/what-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-03-31-what-data">&lt;p&gt;What do we mean by “data”?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-04-09T12:41:17-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">File paths in statistical software</title><link href="https://aeadataeditor.github.io/posts/2021-04-09-paths" rel="alternate" type="text/html" title="File paths in statistical software" /><published>2021-04-09T00:00:00-04:00</published><updated>2021-04-09T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/paths</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-04-09-paths">&lt;p&gt;A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Comment in a recent reply to one of our replication reports (note: this was not actually a problem):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We use a HPC and a Linux environment. Therefore, the folders are separated by / and not \ . This might
+create problems if working with Windows.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Actually, it does not!&lt;/p&gt;
+
+&lt;h2 id=&quot;stata&quot;&gt;Stata&lt;/h2&gt;
+
+&lt;p&gt;Every &lt;strong&gt;Stata&lt;/strong&gt; user (but in particular those on Windows) should know 👇. Rule: ALWAYS use “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;”, NEVER “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;” and you should be fine.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/stata-technical-note-paths.png&quot; alt=&quot;Stata note on paths&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;r&quot;&gt;R&lt;/h2&gt;
+
+&lt;p&gt;use “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file.path('path','file')&lt;/code&gt;” or even use packages &lt;a href=&quot;https://cran.r-project.org/web/packages/here/vignettes/here.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;here&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://cran.r-project.org/web/packages/rprojroot/vignettes/rprojroot.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rprojroot&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;matlab&quot;&gt;Matlab&lt;/h2&gt;
+
+&lt;p&gt;Use “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;” and it will do the right thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/matlab-paths.png&quot; alt=&quot;Matlab paths&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;os.path.join()&lt;/code&gt; is your friend&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/python-paths.png&quot; alt=&quot;Python paths&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;others&quot;&gt;Others&lt;/h2&gt;
+
+&lt;p&gt;And there are likely similar functions in lots of other programming languages and statistical software.&lt;/p&gt;
+
+&lt;h2 id=&quot;take-away&quot;&gt;Take away&lt;/h2&gt;
+
+&lt;p&gt;Be aware of and always use the platform independent coding of paths, either a function or using “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;”. NEVER use “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;”.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><category term="Code" /><summary type="html">A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.</summary></entry><entry><title type="html">What data to provide</title><link href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="alternate" type="text/html" title="What data to provide" /><published>2021-03-31T00:00:00-04:00</published><updated>2021-03-31T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/what-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-03-31-what-data">&lt;p&gt;What do we mean by “data”?&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
