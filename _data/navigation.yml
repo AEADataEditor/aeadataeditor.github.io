@@ -1,8 +1,8 @@
 # main links links
 main:
   - title: "START REPLICATION PACKAGE"
-    url: /aea-de-guidance/step-by-step.html
-  
+    url: /aea-de-guidance/
+    
   - title: "FAQ" 
     url: /aea-de-guidance/faq.html
 
