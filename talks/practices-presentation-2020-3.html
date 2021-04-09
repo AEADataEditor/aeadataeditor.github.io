@@ -4,21 +4,87 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Practices for Data Transparency and Reproducibility - Office of the AEA Data Editor</title>
+<meta name="description" content="Abstract  Description: Reproducibility and replicability are critical elements of credible scientific research. Data provenance is an important, but often neglected piece of replicability. In particular when data cannot be published, but can be accessed by shared community, properly documenting provenance is essential, but difficult. I report on the experience gathered from nearly 1,000 reproducibility reports, and on the guidance we give to authors in order to provide good-enough data provenance.  Notes     Focus on reproducibility in restricted-access data centers   See Data talks page">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Practices for Data Transparency and Reproducibility">
+<meta property="og:url" content="https://aeadataeditor.github.io/talks/practices-presentation-2020-3">
+
+
+  <meta property="og:description" content="Abstract  Description: Reproducibility and replicability are critical elements of credible scientific research. Data provenance is an important, but often neglected piece of replicability. In particular when data cannot be published, but can be accessed by shared community, properly documenting provenance is essential, but difficult. I report on the experience gathered from nearly 1,000 reproducibility reports, and on the guidance we give to authors in order to provide good-enough data provenance.  Notes     Focus on reproducibility in restricted-access data centers   See Data talks page">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Practices for Data Transparency and Reproducibility">
+  <meta name="twitter:description" content="Abstract  Description: Reproducibility and replicability are critical elements of credible scientific research. Data provenance is an important, but often neglected piece of replicability. In particular when data cannot be published, but can be accessed by shared community, properly documenting provenance is essential, but difficult. I report on the experience gathered from nearly 1,000 reproducibility reports, and on the guidance we give to authors in order to provide good-enough data provenance.  Notes     Focus on reproducibility in restricted-access data centers   See Data talks page">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/talks/practices-presentation-2020-3">
+
+  
+    <meta name="twitter:card" content="summary">
     
-
-<meta charset="utf-8">
-<title> Office of the AEA Data Editor
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
   
-  - Practices for Data Transparency and Reproducibility
+
   
-</title>
+    <meta name="twitter:creator" content="@AEAData">
+  
 
 
-<link href="https://aeadataeditor.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+  <meta property="article:published_time" content="2020-11-06T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/talks/practices-presentation-2020-3">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -26,27 +92,28 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<meta http-equiv="cleartype" content="on">
-
-    
-
-<!-- start custom head snippets -->
-
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/academicons.css"/>
-
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
     }
-  });
-</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
 
@@ -55,45 +122,48 @@
   <body>
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+
     
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://aeadataeditor.github.io/">Office of the AEA Data Editor</a></li>
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
           
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/publications/">Publications</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/talks/">Talks</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/projects/">Projects</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/surveys/">Surveys</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/year-archive/">Blog Posts</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/">Guidance</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a></li>
-          
-        </ul>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
 
     
 
@@ -103,71 +173,113 @@
 
 <div id="main" role="main">
   
-
-
   <div class="sidebar sticky">
   
 
 
+<div itemscope itemtype="https://schema.org/Person">
 
-<div itemscope itemtype="http://schema.org/Person">
-
-  <div class="author__avatar">
-    
-    	<img src="https://aeadataeditor.github.io/images/thumbnail_website_logo.jpg" class="author__avatar" alt="AEA Data Editor">
-    
-  </div>
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
 
   <div class="author__content">
-    <h3 class="author__name">AEA Data Editor</h3>
-    <p class="author__bio">The AEA Data Editor's mission is to design and oversee the AEA journals' strategy for archiving and curating research data and promoting reproducible research.</p>
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
   </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
+
       
+
       
+
       
+
       
-       
+
       
-        <li><a href="https://twitter.com/AEAData"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
       
-        <li><a href="https://github.com/aeadataeditor"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
-      
-      
-      
-      
-      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
     </ul>
   </div>
 </div>
 
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -228,34 +340,27 @@ I report on the experience gathered from nearly 1,000 reproducibility reports, a
         
 
 
-
-
       </footer>
 
-      
-
-<section class="page__share">
+      <section class="page__share">
   
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/talks/practices-presentation-2020-3" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Practices+for+Data+Transparency+and+Reproducibility%20https%3A%2F%2Faeadataeditor.github.io%2Ftalks%2Fpractices-presentation-2020-3" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/talks/practices-presentation-2020-3" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/talks/practices-presentation-2020-3" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Ftalks%2Fpractices-presentation-2020-3" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
+
       
-
-
   <nav class="pagination">
     
-      <a href="https://aeadataeditor.github.io/talks/practices-presentation-2020-4" class="pagination--pager" title="Practices for Data Transparency and Reproducibility
+      <a href="/talks/practices-presentation-2020-4" class="pagination--pager" title="Practices for Data Transparency and Reproducibility
 ">Previous</a>
     
     
-      <a href="https://aeadataeditor.github.io/talks/practices-presentation-2020-2" class="pagination--pager" title="Practices for Data Transparency and Reproducibility
+      <a href="/talks/practices-presentation-2020-2" class="pagination--pager" title="Practices for Data Transparency and Reproducibility
 ">Next</a>
     
   </nav>
@@ -270,47 +375,40 @@ I report on the experience gathered from nearly 1,000 reproducibility reports, a
     <div class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-<a href="/sitemap/">Sitemap</a>
+
 <!-- end custom footer snippets -->
-
-        
-
-<div class="page__footer-follow">
+        <div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
     
+
     
-      <li><a href="https://twitter.com/AEAData"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+        
+      
+        
+      
     
+
     
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
-      <li><a href="http://github.com/aeadataeditor"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    <li><a href="https://aeadataeditor.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
-    <script src="https://aeadataeditor.github.io/assets/js/main.min.js"></script>
+    
+  <script src="/assets/js/main.min.js"></script>
 
 
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 

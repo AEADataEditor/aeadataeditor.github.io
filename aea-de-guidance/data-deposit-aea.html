@@ -1,0 +1,678 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Guidance on how to deposit data at the AEA Data and Code Repository - Office of the AEA Data Editor</title>
+<meta name="description" content="Tutorial  For a video tutorial on this process, see this Youtube video.  Start the deposit process  Go to the AEA Data and Code Repository, and start the process:      Checklist for Metadata  Required:     Title (Suggested: “Data and code for: (NAME OF PAPER)”)   “Principal Investigators” (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: “Independent Researcher”)   Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)   Subject Terms (e.g., “Machine Learning”, “Randomized Control Trial”, “Nudges”, …)   JEL Classification (can be the same as article)   Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”)   Conditionally required  Most deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful “geographic coverage”). These elements contribute to better inclusion in search engines.     Geographic coverage (e.g, “United States”, “Florida, U.S.”, “Indonesia”, …)   Time period(s)  (e.g., “1982-2008”)   Collection date(s)   Universe (e.g., “All households in Canada”, “Manufacturing establishments in Indonesia”, …)   Data Type(s)   Suggested  The following elements are suggested for certain types of data, and may not apply to all types of data.     Data Source   Units of Observation   Any additional metadata elements     Start by providing the metadata (descriptors) for the data and code you are uploading.  Details on Filling Out Metadata  Describe the project       The title should be “Data and Code for: [Title of article]”   The authors should be those who compiled the data and code. This may differ (if necessary) from the article.   The summary might be short. It can include the abstract of the article itself. It does not need to include information on the related article (which has its own field).   Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.   Scope of project section  To fill out the required metadata elements Subject Terms, JEL Classification, and Manuscript Number, open the “Scope of Project” section:    Click on each + to open the related section:       Authors MUST provide additional subject terms (keywords). You do not need to repeat JEL codes.   Authors MUST provide JEL codes (under “Scope of Project”)   Authors MUST provide the Manuscript Number,  (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”) as this will allow us to properly connect the repository with the manuscript.   Where appropriate, authors are REQUIRED to define            the geographical scope(s)       the time period(s)       the universe(s)       data type(s)           Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., 1999-2019 and 2004-2019). Just click “add value” next to the time period field for each time period.   This information can also be provided when only code is made available.   When only code is produced, authors should choose data type = program source code:    Methodology section       Methodology is particularly relevant for survey or experimental data:            response rates, sampling rates, etc.           We ENCOURAGE all authors to define            the unit of observation (e.g. individual, firm, establishment, county, country)           Related publications section       The AEA editorial office will provide an entry for this field that links back to the published manuscript - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)   Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data.   If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.   Future functionality will automatically list articles (including articles by third parties) that cite the data.   Uploading  Once the metadata is completed, authors can upload files.  Upload files in the way you expect the files to be organized in order to run the code.    Checklist for Uploading     README is in PDF or TXT format   DO NOT UPLOAD A ZIP FILE - IMPORT IT!   Do not upload manuscripts, appendices, responses to editors, etc.   Directory structure does not contain redundant directories   Do not upload data that you do not have the rights to publish!     Some caveats     If the UNCOMPRESSED contents of the deposit (the UNZIPPED size of the ZIP file) are larger than 30GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.   If you have more than 1,000 files in your deposit, talk to us before uploading.   The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.   Restricted-access data  Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the Sharing restricted-access data with the AEA Data Editor page.  Tips       It is possible to IMPORT a ZIP file (do NOT upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.            A well prepared ZIP file has NO folder in the root       macOS users should see our FAQ on this topic       Instructional videos: macOS, Windows           Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.            It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version           Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.            There should be no duplicate README files in the repository           Ideal structure  Your deposit should have     no redundant directories: the first thing you should see is the README and any subdirectories   there should be no ZIP files!   the structure should be as you last ran the code      [NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.   You should see something like this: data_directory/ prog_directory/ README.pdf LICENSE.txt  (the LICENSE.txt is optional if you want to adopt one of the standard openICPSR licenses upon publication. See our licensing guidance for other options).  Submitting to the Data Editor  Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should submit the deposit, by changing the status of the deposit:    Choose “Submit to AEA” under “Change Status”.  Should you have forgotten something, you can “recall” the submission.  Citing Your Deposit  At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.     Each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:        if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the project has already been published before, and you are updating it, then the “V1” will be incremented. See our FAQ   You should then cite your deposit as follows (see AEA Sample References):                                          Romer, Christina D., and David H. Romer. 2010. “Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks.” American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.                             Give it a try     Article title:     Authors:     Project number:     Version number:                    Ready to submit manuscript  Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the Data and Code Availability Form, as per the journal’s guidelines (AER guidelines here).">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Guidance on how to deposit data at the AEA Data and Code Repository">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea">
+
+
+  <meta property="og:description" content="Tutorial  For a video tutorial on this process, see this Youtube video.  Start the deposit process  Go to the AEA Data and Code Repository, and start the process:      Checklist for Metadata  Required:     Title (Suggested: “Data and code for: (NAME OF PAPER)”)   “Principal Investigators” (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: “Independent Researcher”)   Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)   Subject Terms (e.g., “Machine Learning”, “Randomized Control Trial”, “Nudges”, …)   JEL Classification (can be the same as article)   Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”)   Conditionally required  Most deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful “geographic coverage”). These elements contribute to better inclusion in search engines.     Geographic coverage (e.g, “United States”, “Florida, U.S.”, “Indonesia”, …)   Time period(s)  (e.g., “1982-2008”)   Collection date(s)   Universe (e.g., “All households in Canada”, “Manufacturing establishments in Indonesia”, …)   Data Type(s)   Suggested  The following elements are suggested for certain types of data, and may not apply to all types of data.     Data Source   Units of Observation   Any additional metadata elements     Start by providing the metadata (descriptors) for the data and code you are uploading.  Details on Filling Out Metadata  Describe the project       The title should be “Data and Code for: [Title of article]”   The authors should be those who compiled the data and code. This may differ (if necessary) from the article.   The summary might be short. It can include the abstract of the article itself. It does not need to include information on the related article (which has its own field).   Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.   Scope of project section  To fill out the required metadata elements Subject Terms, JEL Classification, and Manuscript Number, open the “Scope of Project” section:    Click on each + to open the related section:       Authors MUST provide additional subject terms (keywords). You do not need to repeat JEL codes.   Authors MUST provide JEL codes (under “Scope of Project”)   Authors MUST provide the Manuscript Number,  (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”) as this will allow us to properly connect the repository with the manuscript.   Where appropriate, authors are REQUIRED to define            the geographical scope(s)       the time period(s)       the universe(s)       data type(s)           Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., 1999-2019 and 2004-2019). Just click “add value” next to the time period field for each time period.   This information can also be provided when only code is made available.   When only code is produced, authors should choose data type = program source code:    Methodology section       Methodology is particularly relevant for survey or experimental data:            response rates, sampling rates, etc.           We ENCOURAGE all authors to define            the unit of observation (e.g. individual, firm, establishment, county, country)           Related publications section       The AEA editorial office will provide an entry for this field that links back to the published manuscript - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)   Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data.   If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.   Future functionality will automatically list articles (including articles by third parties) that cite the data.   Uploading  Once the metadata is completed, authors can upload files.  Upload files in the way you expect the files to be organized in order to run the code.    Checklist for Uploading     README is in PDF or TXT format   DO NOT UPLOAD A ZIP FILE - IMPORT IT!   Do not upload manuscripts, appendices, responses to editors, etc.   Directory structure does not contain redundant directories   Do not upload data that you do not have the rights to publish!     Some caveats     If the UNCOMPRESSED contents of the deposit (the UNZIPPED size of the ZIP file) are larger than 30GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.   If you have more than 1,000 files in your deposit, talk to us before uploading.   The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.   Restricted-access data  Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the Sharing restricted-access data with the AEA Data Editor page.  Tips       It is possible to IMPORT a ZIP file (do NOT upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.            A well prepared ZIP file has NO folder in the root       macOS users should see our FAQ on this topic       Instructional videos: macOS, Windows           Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.            It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version           Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.            There should be no duplicate README files in the repository           Ideal structure  Your deposit should have     no redundant directories: the first thing you should see is the README and any subdirectories   there should be no ZIP files!   the structure should be as you last ran the code      [NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.   You should see something like this: data_directory/ prog_directory/ README.pdf LICENSE.txt  (the LICENSE.txt is optional if you want to adopt one of the standard openICPSR licenses upon publication. See our licensing guidance for other options).  Submitting to the Data Editor  Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should submit the deposit, by changing the status of the deposit:    Choose “Submit to AEA” under “Change Status”.  Should you have forgotten something, you can “recall” the submission.  Citing Your Deposit  At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.     Each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:        if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the project has already been published before, and you are updating it, then the “V1” will be incremented. See our FAQ   You should then cite your deposit as follows (see AEA Sample References):                                          Romer, Christina D., and David H. Romer. 2010. “Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks.” American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.                             Give it a try     Article title:     Authors:     Project number:     Version number:                    Ready to submit manuscript  Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the Data and Code Availability Form, as per the journal’s guidelines (AER guidelines here).">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Guidance on how to deposit data at the AEA Data and Code Repository">
+  <meta name="twitter:description" content="Tutorial  For a video tutorial on this process, see this Youtube video.  Start the deposit process  Go to the AEA Data and Code Repository, and start the process:      Checklist for Metadata  Required:     Title (Suggested: “Data and code for: (NAME OF PAPER)”)   “Principal Investigators” (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: “Independent Researcher”)   Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)   Subject Terms (e.g., “Machine Learning”, “Randomized Control Trial”, “Nudges”, …)   JEL Classification (can be the same as article)   Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”)   Conditionally required  Most deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful “geographic coverage”). These elements contribute to better inclusion in search engines.     Geographic coverage (e.g, “United States”, “Florida, U.S.”, “Indonesia”, …)   Time period(s)  (e.g., “1982-2008”)   Collection date(s)   Universe (e.g., “All households in Canada”, “Manufacturing establishments in Indonesia”, …)   Data Type(s)   Suggested  The following elements are suggested for certain types of data, and may not apply to all types of data.     Data Source   Units of Observation   Any additional metadata elements     Start by providing the metadata (descriptors) for the data and code you are uploading.  Details on Filling Out Metadata  Describe the project       The title should be “Data and Code for: [Title of article]”   The authors should be those who compiled the data and code. This may differ (if necessary) from the article.   The summary might be short. It can include the abstract of the article itself. It does not need to include information on the related article (which has its own field).   Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.   Scope of project section  To fill out the required metadata elements Subject Terms, JEL Classification, and Manuscript Number, open the “Scope of Project” section:    Click on each + to open the related section:       Authors MUST provide additional subject terms (keywords). You do not need to repeat JEL codes.   Authors MUST provide JEL codes (under “Scope of Project”)   Authors MUST provide the Manuscript Number,  (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”) as this will allow us to properly connect the repository with the manuscript.   Where appropriate, authors are REQUIRED to define            the geographical scope(s)       the time period(s)       the universe(s)       data type(s)           Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., 1999-2019 and 2004-2019). Just click “add value” next to the time period field for each time period.   This information can also be provided when only code is made available.   When only code is produced, authors should choose data type = program source code:    Methodology section       Methodology is particularly relevant for survey or experimental data:            response rates, sampling rates, etc.           We ENCOURAGE all authors to define            the unit of observation (e.g. individual, firm, establishment, county, country)           Related publications section       The AEA editorial office will provide an entry for this field that links back to the published manuscript - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)   Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data.   If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.   Future functionality will automatically list articles (including articles by third parties) that cite the data.   Uploading  Once the metadata is completed, authors can upload files.  Upload files in the way you expect the files to be organized in order to run the code.    Checklist for Uploading     README is in PDF or TXT format   DO NOT UPLOAD A ZIP FILE - IMPORT IT!   Do not upload manuscripts, appendices, responses to editors, etc.   Directory structure does not contain redundant directories   Do not upload data that you do not have the rights to publish!     Some caveats     If the UNCOMPRESSED contents of the deposit (the UNZIPPED size of the ZIP file) are larger than 30GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.   If you have more than 1,000 files in your deposit, talk to us before uploading.   The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.   Restricted-access data  Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the Sharing restricted-access data with the AEA Data Editor page.  Tips       It is possible to IMPORT a ZIP file (do NOT upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.            A well prepared ZIP file has NO folder in the root       macOS users should see our FAQ on this topic       Instructional videos: macOS, Windows           Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.            It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version           Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.            There should be no duplicate README files in the repository           Ideal structure  Your deposit should have     no redundant directories: the first thing you should see is the README and any subdirectories   there should be no ZIP files!   the structure should be as you last ran the code      [NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.   You should see something like this: data_directory/ prog_directory/ README.pdf LICENSE.txt  (the LICENSE.txt is optional if you want to adopt one of the standard openICPSR licenses upon publication. See our licensing guidance for other options).  Submitting to the Data Editor  Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should submit the deposit, by changing the status of the deposit:    Choose “Submit to AEA” under “Change Status”.  Should you have forgotten something, you can “recall” the submission.  Citing Your Deposit  At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.     Each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:        if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the project has already been published before, and you are updating it, then the “V1” will be incremented. See our FAQ   You should then cite your deposit as follows (see AEA Sample References):                                          Romer, Christina D., and David H. Romer. 2010. “Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks.” American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.                             Give it a try     Article title:     Authors:     Project number:     Version number:                    Ready to submit manuscript  Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the Data and Code Availability Form, as per the journal’s guidelines (AER guidelines here).">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-04-08T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Guidance on how to deposit data at the AEA Data and Code Repository">
+    <meta itemprop="description" content="TutorialFor a video tutorial on this process, see this Youtube video.Start the deposit processGo to the AEA Data and Code Repository, and start the process:Checklist for MetadataRequired:  Title (Suggested: “Data and code for: (NAME OF PAPER)”)  “Principal Investigators” (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: “Independent Researcher”)  Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)  Subject Terms (e.g., “Machine Learning”, “Randomized Control Trial”, “Nudges”, …)  JEL Classification (can be the same as article)  Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”)Conditionally requiredMost deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful “geographic coverage”). These elements contribute to better inclusion in search engines.  Geographic coverage (e.g, “United States”, “Florida, U.S.”, “Indonesia”, …)  Time period(s)  (e.g., “1982-2008”)  Collection date(s)  Universe (e.g., “All households in Canada”, “Manufacturing establishments in Indonesia”, …)  Data Type(s)SuggestedThe following elements are suggested for certain types of data, and may not apply to all types of data.  Data Source  Units of Observation  Any additional metadata elementsStart by providing the metadata (descriptors) for the data and code you are uploading.Details on Filling Out MetadataDescribe the project  The title should be “Data and Code for: [Title of article]”  The authors should be those who compiled the data and code. This may differ (if necessary) from the article.  The summary might be short. It can include the abstract of the article itself. It does not need to include information on the related article (which has its own field).  Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.Scope of project sectionTo fill out the required metadata elements Subject Terms, JEL Classification, and Manuscript Number, open the “Scope of Project” section:Click on each + to open the related section:  Authors MUST provide additional subject terms (keywords). You do not need to repeat JEL codes.  Authors MUST provide JEL codes (under “Scope of Project”)  Authors MUST provide the Manuscript Number,  (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”) as this will allow us to properly connect the repository with the manuscript.  Where appropriate, authors are REQUIRED to define          the geographical scope(s)      the time period(s)      the universe(s)      data type(s)        Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., 1999-2019 and 2004-2019). Just click “add value” next to the time period field for each time period.  This information can also be provided when only code is made available.  When only code is produced, authors should choose data type = program source code: Methodology section  Methodology is particularly relevant for survey or experimental data:          response rates, sampling rates, etc.        We ENCOURAGE all authors to define          the unit of observation (e.g. individual, firm, establishment, county, country)      Related publications section  The AEA editorial office will provide an entry for this field that links back to the published manuscript - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)  Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data.  If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.  Future functionality will automatically list articles (including articles by third parties) that cite the data.UploadingOnce the metadata is completed, authors can upload files.Upload files in the way you expect the files to be organized in order to run the code.Checklist for Uploading  README is in PDF or TXT format  DO NOT UPLOAD A ZIP FILE - IMPORT IT!  Do not upload manuscripts, appendices, responses to editors, etc.  Directory structure does not contain redundant directories  Do not upload data that you do not have the rights to publish!Some caveats  If the UNCOMPRESSED contents of the deposit (the UNZIPPED size of the ZIP file) are larger than 30GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.  If you have more than 1,000 files in your deposit, talk to us before uploading.  The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.Restricted-access dataDo not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the Sharing restricted-access data with the AEA Data Editor page.Tips  It is possible to IMPORT a ZIP file (do NOT upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.          A well prepared ZIP file has NO folder in the root      macOS users should see our FAQ on this topic      Instructional videos: macOS, Windows        Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.          It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version        Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.          There should be no duplicate README files in the repository      Ideal structureYour deposit should have  no redundant directories: the first thing you should see is the README and any subdirectories  there should be no ZIP files!  the structure should be as you last ran the code  [NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.You should see something like this:data_directory/prog_directory/README.pdfLICENSE.txt(the LICENSE.txt is optional if you want to adopt one of the standard openICPSR licenses upon publication. See our licensing guidance for other options).Submitting to the Data EditorOnce you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should submit the deposit, by changing the status of the deposit:Choose “Submit to AEA” under “Change Status”.Should you have forgotten something, you can “recall” the submission.Citing Your DepositAt present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.  Each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:  if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)  if the project has already been published before, and you are updating it, then the “V1” will be incremented. See our FAQ  You should then cite your deposit as follows (see AEA Sample References):                               Romer, Christina D., and David H. Romer. 2010. “Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks.” American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.                     Give it a try Article title:    Authors:    Project number:    Version number:       Ready to submit manuscriptOnce you have completed the deposit, you are now ready to submit the manuscript native files, together with the Data and Code Availability Form, as per the journal’s guidelines (AER guidelines here).">
+    <meta itemprop="datePublished" content="2021-04-08T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Guidance on how to deposit data at the AEA Data and Code Repository
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 08, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#tutorial">Tutorial</a></li><li><a href="#start-the-deposit-process">Start the deposit process</a></li><li><a href="#checklist-for-metadata">Checklist for Metadata</a></li><li><a href="#details-on-filling-out-metadata">Details on Filling Out Metadata</a><ul><li><a href="#describe-the-project">Describe the project</a></li><li><a href="#scope-of-project-section">Scope of project section</a></li><li><a href="#methodology-section">Methodology section</a></li><li><a href="#related-publications-section">Related publications section</a></li></ul></li><li><a href="#uploading">Uploading</a><ul><li><a href="#checklist-for-uploading">Checklist for Uploading</a></li><li><a href="#some-caveats">Some caveats</a></li><li><a href="#restricted-access-data">Restricted-access data</a></li><li><a href="#tips">Tips</a></li><li><a href="#ideal-structure">Ideal structure</a></li></ul></li><li><a href="#submitting-to-the-data-editor">Submitting to the Data Editor</a></li><li><a href="#citing-your-deposit">Citing Your Deposit</a><ul><li><a href="#give-it-a-try">Give it a try</a></li></ul></li><li><a href="#ready-to-submit-manuscript">Ready to submit manuscript</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+      
+        <h3 id="tutorial">Tutorial</h3>
+
+<p>For a video tutorial on this process, see <a href="https://youtu.be/MnEl1shX18Y">this Youtube video</a>.</p>
+
+<h3 id="start-the-deposit-process">Start the deposit process</h3>
+
+<p>Go to the <a href="https://www.openicpsr.org/openicpsr/aea">AEA Data and Code Repository</a>, and start the process:</p>
+
+<p><a href="https://www.openicpsr.org/openicpsr/aea"><img src="/images/icpsr-start-process.png" alt="Start process" /></a></p>
+
+<hr />
+
+<h3 id="checklist-for-metadata">Checklist for Metadata</h3>
+
+<p><strong>Required</strong>:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Title (Suggested: “<em>Data and code for: (NAME OF PAPER)</em>”)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />“Principal Investigators” (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: “Independent Researcher”)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Subject Terms (e.g., “Machine Learning”, “Randomized Control Trial”, “Nudges”, …)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />JEL Classification (can be the same as article)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”)</li>
+</ul>
+
+<p><strong>Conditionally required</strong></p>
+
+<p><em>Most deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful “geographic coverage”). These elements contribute to better inclusion in search engines.</em></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Geographic coverage (e.g, “United States”, “Florida, U.S.”, “Indonesia”, …)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Time period(s)  (e.g., “1982-2008”)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Collection date(s)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Universe (e.g., “All households in Canada”, “Manufacturing establishments in Indonesia”, …)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Data Type(s)</li>
+</ul>
+
+<p><strong>Suggested</strong></p>
+
+<p><em>The following elements are suggested for certain types of data, and may not apply to all types of data.</em></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Data Source</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Units of Observation</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Any additional metadata elements</li>
+</ul>
+
+<hr />
+
+<p>Start by providing the metadata (descriptors) for the data and code you are uploading.</p>
+
+<h3 id="details-on-filling-out-metadata">Details on Filling Out Metadata</h3>
+
+<h4 id="describe-the-project">Describe the project</h4>
+
+<p><img src="/images/project-description-icpsr.png" alt="screenshot of project description" /></p>
+
+<ul>
+  <li>The <strong>title</strong> should be “<code class="language-plaintext highlighter-rouge">Data and Code for: [Title of article]</code>”</li>
+  <li>The <strong>authors</strong> should be those who compiled the data and code. This may differ (if necessary) from the article.</li>
+  <li>The <strong>summary</strong> might be short. It can include the <strong>abstract</strong> of the article itself. It does not need to include information on the related article (which has its own field).</li>
+  <li>Identify any <strong>funding sources</strong> here - the information can be queried by some funders, and can assist with your award reporting.</li>
+</ul>
+
+<h4 id="scope-of-project-section">Scope of project section</h4>
+
+<p>To fill out the required metadata elements <strong>Subject Terms</strong>, <strong>JEL Classification</strong>, and <strong>Manuscript Number</strong>, open the “Scope of Project” section:</p>
+
+<p><img src="/images/project-metadata-icpsr.png" alt="metadata of project" /></p>
+
+<p><strong>Click on each + to open the related section:</strong></p>
+
+<p><img src="/images/project-scope-of-project-icpsr.png" alt="scope of project" /></p>
+
+<ul>
+  <li>Authors <strong>MUST</strong> provide additional subject terms (keywords). You do not need to repeat JEL codes.</li>
+  <li>Authors <strong>MUST</strong> provide JEL codes (under “Scope of Project”)</li>
+  <li>Authors <strong>MUST</strong> provide the <strong>Manuscript Number</strong>,  (your Scholar One tracking number as assigned by the editorial office, e.g., “AER-2019-0000”) as this will allow us to properly connect the repository with the manuscript.</li>
+  <li>Where appropriate, authors are <strong>REQUIRED</strong> to define
+    <ul>
+      <li>the geographical scope(s)</li>
+      <li>the time period(s)</li>
+      <li>the universe(s)</li>
+      <li>data type(s)</li>
+    </ul>
+  </li>
+  <li>Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., <code class="language-plaintext highlighter-rouge">1999-2019</code> and <code class="language-plaintext highlighter-rouge">2004-2019</code>). Just click “add value” next to the time period field for each time period.</li>
+  <li>This information can also be provided when only code is made available.</li>
+  <li>When only code is produced, authors should choose <code class="language-plaintext highlighter-rouge">data type = program source code</code>: <img src="../../images/project-data-type-icpsr.png" alt="program source code" /></li>
+</ul>
+
+<h4 id="methodology-section">Methodology section</h4>
+
+<p><img src="/images/project-methodology-icpsr.png" alt="methodology section" /></p>
+
+<ul>
+  <li>Methodology is particularly relevant for survey or experimental data:
+    <ul>
+      <li>response rates, sampling rates, etc.</li>
+    </ul>
+  </li>
+  <li>We ENCOURAGE all authors to define
+    <ul>
+      <li>the unit of observation (e.g. individual, firm, establishment, county, country)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="related-publications-section">Related publications section</h4>
+
+<p><img src="/images/project-related-icpsr.png" alt="related publications" /></p>
+
+<ul>
+  <li>The AEA editorial office will provide an entry for this field that links back to the <strong>published manuscript</strong> - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)</li>
+  <li>Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data.</li>
+  <li>If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.</li>
+  <li>Future functionality will automatically list articles (including articles by third parties) that cite the data.</li>
+</ul>
+
+<h3 id="uploading">Uploading</h3>
+
+<p>Once the metadata is completed, authors can upload files.</p>
+
+<p>Upload files in the way you expect the files to be organized in order to run the code.</p>
+
+<hr />
+
+<h4 id="checklist-for-uploading">Checklist for Uploading</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />README is in PDF or TXT format</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />DO NOT UPLOAD A ZIP FILE - IMPORT IT!</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Do not upload manuscripts, appendices, responses to editors, etc.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Directory structure does not contain redundant directories</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Do not upload data that you do not have the rights to publish!</li>
+</ul>
+
+<hr />
+
+<h4 id="some-caveats">Some caveats</h4>
+
+<ul>
+  <li>If the <strong>UNCOMPRESSED</strong> contents of the deposit (the <strong>UNZIPPED</strong> size of the ZIP file) are larger than <strong>30GB</strong>, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.</li>
+  <li>If you have <strong>more than 1,000 files</strong> in your deposit, talk to us before uploading.</li>
+  <li>The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.</li>
+</ul>
+
+<h4 id="restricted-access-data">Restricted-access data</h4>
+
+<p>Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the <a href="sharing-restricted-data.md">Sharing restricted-access data with the AEA Data Editor</a> page.</p>
+
+<h4 id="tips">Tips</h4>
+
+<p><img src="/images/upload-import-icpsr.png" alt="screenshot of upload and import options" /></p>
+
+<ul>
+  <li>It is possible to <strong>IMPORT a ZIP file</strong> (do <strong>NOT</strong> upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
+    <ul>
+      <li>A well prepared ZIP file has NO folder in the root</li>
+      <li>macOS users should <a href="https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists">see our FAQ on this topic</a></li>
+      <li>Instructional videos: <a href="https://www.youtube.com/watch?v=fCfVu55YsJg">macOS</a>, <a href="https://youtu.be/MnEl1shX18Y?t=135">Windows</a></li>
+    </ul>
+  </li>
+  <li>Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.
+    <ul>
+      <li>It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version</li>
+    </ul>
+  </li>
+  <li>Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
+    <ul>
+      <li>There should be no duplicate README files in the repository</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="ideal-structure">Ideal structure</h4>
+
+<p>Your deposit should have</p>
+
+<ul>
+  <li>no redundant directories: the first thing you should see is the README and any subdirectories</li>
+  <li>there should be no ZIP files!</li>
+  <li>the structure should be as you last ran the code</li>
+</ul>
+
+<blockquote>
+  <p>[NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.</p>
+</blockquote>
+
+<p>You should see something like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data_directory/
+prog_directory/
+README.pdf
+LICENSE.txt
+</code></pre></div></div>
+<p>(the <code class="language-plaintext highlighter-rouge">LICENSE.txt</code> is optional if you want to adopt one of the standard openICPSR licenses upon publication. See <a href="Licensing_guidance.md">our licensing guidance</a> for other options).</p>
+
+<h3 id="submitting-to-the-data-editor">Submitting to the Data Editor</h3>
+
+<p>Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should <strong>submit</strong> the deposit, by changing the <strong>status</strong> of the deposit:</p>
+
+<p><img src="/images/project-submit.png" alt="submit project" /></p>
+
+<p>Choose “Submit to AEA” under “Change Status”.</p>
+
+<p>Should you have forgotten something, you can “recall” the submission.</p>
+
+<h3 id="citing-your-deposit">Citing Your Deposit</h3>
+
+<p>At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.</p>
+
+<ul>
+  <li>Each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:</li>
+</ul>
+
+<p><img src="/images/project-number.png" alt="Image of number" /></p>
+
+<ul>
+  <li>if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. <strong>http://doi.org/10.3886/E109622V1</strong>)</li>
+  <li>if the project has already been published before, and you are updating it, then the “V1” will be incremented. See <a href="FAQ.md">our FAQ</a></li>
+  <li>You should then cite your deposit as follows (see <a href="https://www.aeaweb.org/journals/policies/sample-references">AEA Sample References</a>):</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Romer, Christina D., and David H. Romer</strong>. 2010. “Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks.” <em>American Economic Association</em> [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.</td>
+    </tr>
+    <tr>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="give-it-a-try">Give it a try</h4>
+
+<form id="myForm">
+<table>
+ <tr><td>Article title:</td> <td> <input type="text" name="title" /></td></tr>
+  <tr><td>Authors:</td> <td> <input type="text" name="title" /></td></tr>
+  <tr><td>Project number:</td> <td> <input type="text" name="projectid" /></td></tr>
+  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1" /></td></tr>
+  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI" /></td></tr>
+  </table>
+</form>
+
+<p id="DOI"></p>
+<table>
+<tr><td>
+<p id="citation"></p>
+</td></tr></table>
+
+<script>
+function myFunction() {
+  var doipre = "http://doi.org/10.3886/E";
+  var titlepre = "Data and code for:";
+  var str0 = document.getElementById('myForm').elements[0].value;
+  var authors = document.getElementById('myForm').elements[1].value;
+  var str2 = document.getElementById('myForm').elements[2].value;
+  var str3 = document.getElementById('myForm').elements[3].value;
+  var title = titlepre.concat(str0);
+  var doi = doipre.concat(str2).concat(str3);
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
+  
+}
+</script>
+
+<h3 id="ready-to-submit-manuscript">Ready to submit manuscript</h3>
+
+<p>Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the <a href="https://www.aeaweb.org/journals/forms/data-code-availability">Data and Code Availability Form</a>, as per the journal’s guidelines (<a href="https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide">AER guidelines here</a>).</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 8, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Guidance+on+how+to+deposit+data+at+the+AEA+Data+and+Code+Repository%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fdata-deposit-aea" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fdata-deposit-aea" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

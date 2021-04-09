@@ -1,0 +1,455 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Sharing restricted-access data with the AEA Data Editor - Office of the AEA Data Editor</title>
+<meta name="description" content="In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). This page describes some tips and methods of doing so, and considerations. Please read it carefully.  Permissions  First and foremost, you must have the rights to privately share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,     if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the public README, as this may also apply to any other future replicator.   if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.            In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.           if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.   you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).   In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.   Documenting restrictions and instructions  Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “Data Availability and Provenance Statements.”  If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.  Signaling availability  AEA authors are required to submit a Data and Code Availability Form, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.  Sharing data with Data Editor  Preferred contractual arrangement  The AEA Data Editor is an employee of an educational institution, not the AEA itself (see main page for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.          If an NDA needs to be signed, the use of Cornell’s Individual Standard Non-Disclosure Agreement is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.           If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.           If IRB approval was required for you to access the data, then there are a few considerations to take into account.             In general, the AEA Data Editor does not need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “the services performed do not merit professional recognition or publication privileges” [1] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)       However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.           Preferred data access     If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.   If the data do require higher security protocols, the AEA Data Editor has access to high-security remote-access environments at Cornell University, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).   If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.   If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).   All of these methods have been successfully used in the past.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Sharing restricted-access data with the AEA Data Editor">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">
+
+
+  <meta property="og:description" content="In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). This page describes some tips and methods of doing so, and considerations. Please read it carefully.  Permissions  First and foremost, you must have the rights to privately share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,     if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the public README, as this may also apply to any other future replicator.   if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.            In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.           if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.   you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).   In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.   Documenting restrictions and instructions  Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “Data Availability and Provenance Statements.”  If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.  Signaling availability  AEA authors are required to submit a Data and Code Availability Form, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.  Sharing data with Data Editor  Preferred contractual arrangement  The AEA Data Editor is an employee of an educational institution, not the AEA itself (see main page for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.          If an NDA needs to be signed, the use of Cornell’s Individual Standard Non-Disclosure Agreement is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.           If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.           If IRB approval was required for you to access the data, then there are a few considerations to take into account.             In general, the AEA Data Editor does not need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “the services performed do not merit professional recognition or publication privileges” [1] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)       However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.           Preferred data access     If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.   If the data do require higher security protocols, the AEA Data Editor has access to high-security remote-access environments at Cornell University, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).   If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.   If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).   All of these methods have been successfully used in the past.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Sharing restricted-access data with the AEA Data Editor">
+  <meta name="twitter:description" content="In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). This page describes some tips and methods of doing so, and considerations. Please read it carefully.  Permissions  First and foremost, you must have the rights to privately share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,     if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the public README, as this may also apply to any other future replicator.   if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.            In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.           if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.   you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).   In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.   Documenting restrictions and instructions  Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “Data Availability and Provenance Statements.”  If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.  Signaling availability  AEA authors are required to submit a Data and Code Availability Form, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.  Sharing data with Data Editor  Preferred contractual arrangement  The AEA Data Editor is an employee of an educational institution, not the AEA itself (see main page for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.          If an NDA needs to be signed, the use of Cornell’s Individual Standard Non-Disclosure Agreement is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.           If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.           If IRB approval was required for you to access the data, then there are a few considerations to take into account.             In general, the AEA Data Editor does not need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “the services performed do not merit professional recognition or publication privileges” [1] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)       However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.           Preferred data access     If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.   If the data do require higher security protocols, the AEA Data Editor has access to high-security remote-access environments at Cornell University, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).   If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.   If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).   All of these methods have been successfully used in the past.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-04-08T23:28:10-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Sharing restricted-access data with the AEA Data Editor">
+    <meta itemprop="description" content="In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). This page describes some tips and methods of doing so, and considerations. Please read it carefully.PermissionsFirst and foremost, you must have the rights to privately share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,  if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the public README, as this may also apply to any other future replicator.  if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.          In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.        if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.  you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).  In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.Documenting restrictions and instructionsWhatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “Data Availability and Provenance Statements.”If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.Signaling availabilityAEA authors are required to submit a Data and Code Availability Form, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.Sharing data with Data EditorPreferred contractual arrangementThe AEA Data Editor is an employee of an educational institution, not the AEA itself (see main page for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.      If an NDA needs to be signed, the use of Cornell’s Individual Standard Non-Disclosure Agreement is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.        If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.        If IRB approval was required for you to access the data, then there are a few considerations to take into account.          In general, the AEA Data Editor does not need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “the services performed do not merit professional recognition or publication privileges” [1] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)      However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.      Preferred data access  If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.  If the data do require higher security protocols, the AEA Data Editor has access to high-security remote-access environments at Cornell University, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).  If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.  If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).All of these methods have been successfully used in the past.">
+    <meta itemprop="datePublished" content="2021-04-08T23:28:10-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Sharing restricted-access data with the AEA Data Editor
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T23:28:10-04:00">April 08, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+      
+        <p>In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). This page describes some tips and methods of doing so, and considerations. Please read it carefully.</p>
+
+<h3 id="permissions">Permissions</h3>
+
+<p>First and foremost, you must have the rights to <em>privately</em> share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,</p>
+
+<ul>
+  <li>if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the <strong>public</strong> README, as this may also apply to any other future replicator.</li>
+  <li>if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.
+    <ul>
+      <li>In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.</li>
+    </ul>
+  </li>
+  <li>if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.</li>
+  <li>you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).</li>
+  <li>In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.</li>
+</ul>
+
+<h3 id="documenting-restrictions-and-instructions">Documenting restrictions and instructions</h3>
+
+<p>Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “<a href="https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements">Data Availability and Provenance Statements</a>.”</p>
+
+<p>If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.</p>
+
+<h3 id="signaling-availability">Signaling availability</h3>
+
+<p>AEA authors are required to submit a <a href="https://www.aeaweb.org/journals/forms/data-code-availability">Data and Code Availability Form</a>, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.</p>
+
+<h3 id="sharing-data-with-data-editor">Sharing data with Data Editor</h3>
+
+<h4 id="preferred-contractual-arrangement">Preferred contractual arrangement</h4>
+
+<p>The AEA Data Editor is an employee of an educational institution, not the AEA itself (see <a href="https://aeadataeditor.github.io/">main page</a> for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.</p>
+
+<ul>
+  <li>
+    <p>If an NDA needs to be signed, the use of <a href="https://researchservices.cornell.edu/resources/individual-standard-non-disclosure-agreement-nda">Cornell’s Individual Standard Non-Disclosure Agreement</a> is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.</p>
+  </li>
+  <li>
+    <p>If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.</p>
+  </li>
+  <li>
+    <p>If IRB approval was required for you to access the data, then there are a few considerations to take into account.</p>
+
+    <ul>
+      <li>In general, the AEA Data Editor does <strong>not</strong> need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “<em>the services performed do not merit professional recognition or publication privileges</em>” [<a href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/guidance-on-engagement-of-institutions/index.html">1</a>] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)</li>
+      <li>However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="preferred-data-access">Preferred data access</h4>
+
+<ul>
+  <li>If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.</li>
+  <li>If the data do require higher security protocols, the AEA Data Editor has access to <a href="https://ciser.cornell.edu/data/secure-data-services/cradc/">high-security remote-access environments at Cornell University</a>, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).</li>
+  <li>If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.</li>
+  <li>If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).</li>
+</ul>
+
+<p>All of these methods have been successfully used in the past.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T23:28:10-04:00">April 8, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Sharing+restricted-access+data+with+the+AEA+Data+Editor%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fsharing-restricted-data" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fsharing-restricted-data" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

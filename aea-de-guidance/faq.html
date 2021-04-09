@@ -1,0 +1,617 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Frequently Asked Questions - Office of the AEA Data Editor</title>
+<meta name="description" content="… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the question on Twitter, or send an email to the AEA Data Editor.  Citing, DOI  What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?  Generically, each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:     Then     if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., “http://doi.org/10.3886/E” + number + “V3” if the current version is V2 and the next version would be V3.   Give it a try:     Article title:     Authors:     Project number:     Version number:                    How do I cite my own data and code supplement?  If you created your own data (experiments, surveys, etc.), you should do one of two things:     If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the Social Science Data Editor’s guide to Data and Code Hosting. Once deposited, and published, the data should be cited in your manuscript, in accordance with the AEA Sample References.   If you only intend to write this one manuscript with the data, you should cite the manuscript’s companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the AEA Sample References (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.   I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).  We understand  page limits, here are possible workarounds, in decreasing order of preference:     refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)   refer to the README in the deposit, which has a bibliography like a real paper (see the README template)   Licensing  Are authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?  As of Jan 2021, this question has two answers, pending final migration of archival replication packages:  If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)  The copyright of older deposits was transferred (© AEA), together with the manuscript, to the AEA. However, we encourage re-use, and permission is automatically granted to any user of these deposits to use and re-publish them, under acknowledgement (citation) of the authors original paper and replication package. See  sample references, example no. 4.  If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)  Migrated deposits are (© AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit’s LICENSE file). Most deposits are under a mixed CC-BY/BSD license, or under a CC-BY license.    Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  sample references, example no. 3.  Deposit related  Should we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?     … the directory structure has gotten a little clunky over the years working on this project…   The Data and Code Availability Policy   says:     “Files uploaded to the AEA Data and Code Repository should retain the file names as originally executed or used, their original file format, and their original “grouping” in terms of directories.”   You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the same results that are reported in the paper. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.  Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.  I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything  When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:  You can “recall” the submission  On the right, under “ Change status”, choose “Recall submission”   You should then be able to upload and make changes.  Once you are done, choose “Re-submit” from the same menu.  The Data Editor staff can request revisions  If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.  Again, once you are done, choose “Re-submit” from the same menu as above.  I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.  First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.  Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see https://www.aeaweb.org/journals/data/policy-revisions.  1) Log back onto your openICPSR deposit. If you don’t remember, simply click on the “Share Data” link on openICPSR, and it will show you your deposits.  2) You may need to click on “Create new version” - depends on when the deposit was initially created (applies for all deposits made after July 2020).  3) Update the README as per the policy. Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.  4) Once you updated all files (remember to update the README), choose “Submit to AEA” in “Change Status”.  5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.  6) In most cases, the article will remain linked to the V1 deposit (“version of record”), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).  Confidential data  The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?  [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection – even if only the syntax are in the repository.  It’s useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.  I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?  Moved to main FAQ  I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?  Moved to main FAQ  Version control, Software, etc.  We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?  Moved to main FAQ  Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?  Moved to main FAQ  Do you support Docker/ Jupyter/ etc.?  Moved to main FAQ  RCT  Aligning AEA RCT Registry and AEA Data and Code Repository  The AEA RCT registry has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as “non public” prior to the publication of the replication package. When the replication package is about to be published on the AEA Data and Code Repository, this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:     Log in to the AEA RCT registry and select your registration   Change the field to “public” / “published”   Compute the DOI of your forthcoming replication package publication and enter the resulting DOI in the URL field.            Do not use the URL of the openICPSR project in the browser address bar!           [EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  AEA Data and Code Repository:     The RCT registry will show the DOI of your registration at the bottom of its public page. Example:        You can then enter that DOI (e.g., 10.1257/rct.156-1.1) into the “Related Publication” field of the deposit on the AEA Data and Code Repository:        Choose the “Import via DOI” button:        Fill in the DOI (e.g., 10.1257/rct.156-1.1) and press “Import”:        Select “is supplemented by” and press “Save and Apply”">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Frequently Asked Questions">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/faq">
+
+
+  <meta property="og:description" content="… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the question on Twitter, or send an email to the AEA Data Editor.  Citing, DOI  What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?  Generically, each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:     Then     if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., “http://doi.org/10.3886/E” + number + “V3” if the current version is V2 and the next version would be V3.   Give it a try:     Article title:     Authors:     Project number:     Version number:                    How do I cite my own data and code supplement?  If you created your own data (experiments, surveys, etc.), you should do one of two things:     If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the Social Science Data Editor’s guide to Data and Code Hosting. Once deposited, and published, the data should be cited in your manuscript, in accordance with the AEA Sample References.   If you only intend to write this one manuscript with the data, you should cite the manuscript’s companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the AEA Sample References (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.   I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).  We understand  page limits, here are possible workarounds, in decreasing order of preference:     refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)   refer to the README in the deposit, which has a bibliography like a real paper (see the README template)   Licensing  Are authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?  As of Jan 2021, this question has two answers, pending final migration of archival replication packages:  If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)  The copyright of older deposits was transferred (© AEA), together with the manuscript, to the AEA. However, we encourage re-use, and permission is automatically granted to any user of these deposits to use and re-publish them, under acknowledgement (citation) of the authors original paper and replication package. See  sample references, example no. 4.  If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)  Migrated deposits are (© AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit’s LICENSE file). Most deposits are under a mixed CC-BY/BSD license, or under a CC-BY license.    Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  sample references, example no. 3.  Deposit related  Should we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?     … the directory structure has gotten a little clunky over the years working on this project…   The Data and Code Availability Policy   says:     “Files uploaded to the AEA Data and Code Repository should retain the file names as originally executed or used, their original file format, and their original “grouping” in terms of directories.”   You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the same results that are reported in the paper. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.  Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.  I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything  When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:  You can “recall” the submission  On the right, under “ Change status”, choose “Recall submission”   You should then be able to upload and make changes.  Once you are done, choose “Re-submit” from the same menu.  The Data Editor staff can request revisions  If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.  Again, once you are done, choose “Re-submit” from the same menu as above.  I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.  First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.  Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see https://www.aeaweb.org/journals/data/policy-revisions.  1) Log back onto your openICPSR deposit. If you don’t remember, simply click on the “Share Data” link on openICPSR, and it will show you your deposits.  2) You may need to click on “Create new version” - depends on when the deposit was initially created (applies for all deposits made after July 2020).  3) Update the README as per the policy. Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.  4) Once you updated all files (remember to update the README), choose “Submit to AEA” in “Change Status”.  5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.  6) In most cases, the article will remain linked to the V1 deposit (“version of record”), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).  Confidential data  The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?  [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection – even if only the syntax are in the repository.  It’s useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.  I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?  Moved to main FAQ  I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?  Moved to main FAQ  Version control, Software, etc.  We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?  Moved to main FAQ  Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?  Moved to main FAQ  Do you support Docker/ Jupyter/ etc.?  Moved to main FAQ  RCT  Aligning AEA RCT Registry and AEA Data and Code Repository  The AEA RCT registry has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as “non public” prior to the publication of the replication package. When the replication package is about to be published on the AEA Data and Code Repository, this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:     Log in to the AEA RCT registry and select your registration   Change the field to “public” / “published”   Compute the DOI of your forthcoming replication package publication and enter the resulting DOI in the URL field.            Do not use the URL of the openICPSR project in the browser address bar!           [EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  AEA Data and Code Repository:     The RCT registry will show the DOI of your registration at the bottom of its public page. Example:        You can then enter that DOI (e.g., 10.1257/rct.156-1.1) into the “Related Publication” field of the deposit on the AEA Data and Code Repository:        Choose the “Import via DOI” button:        Fill in the DOI (e.g., 10.1257/rct.156-1.1) and press “Import”:        Select “is supplemented by” and press “Save and Apply”">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Frequently Asked Questions">
+  <meta name="twitter:description" content="… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the question on Twitter, or send an email to the AEA Data Editor.  Citing, DOI  What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?  Generically, each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:     Then     if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)   if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., “http://doi.org/10.3886/E” + number + “V3” if the current version is V2 and the next version would be V3.   Give it a try:     Article title:     Authors:     Project number:     Version number:                    How do I cite my own data and code supplement?  If you created your own data (experiments, surveys, etc.), you should do one of two things:     If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the Social Science Data Editor’s guide to Data and Code Hosting. Once deposited, and published, the data should be cited in your manuscript, in accordance with the AEA Sample References.   If you only intend to write this one manuscript with the data, you should cite the manuscript’s companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the AEA Sample References (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.   I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).  We understand  page limits, here are possible workarounds, in decreasing order of preference:     refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)   refer to the README in the deposit, which has a bibliography like a real paper (see the README template)   Licensing  Are authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?  As of Jan 2021, this question has two answers, pending final migration of archival replication packages:  If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)  The copyright of older deposits was transferred (© AEA), together with the manuscript, to the AEA. However, we encourage re-use, and permission is automatically granted to any user of these deposits to use and re-publish them, under acknowledgement (citation) of the authors original paper and replication package. See  sample references, example no. 4.  If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)  Migrated deposits are (© AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit’s LICENSE file). Most deposits are under a mixed CC-BY/BSD license, or under a CC-BY license.    Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  sample references, example no. 3.  Deposit related  Should we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?     … the directory structure has gotten a little clunky over the years working on this project…   The Data and Code Availability Policy   says:     “Files uploaded to the AEA Data and Code Repository should retain the file names as originally executed or used, their original file format, and their original “grouping” in terms of directories.”   You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the same results that are reported in the paper. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.  Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.  I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything  When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:  You can “recall” the submission  On the right, under “ Change status”, choose “Recall submission”   You should then be able to upload and make changes.  Once you are done, choose “Re-submit” from the same menu.  The Data Editor staff can request revisions  If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.  Again, once you are done, choose “Re-submit” from the same menu as above.  I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.  First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.  Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see https://www.aeaweb.org/journals/data/policy-revisions.  1) Log back onto your openICPSR deposit. If you don’t remember, simply click on the “Share Data” link on openICPSR, and it will show you your deposits.  2) You may need to click on “Create new version” - depends on when the deposit was initially created (applies for all deposits made after July 2020).  3) Update the README as per the policy. Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.  4) Once you updated all files (remember to update the README), choose “Submit to AEA” in “Change Status”.  5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.  6) In most cases, the article will remain linked to the V1 deposit (“version of record”), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).  Confidential data  The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?  [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection – even if only the syntax are in the repository.  It’s useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.  I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?  Moved to main FAQ  I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?  Moved to main FAQ  Version control, Software, etc.  We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?  Moved to main FAQ  Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?  Moved to main FAQ  Do you support Docker/ Jupyter/ etc.?  Moved to main FAQ  RCT  Aligning AEA RCT Registry and AEA Data and Code Repository  The AEA RCT registry has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as “non public” prior to the publication of the replication package. When the replication package is about to be published on the AEA Data and Code Repository, this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:     Log in to the AEA RCT registry and select your registration   Change the field to “public” / “published”   Compute the DOI of your forthcoming replication package publication and enter the resulting DOI in the URL field.            Do not use the URL of the openICPSR project in the browser address bar!           [EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  AEA Data and Code Repository:     The RCT registry will show the DOI of your registration at the bottom of its public page. Example:        You can then enter that DOI (e.g., 10.1257/rct.156-1.1) into the “Related Publication” field of the deposit on the AEA Data and Code Repository:        Choose the “Import via DOI” button:        Fill in the DOI (e.g., 10.1257/rct.156-1.1) and press “Import”:        Select “is supplemented by” and press “Save and Apply”">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/faq">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-04-08T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/faq">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Frequently Asked Questions">
+    <meta itemprop="description" content="… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the question on Twitter, or send an email to the AEA Data Editor.Citing, DOIWhat is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?Generically, each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:   Then  if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)  if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., “http://doi.org/10.3886/E” + number + “V3” if the current version is V2 and the next version would be V3.Give it a try: Article title:    Authors:    Project number:    Version number:       How do I cite my own data and code supplement?If you created your own data (experiments, surveys, etc.), you should do one of two things:  If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the Social Science Data Editor’s guide to Data and Code Hosting. Once deposited, and published, the data should be cited in your manuscript, in accordance with the AEA Sample References.  If you only intend to write this one manuscript with the data, you should cite the manuscript’s companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the AEA Sample References (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).We understand  page limits, here are possible workarounds, in decreasing order of preference:  refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)  refer to the README in the deposit, which has a bibliography like a real paper (see the README template)LicensingAre authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?As of Jan 2021, this question has two answers, pending final migration of archival replication packages:If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)The copyright of older deposits was transferred (© AEA), together with the manuscript, to the AEA. However, we encourage re-use, and permission is automatically granted to any user of these deposits to use and re-publish them, under acknowledgement (citation) of the authors original paper and replication package. See  sample references, example no. 4.If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)Migrated deposits are (© AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit’s LICENSE file). Most deposits are under a mixed CC-BY/BSD license, or under a CC-BY license.Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  sample references, example no. 3.Deposit relatedShould we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?  … the directory structure has gotten a little clunky over the years working on this project…The Data and Code Availability Policy   says:  “Files uploaded to the AEA Data and Code Repository should retain the file names as originally executed or used, their original file format, and their original “grouping” in terms of directories.”You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the same results that are reported in the paper. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.I was asked to modify files in my repository (not yet published) but I cannot upload or edit anythingWhen you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:You can “recall” the submissionOn the right, under “ Change status”, choose “Recall submission”You should then be able to upload and make changes.Once you are done, choose “Re-submit” from the same menu.The Data Editor staff can request revisionsIf you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.Again, once you are done, choose “Re-submit” from the same menu as above.I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see https://www.aeaweb.org/journals/data/policy-revisions.1) Log back onto your openICPSR deposit. If you don’t remember, simply click on the “Share Data” link on openICPSR, and it will show you your deposits.2) You may need to click on “Create new version” - depends on when the deposit was initially created (applies for all deposits made after July 2020).3) Update the README as per the policy. Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.4) Once you updated all files (remember to update the README), choose “Submit to AEA” in “Change Status”.5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.6) In most cases, the article will remain linked to the V1 deposit (“version of record”), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).Confidential dataThe paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?[Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection – even if only the syntax are in the repository.  It’s useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?Moved to main FAQI have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?Moved to main FAQVersion control, Software, etc.We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?Moved to main FAQSome econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?Moved to main FAQDo you support Docker/ Jupyter/ etc.?Moved to main FAQRCTAligning AEA RCT Registry and AEA Data and Code RepositoryThe AEA RCT registry has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as “non public” prior to the publication of the replication package. When the replication package is about to be published on the AEA Data and Code Repository, this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:  Log in to the AEA RCT registry and select your registration  Change the field to “public” / “published”  Compute the DOI of your forthcoming replication package publication and enter the resulting DOI in the URL field.          Do not use the URL of the openICPSR project in the browser address bar!      [EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  AEA Data and Code Repository:  The RCT registry will show the DOI of your registration at the bottom of its public page. Example:  You can then enter that DOI (e.g., 10.1257/rct.156-1.1) into the “Related Publication” field of the deposit on the AEA Data and Code Repository:  Choose the “Import via DOI” button:  Fill in the DOI (e.g., 10.1257/rct.156-1.1) and press “Import”:  Select “is supplemented by” and press “Save and Apply”">
+    <meta itemprop="datePublished" content="2021-04-08T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Frequently Asked Questions
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 08, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#citing-doi">Citing, DOI</a><ul><li><a href="#what-is-the-doi-of-my-openicpsr-deposit-i-have-not-yet-published-it-but-am-asked-to-add-a-citation-to-it-in-my-manuscript">What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?</a></li><li><a href="#how-do-i-cite-my-own-data-and-code-supplement">How do I cite my own data and code supplement?</a></li><li><a href="#i-have-a-paper-that-uses-data-from-14-different-sources-how-do-i-comply-with-requirement-for-data-citations-and-fit-within-page-limits-for-instance-in-papers-and-proceedings">I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).</a></li></ul></li><li><a href="#licensing">Licensing</a><ul><li><a href="#are-authors-allowed-to-reuse-the-data-once-the-data-is-published-on-the-aer-webpage-and-what-are-the-specific-conditions">Are authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?</a><ul><li><a href="#if-the-deposit-is-still-downloaded-from-the-aea-website-download-url-starts-with-httpswwwaeaweborg">If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)</a></li><li><a href="#if-the-deposit-is-downloaded-from-the-aea-data-and-code-repository-at-openicpsr-download-link-redirects-to-a-page-at-the-repository">If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)</a></li></ul></li></ul></li><li><a href="#deposit-related">Deposit related</a><ul><li><a href="#should-we-keep-the-data-and-directory-structure-as-we-used-it-ourselves-or-should-we-set-up-the-files-in-a-way-that-would-make-replication-as-straightforward-as-possible">Should we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?</a></li><li><a href="#i-was-asked-to-modify-files-in-my-repository-not-yet-published-but-i-cannot-upload-or-edit-anything">I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything</a><ul><li><a href="#you-can-recall-the-submission">You can “recall” the submission</a></li><li><a href="#the-data-editor-staff-can-request-revisions">The Data Editor staff can request revisions</a></li></ul></li><li><a href="#i-was-wondering-whether-and-how-i-can-update-the-published-repository-for-our-paper-i-was-contacted-by-a-researcher-who-is-doing-a-replication--couple-of-minor-issues--forgotten-to-include-two-auxiliary-datasets-in-the-repository-without-which-one-of-the-programs-does-not-run-successfully">I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.</a></li></ul></li><li><a href="#confidential-data">Confidential data</a><ul><li><a href="#the-paper-uses-confidential-data-covering-geography-for-period-2001-2015-the-repository-only-contains-code-should-the-repository-metadata-be-filled-out-for-the-data-characteristics-even-if-the-repository-only-has-code">The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?</a></li><li><a href="#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed">I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?</a></li><li><a href="#i-have-been-told-by-the-data-editor-to-remove-psid-data-from-my-submitted-materials-what-do-i-do">I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?</a></li></ul></li><li><a href="#version-control-software-etc">Version control, Software, etc.</a><ul><li><a href="#we-already-use-gitsvngithubgitlabbitbucketetc-do-you-facilitate-integration-of-existing-version-controlled-code-to-the-aea-repo-or-even-planned-functionality-for-linking-out-directly-to-such-projects-where-they-can-be-found-online">We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?</a></li><li><a href="#some-econometrics-papers-might-be-accompanied-by-for-example-an-r-or-stata-package-perhaps-published-on-cran-or-ssc-what-about-surfacing-references-to-associated-packages-more-prominently">Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?</a></li><li><a href="#do-you-support-docker-jupyter-etc">Do you support Docker/ Jupyter/ etc.?</a></li></ul></li><li><a href="#rct">RCT</a><ul><li><a href="#aligning-aea-rct-registry-and-aea-data-and-code-repository">Aligning AEA RCT Registry and AEA Data and Code Repository</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+      
+        <p>… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the <a href="https://www.aeaweb.org/journals/data/faq">official list of FAQ</a> first. Should you have other questions not appearing on either page, please <a href="https://github.com/AEADataEditor/aea-de-guidance/issues/new">create a new issue on Github</a>, ask the question on <a href="https://twitter.com/aeadata">Twitter</a>, or send an email to the <a href="mailto:dataeditor@aeapubs.org">AEA Data Editor</a>.</p>
+
+<h2 id="citing-doi">Citing, DOI</h2>
+
+<h3 id="what-is-the-doi-of-my-openicpsr-deposit-i-have-not-yet-published-it-but-am-asked-to-add-a-citation-to-it-in-my-manuscript">What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?</h3>
+
+<p>Generically, each openICPSR project has a number (e.g., “109622”), that might show up on the right panel:
+ <img src="/images/project-number.png" alt="Image of number" /> 
+ Then</p>
+
+<ul>
+  <li>if the openICPSR project has not been published, then the DOI will be “http://doi.org/10.3886/E” + number + “V1” (e.g. http://doi.org/10.3886/E109622V1)</li>
+  <li>if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., “http://doi.org/10.3886/E” + number + “V3” if the current version is V2 and the next version would be V3.</li>
+</ul>
+
+<p>Give it a try:</p>
+
+<form id="myForm">
+<table>
+ <tr><td>Article title:</td> <td> <input type="text" name="title" /></td></tr>
+  <tr><td>Authors:</td> <td> <input type="text" name="title" /></td></tr>
+  <tr><td>Project number:</td> <td> <input type="text" name="projectid" /></td></tr>
+  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1" /></td></tr>
+  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI" /></td></tr>
+  </table>
+</form>
+
+<p id="DOI"></p>
+<table>
+<tr><td>
+<p id="citation"></p>
+</td></tr></table>
+
+<script>
+function myFunction() {
+  var doipre = "http://doi.org/10.3886/E";
+  var titlepre = "Data and code for:";
+  var str0 = document.getElementById('myForm').elements[0].value;
+  var authors = document.getElementById('myForm').elements[1].value;
+  var str2 = document.getElementById('myForm').elements[2].value;
+  var str3 = document.getElementById('myForm').elements[3].value;
+  var title = titlepre.concat(str0);
+  var doi = doipre.concat(str2).concat(str3);
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
+  
+}
+</script>
+
+<h3 id="how-do-i-cite-my-own-data-and-code-supplement">How do I cite my own data and code supplement?</h3>
+
+<p>If you created your own data (experiments, surveys, etc.), you should do one of two things:</p>
+
+<ul>
+  <li>If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the <a href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html">Social Science Data Editor’s guide to Data and Code Hosting</a>. Once deposited, and published, the data should be cited in your manuscript, in accordance with the <a href="https://www.aeaweb.org/journals/policies/sample-references">AEA Sample References</a>.</li>
+  <li>If you only intend to write this one manuscript with the data, you should cite the manuscript’s companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the <a href="https://www.aeaweb.org/journals/policies/sample-references">AEA Sample References</a> (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.</li>
+</ul>
+
+<h3 id="i-have-a-paper-that-uses-data-from-14-different-sources-how-do-i-comply-with-requirement-for-data-citations-and-fit-within-page-limits-for-instance-in-papers-and-proceedings">I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).</h3>
+
+<p>We understand  page limits, here are possible workarounds, in decreasing order of preference:</p>
+
+<ul>
+  <li>refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)</li>
+  <li>refer to the README in the deposit, which has a bibliography like a real paper (see the <a href="https://social-science-data-editors.github.io/template_README/">README template</a>)</li>
+</ul>
+
+<h2 id="licensing">Licensing</h2>
+
+<h3 id="are-authors-allowed-to-reuse-the-data-once-the-data-is-published-on-the-aer-webpage-and-what-are-the-specific-conditions">Are authors allowed to reuse the data once the data is published on the AER webpage and what are the specific conditions?</h3>
+
+<p>As of Jan 2021, this question has two answers, pending final migration of archival replication packages:</p>
+
+<h4 id="if-the-deposit-is-still-downloaded-from-the-aea-website-download-url-starts-with-httpswwwaeaweborg">If the deposit is still downloaded from the AEA website (download URL starts with “https://www.aeaweb.org”)</h4>
+
+<p>The copyright of older deposits was transferred (© AEA), together with the manuscript, to the AEA. However, we encourage re-use, and permission is automatically granted to any user of these deposits to use and re-publish them, under acknowledgement (citation) of the <em>authors</em> original paper and replication package. See  <a href="https://www.aeaweb.org/journals/policies/sample-references">sample references</a>, example no. 4.</p>
+
+<h4 id="if-the-deposit-is-downloaded-from-the-aea-data-and-code-repository-at-openicpsr-download-link-redirects-to-a-page-at-the-repository">If the deposit is downloaded from the AEA Data and Code Repository at openICPSR (download link redirects to a page at the Repository)</h4>
+
+<p>Migrated deposits are (© AEA), newer deposits remain copyrighted by the original authors (unless otherwise stated in the deposit’s LICENSE file). Most deposits are under a <a href="/aea-de-guidance/LICENSE-template.html">mixed CC-BY/BSD</a> license, or under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> license.</p>
+
+<p><img src="/images/project-license-icpsr.png" alt="License on openICPSR website" /></p>
+
+<p>Both licenses allow for re-use and re-distribution, under acknowledgement (citation) of the DOI of the replication package, see  <a href="https://www.aeaweb.org/journals/policies/sample-references">sample references</a>, example no. 3.</p>
+
+<h2 id="deposit-related">Deposit related</h2>
+
+<h3 id="should-we-keep-the-data-and-directory-structure-as-we-used-it-ourselves-or-should-we-set-up-the-files-in-a-way-that-would-make-replication-as-straightforward-as-possible">Should we keep the data and directory structure as we used it ourselves or should we set up the files in a way that would make replication as straightforward as possible?</h3>
+
+<blockquote>
+  <p>… the directory structure has gotten a little clunky over the years working on this project…</p>
+</blockquote>
+
+<p>The Data and Code Availability Policy   says:</p>
+
+<blockquote>
+  <p>“Files uploaded to the AEA Data and Code Repository should retain the file names as originally executed or used, their original file format, and their original “grouping” in terms of directories.”</p>
+</blockquote>
+
+<p>You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the <strong>same results that are reported in the paper</strong>. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.</p>
+
+<p>Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.</p>
+
+<h3 id="i-was-asked-to-modify-files-in-my-repository-not-yet-published-but-i-cannot-upload-or-edit-anything">I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything</h3>
+
+<p>When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:</p>
+
+<h4 id="you-can-recall-the-submission">You can “recall” the submission</h4>
+
+<p>On the right, under “ Change status”, choose “Recall submission”</p>
+
+<p><img src="/images/recall-submission-icpsr.png" alt="recall" />
+You should then be able to upload and make changes.</p>
+
+<p>Once you are done, choose “Re-submit” from the same menu.</p>
+
+<h4 id="the-data-editor-staff-can-request-revisions">The Data Editor staff can request revisions</h4>
+
+<p>If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.</p>
+
+<p>Again, once you are done, choose “Re-submit” from the same menu as above.</p>
+
+<h3 id="i-was-wondering-whether-and-how-i-can-update-the-published-repository-for-our-paper-i-was-contacted-by-a-researcher-who-is-doing-a-replication--couple-of-minor-issues--forgotten-to-include-two-auxiliary-datasets-in-the-repository-without-which-one-of-the-programs-does-not-run-successfully">I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication … couple of minor issues … forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.</h3>
+
+<p>First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.</p>
+
+<p>Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see <a href="https://www.aeaweb.org/journals/data/policy-revisions">https://www.aeaweb.org/journals/data/policy-revisions</a>.</p>
+
+<p>1) Log back onto your openICPSR deposit. If you don’t remember, simply click on the “Share Data” link on openICPSR, and it will show you your deposits.</p>
+
+<p>2) You <em>may</em> need to click on “Create new version” - depends on when the deposit was initially created (applies for all deposits made after July 2020).</p>
+
+<p>3) Update the README as <a href="(https://www.aeaweb.org/journals/data/policy-revisions)">per the policy</a>. Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.</p>
+
+<p>4) Once you updated all files (remember to update the README), choose “Submit to AEA” in “Change Status”.</p>
+
+<p>5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.</p>
+
+<p>6) In most cases, the article will remain linked to the V1 deposit (“version of record”), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).</p>
+
+<h2 id="confidential-data">Confidential data</h2>
+
+<h3 id="the-paper-uses-confidential-data-covering-geography-for-period-2001-2015-the-repository-only-contains-code-should-the-repository-metadata-be-filled-out-for-the-data-characteristics-even-if-the-repository-only-has-code">The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?</h3>
+
+<p>[Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection – even if only the syntax are in the repository.  It’s useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.</p>
+
+<h3 id="i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed">I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?</h3>
+
+<p><a href="https://www.aeaweb.org/journals/data/faq#confidential">Moved to main FAQ</a></p>
+
+<h3 id="i-have-been-told-by-the-data-editor-to-remove-psid-data-from-my-submitted-materials-what-do-i-do">I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?</h3>
+
+<p><a href="https://www.aeaweb.org/journals/data/faq#psid">Moved to main FAQ</a></p>
+
+<h2 id="version-control-software-etc">Version control, Software, etc.</h2>
+
+<h3 id="we-already-use-gitsvngithubgitlabbitbucketetc-do-you-facilitate-integration-of-existing-version-controlled-code-to-the-aea-repo-or-even-planned-functionality-for-linking-out-directly-to-such-projects-where-they-can-be-found-online">We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?</h3>
+
+<p><a href="https://www.aeaweb.org/journals/data/faq#existing">Moved to main FAQ</a></p>
+
+<h3 id="some-econometrics-papers-might-be-accompanied-by-for-example-an-r-or-stata-package-perhaps-published-on-cran-or-ssc-what-about-surfacing-references-to-associated-packages-more-prominently">Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?</h3>
+
+<p><a href="https://www.aeaweb.org/journals/data/faq#package">Moved to main FAQ</a></p>
+
+<h3 id="do-you-support-docker-jupyter-etc">Do you support Docker/ Jupyter/ etc.?</h3>
+
+<p><a href="https://www.aeaweb.org/journals/data/faq#support">Moved to main FAQ</a></p>
+
+<h2 id="rct">RCT</h2>
+
+<h3 id="aligning-aea-rct-registry-and-aea-data-and-code-repository">Aligning AEA RCT Registry and AEA Data and Code Repository</h3>
+
+<p>The <a href="https://www.socialscienceregistry.org">AEA RCT registry</a> has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as “non public” prior to the publication of the replication package. When the replication package is about to be published on the <a href="https://www.openicpsr.org/openicpsr/aea">AEA Data and Code Repository</a>, this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:</p>
+
+<ul>
+  <li>Log in to the <a href="https://www.socialscienceregistry.org">AEA RCT registry</a> and select your registration</li>
+  <li>Change the field to “public” / “published”</li>
+  <li><a href="#what-is-the-doi-of-my-openicpsr-deposit-i-have-not-yet-published-it-but-am-asked-to-add-a-citation-to-it-in-my-manuscript">Compute the DOI</a> of your forthcoming replication package publication and enter the resulting DOI in the URL field.
+    <ul>
+      <li><strong>Do not use</strong> the URL of the openICPSR project in the browser address bar!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>[EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  <a href="https://www.openicpsr.org/openicpsr/aea">AEA Data and Code Repository</a>:</p>
+
+<ul>
+  <li>The RCT registry will show the DOI of your registration at the bottom of its public page. <a href="https://www.socialscienceregistry.org/trials/156">Example</a>:</li>
+</ul>
+
+<p><img src="/images/aearct-doi-citation.png" alt="RCT DOI" /></p>
+
+<ul>
+  <li>You can then enter that DOI (e.g., <code class="language-plaintext highlighter-rouge">10.1257/rct.156-1.1</code>) into the “Related Publication” field of the deposit on the AEA Data and Code Repository:</li>
+</ul>
+
+<p><img src="/images/project-related-icpsr.png" alt="Entering related publication" /></p>
+
+<ul>
+  <li>Choose the “Import via DOI” button:</li>
+</ul>
+
+<p><img src="/images/project-related-icpsr-modal1.png" alt="Selecting import via DOI" /></p>
+
+<ul>
+  <li>Fill in the DOI (e.g., <code class="language-plaintext highlighter-rouge">10.1257/rct.156-1.1</code>) and press “Import”:</li>
+</ul>
+
+<p><img src="/images/project-related-icpsr-modal2.png" alt="Importing via DOI" /></p>
+
+<ul>
+  <li>Select “<code class="language-plaintext highlighter-rouge">is supplemented by</code>” and press “Save and Apply”</li>
+</ul>
+
+<p><img src="/images/project-related-icpsr-modal3.png" alt="Selecting relationship" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 8, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Frequently+Asked+Questions%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Ffaq" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Ffaq" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

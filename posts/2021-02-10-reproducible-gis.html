@@ -4,21 +4,87 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Reproducible GIS - Office of the AEA Data Editor</title>
+<meta name="description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Reproducible GIS">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+
+
+  <meta property="og:description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Reproducible GIS">
+  <meta name="twitter:description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+
+  
+    <meta name="twitter:card" content="summary">
     
-
-<meta charset="utf-8">
-<title> Office of the AEA Data Editor
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
   
-  - Reproducible GIS
+
   
-</title>
+    <meta name="twitter:creator" content="@AEAData">
+  
 
 
-<link href="https://aeadataeditor.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+  <meta property="article:published_time" content="2021-02-10T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -26,27 +92,28 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<meta http-equiv="cleartype" content="on">
-
-    
-
-<!-- start custom head snippets -->
-
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://aeadataeditor.github.io/assets/css/academicons.css"/>
-
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
     }
-  });
-</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
 
@@ -55,45 +122,48 @@
   <body>
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+
     
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://aeadataeditor.github.io/">Office of the AEA Data Editor</a></li>
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
           
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/publications/">Publications</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/talks/">Talks</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/projects/">Projects</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/surveys/">Surveys</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/year-archive/">Blog Posts</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/">Guidance</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a></li>
-          
-        </ul>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
 
     
 
@@ -103,71 +173,113 @@
 
 <div id="main" role="main">
   
-
-
   <div class="sidebar sticky">
   
 
 
+<div itemscope itemtype="https://schema.org/Person">
 
-<div itemscope itemtype="http://schema.org/Person">
-
-  <div class="author__avatar">
-    
-    	<img src="https://aeadataeditor.github.io/images/thumbnail_website_logo.jpg" class="author__avatar" alt="AEA Data Editor">
-    
-  </div>
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
 
   <div class="author__content">
-    <h3 class="author__name">AEA Data Editor</h3>
-    <p class="author__bio">The AEA Data Editor's mission is to design and oversee the AEA journals' strategy for archiving and curating research data and promoting reproducible research.</p>
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
   </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
+
       
+
       
+
       
+
       
-       
+
       
-        <li><a href="https://twitter.com/AEAData"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
       
-        <li><a href="https://github.com/aeadataeditor"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
-      
-      
-      
-      
-      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
     </ul>
   </div>
 </div>
 
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -205,22 +317,8 @@
       <section class="page__content" itemprop="text">
         <div>
           On this page:
-          <ul id="my_toc" class="inline_toc">
-  <li><a href="#reproducibility-and-gis">Reproducibility and GIS</a></li>
-  <li><a href="#checklist-for-reproducible-maps">Checklist for reproducible maps</a></li>
-  <li><a href="#resources">Resources</a>
-    <ul>
-      <li><a href="#stata">Stata</a></li>
-      <li><a href="#r">R</a></li>
-      <li><a href="#python">Python</a></li>
-      <li><a href="#arcgis">ArcGIS</a></li>
-      <li><a href="#qgis">QGIS</a></li>
-    </ul>
-  </li>
-  <li><a href="#summary">Summary</a></li>
-  <li><a href="#ps">PS</a></li>
-  <li><a href="#follow-the-conversation">Follow the conversation</a></li>
-</ul>
+          <ul class="inline_toc" id="my_toc"><li><a href="#reproducibility-and-gis">Reproducibility and GIS</a></li><li><a href="#checklist-for-reproducible-maps">Checklist for reproducible maps</a></li><li><a href="#resources">Resources</a><ul><li><a href="#stata">Stata</a></li><li><a href="#r">R</a></li><li><a href="#python">Python</a></li><li><a href="#arcgis">ArcGIS</a></li><li><a href="#qgis">QGIS</a></li></ul></li><li><a href="#summary">Summary</a></li><li><a href="#ps">PS</a></li><li><a href="#follow-the-conversation">Follow the conversation</a></li></ul>
+
         </div>
         <p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.</p>
 
@@ -293,32 +391,20 @@
       <footer class="page__meta">
         
         
-
-
   
 
 
-
-
-  
-  
   
 
   <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      
-      
-      <a href="https://aeadataeditor.github.io/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+      <a href="/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
     
-      
-      
-      <a href="https://aeadataeditor.github.io/tags/#gis" class="page__taxonomy-item" rel="tag">GIS</a><span class="sep">, </span>
+      <a href="/tags/#gis" class="page__taxonomy-item" rel="tag">GIS</a><span class="sep">, </span>
     
-      
-      
-      <a href="https://aeadataeditor.github.io/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
+      <a href="/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
     
     </span>
   </p>
@@ -328,30 +414,25 @@
 
       </footer>
 
-      
-
-<section class="page__share">
+      <section class="page__share">
   
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Reproducible+GIS%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-02-10-reproducible-gis" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-02-10-reproducible-gis" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
+
       
-
-
   <nav class="pagination">
     
-      <a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" class="pagination--pager" title="A Day in the Life of a Data Editor
+      <a href="/posts/2021-01-31-day-in-the-life" class="pagination--pager" title="A Day in the Life of a Data Editor
 ">Previous</a>
     
     
-      <a href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" class="pagination--pager" title="What data to provide
+      <a href="/posts/2021-03-31-what-data" class="pagination--pager" title="What data to provide
 ">Next</a>
     
   </nav>
@@ -373,41 +454,39 @@
 
 
 
-
-
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="permalink">What data to provide
+        <a href="/posts/2021-03-31-what-data" rel="permalink">What data to provide
 </a>
       
     </h2>
     
+
+  <p class="page__meta">
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
 
 
-  
-	  5 minute read
-	
+    <p class="archive__item-excerpt" itemprop="description">What do we mean by “data”?
+
 </p>
-    
-
-        
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-03-31T00:00:00-04:00">March 31, 2021</time></p>
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>What do we mean by “data”?
-
-<strong><a href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
-
   </article>
 </div>
 
@@ -416,41 +495,37 @@
 
 
 
-
-
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="permalink">A Day in the Life of a Data Editor
+        <a href="/posts/2021-01-31-day-in-the-life" rel="permalink">A Day in the Life of a Data Editor
 </a>
       
     </h2>
     
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
-
-  
-	  3 minute read
-	
-</p>
+  <p class="page__meta">
     
 
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
         
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-31T00:00:00-05:00">January 31, 2021</time></p>
+          3 minute read
         
+      </span>
+    
+  </p>
 
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.
 
-<strong><a href="https://aeadataeditor.github.io/posts/2021-01-31-day-in-the-life" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
-
+    <p class="archive__item-excerpt" itemprop="description">I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various ...</p>
   </article>
 </div>
 
@@ -459,41 +534,37 @@
 
 
 
-
-
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" rel="permalink">Follow-up to Fireside Chat
+        <a href="/posts/2021-01-19-fireside-chat" rel="permalink">Follow-up to Fireside Chat
 </a>
       
     </h2>
     
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
-
-  
-	  11 minute read
-	
-</p>
+  <p class="page__meta">
     
 
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
         
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-19T00:00:00-05:00">January 19, 2021</time></p>
+          11 minute read
         
+      </span>
+    
+  </p>
 
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>In this post, I’ll pick up questions that have been asked over Twitter or during the <a href="https://aeadataeditor.github.io/talks/2021-01-19-cswep">2021-01-19 Fireside chat</a>, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.
 
-<strong><a href="https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
-
+    <p class="archive__item-excerpt" itemprop="description">In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best m...</p>
   </article>
 </div>
 
@@ -502,40 +573,38 @@
 
 
 
-
-
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="permalink">A discussion about various things
+        <a href="/posts/2021-01-05-answers-to-questions" rel="permalink">A discussion about various things
 </a>
       
     </h2>
     
+
+  <p class="page__meta">
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
 
 
-  
-	  less than 1 minute read
-	
+    <p class="archive__item-excerpt" itemprop="description">Moved to later post.
 </p>
-    
-
-        
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-01-05T00:00:00-05:00">January 05, 2021</time></p>
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>Moved to later post.
-<strong><a href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="permalink"> Read more</a></strong></p></p>
-    
-    
-    
-
   </article>
 </div>
 
@@ -549,47 +618,40 @@
     <div class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-<a href="/sitemap/">Sitemap</a>
+
 <!-- end custom footer snippets -->
-
-        
-
-<div class="page__footer-follow">
+        <div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
     
+
     
-      <li><a href="https://twitter.com/AEAData"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+        
+      
+        
+      
     
+
     
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
-      <li><a href="http://github.com/aeadataeditor"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    <li><a href="https://aeadataeditor.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
-    <script src="https://aeadataeditor.github.io/assets/js/main.min.js"></script>
+    
+  <script src="/assets/js/main.min.js"></script>
 
 
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 

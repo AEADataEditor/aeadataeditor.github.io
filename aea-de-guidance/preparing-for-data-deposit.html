@@ -1,0 +1,629 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Preparing your files for verification - Office of the AEA Data Editor</title>
+<meta name="description" content="This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.  Describing the contents of your replication package  Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.     The AEA requires that the README follow a prescribed schema.  Please use the template README for social science replication packages.     Follow the instructions within the template README, and provide it as part of your replication package.  Data Citations  All manuscripts will be checked for data citations. If you have not done so, now is the time to add them to your manuscript.  What to cite  All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.     Guidance for data citations   Guidance on how to cite the data you collected   Some additional considerations   Where to cite  Every citation has an in-text entry (Smith (2020) or (Smith, 2020)), and a list entry in the Reference section (see the Chicago Manual of Style Quick Guide). This is true for data citations as well.     Your data citations should be listed in the Reference section of the manuscript.   In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should also appear in the README, including with a separate Reference section.  Data citations and Data Availability Statements  In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See additional guidance on data availability statements.  Ideal structure of a replication package  The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof.     Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”).   The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.  A simple template might be README.pdf data/    raw/       cps0001.dat    analysis/       combined_data.dta       combined_data.csv       combined_data_codebook.pdf code/   01_create/       01_readcps.R       02_readfred.R   02_analysis/       01_table1-5.R       02_figures1-4.R results/   table1.tex   table2.tex   ...   figure1.pdf   figure2.pdf   If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:  data/    raw/       cps0001.dat    confidential/       ssa.csv    conf_analysis/       confidential_combined.dta   Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the Sharing restricted-access data with the AEA Data Editor page.  No manual modifications  The replication package should reproduce the tables and figures, as well as any in-text numbers, by running code without manual intervention.     The only exception to this rule is a single change to set a small number of program and data directory paths.   While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is not acceptable to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.  Structure in the presence of confidential (unpublished) data  When the replication package relies on confidential data that cannot be shared, authors will have to     prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see this FAQ)            this would contain the contents of data/confidential and possibly data/conf_analysis from the example above.           prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls            this would contain the contents of data/raw, data/analysis, code/, and for reference, results/ from the example above.           ensure that replicators have detailed instructions on how to combine the two packages   specify  which (if any) of the results in their paper can be reproduced without the confidential data.   Authors might want to investigate the  possibility of providing “fake” data that might allow replicators to run code, without obtaining meaningful results (functionality test).     The Social Science Editors’ FAQ describes a related issue.   Considering the replicator  The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.  You should assume     that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics            Stata, Matlab, some others are commonly used       Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline             You can assume     that the replicator can manipulate a top-level configuration file            for instance, to set a base directory       but not setting a base directory at the top of 25 different files           You should NOT assume     that the replicator will use the same type of operating system            describe any hard requirements, but do not impose any fake requirements       most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code           that the replicator has any of your packages/modules/etc. installed            provide a setup program to install these (not manual instructions).       provide copies of such packages/modules when the package repository does not allow you to specify a version       provide a container/ Docker image/ VM that comprises all the necessary software and libraries           that the replicator will run the software the same way you do            some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.       For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively       For instance, running R code using Rstudio may behave differently than running it with rscript           For less frequently used software, provide a URL where the software can be obtained.     essentially, if not listed in the figure above, provide information on how to obtain software   if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.   as of 2021, the AEA Data Editor has access to the software on this list, and any open-source (free) software that can be installed on Windows, Linux, and macOS.   Choosing a license  By default, the openICPSR deposit attributes a Creative Commons Attribution 4.0 International Public License to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.     See our Licensing guidance for more details.   Re-run your replication package  Ideally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.     Wherever possible, we strongly encourage running in batch (non-interactive) mode.   Preparing to upload  Once you are done preparing your replication package, you should upload it:     if you have received a conditional acceptance, your replication  package must be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see list), but replication packages should meet the display guidelines.   if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see this FAQ).   if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it must be made available on a trusted repository - other methods are then no longer acceptable.   Final checklist  Before proceeding, do check:     you have prepared a README that provides all the relevant information, as per the README template   your manuscript includes data citations   your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.   your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.   Next step  If you are ready, you can proceed to upload to the AEA Data and Code Repository.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Preparing your files for verification">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit">
+
+
+  <meta property="og:description" content="This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.  Describing the contents of your replication package  Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.     The AEA requires that the README follow a prescribed schema.  Please use the template README for social science replication packages.     Follow the instructions within the template README, and provide it as part of your replication package.  Data Citations  All manuscripts will be checked for data citations. If you have not done so, now is the time to add them to your manuscript.  What to cite  All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.     Guidance for data citations   Guidance on how to cite the data you collected   Some additional considerations   Where to cite  Every citation has an in-text entry (Smith (2020) or (Smith, 2020)), and a list entry in the Reference section (see the Chicago Manual of Style Quick Guide). This is true for data citations as well.     Your data citations should be listed in the Reference section of the manuscript.   In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should also appear in the README, including with a separate Reference section.  Data citations and Data Availability Statements  In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See additional guidance on data availability statements.  Ideal structure of a replication package  The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof.     Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”).   The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.  A simple template might be README.pdf data/    raw/       cps0001.dat    analysis/       combined_data.dta       combined_data.csv       combined_data_codebook.pdf code/   01_create/       01_readcps.R       02_readfred.R   02_analysis/       01_table1-5.R       02_figures1-4.R results/   table1.tex   table2.tex   ...   figure1.pdf   figure2.pdf   If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:  data/    raw/       cps0001.dat    confidential/       ssa.csv    conf_analysis/       confidential_combined.dta   Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the Sharing restricted-access data with the AEA Data Editor page.  No manual modifications  The replication package should reproduce the tables and figures, as well as any in-text numbers, by running code without manual intervention.     The only exception to this rule is a single change to set a small number of program and data directory paths.   While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is not acceptable to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.  Structure in the presence of confidential (unpublished) data  When the replication package relies on confidential data that cannot be shared, authors will have to     prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see this FAQ)            this would contain the contents of data/confidential and possibly data/conf_analysis from the example above.           prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls            this would contain the contents of data/raw, data/analysis, code/, and for reference, results/ from the example above.           ensure that replicators have detailed instructions on how to combine the two packages   specify  which (if any) of the results in their paper can be reproduced without the confidential data.   Authors might want to investigate the  possibility of providing “fake” data that might allow replicators to run code, without obtaining meaningful results (functionality test).     The Social Science Editors’ FAQ describes a related issue.   Considering the replicator  The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.  You should assume     that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics            Stata, Matlab, some others are commonly used       Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline             You can assume     that the replicator can manipulate a top-level configuration file            for instance, to set a base directory       but not setting a base directory at the top of 25 different files           You should NOT assume     that the replicator will use the same type of operating system            describe any hard requirements, but do not impose any fake requirements       most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code           that the replicator has any of your packages/modules/etc. installed            provide a setup program to install these (not manual instructions).       provide copies of such packages/modules when the package repository does not allow you to specify a version       provide a container/ Docker image/ VM that comprises all the necessary software and libraries           that the replicator will run the software the same way you do            some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.       For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively       For instance, running R code using Rstudio may behave differently than running it with rscript           For less frequently used software, provide a URL where the software can be obtained.     essentially, if not listed in the figure above, provide information on how to obtain software   if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.   as of 2021, the AEA Data Editor has access to the software on this list, and any open-source (free) software that can be installed on Windows, Linux, and macOS.   Choosing a license  By default, the openICPSR deposit attributes a Creative Commons Attribution 4.0 International Public License to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.     See our Licensing guidance for more details.   Re-run your replication package  Ideally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.     Wherever possible, we strongly encourage running in batch (non-interactive) mode.   Preparing to upload  Once you are done preparing your replication package, you should upload it:     if you have received a conditional acceptance, your replication  package must be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see list), but replication packages should meet the display guidelines.   if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see this FAQ).   if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it must be made available on a trusted repository - other methods are then no longer acceptable.   Final checklist  Before proceeding, do check:     you have prepared a README that provides all the relevant information, as per the README template   your manuscript includes data citations   your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.   your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.   Next step  If you are ready, you can proceed to upload to the AEA Data and Code Repository.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Preparing your files for verification">
+  <meta name="twitter:description" content="This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.  Describing the contents of your replication package  Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.     The AEA requires that the README follow a prescribed schema.  Please use the template README for social science replication packages.     Follow the instructions within the template README, and provide it as part of your replication package.  Data Citations  All manuscripts will be checked for data citations. If you have not done so, now is the time to add them to your manuscript.  What to cite  All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.     Guidance for data citations   Guidance on how to cite the data you collected   Some additional considerations   Where to cite  Every citation has an in-text entry (Smith (2020) or (Smith, 2020)), and a list entry in the Reference section (see the Chicago Manual of Style Quick Guide). This is true for data citations as well.     Your data citations should be listed in the Reference section of the manuscript.   In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should also appear in the README, including with a separate Reference section.  Data citations and Data Availability Statements  In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See additional guidance on data availability statements.  Ideal structure of a replication package  The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof.     Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”).   The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.  A simple template might be README.pdf data/    raw/       cps0001.dat    analysis/       combined_data.dta       combined_data.csv       combined_data_codebook.pdf code/   01_create/       01_readcps.R       02_readfred.R   02_analysis/       01_table1-5.R       02_figures1-4.R results/   table1.tex   table2.tex   ...   figure1.pdf   figure2.pdf   If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:  data/    raw/       cps0001.dat    confidential/       ssa.csv    conf_analysis/       confidential_combined.dta   Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the Sharing restricted-access data with the AEA Data Editor page.  No manual modifications  The replication package should reproduce the tables and figures, as well as any in-text numbers, by running code without manual intervention.     The only exception to this rule is a single change to set a small number of program and data directory paths.   While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is not acceptable to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.  Structure in the presence of confidential (unpublished) data  When the replication package relies on confidential data that cannot be shared, authors will have to     prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see this FAQ)            this would contain the contents of data/confidential and possibly data/conf_analysis from the example above.           prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls            this would contain the contents of data/raw, data/analysis, code/, and for reference, results/ from the example above.           ensure that replicators have detailed instructions on how to combine the two packages   specify  which (if any) of the results in their paper can be reproduced without the confidential data.   Authors might want to investigate the  possibility of providing “fake” data that might allow replicators to run code, without obtaining meaningful results (functionality test).     The Social Science Editors’ FAQ describes a related issue.   Considering the replicator  The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.  You should assume     that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics            Stata, Matlab, some others are commonly used       Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline             You can assume     that the replicator can manipulate a top-level configuration file            for instance, to set a base directory       but not setting a base directory at the top of 25 different files           You should NOT assume     that the replicator will use the same type of operating system            describe any hard requirements, but do not impose any fake requirements       most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code           that the replicator has any of your packages/modules/etc. installed            provide a setup program to install these (not manual instructions).       provide copies of such packages/modules when the package repository does not allow you to specify a version       provide a container/ Docker image/ VM that comprises all the necessary software and libraries           that the replicator will run the software the same way you do            some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.       For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively       For instance, running R code using Rstudio may behave differently than running it with rscript           For less frequently used software, provide a URL where the software can be obtained.     essentially, if not listed in the figure above, provide information on how to obtain software   if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.   as of 2021, the AEA Data Editor has access to the software on this list, and any open-source (free) software that can be installed on Windows, Linux, and macOS.   Choosing a license  By default, the openICPSR deposit attributes a Creative Commons Attribution 4.0 International Public License to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.     See our Licensing guidance for more details.   Re-run your replication package  Ideally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.     Wherever possible, we strongly encourage running in batch (non-interactive) mode.   Preparing to upload  Once you are done preparing your replication package, you should upload it:     if you have received a conditional acceptance, your replication  package must be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see list), but replication packages should meet the display guidelines.   if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see this FAQ).   if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it must be made available on a trusted repository - other methods are then no longer acceptable.   Final checklist  Before proceeding, do check:     you have prepared a README that provides all the relevant information, as per the README template   your manuscript includes data citations   your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.   your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.   Next step  If you are ready, you can proceed to upload to the AEA Data and Code Repository.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-04-08T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/step-by-step.html">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/faq.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Preparing your files for verification">
+    <meta itemprop="description" content="This document describes how to best prepare a replication package for an AEA journal. Much of the guidance hereis not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.Describing the contents of your replication packageEvery replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.  The AEA requires that the README follow a prescribed schema.  Please use the template README for social science replication packages.Follow the instructions within the template README, and provide it as part of your replication package.Data CitationsAll manuscripts will be checked for data citations. If you have not done so, now is the time to add them to yourmanuscript.What to citeAll datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.  Guidance for data citations  Guidance on how to cite the data you collected  Some additional considerationsWhere to citeEvery citation has an in-text entry (Smith (2020) or (Smith, 2020)), and a list entry in the Reference section (see the Chicago Manual of Style Quick Guide). This is true for data citations as well.  Your data citations should be listed in the Reference section of the manuscript.In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should also appear in the README, including with a separate Reference section.Data citations and Data Availability StatementsIn many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See additional guidance on data availability statements.Ideal structure of a replication packageThe AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof.  Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”).The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.A simple template might beREADME.pdfdata/   raw/      cps0001.dat   analysis/      combined_data.dta      combined_data.csv      combined_data_codebook.pdfcode/  01_create/      01_readcps.R      02_readfred.R  02_analysis/      01_table1-5.R      02_figures1-4.Rresults/  table1.tex  table2.tex  ...  figure1.pdf  figure2.pdfIf your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:data/   raw/      cps0001.dat   confidential/      ssa.csv   conf_analysis/      confidential_combined.dtaKeep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the Sharing restricted-access data with the AEA Data Editor page.No manual modificationsThe replication package should reproduce the tables and figures, as well as any in-text numbers, by running code without manual intervention.  The only exception to this rule is a single change to set a small number of program and data directory paths.While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is not acceptable to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.Structure in the presence of confidential (unpublished) dataWhen the replication package relies on confidential data that cannot be shared, authors will have to  prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see this FAQ)          this would contain the contents of data/confidential and possibly data/conf_analysis from the example above.        prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls          this would contain the contents of data/raw, data/analysis, code/, and for reference, results/ from the example above.        ensure that replicators have detailed instructions on how to combine the two packages  specify  which (if any) of the results in their paper can be reproduced without the confidential data.Authors might want to investigate the  possibility of providing “fake” data that might allow replicators to run code, without obtaining meaningful results (functionality test).  The Social Science Editors’ FAQ describes a related issue.Considering the replicatorThe replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.You should assume  that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics          Stata, Matlab, some others are commonly used      Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline      You can assume  that the replicator can manipulate a top-level configuration file          for instance, to set a base directory      but not setting a base directory at the top of 25 different files      You should NOT assume  that the replicator will use the same type of operating system          describe any hard requirements, but do not impose any fake requirements      most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code        that the replicator has any of your packages/modules/etc. installed          provide a setup program to install these (not manual instructions).      provide copies of such packages/modules when the package repository does not allow you to specify a version      provide a container/ Docker image/ VM that comprises all the necessary software and libraries        that the replicator will run the software the same way you do          some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.      For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively      For instance, running R code using Rstudio may behave differently than running it with rscript      For less frequently used software, provide a URL where the software can be obtained.  essentially, if not listed in the figure above, provide information on how to obtain software  if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.  as of 2021, the AEA Data Editor has access to the software on this list, and any open-source (free) software that can be installed on Windows, Linux, and macOS.Choosing a licenseBy default, the openICPSR deposit attributes a Creative Commons Attribution 4.0 International Public License to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.  See our Licensing guidance for more details.Re-run your replication packageIdeally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.  Wherever possible, we strongly encourage running in batch (non-interactive) mode.Preparing to uploadOnce you are done preparing your replication package, you should upload it:  if you have received a conditional acceptance, your replication  package must be in a trusted repository. The default trusted repository is the AEA Data and Code Repository. Other trusted repositories are acceptable (see list), but replication packages should meet the display guidelines.  if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see this FAQ).  if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it must be made available on a trusted repository - other methods are then no longer acceptable.Final checklistBefore proceeding, do check:  you have prepared a README that provides all the relevant information, as per the README template  your manuscript includes data citations  your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.  your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.Next stepIf you are ready, you can proceed to upload to the AEA Data and Code Repository.">
+    <meta itemprop="datePublished" content="2021-04-08T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Preparing your files for verification
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 08, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#describing-the-contents-of-your-replication-package">Describing the contents of your replication package</a></li><li><a href="#data-citations">Data Citations</a><ul><li><a href="#what-to-cite">What to cite</a></li><li><a href="#where-to-cite">Where to cite</a></li><li><a href="#data-citations-and-data-availability-statements">Data citations and Data Availability Statements</a></li></ul></li><li><a href="#ideal-structure-of-a-replication-package">Ideal structure of a replication package</a><ul><li><a href="#no-manual-modifications">No manual modifications</a></li><li><a href="#structure-in-the-presence-of-confidential-unpublished-data">Structure in the presence of confidential (unpublished) data</a></li><li><a href="#considering-the-replicator">Considering the replicator</a></li></ul></li><li><a href="#choosing-a-license">Choosing a license</a></li><li><a href="#re-run-your-replication-package">Re-run your replication package</a></li><li><a href="#preparing-to-upload">Preparing to upload</a></li><li><a href="#final-checklist">Final checklist</a></li><li><a href="#next-step">Next step</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+      
+        <p>This document describes how to best <strong>prepare a replication package</strong> for an AEA journal. Much of the guidance here
+is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.</p>
+
+<h3 id="describing-the-contents-of-your-replication-package">Describing the contents of your replication package</h3>
+
+<p>Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.</p>
+
+<ul>
+  <li>The AEA requires that the README follow a prescribed schema.  Please use the <a href="https://social-science-data-editors.github.io/template_README/">template README for social science replication packages</a>.</li>
+</ul>
+
+<p><img src="/images/template-readme-700x433.png" alt="template README" /></p>
+
+<p>Follow the instructions within the template README, and provide it as part of your replication package.</p>
+
+<h3 id="data-citations">Data Citations</h3>
+
+<p>All manuscripts will be checked for data citations. If you have not done so, now is the time to add them to your
+manuscript.</p>
+
+<h4 id="what-to-cite">What to cite</h4>
+
+<p>All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.</p>
+
+<ul>
+  <li><a href="https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html">Guidance for data citations</a></li>
+  <li><a href="data-deposit-aea.html#citing-your-deposit">Guidance on how to cite the data you collected</a></li>
+  <li><a href="/posts/2021-03-31-what-data">Some additional considerations</a></li>
+</ul>
+
+<h4 id="where-to-cite">Where to cite</h4>
+
+<p>Every citation has an in-text entry (<code class="language-plaintext highlighter-rouge">Smith (2020)</code> or <code class="language-plaintext highlighter-rouge">(Smith, 2020)</code>), and a list entry in the Reference section (see the <a href="https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html">Chicago Manual of Style Quick Guide</a>). This is true for data citations as well.</p>
+
+<ul>
+  <li>Your data citations should be listed in the <strong>Reference section</strong> of the <strong>manuscript</strong>.</li>
+</ul>
+
+<p>In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should <strong>also</strong> appear in the README, including with a separate Reference section.</p>
+
+<h4 id="data-citations-and-data-availability-statements">Data citations and Data Availability Statements</h4>
+
+<p>In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See <a href="https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html">additional guidance on data availability statements</a>.</p>
+
+<h3 id="ideal-structure-of-a-replication-package">Ideal structure of a replication package</h3>
+
+<p>The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof.</p>
+
+<blockquote>
+  <p>Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”).</p>
+</blockquote>
+
+<p>The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.</p>
+
+<p>A simple template might be</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>README.pdf
+data/
+   raw/
+      cps0001.dat
+   analysis/
+      combined_data.dta
+      combined_data.csv
+      combined_data_codebook.pdf
+code/
+  01_create/
+      01_readcps.R
+      02_readfred.R
+  02_analysis/
+      01_table1-5.R
+      02_figures1-4.R
+results/
+  table1.tex
+  table2.tex
+  ...
+  figure1.pdf
+  figure2.pdf
+</code></pre></div></div>
+
+<p>If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/
+   raw/
+      cps0001.dat
+   confidential/
+      ssa.csv
+   conf_analysis/
+      confidential_combined.dta
+</code></pre></div></div>
+
+<p>Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the <a href="sharing-restricted-data.md">Sharing restricted-access data with the AEA Data Editor</a> page.</p>
+
+<h4 id="no-manual-modifications">No manual modifications</h4>
+
+<p>The replication package should reproduce the tables and figures, as well as any in-text numbers, by <strong>running code without manual intervention</strong>.</p>
+
+<blockquote>
+  <p>The only exception to this rule is a single change to set a small number of program and data directory paths.</p>
+</blockquote>
+
+<p>While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is <strong>not acceptable</strong> to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.</p>
+
+<h4 id="structure-in-the-presence-of-confidential-unpublished-data">Structure in the presence of confidential (unpublished) data</h4>
+
+<p>When the replication package relies on confidential data that cannot be shared, authors will have to</p>
+
+<ul>
+  <li>prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see <a href="https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved">this FAQ</a>)
+    <ul>
+      <li>this would contain the contents of <code class="language-plaintext highlighter-rouge">data/confidential</code> and possibly <code class="language-plaintext highlighter-rouge">data/conf_analysis</code> from the example above.</li>
+    </ul>
+  </li>
+  <li>prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
+    <ul>
+      <li>this would contain the contents of <code class="language-plaintext highlighter-rouge">data/raw</code>, <code class="language-plaintext highlighter-rouge">data/analysis</code>, <code class="language-plaintext highlighter-rouge">code/</code>, and for reference, <code class="language-plaintext highlighter-rouge">results/</code> from the example above.</li>
+    </ul>
+  </li>
+  <li>ensure that replicators have detailed instructions on how to combine the two packages</li>
+  <li>specify  which (if any) of the results in their paper can be reproduced without the confidential data.</li>
+</ul>
+
+<p>Authors might want to investigate the  possibility of providing “fake” data that might allow replicators to run code, without obtaining meaningful results (functionality test).</p>
+
+<ul>
+  <li>The <a href="https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed">Social Science Editors’ FAQ</a> describes a related issue.</li>
+</ul>
+
+<h4 id="considering-the-replicator">Considering the replicator</h4>
+
+<p>The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.</p>
+
+<p>You should assume</p>
+
+<ul>
+  <li>that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics
+    <ul>
+      <li>Stata, Matlab, some others are commonly used</li>
+      <li>Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/figure_software_years_pct.png" alt="software usage" /></p>
+
+<p>You can assume</p>
+
+<ul>
+  <li>that the replicator can manipulate a top-level configuration file
+    <ul>
+      <li>for instance, to set a base directory</li>
+      <li>but not setting a base directory at the top of 25 different files</li>
+    </ul>
+  </li>
+</ul>
+
+<p>You should NOT assume</p>
+
+<ul>
+  <li>that the replicator will use the same type of operating system
+    <ul>
+      <li>describe any <em>hard</em> requirements, but do not impose any <em>fake</em> requirements</li>
+      <li>most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code</li>
+    </ul>
+  </li>
+  <li>that the replicator has any of your packages/modules/etc. installed
+    <ul>
+      <li>provide a setup program to install these (not manual instructions).</li>
+      <li>provide copies of such packages/modules when the package repository does not allow you to specify a version</li>
+      <li>provide a container/ Docker image/ VM that comprises all the necessary software and libraries</li>
+    </ul>
+  </li>
+  <li>that the replicator will run the software the same way you do
+    <ul>
+      <li>some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.</li>
+      <li>For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively</li>
+      <li>For instance, running R code using Rstudio may behave differently than running it with <code class="language-plaintext highlighter-rouge">rscript</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>For less frequently used software, provide a URL where the software can be obtained.</p>
+
+<ul>
+  <li>essentially, if not listed in the figure above, provide information on how to obtain software</li>
+  <li>if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.</li>
+  <li>as of 2021, the AEA Data Editor has access to the software on <a href="https://ciser.cornell.edu/computing/computing-account-software/">this list</a>, and any open-source (free) software that can be installed on Windows, Linux, and macOS.</li>
+</ul>
+
+<h3 id="choosing-a-license">Choosing a license</h3>
+
+<p>By default, the openICPSR deposit attributes a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Public License</a> to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.</p>
+
+<ul>
+  <li>See our <a href="licensing-guidance">Licensing guidance</a> for more details.</li>
+</ul>
+
+<h3 id="re-run-your-replication-package">Re-run your replication package</h3>
+
+<p>Ideally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.</p>
+
+<ul>
+  <li>Wherever possible, we strongly encourage running in batch (non-interactive) mode.</li>
+</ul>
+
+<h3 id="preparing-to-upload">Preparing to upload</h3>
+
+<p>Once you are done preparing your replication package, you should upload it:</p>
+
+<ul>
+  <li>if you have received a conditional acceptance, your replication  package <strong>must</strong> be in a trusted repository. The default trusted repository is the <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>. Other trusted repositories are acceptable (see <a href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories">list</a>), but replication packages should meet the <a href="guidelines-other-repositories.md">display guidelines</a>.</li>
+  <li>if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see <a href="https://www.aeaweb.org/journals/data/faq#restricted">this FAQ</a>).</li>
+  <li>if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it <strong>must</strong> be made available on a trusted repository - other methods are then no longer acceptable.</li>
+</ul>
+
+<h3 id="final-checklist">Final checklist</h3>
+
+<p>Before proceeding, do check:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />you have prepared a README that provides all the relevant information, as per the <a href="https://social-science-data-editors.github.io/template_README/">README template</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />your manuscript includes data citations</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />your data and code deposit contains all code, including code to read in raw data, <em>even when the data cannot be provided</em>.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.</li>
+</ul>
+
+<h3 id="next-step">Next step</h3>
+
+<p>If you are ready, you can proceed to <a href="data-deposit-aea">upload to the AEA Data and Code Repository</a>.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-04-08T00:00:00-04:00">April 8, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Preparing+your+files+for+verification%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-for-data-deposit" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-for-data-deposit" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 AEA Data Editor. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
