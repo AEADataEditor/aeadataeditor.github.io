@@ -37,6 +37,7 @@ intermediate:
 last:
   - image_path: /images/mermaid-diagram-20200713113652.png
     title: 'Approximate process flow'
+    url: "/images/mermaid-diagram-20200713113652.png"
 ---
 
 {% include feature_row id="intro" type="center" %}
