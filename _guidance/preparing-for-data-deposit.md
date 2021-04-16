@@ -37,7 +37,7 @@ Every citation has an in-text entry (`Smith (2020)` or `(Smith, 2020)`), and a l
 
 - Your data citations should be listed in the **Reference section** of the **manuscript**. 
 
-In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should **also** appear in the README, including with a separate Reference section.
+In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should **also** appear in the [README](https://social-science-data-editors.github.io/template_README/template-README.html), including with a separate [Reference section](https://social-science-data-editors.github.io/template_README/template-README.html#references).
 
 #### Data citations and Data Availability Statements
 
@@ -46,11 +46,11 @@ In many cases, the data citation for a public-use dataset has a unique URL that 
 
 ### Ideal structure of a replication package
 
-The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete "deposits", or only subdirectories thereof. 
+The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete "deposits", or only subdirectories thereof. However, deposits of replication packages at other trusted repositories are also accepted, as long as they satisfy the requirements described here.
 
 > Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform ("import from ZIP"). 
 
-The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.
+The code and data should run as downloaded from the repository, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.
 
 A simple template might be
 ```
@@ -77,20 +77,6 @@ results/
   figure2.pdf
 ```
 
-If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:
-
-```
-data/
-   raw/
-      cps0001.dat
-   confidential/
-      ssa.csv
-   conf_analysis/
-      confidential_combined.dta
-```
-
-Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
-
 #### No manual modifications
 
 The replication package should reproduce the tables and figures, as well as any in-text numbers, by **running code without manual intervention**. 
@@ -110,7 +96,22 @@ When the replication package relies on confidential data that cannot be shared, 
 - ensure that replicators have detailed instructions on how to combine the two packages 
 - specify  which (if any) of the results in their paper can be reproduced without the confidential data. 
 
-Authors might want to investigate the  possibility of providing "fake" data that might allow replicators to run code, without obtaining meaningful results (functionality test). 
+
+Clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:
+
+```
+data/
+   raw/
+      cps0001.dat
+   confidential/
+      ssa.csv
+   conf_analysis/
+      confidential_combined.dta
+```
+
+Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
+
+Authors might want to investigate the  possibility of providing "fake" or "simulated" data that might allow replicators to run code, without necessarily obtaining meaningful results (functionality test). 
 
 - The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed) describes a related issue.
 
