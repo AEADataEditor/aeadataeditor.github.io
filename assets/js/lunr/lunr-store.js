@@ -156,7 +156,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Sharing And Reusing Research Data",
-        "excerpt":"Emails sent Members of the Association who are willing to receive occasional surveys about economics and economists received the following email: At a time when increasing emphasis is being placed on sharing and reuse of research data, we are interested in more fully understanding views, experiences and needs in producing,...","categories": [],
+        "excerpt":"Emails sent Members of the Association who are willing to receive occasional surveys about economics and economists received the following email from the AEA head office: At a time when increasing emphasis is being placed on sharing and reuse of research data, we are interested in more fully understanding views,...","categories": [],
         "tags": [],
         "url": "/surveys/2021-04-19-sharing-and-reusing-research-data",
         "teaser": null
