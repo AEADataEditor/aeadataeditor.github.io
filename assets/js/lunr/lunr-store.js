@@ -149,6 +149,18 @@ var store = [{
         "url": "/projects/project4",
         "teaser": null
       },{
+        "title": "Improving Metadata",
+        "excerpt":"Emails sent Authors of articles may have received the following email: Dear Dr. So-and-so, Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository at openICPSR as the default archive for its supplements. The migration increases the findability of your data through a variety...","categories": [],
+        "tags": [],
+        "url": "/surveys/2020-07-01-improving-metadata",
+        "teaser": null
+      },{
+        "title": "Sharing Resusing Research Data",
+        "excerpt":"Emails sent Members of the Association who are willing to receive occasional surveys about economics and economists received the following email: At a time when increasing emphasis is being placed on sharing and reuse of research data, we are interested in more fully understanding views, experiences and needs in producing,...","categories": [],
+        "tags": [],
+        "url": "/surveys/2021-04-19-sharing-resusing-research-data",
+        "teaser": null
+      },{
         "title": "Implementing Increased Transparency and Reproducibility in Economics",
         "excerpt":"Abstract Replicability is at the core of the scientific enterprise. In the past 30 years, recurring concerns about the extent of replicability (or lack thereof) of the research in various disciplines have surfaced, including in economics. In this talk, I describe the context in which the current discussion in the...","categories": [],
         "tags": [],
