@@ -155,10 +155,10 @@ var store = [{
         "url": "/surveys/2020-07-01-improving-metadata",
         "teaser": null
       },{
-        "title": "Sharing Resusing Research Data",
+        "title": "Sharing And Reusing Research Data",
         "excerpt":"Emails sent Members of the Association who are willing to receive occasional surveys about economics and economists received the following email: At a time when increasing emphasis is being placed on sharing and reuse of research data, we are interested in more fully understanding views, experiences and needs in producing,...","categories": [],
         "tags": [],
-        "url": "/surveys/2021-04-19-sharing-resusing-research-data",
+        "url": "/surveys/2021-04-19-sharing-and-reusing-research-data",
         "teaser": null
       },{
         "title": "Implementing Increased Transparency and Reproducibility in Economics",
