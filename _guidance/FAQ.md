@@ -1,6 +1,7 @@
 ---
 title: "Frequently Asked Questions"
 toc: true
+permalink: /aea-de-guidance/FAQ.html
 layout: single
 date: 2021-04-08
 ---
