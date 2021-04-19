@@ -7,13 +7,13 @@ date: 2021-04-19
 
 ## Emails sent
 
-Members of the Association who are willing to receive occasional surveys about economics and economists received the following email:
+Members of the Association who are willing to receive occasional surveys about economics and economists received the following email from the AEA head office:
 
 <!-- more -->
 
 > At a time when increasing emphasis is being placed on sharing and reuse of research data, we are interested in more fully understanding views, experiences and needs in producing, sharing and using publicly accessible research data. As you complete the survey, please respond on all of your data and publication activities, not just those in conjunction with publications in the AEA journals. The AEA Data Editor encourages your participation in this survey.
 >
-> Please share your perspectives at this link: https://survey.alchemer.com/s3/6266679/Data-Sharing-and-Reuse-Stakeholder-Survey-consent
+> Please share your perspectives at this link: << link removed >> 
 >
 >The survey will take approximately 10-15 minutes to complete. It is voluntary and individual responses will be kept confidential. The results, which will be shared with all who respond, will not contain individual identifying information.
 >
