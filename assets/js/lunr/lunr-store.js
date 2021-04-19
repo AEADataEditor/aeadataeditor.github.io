@@ -14,7 +14,7 @@ var store = [{
         "title": "Frequently Asked Questions",
         "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/faq",
+        "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
