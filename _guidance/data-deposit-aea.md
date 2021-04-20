@@ -220,7 +220,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 
 <script>
 function myFunction() {
-  const datea = new Date();
+  const date = new Date();
   var doipre = "http://doi.org/10.3886/E";
   var titlepre = "Data and code for:";
   var str0 = document.getElementById('myForm').elements[0].value;
