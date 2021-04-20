@@ -238,4 +238,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2021-01-19-cswep",
         "teaser": null
+      },{
+        "title": "Improving reproducibility in the social sciences: Challenges",
+        "excerpt":"Abstract   Presented as part of RDA17 in the session on “Experiments in Preparing Data for Interchange and Openness”, organized by the IG RDARI.   Short talk on institutional support for reproducibility at AEA and in Economics.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-04-20-rda17",
+        "teaser": null
       }]
