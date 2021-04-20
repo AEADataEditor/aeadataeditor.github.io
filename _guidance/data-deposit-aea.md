@@ -19,16 +19,16 @@ Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea
 
 ### Checklist for Metadata
 
-**Required**:
+#### Required
 
-- [ ] Title (Suggested: "*Data and code for: (NAME OF PAPER)*")
-- [ ] "Principal Investigators" (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
-- [ ] Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
-- [ ] Subject Terms (e.g., "Machine Learning", "Randomized Control Trial", "Nudges", ...)
-- [ ] JEL Classification (can be the same as article)
-- [ ] Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
+- [ ] **Title** (Suggested: "*Data and code for: (NAME OF PAPER)*")
+- [ ] "**Principal Investigators**" (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
+- [ ] **Summary** (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
+- [ ] **Subject Terms** (e.g., "Machine Learning", "Randomized Control Trial", "Nudges", ...)
+- [ ] **JEL Classification** (can be the same as article)
+- [ ] **Manuscript Number** (your manuscript tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
 
-**Conditionally required**
+#### Conditionally required
 
 *Most deposits will also need to provide the following metadata elements. In some cases, it may not make sense to fill out (for instance, a laboratory experiment may have no meaningful "geographic coverage"). These elements contribute to better inclusion in search engines.*
 
@@ -38,7 +38,7 @@ Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea
 - [ ] Universe (e.g., "All households in Canada", "Manufacturing establishments in Indonesia", ...)
 - [ ] Data Type(s) 
 
-**Suggested**
+#### Suggested
 
 *The following elements are suggested for certain types of data, and may not apply to all types of data.*
 
@@ -60,7 +60,7 @@ Start by providing the metadata (descriptors) for the data and code you are uplo
 ![screenshot of project description](/images/project-description-icpsr.png)
 
   - The **title** should be "`Data and Code for: [Title of article]`"
-  - The **authors** should be those who compiled the data and code. This may differ (if necessary) from the article. 
+  - The **authors** should be those who compiled the data and code. The names, and order of the names, may differ (if necessary) from the article. 
   - The **summary** might be short. It can include the **abstract** of the article itself. It does not need to include information on the related article (which has its own field). 
   - Identify any **funding sources** here - the information can be queried by some funders, and can assist with your award reporting.
 
@@ -78,7 +78,7 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
 
   - Authors **MUST** provide additional subject terms (keywords). You do not need to repeat JEL codes.
   - Authors **MUST** provide JEL codes (under "Scope of Project")
-  - Authors **MUST** provide the **Manuscript Number**,  (your Scholar One tracking number as assigned by the editorial office, e.g., "AER-2019-0000") as this will allow us to properly connect the repository with the manuscript.
+  - Authors **MUST** provide the **Manuscript Number**,  (your manuscript tracking number as assigned by the editorial office, e.g., "AER-2019-0000") as this will allow us to properly connect the repository with the manuscript.
   - Where appropriate, authors are **REQUIRED** to define 
       - the geographical scope(s)
       - the time period(s)
@@ -102,8 +102,8 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
 ![related publications](/images/project-related-icpsr.png)
 
 - The AEA editorial office will provide an entry for this field that links back to the **published manuscript** - authors do not need to add any reference to the manuscript anywhere in the deposit form (other than the Manuscript Number)
-- Authors are encouraged to link back to working papers or related publications that have or will use this (same!) data. 
-- If code is derived from or continues to be updated on a Git repository (Github, Gitlab, Bitbucket, etc.), authors can link to it here.
+- Authors are encouraged to link back to **working papers** or related publications that have or will use this (same!) data. 
+- If code is derived from or continues to be updated on a Git repository (**Github, Gitlab, Bitbucket**, etc.), authors can link to it here.
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
 
 
@@ -119,9 +119,9 @@ Upload files in the way you expect the files to be organized in order to run the
 #### Checklist for Uploading
 
 - [ ] README is in PDF or TXT format 
-- [ ] DO NOT UPLOAD A ZIP FILE - IMPORT IT! 
+- [ ] Do not upload a ZIP file - [IMPORT IT](#tips)! 
 - [ ] Do not upload manuscripts, appendices, responses to editors, etc.
-- [ ] Directory structure does not contain redundant directories
+- [ ] Directory structure does not contain redundant/ superfluous directories
 - [ ] Do not upload data that you do not have the rights to publish!
 
 ---
@@ -130,11 +130,13 @@ Upload files in the way you expect the files to be organized in order to run the
 
 - If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
 - If you have **more than 1,000 files** in your deposit, talk to us before uploading.
-- The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing. 
+- The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.
 
 #### Restricted-access data
 
-Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
+Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
+
+> Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
 
 
 #### Tips
@@ -142,6 +144,7 @@ Do not upload data that you do not want published! Contact the AEA Data Editor i
 ![screenshot of upload and import options](/images/upload-import-icpsr.png)
 
 - It is possible to **IMPORT a ZIP file** (do **NOT** upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
+  - See the [tutorial](https://youtu.be/MnEl1shX18Y?t=135)
   - A well prepared ZIP file has NO folder in the root
   - macOS users should [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists)
   - Instructional videos: [macOS](https://www.youtube.com/watch?v=fCfVu55YsJg), [Windows](https://youtu.be/MnEl1shX18Y?t=135)
@@ -217,6 +220,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 
 <script>
 function myFunction() {
+  const datea = new Date();
   var doipre = "http://doi.org/10.3886/E";
   var titlepre = "Data and code for:";
   var str0 = document.getElementById('myForm').elements[0].value;
@@ -225,7 +229,7 @@ function myFunction() {
   var str3 = document.getElementById('myForm').elements[3].value;
   var title = titlepre.concat(str0);
   var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. " + date.getFullYear() + ". \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
   document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
   
 }
