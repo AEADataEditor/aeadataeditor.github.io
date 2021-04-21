@@ -109,7 +109,7 @@ data/
       confidential_combined.dta
 ```
 
-Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
+Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
 
 Authors might want to investigate the  possibility of providing "fake" or "simulated" data that might allow replicators to run code, without necessarily obtaining meaningful results (functionality test). 
 

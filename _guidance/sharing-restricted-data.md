@@ -1,5 +1,7 @@
 ---
 title: Sharing restricted-access data with the AEA Data Editor
+toc: true
+date: 2021-04-08
 ---
 
 In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data"). This page describes some tips and methods of doing so, and considerations. Please read it carefully.
