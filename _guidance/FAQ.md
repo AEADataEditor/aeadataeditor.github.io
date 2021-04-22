@@ -4,6 +4,8 @@ toc: true
 permalink: /aea-de-guidance/FAQ.html
 layout: single
 date: 2021-04-08
+redirect_from:
+    - /aea-de-guidance/faq.html
 ---
 ... although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the [official list of FAQ](https://www.aeaweb.org/journals/data/faq) first. Should you have other questions not appearing on either page, please [create a new issue on Github](https://github.com/AEADataEditor/aea-de-guidance/issues/new), ask the question on [Twitter](https://twitter.com/aeadata), or send an email to the [AEA Data Editor](mailto:dataeditor@aeapubs.org).
 

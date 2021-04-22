@@ -90,9 +90,9 @@ While running a small number of distinct programs separately  is acceptable (in 
 When the replication package relies on confidential data that cannot be shared, authors will have to
 
 - prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved))
-  - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example above.
+  - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example below.
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
-  - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example above.
+  - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example below.
 - ensure that replicators have detailed instructions on how to combine the two packages 
 - specify  which (if any) of the results in their paper can be reproduced without the confidential data. 
 
