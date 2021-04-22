@@ -35,6 +35,12 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
+        "title": "FAQ",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/faq",
+        "teaser": null
+      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
         "tags": [],
