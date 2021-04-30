@@ -327,3 +327,4 @@ scholar:
   style: ./assets/bib/chicago-author-date-16th-edition-mod.csl
   source: ./assets/bib
   bibliography: aea.bib
+  sort_by: author,year,title
