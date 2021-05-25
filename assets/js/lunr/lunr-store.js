@@ -256,4 +256,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2021-04-20-rda17",
         "teaser": null
+      },{
+        "title": "Implementing Increased Transparency and Reproducibility in Economics - Some Lessons",
+        "excerpt":"Abstract Replicability is at the core of the scientific enterprise. In the past 30 years, recurring concerns about the extent of replicability (or lack thereof) of the research in various disciplines have surfaced, including in economics. In this talk, I describe to an audience of experts and program officers at...","categories": [],
+        "tags": [],
+        "url": "/talks/replicability-presentation-2021-1",
+        "teaser": null
       }]
