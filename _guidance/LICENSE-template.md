@@ -1,3 +1,9 @@
+---
+title: "License template"
+permalink: /aea-de-guidance/LICENSE-template.html
+layout: single
+---
+
 (save as "LICENSE.txt" as part of your deposit)
 
 ```
