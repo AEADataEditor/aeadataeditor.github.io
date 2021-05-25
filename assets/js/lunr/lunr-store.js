@@ -17,6 +17,12 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
+        "title": "License template",
+        "excerpt":"(save as “LICENSE.txt” as part of your deposit) Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include interpretive, object or...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/LICENSE-template.html",
+        "teaser": null
+      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
