@@ -18,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "License template",
-        "excerpt":"(save as “LICENSE.txt” as part of your deposit) Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include interpretive, object or...","categories": [],
+        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/LICENSE-template.html",
         "teaser": null
