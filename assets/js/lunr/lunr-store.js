@@ -66,7 +66,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. - Example 1 We assess - software...","categories": [],
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/reproducibility-checks",
         "teaser": null
