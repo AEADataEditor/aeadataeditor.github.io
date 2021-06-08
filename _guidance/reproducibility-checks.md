@@ -15,15 +15,16 @@ Generic guidance is provided at the [Social Science Data Editors' Guidance](http
 ## At the AEA
 
 We use **[this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)** to guide our replicators. 
-    - [Example 1](sample-report.md)
+
+- [Example 1](sample-report.md)
 
 We assess 
 
-    - software availability
-    - data availability and data citations
-    - code availability and clarity
-    - needed computational resources
-    - time needed to acquire or use all of the above, and conduct the reproducibility check
+- software availability
+- data availability and data citations
+- code availability and clarity
+- needed computational resources
+- time needed to acquire or use all of the above, and conduct the reproducibility check
 
 If we have, or can acquire in a reasonable time, all of the resources needed, then we conduct a computational check. If not, we conduct only a visual inspection of the code, but may test the described data access or data provenance description (could we get the data?). 
 
@@ -31,15 +32,15 @@ If we have, or can acquire in a reasonable time, all of the resources needed, th
 
 When some of the conditions are not met with our own resources, we may ask others to conduct a reproducibility exercise for us. 
 
-    - Our [PROTOCOL](https://www.aeaweb.org/journals/data/policy-third-party) describes how we might request reports.
-    - [Sample report 1](sample-report-3rd-1.md)
-    - We may ask others to do so because
-      - They are experts
-      - They have access to the software
-      - They have access to the data
-      - They have access to computational resources needed
+- Our [PROTOCOL](https://www.aeaweb.org/journals/data/policy-third-party) describes how we might request reports.
+- [Sample report 1](sample-report-3rd-1.md)
+- We may ask others to do so because
+  - They are experts
+  - They have access to the software
+  - They have access to the data
+  - They have access to computational resources needed
 
-  - **No reproducibility check is discarded out of hand**
+- **No reproducibility check is discarded out of hand**
 
 ## Outcomes
 
