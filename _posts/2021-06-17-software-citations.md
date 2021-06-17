@@ -67,7 +67,7 @@ The version - in fact, any future version - is now properly archived at a truste
 
 ## Citing Software Versions
 
-Last but not least, but in particular when the code authors generated is of more general utility (a Stata or R package for a new econometric technique), **citing the software** is a must (see [FORCE11 Software Citation Principles](https://www.force11.org/software-citation-principles), [^1] 
+Last but not least, but in particular when the code authors generated is of more general utility (a Stata or R package for a new econometric technique), **citing the software** is a must (see [FORCE11 Software Citation Principles](https://www.force11.org/software-citation-principles),[^1])
 
 By creating archived versions, Zenodo, or any other trusted repository, provides a DOI that can then be cited:
 
@@ -77,6 +77,4 @@ Naturally, authors could also cite the Github-hosted version, but only with the 
 
 > Smith, A. and J. Wesson. 2021. "15-fold quantum fixed effects, R package." v0.2-alpha. Github. Last accessed at https://github.com/smith-wesson/cdqfe/releases/tag/v0.2-alpha on June 17, 2025.
 
-[^1]: Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group.
-(2016) Software Citation Principles. *PeerJ Computer Science* 2:e86.
-DOI: [10.7717/peerj-cs.86](https://doi.org/10.7717/peerj-cs.86)
+[^1]: Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. 2016. Software Citation Principles. *PeerJ Computer Science* 2:e86. DOI: [10.7717/peerj-cs.86](https://doi.org/10.7717/peerj-cs.86)
