@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-06-16T20:54:06-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">File paths in statistical software</title><link href="https://aeadataeditor.github.io/posts/2021-04-09-paths" rel="alternate" type="text/html" title="File paths in statistical software" /><published>2021-04-09T00:00:00-04:00</published><updated>2021-04-09T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/paths</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-04-09-paths">&lt;p&gt;A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-06-17T13:43:59-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Software, code, and repositories</title><link href="https://aeadataeditor.github.io/posts/2021-06-17-software-citations" rel="alternate" type="text/html" title="Software, code, and repositories" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/software-citations</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-06-17-software-citations">&lt;p&gt;A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;replication-packages-and-version-control&quot;&gt;Replication packages and version control&lt;/h2&gt;
+
+&lt;p&gt;Fact: all replication packages contain code.&lt;/p&gt;
+
+&lt;p&gt;Note: sometimes, that’s an Excel file, but that’s still code.&lt;/p&gt;
+
+&lt;p&gt;But few seem to stem from version control repositories. The most common version control software these days is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;, though I’ve seen a few uses of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;svn&lt;/code&gt;. Both are popular because they usually come accompanied by online web services that allow authors to showcase their code, as well as conduct a few other key functions that I will get to.&lt;/p&gt;
+
+&lt;p&gt;By far the most popular as of 2021 is &lt;a href=&quot;https://github.com&quot;&gt;Github&lt;/a&gt; - in fact, this &lt;a href=&quot;https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-06-17-software-citations.md&quot;&gt;blog post&lt;/a&gt; and website are hosted on Github-provided resources. Others include &lt;a href=&quot;https://gitlab.com&quot;&gt;Gitlab&lt;/a&gt;, &lt;a href=&quot;https://bitbucket.org&quot;&gt;Bitbucket&lt;/a&gt;, and for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;svn&lt;/code&gt;, &lt;a href=&quot;https://sourceforge.net/&quot;&gt;SourceForge&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Version control allows for, well, version control. This is particularly relevant for replication packages, since code probably is evolving. Which version was used to generate the tables and figures in the paper is very important information.&lt;/p&gt;
+
+&lt;p&gt;While authors are able to “lock in” a version that was used when they submit to the AEA Data Editor (via &lt;a href=&quot;https://www.openicpsr.org/openicpsr/search/aea/studies&quot;&gt;AEA Data and Code Repository&lt;/a&gt;), ideally, that version is locked in &lt;strong&gt;prior&lt;/strong&gt; to submitting.&lt;/p&gt;
+
+&lt;h2 id=&quot;locking-in-versions&quot;&gt;Locking in versions&lt;/h2&gt;
+
+&lt;p&gt;If using version control, creating a “locked in” version that corresponds to a particular version of the paper is easy. It may be called different things (“releases” on Github and in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;svn&lt;/code&gt;, “tags” in native &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;), but it achieves the same function: It marks a particularly version of code.&lt;/p&gt;
+
+&lt;p&gt;That &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag&lt;/code&gt; can contain additional “metadata” - an “&lt;a href=&quot;https://git-scm.com/docs/git-tag&quot;&gt;annotated tag&lt;/a&gt;” or a “&lt;a href=&quot;https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository&quot;&gt;Github release&lt;/a&gt;” can be quite verbose. But in all cases, the key is to uniquely identify the version of the code that was used to do something, or that corresponds to something.&lt;/p&gt;
+
+&lt;p&gt;NOTE: strictly speaking, those &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tags&lt;/code&gt; are not necessary. Authors could simply point to a particular “commit hash”, e.g. “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/&amp;lt;user&amp;gt;/&amp;lt;project&amp;gt;/tree/&amp;lt;hash&amp;gt;&lt;/code&gt;” to uniquely point to a particular version as well (similarly on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;svn&lt;/code&gt;, pointing to revision numbers). But &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tags&lt;/code&gt; are a tad more human readable than &lt;a href=&quot;https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;archiving-versions&quot;&gt;Archiving Versions&lt;/h2&gt;
+
+&lt;p&gt;Once authors have identified a particular version of the code, there remains of course the issue that Github &amp;amp; Co. are not “trusted repositories”. So authors will still need to somehow archive that particular version.&lt;/p&gt;
+
+&lt;p&gt;One convenience of using features like “Github releases” or even tags on Github is that the interface provides a convenient link to download a ZIP or TAR file without all the extra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; information.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-release-screenshot-assets.png&quot; alt=&quot;Screenshot of download links on Github release&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have the ZIP or TAR, you can manually send this off to a trusted repository. That’s what most authors are or should be doing when submitting to the &lt;a href=&quot;https://www.openicpsr.org/openicpsr/search/aea/studies&quot;&gt;AEA Data and Code Repository&lt;/a&gt;, or for that matter for any journal’s supplementary materials archive.&lt;/p&gt;
+
+&lt;p&gt;However, that is tedious, and at least for Github, there is a different (automated) option: &lt;a href=&quot;https://guides.github.com/activities/citable-code/&quot;&gt;linking it to Zenodo&lt;/a&gt;. Authors should consult the (very easy) details in the link, but in a nutshell, this is what happens:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you set up the link. Takes a bit of work the first time, but then it’s done, forever.&lt;/li&gt;
+  &lt;li&gt;every time a release is made, the ZIP file is sent automatically to Zenodo, and creates an archive, with a DOI and a preservation guarantee.
+    &lt;ul&gt;
+      &lt;li&gt;The Zenodo deposit links back to the particular release/tag on Github&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;some cosmetic editing (to Zenodo metadata, to eye candy such as a DOI badge) can make it pretty, but are not needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;For an example see&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://github.com/social-science-data-editors/template_README/&quot;&gt;source code for template README on Github&lt;/a&gt;, including any &lt;a href=&quot;https://github.com/social-science-data-editors/template_README/releases&quot;&gt;releases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://social-science-data-editors.github.io/template_README/&quot;&gt;page generated from the source code on Github.io&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the “badge”: &lt;a href=&quot;https://doi.org/10.5281/zenodo.4319999&quot;&gt;&lt;img src=&quot;https://zenodo.org/badge/DOI/10.5281/zenodo.4319999.svg&quot; alt=&quot;DOI badge&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://doi.org/10.5281/zenodo.4319999&quot;&gt;archived version on Zenodo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/zenodo-readme-v1.png&quot; alt=&quot;template README on Zenodo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The version - in fact, any future version - is now properly archived at a trusted repository.&lt;/p&gt;
+
+&lt;h2 id=&quot;citing-software-versions&quot;&gt;Citing Software Versions&lt;/h2&gt;
+
+&lt;p&gt;Last but not least, but in particular when the code authors generated is of more general utility (a Stata or R package for a new econometric technique), &lt;strong&gt;citing the software&lt;/strong&gt; is a must (see &lt;a href=&quot;https://www.force11.org/software-citation-principles&quot;&gt;FORCE11 Software Citation Principles&lt;/a&gt;, &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;By creating archived versions, Zenodo, or any other trusted repository, provides a DOI that can then be cited:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Zenodo. https://doi.org/10.5281/zen0do.12345&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Naturally, authors could also cite the Github-hosted version, but only with the authority of a (transient, ephemerious) website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Github. Last accessed at https://github.com/smith-wesson/cdqfe/releases/tag/v0.2-alpha on June 17, 2025.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(2016) Software Citation Principles. &lt;em&gt;PeerJ Computer Science&lt;/em&gt; 2:e86.
+DOI: &lt;a href=&quot;https://doi.org/10.7717/peerj-cs.86&quot;&gt;10.7717/peerj-cs.86&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Software" /><category term="Code" /><summary type="html">A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.</summary></entry><entry><title type="html">File paths in statistical software</title><link href="https://aeadataeditor.github.io/posts/2021-04-09-paths" rel="alternate" type="text/html" title="File paths in statistical software" /><published>2021-04-09T00:00:00-04:00</published><updated>2021-04-09T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/paths</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-04-09-paths">&lt;p&gt;A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 

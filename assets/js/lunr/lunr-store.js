@@ -131,6 +131,12 @@ var store = [{
         "url": "/posts/2021-04-09-paths",
         "teaser": null
       },{
+        "title": "Software, code, and repositories",
+        "excerpt":"A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes. Replication packages and version control Fact: all replication packages contain code. Note: sometimes, that’s an Excel file, but that’s still code. But few seem to...","categories": [],
+        "tags": ["FAQ","Twitter","Software","Code"],
+        "url": "/posts/2021-06-17-software-citations",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

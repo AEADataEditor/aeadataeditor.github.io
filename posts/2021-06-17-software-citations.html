@@ -1,0 +1,704 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software, code, and repositories - Office of the AEA Data Editor</title>
+<meta name="description" content="A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Software, code, and repositories">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2021-06-17-software-citations">
+
+
+  <meta property="og:description" content="A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Software, code, and repositories">
+  <meta name="twitter:description" content="A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2021-06-17-software-citations">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-06-17T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2021-06-17-software-citations">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software, code, and repositories">
+    <meta itemprop="description" content="A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.">
+    <meta itemprop="datePublished" content="June 17, 2021">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Software, code, and repositories
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-06-17T00:00:00-04:00">June 17, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <div>
+          On this page:
+          <ul class="inline_toc" id="my_toc"><li><a href="#replication-packages-and-version-control">Replication packages and version control</a></li><li><a href="#locking-in-versions">Locking in versions</a></li><li><a href="#archiving-versions">Archiving Versions</a></li><li><a href="#example">Example</a></li><li><a href="#citing-software-versions">Citing Software Versions</a></li></ul>
+
+        </div>
+        <p>A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.</p>
+
+<!-- more -->
+
+<h2 id="replication-packages-and-version-control">Replication packages and version control</h2>
+
+<p>Fact: all replication packages contain code.</p>
+
+<p>Note: sometimes, that’s an Excel file, but that’s still code.</p>
+
+<p>But few seem to stem from version control repositories. The most common version control software these days is <code class="language-plaintext highlighter-rouge">git</code>, though I’ve seen a few uses of <code class="language-plaintext highlighter-rouge">svn</code>. Both are popular because they usually come accompanied by online web services that allow authors to showcase their code, as well as conduct a few other key functions that I will get to.</p>
+
+<p>By far the most popular as of 2021 is <a href="https://github.com">Github</a> - in fact, this <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-06-17-software-citations.md">blog post</a> and website are hosted on Github-provided resources. Others include <a href="https://gitlab.com">Gitlab</a>, <a href="https://bitbucket.org">Bitbucket</a>, and for <code class="language-plaintext highlighter-rouge">svn</code>, <a href="https://sourceforge.net/">SourceForge</a>.</p>
+
+<p>Version control allows for, well, version control. This is particularly relevant for replication packages, since code probably is evolving. Which version was used to generate the tables and figures in the paper is very important information.</p>
+
+<p>While authors are able to “lock in” a version that was used when they submit to the AEA Data Editor (via <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>), ideally, that version is locked in <strong>prior</strong> to submitting.</p>
+
+<h2 id="locking-in-versions">Locking in versions</h2>
+
+<p>If using version control, creating a “locked in” version that corresponds to a particular version of the paper is easy. It may be called different things (“releases” on Github and in <code class="language-plaintext highlighter-rouge">svn</code>, “tags” in native <code class="language-plaintext highlighter-rouge">git</code>), but it achieves the same function: It marks a particularly version of code.</p>
+
+<p>That <code class="language-plaintext highlighter-rouge">tag</code> can contain additional “metadata” - an “<a href="https://git-scm.com/docs/git-tag">annotated tag</a>” or a “<a href="https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository">Github release</a>” can be quite verbose. But in all cases, the key is to uniquely identify the version of the code that was used to do something, or that corresponds to something.</p>
+
+<p>NOTE: strictly speaking, those <code class="language-plaintext highlighter-rouge">tags</code> are not necessary. Authors could simply point to a particular “commit hash”, e.g. “<code class="language-plaintext highlighter-rouge">https://github.com/&lt;user&gt;/&lt;project&gt;/tree/&lt;hash&gt;</code>” to uniquely point to a particular version as well (similarly on <code class="language-plaintext highlighter-rouge">svn</code>, pointing to revision numbers). But <code class="language-plaintext highlighter-rouge">tags</code> are a tad more human readable than <a href="https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483"><code class="language-plaintext highlighter-rouge">https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483</code></a>.</p>
+
+<h2 id="archiving-versions">Archiving Versions</h2>
+
+<p>Once authors have identified a particular version of the code, there remains of course the issue that Github &amp; Co. are not “trusted repositories”. So authors will still need to somehow archive that particular version.</p>
+
+<p>One convenience of using features like “Github releases” or even tags on Github is that the interface provides a convenient link to download a ZIP or TAR file without all the extra <code class="language-plaintext highlighter-rouge">git</code> information.</p>
+
+<p><img src="/images/github-release-screenshot-assets.png" alt="Screenshot of download links on Github release" /></p>
+
+<p>Once you have the ZIP or TAR, you can manually send this off to a trusted repository. That’s what most authors are or should be doing when submitting to the <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>, or for that matter for any journal’s supplementary materials archive.</p>
+
+<p>However, that is tedious, and at least for Github, there is a different (automated) option: <a href="https://guides.github.com/activities/citable-code/">linking it to Zenodo</a>. Authors should consult the (very easy) details in the link, but in a nutshell, this is what happens:</p>
+
+<ul>
+  <li>you set up the link. Takes a bit of work the first time, but then it’s done, forever.</li>
+  <li>every time a release is made, the ZIP file is sent automatically to Zenodo, and creates an archive, with a DOI and a preservation guarantee.
+    <ul>
+      <li>The Zenodo deposit links back to the particular release/tag on Github</li>
+    </ul>
+  </li>
+  <li>some cosmetic editing (to Zenodo metadata, to eye candy such as a DOI badge) can make it pretty, but are not needed.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p>For an example see</p>
+
+<ul>
+  <li>the <a href="https://github.com/social-science-data-editors/template_README/">source code for template README on Github</a>, including any <a href="https://github.com/social-science-data-editors/template_README/releases">releases</a></li>
+  <li>the <a href="https://social-science-data-editors.github.io/template_README/">page generated from the source code on Github.io</a></li>
+  <li>the “badge”: <a href="https://doi.org/10.5281/zenodo.4319999"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4319999.svg" alt="DOI badge" /></a></li>
+  <li>the <a href="https://doi.org/10.5281/zenodo.4319999">archived version on Zenodo</a></li>
+</ul>
+
+<p><img src="/images/zenodo-readme-v1.png" alt="template README on Zenodo" /></p>
+
+<p>The version - in fact, any future version - is now properly archived at a trusted repository.</p>
+
+<h2 id="citing-software-versions">Citing Software Versions</h2>
+
+<p>Last but not least, but in particular when the code authors generated is of more general utility (a Stata or R package for a new econometric technique), <strong>citing the software</strong> is a must (see <a href="https://www.force11.org/software-citation-principles">FORCE11 Software Citation Principles</a>, <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>By creating archived versions, Zenodo, or any other trusted repository, provides a DOI that can then be cited:</p>
+
+<blockquote>
+  <p>Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Zenodo. https://doi.org/10.5281/zen0do.12345</p>
+</blockquote>
+
+<p>Naturally, authors could also cite the Github-hosted version, but only with the authority of a (transient, ephemerious) website:</p>
+
+<blockquote>
+  <p>Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Github. Last accessed at https://github.com/smith-wesson/cdqfe/releases/tag/v0.2-alpha on June 17, 2025.</p>
+</blockquote>
+
+<p>(2016) Software Citation Principles. <em>PeerJ Computer Science</em> 2:e86.
+DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#code" class="page__taxonomy-item" rel="tag">Code</a><span class="sep">, </span>
+    
+      <a href="/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+    
+      <a href="/tags/#software" class="page__taxonomy-item" rel="tag">Software</a><span class="sep">, </span>
+    
+      <a href="/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
+    
+    </span>
+  </p>
+
+
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Software%2C+code%2C+and+repositories%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-06-17-software-citations" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-06-17-software-citations" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/2021-04-09-paths" class="pagination--pager" title="File paths in statistical software
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-04-09-paths" rel="permalink">File paths in statistical software
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-03-31-what-data" rel="permalink">What data to provide
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">What do we mean by “data”?
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-02-10-reproducible-gis" rel="permalink">Reproducible GIS
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-01-31-day-in-the-life" rel="permalink">A Day in the Life of a Data Editor
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-06-17-software-citations.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+                <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 American Economic Association. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
