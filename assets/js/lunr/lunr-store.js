@@ -11,12 +11,6 @@ var store = [{
         "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
         "teaser": null
       },{
-        "title": "Frequently Asked Questions",
-        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -41,10 +35,10 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
-        "title": "FAQ",
-        "excerpt":" ","categories": [],
+        "title": "Frequently Asked Questions",
+        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/faq",
+        "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
         "title": "Step by step guidance",
