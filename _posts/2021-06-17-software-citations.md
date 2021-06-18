@@ -73,7 +73,7 @@ By creating archived versions, Zenodo, or any other trusted repository, provides
 
 > Smith, A. and J. Wesson. 2021. "15-fold quantum fixed effects, R package." v0.2-alpha. Zenodo. https://doi.org/10.5281/zen0do.12345
 
-Naturally, authors could also cite the Github-hosted version, but only with the authority of a (transient, ephemerious) website:
+Naturally, authors could also cite the Github-hosted version, but only with the authority of a (transient, ephemerous) website:
 
 > Smith, A. and J. Wesson. 2021. "15-fold quantum fixed effects, R package." v0.2-alpha. Github. Last accessed at https://github.com/smith-wesson/cdqfe/releases/tag/v0.2-alpha on June 17, 2025.
 
