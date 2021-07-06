@@ -85,6 +85,41 @@ The replication package should reproduce the tables and figures, as well as any 
 
 While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is **not acceptable** to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper. 
 
+#### Structure in the presence of more than 1,000 files
+
+As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code should be unzipped, though we still insist on the "smallest possible configuration".
+
+In most cases, it is a particular directory that is the primary culprit. Say you have
+
+`Structure-pre:`
+```
+/code: 20 files
+/data/
+   src1/: 25 files
+   src2/: 101 files
+   src3/: 3,000 files
+```
+
+then the ideal structure, taking into account the 1,000 file limit, would be:
+
+`Structure-post:`
+```
+/code: 20 files
+/data/
+   src1/: 25 files
+   src2/: 101 files
+   src3.zip: = 1 file, containing 3,000 files
+```
+(src3/ and its 3,000 files have been removed!)
+
+Your README should provide instructions to the replicators how to recover the fully unzipped structure (there are cross-platform differences in unzipping, so be precise about the final structure, rather than the method of getting there).
+
+Alternatively, the code can handle the unzipping - optional, but more robust.
+
+Once you've adjusted that, zip up the whole structure (so a ZIP file that has inside it another zip file, plus the `/code`, `/data/src1/`, and `/data/src2/` directories), and "Import from ZIP" when uploading to ICPSR.
+
+See also [a similar entry to our FAQ](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-am-trying-to-upload-to-the-repository-but-my-replication-package-has-more-than-1000-files).
+
 #### Structure in the presence of confidential (unpublished) data
 
 When the replication package relies on confidential data that cannot be shared, authors will have to
