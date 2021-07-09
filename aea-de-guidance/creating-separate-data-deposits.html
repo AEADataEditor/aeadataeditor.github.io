@@ -1,0 +1,534 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Creating separate linked data archives - Office of the AEA Data Editor</title>
+<meta name="description" content="Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.  Searching and finding data  Visibility comes through findability, and this is what trusted repositories excel at. Whether you are using openICPSR, Dataverse, Zenodo, or any other one of many trusted repositories, they share a number of key characteristics     be trustworthy   be accessible to others, at least in terms of the metadata   be persistent, for instance through a continuity plan, but also to disallow deletion of objects   guarantee some level of data integrity   have version control   be properly indexed and findable   The latter point is reflected in being able to find deposits made at deposits through a variety of mechanisms, such as on-site search (e.g. ICPSR search), federated search (e.g. Data-PASS, DOI search (e.g., DataCite Search),or search engines (e.g. Google Dataset Search). By assigning DOIs, they also contribute to citation statistics.  Permission  Of course, you should only do this if the original data provider’s license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!  What should you do  Suppose that, as part of your research, you have created a “data asset” - something that has independent value, can be re-used outside of the context of your current article. This could be     a broad survey, which your current article only partially describes and uses   a clean, usable version of otherwise complex, costly, or messy data   a usable version of historically available, but not digitized data   Creating and using a separate data deposit     Create a separate (new) deposit at one of the trusted repositories. This is separate from your article’s replication package. We’ll call this the “DATA deposit.”            The title would be something meaningful like “Historical FERC Form 714 submissions”       Authors should be you, and possibly the original agency (the latter enhances findability)       Provide the raw data files (if not archived elsewhere - but that’s the point, most often)       Create a simple README that summarizes the processing - does not need to be long, but should be complete.       Choose a license, which might include a requirement to cite your paper which first uses these data. For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university’s counsel if in doubt.       Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the “right thing”.       Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables.           Then publish:            This provides you with a DOI, and a citation.       Your data archive is now permanent!           Back in your current paper and replication package, do NOT provide any of the files you just uploaded to the “DATA deposit.”  Rather, cite the deposit (in paper, in README), and name the files that a user should use (i.e., “all the files in “cleaned/”).   Examples:     https://doi.org/10.3886/E117464V1 - raw data + cleaned data   https://doi.org/10.3886/E100274V1 - derived data not directly connected to a paper   https://doi.org/10.3886/E100616V1 - nearly unmodified raw data   Additional thoughts  Project websites and archives  Some researchers keep separate websites for their long-running projects, including providing data on those websites. While the stylistic freedom of a free-standing website is certainly important, we suggest that the data provided via those websites (e.g., www.fabdata.org/data/superdata.zip), be archived in a trusted repository, and that the primary download link point to those repositories.     Maintain as usual your project website “www.fabdata.org”   When producing data, proceed as outlined above, depositing in a trusted repository, and obtaining a DOI “10.1234/5678.abc”   The links on “www.fabdata.org/data” point to the DOI at the repository, and provide appropriate citations.   Example:     Startup Cartography (Guzman, Stern, and others) stores data at https://doi.org/10.7910/DVN/BMRPVH   In addition, you might want to save the website to the Internet archive to make a permanent copy of the front end web pages.  Collections and Communities  Some trusted repositories offer the option to make what are called “collections”, “communities”, “dataverses”, or similar. This can be used for single projects, entire institutes, or journals     Harvard Dataverse: “Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.”            Example: Bracero data stores both raw data and cleaned data within a “dataverse”           Zenodo Communities: “Communities created and curated by Zenodo users”            Example: Labor Dynamics Institute collects presentations and data related to their activities on Zenodo       Example: Economic Journal Community stores replication packages for articles published in the Economic Journal           openICPSR offers branded repositories. However, these are not free.            Example: AEA Data and Code Repository hosts the AEA’s replication packages       Example: DataLumos preserves “valuable government data resources”           Curation vs. Preservation  Most of the free or low-cost resources mentioned here provide preservation of the deposited materials, but are essentially self-serve websites. No professional archivist or curator will inspect data, or work to improve the data quality. However, in some cases, it may make sense to work with a professional archivist to further improve the quality of the archived materials.  Example:     As part of the work for her AER article “Cities in Bad Shape: Urban Geometry in India,” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as “Historical Maps of India and Pakistan, 1955-1963” (ICPSR 37937, https://doi.org/10.3886/ICPSR37937.v1). The core replication files are independent of this archive, and can be found at https://doi.org/10.3886/E116003V1.   A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author’s institution in ICPSR.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Creating separate linked data archives">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/creating-separate-data-deposits">
+
+
+  <meta property="og:description" content="Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.  Searching and finding data  Visibility comes through findability, and this is what trusted repositories excel at. Whether you are using openICPSR, Dataverse, Zenodo, or any other one of many trusted repositories, they share a number of key characteristics     be trustworthy   be accessible to others, at least in terms of the metadata   be persistent, for instance through a continuity plan, but also to disallow deletion of objects   guarantee some level of data integrity   have version control   be properly indexed and findable   The latter point is reflected in being able to find deposits made at deposits through a variety of mechanisms, such as on-site search (e.g. ICPSR search), federated search (e.g. Data-PASS, DOI search (e.g., DataCite Search),or search engines (e.g. Google Dataset Search). By assigning DOIs, they also contribute to citation statistics.  Permission  Of course, you should only do this if the original data provider’s license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!  What should you do  Suppose that, as part of your research, you have created a “data asset” - something that has independent value, can be re-used outside of the context of your current article. This could be     a broad survey, which your current article only partially describes and uses   a clean, usable version of otherwise complex, costly, or messy data   a usable version of historically available, but not digitized data   Creating and using a separate data deposit     Create a separate (new) deposit at one of the trusted repositories. This is separate from your article’s replication package. We’ll call this the “DATA deposit.”            The title would be something meaningful like “Historical FERC Form 714 submissions”       Authors should be you, and possibly the original agency (the latter enhances findability)       Provide the raw data files (if not archived elsewhere - but that’s the point, most often)       Create a simple README that summarizes the processing - does not need to be long, but should be complete.       Choose a license, which might include a requirement to cite your paper which first uses these data. For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university’s counsel if in doubt.       Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the “right thing”.       Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables.           Then publish:            This provides you with a DOI, and a citation.       Your data archive is now permanent!           Back in your current paper and replication package, do NOT provide any of the files you just uploaded to the “DATA deposit.”  Rather, cite the deposit (in paper, in README), and name the files that a user should use (i.e., “all the files in “cleaned/”).   Examples:     https://doi.org/10.3886/E117464V1 - raw data + cleaned data   https://doi.org/10.3886/E100274V1 - derived data not directly connected to a paper   https://doi.org/10.3886/E100616V1 - nearly unmodified raw data   Additional thoughts  Project websites and archives  Some researchers keep separate websites for their long-running projects, including providing data on those websites. While the stylistic freedom of a free-standing website is certainly important, we suggest that the data provided via those websites (e.g., www.fabdata.org/data/superdata.zip), be archived in a trusted repository, and that the primary download link point to those repositories.     Maintain as usual your project website “www.fabdata.org”   When producing data, proceed as outlined above, depositing in a trusted repository, and obtaining a DOI “10.1234/5678.abc”   The links on “www.fabdata.org/data” point to the DOI at the repository, and provide appropriate citations.   Example:     Startup Cartography (Guzman, Stern, and others) stores data at https://doi.org/10.7910/DVN/BMRPVH   In addition, you might want to save the website to the Internet archive to make a permanent copy of the front end web pages.  Collections and Communities  Some trusted repositories offer the option to make what are called “collections”, “communities”, “dataverses”, or similar. This can be used for single projects, entire institutes, or journals     Harvard Dataverse: “Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.”            Example: Bracero data stores both raw data and cleaned data within a “dataverse”           Zenodo Communities: “Communities created and curated by Zenodo users”            Example: Labor Dynamics Institute collects presentations and data related to their activities on Zenodo       Example: Economic Journal Community stores replication packages for articles published in the Economic Journal           openICPSR offers branded repositories. However, these are not free.            Example: AEA Data and Code Repository hosts the AEA’s replication packages       Example: DataLumos preserves “valuable government data resources”           Curation vs. Preservation  Most of the free or low-cost resources mentioned here provide preservation of the deposited materials, but are essentially self-serve websites. No professional archivist or curator will inspect data, or work to improve the data quality. However, in some cases, it may make sense to work with a professional archivist to further improve the quality of the archived materials.  Example:     As part of the work for her AER article “Cities in Bad Shape: Urban Geometry in India,” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as “Historical Maps of India and Pakistan, 1955-1963” (ICPSR 37937, https://doi.org/10.3886/ICPSR37937.v1). The core replication files are independent of this archive, and can be found at https://doi.org/10.3886/E116003V1.   A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author’s institution in ICPSR.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Creating separate linked data archives">
+  <meta name="twitter:description" content="Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.  Searching and finding data  Visibility comes through findability, and this is what trusted repositories excel at. Whether you are using openICPSR, Dataverse, Zenodo, or any other one of many trusted repositories, they share a number of key characteristics     be trustworthy   be accessible to others, at least in terms of the metadata   be persistent, for instance through a continuity plan, but also to disallow deletion of objects   guarantee some level of data integrity   have version control   be properly indexed and findable   The latter point is reflected in being able to find deposits made at deposits through a variety of mechanisms, such as on-site search (e.g. ICPSR search), federated search (e.g. Data-PASS, DOI search (e.g., DataCite Search),or search engines (e.g. Google Dataset Search). By assigning DOIs, they also contribute to citation statistics.  Permission  Of course, you should only do this if the original data provider’s license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!  What should you do  Suppose that, as part of your research, you have created a “data asset” - something that has independent value, can be re-used outside of the context of your current article. This could be     a broad survey, which your current article only partially describes and uses   a clean, usable version of otherwise complex, costly, or messy data   a usable version of historically available, but not digitized data   Creating and using a separate data deposit     Create a separate (new) deposit at one of the trusted repositories. This is separate from your article’s replication package. We’ll call this the “DATA deposit.”            The title would be something meaningful like “Historical FERC Form 714 submissions”       Authors should be you, and possibly the original agency (the latter enhances findability)       Provide the raw data files (if not archived elsewhere - but that’s the point, most often)       Create a simple README that summarizes the processing - does not need to be long, but should be complete.       Choose a license, which might include a requirement to cite your paper which first uses these data. For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university’s counsel if in doubt.       Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the “right thing”.       Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables.           Then publish:            This provides you with a DOI, and a citation.       Your data archive is now permanent!           Back in your current paper and replication package, do NOT provide any of the files you just uploaded to the “DATA deposit.”  Rather, cite the deposit (in paper, in README), and name the files that a user should use (i.e., “all the files in “cleaned/”).   Examples:     https://doi.org/10.3886/E117464V1 - raw data + cleaned data   https://doi.org/10.3886/E100274V1 - derived data not directly connected to a paper   https://doi.org/10.3886/E100616V1 - nearly unmodified raw data   Additional thoughts  Project websites and archives  Some researchers keep separate websites for their long-running projects, including providing data on those websites. While the stylistic freedom of a free-standing website is certainly important, we suggest that the data provided via those websites (e.g., www.fabdata.org/data/superdata.zip), be archived in a trusted repository, and that the primary download link point to those repositories.     Maintain as usual your project website “www.fabdata.org”   When producing data, proceed as outlined above, depositing in a trusted repository, and obtaining a DOI “10.1234/5678.abc”   The links on “www.fabdata.org/data” point to the DOI at the repository, and provide appropriate citations.   Example:     Startup Cartography (Guzman, Stern, and others) stores data at https://doi.org/10.7910/DVN/BMRPVH   In addition, you might want to save the website to the Internet archive to make a permanent copy of the front end web pages.  Collections and Communities  Some trusted repositories offer the option to make what are called “collections”, “communities”, “dataverses”, or similar. This can be used for single projects, entire institutes, or journals     Harvard Dataverse: “Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.”            Example: Bracero data stores both raw data and cleaned data within a “dataverse”           Zenodo Communities: “Communities created and curated by Zenodo users”            Example: Labor Dynamics Institute collects presentations and data related to their activities on Zenodo       Example: Economic Journal Community stores replication packages for articles published in the Economic Journal           openICPSR offers branded repositories. However, these are not free.            Example: AEA Data and Code Repository hosts the AEA’s replication packages       Example: DataLumos preserves “valuable government data resources”           Curation vs. Preservation  Most of the free or low-cost resources mentioned here provide preservation of the deposited materials, but are essentially self-serve websites. No professional archivist or curator will inspect data, or work to improve the data quality. However, in some cases, it may make sense to work with a professional archivist to further improve the quality of the archived materials.  Example:     As part of the work for her AER article “Cities in Bad Shape: Urban Geometry in India,” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as “Historical Maps of India and Pakistan, 1955-1963” (ICPSR 37937, https://doi.org/10.3886/ICPSR37937.v1). The core replication files are independent of this archive, and can be found at https://doi.org/10.3886/E116003V1.   A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author’s institution in ICPSR.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/creating-separate-data-deposits">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-07-08T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/creating-separate-data-deposits">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Creating separate linked data archives">
+    <meta itemprop="description" content="Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.Searching and finding dataVisibility comes through findability, and this is what trusted repositories excel at. Whether you are using openICPSR, Dataverse, Zenodo, or any other one of many trusted repositories, they share a number of key characteristics  be trustworthy  be accessible to others, at least in terms of the metadata  be persistent, for instance through a continuity plan, but also to disallow deletion of objects  guarantee some level of data integrity  have version control  be properly indexed and findableThe latter point is reflected in being able to find deposits made at deposits through a variety of mechanisms, such as on-site search (e.g. ICPSR search), federated search (e.g. Data-PASS, DOI search (e.g., DataCite Search),or search engines (e.g. Google Dataset Search). By assigning DOIs, they also contribute to citation statistics.PermissionOf course, you should only do this if the original data provider’s license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!What should you doSuppose that, as part of your research, you have created a “data asset” - something that has independent value, can be re-used outside of the context of your current article. This could be  a broad survey, which your current article only partially describes and uses  a clean, usable version of otherwise complex, costly, or messy data  a usable version of historically available, but not digitized dataCreating and using a separate data deposit  Create a separate (new) deposit at one of the trusted repositories. This is separate from your article’s replication package. We’ll call this the “DATA deposit.”          The title would be something meaningful like “Historical FERC Form 714 submissions”      Authors should be you, and possibly the original agency (the latter enhances findability)      Provide the raw data files (if not archived elsewhere - but that’s the point, most often)      Create a simple README that summarizes the processing - does not need to be long, but should be complete.      Choose a license, which might include a requirement to cite your paper which first uses these data. For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university’s counsel if in doubt.      Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the “right thing”.      Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables.        Then publish:          This provides you with a DOI, and a citation.      Your data archive is now permanent!        Back in your current paper and replication package, do NOT provide any of the files you just uploaded to the “DATA deposit.”  Rather, cite the deposit (in paper, in README), and name the files that a user should use (i.e., “all the files in “cleaned/”).Examples:  https://doi.org/10.3886/E117464V1 - raw data + cleaned data  https://doi.org/10.3886/E100274V1 - derived data not directly connected to a paper  https://doi.org/10.3886/E100616V1 - nearly unmodified raw dataAdditional thoughtsProject websites and archivesSome researchers keep separate websites for their long-running projects, including providing data on those websites. While the stylistic freedom of a free-standing website is certainly important, we suggest that the data provided via those websites (e.g., www.fabdata.org/data/superdata.zip), be archived in a trusted repository, and that the primary download link point to those repositories.  Maintain as usual your project website “www.fabdata.org”  When producing data, proceed as outlined above, depositing in a trusted repository, and obtaining a DOI “10.1234/5678.abc”  The links on “www.fabdata.org/data” point to the DOI at the repository, and provide appropriate citations.Example:  Startup Cartography (Guzman, Stern, and others) stores data at https://doi.org/10.7910/DVN/BMRPVHIn addition, you might want to save the website to the Internet archive to make a permanent copy of the front end web pages.Collections and CommunitiesSome trusted repositories offer the option to make what are called “collections”, “communities”, “dataverses”, or similar. This can be used for single projects, entire institutes, or journals  Harvard Dataverse: “Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.”          Example: Bracero data stores both raw data and cleaned data within a “dataverse”        Zenodo Communities: “Communities created and curated by Zenodo users”          Example: Labor Dynamics Institute collects presentations and data related to their activities on Zenodo      Example: Economic Journal Community stores replication packages for articles published in the Economic Journal        openICPSR offers branded repositories. However, these are not free.          Example: AEA Data and Code Repository hosts the AEA’s replication packages      Example: DataLumos preserves “valuable government data resources”      Curation vs. PreservationMost of the free or low-cost resources mentioned here provide preservation of the deposited materials, but are essentially self-serve websites. No professional archivist or curator will inspect data, or work to improve the data quality. However, in some cases, it may make sense to work with a professional archivist to further improve the quality of the archived materials.Example:  As part of the work for her AER article “Cities in Bad Shape: Urban Geometry in India,” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as “Historical Maps of India and Pakistan, 1955-1963” (ICPSR 37937, https://doi.org/10.3886/ICPSR37937.v1). The core replication files are independent of this archive, and can be found at https://doi.org/10.3886/E116003V1.A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author’s institution in ICPSR.">
+    <meta itemprop="datePublished" content="2021-07-08T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Creating separate linked data archives
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-07-08T00:00:00-04:00">July 08, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#searching-and-finding-data">Searching and finding data</a></li><li><a href="#permission">Permission</a></li><li><a href="#what-should-you-do">What should you do</a></li><li><a href="#creating-and-using-a-separate-data-deposit">Creating and using a separate data deposit</a></li><li><a href="#additional-thoughts">Additional thoughts</a><ul><li><a href="#project-websites-and-archives">Project websites and archives</a></li><li><a href="#collections-and-communities">Collections and Communities</a></li><li><a href="#curation-vs-preservation">Curation vs. Preservation</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+      
+        <p>Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.</p>
+
+<h2 id="searching-and-finding-data">Searching and finding data</h2>
+
+<p>Visibility comes through findability, and this is what trusted repositories excel at. Whether you are using <a href="https://www.openicpsr.org/openicpsr/">openICPSR</a>, <a href="https://dataverse.harvard.edu/">Dataverse</a>, <a href="https://zenodo.org/">Zenodo</a>, or any other one of many <a href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories">trusted repositories</a>, they share a number of key characteristics</p>
+
+<ul>
+  <li>be trustworthy</li>
+  <li>be accessible to others, at least in terms of the metadata</li>
+  <li>be persistent, for instance through a continuity plan, but also to disallow deletion of objects</li>
+  <li>guarantee some level of data integrity</li>
+  <li>have version control</li>
+  <li>be properly indexed and findable</li>
+</ul>
+
+<p>The latter point is reflected in being able to find deposits made at deposits through a variety of mechanisms, such as on-site search (e.g. <a href="https://www.icpsr.umich.edu/web/pages/">ICPSR search</a>), federated search (e.g. <a href="http://www.data-pass.org/call.html">Data-PASS</a>, DOI search (e.g., <a href="https://search.datacite.org/">DataCite Search</a>),or search engines (e.g. <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>). By assigning DOIs, they also contribute to citation statistics.</p>
+
+<h2 id="permission">Permission</h2>
+
+<p>Of course, you should only do this if the original data provider’s license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!</p>
+
+<h2 id="what-should-you-do">What should you do</h2>
+
+<p>Suppose that, as part of your research, you have created a “data asset” - something that has independent value, can be re-used outside of the context of your current article. This could be</p>
+
+<ul>
+  <li>a broad survey, which your current article only partially describes and uses</li>
+  <li>a clean, usable version of otherwise complex, costly, or messy data</li>
+  <li>a usable version of historically available, but not digitized data</li>
+</ul>
+
+<h2 id="creating-and-using-a-separate-data-deposit">Creating and using a separate data deposit</h2>
+
+<ol>
+  <li>Create a separate (new) deposit at one of the trusted repositories. This is separate from your article’s replication package. We’ll call this the “DATA deposit.”
+    <ul>
+      <li>The title would be something meaningful like “Historical FERC Form 714 submissions”</li>
+      <li>Authors should be you, and possibly the original agency (the latter enhances findability)</li>
+      <li>Provide the raw data files (if not archived elsewhere - but that’s the point, most often)</li>
+      <li>Create a simple README that summarizes the processing - does not need to be long, but should be complete.</li>
+      <li>Choose a license, which might include a requirement to cite your paper which first uses these data. For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university’s counsel if in doubt.</li>
+      <li>Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the “right thing”.</li>
+      <li>Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables.</li>
+    </ul>
+  </li>
+  <li>Then publish:
+    <ul>
+      <li>This provides you with a DOI, and a citation.</li>
+      <li>Your data archive is now permanent!</li>
+    </ul>
+  </li>
+  <li>Back in your current paper and replication package, do NOT provide any of the files you just uploaded to the “DATA deposit.”  Rather, cite the deposit (in paper, in README), and name the files that a user should use (i.e., “all the files in “cleaned/”).</li>
+</ol>
+
+<p>Examples:</p>
+
+<ul>
+  <li><a href="https://doi.org/10.3886/E117464V1">https://doi.org/10.3886/E117464V1</a> - raw data + cleaned data</li>
+  <li><a href="https://doi.org/10.3886/E100274V1">https://doi.org/10.3886/E100274V1</a> - derived data not directly connected to a paper</li>
+  <li><a href="https://doi.org/10.3886/E100616V1">https://doi.org/10.3886/E100616V1</a> - nearly unmodified raw data</li>
+</ul>
+
+<h2 id="additional-thoughts">Additional thoughts</h2>
+
+<h3 id="project-websites-and-archives">Project websites and archives</h3>
+
+<p>Some researchers keep separate websites for their long-running projects, including providing data on those websites. While the stylistic freedom of a free-standing website is certainly important, we suggest that the data provided via those websites (e.g., <code class="language-plaintext highlighter-rouge">www.fabdata.org/data/superdata.zip</code>), be archived in a trusted repository, and that the primary download link point to those repositories.</p>
+
+<ul>
+  <li>Maintain as usual your project website “www.fabdata.org”</li>
+  <li>When producing data, proceed as outlined above, depositing in a trusted repository, and obtaining a DOI “10.1234/5678.abc”</li>
+  <li>The links on “www.fabdata.org/data” point to the DOI at the repository, and provide appropriate citations.</li>
+</ul>
+
+<p>Example:</p>
+
+<ul>
+  <li><a href="https://www.startupcartography.com/">Startup Cartography</a> (Guzman, Stern, and others) stores data at <a href="https://doi.org/10.7910/DVN/BMRPVH">https://doi.org/10.7910/DVN/BMRPVH</a></li>
+</ul>
+
+<p>In addition, you might want to save the website to the <a href="archive.org">Internet archive</a> to make a permanent copy of the front end web pages.</p>
+
+<h3 id="collections-and-communities">Collections and Communities</h3>
+
+<p>Some trusted repositories offer the option to make what are called “collections”, “communities”, “dataverses”, or similar. This can be used for single projects, entire institutes, or journals</p>
+
+<ul>
+  <li><a href="https://dataverse.harvard.edu">Harvard Dataverse</a>: “<em>Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.</em>”
+    <ul>
+      <li>Example: <a href="https://dataverse.harvard.edu/dataverse/bracero">Bracero data</a> stores both raw data and cleaned data within a “dataverse”</li>
+    </ul>
+  </li>
+  <li><a href="https://zenodo.org/communities">Zenodo Communities</a>: “Communities created and curated by Zenodo users”
+    <ul>
+      <li>Example: <a href="https://zenodo.org/communities/labordynamicsinstitute/">Labor Dynamics Institute</a> collects presentations and data related to their activities on Zenodo</li>
+      <li>Example: <a href="https://zenodo.org/communities/ej-replication-repository">Economic Journal Community</a> stores replication packages for articles published in the Economic Journal</li>
+    </ul>
+  </li>
+  <li><a href="https://www.openicpsr.org/openicpsr/repository/">openICPSR</a> offers branded repositories. However, these are not free.
+    <ul>
+      <li>Example: <a href="https://www.openicpsr.org/openicpsr/aea">AEA Data and Code Repository</a> hosts the AEA’s replication packages</li>
+      <li>Example: <a href="https://www.datalumos.org/datalumos/">DataLumos</a> preserves “valuable government data resources”</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="curation-vs-preservation">Curation vs. Preservation</h3>
+
+<p>Most of the free or low-cost resources mentioned here provide preservation of the deposited materials, but are essentially self-serve websites. No professional archivist or curator will inspect data, or work to improve the data quality. However, in some cases, it may make sense to work with a professional archivist to further improve the quality of the archived materials.</p>
+
+<p>Example:</p>
+
+<ul>
+  <li>As part of the work for her AER article “<a href="https://doi.org/10.1257/aer.20171673">Cities in Bad Shape: Urban Geometry in India</a>,” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as “Historical Maps of India and Pakistan, 1955-1963” (ICPSR 37937, <a href="https://doi.org/10.3886/ICPSR37937.v1">https://doi.org/10.3886/ICPSR37937.v1</a>). The core replication files are independent of this archive, and can be found at <a href="https://doi.org/10.3886/E116003V1">https://doi.org/10.3886/E116003V1</a>.</li>
+</ul>
+
+<p>A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author’s institution in ICPSR.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-07-08T00:00:00-04:00">July 8, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Creating+separate+linked+data+archives%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fcreating-separate-data-deposits" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fcreating-separate-data-deposits" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/creating-separate-data-deposits.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+                <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 American Economic Association. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

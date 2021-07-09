@@ -71,6 +71,12 @@ var store = [{
         "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
       },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Searching and finding data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposits",
+        "teaser": null
+      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],
