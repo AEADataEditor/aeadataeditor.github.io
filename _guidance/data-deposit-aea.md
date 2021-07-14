@@ -136,7 +136,7 @@ Upload files in the way you expect the files to be organized in order to run the
 
 Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
 
-> Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
+> Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
 
 
 #### Tips
