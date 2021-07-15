@@ -17,6 +17,10 @@ See the [Social Science Data Editors' Licensing Guidance](https://social-science
 
 For the purpose of replicability, the AEA will insist on an open license that allows for replication by researchers unconnected to the original parties, to the extent allowed by other agreements and the law.
 
+### Limits to openness
+
+The AEA also understands that the most liberal licenses may not always be compatible with ethical or legal requirements for parts of the data. To the extent possible, authors are required to explore options that do not simply withhold such data. It is possible to impose restrictions on other users of the data that still permit reproducibility or even broader re-use of the data, without compromising ethical considerations or legal requirements. Contact the your local data librarian, your IRB or ethics board, or the [AEA Data Editor](dataeditor@aeapubs.org), to explore such options.
+
 ### Data-only repositories
 
 We suggest the [![License: CC BY 4.0](https://img.shields.io/badge/License%20-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/) [Creative Commons Attribution 4.0 International Public License](http://creativecommons.org/licenses/by/4.0/) or the more liberal
