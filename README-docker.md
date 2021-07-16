@@ -1,6 +1,6 @@
 From https://www.cross-validated.com/Personal-website-with-Minimal-Mistakes-Jekyll-Theme-HOWTO-Part-I/
 
-    docker build -t ruby-environment .
+    docker build -t ruby-environment . -f Dockerfile.init
 
 then
 
@@ -8,7 +8,7 @@ then
 
 then build a container specifically for the website:
 
-    docker build -t aeaweb .
+    docker build -t aeaweb . -f Dockerfile.step2
     docker run --volume="$PWD:/usr/src/app" -p 4000:4000 -it aeaweb
 
 To enable Github variables,
