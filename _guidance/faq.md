@@ -218,10 +218,18 @@ We should note that these folders do not show up in the public view of the repos
 
 ### We used custom software. How do we describe/provide access to that?
 
-This case might arise if authors ran an experiment or a novel type of survey, using software specifically created for the task. Our [policy](https://www.aeaweb.org/journals/data/data-code-policy) does require "information about [...] details of the computations sufficient to permit replication," and requires that "programs" be archived at the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea). Furthermore, "replication materials shall also include [...] (g) computer code for experiment or survey collection mechanisms." However, we do *not* require that software, as opposed to code and programs that configure and instruct the software, be uploaded. Consider that much of economics research is conducted using proprietary software - Stata, Matlab, etc. 
+This case might arise if authors ran an experiment or a novel type of survey, using software specifically created for the task. Our [policy](https://www.aeaweb.org/journals/data/data-code-policy) does require 
 
-> - Software: a "collection of instructions and data that tell a computer how to work" [1](https://en.wikipedia.org/wiki/Software), here best approximated by  "[application software](https://en.wikipedia.org/wiki/Application_software)", "a computer program designed to carry out a specific task other than one relating to the operation of the computer itself." Stata, Matlab, Qualtrics, zTree are software for the purpose of the policy, as are compilers such as Intel or GNU Fortran. 
-> - *Code* or *programs* here refers to instructions to the application software to produce a specific output - instructions that "allow end-users – people who are not professional software developers – to program computers." [2](https://en.wikipedia.org/wiki/End-user_development). Stata code, Qualtrics configuration files, and to some extent Fortran source code are typically considered to be "code."
+> "information about [...] details of the computations sufficient to permit replication," 
+
+and requires that "programs" be archived at the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea). Furthermore, 
+
+> "replication materials shall also include [...] (g) computer code for experiment or survey collection mechanisms." 
+
+However, we do *not* require that software, as opposed to code and programs that configure and instruct the software, be uploaded. Consider that much of economics research is conducted using proprietary software - Stata, Matlab, etc. 
+
+> - Software: a "collection of instructions and data that tell a computer how to work" [[1](https://en.wikipedia.org/wiki/Software)], here best approximated by  "[application software](https://en.wikipedia.org/wiki/Application_software)", "a computer program designed to carry out a specific task other than one relating to the operation of the computer itself." Stata, Matlab, Qualtrics, zTree are software for the purpose of the policy, as are compilers such as Intel or GNU Fortran. 
+> - *Code* or *programs* here refers to instructions to the application software to produce a specific output - instructions that "allow end-users – people who are not professional software developers – to program computers." [[2](https://en.wikipedia.org/wiki/End-user_development)]. Stata code, Qualtrics configuration files, and to some extent Fortran source code are typically considered to be "code."
 
 Our policy requires that the software be available for use by others - possibly paying a fee - and that any configuration parameters ("code") be available. For experiments, this might mean providing [zTree](https://www.ztree.uzh.ch/) code, but not the software itself (which is subject to a license agreement); for surveys, this might mean providing [Qualtrics](https://www.qualtrics.com/) configurations, but not access to a Qualtrics subscription. We do not typically require information about how to purchase or download such frequently used, named software. In most cases, the software licenses prohibit redistribution, but even in the case of open-source software (R, Julia, Python, etc.), we do not require that authors upload the executable or source code.
 
