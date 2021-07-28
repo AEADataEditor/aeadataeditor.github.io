@@ -1,10 +1,4 @@
 var store = [{
-        "title": "A discussion about various things",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
-        "teaser": null
-      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -15,6 +9,12 @@ var store = [{
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/licensing-guidance",
+        "teaser": null
+      },{
+        "title": "A discussion about various things",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -47,12 +47,6 @@ var store = [{
         "url": "/aea-de-guidance/",
         "teaser": null
       },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor. Verification The AEA Data Editor team downloads materials, conducts reproducibility checks , writes report. If changes need to be made, the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
-        "teaser": null
-      },{
         "title": "Preparing your files for verification",
         "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
         "tags": [],
@@ -75,6 +69,12 @@ var store = [{
         "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Searching and finding data...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-separate-data-deposits",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor. Verification The AEA Data Editor team downloads materials, conducts reproducibility checks , writes report. If changes need to be made, the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Data deposit guidance",
