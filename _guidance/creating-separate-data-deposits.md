@@ -36,6 +36,7 @@ Suppose that, as part of your research, you have created a "data asset" - someth
 ## Creating and using a separate data deposit
 
 1. Create a separate (new) deposit at one of the trusted repositories. This is separate from your article's replication package. We'll call this the "DATA deposit."
+    - See for example [a tutorial by the Harvard Astrophysics Library for Zenodo](https://library.cfa.harvard.edu/data-archiving-and-sharing)
     - The title would be something meaningful like "Historical FERC Form 714 submissions"
     - Authors should be you, and possibly the original agency (the latter enhances findability)
     - Provide the raw data files (if not archived elsewhere - but that's the point, most often)
@@ -77,6 +78,7 @@ Some trusted repositories offer the option to make what are called "collections"
 
 - [Harvard Dataverse](https://dataverse.harvard.edu): "*Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.*"
   - Example: [Bracero data](https://dataverse.harvard.edu/dataverse/bracero) stores both raw data and cleaned data within a "dataverse"
+  - Tutorial: [IQSS Tutorial](https://youtu.be/5l4VZ-T2WYE?t=3780)
 - [Zenodo Communities](https://zenodo.org/communities): "Communities created and curated by Zenodo users"
   - Example: [Labor Dynamics Institute](https://zenodo.org/communities/labordynamicsinstitute/) collects presentations and data related to their activities on Zenodo
   - Example: [Economic Journal Community](https://zenodo.org/communities/ej-replication-repository) stores replication packages for articles published in the Economic Journal
