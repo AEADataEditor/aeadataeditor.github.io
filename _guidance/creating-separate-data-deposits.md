@@ -8,9 +8,19 @@ date: 2021-07-08
 
 Every time we see that a lot of effort went into creating a data resource, we don't want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.
 
+## Who should read this
+
+The present guidance is most useful for **individual researchers** and **small research groups** who do not have a dedicated data manager. While the information may also be useful for data managers at medium and large research groups and institutions, the issues, options, and solutions may be different for them.
+
+## Websites and Persistence
+
+Many researchers and small research groups have built very informative **websites** dedicated to their research project, which provide rich background information and often access to data. However, in general, such websites lack a key attribute important in the realm of academic publishing: *persistence*. Personal websites, whether truly at a personal site or at a university department, can and do disappear, or are "reorganized" away. Project websites may depend on hosting providers, free or paid, that may go away, for a variety of reasons.
+
+Trusted repositories excel at persistence - it is their primary raison-d'être. They are not so great, in general, at flexibility and design. As we will describe below, project websites can be combined with data stored at trusted repositories to obtain the best of both worlds. 
+
 ## Searching and finding data
 
-Visibility comes through findability, and this is what trusted repositories excel at. Whether you are using [openICPSR](https://www.openicpsr.org/openicpsr/), [Dataverse](https://dataverse.harvard.edu/), [Zenodo](https://zenodo.org/), or any other one of many [trusted repositories](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories), they share a number of key characteristics
+Visibility comes through findability, and trusted repositories have that built in, in ways that go beyond a mere Google or Bing search. Whether you are using [openICPSR](https://www.openicpsr.org/openicpsr/), [Dataverse](https://dataverse.harvard.edu/), [Zenodo](https://zenodo.org/), or any other one of many [trusted repositories](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories), they share a number of key characteristics
 
 - be trustworthy
 - be accessible to others, at least in terms of the metadata 
@@ -25,7 +35,7 @@ The latter point is reflected in being able to find deposits made at deposits th
 
 Of course, you should only do this if the original data provider's license allows you to redistribute their original data, and the derived data. You might need to explicitly obtain those rights, the original data may be in the public domain (e.g., US Government data), or the original data may be out of copyright (varies across countries). You are the one who knows this best!
 
-## What should you do
+## What data is in scope
 
 Suppose that, as part of your research, you have created a "data asset" - something that has independent value, can be re-used outside of the context of your current article. This could be
 
@@ -33,7 +43,7 @@ Suppose that, as part of your research, you have created a "data asset" - someth
 - a clean, usable version of otherwise complex, costly, or messy data
 - a usable version of historically available, but not digitized data
 
-## Creating and using a separate data deposit
+## What you should do: Creating and using a separate data deposit
 
 1. Create a separate (new) deposit at one of the trusted repositories. This is separate from your article's replication package. We'll call this the "DATA deposit."
     - See for example [a tutorial by the Harvard Astrophysics Library for Zenodo](https://library.cfa.harvard.edu/data-archiving-and-sharing)
