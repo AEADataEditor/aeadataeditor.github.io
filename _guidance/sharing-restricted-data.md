@@ -4,13 +4,15 @@ toc: true
 date: 2021-04-08
 ---
 
-In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data"). This page describes some tips and methods of doing so, and considerations. Please read it carefully.
+In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data").  Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data, but sometimes, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
+
+This page describes some tips and methods of doing so, and considerations. Please read it carefully.
 
 ### Permissions
 
 First and foremost, you must have the rights to *privately* share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,
 
-- if you signed an NDA, it is unlikely that you can share data yourself. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the **public** README, as this may also apply to any other future replicator.
+- if you signed an NDA, it is unlikely that you are allowed to automatically share data with others. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the **public** README, as this may also apply to any other future replicator.
 - if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data. 
   - In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.
 - if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not. 
@@ -25,7 +27,7 @@ If you filled out an application form, it may be useful to include the filled-ou
 
 ### Signaling availability
 
-AEA authors are required to submit a [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability), which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place.
+AEA authors are required to submit a [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability), which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place. Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Please check all options that apply!
 
 ### Sharing data with Data Editor
 
@@ -33,8 +35,7 @@ AEA authors are required to submit a [Data and Code Availability Form](https://w
 
 The AEA Data Editor is an employee of an educational institution, not the AEA itself (see [main page](https://aeadataeditor.github.io/) for the current AEA Data Editor's affiliation). Thus, all access rights are constrained by rules at that educational institution. 
 
-- If an NDA needs to be signed, the use of [Cornell’s Individual Standard Non-Disclosure Agreement](https://researchservices.cornell.edu/resources/individual-standard-non-disclosure-agreement-nda) is the most time-efficient. Deviations thereof may need approval by the host institution's office of sponsored research and may delay signature of the agreement.
-
+- If an NDA needs to be signed, the use of [Cornell’s Individual Standard Non-Disclosure Agreement](https://researchservices.cornell.edu/resources/individual-standard-non-disclosure-agreement-nda) (as of 2021) is the most time-efficient. Deviations thereof may need approval by the host institution's office of sponsored research and may delay signature of the agreement.
 
 - If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.
 
