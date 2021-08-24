@@ -134,10 +134,16 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Restricted-access data
 
-Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
+Do not upload data that you do not want published! 
+
+- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
 
 > Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
 
+- If you can share the data more broadly, but want to control access, you **must** create a separate deposit for the parts of the data that are sensitive  while keeping the code, and any non-sensitive data, in the "primary" deposit as described on the present page. Your README must describe how to combine the two deposits.
+
+> - Consult the [Creating separate linked data archives](creating-separate-data-deposit) page for details on how and where to create a separate data deposit.
+> - Consult the [Accessing Restricted Data Through openICPSR](https://www.openicpsr.org/openicpsr/accessRD) page about the process at openICPSR, but other repositories may be acceptable.
 
 #### Tips
 
@@ -180,7 +186,40 @@ Once you are satisfied that all data files are present, are complete, and all me
 
 Choose "Submit to AEA" under "Change Status".
 
-Should you have forgotten something, you can "recall" the submission. 
+You will be presented with a page to confirm that you are going through with the submission. You will then be presented with a page, asking various questions. 
+
+> You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that may have been used as part of the manuscript's analysis, but that are not present in this particular deposit. 
+
+Contact the Data Editor if you have any questions or concerns.
+
+#### Can individuals be identified?
+
+![Identification question 1](/images/icpsr-submit-q1.png)
+
+The normal answer to this question is "No." 
+
+#### Are the data sensitive?
+
+![Sensitivity question 2](/images/icpsr-submit-q2.png)
+
+The normal answer to this question is "No." 
+
+#### Distribution question
+
+![Distribution question](/images/icpsr-submit-q3.png)
+
+You should answer this one as a function of the earlier answers. "Public download" means users will be registered users of openICPSR and consent to the license (next question), without further controls. "Restricted access" means that data will be distributed through openICPSR's [Restricted Data Access Mechanism](https://www.openicpsr.org/openicpsr/accessRD).
+
+#### Choose a license
+
+![License question](/images/icpsr-submit-q4-license.png)
+
+You should choose a license from the drop-down menu, or, if you have a custom license as part of the deposit, select "Other". See our [Licensing Guidance](Licensing_guidance).
+
+
+#### Finalizing
+
+Press "submit." Should you have forgotten something, you can "recall" the submission, fix the issue, and re-submit. 
 
 
 ### Citing Your Deposit
