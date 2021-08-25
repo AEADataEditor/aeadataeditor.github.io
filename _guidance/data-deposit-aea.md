@@ -186,25 +186,27 @@ Once you are satisfied that all data files are present, are complete, and all me
 
 Choose "Submit to AEA" under "Change Status".
 
+#### Submission questions
+
 You will be presented with a page to confirm that you are going through with the submission. You will then be presented with a page, asking various questions. 
 
 > You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that may have been used as part of the manuscript's analysis, but that are not present in this particular deposit. 
 
 Contact the Data Editor if you have any questions or concerns.
 
-#### Can individuals be identified?
+##### Can individuals be identified?
 
 ![Identification question 1](/images/icpsr-submit-q1.png)
 
 The normal answer to this question is "No." 
 
-#### Are the data sensitive?
+##### Are the data sensitive?
 
 ![Sensitivity question 2](/images/icpsr-submit-q2.png)
 
 The normal answer to this question is "No." 
 
-#### Distribution question
+##### Distribution question
 
 ![Distribution question](/images/icpsr-submit-q3.png)
 
