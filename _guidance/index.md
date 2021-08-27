@@ -17,14 +17,14 @@ feature_row:
   - image_path: /images/noun_two_2010370.png
     alt: "2"
     title: "Upload"
-    excerpt: "Provide metadata and upload the replication package, for verification and subsequently publication"
+    excerpt: "Provide metadata and upload the replication package. This step simultaneously prepares the materials for the verification process as well as for subsequent publication."
     url: "/aea-de-guidance/data-deposit-aea.html"
     btn_label: "Do it!"
     btn_class: "btn--primary btn--center"
   - image_path: /images/noun_three_2010367.png
     alt: "3"
     title: "Submit"
-    excerpt: "Submit the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability) together with your manuscript native files as instructed, and as per guidelines at your journal (for example, [AER guidelines](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide))."
+    excerpt: "Submit the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability) together with your manuscript native files as instructed, and as per guidelines at your journal (for example, [AER guidelines](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide)). Only once these materials have been received by the editorial office are [verification checks started](/aea-de-guidance/next)."
     btn_label: "Ready to submit?"
     btn_class: "btn--primary"
     url: "https://www.aeaweb.org/journals/"

@@ -5,18 +5,18 @@ feature_row2:
   - title: "Assignment"
     image_path: /images/noun_Four_2010371.png
     alt: "4"
-    excerpt: 'The editorial office assigns the manuscript to the AEA Data Editor. '
+    excerpt: 'The editorial office assigns the manuscript to the AEA Data Editor, using the "ScholarOne" (ex-Manuscript Central) system. '
   - title: "Verification"
     image_path: /images/noun_five_2010369.png
     alt: "5"
-    excerpt: 'The AEA Data Editor team downloads materials, [conducts reproducibility checks](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) , writes [report](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md). If changes need to be made, the report is communicated to the authors, who make changes and re-submit, until the replication package is accepted.'
+    excerpt: 'The AEA Data Editor team downloads materials from openICPSR, [conducts reproducibility checks](https://social-science-data-editors.github.io/guidance/Verification_guidance.html), and then writes a [report](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md). **This happens without interaction with the authors.** If changes need to be made, the report is communicated to the authors, who make changes and re-submit, the cycle repeating until the replication package is deemed acceptable.'
     url: "/aea-de-guidance/reproducibility-checks"
     btn_label: "Learn more"
     btn_class: "btn--primary"
   - title: "Forthcoming"
     image_path: /images/noun_Check_3836232.png
     alt: "Done!"
-    excerpt: 'The accepted report is communicated to the editorial office and the Editor of the journal. This starts the copy-editing process. Small changes can still be incorporated at this stage. Once completed, the manuscript and the data deposit are published together.'
+    excerpt: 'The acceptance report (possibly with some minor additional changes) is communicated to the editorial office and the Editor of the journal. This starts the copy-editing process, and at this time, the manuscript becomes "**forthcoming**." Small changes can still be incorporated at this stage. As soon as the replication package is completed, it is published. The manuscript is published once copy-edited and scheduled to an issue.'
     btn_label: "Celebrate!"
     btn_class: "btn--primary"
 intermediate:
