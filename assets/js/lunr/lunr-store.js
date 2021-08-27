@@ -72,7 +72,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor. Verification The AEA Data Editor team downloads materials, conducts reproducibility checks , writes report. If changes need to be made, the...","categories": [],
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/next",
         "teaser": null
