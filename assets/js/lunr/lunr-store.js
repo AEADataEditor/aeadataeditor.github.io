@@ -1,4 +1,10 @@
 var store = [{
+        "title": "A discussion about various things",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
+        "teaser": null
+      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -11,28 +17,10 @@ var store = [{
         "url": "/aea-de-guidance/licensing-guidance",
         "teaser": null
       },{
-        "title": "A discussion about various things",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
-        "teaser": null
-      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
-        "teaser": null
-      },{
-        "title": "Data deposit guidance",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea-guidance",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and code for: (NAME OF PAPER)”) “Principal Investigators” (=Authors; these need not be in the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Frequently Asked Questions",
@@ -41,10 +29,28 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Who should read this...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposits",
+        "teaser": null
+      },{
+        "title": "Data deposit guidance",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea-guidance",
+        "teaser": null
+      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Preparing your files for verification",
@@ -65,16 +71,10 @@ var store = [{
         "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
       },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Who should read this...","categories": [],
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and code for: (NAME OF PAPER)”) “Principal Investigators” (=Authors; these need not be in the...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposits",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
+        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Data deposit guidance",
