@@ -72,7 +72,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and code for: (NAME OF PAPER)”) “Principal Investigators” (=Authors; these need not be in the...","categories": [],
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
