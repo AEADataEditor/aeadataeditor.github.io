@@ -21,9 +21,14 @@ Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea
 
 #### Required
 
-- [ ] **Title** (Suggested: "*Data and code for: (NAME OF PAPER)*")
-- [ ] "**Principal Investigators**" (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
+- [ ] **Title** (Suggested: "*Data and Code for: (NAME OF PAPER)*")
+  - If only data, or only code are provided, adjust accordingly
+- [ ] "**Principal Investigators**" (=Authors)
+  - These need not be in the same order as on the paper. 
+  - These need not be the same people as on the paper (more, or less, is OK)
+  - Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
 - [ ] **Summary** (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
+  - Do not cite the article, or include "forthcoming".
 - [ ] **Subject Terms** (e.g., "Machine Learning", "Randomized Control Trial", "Nudges", ...)
 - [ ] **JEL Classification** (can be the same as article)
 - [ ] **Manuscript Number** (your manuscript tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
