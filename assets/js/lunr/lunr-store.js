@@ -1,4 +1,10 @@
 var store = [{
+        "title": "Licensing Guidance",
+        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/licensing-guidance",
+        "teaser": null
+      },{
         "title": "A discussion about various things",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -11,12 +17,6 @@ var store = [{
         "url": "/aea-de-guidance/LICENSE-template.html",
         "teaser": null
       },{
-        "title": "Licensing Guidance",
-        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/licensing-guidance",
-        "teaser": null
-      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -27,18 +27,6 @@ var store = [{
         "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Who should read this...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposits",
-        "teaser": null
-      },{
-        "title": "Data deposit guidance",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
         "title": "Step by step guidance",
@@ -69,6 +57,18 @@ var store = [{
         "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). Note that the ability to privately provide the data does not preclude the possibility...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-restricted-data",
+        "teaser": null
+      },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Who should read this...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposits",
+        "teaser": null
+      },{
+        "title": "Data deposit guidance",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
         "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
@@ -267,5 +267,11 @@ var store = [{
         "excerpt":"Abstract Replicability is at the core of the scientific enterprise. In the past 30 years, recurring concerns about the extent of replicability (or lack thereof) of the research in various disciplines have surfaced, including in economics. In this talk, I describe to an audience of experts and program officers at...","categories": [],
         "tags": [],
         "url": "/talks/replicability-presentation-2021-1",
+        "teaser": null
+      },{
+        "title": "Firm-Academic Research Collaborations in Economics - Journals’ Perspective",
+        "excerpt":"Abstract   Short talk on the reproducibility, transparency in economic research involving firm (private) data.      slides  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-09-17-cesifo",
         "teaser": null
       }]
