@@ -270,7 +270,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Firm-Academic Research Collaborations in Economics - Journals’ Perspective",
-        "excerpt":"Abstract   Short talk on the reproducibility, transparency in economic research involving firm (private) data.      slides  ","categories": [],
+        "excerpt":"Abstract   Short talk on the reproducibility, transparency in economic research involving firm (private) data.       PDF/PPTX Google Presentation  ","categories": [],
         "tags": [],
         "url": "/talks/2021-09-17-cesifo",
         "teaser": null
