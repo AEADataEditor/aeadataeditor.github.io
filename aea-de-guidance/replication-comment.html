@@ -1,0 +1,458 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Guidance on how to prepare a comment based on a replication - Office of the AEA Data Editor</title>
+<meta name="description" content="You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package.  Provide a strong link to the original replication package  Your comment may start off with different data, augmented data, more up-to-date data, or the same data the original authors used. If you are pointing out issues with data processing or analysis methods, ideally use the same data the original authors used. Put simply, start with a reproduction of the original article!     If you are unable to computationally reproduce the original article, despite having all materials as described by the original authors, please let us know immediately, regardless of whether you are writing a more complete article or not.   You should     provide  the DOI of the original replication package, and the associated data citation.   You need not     provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific location   You should not     not rename or otherwise modify the original files   Provide reproducible code  Your code should itself be reproducible.  Provide a README  You should provide a clear README that outlines the requirements for your comment’s replication package. You should be precise (more precise, in general) then the original authors in outlining the computational requirements (for instance, software versions), so that any spurious discrepancy can be ruled out.     There are various ways to use older versions of Stata, Matlab, R. We encourage you to reach out to us to explore options.   You do not need to make the main point using the same software as the original authors, but you should avoid any ambiguity that it is only the software that is causing you to obtain different results from the authors.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Guidance on how to prepare a comment based on a replication">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/replication-comment">
+
+
+  <meta property="og:description" content="You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package.  Provide a strong link to the original replication package  Your comment may start off with different data, augmented data, more up-to-date data, or the same data the original authors used. If you are pointing out issues with data processing or analysis methods, ideally use the same data the original authors used. Put simply, start with a reproduction of the original article!     If you are unable to computationally reproduce the original article, despite having all materials as described by the original authors, please let us know immediately, regardless of whether you are writing a more complete article or not.   You should     provide  the DOI of the original replication package, and the associated data citation.   You need not     provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific location   You should not     not rename or otherwise modify the original files   Provide reproducible code  Your code should itself be reproducible.  Provide a README  You should provide a clear README that outlines the requirements for your comment’s replication package. You should be precise (more precise, in general) then the original authors in outlining the computational requirements (for instance, software versions), so that any spurious discrepancy can be ruled out.     There are various ways to use older versions of Stata, Matlab, R. We encourage you to reach out to us to explore options.   You do not need to make the main point using the same software as the original authors, but you should avoid any ambiguity that it is only the software that is causing you to obtain different results from the authors.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Guidance on how to prepare a comment based on a replication">
+  <meta name="twitter:description" content="You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package.  Provide a strong link to the original replication package  Your comment may start off with different data, augmented data, more up-to-date data, or the same data the original authors used. If you are pointing out issues with data processing or analysis methods, ideally use the same data the original authors used. Put simply, start with a reproduction of the original article!     If you are unable to computationally reproduce the original article, despite having all materials as described by the original authors, please let us know immediately, regardless of whether you are writing a more complete article or not.   You should     provide  the DOI of the original replication package, and the associated data citation.   You need not     provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific location   You should not     not rename or otherwise modify the original files   Provide reproducible code  Your code should itself be reproducible.  Provide a README  You should provide a clear README that outlines the requirements for your comment’s replication package. You should be precise (more precise, in general) then the original authors in outlining the computational requirements (for instance, software versions), so that any spurious discrepancy can be ruled out.     There are various ways to use older versions of Stata, Matlab, R. We encourage you to reach out to us to explore options.   You do not need to make the main point using the same software as the original authors, but you should avoid any ambiguity that it is only the software that is causing you to obtain different results from the authors.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/replication-comment">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-09-29T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/replication-comment">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Guidance on how to prepare a comment based on a replication">
+    <meta itemprop="description" content="You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package.Provide a strong link to the original replication packageYour comment may start off with different data, augmented data, more up-to-date data, or the same data the original authors used. If you are pointing out issues with data processing or analysis methods, ideally use the same data the original authors used. Put simply, start with a reproduction of the original article!  If you are unable to computationally reproduce the original article, despite having all materials as described by the original authors, please let us know immediately, regardless of whether you are writing a more complete article or not.You should  provide  the DOI of the original replication package, and the associated data citation.You need not  provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific locationYou should not  not rename or otherwise modify the original filesProvide reproducible codeYour code should itself be reproducible.Provide a READMEYou should provide a clear README that outlines the requirements for your comment’s replication package. You should be precise (more precise, in general) then the original authors in outlining the computational requirements (for instance, software versions), so that any spurious discrepancy can be ruled out.  There are various ways to use older versions of Stata, Matlab, R. We encourage you to reach out to us to explore options.You do not need to make the main point using the same software as the original authors, but you should avoid any ambiguity that it is only the software that is causing you to obtain different results from the authors.">
+    <meta itemprop="datePublished" content="2021-09-29T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Guidance on how to prepare a comment based on a replication
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-09-29T00:00:00-04:00">September 29, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#provide-a-strong-link-to-the-original-replication-package">Provide a strong link to the original replication package</a></li><li><a href="#provide-reproducible-code">Provide reproducible code</a></li><li><a href="#provide-a-readme">Provide a README</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+      
+        <p>You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package.</p>
+
+<h3 id="provide-a-strong-link-to-the-original-replication-package">Provide a strong link to the original replication package</h3>
+
+<p>Your comment may start off with different data, augmented data, more up-to-date data, or the same data the original authors used. If you are pointing out issues with data processing or analysis methods, ideally use the same data the original authors used. Put simply, start with a reproduction of the original article!</p>
+
+<blockquote>
+  <p>If you are unable to computationally reproduce the original article, despite having all materials as described by the original authors, please let us know immediately, regardless of whether you are writing a more complete article or not.</p>
+</blockquote>
+
+<p>You should</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />provide  the DOI of the original replication package, and the associated data citation.</li>
+</ul>
+
+<p>You need not</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific location</li>
+</ul>
+
+<p>You should not</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />not rename or otherwise modify the original files</li>
+</ul>
+
+<h3 id="provide-reproducible-code">Provide reproducible code</h3>
+
+<p>Your code should itself be reproducible.</p>
+
+<h3 id="provide-a-readme">Provide a README</h3>
+
+<p>You should provide a clear README that outlines the requirements for your comment’s replication package. You should be precise (more precise, in general) then the original authors in outlining the computational requirements (for instance, software versions), so that any spurious discrepancy can be ruled out.</p>
+
+<blockquote>
+  <p>There are various ways to use older versions of Stata, Matlab, R. We encourage you to reach out to us to explore options.</p>
+</blockquote>
+
+<p>You do not need to make the main point using the same software as the original authors, but you should avoid any ambiguity that it is only the software that is causing you to obtain different results from the authors.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-09-29T00:00:00-04:00">September 29, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Guidance+on+how+to+prepare+a+comment+based+on+a+replication%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Freplication-comment" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Freplication-comment" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/replication-comment.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+                <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 American Economic Association. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
