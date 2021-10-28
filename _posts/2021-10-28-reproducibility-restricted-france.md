@@ -39,10 +39,10 @@ Authors interested in communicating with us about ways to verify reproducibility
 
 ## Notes
 
-[^1] Full disclosure: I (Lars Vilhuber) happen to serve as [chair of the scientific advisory board](https://www.casd.eu/nomination-de-lars-vilhuber-en-tant-que-president-du-conseil-scientifique-du-casd/). However, access to the customs data, and to the services of *cascad* are open to anyone, and no privileged access or treatment was necessary to obtain the outcomes of this post.
+[^1]: Full disclosure: I (Lars Vilhuber) happen to serve as [chair of the scientific advisory board](https://www.casd.eu/nomination-de-lars-vilhuber-en-tant-que-president-du-conseil-scientifique-du-casd/). However, access to the customs data, and to the services of *cascad* are open to anyone, and no privileged access or treatment was necessary to obtain the outcomes of this post.
 
-[^2] Pérignon, Christophe, Kamel Gadouche, Christophe Hurlin, Roxane Silberman, and Eric Debonnel. 2019. “Certify Reproducibility with Confidential Data.” Science 365, no. 6449: 127–28. [https://doi.org/10.1126/science.aaw2825](https://doi.org/10.1126/science.aaw2825).
+[^2]: Pérignon, Christophe, Kamel Gadouche, Christophe Hurlin, Roxane Silberman, and Eric Debonnel. 2019. “Certify Reproducibility with Confidential Data.” Science 365, no. 6449: 127–28. [https://doi.org/10.1126/science.aaw2825](https://doi.org/10.1126/science.aaw2825).
 
-[^3] As of the writing of this post, the customs data are not yet listed in the CASD data catalog at [https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/](https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/).
+[^3]: As of the writing of this post, the customs data are not yet listed in the CASD data catalog at [https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/](https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/).
 
-[^4] Piveteau, Paul. 2021. "Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20." *American Economic Association [publisher]*,  *Inter-university Consortium for Political and Social Research [distributor]*. [https://doi.org/10.3886/E120070V1-100007](https://doi.org/10.3886/E120070V1-100007).
+[^4]: Piveteau, Paul. 2021. "Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20." *American Economic Association [publisher]*,  *Inter-university Consortium for Political and Social Research [distributor]*. [https://doi.org/10.3886/E120070V1-100007](https://doi.org/10.3886/E120070V1-100007).
