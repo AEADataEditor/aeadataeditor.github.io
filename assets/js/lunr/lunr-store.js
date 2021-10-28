@@ -149,6 +149,12 @@ var store = [{
         "url": "/posts/2021-06-17-software-citations",
         "teaser": null
       },{
+        "title": "When a reproducibility check turns into a replication exercise",
+        "excerpt":"I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility. Piveteau, Paul. 2021. “An Empirical Dynamic Model of Trade with Consumer Accumulation.” American Economic Journal: Microeconomics, 13 (4): 23-63. https://doi.org/10.1257/mic.20190051 Paul uses granular (firm-level) French customs data to estimate a...","categories": [],
+        "tags": ["restricted-access","AEJ:Micro","CASD","cascad"],
+        "url": "/posts/2021-10-28-reproducibility-restricted-france",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

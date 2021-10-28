@@ -1,0 +1,648 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>When a reproducibility check turns into a replication exercise - Office of the AEA Data Editor</title>
+<meta name="description" content="I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="When a reproducibility check turns into a replication exercise">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2021-10-28-reproducibility-restricted-france">
+
+
+  <meta property="og:description" content="I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="When a reproducibility check turns into a replication exercise">
+  <meta name="twitter:description" content="I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2021-10-28-reproducibility-restricted-france">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2021-10-28T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2021-10-28-reproducibility-restricted-france">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="When a reproducibility check turns into a replication exercise">
+    <meta itemprop="description" content="I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.">
+    <meta itemprop="datePublished" content="2021-10-28T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">When a reproducibility check turns into a replication exercise
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-10-28T00:00:00-04:00">October 28, 2021</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+      
+        <p>I wanted to highlight a particular interesting article in the latest <a href="https://www.aeaweb.org/journals/mic">AEJ: Microeconomics</a> from the perspective of replicability and reproducibility.</p>
+
+<!-- more -->
+
+<blockquote>
+  <p>Piveteau, Paul. 2021. “An Empirical Dynamic Model of Trade with Consumer Accumulation.” <em>American Economic Journal: Microeconomics</em>, 13 (4): 23-63. <a href="https://doi.org/10.1257/mic.20190051">https://doi.org/10.1257/mic.20190051</a></p>
+</blockquote>
+
+<p><img src="/images/aejmicro-2021-10-piveteau.png" alt="AEJ:Micro 20190051" /></p>
+
+<p><a href="https://paulpiveteau.com/">Paul</a> uses granular (firm-level) French customs data to estimate a model with trade flows. The detailed but confidential French customs data were obtained by Paul many years ago, directly from the French administration. However, by the time the replication package was sent to the AEA Data Editor (me), the French customs agency had (very recently) signed an agreement with <a href="https://www.casd.eu/">CASD (Centre d’accès sécurisé aux données)</a>, the French system for academic use of restricted-access data, making more generalized access to the customs data feasible for future researchers and replicators.[^1] Furthermore, several years ago, <a href="https://people.hec.edu/perignon/">Christophe Perignon</a> (HEC Paris, <a href="https://twitter.com/christoperignon">@christoperignon</a> and <a href="https://sites.google.com/view/christophe-hurlin/home">Christophe Hurlin</a> (Université d’Orléans, <a href="https://twitter.com/churlin1804">@churlin1804</a>) created <a href="https://www.cascad.tech/"><em>cascad</em></a>, an organization dedicated to conducting reproducibility checks, including within the confines of the secure environment at CASD.[^2]</p>
+
+<p>We therefore requested that <em>cascad</em> conduct a reproducibility check for the AEA, using the full confidential French customs data available within CASD.[^3] And… the first attempt at reproducing even basic statistics failed. The data deposited by the customs agency at CASD many years later were subtly different in several dimensions. While the replicators worked hard to adapt the code to the data structure available to them, we ultimately turned to Paul for help. In the end, pure computational reproducibility was not possible, but a replication using the more recently extracted customs data was feasible.</p>
+
+<p>Jointly, but mostly through Paul’s efforts, the team succeeded in adapting the cleaning and preparation code to the newer data, and ran most of the code successfully. As should be expected when data are somewhat different, some of the results were different, though generally not in a substantial way.  However, some results were not replicable:</p>
+
+<blockquote>
+  <p>However, this replication exercise highlighted some numerical fragilities in the algorithm developed to estimate the dynamic model in the paper. In particular, the estimation of the model on the sample of wood exporters (appendix C) could not be performed.</p>
+</blockquote>
+
+<p>But instead of either resolving this via (private) correspondence between editors and authors, or letting future replicators find this out the hard way, Paul adopted what I believe is the best approach: acknowledging the limits of the computational reproducibility.</p>
+
+<p>And you do not need to rely on my hearsay - you can read all about it in the summary in <a href="https://assets.aeaweb.org/asset-server/files/15530.pdf#page=36">Appendix H of the online appendix, page 77</a> (from which the quote above is pulled), with the full replication report and all replicated tables and figures by <em>cascad</em> available at in the “<a href="https://doi.org/10.3886/E120070V1-100007">Replication_Fall20</a>” folder in the public replication package.[^4]</p>
+
+<p>No future replicator can access the data that Paul originally had obtained. But many future replicators (subject to certain conditions) can access the confidential customs data available through CASD. And can request such access with the assurance that the baseline analysis can be replicated (and the replication reproduced), making such requests - costly in time, effort, and money - worth a researcher’s while.</p>
+
+<p>The final outcome is, in my opinion, more transparent than it would have been in many other scenarios, and verified to be more robust than if we had only relied on Paul’s original materials.</p>
+
+<p>We thank Paul for his patience and assistance, and Christophe, Christophe, and Olivier Akmansoy (the replicator at <em>cascad</em>) for their help in conducting this reproducibility check plus replication exercise.</p>
+
+<p>Authors interested in communicating with us about ways to verify reproducibility when the data are confidential can consult our <a href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data">step-by-step guide</a>.</p>
+
+<h2 id="notes">Notes</h2>
+
+<p>[^1] Full disclosure: I (Lars Vilhuber) happen to serve as <a href="https://www.casd.eu/nomination-de-lars-vilhuber-en-tant-que-president-du-conseil-scientifique-du-casd/">chair of the scientific advisory board</a>. However, access to the customs data, and to the services of <em>cascad</em> are open to anyone, and no privileged access or treatment was necessary to obtain the outcomes of this post.</p>
+
+<p>[^2] Pérignon, Christophe, Kamel Gadouche, Christophe Hurlin, Roxane Silberman, and Eric Debonnel. 2019. “Certify Reproducibility with Confidential Data.” Science 365, no. 6449: 127–28. <a href="https://doi.org/10.1126/science.aaw2825">https://doi.org/10.1126/science.aaw2825</a>.</p>
+
+<p>[^3] As of the writing of this post, the customs data are not yet listed in the CASD data catalog at <a href="https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/">https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/</a>.</p>
+
+<p>[^4] Piveteau, Paul. 2021. “Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20.” <em>American Economic Association [publisher]</em>,  <em>Inter-university Consortium for Political and Social Research [distributor]</em>. <a href="https://doi.org/10.3886/E120070V1-100007">https://doi.org/10.3886/E120070V1-100007</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#aej-micro" class="page__taxonomy-item" rel="tag">AEJ:Micro</a><span class="sep">, </span>
+    
+      <a href="/tags/#cascad" class="page__taxonomy-item" rel="tag">cascad</a><span class="sep">, </span>
+    
+      <a href="/tags/#casd" class="page__taxonomy-item" rel="tag">CASD</a><span class="sep">, </span>
+    
+      <a href="/tags/#restricted-access" class="page__taxonomy-item" rel="tag">restricted-access</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2021-10-28T00:00:00-04:00">October 28, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=When+a+reproducibility+check+turns+into+a+replication+exercise%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-10-28-reproducibility-restricted-france" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-10-28-reproducibility-restricted-france" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-06-17-software-citations" rel="permalink">Software, code, and repositories
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More sho...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-04-09-paths" rel="permalink">File paths in statistical software
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-03-31-what-data" rel="permalink">What data to provide
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">What do we mean by “data”?
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-02-10-reproducible-gis" rel="permalink">Reproducible GIS
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-10-28-reproducibility-restricted-france.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+                <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 American Economic Association. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
