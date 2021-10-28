@@ -328,9 +328,9 @@
 
 <p><img src="/images/aejmicro-2021-10-piveteau.png" alt="AEJ:Micro 20190051" /></p>
 
-<p><a href="https://paulpiveteau.com/">Paul</a> uses granular (firm-level) French customs data to estimate a model with trade flows. The detailed but confidential French customs data were obtained by Paul many years ago, directly from the French administration. However, by the time the replication package was sent to the AEA Data Editor (me), the French customs agency had (very recently) signed an agreement with <a href="https://www.casd.eu/">CASD (Centre d’accès sécurisé aux données)</a>, the French system for academic use of restricted-access data, making more generalized access to the customs data feasible for future researchers and replicators.[^1] Furthermore, several years ago, <a href="https://people.hec.edu/perignon/">Christophe Perignon</a> (HEC Paris, <a href="https://twitter.com/christoperignon">@christoperignon</a> and <a href="https://sites.google.com/view/christophe-hurlin/home">Christophe Hurlin</a> (Université d’Orléans, <a href="https://twitter.com/churlin1804">@churlin1804</a>) created <a href="https://www.cascad.tech/"><em>cascad</em></a>, an organization dedicated to conducting reproducibility checks, including within the confines of the secure environment at CASD.[^2]</p>
+<p><a href="https://paulpiveteau.com/">Paul</a> uses granular (firm-level) French customs data to estimate a model with trade flows. The detailed but confidential French customs data were obtained by Paul many years ago, directly from the French administration. However, by the time the replication package was sent to the AEA Data Editor (me), the French customs agency had (very recently) signed an agreement with <a href="https://www.casd.eu/">CASD (Centre d’accès sécurisé aux données)</a>, the French system for academic use of restricted-access data, making more generalized access to the customs data feasible for future researchers and replicators.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> Furthermore, several years ago, <a href="https://people.hec.edu/perignon/">Christophe Perignon</a> (HEC Paris, <a href="https://twitter.com/christoperignon">@christoperignon</a> and <a href="https://sites.google.com/view/christophe-hurlin/home">Christophe Hurlin</a> (Université d’Orléans, <a href="https://twitter.com/churlin1804">@churlin1804</a>) created <a href="https://www.cascad.tech/"><em>cascad</em></a>, an organization dedicated to conducting reproducibility checks, including within the confines of the secure environment at CASD.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
 
-<p>We therefore requested that <em>cascad</em> conduct a reproducibility check for the AEA, using the full confidential French customs data available within CASD.[^3] And… the first attempt at reproducing even basic statistics failed. The data deposited by the customs agency at CASD many years later were subtly different in several dimensions. While the replicators worked hard to adapt the code to the data structure available to them, we ultimately turned to Paul for help. In the end, pure computational reproducibility was not possible, but a replication using the more recently extracted customs data was feasible.</p>
+<p>We therefore requested that <em>cascad</em> conduct a reproducibility check for the AEA, using the full confidential French customs data available within CASD.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> And… the first attempt at reproducing even basic statistics failed. The data deposited by the customs agency at CASD many years later were subtly different in several dimensions. While the replicators worked hard to adapt the code to the data structure available to them, we ultimately turned to Paul for help. In the end, pure computational reproducibility was not possible, but a replication using the more recently extracted customs data was feasible.</p>
 
 <p>Jointly, but mostly through Paul’s efforts, the team succeeded in adapting the cleaning and preparation code to the newer data, and ran most of the code successfully. As should be expected when data are somewhat different, some of the results were different, though generally not in a substantial way.  However, some results were not replicable:</p>
 
@@ -340,7 +340,7 @@
 
 <p>But instead of either resolving this via (private) correspondence between editors and authors, or letting future replicators find this out the hard way, Paul adopted what I believe is the best approach: acknowledging the limits of the computational reproducibility.</p>
 
-<p>And you do not need to rely on my hearsay - you can read all about it in the summary in <a href="https://assets.aeaweb.org/asset-server/files/15530.pdf#page=36">Appendix H of the online appendix, page 77</a> (from which the quote above is pulled), with the full replication report and all replicated tables and figures by <em>cascad</em> available at in the “<a href="https://doi.org/10.3886/E120070V1-100007">Replication_Fall20</a>” folder in the public replication package.[^4]</p>
+<p>And you do not need to rely on my hearsay - you can read all about it in the summary in <a href="https://assets.aeaweb.org/asset-server/files/15530.pdf#page=36">Appendix H of the online appendix, page 77</a> (from which the quote above is pulled), with the full replication report and all replicated tables and figures by <em>cascad</em> available at in the “<a href="https://doi.org/10.3886/E120070V1-100007">Replication_Fall20</a>” folder in the public replication package.<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup></p>
 
 <p>No future replicator can access the data that Paul originally had obtained. But many future replicators (subject to certain conditions) can access the confidential customs data available through CASD. And can request such access with the assurance that the baseline analysis can be replicated (and the replication reproduced), making such requests - costly in time, effort, and money - worth a researcher’s while.</p>
 
@@ -352,13 +352,22 @@
 
 <h2 id="notes">Notes</h2>
 
-<p>[^1] Full disclosure: I (Lars Vilhuber) happen to serve as <a href="https://www.casd.eu/nomination-de-lars-vilhuber-en-tant-que-president-du-conseil-scientifique-du-casd/">chair of the scientific advisory board</a>. However, access to the customs data, and to the services of <em>cascad</em> are open to anyone, and no privileged access or treatment was necessary to obtain the outcomes of this post.</p>
-
-<p>[^2] Pérignon, Christophe, Kamel Gadouche, Christophe Hurlin, Roxane Silberman, and Eric Debonnel. 2019. “Certify Reproducibility with Confidential Data.” Science 365, no. 6449: 127–28. <a href="https://doi.org/10.1126/science.aaw2825">https://doi.org/10.1126/science.aaw2825</a>.</p>
-
-<p>[^3] As of the writing of this post, the customs data are not yet listed in the CASD data catalog at <a href="https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/">https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/</a>.</p>
-
-<p>[^4] Piveteau, Paul. 2021. “Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20.” <em>American Economic Association [publisher]</em>,  <em>Inter-university Consortium for Political and Social Research [distributor]</em>. <a href="https://doi.org/10.3886/E120070V1-100007">https://doi.org/10.3886/E120070V1-100007</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Full disclosure: I (Lars Vilhuber) happen to serve as <a href="https://www.casd.eu/nomination-de-lars-vilhuber-en-tant-que-president-du-conseil-scientifique-du-casd/">chair of the scientific advisory board</a>. However, access to the customs data, and to the services of <em>cascad</em> are open to anyone, and no privileged access or treatment was necessary to obtain the outcomes of this post. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pérignon, Christophe, Kamel Gadouche, Christophe Hurlin, Roxane Silberman, and Eric Debonnel. 2019. “Certify Reproducibility with Confidential Data.” Science 365, no. 6449: 127–28. <a href="https://doi.org/10.1126/science.aaw2825">https://doi.org/10.1126/science.aaw2825</a>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>As of the writing of this post, the customs data are not yet listed in the CASD data catalog at <a href="https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/">https://www.casd.eu/les-sources-de-donnees-disponibles-au-casd/</a>. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Piveteau, Paul. 2021. “Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20.” <em>American Economic Association [publisher]</em>,  <em>Inter-university Consortium for Political and Social Research [distributor]</em>. <a href="https://doi.org/10.3886/E120070V1-100007">https://doi.org/10.3886/E120070V1-100007</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
