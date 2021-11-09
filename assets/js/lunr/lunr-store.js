@@ -155,6 +155,12 @@ var store = [{
         "url": "/posts/2021-10-28-reproducibility-restricted-france",
         "teaser": null
       },{
+        "title": "How to prepare replication packages for papers that used confidential data",
+        "excerpt":"On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really short thread. The very general answer is: The guidance is the same as for any other paper, including with public data: describe where the...","categories": [],
+        "tags": ["restricted-access","administrative","replication package"],
+        "url": "/posts/2021-11-08-replication-pkg-confidential",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
