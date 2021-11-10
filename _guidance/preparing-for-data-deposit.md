@@ -124,7 +124,7 @@ See also [a similar entry to our FAQ](https://aeadataeditor.github.io/aea-de-gui
 
 When the replication package relies on confidential data that cannot be shared, or is shared under different conditions, authors will have to
 
-- prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved) and [this guide on creating a separate data deposit](creating-separate-data-deposits))
+- prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved) and [this guide on creating a separate data deposit](creating-separate-data-deposit))
   - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example below.
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
   - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example below.
@@ -144,7 +144,7 @@ data/
       confidential_combined.dta
 ```
 
-Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page, or that you might be able to [create a separate data deposit](creating-separate-data-deposits) with a more [limited license](Licensing_guidance). 
+Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page, or that you might be able to [create a separate data deposit](creating-separate-data-deposit) with a more [limited license](Licensing_guidance). 
 
 Authors might want to investigate the  possibility of providing "fake" or "simulated" data that might allow replicators to run code, without necessarily obtaining meaningful results (functionality test). 
 
