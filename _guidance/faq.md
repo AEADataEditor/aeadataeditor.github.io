@@ -175,6 +175,8 @@ Alternatively, the code can handle the unzipping - optional, but more robust.
 
 Once you've adjusted that, zip up the whole structure (so a ZIP file that has inside it another zip file, plus the `/code`, `/data/src1/`, and `/data/src2/` directories), and "Import from ZIP" when uploading to ICPSR.
 
+For an example on how to document this in your repository, see [this file](https://doi.org/10.3886/E125381V1-101422). You can incorporate such text into a separate file, into the README (preferred), or adjust your code to take this structure into account (much preferred).
+
 ### What is that __MACOSX folder, which seems to contain a second copy of all the  replication files (I am not sure why this folder exists)
 
 [MAC USERs ONLY] We are also not sure, but it is a standard feature of ZIP files created on Mac OSX systems using the graphical user interface. Here's a quick fix that helps all parties involved (adapted from this [source](https://wpguru.co.uk/2013/10/how-to-remove-__macosx-from-zip-archives/)):
