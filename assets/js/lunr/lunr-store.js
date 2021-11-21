@@ -23,12 +23,6 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
-        "title": "Frequently Asked Questions",
-        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
         "title": "Creating separate linked data archives",
         "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. Who should read this...","categories": [],
         "tags": [],
@@ -39,6 +33,18 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
+        "teaser": null
+      },{
+        "title": "Frequently Asked Questions",
+        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/FAQ.html",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Step by step guidance",
@@ -69,12 +75,6 @@ var store = [{
         "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). Note that the ability to privately provide the data does not preclude the possibility...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-restricted-data",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
@@ -159,6 +159,12 @@ var store = [{
         "excerpt":"On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really short thread. The very general answer is: The guidance is the same as for any other paper, including with public data: describe where the...","categories": [],
         "tags": ["restricted-access","administrative","replication package"],
         "url": "/posts/2021-11-08-replication-pkg-confidential",
+        "teaser": null
+      },{
+        "title": "Use of Docker for Reproducibility in Economics",
+        "excerpt":"In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the...","categories": [],
+        "tags": ["FAQ","Twitter","Docker","Code"],
+        "url": "/posts/2021-11-16-docker",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",

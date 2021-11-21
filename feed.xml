@@ -1,4 +1,487 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-11-14T09:57:55-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">How to prepare replication packages for papers that used confidential data</title><link href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential" rel="alternate" type="text/html" title="How to prepare replication packages for papers that used confidential data" /><published>2021-11-08T00:00:00-05:00</published><updated>2021-11-08T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/replication-pkg-confidential</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential">&lt;p&gt;On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really &lt;a href=&quot;https://twitter.com/AeaData/status/1457815800438562828&quot;&gt;short thread&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2021-11-21T14:36:12-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Use of Docker for Reproducibility in Economics</title><link href="https://aeadataeditor.github.io/posts/2021-11-16-docker" rel="alternate" type="text/html" title="Use of Docker for Reproducibility in Economics" /><published>2021-11-21T00:00:00-05:00</published><updated>2021-11-21T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/docker</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-11-16-docker">&lt;p&gt;In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the right solution. We illustrate how we addressed some of those cases using container technology throughout this post.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE: There are probably still errors in this post. It will remain draft until the stream of comments has died down…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;what-are-containers&quot;&gt;What are containers&lt;/h2&gt;
+
+&lt;p&gt;Containers are “implementations of operating system-level virtualization,” &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; typically on Linux. The most common version is provided by &lt;a href=&quot;https://docker.com&quot;&gt;Docker&lt;/a&gt;, but several other implementations exist, such as &lt;a href=&quot;https://singularity.hpcng.org/&quot;&gt;Singularity&lt;/a&gt;. The use of containers as part of replication packages in economics is extremely low, and yet they have some advantages. This post will explore both pre-submission and post-publication uses of containers, as well as several shortcomings.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.” &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In particular, this means that all dependencies are handled, and there should be virtually no differences across time, users’ operating system, and software implementation in reproducing the outcomes of software.&lt;/p&gt;
+
+&lt;p&gt;Containers also isolate the computation from the host system, so that no user-specific settings (stuff you have configured over the past 10 years of working on a project) are carried through into the container, up to a point. That kind of isolation can also be achieved in various ways: for the cognescenti (also called geeks), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chroot&lt;/code&gt; environments on Unix systems go back to the early 1980s &lt;sup id=&quot;fnref:chroot&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:chroot&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, and “virtual machines” probably go back to 1960s IBM mainframes &lt;sup id=&quot;fnref:vm&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:vm&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;containers-and-reproducibility&quot;&gt;Containers and reproducibility&lt;/h2&gt;
+
+&lt;p&gt;Containers can, but do not necessarily contribute to reproducibility and replicability. For an excellent introduction, see Boettinger (2015) &lt;sup id=&quot;fnref:intro&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:intro&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Once created, containers can (should) reliably reproduce the context and output they were designed to handle. Because containers typically use a plain-text script for their creation (so-called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;), they can contribute to transparency. However, containers can also be interactively created, or incorporate externally created packages, which may lead to some black-box actions that are not transparent. Thus, containers can generate reproducible output, but not be themselves reproducibly created. Furthermore, if containers rely on external resources – for instance, accessing the internet to download data from an API, or installed “latest” packages – the output generated may not be reproduced, though it may still be considered replicable.&lt;/p&gt;
+
+&lt;h2 id=&quot;containers-in-computational-social-science&quot;&gt;Containers in computational social science&lt;/h2&gt;
+
+&lt;p&gt;For the (social science) research environment, this should, in principle, handle many of the common problems that workarounds and READMEs list. In this post, we will explore several such cases, in which a computational issue was encountered, debugged leveraging both locally installed and cloud-based containers, and ultimately solved.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run R through a container&lt;/li&gt;
+  &lt;li&gt;Run Intel Fortran (or another complex setup) through container&lt;/li&gt;
+  &lt;li&gt;Run Gurobi through container with a dynamic license&lt;/li&gt;
+  &lt;li&gt;The Holy Grail in Economics: Run Stata through a container&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The examples here are based on personal research experience as well as the experience when attempting to conduct reproducibility verifications on nearly 1,000 economics articles. They are by no means meant to be exhaustive or cover all the possible uses of containers. We should note that many of these examples are retro-actively ported to containers, and may not constitute the optimal setup. In our experience with 1,000 economics articles, as of November 2021, we have encountered only 1 (in words: &lt;strong&gt;one&lt;/strong&gt;) that used any Docker in their submission to the AEA journals: Lamadon, Mogstad, and Setzler, “Imperfect Competition, Compensating Differentials and Rent Sharing in the U.S. Labor Market”,&lt;sup id=&quot;fnref:lms&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lms&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; who leveraged 4 different CodeOcean compute capsules to support their analyses (we will return to CodeOcean later).&lt;/p&gt;
+
+&lt;h2 id=&quot;running-r-julia-python-in-docker&quot;&gt;Running R, Julia, Python in Docker&lt;/h2&gt;
+
+&lt;p&gt;Many of the examples one can find on the Internet sees container used in conjunction with open-source languages. For most statistical and other languages, in particular open-source languages, progress is continuous. In part what attracts researchers to these environments is the rich eco-system of add-on packages and libraries, most of which are available for free as well. However, combining versions of languages, packages, and dependencies to those packages can be a challenge. Use of these can sometimes be tedious - and not easily reproducible - because of a constantly evolving environment and very active development. Various methods exist to “pin” packages used (see &lt;a href=&quot;https://cran.r-project.org/package=renv&quot;&gt;renv&lt;/a&gt;, &lt;a href=&quot;https://cran.r-project.org/package=checkpoint&quot;&gt;checkpoint&lt;/a&gt; and others in R, “environments”, &lt;a href=&quot;https://pip.pypa.io/en/stable/reference/pip_freeze/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip freeze&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda env export&lt;/code&gt;&lt;/a&gt; in Python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manifest.toml&lt;/code&gt; files and &lt;a href=&quot;https://julia.quantecon.org/more_julia/tools_editors.html#Package-Environments&quot;&gt;package environments&lt;/a&gt; in Julia). These rely, of course, not just on the ability to install the right packages, but also the right base software. In some cases, it can be challenging for users to install multiple base versions simultaneously on their computers - either because they work on multiple projects on their own at different times, or in collaborations with others. This is sometimes necessitated by changes that create breaks between versions (examples include &lt;a href=&quot;https://docs.julialang.org/en/v1.4/NEWS/#Standard-library-changes-1&quot;&gt;changes in random number generators in Julia&lt;/a&gt; and &lt;a href=&quot;https://blog.revolutionanalytics.com/2020/04/r-400-is-released.html&quot;&gt;certain breaks in R when version 4.0 was introduced&lt;/a&gt;). Programmatic solutions for this exist, of course, but add complexity to an often complex set of programs.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, that same open-source community has also provided containers that lock in some of the base software versions, facilitating the simultaneous maintenance of multiple versions of the same software. We illustrate this with an example that we have used in some reproducibility cases with R. It addresses the particular use case of having multiple versions of R, but does not pin the particular package versions. See the tutorials for  &lt;a href=&quot;https://cran.r-project.org/package=renv&quot;&gt;renv&lt;/a&gt; and &lt;a href=&quot;https://cran.r-project.org/package=checkpoint&quot;&gt;checkpoint&lt;/a&gt; for even finer control.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-really-simple-example-with-r&quot;&gt;A Really Simple Example with R&lt;/h3&gt;
+
+&lt;p&gt;To start, we identify from instructions provided by the author both the version of R and the required packages. From the required packages, we use a standard &lt;a href=&quot;https://github.com/AEADataEditor/docker-r-starter/blob/main/setup.R&quot;&gt;setup program&lt;/a&gt; and add those libraries to the list of dependencies.&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; We then leverage the &lt;a href=&quot;https://hub.docker.com/u/rocker&quot;&gt;R Docker images&lt;/a&gt; maintained by the &lt;a href=&quot;https://github.com/rocker-org/rocker&quot;&gt;Rocker group&lt;/a&gt;, and build a custom R Docker image that should have all dependencies as articulated by the authors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM rocker/r-ver:4.0.1
+
+COPY setup.R .
+RUN Rscript setup.R
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;That’s already all there is to creating a Docker image! Of course, it now needs to be built:&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DOCKER_BUILDKIT=1 docker build . -t $MYHUBID/$MYIMG:$TAG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;where I have previously configured some environment variables for ease of notation and reference:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TAG=v$(date +%F)
+MYIMG=aer-9999-8888
+MYHUBID=aeadataeditor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This locks in our R environment, at the time of building (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$TAG&lt;/code&gt;). It is then straightforward to run the authors’ code, reliably, over and over again:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd path/to/code
+docker run -it --rm -v $(pwd)/subdir:/code -w /code $MYHUBID/${MYIMG}:$TAG Rscript main.R
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that for each project, we can specify a different R version (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rocker/r-ver:4.0.1&lt;/code&gt;), and we can even, for the same project, test the reproducibility with multiple R versions, by building multiple images (we might need to refine our tagging for that to work).&lt;/p&gt;
+
+&lt;p&gt;Furthermore, if we run into reproducibility discrepancies, we can share the resulting (public) Docker image and the “very simple” instructions with the authors. In doing so, we reproducibly share the failure to reproduce. We have done so, in fact, in several cases, though we will describe that particular type of interaction in the next section, in somewhat more challenging cases.&lt;/p&gt;
+
+&lt;p&gt;All we need is Docker as a software installation on our workstation. Or: in the cloud.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-docker-the-cloud-way&quot;&gt;Running Docker the Cloud way&lt;/h2&gt;
+
+&lt;p&gt;Numerous cloud computing providers facilitate running Docker. Some might call it an “app” that you are running, others may require you to boot up a Linux VM before running Docker, the mechanisms vary substantially. In many instances, you may need to worry about how to recover the results once the Docker image has finished running your code, and both data and code will likely need to be embedded in the Docker image, something not addressed here.&lt;/p&gt;
+
+&lt;p&gt;One innovation that multiple authors have recently pointed to is the July 2021 release of “Github Codespaces.” Subject to some conditions, anyone can easily run arbitrary Docker images in the cloud. We illustrate this using a &lt;a href=&quot;https://github.com/labordynamicsinstitute/reproducibility-confidential&quot;&gt;reproducible environment to conduct a tutorial&lt;/a&gt; (readers might want to consult the tutorial for several other reasons as well).&lt;/p&gt;
+
+&lt;p&gt;The tutorial is programmed in R, leverages R-generated HTML slides (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ioslides&lt;/code&gt;). Relevant for the point here is that the tutorial is intended to be conducted interactively. To do that, after having &lt;a href=&quot;https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/enabling-codespaces-for-your-organization&quot;&gt;enabled Codespaces for the organization&lt;/a&gt;, we select and launch a codespace - essentially, a cloud-computer running our code.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-codespaces-1.png&quot; alt=&quot;Launching Codespaces&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After choosing a size (which can go up to a 16-core/ 32GB RAM server), the system launches into a simple Linux shell, with the source git repository already checked out&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-codespaces-2.png&quot; alt=&quot;Launching Codespaces&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Docker comes into play here because we want to use a Rstudio instance in the cloud, already set up the way we need it to be. The build script does most of the original legwork for us, and once in the cloud, all we need to do is to launch the pre-configured (reproducible!) Docker instance, loaded with our libraries and code:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run \
+   -e PASSWORD=testing \
+   -v $WORKSPACE:/home/rstudio \
+   --rm -p 8787:8787 $dockerspace/$repo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;which we do straight from the cloud command line:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-codespaces-3.png&quot; alt=&quot;Launching docker&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The docker command again downloads the image components from the Docker Hub, and runs the Rstudio instance:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-codespaces-4.png&quot; alt=&quot;Launching docker&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Codespaces detects that we are running a webserver within the Docker image, and prompts us to connect to it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/github-codespaces-5.png&quot; alt=&quot;Launching Rstudio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an example of reproducibility for interactive uses, but would apply in much the same way if all we wanted to do is run some R code repeatedly, or reproducibly. In fact, that is exactly what a separate functionality (Github Workflow/Actions) does to generate the slides for this particular tutorial, something left for next time (but see the &lt;a href=&quot;https://github.com/labordynamicsinstitute/reproducibility-confidential/blob/main/.github/workflows/main.yml&quot;&gt;workflow configuration file&lt;/a&gt; for the tutorial). We will come back to this later.&lt;/p&gt;
+
+&lt;h2 id=&quot;compiling-fortran-code-through-a-container&quot;&gt;Compiling Fortran code through a container&lt;/h2&gt;
+
+&lt;p&gt;Compilers are the workhorses for high-performance computing, and many economists will program compute-intensive routines in Fortran, then compile and run such code. Both open-source &lt;sup id=&quot;fnref:osfortran&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:osfortran&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; and commercial&lt;sup id=&quot;fnref:commfortran&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:commfortran&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; are available. We describe two use cases for using Fortran in combination with Docker.&lt;/p&gt;
+
+&lt;h3 id=&quot;ce-fortran&quot;&gt;CE Fortran&lt;/h3&gt;
+
+&lt;p&gt;In many cases, compilers require the presence of many separate libraries, and installation is traditionally complicated. The &lt;a href=&quot;https://www.ce-fortran.com/&quot;&gt;CE-Fortran&lt;/a&gt; project (“Computational Economics using Fortran”, Hans Fehr and Fabian Kindermann) trains and guides economists using open source &lt;a href=&quot;https://gcc.gnu.org/fortran/&quot;&gt;GNU Fortran&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ce-fortran-webpage.png&quot; alt=&quot;CE Fortran&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They have traditionally provided detailed installation instructions for all three operation systems, striving to make the development environment as comparable as possible across all three. More recently, the authors have started providing a Docker image to provide a consistent environment, see &lt;a href=&quot;https://github.com/fabiankindermann/ce-fortran/tree/main/installation/docker/docker_base&quot;&gt;their Github page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, some of the issues cannot be fully handled in a Docker image. For instance, while the environment in the base Docker image can create images, it cannot be used to provide an IDE or for manipulating images interactively. For this purpose, the authors provide a second, much &lt;a href=&quot;https://github.com/fabiankindermann/ce-fortran/tree/main/installation/docker/docker_vnc&quot;&gt;larger Docker image&lt;/a&gt; that includes a workaround (a VNC server).&lt;/p&gt;
+
+&lt;h3 id=&quot;intel-fortran&quot;&gt;Intel Fortran&lt;/h3&gt;
+
+&lt;p&gt;A second scenario is frequently encountered among the AEA’s replication packages. Many authors, particularly in macroeconomics, use Intel Fortran compilers. While installation instructions have been streamlined, they remain onerous: the most recent Windows installation instructions rely on a two installers, and have a dependency on Microsoft Visual Studio - a separate installer - which in turn has multiple additional dependencies. Furthermore, authors rarely use Makefiles, a way to compile code and address dependencies commonly used in the open source community, and only sometimes use Windows-specific Visual Studio Project files. The typical instruction, repeated dozens of times, looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/README_page07.png&quot; alt=&quot;Compiler instruction&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;with subsequent instructions to manually run the compiled code. Such instructions are inefficient, and potentially error prone.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-fortran-docker-example&quot;&gt;A Fortran Docker Example&lt;/h3&gt;
+
+&lt;p&gt;In reproducing a recent paper, we instead opted to streamline the process, making for a more efficient reproducibility check, and also – if the authors were to adopt this process – a more efficient development process.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Using scripting tools, we extracted all of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifort&lt;/code&gt; commands from the README PDF (34 lines)&lt;/li&gt;
+  &lt;li&gt;We manually inserted the relevant directories, and added code to automatically run the compiled binary.&lt;/li&gt;
+  &lt;li&gt;The resulting script file (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run_all.sh&lt;/code&gt;) looks like this (in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt; notation - this could also be done as a Windows &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bat&lt;/code&gt; file):&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Code to run models 
+# Author: Lars Vilhuber
+# Based on instructions in the paper's replication package
+# NOTE: this should really be a Makefile!
+# Capture base folder
+
+BASE=$(pwd)
+
+# Compiler options
+
+IFORTOPTS=&quot; -qopenmp&quot;
+
+# Figure 1A
+
+cd $BASE/rep_agent_models/tc_model_nongrace
+
+time ifort $IFORTOPTS rep_tc_delta_array.f90 rouwenhorst.f90 \
+  -o rep_tc_delta_array.exe &amp;amp;&amp;amp; time ./rep_tc_delta_array.exe 
+
+cd $BASE/rep_agent_models/tc_model_grace
+
+time ifort $IFORTOPTS rep_tc_grace_delta_array.f90 rouwenhorst.f90 \
+  -o rep_tc_grace_delta_array.exe &amp;amp;&amp;amp; time ./rep_tc_grace_delta_array.exe 
+
+# and so on...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;simplicity&quot;&gt;Simplicity&lt;/h4&gt;
+
+&lt;p&gt;Once we had the script, we used the &lt;a href=&quot;https://hub.docker.com/r/intel/oneapi-hpckit/tags?page=1&amp;amp;ordering=last_updated&quot;&gt;Intel OneAPI-hpckit&lt;/a&gt; (required 23GB of disk space, compared to the 24GB that the Windows install would have taken):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull intel/oneapi-hpckit:2021.2-devel-ubuntu18.04
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ran master script through the docker image
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd PATH/model_codes
+docker run --rm -it -w /code \
+  -v $(pwd):/code intel/oneapi-hpckit:2021.2-devel-ubuntu18.04 \
+  /code/run_all.sh &amp;gt; run_all.output.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This generated about 100 output files, without any further manual intervention. There is no separate installation process for the Intel compilers, a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker pull&lt;/code&gt; command allowed us to run all of the required files, within a few minutes.&lt;/p&gt;
+
+&lt;h4 id=&quot;flexibility&quot;&gt;Flexibility&lt;/h4&gt;
+
+&lt;p&gt;When one of the compile steps required a larger memory size (25GB) than our workstation had available (23GB), we simply re-ran the following three steps on a general purpose server we had never before used for this purpose (but which already had Docker installed):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git pull (URL of the reproducibility repository)
+cd PATH/model_codes
+docker run --rm -it -w /code \
+  -v $(pwd):/code \
+  intel/oneapi-hpckit:2021.2-devel-ubuntu18.04 \
+  /code/run_all.sh &amp;gt; run_all.output.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker pull&lt;/code&gt; command is automatically executed by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run&lt;/code&gt; command if the image is not locally available).&lt;/p&gt;
+
+&lt;h4 id=&quot;thoughts&quot;&gt;Thoughts&lt;/h4&gt;
+
+&lt;p&gt;When using a container for the task of running these (fairly standard) types of structural models, we gained robustness and simplicity. Instead of a complex and manual Windows install specific to this type of project, we had a very simple way to run the author-provided code. The “transparency boundary” remains unchanged: the reliance on the proprietary (non-open source) Intel compiler, whether installed as a Windows installer, or obtained via a Intel-provided Docker image, is conceptually similar, and similarly opaque.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-docker-the-easy-way&quot;&gt;Running Docker the Easy Way&lt;/h2&gt;
+
+&lt;p&gt;Of course, this may all seem overwhelming and complicated, as any new piece of software. Which is why several services are available that make this all a lot easier. These include &lt;a href=&quot;https://codeocean.com/&quot;&gt;CodeOcean&lt;/a&gt;, &lt;a href=&quot;https://wholetale.org/&quot;&gt;WholeTale&lt;/a&gt;, &lt;a href=&quot;https://mybinder.org/&quot;&gt;Binder&lt;/a&gt;, and others (see Konkol et al, 2020,&lt;sup id=&quot;fnref:konkol&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:konkol&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; for a broader overview). Behind the scenes, these use containers as well, sometimes built on the fly, but also able to archive the containers, ensuring persistence of what hopefully are reproducible containers.&lt;/p&gt;
+
+&lt;p&gt;We have started to use these services to enable reproducibility verification in an environment which allows us, when the time inevitably arrives, to share the exact environment with the authors in order to debug code. In contrast with the statement “Author, please use this Docker image to reproduce the issue”, the request “Author, please click on this URL to reproduce the issue” is much simpler. Several authors have been offered both options (no RCT…), and have generally preferred the option of an online easy interface to the ability to run Docker or Singularity locally.&lt;/p&gt;
+
+&lt;p&gt;And we have started to leverage the ability to also publish these reproducible artifacts. Recent examples include Rossi (2021)&lt;sup id=&quot;fnref:rossi&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:rossi&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; and DellaVigna and Pope (2021)&lt;sup id=&quot;fnref:stefano&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:stefano&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;. In both cases, we were able to populate the &lt;a href=&quot;https://doi.org/10.24433/CO.7940775.v1&quot;&gt;CodeOcean&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.24433/CO.0687784.v1&quot;&gt;capsule&lt;/a&gt; when we ran into reproducibility issues, sharing it (via a URL) with the authors, and solving the issue that both satisfied the AEA Data Editor, and is likely to satisfy future replicators as well.&lt;/p&gt;
+
+&lt;p&gt;We are working with the &lt;a href=&quot;https://wholetale.org/&quot;&gt;WholeTale&lt;/a&gt; on similar usage scenarios, and are open to working with authors’ choices whereever those may lead.&lt;/p&gt;
+
+&lt;p&gt;One key aspect here is worthwhile highlighting. In contrast to some other online computational platforms, for instance &lt;a href=&quot;https://colab.research.google.com/&quot;&gt;Google Colab&lt;/a&gt;, the ability to download (nearly) the entire reproducible environment, not just the code, and archive it, are key. That does not mean that they are automatically “fully reproducible”. They may still be missing some key elements that replicators will need to contribute, such as licenses.&lt;/p&gt;
+
+&lt;h2 id=&quot;licenses&quot;&gt;Licenses&lt;/h2&gt;
+
+&lt;p&gt;Most examples out there use open source software, not requiring licenses. This is an issue in economics, where the most common software used - Stata, Matlab - are proprietary and require licenses. Luckily, there are many ways to include licenses in Docker images at runtime, or, if using them internally within a research group, embedding licenses within the Docker image, as one would install a license in any “real” computer. The online systems mentioned above sometimes provide access to such licenses as well. We briefly illustrate first the easy, online way to incorporate licenses into container-based workflows, and then two “hard” ways.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-example-using-stata-licenses-and-the-easy-way&quot;&gt;An example using Stata, licenses, and the “Easy Way”&lt;/h3&gt;
+
+&lt;p&gt;Bringing many of the issues alluded to earlier together, we have successfully leveraged this “toolkit” to improve the reproducibility and accessibility of Stata-based replication packages. Stata is used by the vast majority of economists, so being able to handle this scenario is important, but it also illustrates how licensed software can be used with containers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html&quot;&gt;&lt;img src=&quot;https://github.com/AEADataEditor/aea-supplement-migration/raw/530f1e9ad8059e68815b5836db33155c990154b0/programs/figure_software_years_pct.png&quot; alt=&quot;Stata usage at AEA journals&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The easiest way is to use an online system that provides such access. The first to our knowledge was &lt;a href=&quot;https://codeocean.com/&quot;&gt;CodeOcean&lt;/a&gt;. Simply choosing one of the configured Stata images will create a Docker image with Stata:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/codeocean-choice.png&quot; alt=&quot;Stata choice&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hard-to-nail-down-failure-to-compute&quot;&gt;Hard-to-nail down failure to compute&lt;/h3&gt;
+
+&lt;p&gt;This is the environment we used to work with the authors to create the reproducible package for DellaVigna and Pope (2021). We were able to work exclusively within CodeOcean’s environment, debugging a tenacious problem that wasn’t easy to diagnose. But we also wanted to make sure that the resulting replication package is not reliant on CodeOcean’s infrastructure. The authors debugged the code on CodeOcean (yielding the &lt;a href=&quot;https://doi.org/10.24433/CO.0687784.v1&quot;&gt;published capsule&lt;/a&gt;). We  then verified the &lt;a href=&quot;https://doi.org/10.3886/E135221V1-101800&quot;&gt;instructions to re-run the replication package&lt;/a&gt; downloaded from CodeOcean on a personal workstation, emulating a somewhat typical economist. We  also populated the official replication package on openICPSR with the same code (&lt;a href=&quot;https://doi.org/10.3886/E135221V1&quot;&gt;https://doi.org/10.3886/E135221V1&lt;/a&gt;). This is strictly speaking not necessary, since CodeOcean is a trusted repository, and assigns DOIs, but for now, we make it easier to discover this way.&lt;/p&gt;
+
+&lt;p&gt;After downloading the CodeOcean capsule (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;57033059-76d7-422d-8301-d173e3520f07.zip&lt;/code&gt;), or equivalently, the openICPSR deposit, the following straightforward code (mostly documented in the CodeOcean-provided &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPRODUCING.md&lt;/code&gt;) reproduces the paper’s outputs perfectly:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;unzip 57033059-76d7-422d-8301-d173e3520f07.zip 
+cd environment/
+# Need the Stata license
+cp /path/to/statalicense/stata.lic.16 stata.lic
+# Build the image - note, requires CodeOcean provided image. Could be replaced with the dataeditors/stata16 image
+DOCKER_BUILDKIT=1 docker build . \
+  --tag 57033059-76d7-422d-8301-d173e3520f07
+cd ..
+# Ensure the script is runnable - this is not documented
+chmod a+rx code/run 
+docker run --rm   \
+  --workdir /code   \
+  --volume &quot;$PWD/environment/stata.lic&quot;:/usr/local/stata/stata.lic   \
+  --volume &quot;$PWD/data&quot;:/data   \
+  --volume &quot;$PWD/code&quot;:/code   \
+  --volume &quot;$PWD/results&quot;:/results  \ 57033059-76d7-422d-8301-d173e3520f07 \
+  ./run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
+
+&lt;h3 id=&quot;big-data&quot;&gt;Big data&lt;/h3&gt;
+
+&lt;p&gt;Since a container is meant to package up all necessary dependencies, it would seem logical that one could include all data. However, this breaks down when the data are large, even before getting into “big data” territory. The typical Docker image is no larger than 2-3 GB. Thus, the issues that plague  reproducibility when data are large - delays in downloading or streaming data, availability of local space - are not solved by containers. That being said, satisfying the software dependencies is a first step in making sure that reproducibility can be achieved. Thus, a variant of the above way to run a Docker image could also be used in the presence of big data, by mounting the local storage directory for the data:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --rm   \
+  --workdir /code   \
+  --volume &quot;$PWD/data&quot;:/data   \
+  --volume &quot;/path/to/BIG/DATA:/bigdata \
+  --volume &quot;$PWD/code&quot;:/code   \
+  --volume &quot;$PWD/results&quot;:/results  \ 
+  researcherhub/papercontainer \
+  ./run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;licenses-not-provided&quot;&gt;Licenses not provided&lt;/h3&gt;
+
+&lt;p&gt;Most of the “easy” systems are easy because they can accomodate a limited set of customizations. For instance, one can specify some post-install scripts on various platforms, but not choose an unsupported software image. But when the software requires additional licenses, a tension arises between publishing the successfully run image with an embedded license, and providing a template implementation that requires provision of a license.&lt;/p&gt;
+
+&lt;p&gt;Mathworks has gone the latter route, providing a &lt;a href=&quot;https://hub.docker.com/r/mathworks/matlab&quot;&gt;Matlab Docker image&lt;/a&gt; without a license, and then providing instructions on how to provision the container with a valid license, for instance within a university’s internal network with a network server. Internally, WholeTale and CodeOcean use a similar mechanism behind the scenes.&lt;/p&gt;
+
+&lt;p&gt;Stata does not provide Docker image, but has allowed the AEA Data Editor to provide &lt;a href=&quot;https://hub.docker.com/u/dataeditors&quot;&gt;license-less Docker images for Stata&lt;/a&gt;. The &lt;a href=&quot;https://github.com/AEADataEditor/docker-stata&quot;&gt;instructions provided&lt;/a&gt; identify various ways a license can be provisioned to the image, so that code can be run:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --rm \
+  -v ${STATALIC}:/usr/local/stata/stata.lic \
+  -v $(pwd)/code:/code \
+  -v $(pwd)/data:/data \
+  -v $(pwd)/results:/results \
+  $MYHUBID/${MYSTATAIMG}:${TAG}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In effect, users can simply use their own Stata license to enable a Stata Docker image. Again, WholeTale and CodeOcean use a similar mechanism behind the scenes, but the fact that any Stata user can re-execute such a Docker image with a valid Stata license is no more constraining that having installed Stata on their own computer.&lt;/p&gt;
+
+&lt;p&gt;In other circumstances, expiring licenses may be used. In a case where we needed to install &lt;a href=&quot;https://www.gurobi.com/academia/academic-program-and-licenses/&quot;&gt;Gurobi&lt;/a&gt; together with R, we used a new feature provided by Gurobi to provide “&lt;a href=&quot;https://www.gurobi.com/web-license-service/&quot;&gt;web licenses&lt;/a&gt;.” These can be disabled from a dashboard, and naturally expire after a while. Thus, our CodeOcean “postInstall” script installed Gurobi into a R container, then hard-coded a license key:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget -v https://packages.gurobi.com/${GRB_SHORT_VERSION}/gurobi${GRB_VERSION}_linux64.tar.gz \
+    &amp;amp;&amp;amp; tar -xvf gurobi${GRB_VERSION}_linux64.tar.gz  \
+    &amp;amp;&amp;amp; rm -f gurobi${GRB_VERSION}_linux64.tar.gz \
+    &amp;amp;&amp;amp; mv -f gurobi* gurobi \
+    &amp;amp;&amp;amp; rm -rf gurobi/linux64/docs
+
+
+cd /opt/gurobi/linux64
+#run the setup
+python3.7 setup.py install
+
+# Add the license key
+# For replication purposes, this will need to be re-initialized, as post-publication, this key was disabled.
+# You will need to provide your own.
+echo &quot;
+WLSACCESSID=96388c95-2a7f-4195-88af-b167b077c019
+WLSSECRET=ef818954-18ed-43f5-84b0-ace17641fd18
+LICENSEID=6521234
+&quot; &amp;gt; /opt/gurobi/gurobi.lic
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once published, simply disabling the key on the Gurobi dashboard would prevent any unauthorized use of the license. Alternatively, of course, the method used for the Stata license above would also work outside of the CodeOcean environment, by using&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --rm \
+  -v gurobi.lic:/opt/gurobi/gurobi.lic \
+  -v $(pwd)/code:/code \
+  -v $(pwd)/data:/data \
+  -v $(pwd)/results:/results \
+  $MYHUBID/${MYGUROBIIMG}:${TAG}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Thus, generically, licensed software can very well be used when the proprietary software provider allows for redistribution of the binary portion of the software in the form of “opaque” containers; however, in many circumstances, the “easy” online providers of such container-based services can make it non-trivial to implement.&lt;/p&gt;
+
+&lt;h3 id=&quot;complex-interactions-between-software&quot;&gt;Complex interactions between software&lt;/h3&gt;
+
+&lt;p&gt;Finally, as one example where limitations are hard to address ex-post, we highlight an example where researchers called a separately compiled Fortran binary from within Matlab. While each software could easily be run in its own container, it becomes non-trivial (but not impossible) to use multiple containers in this way.&lt;/p&gt;
+
+&lt;p&gt;The solution, as evidenced by the Gurobi example earlier, consists in installing one software into a container provided by the other. This, however, may lose the advantages of using pre-configured containers that avoid complex installation procedures, as in the case of Matlab and Intel compilers. An alternative (not tested) might consist in leveraging &lt;a href=&quot;https://docs.docker.com/develop/develop-images/multistage-build/&quot;&gt;multi-stage builds&lt;/a&gt;, where entire portions are copied from one container into another. This is beyond the scope of the “easy” web-based solutions (though it may be on their development plan). However, precisely because a knowledgeable researcher can handle the (now much more complex) container creation, future users may not have to. By publishing the associated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfiles&lt;/code&gt;, &lt;a href=&quot;https://github.com/AEADataEditor/docker-r-starter/blob/main/Dockerfile&quot;&gt;simple&lt;/a&gt; or more &lt;a href=&quot;https://github.com/AEADataEditor/docker-r-gurobi/blob/main/Dockerfile&quot;&gt;complex&lt;/a&gt;, future users do not need to reinvent the wheel - one of the purposes of the transparency that reproducibility fosters.&lt;/p&gt;
+
+&lt;h3 id=&quot;continuous-integration&quot;&gt;Continuous integration&lt;/h3&gt;
+
+&lt;p&gt;Containers are also a tool for continuous integration - the software engineering best practice to test software at every step - but which can also be used to streamline research analyses. Consider the scenario where all data is available in a researcher’s Git repository (because of course, the researcher is using a Git repository). Containers can then be leveraged to create output - a research article, preliminary analyses, or a number of webpages. For instance, many researchers now use R in combination with Markdown to create “dynamic documents”. The (perenially incomplete) &lt;a href=&quot;https://labordynamicsinstitute.github.io/replicability-training-curriculum/&quot;&gt;training manual for our undergraduate replicators&lt;/a&gt; is “built” this way, using the great &lt;a href=&quot;https://pkgs.rstudio.com/bookdown/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bookdown&lt;/code&gt; package&lt;/a&gt; by Yihui Xie, using a simple preconfigured container:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     - name: Run docker for R 
+        uses: docker://larsvilhuber/ideahandbook:latest
+        with:
+          args: &quot;/github/workspace/_build.sh publish&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(see the &lt;a href=&quot;https://github.com/labordynamicsinstitute/replicability-training-curriculum/blob/master/.github/workflows/main.yml&quot;&gt;Github Action workflow file&lt;/a&gt; for full details)&lt;/p&gt;
+
+&lt;h3 id=&quot;graphical-utilities&quot;&gt;Graphical utilities&lt;/h3&gt;
+
+&lt;p&gt;Some of the “easy” online systems do not provide the native coding environment that many users are used to, for instance the Matlab or Stata desktop applications. This makes it harder, in fact, for such researchers to adapt to these tools. We regularly observe code or instructions that use visual inspection of the results, or leverage other features only available in a full graphical environment. This is less a concern for more recent (and typically open source) software, such as R (availability of Rstudio as a web service), Python, and Julia (Jupyter notebooks). However, WholeTale is trialling (with assistance from us) a combination of reproducible “tale” combined with a graphical user interface for Stata. The &lt;a href=&quot;https://hub.docker.com/r/mathworks/matlab&quot;&gt;Matlab Docker image&lt;/a&gt; provides a graphical interface, as does one of the &lt;a href=&quot;https://github.com/fabiankindermann/ce-fortran/tree/main/installation/docker/docker_vnc&quot;&gt;CE-Fortran docker images&lt;/a&gt;, so these are not fundamentally problems.&lt;/p&gt;
+
+&lt;h2 id=&quot;preliminary-conclusion&quot;&gt;(Preliminary) Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Containers provide a way to share computational environments in an efficient way, to make such environments robust to changes in the underlying software, and to publish the fully transparent methods that lead to such containers. They are, however, underutilized in economics replication packages and by economics researchers. This document has provided a few scenarios that illustrate cases where the use of containers can help improve reproducibility.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;So is this all rocket science? While I’m sure that the rocket scientists use containers, it isn’t really that complicated. Here is a (almost surely incomplete) list of a few resources to get you started:&lt;/p&gt;
+
+&lt;h3 id=&quot;economics-articles-and-replication-packages-using-docker&quot;&gt;Economics Articles and Replication Packages using Docker&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rossi (forthcoming in JEL): “Forecasting in the presence of instabilities: How do we know whether models predict”&lt;sup id=&quot;fnref:rossi:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:rossi&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;DellaVigna and Pope (&lt;a href=&quot;https://www.aeaweb.org/articles?id=10.1257/mic.20200129&quot;&gt;forthcoming in American Economic Journal: Microeconomics&lt;/a&gt;) “Stability of Experimental Results: Forecasts and Evidence”&lt;sup id=&quot;fnref:stefano:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:stefano&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Bonhomme, Lamadon, and Manresa (forthcoming Econometrica): “A distributional Framework for matched employer-employee data”, &lt;a href=&quot;https://github.com/tlamadon/blm-replicate&quot;&gt;Github repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Sergio Firpo, Vitor Possebom. 2018. “Synthetic Control Method: Inference, Sensitivity Analysis and Confidence Sets” Journal of Causal Inference 6.2, &lt;a href=&quot;https://doi.org/10.1515/jci-2016-0026&quot;&gt;https://doi.org/10.1515/jci-2016-0026&lt;/a&gt;. &lt;a href=&quot;https://doi.org/10.24433/CO.23bd238f-38c5-4b3e-82f4-3a1624fd8a33&quot;&gt;Compute Capsule at CodeOcean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Matias D. Cattaneo, Nicolás Idrobo, Rocío Titiunik. 2018.  “A Practical Introduction to Regression Discontinuity Designs: Volume I” &lt;a href=&quot;https://doi.org/10.24433/CO.263b2a1e-bbc1-45c9-af03-23ac11032950&quot;&gt;Compute Capsule at CodeOcean&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tutorials&quot;&gt;Tutorials&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1&quot;&gt;Grant McDermott’s EC 607 graduate course, Docker lesson&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://carpentries-incubator.github.io/docker-introduction/index.html&quot;&gt;Carpentries tutorial on Docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing Docker on a &lt;em&gt;managed&lt;/em&gt; Windows system can be challenging, and my poor colleagues Michael Darisse and Leonel  Borja Plaza have suffered through it for you to bring you &lt;a href=&quot;https://github.com/labordynamicsinstitute/replicability-training/blob/master/Docker_Windows.md&quot;&gt;this tutorial&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;Installing Docker on a Linux system, on the other hand, can be as simple as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yum install docker&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;The command line can help on  Mac as well: &lt;a href=&quot;https://www.cprime.com/resources/blog/docker-on-mac-with-homebrew-a-step-by-step-tutorial/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew install docker&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;examples-and-images&quot;&gt;Examples and Images&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/AEADataEditor/docker-stata&quot;&gt;Stata as Docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/AEADataEditor/docker-r-gurobi&quot;&gt;R and Gurobi as Docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/mathworks/matlab&quot;&gt;Matlab Docker image&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rocker-project.org/&quot;&gt;Rocker project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/intel/oneapi-hpckit/tags?page=1&amp;amp;ordering=last_updated&quot;&gt;Intel OneAPI-hpckit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;/h3&gt;
+
+&lt;h4 id=&quot;r-centric&quot;&gt;R-centric&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://o2r.info/containerit/&quot;&gt;containerit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.rocker-project.org/&quot;&gt;Rocker project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dirk.eddelbuettel.com/papers/cologneRUG2020.pdf&quot;&gt;Dirk Eddelbuettel’s tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;git-centric&quot;&gt;Git-centric&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://repo2docker.readthedocs.io/en/latest/&quot;&gt;repo2docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/enabling-codespaces-for-your-organization&quot;&gt;Github Codespaces&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;services&quot;&gt;Services&lt;/h3&gt;
+
+&lt;p&gt;These are the services listed in Konkol et (2020)&lt;sup id=&quot;fnref:konkol:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:konkol&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; that use Docker&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codeocean.com&quot;&gt;CodeOcean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mybinder.org/&quot;&gt;Binder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wholetale.org/&quot;&gt;WholeTale&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;as well as more recent&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/enabling-codespaces-for-your-organization&quot;&gt;Github Codespaces&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gigantum.com/&quot;&gt;Gigantum&lt;/a&gt; (not tested)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;as well as many cloud service providers.&lt;/p&gt;
+
+&lt;h2 id=&quot;disclosures&quot;&gt;Disclosures&lt;/h2&gt;
+
+&lt;p&gt;We received a generous compute and storage quota from &lt;a href=&quot;https://codeocean.com/&quot;&gt;CodeOcean&lt;/a&gt;, a free license to use Stata 17 for one year in cloud applications from &lt;a href=&quot;https://stata.com&quot;&gt;Stata&lt;/a&gt;, and a subaward on NSF grant &lt;a href=&quot;https://nsf.gov/awardsearch/showAward?AWD_ID=1541450&amp;amp;HistoricalAwards=false&quot;&gt;1541450&lt;/a&gt; “&lt;em&gt;CC*DNI DIBBS: Merging Science and Cyberinfrastructure Pathways: The Whole Tale&lt;/em&gt;” from the University of Illinois to evaluate the platform for the purpose of reproducibility verification. None of the sponsors have reviewed this preliminary assessment, or have had influence on any of the conclusions of this document. &lt;a href=&quot;https://codeocean.com/&quot;&gt;CodeOcean&lt;/a&gt; currently offers academic users a certain number of monthly free compute hours. &lt;a href=&quot;https://wholetale.org/&quot;&gt;WholeTale&lt;/a&gt; is free to use, though the Stata desktop functionality is not yet publicly available as of the writing of this document in November 2021.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Wikipedia. 2021. “List of Linux containers.” &lt;a href=&quot;hhttps://en.wikipedia.org/w/index.php?title=List_of_Linux_containers&amp;amp;oldid=1015376890&quot;&gt;wikipedia.org/wiki/List_of_Linux_containers&lt;/a&gt;, accessed on 2021-07-07. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Docker.com. 2021. “What is a Container.” &lt;a href=&quot;https://web.archive.org/web/20210609145942/https://www.docker.com/resources/what-container&quot;&gt;docker.com/resources/what-container&lt;/a&gt;, accessed on 2021-07-07. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:chroot&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Wikipedia. 2021a. “chroot”. &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Chroot&amp;amp;oldid=1044767727&quot;&gt;https://en.wikipedia.org/w/index.php?title=Chroot&amp;amp;oldid=1044767727&lt;/a&gt;, accessed 2021-11-19. &lt;a href=&quot;#fnref:chroot&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:vm&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Wikipedia. 2021b. “Hardware virtualization”. &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Hardware_virtualization&amp;amp;oldid=1053629506&quot;&gt;https://en.wikipedia.org/w/index.php?title=Hardware_virtualization&amp;amp;oldid=1053629506&lt;/a&gt;, accessed 2021-11-19 &lt;a href=&quot;#fnref:vm&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:intro&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Boettiger, Carl. “An Introduction to Docker for Reproducible Research.” ACM SIGOPS Operating Systems Review 49, no. 1 (January 20, 2015): 71–79. &lt;a href=&quot;https://doi.org/10.1145/2723872.2723882&quot;&gt;https://doi.org/10.1145/2723872.2723882&lt;/a&gt;. &lt;a href=&quot;#fnref:intro&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:lms&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Lamadon, Thibaut, Magne Mogstad, and Bradley Setzler. forthcoming. “&lt;a href=&quot;https://www.aeaweb.org/articles?id=10.1257/aer.20190790&quot;&gt;Imperfect Competition, Compensating Differentials and Rent Sharing in the U.S. Labor Market.&lt;/a&gt;” &lt;em&gt;American Economic Review&lt;/em&gt; with &lt;a href=&quot;https://github.com/setzler/LMS&quot;&gt;Github repository&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.24433/CO.7147919.v1&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.24433/CO.3047157.v1&quot;&gt;2&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.24433/CO.4775581.v1&quot;&gt;3&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.24433/CO.3648033.v1&quot;&gt;4&lt;/a&gt; compute capsules. &lt;a href=&quot;#fnref:lms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Even without using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;checkpoint&lt;/code&gt; package, we might use the &lt;a href=&quot;https://cran.microsoft.com/snapshot/&quot;&gt;MRAN snapshot server&lt;/a&gt;, but a faster method is provided by the binary packages provided by the &lt;a href=&quot;https://packagemanager.rstudio.com/&quot;&gt;Rstudio Public Package Manager&lt;/a&gt; used by the Rocker images. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;For additional steps, and complete instructions, see &lt;a href=&quot;https://github.com/AEADataEditor/docker-r-starter&quot;&gt;github.com/AEADataEditor/docker-r-starter&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:osfortran&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://gcc.gnu.org/fortran/&quot;&gt;GNU Fortran&lt;/a&gt; and various LLVM-based Fortran front-ends are available, see a list at &lt;a href=&quot;https://fortran-lang.org/compilers/&quot;&gt;fortran-lang.org/compilers/&lt;/a&gt;. &lt;a href=&quot;#fnref:osfortran&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:commfortran&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://software.intel.com/content/www/us/en/develop/tools/oneapi/all-toolkits.html&quot;&gt;Intel&lt;/a&gt; and &lt;a href=&quot;https://www.nag.com/nag-compiler&quot;&gt;NAG&lt;/a&gt; are popular. &lt;a href=&quot;#fnref:commfortran&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:konkol&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Konkol, Markus, Daniel Nüst, and Laura Goulier. 2020. “Publishing Computational Research - a Review of Infrastructures for Reproducible and Transparent Scholarly Communication.” Research Integrity and Peer Review 5, no. 1 (July 14, 2020): 10. &lt;a href=&quot;https://doi.org/10.1186/s41073-020-00095-y&quot;&gt;https://doi.org/10.1186/s41073-020-00095-y&lt;/a&gt;. &lt;a href=&quot;#fnref:konkol&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:konkol:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:rossi&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Rossi, Barbara. 2021. “Compute Capsule for: Forecasting in the presence of instabilities: How do we know whether models predict [Source Code].” &lt;em&gt;CodeOcean&lt;/em&gt;. https://doi.org/10.24433/CO.7940775.v1, which accompanies a forthcoming article in the Journal of Economic Literature, and which is also archived in the more traditional location as Rossi, Barbara. 2021. “Data and Code for: Forecasting in the Presence of Instabilities.” &lt;em&gt;American Economic Association&lt;/em&gt; [publisher], &lt;em&gt;Inter-university Consortium for Political and Social Research&lt;/em&gt; [distributor]. https://doi.org/10.3886/E147225V1 &lt;a href=&quot;#fnref:rossi&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:rossi:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:stefano&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;DellaVigna, Stefano and Devin Pope. 2021. “Compute Capsule for: Stability of Experimental Results: Forecasts and Evidence” [Source Code]. &lt;em&gt;CodeOcean&lt;/em&gt;. https://doi.org/10.24433/CO.0687784.v1, which accompanies a &lt;a href=&quot;https://www.aeaweb.org/articles?id=10.1257/mic.20200129&quot;&gt;forthcoming article in American Economic Journal: Microeconomics&lt;/a&gt;, and which is also archived in the more traditional location as DellaVigna, Stefano, and Devin Pope. 2021. “Data and Code for: Stability of Experimental Results: Forecasts and Evidence.” &lt;em&gt;American Economic Association&lt;/em&gt; [publisher], &lt;em&gt;Inter-university Consortium for Political and Social Research&lt;/em&gt; [distributor]. https://doi.org/10.3886/E135221V1 &lt;a href=&quot;#fnref:stefano&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:stefano:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Docker" /><category term="Code" /><summary type="html">In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the right solution. We illustrate how we addressed some of those cases using container technology throughout this post.</summary></entry><entry><title type="html">How to prepare replication packages for papers that used confidential data</title><link href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential" rel="alternate" type="text/html" title="How to prepare replication packages for papers that used confidential data" /><published>2021-11-08T00:00:00-05:00</published><updated>2021-11-08T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/replication-pkg-confidential</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential">&lt;p&gt;On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really &lt;a href=&quot;https://twitter.com/AeaData/status/1457815800438562828&quot;&gt;short thread&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -598,53 +1081,4 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
   &lt;p&gt;&lt;a href=&quot;https://twitter.com/fibbyccino/status/1346262249854275585&quot;&gt;@fibbyccino&lt;/a&gt; What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at &lt;a href=&quot;https://doi.org/10.5281/zenodo.4311917&quot;&gt;Brookings&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.5281/zenodo.4281633&quot;&gt;St. Louis Fed&lt;/a&gt; (also &lt;a href=&quot;https://research.stlouisfed.org/conferences/beyond-the-numbers/&quot;&gt;video&lt;/a&gt;.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Fireside Chat" /><summary type="html">In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.</summary></entry><entry><title type="html">A discussion about various things</title><link href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="alternate" type="text/html" title="A discussion about various things" /><published>2021-01-05T00:00:00-05:00</published><updated>2021-01-05T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/Answers-to-questions</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions">&lt;p&gt;Moved to later post.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><summary type="html">Moved to later post.</summary></entry><entry><title type="html">Release of a template README</title><link href="https://aeadataeditor.github.io/posts/2020-12-08-template-readme" rel="alternate" type="text/html" title="Release of a template README" /><published>2020-12-08T00:00:00-05:00</published><updated>2020-12-08T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/template-readme</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2020-12-08-template-readme">&lt;p&gt;We have released the first version of a template README for social sciences at &lt;a href=&quot;https://social-science-data-editors.github.io/template_README/&quot;&gt;https://social-science-data-editors.github.io/template_README/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;release&quot;&gt;Release&lt;/h2&gt;
-
-&lt;p&gt;The template README provided on &lt;a href=&quot;https://social-science-data-editors.github.io/template_README/&quot;&gt;this website&lt;/a&gt; is in a form that follows best practices as defined by a number of data editors at social science journals.&lt;/p&gt;
-
-&lt;h2 id=&quot;contributors&quot;&gt;Contributors&lt;/h2&gt;
-
-&lt;p&gt;Joint work with the &lt;a href=&quot;https://twitter.com/RevEconStud&quot;&gt;Review of Economic Studies&lt;/a&gt; (Data Editor &lt;a href=&quot;https://twitter.com/korenmiklos&quot;&gt;Miklos Kóren&lt;/a&gt;), &lt;a href=&quot;https://twitter.com/EJ_RES&quot;&gt;Economic Journal&lt;/a&gt; (Data Editor &lt;a href=&quot;https://www.barcelonagse.eu/people/llull-joan&quot;&gt;Joan Llull&lt;/a&gt;) and the &lt;a href=&quot;https://twitter.com/CanEconomics&quot;&gt;Canadian Journal of Economics&lt;/a&gt; (Data Editor &lt;a href=&quot;http://www.connolly.uqam.ca/&quot;&gt;Marie Connolly&lt;/a&gt; and previously &lt;a href=&quot;https://twitter.com/p_morrow_uoft&quot;&gt;Peter Morrow &lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;We encourage use at &lt;a href=&quot;https://www.aeaweb.org/journals/&quot;&gt;AEA journals&lt;/a&gt; immediately, and will start to verify usage in May 2021.&lt;/p&gt;
-
-&lt;p&gt;We also got input from editors at JOLE (Journal of Labor Economics), JPE (Journal of Political Economy), Management Science (&lt;a href=&quot;https://twitter.com/bgreiner_tweets&quot;&gt;Ben Greiner&lt;/a&gt;), and JASA (Journal of the American Statistical Association) (&lt;a href=&quot;https://twitter.com/ChrisPaciorek&quot;&gt;Chris Paciorek&lt;/a&gt;) (see JASA’s version at &lt;a href=&quot;https://jasa-acs.github.io/repro-guide/pages/acc.html&quot;&gt;https://jasa-acs.github.io/repro-guide/pages/acc.html&lt;/a&gt;). We hope to get additional input from others.&lt;/p&gt;
-
-&lt;p&gt;Want to contribute to make it better? Visit us on Github at &lt;a href=&quot;https://github.com/social-science-data-editors/template_README&quot;&gt;social-science-data-editors/template_README&lt;/a&gt; and create an issue, or provide a pull request.&lt;/p&gt;
-
-&lt;p&gt;Want to add your journal to the list of endorsers? Add yourself to &lt;a href=&quot;https://github.com/social-science-data-editors/template_README/blob/development/Endorsers.md&quot;&gt;social-science-data-editors/template_README&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;purpose-and-content&quot;&gt;Purpose and Content&lt;/h2&gt;
-
-&lt;p&gt;What is the README for? README in the social sciences serve multiple purposes: guiding a reader through the available material, a route to replicating the results in the research paper, including the description of the origins of data and/or description of programs.&lt;/p&gt;
-
-&lt;p&gt;We provide templates/examples for Data and Code Availability Statement:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;where do the data come from (see the [Data Citation Principles[(https://www.force11.org/datacitationprinciples)),&lt;/li&gt;
-  &lt;li&gt;any access restrictions,&lt;/li&gt;
-  &lt;li&gt;how the data can be used (licenses).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Prove that you are allowed to distribute, help others get access, provide not just an URL! (we provide examples!)&lt;/p&gt;
-
-&lt;p&gt;Of course, it contains a (detailed) set of instructions to run the code. But also &lt;strong&gt;requirements&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;do you need a laptop from 2010, or a cloud cluster with 102 nodes?&lt;/li&gt;
-  &lt;li&gt;Runs in 5 minutes, days, weeks, months?&lt;/li&gt;
-  &lt;li&gt;What packages/dependencies? (we provide examples!)&lt;/li&gt;
-  &lt;li&gt;Random seed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We note that a good replication package uses a minimal number of automated scripts, with no manual interventions required unless absolutely unavoidable.&lt;/p&gt;
-
-&lt;p&gt;The template README has been battle-tested in our attempts (across all of our journals AEA/Restud/EJ/CJE) to assess (computationally, or just by reading) the READMEs of more than 500 articles. If we suggest you provide the information, it’s because it is useful.&lt;/p&gt;
-
-&lt;h2 id=&quot;follow-us&quot;&gt;Follow us&lt;/h2&gt;
-
-&lt;p&gt;Originally posted on Twitter at &lt;a href=&quot;https://twitter.com/AeaData/status/1336346795878850561&quot;&gt;https://twitter.com/AeaData/status/1336346795878850561&lt;/a&gt;.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="README" /><category term="Twitter" /><summary type="html">We have released the first version of a template README for social sciences at https://social-science-data-editors.github.io/template_README/.</summary></entry></feed>
+&lt;p&gt;Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at &lt;a href=&quot;https://doi.org/10.5281/zenodo.4311917&quot;&gt;Brookings&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.5281/zenodo.4281633&quot;&gt;St. Louis Fed&lt;/a&gt; (also &lt;a href=&quot;https://research.stlouisfed.org/conferences/beyond-the-numbers/&quot;&gt;video&lt;/a&gt;.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Fireside Chat" /><summary type="html">In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.</summary></entry><entry><title type="html">A discussion about various things</title><link href="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions" rel="alternate" type="text/html" title="A discussion about various things" /><published>2021-01-05T00:00:00-05:00</published><updated>2021-01-05T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/Answers-to-questions</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-05-answers-to-questions">&lt;p&gt;Moved to later post.&lt;/p&gt;</content><author><name>AEA Data Editor</name></author><summary type="html">Moved to later post.</summary></entry></feed>
