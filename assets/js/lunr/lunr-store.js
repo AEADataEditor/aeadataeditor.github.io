@@ -298,4 +298,28 @@ var store = [{
         "tags": [],
         "url": "/talks/2021-09-17-cesifo",
         "teaser": null
+      },{
+        "title": "Data Science Tools Workshop: Working with confidential data",
+        "excerpt":"Abstract   Tutorial on reproducible practices, in particular when data are confidential. Can be interactive, with R. Handles acquiring and posting data via an API.         Web presentation  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-10-29-mont2",
+        "teaser": null
+      },{
+        "title": "Improving Transparency and Reproducibility: Lessons from 1,000 economics papers",
+        "excerpt":"Abstract   Presentation at the University of Wisconsin - Madison’s Center for Demography of Health and Aging in the context of the Demography Training Seminar.      Slides    ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-12-01-wisconsin",
+        "teaser": null
+      },{
+        "title": "Panel: Challenges and Opportunities of Reproducibility when Data are Proprietary",
+        "excerpt":"Abstract   Presentation at the NBER conference on “Challenges and Opportunities of Reproducibility when Data are Proprietary”   The meeting will be livestreamed on the NBER’s YouTube channel. Anybody who might be interested may watch the presentations at   https://www.youtube.com/channel/UC79ELlHFewHXj5XDBcRloUQ  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-12-10-nber",
+        "teaser": null
+      },{
+        "title": "Enhancing accessibility and reproducibility in scientific publications: Improvements on both ends of the pipeline",
+        "excerpt":"Abstract   Presentation in the Statistics Department (Research Colloquium)  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-12-10-purdue",
+        "teaser": null
       }]
