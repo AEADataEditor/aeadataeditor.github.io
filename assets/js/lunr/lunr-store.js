@@ -322,4 +322,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2021-12-10-purdue",
         "teaser": null
+      },{
+        "title": "Overview of reproducibility and replicability in economics, with a side trip to provenance",
+        "excerpt":"Abstract   Presentation at the Banco de Portugal Workshop on Reproducibility of Scientific Results.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-12-15-banco-de-portugal",
+        "teaser": null
       }]
