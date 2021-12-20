@@ -8,7 +8,7 @@ var store = [{
         "title": "Licensing Guidance",
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/licensing-guidance",
+        "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
         "title": "A discussion about various things",
