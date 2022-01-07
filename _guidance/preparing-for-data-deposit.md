@@ -26,6 +26,7 @@ manuscript.
 
 All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
 
+- [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)
 - [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - [Guidance on how to cite the data you collected](data-deposit-aea.html#citing-your-deposit)
 - [Some additional considerations](/posts/2021-03-31-what-data)
@@ -41,7 +42,11 @@ In rare circumstances, when there are too many data citations to accomodate succ
 
 #### Data citations and Data Availability Statements
 
-In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [additional guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html).
+In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset:
+
+> Bureau of Labor Statistics. 2000–2010. “Current Employment Statistics: Colorado, Total Nonfarm, Seasonally adjusted - SMS08000000000000001.” *United States Department of Labor*. http://data.bls.gov/cgi-bin/surveymost?sm+08 (accessed February 9, 2011).
+
+However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [general guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html), and [some examples in the template README](https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements).
 
 
 ### Ideal structure of a replication package
