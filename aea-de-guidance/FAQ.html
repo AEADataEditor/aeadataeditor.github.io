@@ -353,6 +353,7 @@
 
 <script>
 function myFunction() {
+  const date = new Date();
   var doipre = "http://doi.org/10.3886/E";
   var titlepre = "Data and code for:";
   var str0 = document.getElementById('myForm').elements[0].value;
@@ -361,7 +362,7 @@ function myFunction() {
   var str3 = document.getElementById('myForm').elements[3].value;
   var title = titlepre.concat(str0);
   var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. " + date.getFullYear() + ". \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
   document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
   
 }
