@@ -293,6 +293,18 @@ var store = [{
         "url": "/talks/replicability-presentation-2021-1",
         "teaser": null
       },{
+        "title": "Implementing Increased Transparency and Reproducibility in Economics: Lessons for Register based Research",
+        "excerpt":"Abstract   Presentation at the Virtual Workshop on “Research with German and Norwegian Register Data on Family Economics” on lessons learned while implementing the AEA’s Data and Code Availability Policy about conducting transparent and reproducible research using administrative (register) data.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-05-26-register",
+        "teaser": null
+      },{
+        "title": "Tutorial: Data Sharing and Archiving for Reproducibility",
+        "excerpt":"Abstract   Tutorial at “Research Transparency and Reproducibility Training (RT2)” organized by BITSS on how to share data in a persistent, reproducible way, with an R-based tutorial.   Live presentation materials are at labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/. Associated Github repository is at github.com/labordynamicsinstitute/tutorial-data-sharing-archiving-2021.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2021-09-03-rt2",
+        "teaser": null
+      },{
         "title": "Firm-Academic Research Collaborations in Economics - Journals’ Perspective",
         "excerpt":"Abstract   Short talk on the reproducibility, transparency in economic research involving firm (private) data.       PDF/PPTX Google Presentation  ","categories": [],
         "tags": [],
@@ -327,5 +339,11 @@ var store = [{
         "excerpt":"Abstract   Presentation at the Banco de Portugal Workshop on Reproducibility of Scientific Results.  ","categories": [],
         "tags": [],
         "url": "/talks/2021-12-15-banco-de-portugal",
+        "teaser": null
+      },{
+        "title": "Reproducibility and Transparency versus Privacy and Confidentiality: Reflections from a Data Editor",
+        "excerpt":"Abstract   Presentation by Lars Vilhuber at ASSA 2022 in the Journal of Econometrics Session: “Econometrics and Data in the 21st Century: Reproducibility and Transparency versus Privacy and Confidentiality”   Video recording   Video available on the Youtube. Slides on Google (archive coming)  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-01-09-assa",
         "teaser": null
       }]
