@@ -41,12 +41,6 @@ var store = [{
         "url": "/aea-de-guidance/",
         "teaser": null
       },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
-        "teaser": null
-      },{
         "title": "Preparing your files for verification",
         "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
         "tags": [],
@@ -75,6 +69,12 @@ var store = [{
         "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
@@ -342,7 +342,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Reproducibility and Transparency versus Privacy and Confidentiality: Reflections from a Data Editor",
-        "excerpt":"Abstract   Presentation by Lars Vilhuber at ASSA 2022 in the Journal of Econometrics Session: “Econometrics and Data in the 21st Century: Reproducibility and Transparency versus Privacy and Confidentiality”   Video recording   Video available on the Youtube. Slides on Google (archive coming)  ","categories": [],
+        "excerpt":"Abstract   Presentation by Lars Vilhuber at ASSA 2022 in the Journal of Econometrics Session: “Econometrics and Data in the 21st Century: Reproducibility and Transparency versus Privacy and Confidentiality”   Video recording   Video available on the Youtube. Slides on Google (archived as  )  ","categories": [],
         "tags": [],
         "url": "/talks/2022-01-09-assa",
         "teaser": null
