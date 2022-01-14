@@ -7,6 +7,11 @@ date: 2021-04-08
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
 is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
 
+### Key principle: Computational empathy
+
+> - Keep in mind: The replication package is meant to be run by others, who have none of the setup, packages, and data that the original author might have, on computers that may not run the same operating system. 
+> - Treat the replication package as one of the methods to convey the methods that lead to your manuscript's conclusions. Consider it a teaching tool, targeting young graduate students who may not be in your field.
+
 ### Describing the contents of your replication package
 
 Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
@@ -53,7 +58,7 @@ However, in many other cases where the URL does not lead directly to the dataset
 
 The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete "deposits", or only subdirectories thereof. However, deposits of replication packages at other trusted repositories are also accepted, as long as they satisfy the requirements described here.
 
-> Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform ("import from ZIP"). 
+> Users must not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform ("import from ZIP"). The exception is when there are [more than 1,000 files in the repository](#structure-in-the-presence-of-more-than-1000-files).
 
 The code and data should run as downloaded from the repository, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.
 
@@ -92,7 +97,7 @@ While running a small number of distinct programs separately  is acceptable (in 
 
 #### Structure in the presence of more than 1,000 files
 
-As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code should be unzipped, though we still insist on the "smallest possible configuration".
+As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code must be unzipped, though we still insist on the "smallest possible configuration".
 
 In most cases, it is a particular directory that is the primary culprit. Say you have
 
