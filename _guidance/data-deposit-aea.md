@@ -133,21 +133,23 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Some caveats
 
-- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
-- If you have **more than 1,000 files** in your deposit, talk to us before uploading.
+- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized, though we may also suggest other, more suitable repositories. Size of the deposit is **never** a reason not to provide materials, as we have found solutions for every single case so far.
+- If you have **more than 1,000 files** in your deposit, talk to us before uploading, after consulting [the guidance in the previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-more-than-1000-files).
 - The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.
 
 #### Restricted-access data
 
 Do not upload data that you do not want published! 
 
-- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
+- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published.
 
-> Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
+> - Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
+> - See [instructions in previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data)
 
 - If you can share the data more broadly, but want to control access, you **must** create a separate deposit for the parts of the data that are sensitive  while keeping the code, and any non-sensitive data, in the "primary" deposit as described on the present page. Your README must describe how to combine the two deposits.
 
 > - Consult the [Creating separate linked data archives](creating-separate-data-deposit) page for details on how and where to create a separate data deposit.
+> - See the "[Depositing Data for the Greater Good](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html)" page at the Social Science Data Editors website.
 > - Consult the [Accessing Restricted Data Through openICPSR](https://www.openicpsr.org/openicpsr/accessRD) page about the process at openICPSR, but other repositories may be acceptable.
 
 #### Tips
