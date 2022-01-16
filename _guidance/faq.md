@@ -21,38 +21,8 @@ date: 2021-04-08
 Give it a try:
 
 
-<form id="myForm">
-<table>
- <tr><td>Article title:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Authors:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Project number:</td> <td> <input type="text" name="projectid"></td></tr>
-  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1"></td></tr>
-  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI"></td></tr>
-  </table>
-</form>
+{% include deposit-doi.html %}
 
-<p id="DOI"></p>
-<table>
-<tr><td>
-<p id="citation"></p>
-</td></tr></table>
-
-<script>
-function myFunction() {
-  const date = new Date();
-  var doipre = "http://doi.org/10.3886/E";
-  var titlepre = "Data and code for:";
-  var str0 = document.getElementById('myForm').elements[0].value;
-  var authors = document.getElementById('myForm').elements[1].value;
-  var str2 = document.getElementById('myForm').elements[2].value;
-  var str3 = document.getElementById('myForm').elements[3].value;
-  var title = titlepre.concat(str0);
-  var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. " + date.getFullYear() + ". \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
-  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
-  
-}
-</script>
 
 ### How do I cite my own data and code supplement?
 
