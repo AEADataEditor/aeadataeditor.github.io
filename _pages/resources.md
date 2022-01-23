@@ -10,7 +10,7 @@ feature_row:
   - image_path: /images/noun-talk-3836230.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
     title: "Discussion"
-    excerpt: "Informative [posts](/year-archive/) and [talks](/talks/)by the AEA Data Editor."
+    excerpt: "Informative [posts](/year-archive/) and [talks](/talks/) by the AEA Data Editor."
     btn_label: "Find blog posts"
     btn_class: "btn--primary"
     url: "/year-archive/"
@@ -37,7 +37,7 @@ feature_row2:
     btn_label: "Go to ICPSR"
     btn_class: "btn--primary"
   - title: "Code resources"
-    excerpt: 'Much useful code - for researchers starting new projects, or those just about to submit - can be found on the Data Editor Github.'
+    excerpt: 'Much useful code - for researchers starting new projects, or those just about to submit - can be found on the [AEA Data Editor Github](https://github.com/AEADataEditor/). We keep our own code there, including the [evaluation template](https://github.com/AEADataEditor/replication-template).'
     url: "https://github.com/AEADataEditor/"
     image_path: /images/github-frontpage.png
     btn_label: "Go there now"
