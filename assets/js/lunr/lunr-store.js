@@ -1,4 +1,10 @@
 var store = [{
+        "title": "A discussion about various things",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
+        "teaser": null
+      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -9,12 +15,6 @@ var store = [{
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/Licensing_guidance.html",
-        "teaser": null
-      },{
-        "title": "A discussion about various things",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -39,6 +39,12 @@ var store = [{
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Preparing your files for verification",
@@ -69,12 +75,6 @@ var store = [{
         "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
