@@ -23,16 +23,16 @@ feature_row:
     url: "/aea-de-guidance/"
     btn_label: "Read More"
     btn_class: "btn--primary btn--center"
-  - image_path: /images/noun_talk_3836230.png
+  - image_path: /images/noun-settings-3836219.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
-    title: "Discussion"
-    excerpt: "FAQ, talks, and informative posts by the AEA Data Editor"
+    title: "Resources"
+    excerpt: "Technical resources, FAQs, talks, and informative posts by the AEA Data Editor"
     btn_label: "Read More"
     btn_class: "btn--primary"
-    url: "/year-archive/"
+    url: "/resources/"
 feature_row2:
   - title: "AEA Data and Code Repository"
-    excerpt: 'The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). '
+    excerpt: 'The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). Also find our [auxiliary repository at Zenodo](https://zenodo.org/communities/aeajournals/). '
     url: "https://www.openicpsr.org/openicpsr/search/aea/studies"
     image_path: /images/icpsr-start-process-700x433.png
     btn_label: "Go there now"
