@@ -43,7 +43,7 @@ feature_row2:
     btn_label: "Go there now"
     btn_class: "btn--primary btn--center"
   - title: "Compute containers"
-    excerpt: 'Compute containers - docker, singularity - are useful and being used by the Data Editor. Find pre-compiled containers at [dataeditors Docker Hub](https://hub.docker.com/u/dataeditors), project-specific containers at [aeadataeditor Docker Hub](https://hub.docker.com/u/aeadataeditor), and at [Sylabs.io library](https://cloud.sylabs.io/library/vilhuberlars/dataeditors/stata17)'
+    excerpt: 'Compute containers - docker, singularity - are useful and being used by the Data Editor. Find pre-compiled containers at [dataeditors Docker Hub](https://hub.docker.com/u/dataeditors), project-specific containers at [aeadataeditor Docker Hub](https://hub.docker.com/u/aeadataeditor), and at [Sylabs.io library](https://cloud.sylabs.io/library/larsvilhuber/dataeditors/stata17)'
     url: "https://hub.docker.com/u/dataeditors"
     image_path: /images/docker-frontpage.png
     btn_label: "Go to Docker Hub"
