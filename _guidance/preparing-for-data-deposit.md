@@ -7,6 +7,11 @@ date: 2021-04-08
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
 is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
 
+### Key principle: Computational empathy
+
+> - Keep in mind: The replication package is meant to be run by others, who have none of the setup, packages, and data that the original author might have, on computers that may not run the same operating system. 
+> - Treat the replication package as one of the methods to convey the methods that lead to your manuscript's conclusions. Consider it a teaching tool, targeting young graduate students who may not be in your field.
+
 ### Describing the contents of your replication package
 
 Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
@@ -26,6 +31,7 @@ manuscript.
 
 All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.
 
+- [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)
 - [Guidance for data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - [Guidance on how to cite the data you collected](data-deposit-aea.html#citing-your-deposit)
 - [Some additional considerations](/posts/2021-03-31-what-data)
@@ -41,14 +47,18 @@ In rare circumstances, when there are too many data citations to accomodate succ
 
 #### Data citations and Data Availability Statements
 
-In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset. However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [additional guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html).
+In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset:
+
+> Bureau of Labor Statistics. 2000–2010. “Current Employment Statistics: Colorado, Total Nonfarm, Seasonally adjusted - SMS08000000000000001.” *United States Department of Labor*. http://data.bls.gov/cgi-bin/surveymost?sm+08 (accessed February 9, 2011).
+
+However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [general guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html), and [some examples in the template README](https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements).
 
 
 ### Ideal structure of a replication package
 
 The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete "deposits", or only subdirectories thereof. However, deposits of replication packages at other trusted repositories are also accepted, as long as they satisfy the requirements described here.
 
-> Users should not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform ("import from ZIP"). 
+> Users must not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform ("import from ZIP"). The exception is when there are [more than 1,000 files in the repository](#structure-in-the-presence-of-more-than-1000-files).
 
 The code and data should run as downloaded from the repository, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.
 
@@ -87,7 +97,7 @@ While running a small number of distinct programs separately  is acceptable (in 
 
 #### Structure in the presence of more than 1,000 files
 
-As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code should be unzipped, though we still insist on the "smallest possible configuration".
+As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code must be unzipped, though we still insist on the "smallest possible configuration".
 
 In most cases, it is a particular directory that is the primary culprit. Say you have
 

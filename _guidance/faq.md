@@ -21,43 +21,14 @@ date: 2021-04-08
 Give it a try:
 
 
-<form id="myForm">
-<table>
- <tr><td>Article title:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Authors:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Project number:</td> <td> <input type="text" name="projectid"></td></tr>
-  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1"></td></tr>
-  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI"></td></tr>
-  </table>
-</form>
+{% include deposit-doi.html %}
 
-<p id="DOI"></p>
-<table>
-<tr><td>
-<p id="citation"></p>
-</td></tr></table>
-
-<script>
-function myFunction() {
-  var doipre = "http://doi.org/10.3886/E";
-  var titlepre = "Data and code for:";
-  var str0 = document.getElementById('myForm').elements[0].value;
-  var authors = document.getElementById('myForm').elements[1].value;
-  var str2 = document.getElementById('myForm').elements[2].value;
-  var str3 = document.getElementById('myForm').elements[3].value;
-  var title = titlepre.concat(str0);
-  var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
-  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
-  
-}
-</script>
 
 ### How do I cite my own data and code supplement?
 
 If you created your own data (experiments, surveys, etc.), you should do one of two things:
 
-- If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository (see [this guidance at the Social Science Data Editor website)[https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html]. This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the [Social Science Data Editor's guide to Data and Code Hosting](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html). Once deposited, and published, the data should be cited in your manuscript, in accordance with the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
+- If you believe that you will re-use the data as-is, and in particular if you would like others to also use the data, we strongly suggest creating a separate data deposit at a data repository (see [this guidance at the Social Science Data Editor website](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html). This deposit does not need to be at the AEA Data and Code Repository - it can be at any trusted repository. Have a look at the [Social Science Data Editor's guide to Data and Code Hosting](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html). Once deposited, and published, the data should be cited in your manuscript, in accordance with the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 - If you only intend to write this one manuscript with the data, you should cite the manuscript's companion data and code deposit at the AEA Data and Code repository. Since that deposit is (typically) not yet published, you need to manually construct the reference, as per the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references) (an example is given there). The DOI for your forthcoming data and code deposit can be constructed as outlined in the previous FAQ.
 
 

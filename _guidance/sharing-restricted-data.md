@@ -4,9 +4,17 @@ toc: true
 date: 2021-04-08
 ---
 
-In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data").  Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data, but sometimes, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
+In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data").  
+
+Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data, but sometimes, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
 
 This page describes some tips and methods of doing so, and considerations. Please read it carefully.
+
+### DO's and DON'Ts
+
+- Do NOT transfer data that you have no rights to transfer. Always carefully read your data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed.
+- Do NOT upload the restricted-access data to openICPSR. 
+- DO structure the repository to take into the account the data that cannot be published. See this [note](https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data).
 
 ### Permissions
 
@@ -46,9 +54,15 @@ The AEA Data Editor is an employee of an educational institution, not the AEA it
 
 #### Preferred data access
 
-- If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA. 
+- If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption. 
+- The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA. 
 - If the data do require higher security protocols, the AEA Data Editor has access to [high-security remote-access environments at Cornell University](https://ciser.cornell.edu/data/secure-data-services/cradc/), though setting up access may require additional time (and may require approval by Cornell's Office of Sponsored Research).
-- If your DUA/NDA allows it, you can share data with the AEA Data Editor using other means, such as Dropbox, Google Drive, OneDrive, etc.
+
+#### Mechanics of data transfer
+
+- All data transfers should be compliant with your DUA/NDA.
+- By default, if you have signalled that you can provide data privately, the Data Editor will send you an email containing a link to a secure upload form, where you can provide the data
+- You can share data with the AEA Data Editor using other means, such as your own Dropbox, Google Drive, OneDrive, etc. subscription.
 - If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).
 
 All of these methods have been successfully used in the past.

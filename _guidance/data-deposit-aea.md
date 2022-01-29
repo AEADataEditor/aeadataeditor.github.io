@@ -133,21 +133,23 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Some caveats
 
-- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
-- If you have **more than 1,000 files** in your deposit, talk to us before uploading.
+- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized, though we may also suggest other, more suitable repositories. Size of the deposit is **never** a reason not to provide materials, as we have found solutions for every single case so far.
+- If you have **more than 1,000 files** in your deposit, talk to us before uploading, after consulting [the guidance in the previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-more-than-1000-files).
 - The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.
 
 #### Restricted-access data
 
 Do not upload data that you do not want published! 
 
-- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. 
+- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published.
 
-> Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
+> - Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
+> - See [instructions in previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data)
 
 - If you can share the data more broadly, but want to control access, you **must** create a separate deposit for the parts of the data that are sensitive  while keeping the code, and any non-sensitive data, in the "primary" deposit as described on the present page. Your README must describe how to combine the two deposits.
 
 > - Consult the [Creating separate linked data archives](creating-separate-data-deposit) page for details on how and where to create a separate data deposit.
+> - See the "[Depositing Data for the Greater Good](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html)" page at the Social Science Data Editors website.
 > - Consult the [Accessing Restricted Data Through openICPSR](https://www.openicpsr.org/openicpsr/accessRD) page about the process at openICPSR, but other repositories may be acceptable.
 
 #### Tips
@@ -181,7 +183,7 @@ prog_directory/
 README.pdf
 LICENSE.txt
 ```
-(the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses upon publication. See [our licensing guidance](Licensing_guidance.md) for other options).
+(the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses upon publication. See [our licensing guidance](Licensing_guidance) for other options).
 
 ### Submitting to the Data Editor
 
@@ -248,39 +250,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 
 #### Give it a try
 
-<form id="myForm">
-<table>
- <tr><td>Article title:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Authors:</td> <td> <input type="text" name="title"></td></tr>
-  <tr><td>Project number:</td> <td> <input type="text" name="projectid"></td></tr>
-  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1"></td></tr>
-  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI"></td></tr>
-  </table>
-</form>
-
-<p id="DOI"></p>
-<table>
-<tr><td>
-<p id="citation"></p>
-</td></tr></table>
-
-<script>
-function myFunction() {
-  const date = new Date();
-  var doipre = "http://doi.org/10.3886/E";
-  var titlepre = "Data and code for:";
-  var str0 = document.getElementById('myForm').elements[0].value;
-  var authors = document.getElementById('myForm').elements[1].value;
-  var str2 = document.getElementById('myForm').elements[2].value;
-  var str3 = document.getElementById('myForm').elements[3].value;
-  var title = titlepre.concat(str0);
-  var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. " + date.getFullYear() + ". \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
-  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
-  
-}
-</script>
-
+{% include deposit-doi.html %}
 
 ### Ready to submit manuscript
 
