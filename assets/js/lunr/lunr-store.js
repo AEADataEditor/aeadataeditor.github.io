@@ -1,4 +1,10 @@
 var store = [{
+        "title": "Licensing Guidance",
+        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/Licensing_guidance.html",
+        "teaser": null
+      },{
         "title": "A discussion about various things",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -9,12 +15,6 @@ var store = [{
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/LICENSE-template.html",
-        "teaser": null
-      },{
-        "title": "Licensing Guidance",
-        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
