@@ -41,3 +41,14 @@ I did take note of the GESIS notebooks, not because of docker, but because of th
 Not entirely correct. macOS never runs containers natively, because fundamentally, containers are Linux systems. Containers also do not run natively on Windows. That has nothing to do with the processor, and everything to do with capabilities of the OS (many VM solutions also initially failed on M1 processors). Fundamentally, Docker on macOS and on Windows runs in a Virtual Machine hosting Linux. But that VM is standardized, and made to be as efficient as possible by the OS vendor (or the Docker/Singularity folks). If you can run Linux on mac or Windows, you can run singularity (maybe docker) without vendor support. If you can't, then it doesn't work. That is not a fundamental problem: containers are fundamentally not meant to run on desktop (developer) machines at production level quality. They are meant to run in the cloud.
 
 But that means that the layer the user specifies (container) is "light", all the heavy lifting is done by the software. Because containers are a fundamental building block of the broader web economy, they continue to be well-maintained, and developers continue to be supported. You can be assured that the M1 problem has a solution, not because a bunch of economists wants to run it, but because every major software development company with thousands of developers need it to work...
+
+## Computing in the Cloud
+
+From easy to complex/sophisticated solutions, all except for the bare-bones cloud resources.
+
+- https://codeocean.com/: 10h free with academic email - Matlab, Stata, and any of the usual open source things
+- https://wholetale.org/ : free. Can use Google or ORCID to sign up. Matlab, Stata, and the usual open source things
+- https://github.com/features/codespaces  : up to 32 core/64GB RAM for pennies per hour. I think it requires you to have a Github Pro subscription or be part of an 'organization'. Base is $4/month, plus compute/storage costs. A bit more setup, but easy enough - here's one with Stata enabled that I created. It is even easier with R.
+- https://www.paperspace.com/ Starts to be a bit more complex, but works. $
+- https://www.digitalocean.com/ also has easy to use "droplets", there's even a R package to run it from local to cloud: https://www.r-bloggers.com/2015/05/teaching-r-course-use-analogsea-to-run-your-customized-rstudio-in-digital-ocean/
+- Google Colab
