@@ -86,13 +86,13 @@ On the right, under " Change status", choose "Recall submission"
 ![recall](/images/recall-submission-icpsr.png)
 You should then be able to upload and make changes.
 
-Once you are done, choose "Re-submit" from the same menu.
+Once you are done, choose "[Re-submit](data-deposit-aea.html#submitting-to-the-data-editor)" from the same menu.
 
 ####  The Data Editor staff can request revisions
 
 If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.
 
-Again, once you are done, choose "Re-submit" from the same menu as above.
+Again, once you are done, choose "[Re-submit](data-deposit-aea.html#submitting-to-the-data-editor)" from the same menu as above.
 
 ### I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication ... couple of minor issues ... forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.
 
