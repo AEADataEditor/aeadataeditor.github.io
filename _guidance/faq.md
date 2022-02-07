@@ -84,6 +84,7 @@ When you first submitted to the AEA, your deposit became locked. There are two w
 On the right, under " Change status", choose "Recall submission"
 
 ![recall](/images/recall-submission-icpsr.png)
+
 You should then be able to upload and make changes.
 
 Once you are done, choose "[Re-submit](data-deposit-aea.html#submitting-to-the-data-editor)" from the same menu.
