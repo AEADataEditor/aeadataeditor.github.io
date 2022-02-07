@@ -191,7 +191,7 @@ Once you are satisfied that all data files are present, are complete, and all me
 
 ![submit project](/images/project-submit.png)
 
-Choose "Submit to AEA" under "Change Status".
+Choose "Submit to AEA" (or "Resubmit") under "Change Status".
 
 #### Submission questions
 
