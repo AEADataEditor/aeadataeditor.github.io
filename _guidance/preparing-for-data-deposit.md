@@ -204,7 +204,7 @@ For less frequently used software, provide a URL where the software can be obtai
 
 By default, the openICPSR deposit attributes a [Creative Commons Attribution 4.0 International Public License](http://creativecommons.org/licenses/by/4.0/) to your deposit, but you can choose a different license. If you do, you must add a file called "LICENSE.txt" (by convention capitalized) to the deposit. 
 
-- See our [Licensing guidance](licensing-guidance) for more details.
+- See our [Licensing guidance](Licensing_guidance) for more details.
 
 
 ### Re-run your replication package
