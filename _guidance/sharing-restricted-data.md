@@ -1,10 +1,12 @@
 ---
-title: Sharing restricted-access data with the AEA Data Editor
+title: Privately sharing restricted-access data with the AEA Data Editor
 toc: true
 date: 2021-04-08
 ---
 
 In certain cases, you may be able to share data you obtained from somebody ("data provider") with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data ("privately sharing data").  
+
+> If you are able to more broadly share sensitive data with any user who can provide, for instance, IRB approval, please see [this other guide on creating a separate data deposit](creating-separate-data-deposit).
 
 Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data, but sometimes, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
 
