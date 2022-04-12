@@ -71,8 +71,8 @@ var store = [{
         "url": "/aea-de-guidance/reproducibility-checks",
         "teaser": null
       },{
-        "title": "Sharing restricted-access data with the AEA Data Editor",
-        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). Note that the ability to privately provide the data does not preclude the possibility...","categories": [],
+        "title": "Privately sharing restricted-access data with the AEA Data Editor",
+        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
