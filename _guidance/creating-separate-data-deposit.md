@@ -6,7 +6,7 @@ date: 2021-07-08
 ---
 
 
-Every time we see that a lot of effort went into creating a data resource, we don't want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability.
+Every time we see that a lot of effort went into creating a data resource, we don't want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant for situations where some or all of the data may be restricted, but the code is meant to be public (such as to ensure compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy)).
 
 ## Who should read this
 
@@ -43,6 +43,8 @@ Suppose that, as part of your research, you have created a "data asset" - someth
 - a clean, usable version of otherwise complex, costly, or messy data
 - a usable version of historically available, but not digitized data
 
+It may also be the case that you are able to redistribute the sensitive data you have collected, but need to ensure that subsequent users get appropriate IRB approval. 
+
 ## What you should do: Creating and using a separate data deposit
 
 1. Create a separate (new) deposit at one of the trusted repositories. This is separate from your article's replication package. We'll call this the "DATA deposit."
@@ -52,6 +54,7 @@ Suppose that, as part of your research, you have created a "data asset" - someth
     - Provide the raw data files (if not archived elsewhere - but that's the point, most often)
     - Create a simple README that summarizes the processing - does not need to be long, but should be complete.
     - Choose a license, which might include a requirement to cite your paper which first uses these data (also see our [licensing guidance](Licensing_guidance)). For data deposits like this, we suggest CC-BY (standard on many trusted repositories), or CC-BY-NC (no commercial use). The license should be broad enough to allow others to re-use the data, specific enough to have them give you credit (if you so desire). (see below for **possible restrictions**) Note that a license is just a default permission - parties that wish to use the data but who do not conform to your license (e.g. commercial entities) can still contact you, and you retain the right to give them a custom license that is in addition to the default license. Consult your university's counsel if in doubt. 
+    - If the deposit is meant to be restricted in some way, you may need to check certain options. For instance, on openICPSR, you may need to select the option to redistribute as a "restricted" dataset.
     - Also provide any scripts you used, if any. If some of the processing was manual, describe the manual processing in the README, including possibly providing instructions to RAs or staff. This is about transparency, and users will use your data if they trust that you did the "right thing". 
     - Upload the cleaned files as well - this is the value-added data you created. Remember to label/document each variable, to remove unnecessary (temporary processing) variables. 
 2. Then publish:
@@ -109,3 +112,9 @@ A note that such curation can take significant time (several months). It may als
 ### Restrictions
 
 When creating a separate data deposit because of ethical or legal requirements, you may want to enforce an application process and/or provide a more restricted license. The AEA requires that such licenses permit at least the publication of reproducibility checks, encourages licenses that permit broader re-use, and strongly encourages that the approval process be as simple and objective as possible, ideally not involving the original authors.
+
+The following example uses two linked deposits: 
+
+- [Deryugina, Shurchkov, and Stearns (2021)](https://doi.org/10.1257/pandp.20211017) Paper
+- [Code deposit](https://doi.org/10.3886/E131761V1): this deposit can be freely downloaded
+- [Deposit of restricted-access data](https://doi.org/10.3886/E139263V1): this deposit contains the sensitive data, and requires that interested parties apply, and demonstrate IRB approval. It is, however, available to anybody who qualifies.
