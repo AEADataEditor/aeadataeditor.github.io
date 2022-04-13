@@ -1,0 +1,756 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Some remarks on coding when data are confidential - Office of the AEA Data Editor</title>
+<meta name="description" content="Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (here). What I did not address, and what comes up regularly, is how to write code when some code and/or data are confidential.  What is confidential code, you say?     In the United States, some variables on IRS databases are considered super-top-secret. So you can’t name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as “Title 26 variables”). Not sure why that continues to be perceived as a problem, but until the law changes, that’s one possible constraint.   Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.   You used a look-up table hard-coded in your Stata code to anonymize the sensitive identifiers (replace anoncounty=1 if county=&quot;Tompkins, NY&quot;). A really bad idea, but yes, you probably want to hide that.   Your IT specialist or misguided disclosure officer thinks publishing the exact path to your copy of the confidential 2010 Census data, e.g., “/data/census/2010”, is a security risk and refuses to let that code through.   You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.   So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?  Example  This will serve as an example throughout this post. I’m focusing on Stata, because so many economists use Stata, but none of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. Assume that variables q2f and q3e are considered confidential by some rule, and that the minimum cell size 10 is also confidential.  set seed 12345 use q2f q3e county using &quot;/data/economic/cmf2012/extract.dta&quot;, clear gen logprofit = log(q2f) by county: collapse (count)  n=q3e (mean) logprofit drop if n&lt;10 graph twoway n logprofit   Do not do this  A bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:  set seed NNNNN use &lt;removed vars&gt; county using &quot;&lt;removed path&gt;&quot;, clear gen logprofit = log(XXXX) by county: collapse (count)  n=XXXX (mean) logprofit drop if n&lt;XXXX graph twoway n logprofit   The redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.  Better  Simply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here’s the confidential version of the file:  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   and this would be the released file, part of the replication package:  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   While the code won’t run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., q2f, anywhere in the code.  Best  Note that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing (“analysis”) part of the code.  We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).  Main file main.do:  //============ confidential parameters ============= capture confirm file &quot;include/confparms.do&quot; if _rc == 0 {     // file exists     include &quot;include/confparms.do&quot; } else {     di in red &quot;No confidential parameters found&quot; } //============ end confidential parameters =========  //============ non-confidential parameters ========= global safepath &quot;releasable&quot; cap mkdir &quot;$safepath&quot;  //============ end parameters ======================  // ::::  Process only if confidential data is present   capture confirm &quot;${confpath}/extract.dta&quot; if _rc == 0 {    set seed $confseed    use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear    gen logprofit = log($confprofit)    by county: collapse (count)  n=$confemploy (mean) logprofit    drop if n&lt;$confmincell    save &quot;${safepath}/figure1.dta&quot;, replace } else { di in red &quot;Skipping processing of confidential data&quot; }  //============ at this point, the data is releasable ====== // ::::  Process always   use &quot;${safepath}/figure1.dta&quot;, clear graph twoway n logprofit graph export &quot;${safepath}/figure1.pdf&quot;, replace   Auxiliary file include/confparms.do (not released)  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters =========   Auxiliary file include/confparms_template.do (this is released)  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters =========   And after a successful run, the files releasable/figure1.dta and releasable/figure1.pdf are available, and can be reviewed and released.  Thus, the replication package would have:  main.do README.md include/confparms_template.do releasable/figure1.dta releasable/figure1.pdf   Voilà! The resulting non-confidential package will run to produce the analysis (figure1.pdf) based on the distributable, non-confidential analysis file (analysis.dta). It can also be very simply brought back into the confidential environment, where either the replicator creates a new confparms.do, or copies the confidential confparms.do from the original author into their own working area.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Some remarks on coding when data are confidential">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential">
+
+
+  <meta property="og:description" content="Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (here). What I did not address, and what comes up regularly, is how to write code when some code and/or data are confidential.  What is confidential code, you say?     In the United States, some variables on IRS databases are considered super-top-secret. So you can’t name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as “Title 26 variables”). Not sure why that continues to be perceived as a problem, but until the law changes, that’s one possible constraint.   Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.   You used a look-up table hard-coded in your Stata code to anonymize the sensitive identifiers (replace anoncounty=1 if county=&quot;Tompkins, NY&quot;). A really bad idea, but yes, you probably want to hide that.   Your IT specialist or misguided disclosure officer thinks publishing the exact path to your copy of the confidential 2010 Census data, e.g., “/data/census/2010”, is a security risk and refuses to let that code through.   You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.   So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?  Example  This will serve as an example throughout this post. I’m focusing on Stata, because so many economists use Stata, but none of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. Assume that variables q2f and q3e are considered confidential by some rule, and that the minimum cell size 10 is also confidential.  set seed 12345 use q2f q3e county using &quot;/data/economic/cmf2012/extract.dta&quot;, clear gen logprofit = log(q2f) by county: collapse (count)  n=q3e (mean) logprofit drop if n&lt;10 graph twoway n logprofit   Do not do this  A bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:  set seed NNNNN use &lt;removed vars&gt; county using &quot;&lt;removed path&gt;&quot;, clear gen logprofit = log(XXXX) by county: collapse (count)  n=XXXX (mean) logprofit drop if n&lt;XXXX graph twoway n logprofit   The redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.  Better  Simply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here’s the confidential version of the file:  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   and this would be the released file, part of the replication package:  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   While the code won’t run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., q2f, anywhere in the code.  Best  Note that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing (“analysis”) part of the code.  We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).  Main file main.do:  //============ confidential parameters ============= capture confirm file &quot;include/confparms.do&quot; if _rc == 0 {     // file exists     include &quot;include/confparms.do&quot; } else {     di in red &quot;No confidential parameters found&quot; } //============ end confidential parameters =========  //============ non-confidential parameters ========= global safepath &quot;releasable&quot; cap mkdir &quot;$safepath&quot;  //============ end parameters ======================  // ::::  Process only if confidential data is present   capture confirm &quot;${confpath}/extract.dta&quot; if _rc == 0 {    set seed $confseed    use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear    gen logprofit = log($confprofit)    by county: collapse (count)  n=$confemploy (mean) logprofit    drop if n&lt;$confmincell    save &quot;${safepath}/figure1.dta&quot;, replace } else { di in red &quot;Skipping processing of confidential data&quot; }  //============ at this point, the data is releasable ====== // ::::  Process always   use &quot;${safepath}/figure1.dta&quot;, clear graph twoway n logprofit graph export &quot;${safepath}/figure1.pdf&quot;, replace   Auxiliary file include/confparms.do (not released)  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters =========   Auxiliary file include/confparms_template.do (this is released)  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters =========   And after a successful run, the files releasable/figure1.dta and releasable/figure1.pdf are available, and can be reviewed and released.  Thus, the replication package would have:  main.do README.md include/confparms_template.do releasable/figure1.dta releasable/figure1.pdf   Voilà! The resulting non-confidential package will run to produce the analysis (figure1.pdf) based on the distributable, non-confidential analysis file (analysis.dta). It can also be very simply brought back into the confidential environment, where either the replicator creates a new confparms.do, or copies the confidential confparms.do from the original author into their own working area.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Some remarks on coding when data are confidential">
+  <meta name="twitter:description" content="Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (here). What I did not address, and what comes up regularly, is how to write code when some code and/or data are confidential.  What is confidential code, you say?     In the United States, some variables on IRS databases are considered super-top-secret. So you can’t name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as “Title 26 variables”). Not sure why that continues to be perceived as a problem, but until the law changes, that’s one possible constraint.   Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.   You used a look-up table hard-coded in your Stata code to anonymize the sensitive identifiers (replace anoncounty=1 if county=&quot;Tompkins, NY&quot;). A really bad idea, but yes, you probably want to hide that.   Your IT specialist or misguided disclosure officer thinks publishing the exact path to your copy of the confidential 2010 Census data, e.g., “/data/census/2010”, is a security risk and refuses to let that code through.   You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.   So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?  Example  This will serve as an example throughout this post. I’m focusing on Stata, because so many economists use Stata, but none of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. Assume that variables q2f and q3e are considered confidential by some rule, and that the minimum cell size 10 is also confidential.  set seed 12345 use q2f q3e county using &quot;/data/economic/cmf2012/extract.dta&quot;, clear gen logprofit = log(q2f) by county: collapse (count)  n=q3e (mean) logprofit drop if n&lt;10 graph twoway n logprofit   Do not do this  A bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:  set seed NNNNN use &lt;removed vars&gt; county using &quot;&lt;removed path&gt;&quot;, clear gen logprofit = log(XXXX) by county: collapse (count)  n=XXXX (mean) logprofit drop if n&lt;XXXX graph twoway n logprofit   The redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.  Better  Simply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here’s the confidential version of the file:  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   and this would be the released file, part of the replication package:  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters ========= set seed $confseed use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear gen logprofit = log($confprofit) by county: collapse (count)  n=$confemploy (mean) logprofit drop if n&lt;$confmincell graph twoway n logprofit   While the code won’t run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., q2f, anywhere in the code.  Best  Note that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing (“analysis”) part of the code.  We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).  Main file main.do:  //============ confidential parameters ============= capture confirm file &quot;include/confparms.do&quot; if _rc == 0 {     // file exists     include &quot;include/confparms.do&quot; } else {     di in red &quot;No confidential parameters found&quot; } //============ end confidential parameters =========  //============ non-confidential parameters ========= global safepath &quot;releasable&quot; cap mkdir &quot;$safepath&quot;  //============ end parameters ======================  // ::::  Process only if confidential data is present   capture confirm &quot;${confpath}/extract.dta&quot; if _rc == 0 {    set seed $confseed    use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear    gen logprofit = log($confprofit)    by county: collapse (count)  n=$confemploy (mean) logprofit    drop if n&lt;$confmincell    save &quot;${safepath}/figure1.dta&quot;, replace } else { di in red &quot;Skipping processing of confidential data&quot; }  //============ at this point, the data is releasable ====== // ::::  Process always   use &quot;${safepath}/figure1.dta&quot;, clear graph twoway n logprofit graph export &quot;${safepath}/figure1.pdf&quot;, replace   Auxiliary file include/confparms.do (not released)  //============ confidential parameters ============= global confseed    12345 global confpath    &quot;/data/economic/cmf2012&quot; global confprofit  q2f global confemploy  q3e global confmincell 10 //============ end confidential parameters =========   Auxiliary file include/confparms_template.do (this is released)  //============ confidential parameters ============= global confseed    XXXX    // a number global confpath    &quot;XXXX&quot;  // a path that will be communicated to you global confprofit  XXX     // Variable name for profit T26 global confemploy  XXX     // Variable name for employment T26 global confmincell XXX     // a number //============ end confidential parameters =========   And after a successful run, the files releasable/figure1.dta and releasable/figure1.pdf are available, and can be reviewed and released.  Thus, the replication package would have:  main.do README.md include/confparms_template.do releasable/figure1.dta releasable/figure1.pdf   Voilà! The resulting non-confidential package will run to produce the analysis (figure1.pdf) based on the distributable, non-confidential analysis file (analysis.dta). It can also be very simply brought back into the confidential environment, where either the replicator creates a new confparms.do, or copies the confidential confparms.do from the original author into their own working area.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2022-04-13T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Some remarks on coding when data are confidential">
+    <meta itemprop="description" content="Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (here). What I did not address, and what comes up regularly, is how to write code when some code and/or data are confidential.What is confidential code, you say?  In the United States, some variables on IRS databases are considered super-top-secret. So you can’t name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as “Title 26 variables”). Not sure why that continues to be perceived as a problem, but until the law changes, that’s one possible constraint.  Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.  You used a look-up table hard-coded in your Stata code to anonymize the sensitive identifiers (replace anoncounty=1 if county=&quot;Tompkins, NY&quot;). A really bad idea, but yes, you probably want to hide that.  Your IT specialist or misguided disclosure officer thinks publishing the exact path to your copy of the confidential 2010 Census data, e.g., “/data/census/2010”, is a security risk and refuses to let that code through.  You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?ExampleThis will serve as an example throughout this post. I’m focusing on Stata, because so many economists use Stata, but none of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. Assume that variables q2f and q3e are considered confidential by some rule, and that the minimum cell size 10 is also confidential.set seed 12345use q2f q3e county using &quot;/data/economic/cmf2012/extract.dta&quot;, cleargen logprofit = log(q2f)by county: collapse (count)  n=q3e (mean) logprofitdrop if n&lt;10graph twoway n logprofitDo not do thisA bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:set seed NNNNNuse &lt;removed vars&gt; county using &quot;&lt;removed path&gt;&quot;, cleargen logprofit = log(XXXX)by county: collapse (count)  n=XXXX (mean) logprofitdrop if n&lt;XXXXgraph twoway n logprofitThe redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.BetterSimply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here’s the confidential version of the file://============ confidential parameters =============global confseed    12345global confpath    &quot;/data/economic/cmf2012&quot;global confprofit  q2fglobal confemploy  q3eglobal confmincell 10//============ end confidential parameters =========set seed $confseeduse $confprofit county using &quot;${confpath}/extract.dta&quot;, cleargen logprofit = log($confprofit)by county: collapse (count)  n=$confemploy (mean) logprofitdrop if n&lt;$confmincellgraph twoway n logprofitand this would be the released file, part of the replication package://============ confidential parameters =============global confseed    XXXX    // a numberglobal confpath    &quot;XXXX&quot;  // a path that will be communicated to youglobal confprofit  XXX     // Variable name for profit T26global confemploy  XXX     // Variable name for employment T26global confmincell XXX     // a number//============ end confidential parameters =========set seed $confseeduse $confprofit county using &quot;${confpath}/extract.dta&quot;, cleargen logprofit = log($confprofit)by county: collapse (count)  n=$confemploy (mean) logprofitdrop if n&lt;$confmincellgraph twoway n logprofitWhile the code won’t run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., q2f, anywhere in the code.BestNote that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing (“analysis”) part of the code.We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).Main file main.do://============ confidential parameters =============capture confirm file &quot;include/confparms.do&quot;if _rc == 0 {    // file exists    include &quot;include/confparms.do&quot;} else {    di in red &quot;No confidential parameters found&quot;}//============ end confidential parameters =========//============ non-confidential parameters =========global safepath &quot;releasable&quot;cap mkdir &quot;$safepath&quot;//============ end parameters ======================// ::::  Process only if confidential data is present capture confirm &quot;${confpath}/extract.dta&quot;if _rc == 0 {   set seed $confseed   use $confprofit county using &quot;${confpath}/extract.dta&quot;, clear   gen logprofit = log($confprofit)   by county: collapse (count)  n=$confemploy (mean) logprofit   drop if n&lt;$confmincell   save &quot;${safepath}/figure1.dta&quot;, replace} else { di in red &quot;Skipping processing of confidential data&quot; }//============ at this point, the data is releasable ======// ::::  Process always use &quot;${safepath}/figure1.dta&quot;, cleargraph twoway n logprofitgraph export &quot;${safepath}/figure1.pdf&quot;, replaceAuxiliary file include/confparms.do (not released)//============ confidential parameters =============global confseed    12345global confpath    &quot;/data/economic/cmf2012&quot;global confprofit  q2fglobal confemploy  q3eglobal confmincell 10//============ end confidential parameters =========Auxiliary file include/confparms_template.do (this is released)//============ confidential parameters =============global confseed    XXXX    // a numberglobal confpath    &quot;XXXX&quot;  // a path that will be communicated to youglobal confprofit  XXX     // Variable name for profit T26global confemploy  XXX     // Variable name for employment T26global confmincell XXX     // a number//============ end confidential parameters =========And after a successful run, the files releasable/figure1.dta and releasable/figure1.pdf are available, and can be reviewed and released.Thus, the replication package would have:main.doREADME.mdinclude/confparms_template.doreleasable/figure1.dtareleasable/figure1.pdfVoilà! The resulting non-confidential package will run to produce the analysis (figure1.pdf) based on the distributable, non-confidential analysis file (analysis.dta). It can also be very simply brought back into the confidential environment, where either the replicator creates a new confparms.do, or copies the confidential confparms.do from the original author into their own working area.">
+    <meta itemprop="datePublished" content="2022-04-13T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Some remarks on coding when data are confidential
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-04-13T00:00:00-04:00">April 13, 2022</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+      
+        <p>Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (<a href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential">here</a>). What I did not address, and what comes up regularly, is how to <strong>write code</strong> when some code and/or data are confidential.</p>
+
+<p>What is confidential code, you say?</p>
+
+<ul>
+  <li>In the United States, some variables on IRS databases are considered super-top-secret. So you can’t name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as “Title 26 variables”). Not sure why that continues to be perceived as a problem, but until the law changes, that’s one possible constraint.</li>
+  <li>Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.</li>
+  <li>You used a look-up table hard-coded in your Stata code to anonymize the sensitive identifiers (<code class="language-plaintext highlighter-rouge">replace anoncounty=1 if county="Tompkins, NY"</code>). A really bad idea, but yes, you probably want to hide that.</li>
+  <li>Your IT specialist or misguided disclosure officer thinks publishing the exact path to your copy of the confidential 2010 Census data, e.g., “/data/census/2010”, is a security risk and refuses to let that code through.</li>
+  <li>You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.</li>
+</ul>
+
+<p>So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?</p>
+
+<h2 id="example">Example</h2>
+
+<p>This will serve as an example throughout this post. I’m focusing on Stata, because so many economists use Stata, but none of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. Assume that variables <code class="language-plaintext highlighter-rouge">q2f</code> and <code class="language-plaintext highlighter-rouge">q3e</code> are considered confidential by some rule, and that the minimum cell size <code class="language-plaintext highlighter-rouge">10</code> is also confidential.</p>
+
+<pre><code class="language-{stata}">set seed 12345
+use q2f q3e county using "/data/economic/cmf2012/extract.dta", clear
+gen logprofit = log(q2f)
+by county: collapse (count)  n=q3e (mean) logprofit
+drop if n&lt;10
+graph twoway n logprofit
+</code></pre>
+
+<h2 id="do-not-do-this">Do not do this</h2>
+
+<p>A bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:</p>
+
+<pre><code class="language-{stata}">set seed NNNNN
+use &lt;removed vars&gt; county using "&lt;removed path&gt;", clear
+gen logprofit = log(XXXX)
+by county: collapse (count)  n=XXXX (mean) logprofit
+drop if n&lt;XXXX
+graph twoway n logprofit
+</code></pre>
+
+<p>The redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.</p>
+
+<h2 id="better">Better</h2>
+
+<p>Simply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here’s the confidential version of the file:</p>
+
+<pre><code class="language-{stata}">//============ confidential parameters =============
+global confseed    12345
+global confpath    "/data/economic/cmf2012"
+global confprofit  q2f
+global confemploy  q3e
+global confmincell 10
+//============ end confidential parameters =========
+set seed $confseed
+use $confprofit county using "${confpath}/extract.dta", clear
+gen logprofit = log($confprofit)
+by county: collapse (count)  n=$confemploy (mean) logprofit
+drop if n&lt;$confmincell
+graph twoway n logprofit
+</code></pre>
+
+<p>and this would be the released file, part of the replication package:</p>
+
+<pre><code class="language-{stata}">//============ confidential parameters =============
+global confseed    XXXX    // a number
+global confpath    "XXXX"  // a path that will be communicated to you
+global confprofit  XXX     // Variable name for profit T26
+global confemploy  XXX     // Variable name for employment T26
+global confmincell XXX     // a number
+//============ end confidential parameters =========
+set seed $confseed
+use $confprofit county using "${confpath}/extract.dta", clear
+gen logprofit = log($confprofit)
+by county: collapse (count)  n=$confemploy (mean) logprofit
+drop if n&lt;$confmincell
+graph twoway n logprofit
+</code></pre>
+
+<p>While the code won’t run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., <code class="language-plaintext highlighter-rouge">q2f</code>, anywhere in the code.</p>
+
+<h2 id="best">Best</h2>
+
+<p>Note that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing (“analysis”) part of the code.</p>
+
+<p>We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).</p>
+
+<p>Main file <code class="language-plaintext highlighter-rouge">main.do</code>:</p>
+
+<pre><code class="language-{stata}">//============ confidential parameters =============
+capture confirm file "include/confparms.do"
+if _rc == 0 {
+    // file exists
+    include "include/confparms.do"
+} else {
+    di in red "No confidential parameters found"
+}
+//============ end confidential parameters =========
+
+//============ non-confidential parameters =========
+global safepath "releasable"
+cap mkdir "$safepath"
+
+//============ end parameters ======================
+
+// ::::  Process only if confidential data is present 
+
+capture confirm "${confpath}/extract.dta"
+if _rc == 0 {
+   set seed $confseed
+   use $confprofit county using "${confpath}/extract.dta", clear
+   gen logprofit = log($confprofit)
+   by county: collapse (count)  n=$confemploy (mean) logprofit
+   drop if n&lt;$confmincell
+   save "${safepath}/figure1.dta", replace
+} else { di in red "Skipping processing of confidential data" }
+
+//============ at this point, the data is releasable ======
+// ::::  Process always 
+
+use "${safepath}/figure1.dta", clear
+graph twoway n logprofit
+graph export "${safepath}/figure1.pdf", replace
+</code></pre>
+
+<p>Auxiliary file <code class="language-plaintext highlighter-rouge">include/confparms.do</code> (not released)</p>
+
+<pre><code class="language-{stata}">//============ confidential parameters =============
+global confseed    12345
+global confpath    "/data/economic/cmf2012"
+global confprofit  q2f
+global confemploy  q3e
+global confmincell 10
+//============ end confidential parameters =========
+</code></pre>
+
+<p>Auxiliary file <code class="language-plaintext highlighter-rouge">include/confparms_template.do</code> (this is released)</p>
+
+<pre><code class="language-{stata}">//============ confidential parameters =============
+global confseed    XXXX    // a number
+global confpath    "XXXX"  // a path that will be communicated to you
+global confprofit  XXX     // Variable name for profit T26
+global confemploy  XXX     // Variable name for employment T26
+global confmincell XXX     // a number
+//============ end confidential parameters =========
+</code></pre>
+
+<p>And after a successful run, the files <code class="language-plaintext highlighter-rouge">releasable/figure1.dta</code> and <code class="language-plaintext highlighter-rouge">releasable/figure1.pdf</code> are available, and can be reviewed and released.</p>
+
+<p>Thus, the replication package would have:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main.do
+README.md
+include/confparms_template.do
+releasable/figure1.dta
+releasable/figure1.pdf
+</code></pre></div></div>
+
+<p>Voilà! The resulting non-confidential package will run to produce the analysis (<code class="language-plaintext highlighter-rouge">figure1.pdf</code>) based on the distributable, non-confidential analysis file (<code class="language-plaintext highlighter-rouge">analysis.dta</code>). It can also be very simply brought back into the confidential environment, where either the replicator creates a new <code class="language-plaintext highlighter-rouge">confparms.do</code>, or copies the confidential <code class="language-plaintext highlighter-rouge">confparms.do</code> from the original author into their own working area.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#complex-projects" class="page__taxonomy-item" rel="tag">complex projects</a><span class="sep">, </span>
+    
+      <a href="/tags/#confidential-data" class="page__taxonomy-item" rel="tag">confidential data</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2022-04-13T00:00:00-04:00">April 13, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Some+remarks+on+coding+when+data+are+confidential%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2022-04-13-coding-confidential" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2022-04-13-coding-confidential" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-11-16-docker" rel="permalink">Use of Docker for Reproducibility in Economics
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          31 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-11-08-replication-pkg-confidential" rel="permalink">How to prepare replication packages for papers that used confidential data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-10-28-reproducibility-restricted-france" rel="permalink">When a reproducibility check turns into a replication exercise
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2021-06-17-software-citations" rel="permalink">Software, code, and repositories
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More sho...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2022-04-13-coding-confidential.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+                <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 American Economic Association. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

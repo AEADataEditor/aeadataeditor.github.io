@@ -167,6 +167,12 @@ var store = [{
         "url": "/posts/2021-11-16-docker",
         "teaser": null
       },{
+        "title": "Some remarks on coding when data are confidential",
+        "excerpt":"Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (here). What I did not address, and what comes up regularly, is how to write code when some code and/or data are confidential. What is confidential code, you say? In the...","categories": [],
+        "tags": ["confidential data","complex projects"],
+        "url": "/posts/2022-04-13-coding-confidential",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
