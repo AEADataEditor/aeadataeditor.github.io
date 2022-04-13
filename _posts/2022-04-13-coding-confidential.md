@@ -8,7 +8,10 @@ tags:
 
 Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential ([here](https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential)). What I did not address, and what comes up regularly, is how to **write code** when some code and/or data are confidential.
 
-What is confidential code, you say? 
+
+<!-- more -->
+
+## What is confidential code, you say? 
 
 - In the United States, some variables on IRS databases are considered super-top-secret. So you can't name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as "Title 26 variables"). Not sure why that continues to be perceived as a problem, but until the law changes, that's one possible constraint.
 - Your code contains the random seed you used to anonymize the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.
