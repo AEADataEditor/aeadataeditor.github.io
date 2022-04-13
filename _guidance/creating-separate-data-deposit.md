@@ -107,13 +107,17 @@ Example:
 
 - As part of the work for her AER article “[Cities in Bad Shape: Urban Geometry in India](https://doi.org/10.1257/aer.20171673),” Mariaflavia Harari made georeferenced digital historical maps of India and Pakistan. These were delivered to professional archivists at ICPSR, and published as "Historical Maps of India and Pakistan, 1955-1963" (ICPSR 37937, [https://doi.org/10.3886/ICPSR37937.v1](https://doi.org/10.3886/ICPSR37937.v1)). The core replication files are independent of this archive, and can be found at [https://doi.org/10.3886/E116003V1](https://doi.org/10.3886/E116003V1).
 
+- [Harari (2020)](https://doi.org/10.1257/aer.20171673) Paper
+- [Code and replication data](https://doi.org/10.3886/E116003V1)
+- [Curated raw data](https://doi.org/10.3886/ICPSR37937.v1)
+
 A note that such curation can take significant time (several months). It may also carry a cost, depending on, for instance, membership of an author's institution in ICPSR.
 
 ### Restrictions
 
 When creating a separate data deposit because of ethical or legal requirements, you may want to enforce an application process and/or provide a more restricted license. The AEA requires that such licenses permit at least the publication of reproducibility checks, encourages licenses that permit broader re-use, and strongly encourages that the approval process be as simple and objective as possible, ideally not involving the original authors.
 
-The following example uses two linked deposits: 
+The following example uses two linked deposits. All code is available for unrestricted download, but the data is available broadly, but with restrictions (IRB approval and computer security plan, subject to approval):
 
 - [Deryugina, Shurchkov, and Stearns (2021)](https://doi.org/10.1257/pandp.20211017) Paper
 - [Code deposit](https://doi.org/10.3886/E131761V1): this deposit can be freely downloaded

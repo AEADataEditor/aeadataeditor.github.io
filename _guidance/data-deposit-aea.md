@@ -139,7 +139,7 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Restricted-access data
 
-Do not upload data that you do not want published! 
+**Do not upload data that you do not want published!** 
 
 - Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published.
 
@@ -151,6 +151,15 @@ Do not upload data that you do not want published!
 > - Consult the [Creating separate linked data archives](creating-separate-data-deposit) page for details on how and where to create a separate data deposit.
 > - See the "[Depositing Data for the Greater Good](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html)" page at the Social Science Data Editors website.
 > - Consult the [Accessing Restricted Data Through openICPSR](https://www.openicpsr.org/openicpsr/accessRD) page about the process at openICPSR, but other repositories may be acceptable.
+
+TL%3BDR version:
+
+- [ ] upload any restricted data (and only the restricted data) to a separate deposit
+- [ ] call the deposit "Supplementary data for: (TITLE OF PAPER)"
+- [ ] proceed as usual as outlined below
+- [ ] when [submitting to the Data Editor](#submitting-to-the-data-editor), answer `Yes` to the questions "Can individuals be identified?" and "Are the data sensitive?", and ensure that the "Distribution Method" is noted as "Restricted Access".
+- [ ] Make a note of the temporary secondary deposit number in the [DCAF](https://www.aeaweb.org/journals/forms/data-code-availability).
+  - The DOI for this supplementary deposit might change; it is not determined the same way [as usual](#citing-your-deposit). 
 
 #### Tips
 
@@ -170,9 +179,9 @@ Do not upload data that you do not want published!
 
 Your deposit should have
 
-- no redundant directories: the first thing you should see is the README and any subdirectories
-- there should be no ZIP files!
-- the structure should be as you last ran the code
+- [ ] no redundant directories: the first thing you should see is the README and any subdirectories
+- [ ] there should be no ZIP files!
+- [ ] the structure should be as you last ran the code
 
 > [NOTE] The AEA staff will not re-arrange or otherwise restructure your deposit in any way. What you see in the deposit interface is what others will see once it is published.
 
