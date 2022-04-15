@@ -152,7 +152,7 @@ Upload files in the way you expect the files to be organized in order to run the
 > - See the "[Depositing Data for the Greater Good](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html)" page at the Social Science Data Editors website.
 > - Consult the [Accessing Restricted Data Through openICPSR](https://www.openicpsr.org/openicpsr/accessRD) page about the process at openICPSR, but other repositories may be acceptable.
 
-TL&semi;DR version:
+**TL;DR version:**
 
 - [ ] upload any restricted data (and only the restricted data) to a separate deposit
 - [ ] call the deposit "Supplementary data for: (TITLE OF PAPER)"
