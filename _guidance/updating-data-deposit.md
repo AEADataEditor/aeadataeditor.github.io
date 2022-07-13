@@ -18,8 +18,12 @@ If the deposit was made after July 2019, at least one of the authors retains the
 
 1. Log on to the ICPSR system. You must use the same email address as originally used for the deposit. You should be able to see your deposits if you click on "Share Data".
 2. Click on "Create new version". This will unlock the files, and allow you to delete or add files.
+
+![Create new version](/images/icpsr-create-new-version.png)
+
 3. Make any changes as needed. To replace files, first delete the old file, then upload the new one. Keep changes to a minimum, but there is no need to retain old versions of individual files (see above - the earlier version retains all files, and remains available).
-4. Update the README as [per the policy]((https://www.aeaweb.org/journals/data/policy-revisions)). Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.
+   - Note that the [AEA Policy on Revisions](https://www.aeaweb.org/journals/data/policy-revisions) requires that changes be kept to a minimum.
+4. Update the README, or add a `CHANGES.txt`, as [per the policy]((https://www.aeaweb.org/journals/data/policy-revisions)). Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.
 5. Once you updated all files (remember to update the README), choose "Submit to AEA" in "Change Status".
 6. The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.
 7. In most cases, the article will remain linked to the V1 deposit ("version of record"), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).
