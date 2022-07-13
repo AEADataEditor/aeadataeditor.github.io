@@ -134,8 +134,11 @@ See also [a similar entry to our FAQ](https://aeadataeditor.github.io/aea-de-gui
 
 When the replication package relies on confidential data that cannot be shared, or is shared under different conditions, authors will have to
 
-- prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved) and [this guide on creating a separate data deposit](creating-separate-data-deposit))
+- prepare a confidential (partial) replication package
   - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example below.
+- preserve (archive) the confidential replication package
+  - If the data cannot be removed from a secure enclave, they should nevertheless be archived wherever the confidential data are kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved))
+  - If the data can be shared, but are subject to access restrictions, follow  [this guide on creating a separate data deposit](creating-separate-data-deposit) and, when creating the restricted deposit at ICPSR, follow [these instructions on how to do so](creating-restricted-data-deposit-icpsr).
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
   - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example below.
 - ensure that replicators have detailed instructions on how to combine the two packages 
@@ -217,8 +220,8 @@ Ideally, once you have prepared your replication package, you should re-run the 
 
 Once you are done preparing your replication package, you should upload it:
 
-- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). Other trusted repositories are acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](guidelines-other-repositories.md). 
-- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](https://www.aeaweb.org/journals/data/faq#restricted)).
+- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). Other trusted repositories are acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](guidelines-other-repositories). 
+- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](https://www.aeaweb.org/journals/data/faq#restricted) and [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data)).
 - if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it **must** be made available on a trusted repository - other methods are then no longer acceptable.
 
 ### Final checklist

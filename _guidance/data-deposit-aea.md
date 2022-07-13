@@ -226,7 +226,7 @@ The normal answer to this question is "No."
 
 ![Distribution question](/images/icpsr-submit-q3.png)
 
-You should answer this one as a function of the earlier answers. "Public download" means users will be registered users of openICPSR and consent to the license (next question), without further controls. "Restricted access" means that data will be distributed through openICPSR's [Restricted Data Access Mechanism](https://www.openicpsr.org/openicpsr/accessRD).
+You should answer this one as a function of the earlier answers. "Public download" means users will be registered users of openICPSR and consent to the license (next question), without further controls. "Restricted access" means that data will be distributed through ICPSR's [Restricted Data Access Mechanism](https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/).
 
 #### Choose a license
 
