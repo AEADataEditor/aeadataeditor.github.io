@@ -1,10 +1,4 @@
 var store = [{
-        "title": "License template",
-        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/LICENSE-template.html",
-        "teaser": null
-      },{
         "title": "Licensing Guidance",
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
@@ -15,6 +9,12 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
+        "teaser": null
+      },{
+        "title": "License template",
+        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/LICENSE-template.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -29,6 +29,12 @@ var store = [{
         "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/reproducibility-checks",
+        "teaser": null
+      },{
         "title": "Creating separate linked data archives",
         "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
         "tags": [],
@@ -39,6 +45,12 @@ var store = [{
         "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. Start the deposit process Go to the AEA Data and Code Repository, and start the process: Checklist for Metadata Required Title (Suggested: “Data and Code for: (NAME OF PAPER)”) If only data, or only code are provided, adjust...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Guidance on how to prepare a comment based on a replication",
+        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
         "title": "Depositing Restricted Data at ICPSR for AEA Publications",
@@ -77,22 +89,10 @@ var store = [{
         "url": "/aea-de-guidance/next",
         "teaser": null
       },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
-        "teaser": null
-      },{
         "title": "Privately sharing restricted-access data with the AEA Data Editor",
         "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-restricted-data",
-        "teaser": null
-      },{
-        "title": "Guidance on how to prepare a comment based on a replication",
-        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
         "title": "Data deposit guidance",
