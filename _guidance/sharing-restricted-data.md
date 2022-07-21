@@ -29,6 +29,12 @@ First and foremost, you must have the rights to *privately* share data. This wil
 - you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).
 - In some cases, data usage rights may apply to your "research group" or your "institution." It may be possible to temporarily include the AEA Data Editor as a member of your "research group" for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution. 
 
+If your data use agreement, license, or non-disclosure agreement does not seem to allow to share the data with the Data Editor, you can ask your data provider explicitly to allow you to do so, or to share directly with the Data Editor. Sample text:
+
+> The AEA is conducting a reproducibility check for my manuscript entitled "X." Would it be possible for you to allow us to provide the restricted-access data to the AEA Data Editor so that he may proceed to verify the reproducibility of the entire replication package? The data would not be published, and would be deleted by the Data Editor once he has completed the process.
+
+You can point them to this page for more information.
+
 ### Documenting restrictions and instructions
 
 Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about "[Data Availability and Provenance Statements](https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements)."
