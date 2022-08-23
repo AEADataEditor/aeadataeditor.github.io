@@ -371,6 +371,24 @@ var store = [{
         "url": "/talks/2022-05-07-sole",
         "teaser": null
       },{
+        "title": "Teaching for Large-scale Reproducibility Verification",
+        "excerpt":"Abstract   Presentation by Lars Vilhuber on how the RAs in the LDI Replication Lab are trained, at the AEA’s annual CTREE conference.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-06-02-ctree",
+        "teaser": null
+      },{
+        "title": "Rethinking Reproducibility: Bridging the Gaps Between Research Cultures, Publishing Workflows and Scholarly Infrastructures",
+        "excerpt":"Abstract   Participation by Lars Vilhuber on a panel at the Society for Scholarly Publishing, an annual meeting of publishers and editors of academic journals.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-06-02-ssp",
+        "teaser": null
+      },{
+        "title": "Lessons Learned from Implementing AEA Reproducibility",
+        "excerpt":"Abstract   Some lessons learned for an academic audience.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-06-04-cea",
+        "teaser": null
+      },{
         "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers",
         "excerpt":"Abstract   Presentation by Lars Vilhuber at WEAI 2022, followed by Panel discussion with Tim Salmon, Editor for “Economic Inquiry”, and Kyrani Reneau, openICPSR.   ","categories": [],
         "tags": [],
