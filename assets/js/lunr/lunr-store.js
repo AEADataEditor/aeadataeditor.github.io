@@ -359,9 +359,21 @@ var store = [{
         "url": "/talks/2022-01-09-assa",
         "teaser": null
       },{
+        "title": "Teaching for Large-scale Reproducibility Verification",
+        "excerpt":"Abstract   Presentation by Lars Vilhuber on how the RAs in the LDI Replication Lab are trained.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-02-24-toronto",
+        "teaser": null
+      },{
         "title": "Challenges in Reproducibility and Replicability in Labor Economics",
         "excerpt":"Abstract   Presentation by Lars Vilhuber at SOLE 2022, joint session with Thibaut Lamadon and Felipe Gonçalves.   Video recording   Video available on the Cornell Video-on-demand. Slides on Google (archived as  )  ","categories": [],
         "tags": [],
         "url": "/talks/2022-05-07-sole",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers",
+        "excerpt":"Abstract   Presentation by Lars Vilhuber at WEAI 2022, followed by Panel discussion with Tim Salmon, Editor for “Economic Inquiry”, and Kyrani Reneau, openICPSR.   ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-06-30-weai",
         "teaser": null
       }]
