@@ -376,4 +376,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2022-06-30-weai",
         "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers",
+        "excerpt":"Abstract   Presentation by Lars Vilhuber on how best to prepare reproducible and transparent packages when data are confidential.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-09-23-fsrdc",
+        "teaser": null
       }]
