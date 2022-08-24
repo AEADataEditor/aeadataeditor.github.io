@@ -395,7 +395,19 @@ var store = [{
         "url": "/talks/2022-06-30-weai",
         "teaser": null
       },{
-        "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers",
+        "title": "Reproducibility in the Social Sciences: Lessons learned for students, researchers, and institutions from 1,000 articles",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
+        "tags": [],
+        "url": "/talks/2022-09-05-stockholm",
+        "teaser": null
+      },{
+        "title": "Reproducibility in the Social Sciences: Lessons learned for students, researchers, and institutions from 1,000 articles",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
+        "tags": [],
+        "url": "/talks/2022-09-07-oslo",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers when data are confidential",
         "excerpt":"Abstract   Presentation by Lars Vilhuber on how best to prepare reproducible and transparent packages when data are confidential.  ","categories": [],
         "tags": [],
         "url": "/talks/2022-09-23-fsrdc",
