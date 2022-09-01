@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/LICENSE-template.html</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/Licensing_guidance.html</loc>
@@ -14,11 +14,11 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/addtl-data-citation-guidance</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea</loc>
@@ -26,15 +26,15 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/FAQ.html</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/next</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit</loc>
@@ -66,7 +66,7 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/step-by-step</loc>
-<lastmod>2022-08-24T09:38:55-04:00</lastmod>
+<lastmod>2022-09-01T17:34:40-04:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted</loc>
@@ -332,6 +332,6 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/assets/pdfs/aea-data-editor-response-SI-FTAC-RFI-20210728.pdf</loc>
-<lastmod>2022-08-24T09:38:44-04:00</lastmod>
+<lastmod>2022-09-01T17:29:54-04:00</lastmod>
 </url>
 </urlset>
