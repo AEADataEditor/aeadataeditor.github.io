@@ -6,8 +6,8 @@ date: 2022-09-05
 location: "Stockholm, Sweden"
 venue: "Stockholm School of Economics"
 mainurl: https://www.hhs.se
-doi: 
-maindoi: 
+doi: 10.5281/zenodo.7055317
+maindoi: 10.5281/zenodo.6787998
 ---
 
 ## Abstract
