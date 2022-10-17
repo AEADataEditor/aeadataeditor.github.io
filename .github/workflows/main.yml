@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -29,7 +29,7 @@ jobs:
         bundle install
         bundle exec jekyll build
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.7.0-8
+      uses: peaceiris/actions-gh-pages@v3
       with:
          github_token:  ${{ secrets.GITHUB_TOKEN }}
          publish_dir: _site
