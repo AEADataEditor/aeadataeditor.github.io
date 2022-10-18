@@ -408,7 +408,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers when data are confidential",
-        "excerpt":"Abstract   Presentation by Lars Vilhuber on how best to prepare reproducible and transparent packages when data are confidential.  ","categories": [],
+        "excerpt":"Abstract   Presentation by Lars Vilhuber on how best to prepare reproducible and transparent packages when data are confidential.   Live slides are available at this link.  ","categories": [],
         "tags": [],
         "url": "/talks/2022-09-23-fsrdc",
         "teaser": null
