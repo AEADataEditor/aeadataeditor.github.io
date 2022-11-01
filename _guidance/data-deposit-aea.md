@@ -22,13 +22,13 @@ Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea
 #### Required
 
 - [ ] **Title** (Suggested: "*Data and Code for: (NAME OF PAPER)*")
-  - If only data, or only code are provided, adjust accordingly
+  - If only data, or only code are provided, adjust accordingly.
 - [ ] "**Principal Investigators**" (=Authors)
   - These need not be in the same order as on the paper. 
   - These need not be the same people as on the paper (more, or less, is OK)
   - Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
 - [ ] **Summary** (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
-  - Do not cite the article, or include "forthcoming".
+  - Do not cite, or mention, the article, or include "forthcoming".
 - [ ] **Subject Terms** (e.g., "Machine Learning", "Randomized Control Trial", "Nudges", ...)
 - [ ] **JEL Classification** (can be the same as article)
 - [ ] **Manuscript Number** (your manuscript tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
@@ -64,9 +64,9 @@ Start by providing the metadata (descriptors) for the data and code you are uplo
 
 ![screenshot of project description](/images/project-description-icpsr.png)
 
-  - The **title** should be "`Data and Code for: [Title of article]`"
+  - The **title** should be "`Data and Code for: [Title of article]`" if it contains both data and code. If only one or the other are included, then "`Data for: [Title of article]`" or "`Code for: [Title of article]`". In some cases, when data is split across multiple deposits, one might use "`Supplementary Data for: [Title of article]`". Do not use the uninformative "Replication files for...", nor "Data for ..." when the deposit contains code.
   - The **authors** should be those who compiled the data and code. The names, and order of the names, may differ (if necessary) from the article. 
-  - The **summary** might be short. It can include the **abstract** of the article itself. It does not need to include information on the related article (which has its own field). 
+  - The **summary** might be short. It should always be informative. It can include the **abstract** of the article itself. It should not include information on the related article (which has its own field). If data is included, the summary/abstract should describe the data. 
   - Identify any **funding sources** here - the information can be queried by some funders, and can assist with your award reporting.
 
 
