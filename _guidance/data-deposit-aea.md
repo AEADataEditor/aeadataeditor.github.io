@@ -9,6 +9,8 @@ date: 2021-09-06
 
 For a video tutorial on this process, see [this Youtube video](https://www.youtube.com/watch?v=wRytQcotLGc).
 
+> If you are depositing at a different trusted repository, please be sure that your deposit complies with our [Display Guidelines for Trusted Repositories](guidelines-other-repositories)
+
 ### Start the deposit process
 
 Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), and start the process:
