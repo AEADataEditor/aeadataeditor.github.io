@@ -25,7 +25,7 @@ In a nutshell, when authors, or replicators, or somebody on the internet, identi
 
 They can submit a comment to the journal, when the issue is a scientific one that materially affects the outcome and the conclusions.
 
-They can write a new article, triggered by an issue identified through the reproduction or replication attempt. This can be an original new article, or a replication-specific article ((for instance, at the Journal of Applied Econometrics)[https://onlinelibrary.wiley.com/page/journal/10991255/homepage/News.html#replication]).
+They can write a new article, triggered by an issue identified through the reproduction or replication attempt. This can be an original new article, or a replication-specific article ([for instance, at the Journal of Applied Econometrics](https://onlinelibrary.wiley.com/page/journal/10991255/homepage/News.html#replication)).
 
 They can record the issue on platforms such as the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) or the [Replication Wiki](https://replication.uni-goettingen.de/).
 
