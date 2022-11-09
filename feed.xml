@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2022-11-06T10:50:36-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Some remarks on coding when data are confidential</title><link href="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential" rel="alternate" type="text/html" title="Some remarks on coding when data are confidential" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/coding-confidential</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential"><![CDATA[<p>Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (<a href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential">here</a>). What I did not address, and what comes up regularly, is how to <strong>write code</strong> when some code and/or data are confidential.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2022-11-09T12:24:07-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">A short example of how to update a replication package</title><link href="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication" rel="alternate" type="text/html" title="A short example of how to update a replication package" /><published>2022-11-09T00:00:00-05:00</published><updated>2022-11-09T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/updating_post_publication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication"><![CDATA[<p>The AEA Data and Code Availability does not just require that authors publish a replication package - it also encourages authors to improve upon the replication package. Here is an example.</p>
+
+<!-- more -->
+
+<blockquote>
+  <p>[NOTE] I am posting about this update with permission by the author.</p>
+</blockquote>
+
+<h3 id="links">Links</h3>
+
+<ul>
+  <li><a href="https://www.aeaweb.org/journals/policies/data-code">Data and Code Availability Policy</a></li>
+  <li><a href="https://www.aeaweb.org/journals/data/policy-revisions">Revision Policy</a>’</li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-was-wondering-whether-and-how-i-can-update-the-published-repository-for-our-paper-i-was-contacted-by-a-researcher-who-is-doing-a-replication--couple-of-minor-issues--forgotten-to-include-two-auxiliary-datasets-in-the-repository-without-which-one-of-the-programs-does-not-run-successfully">Instructions how to create a new version on openICPSR</a></li>
+</ul>
+
+<h3 id="tldr">TLDR</h3>
+
+<p>In a nutshell, when authors, or replicators, or somebody on the internet, identifies an issue with a package, they have a few options to identify and publish a solution for it, so that others can benefit the update.</p>
+
+<p>They can submit a comment to the journal, when the issue is a scientific one that materially affects the outcome and the conclusions.</p>
+
+<p>They can write a new article, triggered by an issue identified through the reproduction or replication attempt. This can be an original new article, or a replication-specific article ((for instance, at the Journal of Applied Econometrics)[https://onlinelibrary.wiley.com/page/journal/10991255/homepage/News.html#replication]).</p>
+
+<p>They can record the issue on platforms such as the <a href="https://www.socialsciencereproduction.org/">Social Science Reproduction Platform</a> or the <a href="https://replication.uni-goettingen.de/">Replication Wiki</a>.</p>
+
+<p>Or, if the issue is really minor, or is simply an improvement, authors can post a revision of replication package according to the <strong><a href="https://www.aeaweb.org/journals/data/policy-revisions">AEA Revision Policy</a></strong>.</p>
+
+<p>This post describes the latter.</p>
+
+<h3 id="timeline">Timeline</h3>
+
+<ul>
+  <li>Oct 2019: Replication package was submitted to Data Editor (one of the first 200 cases). A first report was sent back to the author (they were simpler back then…), the author revised the package, and re-submitted an improved package.</li>
+  <li>Nov 2019: The revised package was accepted (after 1 round). We were unable to access all data, but improved the documentation of the data sources.</li>
+  <li>April 2020: Publication of the manuscript: <a href="https://doi.org/10.1257/aer.20171732">https://doi.org/10.1257/aer.20171732</a>, and of the replication package: <a href="https://doi.org/10.3886/E112121V1">https://doi.org/10.3886/E112121V1</a>. <img src="/images/revpolicy-article1.png" alt="article page" /> <img src="/images/revpolicy-data1.png" alt="replication package v1" /></li>
+  <li>Sometime in 2020: a replicator, with access to the data, reports to the author various small issues, in particular missing files.</li>
+  <li>Jan 2021: Author reaches out to AEA Data Editor,  and wants to correct the data deposit, so that future replicators can access the missing files. A case is created by the AEA Data Editor to follow up.</li>
+  <li><em>Life intrudes</em> 🤷‍♂️</li>
+  <li>Oct 2022: Author updates the replication package, together with a Changelog (as required by policy), creating a V2. The revised package is published: <a href="https://doi.org/10.3886/E112121V2">https://doi.org/10.3886/E112121V2</a>, and the V1 now has a banner identifying that a newer version is available. <img src="/images/revpolicy-data2.png" alt="revised data package" /></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<ul>
+  <li>The original deposit - the version of record - remains available, and downloadable.</li>
+  <li>The article page continues to link to the original deposit (V1) because it is the version of record.</li>
+  <li>The original deposit has a banner indicating that a newer package is available, and directs to that newer deposit.</li>
+  <li>The original deposit and the revised deposit contain cross-links.</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>This is a great example of how the ability to update replication packages is a key part, previously underexploited and not transparent, in improving science. Such updates happen for a variety of reasons multiple times a year. Sometimes, they happen for less happy reasons, such as a data provider requests that a file be removed because posting the file is not compliant with their terms of use. In other cases, authors simply post a better README, after having received feedback from students or replicators.</p>
+
+<p>Revisions and new versions can be created on all regularly used repositories, such as <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">openICPSR</a>, <a href="https://zenodo.org/communities/aeajournals/">Zenodo</a>, and <a href="https://dataverse.harvard.edu/">Dataverse</a>.</p>
+
+<p>When authors publish their replication packages prior to submission, such revisions allow them to incorporate the changes made during the editorial process, whether related to the scientific or the computational content of the paper.</p>
+
+<!-- Ref: AEAREP-228 -->]]></content><author><name>AEA Data Editor</name></author><category term="updating" /><category term="improvement" /><category term="reproducibility" /><summary type="html"><![CDATA[The AEA Data and Code Availability does not just require that authors publish a replication package - it also encourages authors to improve upon the replication package. Here is an example.]]></summary></entry><entry><title type="html">Some remarks on coding when data are confidential</title><link href="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential" rel="alternate" type="text/html" title="Some remarks on coding when data are confidential" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/coding-confidential</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential"><![CDATA[<p>Back in the fall, I made a few notes regarding how to prepare replication packages when data are confidential (<a href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential">here</a>). What I did not address, and what comes up regularly, is how to <strong>write code</strong> when some code and/or data are confidential.</p>
 
 <!-- more -->
 
@@ -1078,164 +1137,4 @@ Naturally, I signed off on a few reports - some were first round (yes!), some we
 
 <h2 id="on-twitter">On Twitter</h2>
 
-<p><a href="https://twitter.com/AeaData/status/1356106537673089024">https://twitter.com/AeaData/status/1356106537673089024</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Tasks" /><summary type="html"><![CDATA[I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.]]></summary></entry><entry><title type="html">Follow-up to Fireside Chat</title><link href="https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat" rel="alternate" type="text/html" title="Follow-up to Fireside Chat" /><published>2021-01-19T00:00:00-05:00</published><updated>2021-01-19T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/Fireside-chat</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-01-19-fireside-chat"><![CDATA[<p>In this post, I’ll pick up questions that have been asked over Twitter or during the <a href="https://aeadataeditor.github.io/talks/2021-01-19-cswep">2021-01-19 Fireside chat</a>, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.</p>
-
-<!-- more -->
-
-<h2 id="starting-a-project">Starting a project</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/judy_chevalier/status/1346259253955354624">Judy Chevalier</a> What do I do before I even start the project? What do I do if I am accessing a big public dataset and it is always at risk of being changed or cleaned or updated?</p>
-</blockquote>
-
-<p>Answer coming. Short answer: Keep track of what you do. Set up the project correctly. See  <a href="https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html">https://aeadataeditor.github.io/aea-de-guidance/step-by-step.html</a> - in particular the first part <a href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html">https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html</a> can be done at any time!</p>
-
-<h2 id="irb-consent-and-distributing-sensitive-data">IRB, consent, and distributing sensitive data</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/Cutler_econ/status/1346261440899018752">David Cutler</a> IRB rules are becoming more complex over time. It would be good for economists to understand them better.</p>
-</blockquote>
-
-<blockquote>
-  <p><a href="https://twitter.com/asacarny/status/1346262290354614274">Adam Sacarny</a> I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…</p>
-</blockquote>
-
-<p>Excellent points. Longish answer during Fireplace Chat.</p>
-
-<h2 id="code-persistence-or-code-rot">Code Persistence or Code Rot</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/johnjhorton/status/1346260871429971970">John Horton</a>: If you are relying on lots of open source packages subject to change, how do we prevent “code rot”? Might it make sense for AEA to collect &amp; store docker images or virtual machines?</p>
-</blockquote>
-
-<p>There are two assumptions embedded within the question, which I’ll address at the end. The easy answer to this is: We already have a mechanism to store code, docker images, and virtual machines, it’s called the “<a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>” where all replication packages are stored.</p>
-
-<p>The two assumptions are: “open source packages” and “researcher-provided docker images/VMs”. Most economics code is written in Stata or Matlab, which are not open-source software, but which often have open-source (or imprecisely licensed) add-ons (packages, etc.) (I will address “packages” later). The best practice we have found is for copies of those packages to be distributed with the replication package, pre-installed, for two key reasons: Stata package repositories (<a href="https://ideas.repec.org/s/boc/bocode.html">SSC</a>) are not versioned (old versions disappear), Matlab has no package repository, and Github (often used as an alternative, in particular for a small subset of Stata packages) is not persistent in the same way the “<a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>” is. The AEA guidelines may require this in the future, but currently only suggest it.</p>
-
-<p>The second assumption is that researchers provide Docker images and VMS. <strong>They don’t</strong>. Not in the social sciences. It is beyond the scope of what we do to create it for them, at this point (we are looking into ways of doing that, though).</p>
-
-<h2 id="proprietary-data-from-unknown-sources">Proprietary Data from Unknown Sources</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/johnjhorton/status/1346261392983285761">John Horton</a> For proprietary data where the source of the data is not disclosed but known to the authors, is there a way to facilitate access for other researchers to the data without divulging source publicly?</p>
-</blockquote>
-
-<p>This is an excellent idea, variants of which we have investigated before. It hinges primarily on the willingness of the original data provider to entertain this. We don’t actually have many cases where the provider is anonymous. I can think of two right now: one has a researcher-mediated access mechanism via a Non-disclosure Agreement - a group of researchers maintains the data, protects anonymity, but is willing to provide access to the data for replication and possibly for research purposes. A second one implemented an email-moderated mechanism that hides the identity of the data provider. In both cases, the persistence of the data, and of the access mechanism is not guaranteed.</p>
-
-<p>The ideal scenario is for researchers to obtain approval from the data provider to deposit data under a restrictive access mechanism mediated by a third party. <a href="https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/">ICPSR</a> is one such entity, and there are not many others. A grander scenario are industry-specific restricted-access data centers, such as <a href="http://www.privatecapitalresearchinstitute.org/research.php">PCRI</a>, where access is possible, and the identity of (multiple) data providers is hidden.</p>
-
-<p>The key, however, is the willingness of the data provider to participate. The AEA can mediate and provide guidance to such arrangements, and I am happy to consult with any researcher who wants to go down that path, but will not, in general, become data custodian itself.</p>
-
-<h2 id="data-citations---how-to-do-it">Data citations - how to do it</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/ElizWebHand/status/1347602931210739718">Elizabeth Weber Handwerker</a> I’m trying to create a bibtex entry for a dataset (the journal says to “reference datasets” and can’t find any examples of how to do this.</p>
-</blockquote>
-
-<p>Try these examples:</p>
-
-<ul>
-  <li><a href="https://zotero.org/groups/2245704/fsrdc">https://zotero.org/groups/2245704/fsrdc</a>, <a href="https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib">https://github.com/ncrncornell/cms-to-bib/blob/master/cms.bib</a> for confidential data,</li>
-  <li><a href="https://github.com/larsvilhuber/MobZ/blob/master/data.bib">https://github.com/larsvilhuber/MobZ/blob/master/data.bib</a> for a variety of different data.</li>
-</ul>
-
-<p>Standard AEA bib style does not show URLs properly, use <a href="https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst">https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst</a> or the “econ” style. The quick solution: use @techreport
-{} in a Bibtex file. <a href="https://doi.org/10.5281/zenodo.4073995">doi.org/10.5281/zenodo.4073995</a>, starting around pg. 37, discusses the basic ideas. Short take-away: It’s simple. (and @techreport or @misc
- has all the necessary fields).</p>
-
-<p>Some examples:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@techreport{bea_table30_2019,
-  title = {Table 30:  {Economic Profile}  by  {County} , 1969-2018},
-  author = { {Bureau of Economic Analysis} },
-  year = {2019},
-  institution = { {U.S. Department of Commerce  [producer]} },
-  url = {https://apps.bea.gov/regional/zip/CAINC30.zip},
-  timestamp = {2020-09-08T00:42:24Z},
-  type = {[Datafile]}
-}
-
-@misc{BLS_QCEW_2020,
-  title = {Quarterly {Census} of {Employment} and {Wages} -- {Data Files} },
-  shorttitle = { {QCEW Data Files} },
-  author = { {Bureau of Labor Statistics} },
-  year = {2020},
-  publisher = { {Department of Labor [distributor]} },
-  url = {https://www.bls.gov/cew/downloadable-data-files.htm},
-  urldate = {2020-09-20},
-  abstract = {Quarterly Census of Employment and Wages -- Data Files},
-  language = {en},
-  number = {1990-2019},
-  timestamp = {2020-09-20T19:26:12Z},
-  type = {[Datafiles]}
-}
-</code></pre></div></div>
-
-<h2 id="how-to-bring-solved-problems-to-the-next-generation">How to bring solved problems to the next generation?</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/johnjhorton/status/1346262118904029184">John Horton</a> Many of the code &amp; data problems are essentially solved software engineering problems (version control, makefiles, unit tests, etc) - how do we incorporate these practices into PhD education so next generation is better than us?</p>
-</blockquote>
-
-<p>Good question… Efforts at <a href="https://bitss.github.io/ACRE/">BITSS</a>, <a href="https://carpentries.org/">Carpentries</a>, various data-science oriented classes, <a href="https://labordynamicsinstitute.github.io/computing4economists/web/#/">my own efforts at Cornell</a> only scratch the surface. They train a minority of volunteering students. I would actually argue that these best practices should be taught at the undergraduate level, and should be a compulsory part of graduate education the same way we require math proficiency. But we are a long way off of that.</p>
-
-<h2 id="time-capsules-and-other-data-access-options">Time capsules and other data access options</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/johnjhorton/status/1346263273432354816">John Horton</a> Could AEA help credibly create “time capsule” data agreements where it will release a public dataset X years in the future? Some companies are willing to share data but not until it has lost its competitive value. A long lived institution like AEA is well positioned for this.</p>
-</blockquote>
-
-<p>Answer coming soon.</p>
-
-<h2 id="accessing-data">Accessing data</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/conlon_chris/status/1346473098518773760">Chris Conlon</a> Several boilerplate data agreements that meet AEA requirements?</p>
-</blockquote>
-
-<blockquote>
-  <p><a href="https://twitter.com/conlon_chris/status/1346474319283593218">Chris Conlon</a> negotiate terms with some of the commonly used data ACADEMIC data providers (WRDS? Kilts?).</p>
-</blockquote>
-
-<p>Ongoing (<a href="https://marketingdata.chicagobooth.edu/Anonymous/Welcome">Kilts</a>, <a href="https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607">German SOEP</a>, <a href="https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx">German Scientific Use Files</a>). Repeatedly requesting (<a href="https://dhsprogram.com/data/">DHS</a>, <a href="https://www.afrobarometer.org/">Afrobarometer</a>) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA).</p>
-
-<p>Typical answer: “We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers].”</p>
-
-<h2 id="gazillion-files">Gazillion files</h2>
-
-<blockquote>
-  <p>(via email) We have 26,000 files in our deposit. How should we proceed (openICPSR only handles up to 1,000 files)?</p>
-</blockquote>
-
-<p>We get this question regularly. There are multiple partial answers:</p>
-
-<ul>
-  <li>When the data provider has assigned a DOI, no need to provide the data. An example is the TERRA/MODIS climate data is such an example, see <a href="https://dx.doi.org/10.5067/MODIS/MOD08_M3.061">https://dx.doi.org/10.5067/MODIS/MOD08_M3.061</a>.</li>
-  <li>If the data provider has not assigned a DOI, we encourage authors to ask their data provider to do so. This is the right approach… but it is unlikely to yield a result prior to publication. Fallback solutions below.</li>
-  <li>If you have the interest and time to provide a public good, deposit the data separately, thus creating a DOI. While the AEA uses openICPSR to handle its replication packages, you can deposit the pure data deposit anywhere. A good option (as of January 2021) is <a href="https://zenodo.org">Zenodo</a>, which has an excellent API allowing to download metadata and large quantities of files. You would describe the data, and publish a deposit, thus creating a DOI. No need to then provide the data as part of the AEA Replication package - just cite it. Bonus: use the API to read-in the data for your own research.</li>
-  <li>If all else fails, it is acceptable to ZIP up files by sub-directory (e.g., “zip -rp weather_CPCG.zip weather_CPCG/*” and then describe, as part of setup/processing, how and where to unzip the files. Caution: ZIP files on different platforms include addtional directory levels sometimes, so be precise about the directory structure you want. Also, the default Windows and Linux zip utilities can only handle ZIP archives up to 2GB, whereas modern macOS archives can handle larger ZIP packages. We suggest using 7zip, which is free and cross-platform.</li>
-</ul>
-
-<h2 id="verifying-papers-with-restricted-access-data">Verifying papers with restricted-access data</h2>
-
-<blockquote>
-  <p>(via email) It would be great to know more about best practice for papers based on administrative data that cannot be made available publicly. What are the AEAs recommendations – is there a planned “standard way” of doing things in this case? One way would be to require an independent review of national colleagues (eg in DK) to review the code and provide comments/run the analyses on their/similar data.</p>
-</blockquote>
-
-<p>Longish answer coming in the Fireside Chat. Short answer: we already do this on a regular basis (successful in the past year: Washington State data, Wisconsin state data, French customs data, Brazilian firm and worker admin data (3x), Swedish register data (2x), IRS tax data (2x), etc.) in more or less the way you describe it. That being said, we do not yet have a mechanism on soliciting / finding replicators - but are working on that. For now, that mechanism is called “my memory” and a database of data citations.</p>
-
-<blockquote>
-  <p><a href="https://twitter.com/ElizWebHand/status/1346258970827218946">Elizabeth Weber Handwerker</a> I’m a government economist, working with some data outside researchers can access only through an application process, and some data they can’t access at all (Massachusetts QCEW, etc.). What do AEA requirements for data &amp; code look like in each case?</p>
-</blockquote>
-
-<p>Answer coming live during Fireside Chat. Short answer: The same.</p>
-
-<p>See talk at the <a href="https://doi.org/10.5281/zenodo.4250890">University of Waterloo / Canadian Research Data Center</a>. I have also had talks with Census Bureau folks, and have ongoing private and public talks with institutions that have access to restricted-data.</p>
-
-<h2 id="replicability-and-reproducibility-in-institutions">Replicability and Reproducibility in Institutions</h2>
-
-<blockquote>
-  <p><a href="https://twitter.com/fibbyccino/status/1346262249854275585">@fibbyccino</a> What would you recommend to an organisation looking to introduce internal replicability standards for code and data for the first time?</p>
-</blockquote>
-
-<p>Requires a longish answer (live), but is something I have been talking to various organizations about, see slides for my talk at <a href="https://doi.org/10.5281/zenodo.4311917">Brookings</a> and <a href="https://doi.org/10.5281/zenodo.4281633">St. Louis Fed</a> (also <a href="https://research.stlouisfed.org/conferences/beyond-the-numbers/">video</a>.</p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Fireside Chat" /><summary type="html"><![CDATA[In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents.]]></summary></entry></feed>
+<p><a href="https://twitter.com/AeaData/status/1356106537673089024">https://twitter.com/AeaData/status/1356106537673089024</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Tasks" /><summary type="html"><![CDATA[I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA.]]></summary></entry></feed>

@@ -185,6 +185,12 @@ var store = [{
         "url": "/posts/2022-04-13-coding-confidential",
         "teaser": null
       },{
+        "title": "A short example of how to update a replication package",
+        "excerpt":"The AEA Data and Code Availability does not just require that authors publish a replication package - it also encourages authors to improve upon the replication package. Here is an example. [NOTE] I am posting about this update with permission by the author. Links Data and Code Availability Policy Revision...","categories": [],
+        "tags": ["updating","improvement","reproducibility"],
+        "url": "/posts/2022-11-09-updating-post-publication",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
