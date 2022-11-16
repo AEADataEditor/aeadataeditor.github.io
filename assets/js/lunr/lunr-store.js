@@ -191,6 +191,12 @@ var store = [{
         "url": "/posts/2022-11-09-updating-post-publication",
         "teaser": null
       },{
+        "title": "What is this LICENSE thing",
+        "excerpt":"The template README required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “But the data is publicly available.” Let me try to disentangle that somewhat. The statement about rights The statement says I certify that the author(s) of...","categories": [],
+        "tags": ["license","terms of use","copyright","reproducibility","provenance"],
+        "url": "/posts/2022-11-16-where-are-the-terms-of-use",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
