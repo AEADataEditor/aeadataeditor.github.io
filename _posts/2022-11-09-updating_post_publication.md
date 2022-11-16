@@ -1,6 +1,7 @@
 ---
 title:  "A short example of how to update a replication package"
 date: 2022-11-09
+mastodon: https://mstdn.social/@aeadata/109315024319500617
 tags:
   - updating 
   - improvement
