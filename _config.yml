@@ -91,7 +91,8 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  mastodon         : aeadata@mstdn.social
+  mastodon         : aeadata
+  mastodonsrvr     : mstdn.social
     
 #Site Footer
 footer:
