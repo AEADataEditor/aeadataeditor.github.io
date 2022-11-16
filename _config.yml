@@ -185,7 +185,7 @@ collections:
     permalink: /:collection/:name
   guidance:
     output: true
-    permalink: /aea-de-guidance/:name
+    permalink: /guidance/:name
 
 
 # Defaults

@@ -1,6 +1,7 @@
 ---
 title:  "What is this LICENSE thing"
 date: 2022-11-16
+mastodon: https://mstdn.social/@aeadata/109354453248538193
 tags:
   - license 
   - terms of use

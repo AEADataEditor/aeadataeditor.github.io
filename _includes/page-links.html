@@ -1,0 +1,20 @@
+    <p><ul class="author__urls social-icons">
+      
+      {% if page.twitter %}
+        <li>
+          <a href="{{ page.twitter }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Post on Twitter</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if page.mastodon %}
+        <li>
+          <a href="{{ page.mastodon }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Post on Mastodon</span>
+          </a>
+        </li>
+      {% endif %}
+
+    </ul>
+</p>
