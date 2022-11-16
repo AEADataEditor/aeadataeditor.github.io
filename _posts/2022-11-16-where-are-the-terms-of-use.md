@@ -89,7 +89,7 @@ Thank you for that question, since most researchers in economics do NOT cite the
 
 > Most of this data was collected in 2016, but the [IPUMS AHTUS data citation page](https://www.ahtusdata.org/ahtus/citation.shtml) only lists the 2018 version. I am unable to find a historic example of this specific citation. 
 
-IPUMS doesn't make it easy, I know.  There is a not-so-obvious list of versions of the data at this URL: [https://www.ipums.org/projects/ipums-time-use](https://www.ipums.org/projects/ipums-time-use). The [IPUMS Time Use Revision history page](https://www.ahtusdata.org/ahtus-action/revisions) does NOT list the DOIs for the various version. So as far as I can deduce from that, you would have used V1.0 of the AHTUS data, which has DOI **10.18128/D061.V1.0**. You can use https://citation.crosscite.org/, or simply adapt their suggested citation accordingly.
+IPUMS doesn't make it easy, I know.  There is a not-so-obvious list of versions of the data at this URL: [https://www.ipums.org/projects/ipums-time-use](https://www.ipums.org/projects/ipums-time-use). The [IPUMS Time Use Revision history page](https://www.ahtusdata.org/ahtus-action/revisions) does NOT list the DOIs for the various version. So as far as I can deduce from that, you would have used V1.0 of the AHTUS data, which has DOI **10.18128/D061.V1.0**. You can use [https://citation.crosscite.org/](https://citation.crosscite.org/), or simply adapt their suggested citation accordingly.
 
 Data providers have not all adapted to a world where data citations are ubiquitious, or should be. Sometimes it takes a little extra work.
 
