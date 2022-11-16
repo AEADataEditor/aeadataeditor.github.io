@@ -50,7 +50,11 @@ Note that other licenses are "sticky" - if you obtain data that is under a [CC-B
 
 > What goes into the LICENSE.txt?
 
+![LICENSE txt image](/images/openicpsr-license.png)
+
 This is straightforward if you have a single source. It should state the permissions and conditions that are attached to that file. If the data you obtained has a LICENSE.txt (some do), then simply include that with your deposit. Licenses can be long - they are written in legalese, because they are, in fact, legal permission to do something with the data.
+
+If you created or collected the primary data yourself, you define the LICENSE. By default, deposits on openICPSR have a CC-BY license. We have a small discussion of how to choose licenses at the [AEA Data Editor's website](https://aeadataeditor.github.io/aea-de-guidance/Licensing_guidance) and the [Social Science Data Editors' website](https://social-science-data-editors.github.io/guidance/Licensing_guidance.html). 
 
 If you have multiple data sources, it becomes a bit more complicated. The LICENSE.txt can be a simple collation of the various terms of use/ licenses/etc. So you could have:
 
@@ -83,7 +87,7 @@ We have obtained such permission via email correspondence on 16 November 2022.
 
 Thank you for that question, since most researchers in economics do NOT cite the data. See this [extensive discussion](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html) over on the Social Science Data Editor website, consult the [AEA Style Reference](https://www.aeaweb.org/journals/policies/sample-references), and remember that not all data distributors provide suggested citations that satisfy the [Data Citation Principles](https://force11.org/info/joint-declaration-of-data-citation-principles-final/). If they ask you to cite a working paper, do so, but **also** cite the data correctly.
 
->     Most of this data was collected in 2016, but the [IPUMS AHTUS data citation page](https://www.ahtusdata.org/ahtus/citation.shtml) only lists the 2018 version. I am unable to find a historic example of this specific citation. 
+> Most of this data was collected in 2016, but the [IPUMS AHTUS data citation page](https://www.ahtusdata.org/ahtus/citation.shtml) only lists the 2018 version. I am unable to find a historic example of this specific citation. 
 
 IPUMS doesn't make it easy, I know.  There is a not-so-obvious list of versions of the data at this URL: [https://www.ipums.org/projects/ipums-time-use](https://www.ipums.org/projects/ipums-time-use). The IPUMS Time Use Revision history page](https://www.ahtusdata.org/ahtus-action/revisions) does NOT list the DOIs for the various version. So as far as I can deduce from that, you would have used V1.0 of the AHTUS data, which has DOI **10.18128/D061.V1.0**. You can use https://citation.crosscite.org/, or simply adapt their suggested citation accordingly.
 
