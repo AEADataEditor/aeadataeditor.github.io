@@ -128,7 +128,7 @@ Alternatively, the code can handle the unzipping - optional, but more robust.
 
 Once you've adjusted that, zip up the whole structure (so a ZIP file that has inside it another zip file, plus the `/code`, `/data/src1/`, and `/data/src2/` directories), and "Import from ZIP" when uploading to ICPSR.
 
-See also [a similar entry to our FAQ](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-am-trying-to-upload-to-the-repository-but-my-replication-package-has-more-than-1000-files).
+- See also [a similar entry to our FAQ](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-am-trying-to-upload-to-the-repository-but-my-replication-package-has-more-than-1000-files).
 
 #### Structure in the presence of confidential (unpublished) data
 
@@ -161,8 +161,20 @@ Keep in mind that you may be able to provide a subset of your replication packag
 
 Authors might want to investigate the  possibility of providing "fake" or "simulated" data that might allow replicators to run code, without necessarily obtaining meaningful results (functionality test). 
 
+- [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data)
+- [Licensing guidance](Licensing_guidance). 
+
 - The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed) describes a related issue.
 
+
+#### Creating a separate data deposit
+
+In situations where the data has a different license, or where the data you include has value separately from your replication package, you can create a separate data deposit, and link it/reference it/cite it.
+
+ - [Creating a separate data deposit](creating-separate-data-deposit)
+ - [Guidelines for depositing at other repositories](guidelines-other-repositories)
+ - [Special case: PSID](https://www.aeaweb.org/journals/data/faq#psid)
+ - [Special case: confidential data](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#challenges-in-hosting-of-data-and-code-at-restricted-access-data-centers)
 
 
 #### Considering the replicator
