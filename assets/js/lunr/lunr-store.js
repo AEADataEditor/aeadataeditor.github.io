@@ -1,4 +1,10 @@
 var store = [{
+        "title": "A discussion about various things",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
+        "teaser": null
+      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -11,16 +17,34 @@ var store = [{
         "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
-        "title": "A discussion about various things",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
-        "teaser": null
-      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
+        "teaser": null
+      },{
+        "title": "Data deposit guidance",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea-guidance",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
+        "teaser": null
+      },{
+        "title": "Preparing your files for verification",
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
         "title": "Guidance on testing replicability of code",
@@ -47,16 +71,16 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
+        "title": "Guidance on how to prepare a comment based on a replication",
+        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/replication-comment",
+        "teaser": null
+      },{
         "title": "Depositing Restricted Data at ICPSR for AEA Publications",
         "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
-        "teaser": null
-      },{
-        "title": "Data deposit guidance",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
         "title": "Frequently Asked Questions",
@@ -69,30 +93,6 @@ var store = [{
         "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
-        "teaser": null
-      },{
-        "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/preparing-for-data-deposit",
-        "teaser": null
-      },{
-        "title": "Guidance on how to prepare a comment based on a replication",
-        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
         "title": "Sharing of Pre-Publication openICPSR deposits",
