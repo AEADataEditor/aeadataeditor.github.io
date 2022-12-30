@@ -18,4 +18,12 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.organization | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.organization | default: site.title }}. 
+  {% if site.license %}<a href="https://github.com/{{ site.repository }}/blob/{{ site.branch }}/LICENSE.md">
+    {% if site.license_image %}
+    <img src="/images/{{ site.license_image }}" width="80px" height="15px" alt="{{ site.license_name }}" />
+    {% else %}
+    {{ site.license_name }}
+    {% endif %}
+  {% endif %}
+   {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
