@@ -31,7 +31,7 @@ search_provider          : # lunr (default), algolia, google
 license                  : "by" # use the CC short names
 license_name             : "CC BY 4.0" # will be included in alt text
 license_url              : "https://creativecommons.org/licenses/by/4.0/"
-license_logo             : "ccby80x15.png" # could also be the URL
+license_image            : "ccby80x15.png" # could also be the URL
 
 # SEO Related
 google_site_verification :
