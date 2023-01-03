@@ -65,10 +65,10 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
-        "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy: Prepare Prepare your data and code replication package (including data citations and provenance information). You can do this at any time, even before submitting to the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/",
+        "title": null,
+        "excerpt":"                                  ","categories": [],
+        "tags": null,
+        "url": "/aea-de-guidance/index",
         "teaser": null
       },{
         "title": "Privately sharing restricted-access data with the AEA Data Editor",
