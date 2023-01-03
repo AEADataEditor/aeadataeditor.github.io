@@ -7,6 +7,13 @@ date: 2021-04-08
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
 is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
 
+> ![Link to DCAS Icon](https://datacodestandard.org/assets/img/DCAS-1.0.png) 
+The [Data Editor of the American Economic Association] endorses DCAS, 
+the [Data and Code Availability Standard](https://datacodestandard.org/)
+[v1.0]. The AEA's data and code availability policy is 
+compatible with DCAS.
+
+
 ### Key principle: Computational empathy
 
 > - Keep in mind: The replication package is meant to be run by others, who have none of the setup, packages, and data that the original author might have, on computers that may not run the same operating system. 
