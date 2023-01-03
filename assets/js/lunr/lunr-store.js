@@ -197,6 +197,12 @@ var store = [{
         "url": "/posts/2022-11-16-where-are-the-terms-of-use",
         "teaser": null
       },{
+        "title": "Launching DCAS",
+        "excerpt":"The data editors of the journals] of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an...","categories": [],
+        "tags": ["standards","reproducibility","provenance"],
+        "url": "/posts/2022-12-15-launching-dcas",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2022-12-30T15:06:30-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">What is this LICENSE thing</title><link href="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use" rel="alternate" type="text/html" title="What is this LICENSE thing" /><published>2022-11-16T00:00:00-05:00</published><updated>2022-11-16T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/where-are-the-terms-of-use</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use"><![CDATA[<p>The <a href="https://social-science-data-editors.github.io/template_README/">template README</a> required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “<em>But the data is publicly available.</em>” Let me try to disentangle that somewhat.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-02T22:42:12-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Launching DCAS</title><link href="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas" rel="alternate" type="text/html" title="Launching DCAS" /><published>2022-12-15T00:00:00-05:00</published><updated>2022-12-15T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/launching-dcas</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
+The data editors of the journals] of the <a href="https://www.aeaweb.org/journals">American Economic Association</a><sup id="fnref:aea" role="doc-noteref"><a href="#fn:aea" class="footnote" rel="footnote">1</a></sup>, of the <a href="https://res.org.uk/journals/">Royal Economic Society</a><sup id="fnref:res" role="doc-noteref"><a href="#fn:res" class="footnote" rel="footnote">2</a></sup>, the <a href="https://www.restud.com/">Review of Economic Studies</a>,  the <a href="https://www.economics.ca/cpages/cje-home">Canadian Journal of Economics</a>, and <a href="https://weai.org/view/EI">Economic Inquiry</a> have joined forces  to proudly launch <strong>DCAS</strong>, the <a href="https://datacodestandard.org/">Data and Code Availability Standard</a>. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:aea" role="doc-endnote">
+      <p>The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. <a href="#fnref:aea" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:res" role="doc-endnote">
+      <p>The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. <a href="#fnref:res" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><summary type="html"><![CDATA[The data editors of the journals] of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy. The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. &#8617; The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. &#8617;]]></summary></entry><entry><title type="html">What is this LICENSE thing</title><link href="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use" rel="alternate" type="text/html" title="What is this LICENSE thing" /><published>2022-11-16T00:00:00-05:00</published><updated>2022-11-16T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/where-are-the-terms-of-use</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use"><![CDATA[<p>The <a href="https://social-science-data-editors.github.io/template_README/">template README</a> required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “<em>But the data is publicly available.</em>” Let me try to disentangle that somewhat.</p>
 
 <!-- more -->
 
@@ -1135,67 +1147,4 @@ create problems if working with Windows.”</p>
       <p>P.S. That footnote for API? Well, APIs get deprecated over time, so we actually prefer to have the <strong>raw</strong> data saved, but it’s probably OK to skip the analysis data. <a href="#fnref:API" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:API:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><summary type="html"><![CDATA[What do we mean by “data”?]]></summary></entry><entry><title type="html">Reproducible GIS</title><link href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis" rel="alternate" type="text/html" title="Reproducible GIS" /><published>2021-02-10T00:00:00-05:00</published><updated>2021-02-10T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/reproducible-gis</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis"><![CDATA[<p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.</p>
-
-<!-- more -->
-
-<h2 id="reproducibility-and-gis">Reproducibility and GIS</h2>
-
-<p>Reproducibility means that the inputs and methods can be repeated by a (somewhat) knowledgeable person. For GIS, that <em>might</em> (should) mean code, but it <em>definitely</em> means at least SOME instructions. Even if they are manual….</p>
-
-<p>Maps are data. While your typical Stata/Matlab/R/Julia graph is data projected into Cartesian coordinates, maps are data projected into geographic coordinates. So at a minimum, we need to know what the inputs to the map are, same as we need to know inputs to graphs.</p>
-
-<p>So “data + code” + “<code class="language-plaintext highlighter-rouge">graph twoway scatter x y</code>” -&gt; 📈📉,</p>
-
-<p><img src="https://pbs.twimg.com/media/Et31MkpXcAQg8Nw.png" alt="" /></p>
-
-<p>and “data + code” + “<code class="language-plaintext highlighter-rouge">maptile x, geo(state)</code>” -&gt; 🗺️. Or “data + code” + “<em>instructions(ArcGIS)</em>” -&gt; 🗺️.</p>
-
-<p><img src="https://pbs.twimg.com/media/Et3048TXcAIx20f.png" alt="" /></p>
-
-<p>Note that for a map, “data” includes shapefiles (including provenance of the shapefile)</p>
-
-<h2 id="checklist-for-reproducible-maps">Checklist for reproducible maps</h2>
-
-<ul>
-  <li>✅ data (+ provenance)</li>
-  <li>✅ code (manipulates data)</li>
-  <li>✅ shapefile (provides coordinates)</li>
-  <li>✅ code (preferred) or instructions (sufficient)</li>
-</ul>
-
-<h2 id="resources">Resources</h2>
-
-<p>A few tentative resources are collected at <a href="https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html">https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html</a> (please suggest improvements!), with some other links below:</p>
-
-<h3 id="stata">Stata</h3>
-
-<p><a href="https://www.stata.com/support/faqs/graphics/spmap-and-maps/">Stata FAQ on maps</a>, including the <a href="https://ideas.repec.org/c/boc/bocode/s456812.html">spmap package</a> and the <a href="https://michaelstepner.com/maptile/">maptile package</a> by <a href="https://twitter.com/michaelstepner">@michaelstepner</a></p>
-
-<h3 id="r">R</h3>
-
-<p>The core <a href="https://r-spatial.github.io/sf/">sf library</a>, <a href="https://staff.washington.edu/phurvitz/r_gis/">reproducible GIS practices in R</a>  and interactions with GIS software (and integrated as a dependency into many great packages)</p>
-<h3 id="python">Python</h3>
-
-<p><a href="https://geopandas.org/">GeoPandas</a> and others</p>
-
-<h3 id="arcgis">ArcGIS</h3>
-
-<p>ArcGIS can also be scripted (via python) and now <a href="https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/pro-notebooks.htm">integrates Jupyter-like notebooks</a></p>
-
-<h3 id="qgis">QGIS</h3>
-
-<p>Staying #opensource: <a href="https://www.qgis.org/">QGIS</a> has “<a href="https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html">Graphical Modeler</a>”, and look for tutorials on “<a href="https://courses.spatialthoughts.com/">Automating GIS Workflows</a>”</p>
-
-<h2 id="summary">Summary</h2>
-
-<p>Please try to create scripted maps, but always describe what data you are mapping, and where you got the shapefiles from (note: copyrights might apply, permissions might need to be obtained!)</p>
-
-<h2 id="ps">PS</h2>
-
-<p>And for those exceptions from scripting: a 2-3 sentence description of what you did would be sufficient. And for the unscripted ArcGIS which you did before you learned how to script stuff: a 4-5 sentence description may be sufficient as well.</p>
-
-<h2 id="follow-the-conversation">Follow the conversation</h2>
-
-<p>Slightly modified from
-<a href="https://twitter.com/AeaData/status/1359516297990701057">https://twitter.com/AeaData/status/1359516297990701057</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="GIS" /><summary type="html"><![CDATA[A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><summary type="html"><![CDATA[What do we mean by “data”?]]></summary></entry></feed>
