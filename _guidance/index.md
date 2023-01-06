@@ -5,7 +5,7 @@ permalink: /aea-de-guidance/
 redirect_from:
   - "/aea-de-guidance/step-by-step.html"
 intro: 
-  - excerpt: 'The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code). Note that the AEA's Data and Code Availability Policy is compatible with ![Link to DCAS Icon](https://datacodestandard.org/assets/img/DCAS-1.0.png) the [Data and Code Availability Standard](https://datacodestandard.org/) [v1.0].'
+  - excerpt: 'The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code). Note that the AEA's Data and Code Availability Policy is compatible with ![Link to DCAS Icon](https://datacodestandard.org/assets/img/DCAS-1.0.png) the [Data and Code Availability Standard](https://datacodestandard.org/) v1.0.'
 feature_row:
   - image_path: /images/noun_One_2010363.png
     alt: "1"
