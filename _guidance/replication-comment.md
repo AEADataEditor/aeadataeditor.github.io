@@ -21,7 +21,7 @@ You need not
 
 - [ ] provide the original replication package - rather, instruct the authors to download it, and unpack it into a specific location
 
-You should not
+You should 
 
 - [ ] not rename or otherwise modify the original files
 
