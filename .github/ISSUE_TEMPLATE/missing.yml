@@ -71,7 +71,7 @@ body:
       label: Relevant evidence of problem - narrative
       description: Alternatively, or in addition, copy-paste a brief write-up of the problem in this field.
       placeholder: The problem is the following...
-  - type: checkbox
+  - type: checkboxes
     id: contact
     attributes:
       label: Reproducibility
