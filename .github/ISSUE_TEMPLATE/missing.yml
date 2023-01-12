@@ -1,0 +1,81 @@
+name: Missing data or code
+description: Use this form to alert the Data Editor to information missing in a replication package
+title: "[Missing data]: "
+labels: ["missing", "triage"]
+assignees:
+  - larsvilhuber
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report, which will help us improve the replication package posted in our repository.
+  - type: input
+    id: contactemail
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info? If you wish to stay anonymous, skip this, fill out the rest of the form, and reference this issue when sending us email or a direct message on Mastodon or Twitter.
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: DOI-article
+    attributes:
+      label: DOI of the article
+      description: DOI of the article in question. No need to provide title or other information.
+      placeholder: https://doi.org/10.1257/aer.xxxx-xxxx
+    validations:
+      required: true
+  - type: textarea
+    id: DOI-package
+    attributes:
+      label: DOI of the replication package
+      description: DOI of the replication package in question. Pay attention to the version!
+      placeholder: https://doi.org/10.3886/E123456V1
+    validations:
+      required: true
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: Reproducibility
+      description: The problem can be fully reproduced from the posted materials.
+      options:
+        - label: I can provide evidence of full reproducibility of the problem.
+          required: true
+  - type: textarea
+    id: logsurl
+    attributes:
+      label: Relevant evidence of problem - URL
+      description: URL of evidence. This can be a Github repository with full log files, a computational online system, an SSRP report.  Evidence must show complete start-to-finish run of the code, or allow somebody to create such a run.
+      placeholder: https://github.com/failed-replication-article
+  - type: checkboxes
+    id: logstype
+    attributes:
+      label: Platform used for providing evidence
+      description: If your evidence is on any of these online platforms, please identify it here, and provide the URL below.
+      options:
+        - label: WholeTale
+        - label: CodeOcean
+        - label: Social Science Reproduction Platform
+        - label: Github
+        - label: ReplicationWiki
+        - label: Gitlab
+        - label: Dataverse
+        - label: openICPSR
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant evidence of problem - log output
+      description: Alternatively,  copy-paste any relevant (extract from) log output running code. This will be automatically formatted into code.
+      render: shell
+  - type: textarea
+    id: writeup
+    attributes:
+      label: Relevant evidence of problem - full document
+      description: Provide a URL for the narrative describing the problem. This can be a file within the aforementioned Github repository, a Google Doc, etc.
+      placeholder: https://drive.google.com/really-long-url
+  - type: textarea
+    id: writeup-here
+    attributes:
+      label: Relevant evidence of problem - narrative
+      description: Alternatively, or in addition, copy-paste a brief write-up of the problem in this field.
+      placeholder: The problem is the following...

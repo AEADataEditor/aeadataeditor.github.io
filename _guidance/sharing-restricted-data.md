@@ -8,7 +8,7 @@ In certain cases, you may be able to share data you obtained from somebody ("dat
 
 > If you are able to more broadly share sensitive data with any user who can provide, for instance, IRB approval, please see [this other guide on creating a separate data deposit](creating-separate-data-deposit).
 
-Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data, but sometimes, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
+Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data. At other times, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing **both** options when both are available.
 
 This page describes some tips and methods of doing so, and considerations. Please read it carefully.
 
