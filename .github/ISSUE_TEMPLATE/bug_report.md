@@ -4,38 +4,54 @@ about: Something is wrong on the website
 title: ''
 labels: bug
 assignees: ''
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  attributes:
+    label: Describe the bug
+    description: A clear and concise description of what the bug is. 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: URL
+    description:  Provide link to the website or source code most related to the bug. 
+  validation:
+    required: true
+- type: textarea
+  attributes:
+    label: Suggested fix
+    description: Do you have any suggestions on how to fix the bug? Possibly a pull request! 
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Environment
+    description: |
+      examples:
+        - **OS**: Ubuntu 20.04
+        - **Node**: 13.14.0
+        - **npm**: 7.6.3
+    value: |
+        - OS:
+        - Node:
+        - npm:
+    render: markdown
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Anything else?
+    description: |
+      Links? References? Anything that will give us more context about the issue you are encountering!
 
+      Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
 ---
-
-
-
-<!--
-Note: Please search to see if an issue already exists for the bug you encountered.
--->
-
-### Describe the bug
-<!-- A clear and concise description of what the bug is. -->
-
-
-### URL
-<!-- Provide link to the website or source code most related to the bug. -->
-
-
-### Suggested fix
-<!-- Do you have any suggestions on how to fix the bug? Possibly a pull request! -->
-
-
-### Environment:
-<!--
-Example:
-- OS: Ubuntu 20.04
-- Node: 13.14.0
-- npm: 7.6.3
--->
-
-
-
-### Anything else:
-<!--
-Links? References? Anything that will give us more context about the issue that you are encountering!
--->
