@@ -33,6 +33,14 @@ body:
       placeholder: https://doi.org/10.3886/E123456V1
     validations:
       required: true
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: Reproducibility
+      description: The problem can be fully reproduced from the posted materials.
+      options:
+        - label: I can provide evidence of full reproducibility of the problem.
+          required: true
   - type: textarea
     id: logsurl
     attributes:
@@ -71,12 +79,3 @@ body:
       label: Relevant evidence of problem - narrative
       description: Alternatively, or in addition, copy-paste a brief write-up of the problem in this field.
       placeholder: The problem is the following...
-  - type: checkboxes
-    id: contact
-    attributes:
-      label: Reproducibility
-      description: The problem can be fully reproduced from the posted materials.
-      options:
-        - label: I can provide evidence of full reproducibility of the problem.
-          required: true
-  
