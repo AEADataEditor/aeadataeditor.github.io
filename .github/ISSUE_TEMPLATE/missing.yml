@@ -72,11 +72,11 @@ body:
       description: Alternatively, or in addition, copy-paste a brief write-up of the problem in this field.
       placeholder: The problem is the following...
   - type: checkbox
-     id: contact
-     attributes:
-       label: Reproducibility
-       description: The problem can be fully reproduced from the posted materials.
-       options:
+    id: contact
+    attributes:
+      label: Reproducibility
+      description: The problem can be fully reproduced from the posted materials.
+      options:
         - label: I can provide evidence of full reproducibility of the problem.
-          required: false
+          required: true
   
