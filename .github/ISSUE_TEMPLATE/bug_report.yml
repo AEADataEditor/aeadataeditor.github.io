@@ -1,5 +1,5 @@
 name: Bug report
-about: Something is wrong on the website
+description: Something is wrong on the website
 labels: bug
 body:
 - type: checkboxes
