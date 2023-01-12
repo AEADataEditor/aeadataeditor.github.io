@@ -10,7 +10,7 @@ body:
       value: |
         Thanks for taking the time to fill out this report, which will help us improve the replication package posted in our repository.
   - type: input
-    id: contact
+    id: contactemail
     attributes:
       label: Contact Details
       description: How can we get in touch with you if we need more info? If you wish to stay anonymous, skip this, fill out the rest of the form, and reference this issue when sending us email or a direct message on Mastodon or Twitter.
