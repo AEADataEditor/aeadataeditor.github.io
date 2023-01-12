@@ -19,7 +19,7 @@ body:
   attributes:
     label: URL
     description:  Provide link to the website or source code most related to the bug. 
-  validation:
+  validations:
     required: true
 - type: textarea
   attributes:
@@ -32,9 +32,9 @@ body:
   attributes:
     label: Your environment - OS
     options:
-      - MacOS
-      - Windows
-      - other
+      - label: MacOS
+      - label: Windows
+      - label: other
   validations:
     required: false
 - type: checkboxes
@@ -42,14 +42,14 @@ body:
   attributes:
     label: Your environment - Browser
     options:
-      - Edge
-      - Safari
-      - Internet Explorer
-      - Firefox
-      - Chrome
-      - Brave
-      - Opera
-      - Other
+      - label: Edge
+      - label: Safari
+      - label: Internet Explorer
+      - label: Firefox
+      - label: Chrome
+      - label: Brave
+      - label: Opera
+      - label: Other
   validations:
     required: false
 - type: textarea
