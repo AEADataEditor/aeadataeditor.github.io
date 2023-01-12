@@ -1,4 +1,3 @@
----
 name: Bug report
 about: Something is wrong on the website
 title: ''
@@ -30,19 +29,29 @@ body:
     description: Do you have any suggestions on how to fix the bug? Possibly a pull request! 
   validations:
     required: false
-- type: textarea
+- type: checkboxes
+  id: environment
   attributes:
-    label: Environment
-    description: |
-      examples:
-        - **OS**: Ubuntu 20.04
-        - **Node**: 13.14.0
-        - **npm**: 7.6.3
-    value: |
-        - OS:
-        - Node:
-        - npm:
-    render: markdown
+    label: Your environment: OS
+    options:
+      - MacOS
+      - Windows
+      - other
+  validations:
+    required: false
+- type: checkboxes
+  id: browser
+  attributes:
+    label: Your environment: Browser
+    options:
+      - Edge
+      - Safari
+      - Internet Explorer
+      - Firefox
+      - Chrome
+      - Brave
+      - Opera
+      - Other
   validations:
     required: false
 - type: textarea
@@ -57,4 +66,3 @@ body:
  - type: markdown
   attributes:
     value: "Thanks for completing our form!"
----
