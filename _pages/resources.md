@@ -14,13 +14,19 @@ feature_row:
     btn_label: "Find blog posts"
     btn_class: "btn--primary"
     url: "/year-archive/"
-  - image_path: /images/noun-help-3836213.png
-    alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
-    title: "Read"
-    url: "/aea-de-guidance/FAQ.html"
-    excerpt: "Find answers to some frequently asked questions asked by authors."
-    btn_label: "Read More"
+  - title: "Data citations"
+    excerpt: 'Data citations can be tricky. Find guidance by [Social Science Data Editors](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)'
+    url: "https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html"
+    image_path: /images/data-citations-700x433.png
+    btn_label: "Go there now"
     btn_class: "btn--primary btn--center"
+#  - image_path: /images/noun-help-3836213.png
+#    alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
+#    title: "Read"
+#    url: "/aea-de-guidance/FAQ.html"
+#    excerpt: "Find answers to some frequently asked questions asked by authors."
+#    btn_label: "Read More"
+#    btn_class: "btn--primary btn--center"
   - image_path: /images/noun-setting-3836204.png
     alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
     title: "Technical tools"

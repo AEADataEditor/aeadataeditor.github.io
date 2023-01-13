@@ -23,13 +23,13 @@ feature_row:
     url: "/aea-de-guidance/"
     btn_label: "Read More"
     btn_class: "btn--primary btn--center"
-  - image_path: /images/noun-settings-3836219.png
-    alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
-    title: "Resources"
-    excerpt: "Technical resources, FAQs, talks, and informative posts by the AEA Data Editor"
-    btn_label: "Read More"
+  - image_path: /images/noun-dislike-3836208.png
+    alt: "Image: Ilham Fitrotul Hayat from the Noun Project: Dislike"
+    title: "Broken?"
+    excerpt: "Have you identified an issue with a replication package?"
+    url: "https://github.com/AEADataEditor/aeadataeditor.github.io/issues/new/choose"
+    btn_label: "Report it"
     btn_class: "btn--primary"
-    url: "/resources/"
 feature_row2:
   - title: "AEA Data and Code Repository"
     excerpt: 'The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies) can be found at [https://www.openicpsr.org/openicpsr/search/aea/studies](https://www.openicpsr.org/openicpsr/search/aea/studies). Also find our [auxiliary repository at Zenodo](https://zenodo.org/communities/aeajournals/). '
@@ -37,16 +37,17 @@ feature_row2:
     image_path: /images/icpsr-start-process-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
+  - image_path: /images/noun-settings-3836219.png
+    alt: "Image: Ilham Fitrotul Hayat from the Noun Project"
+    title: "Resources"
+    excerpt: "Technical resources, FAQs, talks, and informative posts by the AEA Data Editor"
+    btn_label: "Read More"
+    btn_class: "btn--primary btn--center"
+    url: "/resources/"
   - title: "Template README"
     excerpt: 'Use the standard Economics [README template](https://social-science-data-editors.github.io/guidance/template-README.html) for better compliance.'
     url: "https://social-science-data-editors.github.io/guidance/template-README.html"
     image_path: /images/template-readme-700x433.png
-    btn_label: "Go there now"
-    btn_class: "btn--primary"
-  - title: "Data citations"
-    excerpt: 'Data citations can be tricky. Find guidance by [Social Science Data Editors](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)'
-    url: "https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html"
-    image_path: /images/data-citations-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
 twitter_row:
