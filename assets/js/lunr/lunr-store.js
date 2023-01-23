@@ -59,7 +59,19 @@ var store = [{
         "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
-        "title": "Depositing Restricted Data at ICPSR for AEA Publications",
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
+        "title": "Sharing of Pre-Publication openICPSR deposits",
+        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-openicpsr",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
         "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
@@ -69,18 +81,6 @@ var store = [{
         "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
-        "teaser": null
-      },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
         "teaser": null
       },{
         "title": "Step by step guidance",
@@ -95,10 +95,10 @@ var store = [{
         "url": "/aea-de-guidance/next",
         "teaser": null
       },{
-        "title": "Sharing of Pre-Publication openICPSR deposits",
-        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/sharing-openicpsr",
+        "url": "/aea-de-guidance/reproducibility-checks",
         "teaser": null
       },{
         "title": "Data deposit guidance",
