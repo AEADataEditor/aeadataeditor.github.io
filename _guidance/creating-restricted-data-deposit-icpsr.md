@@ -1,8 +1,8 @@
 ---
-title: Depositing Restricted Data at ICPSR for AEA Publications
+title: Creating a Restricted Data Deposit  for AEA Publications
 toc: true
 layout: single
-date: 2022-07-13
+date: 2023-01-23
 ---
 
 This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains a highly interactive process, and authors should always reach out to the AEA Data Editor with questions. 
@@ -15,14 +15,13 @@ All restricted-access deposits should ONLY include materials that absolutely nee
 
 ### Special notes on preparation
 
-We strongly suggest here to include a license file that describes the access conditions. The file should be uploaded in TXT or PDF format, and called "LICENSE.pdf". Alternate names, like "Terms of Use", are acceptable. The license should only be as restrictive as necessary. In particular, it must allow for reproducibility checks without restrictions, in order to comply with AEA policy. We also strongly suggest that the license allow for more general re-use of the data, for instance in novel publications, subject to any of the restrictions that are imposed on the data. Note that the license may change as ICPSR takes custodianship of these data, but always involves a discussion with the author.
+The README should be focused on sources and documentation of the data for the data provided here, useful once access has been obtained. The README is not accessible separately from the data (it is subject to the same access control conditions), and thus should not contain information about sources and access that is critical to understanding whether it is useful to actually request access to the data. It may thus be useful or necessary to duplicate the information from the restricted README in the (unrestricted) replication package. 
 
-The README should also be focused on sources, restrictions, and access conditions for the data provided here, and not duplicate the information in the (unrestricted) replication package. It should clearly identify how the data were collected or created, and importantly, under what conditions the data can be redistributed: any IRB approvals and conditions on redistribution, or data use agreements that the authors engaged in and that permit for redistribution.
+The unrestricted replication package should clearly identify how the data were collected or created, and importantly, under what conditions the data can be redistributed: any IRB approvals and conditions on redistribution, or data use agreements that the authors engaged in and that permit for redistribution.
 
 ### Depositing data
 
 You should follow the [generic preparation and upload guidelines](data-deposit-aea.md) up to the submission questions. 
-
 
 ### Submitting to the Data Editor
 
@@ -69,19 +68,38 @@ You should choose "Other" from the drop-down menu, since none of the licensing o
 
 Press "submit." Should you have forgotten something, you can "recall" the submission, fix the issue, and re-submit. 
 
+NOTE: *The AEA Data Editor is able to access the submitted but unpublished restricted deposit. If you need a signed DUA, NDA, or other document, please contact the AEA Data Editor immediately.*
+
 ### Next steps
 
 #### Contact the AEA Data Editor
 
-For all restricted deposits, please alert the AEA Data Editor directly of the deposit. Mention the manuscript number, as well as the desired distribution method as outlined at [ICPSR's page](https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/). The AEA Data Editor is able to access the submitted but unpublished restricted deposit. If you need a signed DUA, NDA, or other document, please contact the AEA Data Editor immediately.
+For all restricted deposits, please alert the AEA Data Editor directly of the deposit. Mention the manuscript number, as well as the desired distribution method as outlined at [ICPSR's page](https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/). 
 
-#### AEA and ICPSR Workflow
+#### Choice of methods 
 
-For all restricted deposits, the AEA will add them to ICPSR's "quick curation workflow." The deposit you just created will NOT be separately published (as has been done in the past), avoiding duplicate DOIs and possible confusion.
+All access options require an **application**, a **secure computer or room**, and **IRB approval**. As of the time of writing of this page, the following options are available:
+
+- **Secure Download**: Approved researchers can securely download to the secure location specified in an application.
+- **Virtual Data Enclave (VDE)**:  Approved researchers access the data in a secure remote desktop (Windows) on ICPSR’s servers. They are unable to remove files from the system. To obtain output, ICPSR conduct a disclosure review on requested files. This is similar in technology and process to files available through NORC (which provides services to the Bureau of Labor Statistics and the Economic Research Service of the Department of Agriculture) and various European access mechanisms.
+- **Physical Data Enclave (PDE)**: The researcher must travel to Ann Arbor, MI, and access the data in a secure room on ICPSR's premises.
+
+The AEA will support any of these access methods. 
+
+#### ICPSR Ingest Workflow
+
+For all restricted deposits, the AEA will add them to ICPSR's "quick curation workflow." The deposit you just created will NOT be separately published (as has been done in the past), avoiding duplicate DOIs and possible confusion. 
+
+ICPSR's "quick curation workflow" ingests the data you deposited into the general ICPSR (not the openICPSR) data warehouse. 
+
+This will affect primarily findability: When searching on the web site of the general data warehouse, packages at both ICPSR and openICPSR can be found. When searching on the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies), only packages on openICPSR will be listed. Your restricted data package will not be listed amongst the AEA packages.
 
 Even the "quick curation workflow" can take several months, depending on other workloads at ICPSR. You do not need to wait for completion of the process to proceed with other actions related to the manuscript. In particular, it may happen that the restricted data may become available only after publication of the manuscript. This is not of (immediate) concern.
 
-Once ICPSR has started to prepare the deposit for publication, a DOI will be assigned. The AEA will add this DOI to the online manuscript, and link it to the (unrestricted) replication package. The AEA *may* ask the authors to amend the README in the (unrestricted) replication package. 
+#### Wrapping up
+
+Once ICPSR has started to prepare the deposit for publication, a DOI will be assigned. The AEA will add this DOI to the online manuscript, and link it to the (unrestricted) replication package. The AEA *may* ask the authors to amend the README in the (unrestricted) replication package (leading to an update to the replication package, typically `V2`). See guidelines for the [Revision Policy](https://www.aeaweb.org/journals/data/policy-revisions) for instructions on how to amend the README.
+
 
 ### Possible questions
 
@@ -95,4 +113,26 @@ We do not know yet. Please check back.
 
 #### General ICPSR deposits are  "available only to ICPSR members". Is that true for my deposit as well?
 
-We do not know yet. Please check back.
+No, your deposit will be available to anybody, subject to the distribution restrictions.
+
+#### Can depositors access their own data deposit?
+
+The unpublished deposit remains accessible to the depositor. They can assign "Download" rights to any person, who can then download, but not otherwise modify the data deposit. (This is the same process the AEA Data Editor uses to provide replicators from their team with access). The process is described at the [Training Manual](https://labordynamicsinstitute.github.io/replicability-training-manual-new/94-01-how-to-use-openICPSR-backend.html) (URL subject to change).
+
+#### This process is too complicated for my data
+
+We are looking into other options. In order to satisfy our requirements, the approval process must be disconnected from the original authors (authors cannot be gatekeepers, unless unavoidable). This severely limits the options.
+
+Please talk to us if you know of other options that you think might satisfy the following conditions:
+
+- the approval process does not involve the author
+- the approval process can be maintained for a minimum of five years after publication of the manuscript
+- the approval process respects the conditions imposed on data access by the author as well as the author's data providers (i.e., must be compliant with the particular DUA, contract, or IRB protocol governing access to the author's data)
+
+Currently known options:
+
+- Dataverse allows for a guestbook, which also requires acknowledgement of any license-specific questions. See [instructions](https://guides.dataverse.org/en/4.13/user/dataverse-management.html). Untested, but likely to meet certain criteria. Unlikely to be compliant if IRB approval is required.
+
+Known not be acceptable:
+
+- Zenodo allows for "restricted access" but always requires approval by the depositor. This does not satisfy our criteria.
