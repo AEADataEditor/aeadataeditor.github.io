@@ -2,7 +2,7 @@
 title: Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)
 toc: true
 layout: single
-date: 2022-07-13
+date: 2023-01-23
 ---
 
 The AEA accepts replication packages from any **trusted** repository (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). If you have doubts about whether a particular repository qualifies as a "trusted" repository, contact the AEA Data Editor before unnecessarily duplicating the deposit. 
@@ -81,6 +81,67 @@ Otherwise, authors must publish the repository, and communicate the DOI to the A
 
 - Zenodo: pre-publication sharing not available
 - Dataverse: See [Private URL to Review Unpublished Dataset](https://guides.dataverse.org/en/5.12/user/dataset-management.html#)
+
+## After publication of the manuscript
+
+Once the AEA has published your manuscript, the manuscript DOI will be locked in place. At this time, there is one final small step that needs to be done: The author should     adjust the "backlink" to the published manuscript (the link pointing from the deposit to the manuscript). While the AEA publication staff handle the "forward link" (from the manuscript to the replication package), and handle the backlink for any deposit in the AEA Data and Code Repository, they are unable to do so for any other trusted repository (including PSID and similar non-AEA repositories at ICPSR).
+
+Here are some guidelines on how to do that update:
+
+### Adding manuscript DOI to CodeOcean capsule
+
+Authors will need to edit the metadata:
+
+- Log in to CodeOcean
+- Navigate to the "Metadata" tab. 
+- You may have to click "Start editing" at the top of the middle window.
+- Add the DOI (it is usually recorded as "to be published").
+- If all rules above were followed, no other changes are necessary. 
+- Then "Submit for publication"
+
+CodeOcean will then verify the deposit again. Normally, this should not generate a new version (`V2`), but rather, a `V1.1`. The DOI of the deposit should not change. 
+
+### Adding manuscript DOI to other openICPSR repositories
+
+Authors will need to edit the metadata under the "Related Publications" heading:
+
+- Log in to openICPSR 
+- Navigate to your deposits, and select the right one.
+- Do NOT create a new version!
+- Scroll down to the "Related publications" section.
+
+![related publications](/images/openicpsr-metadata-related-publications.png)
+
+- In the modal, select "`Import via DOI`":
+
+![import via DOI](/images/project-related-icpsr-modal1.png)
+
+- Enter the DOI as per instructions
+
+![enter the DOI](/images/project-related-icpsr-modal2.png)
+
+- From the relationship dropdown, select "`is supplemented by`":
+
+![Select relationship](/images/project-related-icpsr-modal3.png)
+
+- Select `Save and Apply`. The change will take effect immediately, there is no need to go through the publication process.
+
+### Adding related manuscript to Dataverse
+
+Soon.
+
+### Adding related manuscript to Zenodo
+
+- Log in to Zenodo, and select your deposit (choose "Upload", which will show all previous uploads)
+- Edit the deposit
+- Scroll down to `Related identifiers`
+- Choose "`Add another related identifier`" to create an empty field.
+- Enter 
+  - the DOI in the first field. 
+  - Choose "is supplemented by this upload" for the relationship
+  - Choose "Journal article" to identify the "resource type" that the DOI points to.
+
+![Edit related on Zenodo](/images/zenodo-edit-related.png)
 
 ## Special notes
 
