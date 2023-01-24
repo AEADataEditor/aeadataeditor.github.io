@@ -59,12 +59,6 @@ var store = [{
         "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
         "title": "Sharing of Pre-Publication openICPSR deposits",
         "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
         "tags": [],
@@ -83,6 +77,18 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/reproducibility-checks",
+        "teaser": null
+      },{
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
@@ -93,12 +99,6 @@ var store = [{
         "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/next",
-        "teaser": null
-      },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
         "teaser": null
       },{
         "title": "Data deposit guidance",
