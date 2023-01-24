@@ -117,7 +117,19 @@ No, your deposit will be available to anybody, subject to the distribution restr
 
 #### Can depositors access their own data deposit?
 
-The unpublished deposit remains accessible to the depositor. They can assign "Download" rights to any person, who can then download, but not otherwise modify the data deposit. (This is the same process the AEA Data Editor uses to provide replicators from their team with access). The process is described at the [Training Manual](https://labordynamicsinstitute.github.io/replicability-training-manual-new/94-01-how-to-use-openICPSR-backend.html) (URL subject to change).
+The unpublished deposit remains accessible to the depositor. They can assign "Download" rights to any person, who can then download, but not otherwise modify the data deposit. To do so, go to the "Share Project" button in your deposit:
+
+![Share Project](/images/openicpsr-restricted-share.png)
+
+Add the sharee's email to the correct field, and select "`Allow user to download contents`"
+
+![Sharing for download onlyh](/images/openicpsr-restricted-share3.png)
+
+This should update the list of users with certain permissions:
+
+![Permissions view](/images/openicpsr-restricted-share4.png)
+
+Note that you take full responsibility for sharing. At any point, the permission can be removed by clicking on the trash can next to the user name.
 
 #### This process is too complicated for my data
 
