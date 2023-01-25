@@ -101,6 +101,8 @@ Authors will need to edit the metadata:
 
 CodeOcean will then verify the deposit again. Normally, this should not generate a new version (`V2`), but rather, a `V1.1`. The DOI of the deposit should not change. 
 
+![Updated CodeOcean after adding manuscript DOI](/images/codeocean-update-link-doi.png)
+
 ### Adding manuscript DOI to other openICPSR repositories
 
 Authors will need to edit the metadata under the "Related Publications" heading:
