@@ -1,5 +1,309 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-25T16:39:44-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Launching DCAS</title><link href="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas" rel="alternate" type="text/html" title="Launching DCAS" /><published>2022-12-15T00:00:00-05:00</published><updated>2022-12-15T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/launching-dcas</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
-The data editors of the journals] of the <a href="https://www.aeaweb.org/journals">American Economic Association</a><sup id="fnref:aea" role="doc-noteref"><a href="#fn:aea" class="footnote" rel="footnote">1</a></sup>, of the <a href="https://res.org.uk/journals/">Royal Economic Society</a><sup id="fnref:res" role="doc-noteref"><a href="#fn:res" class="footnote" rel="footnote">2</a></sup>, the <a href="https://www.restud.com/">Review of Economic Studies</a>,  the <a href="https://www.economics.ca/cpages/cje-home">Canadian Journal of Economics</a>, and <a href="https://weai.org/view/EI">Economic Inquiry</a> have joined forces  to proudly launch <strong>DCAS</strong>, the <a href="https://datacodestandard.org/">Data and Code Availability Standard</a>. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-25T23:35:03-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">DCAS v1.0 Compliance Self-Assessment</title><link href="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance" rel="alternate" type="text/html" title="DCAS v1.0 Compliance Self-Assessment" /><published>2023-01-25T00:00:00-05:00</published><updated>2023-01-25T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/dcas-compliance</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
+On 2022-12-15, various data editors, including myself, <a href="2022-12-15-launching-dcas">launched the Data and Code Availability Standard (DCAS)</a>.  In this post, I will do a self-assessment of my claim that the AEA’s Data and Code Availability Policy (DCAP) complies with DCAS. The assessment is based on <a href="https://github.com/social-science-data-editors/DCAS/blob/4b68868d3ecd9ac331f9add6813dae4ffe9b8d87/_data/rules.csv">DCAS V1.0 rules</a>, compared to the <a href="https://www.aeaweb.org/journals/data/data-code-policy">DCAP as of January 2023</a>.</p>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<hr />
+
+<h2 id="section-data">Section: Data</h2>
+
+<h3 id="data-availability-statement">Data Availability Statement</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">A Data Availability Statement is provided with detailed enough information such that an independent researcher can replicate the steps needed to access the original data, including any limitations and the expected monetary and time cost of data access.</td>
+<td>§ 2: "Authors ... must provide ... information about the data, ... sufficient to permit replication, as well as information about access to data ....
+
+§ 6: "the replication materials shall include... (b) description sufficient to access all data at their original source location,"
+
+§ 9: "...The data availability statement shall provide detailed information on how, where, and under what conditions an independent researcher can access the original source data, as well as author-generated derivative data, and must be explicit and accurate about any restrictions, requirements, payments, and processing delays. The data availability statement shall provide information to assure the reader that the data are available for a sufficiently long period of time."</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: The AEA policy is expressed more generally, but de facto, we interpret the policy to require information about limitations - time, location, person type - and cost - time, money - to be crucial, and generally request that information from authors if not provided.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="raw-data">Raw data</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Raw data used in the research (primary data collected by the author and secondary data not otherwise available) is made publicly accessible. Exceptions are explained under Rule 1.</td>
+<td>§ 6: "the replication materials shall include (a) the data set(s), "</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: The AEA policy is not explicit about providing both raw and derivative data.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="analysis-data">Analysis data</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Analysis data is provided as part of the replication package unless they can be fully reproduced from accessible data within a reasonable time frame. Exceptions are explained under Rule 1.</td>
+<td>§ 6: "the replication materials shall include (a) the data set(s), "</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: In practice, raw data must always be provided. If the Data Editor observes that processing times are very long to generate derivative data, or that derivative data can be provided when raw data is confidential, then the Data Editor will request that analysis data be provided. It is NOT sufficient to ONLY provide the analysis data, when raw data are available and can be provided.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="format">Format</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">The data files are provided in any format compatible with commonly used statistical package or software. Some journals require data files in open, non-proprietary formats.</td>
+<td>§ 11: Formats/Data: The data files may be provided in any format compatible with any commonly used statistical package or software. Authors are encouraged to provide data files in open, non-proprietary formats.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: We do not (yet) require that data (also) be provided in non-proprietary formats. In general, source data are rarely in proprietary formats, but analysis data may be. We interpret “non-proprietary format” to mean that open source (free) software can read the provided data. This is not the same as requiring explicitly open, archive-friendly formats (Library of Congress). For instance, Stata data can be reliably read by Python and R code, and we will accept that. We will generally push back on MATLAB-formatted data, since they are hard to read with such software.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="metadata">Metadata</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Description of variables and their allowed values are publicly accessible.</td>
+<td>§ 11: Formats/Data: Authors should ensure that a meaningful name or description (label) is available for every variable in the provided datasets. Codebooks or similar metadata should describe the allowed values and their meaning for each variable. It is acceptable to reference publicly available documentation for these items.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: This requirement can intersect with the data format. It is acceptable to have data formats (compliant with the previous DCAS rule) that include meaningful value and variable labels. When the data format itself does not support such self-documentation, separate codebooks, or references (citations!) to codebooks, are requested. This is somewhat difficult to enforce, and compliance may not be fully in line with the policy in all cases.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="citation">Citation</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">All data used in the paper are cited.</td>
+<td>§ 8: All source data used in the paper shall be cited, following the AEA Sample References.</td>
+
+</table>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<hr />
+
+<h2 id="section-code">Section: Code</h2>
+
+<h3 id="data-transformation">Data transformation</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Programs used to create any final and analysis data sets from raw data are included.</td>
+<td>§ 2: "Authors ... must provide ... information about the ... programs, and other details of the computations sufficient to permit replication ....
+
+§ 6: "the replication materials shall include... (c) the programs used to create any final and analysis data sets from raw data,"</td>
+
+</table>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="analysis">Analysis</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Programs producing the computational results (estimation, simulation, model solution, visualization) are included.</td>
+<td>§ 2: (as before)
+
+§ 6: "the replication materials shall include... (d) programs used to run the final models,"</td>
+
+</table>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="format-1">Format</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Code is provided in source format that can be directly interpreted or compiled by appropriate software.</td>
+<td>§ 12: Formats/Code: The programs may be provided in any format compatible with commonly used statistical package or software. </td>
+
+</table>
+
+<blockquote>
+  <p>Comment: While the AEA policy does not explicitly specify “directly interpreted… by software”, it is understood that “compatible” means it must both work, and be readable. A PDF of a Python program cannot be (easily) interpreted by a Python interpreter. A Word document of Stata code cannot be directly read by Stata.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<hr />
+
+<h2 id="section-supporting-materials">Section: Supporting materials</h2>
+
+<h3 id="instruments">Instruments</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">If collecting original data through surveys or experiments, survey instruments or experiment instructions as well as details on subject selection are included.</td>
+<td>§ 7: For papers collecting original data through surveys or experiments, the replication materials shall also include (f) survey instruments or experiment instructions, (g) computer code for experiment or survey collection mechanisms, and (h) original instructions and details on subject selection. See the supplementary Policy on Experimental and Survey Papers.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: Some of this information may also be provided in Online appendices. The AEA policy is a bit more stringent in that we explicitly treat “experiment instructions” as code when the experiment was conducted using software, though that is, in fact, in line with the overall requirement to have code when code was used.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="ethics">Ethics</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">If applicable, details are shared about ethics approval.</td>
+<td>§ 16: If applicable, approval by ethics boards—the Institutional Review Board (IRB) in the United States and equivalent institutions elsewhere—should be demonstrated by including the name of the ethics board and any approval or exemption record number in the title footnote and the author disclosure statement(s). See the Disclosure Policy.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: The AEA policy is a bit more stringent, in that it specifies exactly what to share about the ethics approval. It is both listed as part of the Disclosure Policy, and mentioned in the “title footnote.”</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="pre-registration">Pre-registration</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">If applicable, pre-registration of the research is identified and cited.</td>
+<td>§ 15: It is the policy of the AEA that randomized control trials must be registered on the RCT Registry. All such registrations shall be cited in the title footnote and elsewhere in the paper as appropriate. Please see the RCT Registry policy.</td>
+
+</table>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="documentation">Documentation</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">A README document is included, containing a Data Availability Statement, listing all software and hardware dependencies and requirements (including the expected run time), and explaining how to reproduce the research results. The README follows the schema provided by the [Social Science Data Editors’ template README](https://social-science-data-editors.github.io/template_README/).</td>
+<td>§ 13: As part of the archive, authors must provide a README file listing all included files and documenting the purpose, format, and provenance of each file provided, as well as instructing a user on how replication can be conducted. The README shall contain the data availability statement and proper citations for all data used. The README shall follow the schema provided by the Social Science Data Editors' template README.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: While the policy does not explicitly mention “software and hardware dependency and requirements (… run time…)”, it directly references the template README, which does specify those elements.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<hr />
+
+<h2 id="section-sharing">Section: Sharing</h2>
+
+<h3 id="location">Location</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">Data and programs are archived by the authors in the repositories deemed acceptable by the journal.</td>
+<td>§ 3: Data and programs should be archived in the AEA Data and Code Repository. Footnote: Other repositories and archives may be acceptable, as long as these are 
+considered to be "trusted" archives or repositories, see guidance. The AEA Data Editor will assess suitability of any such repositories and archives.</td>
+
+</table>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="license">License</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">A license specifies the terms of use of code and data in the replication package. The license allows for replication by researchers unconnected to the original parties.</td>
+<td>§ 13: ... The README shall follow the schema provided by the Social Science Data Editors' template README.</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: This rule is included by reference - the License is an element for both data and code in the template README - as well as implicitly. The AEA Data and Code Repository defaults to a CC-BY license, and any deviation is scrutinized by the Data Editor to allow researchers unconnected to the original parties to access maximum information, while remaining compliant with restrictions and terms of use.</p>
+</blockquote>
+
+<p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
+
+<h3 id="omissions">Omissions</h3>
+
+<table>
+<thead>
+<tr><td>What the DCAS says</td><td>What the AEA DCAP says</td>
+</tr></thead>
+
+<td width="35%">The README clearly indicates any omission of the required parts of the package due to legal requirements or limitations or other approved agreements.</td>
+<td>§ 3: The Editor should be notified at the time of submission if access to the  data used in a paper is restricted or limited, or if, for some other reason, the requirements above cannot be met.
+
+§4: If data or programs cannot be published in an openly accessible trusted data repository, authors must commit to preserving data and code for a period of no less than five years following publication of the manuscript, and to providing reasonable assistance to requests for clarification and replication.
+
+§ 6: "the replication materials shall include... (b) description sufficient to access all data at their original source location,"</td>
+
+</table>
+
+<blockquote>
+  <p>Comment: This rule is implicit in several different paragraphs of the AEA policy. The policy explicitly calls out situations where data may not be accessible or publishable. Authors must explicitly (publicly) commit to preserving materials, and supporting replication attempts. Deviations from the minimum duration are documented in the README. Implicit in 6(b) is the fact that a full description of how to access the data will generally also state that the data cannot be re-published. Finally, the license should be clear about this as well.</p>
+</blockquote>
+
+<h2 id="a-few-last-notes">A few last notes</h2>
+
+<p>The current AEA policy was created before the release of the Data and Code Availability Standard. As the AEA and other journals align on a common standard, we will likely more closely adjust how our policy is expressed with the standard, making compliance by authors less well versed in these things easier.</p>
+
+<p>I welcome any feedback.</p>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><category term="dcas" /><summary type="html"><![CDATA[On 2022-12-15, various data editors, including myself, launched the Data and Code Availability Standard (DCAS). In this post, I will do a self-assessment of my claim that the AEA’s Data and Code Availability Policy (DCAP) complies with DCAS. The assessment is based on DCAS V1.0 rules, compared to the DCAP as of January 2023. Section: Data Data Availability Statement What the DCAS saysWhat the AEA DCAP says A Data Availability Statement is provided with detailed enough information such that an independent researcher can replicate the steps needed to access the original data, including any limitations and the expected monetary and time cost of data access. § 2: "Authors ... must provide ... information about the data, ... sufficient to permit replication, as well as information about access to data .... § 6: "the replication materials shall include... (b) description sufficient to access all data at their original source location," § 9: "...The data availability statement shall provide detailed information on how, where, and under what conditions an independent researcher can access the original source data, as well as author-generated derivative data, and must be explicit and accurate about any restrictions, requirements, payments, and processing delays. The data availability statement shall provide information to assure the reader that the data are available for a sufficiently long period of time." Comment: The AEA policy is expressed more generally, but de facto, we interpret the policy to require information about limitations - time, location, person type - and cost - time, money - to be crucial, and generally request that information from authors if not provided. Raw data What the DCAS saysWhat the AEA DCAP says Raw data used in the research (primary data collected by the author and secondary data not otherwise available) is made publicly accessible. Exceptions are explained under Rule 1. § 6: "the replication materials shall include (a) the data set(s), " Comment: The AEA policy is not explicit about providing both raw and derivative data. Analysis data What the DCAS saysWhat the AEA DCAP says Analysis data is provided as part of the replication package unless they can be fully reproduced from accessible data within a reasonable time frame. Exceptions are explained under Rule 1. § 6: "the replication materials shall include (a) the data set(s), " Comment: In practice, raw data must always be provided. If the Data Editor observes that processing times are very long to generate derivative data, or that derivative data can be provided when raw data is confidential, then the Data Editor will request that analysis data be provided. It is NOT sufficient to ONLY provide the analysis data, when raw data are available and can be provided. Format What the DCAS saysWhat the AEA DCAP says The data files are provided in any format compatible with commonly used statistical package or software. Some journals require data files in open, non-proprietary formats. § 11: Formats/Data: The data files may be provided in any format compatible with any commonly used statistical package or software. Authors are encouraged to provide data files in open, non-proprietary formats. Comment: We do not (yet) require that data (also) be provided in non-proprietary formats. In general, source data are rarely in proprietary formats, but analysis data may be. We interpret “non-proprietary format” to mean that open source (free) software can read the provided data. This is not the same as requiring explicitly open, archive-friendly formats (Library of Congress). For instance, Stata data can be reliably read by Python and R code, and we will accept that. We will generally push back on MATLAB-formatted data, since they are hard to read with such software. Metadata What the DCAS saysWhat the AEA DCAP says Description of variables and their allowed values are publicly accessible. § 11: Formats/Data: Authors should ensure that a meaningful name or description (label) is available for every variable in the provided datasets. Codebooks or similar metadata should describe the allowed values and their meaning for each variable. It is acceptable to reference publicly available documentation for these items. Comment: This requirement can intersect with the data format. It is acceptable to have data formats (compliant with the previous DCAS rule) that include meaningful value and variable labels. When the data format itself does not support such self-documentation, separate codebooks, or references (citations!) to codebooks, are requested. This is somewhat difficult to enforce, and compliance may not be fully in line with the policy in all cases. Citation What the DCAS saysWhat the AEA DCAP says All data used in the paper are cited. § 8: All source data used in the paper shall be cited, following the AEA Sample References. Section: Code Data transformation What the DCAS saysWhat the AEA DCAP says Programs used to create any final and analysis data sets from raw data are included. § 2: "Authors ... must provide ... information about the ... programs, and other details of the computations sufficient to permit replication .... § 6: "the replication materials shall include... (c) the programs used to create any final and analysis data sets from raw data," Analysis What the DCAS saysWhat the AEA DCAP says Programs producing the computational results (estimation, simulation, model solution, visualization) are included. § 2: (as before) § 6: "the replication materials shall include... (d) programs used to run the final models," Format What the DCAS saysWhat the AEA DCAP says Code is provided in source format that can be directly interpreted or compiled by appropriate software. § 12: Formats/Code: The programs may be provided in any format compatible with commonly used statistical package or software. Comment: While the AEA policy does not explicitly specify “directly interpreted… by software”, it is understood that “compatible” means it must both work, and be readable. A PDF of a Python program cannot be (easily) interpreted by a Python interpreter. A Word document of Stata code cannot be directly read by Stata. Section: Supporting materials Instruments What the DCAS saysWhat the AEA DCAP says If collecting original data through surveys or experiments, survey instruments or experiment instructions as well as details on subject selection are included. § 7: For papers collecting original data through surveys or experiments, the replication materials shall also include (f) survey instruments or experiment instructions, (g) computer code for experiment or survey collection mechanisms, and (h) original instructions and details on subject selection. See the supplementary Policy on Experimental and Survey Papers. Comment: Some of this information may also be provided in Online appendices. The AEA policy is a bit more stringent in that we explicitly treat “experiment instructions” as code when the experiment was conducted using software, though that is, in fact, in line with the overall requirement to have code when code was used. Ethics What the DCAS saysWhat the AEA DCAP says If applicable, details are shared about ethics approval. § 16: If applicable, approval by ethics boards—the Institutional Review Board (IRB) in the United States and equivalent institutions elsewhere—should be demonstrated by including the name of the ethics board and any approval or exemption record number in the title footnote and the author disclosure statement(s). See the Disclosure Policy. Comment: The AEA policy is a bit more stringent, in that it specifies exactly what to share about the ethics approval. It is both listed as part of the Disclosure Policy, and mentioned in the “title footnote.” Pre-registration What the DCAS saysWhat the AEA DCAP says If applicable, pre-registration of the research is identified and cited. § 15: It is the policy of the AEA that randomized control trials must be registered on the RCT Registry. All such registrations shall be cited in the title footnote and elsewhere in the paper as appropriate. Please see the RCT Registry policy. Documentation What the DCAS saysWhat the AEA DCAP says A README document is included, containing a Data Availability Statement, listing all software and hardware dependencies and requirements (including the expected run time), and explaining how to reproduce the research results. The README follows the schema provided by the [Social Science Data Editors’ template README](https://social-science-data-editors.github.io/template_README/). § 13: As part of the archive, authors must provide a README file listing all included files and documenting the purpose, format, and provenance of each file provided, as well as instructing a user on how replication can be conducted. The README shall contain the data availability statement and proper citations for all data used. The README shall follow the schema provided by the Social Science Data Editors' template README. Comment: While the policy does not explicitly mention “software and hardware dependency and requirements (… run time…)”, it directly references the template README, which does specify those elements. Section: Sharing Location What the DCAS saysWhat the AEA DCAP says Data and programs are archived by the authors in the repositories deemed acceptable by the journal. § 3: Data and programs should be archived in the AEA Data and Code Repository. Footnote: Other repositories and archives may be acceptable, as long as these are considered to be "trusted" archives or repositories, see guidance. The AEA Data Editor will assess suitability of any such repositories and archives. License What the DCAS saysWhat the AEA DCAP says A license specifies the terms of use of code and data in the replication package. The license allows for replication by researchers unconnected to the original parties. § 13: ... The README shall follow the schema provided by the Social Science Data Editors' template README. Comment: This rule is included by reference - the License is an element for both data and code in the template README - as well as implicitly. The AEA Data and Code Repository defaults to a CC-BY license, and any deviation is scrutinized by the Data Editor to allow researchers unconnected to the original parties to access maximum information, while remaining compliant with restrictions and terms of use. Omissions What the DCAS saysWhat the AEA DCAP says The README clearly indicates any omission of the required parts of the package due to legal requirements or limitations or other approved agreements. § 3: The Editor should be notified at the time of submission if access to the data used in a paper is restricted or limited, or if, for some other reason, the requirements above cannot be met. §4: If data or programs cannot be published in an openly accessible trusted data repository, authors must commit to preserving data and code for a period of no less than five years following publication of the manuscript, and to providing reasonable assistance to requests for clarification and replication. § 6: "the replication materials shall include... (b) description sufficient to access all data at their original source location," Comment: This rule is implicit in several different paragraphs of the AEA policy. The policy explicitly calls out situations where data may not be accessible or publishable. Authors must explicitly (publicly) commit to preserving materials, and supporting replication attempts. Deviations from the minimum duration are documented in the README. Implicit in 6(b) is the fact that a full description of how to access the data will generally also state that the data cannot be re-published. Finally, the license should be clear about this as well. A few last notes The current AEA policy was created before the release of the Data and Code Availability Standard. As the AEA and other journals align on a common standard, we will likely more closely adjust how our policy is expressed with the standard, making compliance by authors less well versed in these things easier. I welcome any feedback.]]></summary></entry><entry><title type="html">Launching DCAS</title><link href="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas" rel="alternate" type="text/html" title="Launching DCAS" /><published>2022-12-15T00:00:00-05:00</published><updated>2022-12-15T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/launching-dcas</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-12-15-launching-dcas"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
+The data editors of the journals of the <a href="https://www.aeaweb.org/journals">American Economic Association</a><sup id="fnref:aea" role="doc-noteref"><a href="#fn:aea" class="footnote" rel="footnote">1</a></sup>, of the <a href="https://res.org.uk/journals/">Royal Economic Society</a><sup id="fnref:res" role="doc-noteref"><a href="#fn:res" class="footnote" rel="footnote">2</a></sup>, the <a href="https://www.restud.com/">Review of Economic Studies</a>,  the <a href="https://www.economics.ca/cpages/cje-home">Canadian Journal of Economics</a>, and <a href="https://weai.org/view/EI">Economic Inquiry</a> have joined forces  to proudly launch <strong>DCAS</strong>, the <a href="https://datacodestandard.org/">Data and Code Availability Standard</a>. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
@@ -10,7 +314,7 @@ The data editors of the journals] of the <a href="https://www.aeaweb.org/journal
       <p>The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. <a href="#fnref:res" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><summary type="html"><![CDATA[The data editors of the journals] of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy. The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. &#8617; The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. &#8617;]]></summary></entry><entry><title type="html">What is this LICENSE thing</title><link href="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use" rel="alternate" type="text/html" title="What is this LICENSE thing" /><published>2022-11-16T00:00:00-05:00</published><updated>2022-11-16T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/where-are-the-terms-of-use</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use"><![CDATA[<p>The <a href="https://social-science-data-editors.github.io/template_README/">template README</a> required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “<em>But the data is publicly available.</em>” Let me try to disentangle that somewhat.</p>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><category term="dcas" /><summary type="html"><![CDATA[The data editors of the journals of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy. The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. &#8617; The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. &#8617;]]></summary></entry><entry><title type="html">What is this LICENSE thing</title><link href="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use" rel="alternate" type="text/html" title="What is this LICENSE thing" /><published>2022-11-16T00:00:00-05:00</published><updated>2022-11-16T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/where-are-the-terms-of-use</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use"><![CDATA[<p>The <a href="https://social-science-data-editors.github.io/template_README/">template README</a> required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “<em>But the data is publicly available.</em>” Let me try to disentangle that somewhat.</p>
 
 <!-- more -->
 
@@ -1036,115 +1340,4 @@ create problems if working with Windows.”</p>
 
 <h2 id="take-away">Take away</h2>
 
-<p>Be aware of and always use the platform independent coding of paths, either a function or using “<code class="language-plaintext highlighter-rouge">/</code>”. NEVER use “<code class="language-plaintext highlighter-rouge">\</code>”.</p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><category term="Code" /><summary type="html"><![CDATA[A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.]]></summary></entry><entry><title type="html">What data to provide</title><link href="https://aeadataeditor.github.io/posts/2021-03-31-what-data" rel="alternate" type="text/html" title="What data to provide" /><published>2021-03-31T00:00:00-04:00</published><updated>2021-03-31T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/what-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-03-31-what-data"><![CDATA[<p>What do we mean by “data”?</p>
-
-<!-- more -->
-
-<h2 id="what-data-should-be-provided">What data should be provided?</h2>
-
-<p>One of my data editor colleagues at <a href="https://social-science-data-editors.github.io/">Social Science Data Editors</a> relayed a question to me recently (“asking for a friend…”): “do extract files need to be included in AEA data replication submissions?”</p>
-
-<p>They noted “The closest I could find was <a href="https://www.aeaweb.org/journals/data/data-code-policy#content">https://www.aeaweb.org/journals/data/data-code-policy#content</a> which has a blanket request for “data” but it might help to distinguish between “extracts” and “analysis” files.</p>
-
-<h2 id="the-short-answer">The short answer</h2>
-
-<p>It depends.</p>
-
-<ul>
-  <li>extract (raw) data can be reliably re-acquired today?</li>
-  <li>extract (raw) data can be reliably re-acquired in the future?</li>
-  <li>analysis data can be reproduced with reasonable resources?</li>
-</ul>
-
-<h2 id="the-longer-answer">The longer answer</h2>
-
-<p>For the raw input data (which may be an extract - that’s actually not the key criterion), we require that the <strong>acquisition</strong> of the data be reproducible.</p>
-
-<p>You don’t have to provide <strong>any</strong> data, if</p>
-
-<ul>
-  <li>the results can be reproduced by downloading precisely specified raw data (reasonableness constraint)</li>
-  <li>can reproduce analysis files reliably - subject to a reasonableness constraint.</li>
-</ul>
-
-<p>But you might also have to provide <strong>all</strong> the data.</p>
-
-<p>Reproducibility, now and in the future, is key, not whether the data is part of the package or not.</p>
-
-<p>But: this is not always straightforward. Take IPUMS as a (frequent) example.</p>
-
-<ol>
-  <li>IPUMS curates its entire database (assign a DOI), so the “reliably in the future” part is OK ✅</li>
-  <li>But IPUMS has a purely (as of today) manual data extract system. There is no computer code that can reliably re-acquire an extract today or in the (near) future. ❌
-    <ul>
-      <li>And even manual extraction is fraught with the potential for error (and can be quite tedious)  ❌</li>
-    </ul>
-  </li>
-  <li>And very importantly: providing extracts is allowed by their <a href="https://ipums.org/about/terms">terms of use</a> for MOST but not all of their datasets. ✅</li>
-</ol>
-
-<p>We thus prefer to have a copy of IPUMS extracts - and the read-in code, and the data dictionary that they provide with every extract (if you didn’t grab yours, go back into the IPUMS system and download it now!) The AEA’s Data and Code Repository can curate as well as IPUMS, but make the data more easily available, lowering the cost of reproducibility for all future researchers.</p>
-
-<p>If IPUMS were to allow for sharing or archiving of machine-actionable extract specs (not an easy problem), we would reconsider and NOT request extracts!</p>
-
-<h2 id="problems">Problems?</h2>
-
-<p>Of course, there can be impediments. For instance, we would prefer to curate the data when the data provider does NOT curate the data (has no preservation policy, assigns no DOI). But the third condition (terms of use) is just as important, and often prevents us from taking custody of an extract (or even of the analysis data).</p>
-
-<p>We ask for extracts from various online query systems (WDI, OECD, etc.) because the precise query cannot be saved, or is complicated, etc.</p>
-
-<h2 id="solutions">Solutions?</h2>
-
-<p>One obvious solution is for all data query systems to have some system to save or export query code.</p>
-
-<h3 id="psid">PSID</h3>
-
-<p>A nice (simple, but not perfect) example for such a stored-query system is the PSID:</p>
-
-<ol>
-  <li>They do curate their database, though no DOIs are assigned, and you need to know to ask (meh… but OK: ✅)</li>
-  <li>While they do not assign DOIs to historical queries, you can (as a user) share a query, see <a href="https://simba.isr.umich.edu/DC/c.aspx">https://simba.isr.umich.edu/DC/c.aspx</a>. ✅</li>
-  <li>Which is good, since you are not allowed to share the data itself! ❌ (Actually, you can, via <a href="https://www.openicpsr.org/openicpsr/psid">https://www.openicpsr.org/openicpsr/psid</a>)</li>
-</ol>
-
-<h2 id="counter-point">Counter point</h2>
-
-<p>The obvious corollary is:</p>
-
-<ol>
-  <li>If a data <strong>provider curates the data</strong> (say, at a trusted repository, or with a credible preservation policy) (for which a DOI is a signal, but not a condition) ✅</li>
-  <li>and the <strong>data can be downloaded</strong>, or queried through an API<sup id="fnref:API" role="doc-noteref"><a href="#fn:API" class="footnote" rel="footnote">1</a></sup> or something similar ✅</li>
-  <li>regardless of their license and terms of use</li>
-</ol>
-
-<p>we will <strong>REJECT</strong> your data deposit - please simply leave it where it is!</p>
-
-<p>But cite it, and provide precise instructions on how to get it (if a simple click is not sufficient).</p>
-
-<h2 id="and-those-analysis-files">And those analysis files?</h2>
-
-<p>So when do we want analysis (intermediate) files?</p>
-
-<ul>
-  <li>when we cannot <strong>reliably</strong> get the raw data, and there are no issues with redistributing the analysis files</li>
-  <li>when the raw data can be redistributed, but are “<strong>too large</strong>” to acquire (at the AEA, that boundary is around 30GB)</li>
-  <li>when the raw data can be redistributed, but the analysis data are already the result of a very <strong>resource</strong> (computer count or time) <strong>intensive</strong> processing</li>
-</ul>
-
-<p>In all of those cases, we <strong>want</strong> the analysis data.</p>
-
-<p>When do we <strong>NOT want</strong> the analysis data? Well, if the raw data can be trivially acquired (download, API<sup id="fnref:API:1" role="doc-noteref"><a href="#fn:API" class="footnote" rel="footnote">1</a></sup>), and can be reasonably quickly processed, then we (and future researchers) do not need your copy of the analysis data. But it also doesn’t hurt…</p>
-
-<p>BTW, “reasonably” means we are not using more than maybe 50 compute cores. “Quickly” means that it runs no longer than 2-3 weeks - to produce the analysis data.</p>
-
-<h2 id="and-just-contact-us">And just contact us</h2>
-
-<p>In all cases, if you have questions, concerns, or doubts, do contact me - as many others have already done.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:API" role="doc-endnote">
-      <p>P.S. That footnote for API? Well, APIs get deprecated over time, so we actually prefer to have the <strong>raw</strong> data saved, but it’s probably OK to skip the analysis data. <a href="#fnref:API" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:API:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><summary type="html"><![CDATA[What do we mean by “data”?]]></summary></entry></feed>
+<p>Be aware of and always use the platform independent coding of paths, either a function or using “<code class="language-plaintext highlighter-rouge">/</code>”. NEVER use “<code class="language-plaintext highlighter-rouge">\</code>”.</p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><category term="Code" /><summary type="html"><![CDATA[A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.]]></summary></entry></feed>

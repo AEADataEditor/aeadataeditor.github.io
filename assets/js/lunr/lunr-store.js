@@ -198,9 +198,15 @@ var store = [{
         "teaser": null
       },{
         "title": "Launching DCAS",
-        "excerpt":"The data editors of the journals] of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an...","categories": [],
-        "tags": ["standards","reproducibility","provenance"],
+        "excerpt":"The data editors of the journals of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an...","categories": [],
+        "tags": ["standards","reproducibility","provenance","dcas"],
         "url": "/posts/2022-12-15-launching-dcas",
+        "teaser": null
+      },{
+        "title": "DCAS v1.0 Compliance Self-Assessment",
+        "excerpt":"On 2022-12-15, various data editors, including myself, launched the Data and Code Availability Standard (DCAS). In this post, I will do a self-assessment of my claim that the AEA’s Data and Code Availability Policy (DCAP) complies with DCAS. The assessment is based on DCAS V1.0 rules, compared to the DCAP...","categories": [],
+        "tags": ["standards","reproducibility","provenance","dcas"],
+        "url": "/posts/2023-01-25-dcas-compliance",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",
