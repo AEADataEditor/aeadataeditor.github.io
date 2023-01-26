@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-25T23:35:03-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">DCAS v1.0 Compliance Self-Assessment</title><link href="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance" rel="alternate" type="text/html" title="DCAS v1.0 Compliance Self-Assessment" /><published>2023-01-25T00:00:00-05:00</published><updated>2023-01-25T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/dcas-compliance</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-26T11:37:35-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">The oldest AEA replication package</title><link href="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package" rel="alternate" type="text/html" title="The oldest AEA replication package" /><published>2023-01-26T00:00:00-05:00</published><updated>2023-01-26T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package"><![CDATA[<p>We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.</p>
+
+<!-- more -->
+
+<p>I actually don’t know the answer to that. But the oldest replication package we have in the (migrated) AEA archives is:</p>
+
+<blockquote>
+  <p>Frankel, Jeffrey A., and Romer, David H. Replication data for: Does Trade Cause Growth? Nashville, TN: American Economic Association [publisher], 1999. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-12. <a href="https://doi.org/10.3886/E113211V1">https://doi.org/10.3886/E113211V1</a>.</p>
+</blockquote>
+
+<p>which accompanies this article:</p>
+
+<blockquote>
+  <p>Frankel, Jeffrey A, and David Romer. “Does Trade Cause Growth?” American Economic Review 89, no. 3 (June 1999): 379–99. <a href="https://doi.org/10.1257/aer.89.3.379">https://doi.org/10.1257/aer.89.3.379</a>.</p>
+</blockquote>
+
+<p>Find out yourself: a (fully reproducible) way to verify this (there are better ways, of course)</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w"> </span><span class="c1"># I'm lazy</span><span class="w">
+
+</span><span class="n">baseurl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://github.com/AEADataEditor/aea-supplement-migration/raw/master/data/acquired"</span><span class="w">
+</span><span class="c1"># alternatively, if running locally</span><span class="w">
+</span><span class="c1"># baseurl &lt;- "data/acquired"</span><span class="w">
+</span><span class="n">aea_article_data</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"aea_article_data.csv.gz"</span><span class="p">))</span><span class="w">
+</span><span class="n">aea_issue_data</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"aea_issue_data.csv.gz"</span><span class="p">))</span><span class="w">
+</span><span class="n">aea_icpsr_mapping</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"aea_icpsr_mapping.20191014.txt"</span><span class="p">),</span><span class="w">
+                              </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"icpsr_doi"</span><span class="p">,</span><span class="s2">"zipfile"</span><span class="p">))</span><span class="w">  </span><span class="o">%&gt;%</span><span class="w"> 
+                    </span><span class="n">mutate</span><span class="p">(</span><span class="n">zipfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_remove</span><span class="p">(</span><span class="n">zipfile</span><span class="p">,</span><span class="w">
+                                                </span><span class="n">fixed</span><span class="p">(</span><span class="s2">"Original Zip: "</span><span class="p">)))</span><span class="w">
+</span><span class="n">aea_deposits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">aea_article_data</span><span class="p">,</span><span class="n">aea_icpsr_mapping</span><span class="p">,</span><span class="w">
+                          </span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"icpsr_package_name"</span><span class="o">=</span><span class="s2">"zipfile"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">aea_issue_data</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"issue_id"</span><span class="p">))</span><span class="w">
+</span><span class="c1"># oldest package</span><span class="w">
+</span><span class="n">aea_deposits</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">year</span><span class="o">==</span><span class="nf">min</span><span class="p">(</span><span class="n">aea_deposits</span><span class="o">$</span><span class="n">year</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+  </span><span class="n">select</span><span class="p">(</span><span class="n">doi</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">journal</span><span class="p">,</span><span class="n">volume</span><span class="p">,</span><span class="n">issue</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="n">icpsr_doi</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>(<a href="https://github.com/AEADataEditor/aea-supplement-migration/blob/ab235cbf1e0e1965a71263d15e1d0f3983fdba9c/programs/oldest-package.R">source</a>)</p>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.]]></summary></entry><entry><title type="html">DCAS v1.0 Compliance Self-Assessment</title><link href="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance" rel="alternate" type="text/html" title="DCAS v1.0 Compliance Self-Assessment" /><published>2023-01-25T00:00:00-05:00</published><updated>2023-01-25T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/dcas-compliance</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-25-dcas-compliance"><![CDATA[<p><img src="https://datacodestandard.org/assets/img/logo-800.png" alt="DCAS Logo" />
 On 2022-12-15, various data editors, including myself, <a href="2022-12-15-launching-dcas">launched the Data and Code Availability Standard (DCAS)</a>.  In this post, I will do a self-assessment of my claim that the AEA’s Data and Code Availability Policy (DCAP) complies with DCAS. The assessment is based on <a href="https://github.com/social-science-data-editors/DCAS/blob/4b68868d3ecd9ac331f9add6813dae4ffe9b8d87/_data/rules.csv">DCAS V1.0 rules</a>, compared to the <a href="https://www.aeaweb.org/journals/data/data-code-policy">DCAP as of January 2023</a>.</p>
 
 <p><!-- group,topic,description,Relate to AEA DCAP,Comment by Data Editor --></p>
@@ -1299,45 +1341,4 @@ LICENSEID=6521234
       <p>Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. 2016. Software Citation Principles. <em>PeerJ Computer Science</em> 2:e86. DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Software" /><category term="Code" /><summary type="html"><![CDATA[A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.]]></summary></entry><entry><title type="html">File paths in statistical software</title><link href="https://aeadataeditor.github.io/posts/2021-04-09-paths" rel="alternate" type="text/html" title="File paths in statistical software" /><published>2021-04-09T00:00:00-04:00</published><updated>2021-04-09T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/paths</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-04-09-paths"><![CDATA[<p>A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.</p>
-
-<!-- more -->
-
-<p>Comment in a recent reply to one of our replication reports (note: this was not actually a problem):</p>
-
-<blockquote>
-  <p>“We use a HPC and a Linux environment. Therefore, the folders are separated by / and not \ . This might
-create problems if working with Windows.”</p>
-</blockquote>
-
-<p>Actually, it does not!</p>
-
-<h2 id="stata">Stata</h2>
-
-<p>Every <strong>Stata</strong> user (but in particular those on Windows) should know 👇. Rule: ALWAYS use “<code class="language-plaintext highlighter-rouge">/</code>”, NEVER “<code class="language-plaintext highlighter-rouge">\</code>” and you should be fine.</p>
-
-<p><img src="/images/stata-technical-note-paths.png" alt="Stata note on paths" /></p>
-
-<h2 id="r">R</h2>
-
-<p>use “<code class="language-plaintext highlighter-rouge">file.path('path','file')</code>” or even use packages <a href="https://cran.r-project.org/web/packages/here/vignettes/here.html"><code class="language-plaintext highlighter-rouge">here</code></a> or <a href="https://cran.r-project.org/web/packages/rprojroot/vignettes/rprojroot.html"><code class="language-plaintext highlighter-rouge">rprojroot</code></a>.</p>
-
-<h2 id="matlab">Matlab</h2>
-
-<p>Use “<code class="language-plaintext highlighter-rouge">/</code>” and it will do the right thing.</p>
-
-<p><img src="/images/matlab-paths.png" alt="Matlab paths" /></p>
-
-<h2 id="python">Python</h2>
-
-<p><code class="language-plaintext highlighter-rouge">os.path.join()</code> is your friend</p>
-
-<p><img src="/images/python-paths.png" alt="Python paths" /></p>
-
-<h2 id="others">Others</h2>
-
-<p>And there are likely similar functions in lots of other programming languages and statistical software.</p>
-
-<h2 id="take-away">Take away</h2>
-
-<p>Be aware of and always use the platform independent coding of paths, either a function or using “<code class="language-plaintext highlighter-rouge">/</code>”. NEVER use “<code class="language-plaintext highlighter-rouge">\</code>”.</p>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Data" /><category term="Code" /><summary type="html"><![CDATA[A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Software" /><category term="Code" /><summary type="html"><![CDATA[A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.]]></summary></entry></feed>

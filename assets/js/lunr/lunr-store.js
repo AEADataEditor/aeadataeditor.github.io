@@ -209,6 +209,12 @@ var store = [{
         "url": "/posts/2023-01-25-dcas-compliance",
         "teaser": null
       },{
+        "title": "The oldest AEA replication package",
+        "excerpt":"We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be. I actually don’t know the answer to that. But the oldest replication package we have in the (migrated) AEA archives is: Frankel, Jeffrey A., and Romer, David H. Replication data for:...","categories": [],
+        "tags": ["migration","reproducibility"],
+        "url": "/posts/2023-01-26-oldest-replication-package",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
