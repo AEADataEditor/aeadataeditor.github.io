@@ -2,7 +2,7 @@
 title:  "The oldest AEA replication package"
 date: 2023-01-26
 toc: false
-mastodon: 
+mastodon: https://mstdn.social/@aeadata/109757891152599201
 tags:
   - migration
   - reproducibility
