@@ -26,7 +26,7 @@ group :jekyll_plugins do
   gem 'jekyll-scholar'
   gem 'jekyll-paginate'
   gem 'jekyll-include-cache'
-  gem "jekyll-lunr-js-search"
+#  gem "jekyll-lunr-js-search"
   gem "jekyll-gist"
   gem "jekyll-redirect-from"
 end
