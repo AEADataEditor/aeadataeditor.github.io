@@ -27,3 +27,11 @@ The [old pages](http://qed.econ.queensu.ca/jae/legacy.html) were at Queen's Univ
 The [new pages](https://journaldata.zbw.eu/journals/jae) are at the ZBW in Germany.
 
 ![new JAE Archive pages](/images/jae-new-2023.png)
+
+## Oldest replication package
+
+The honors of the oldest replication package should probably go to ... Roger Koenker!
+
+> Koenker, Roger (1988): Asymptotic theory and econometric practice (replication data). Version: 1. Journal of Applied Econometrics. Dataset. http://dx.doi.org/10.15456/jae.2022313.1129100068
+
+> Koenker, R. (1988), Asymptotic Theory And Econometric Practice, Journal of Applied Econometrics, 3(2), 139-147. https://doi.org/10.1002/jae.3950030205
