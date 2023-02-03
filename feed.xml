@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-01-26T17:38:27-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">The oldest AEA replication package</title><link href="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package" rel="alternate" type="text/html" title="The oldest AEA replication package" /><published>2023-01-26T00:00:00-05:00</published><updated>2023-01-26T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package"><![CDATA[<p>We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-02-02T21:05:12-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">The oldest replication package, overall?</title><link href="https://aeadataeditor.github.io/posts/2023-02-02-oldest-replication-package-jae" rel="alternate" type="text/html" title="The oldest replication package, overall?" /><published>2023-02-02T00:00:00-05:00</published><updated>2023-02-02T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package-jae</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-02-02-oldest-replication-package-jae"><![CDATA[<p>After our recent discussion about the oldest <strong>AEA</strong> replication package, I navigated over to the <strong>really</strong> old archive at the Journal of Applied Econometrics. Surprise!</p>
+
+<!-- more -->
+
+<p>After all these years of loving maintenance by James MacKinnon, pioneer of data archives, it has migrated from old-style web pages (<a href="https://en.wikipedia.org/wiki/Gopher_(protocol)">gopher pages</a>, originally, I think!)</p>
+
+<p>The new JAE archive is now at ZBW in Germany.</p>
+
+<h2 id="old-pages">Old pages</h2>
+
+<p>The <a href="http://qed.econ.queensu.ca/jae/legacy.html">old pages</a> were at Queen’s University, Kingston, ON, Canada.</p>
+
+<p><img src="/images/jae-old-2022.png" alt="old JAE Data Archive pages" /></p>
+
+<h2 id="new-pages">New pages</h2>
+
+<p>The <a href="https://journaldata.zbw.eu/journals/jae">new pages</a> are at the ZBW in Germany.</p>
+
+<p><img src="/images/jae-new-2023.png" alt="new JAE Archive pages" /></p>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surprise!]]></summary></entry><entry><title type="html">The oldest AEA replication package</title><link href="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package" rel="alternate" type="text/html" title="The oldest AEA replication package" /><published>2023-01-26T00:00:00-05:00</published><updated>2023-01-26T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package"><![CDATA[<p>We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.</p>
 
 <!-- more -->
 
@@ -1256,89 +1274,4 @@ LICENSEID=6521234
       <p>Piveteau, Paul. 2021. “Data and Code for: An Empirical Dynamic Model of Trade with Consumer Accumulation: Replication_Fall20.” <em>American Economic Association [publisher]</em>,  <em>Inter-university Consortium for Political and Social Research [distributor]</em>. <a href="https://doi.org/10.3886/E120070V1-100007">https://doi.org/10.3886/E120070V1-100007</a>. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="restricted-access" /><category term="AEJ:Micro" /><category term="CASD" /><category term="cascad" /><summary type="html"><![CDATA[I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.]]></summary></entry><entry><title type="html">Software, code, and repositories</title><link href="https://aeadataeditor.github.io/posts/2021-06-17-software-citations" rel="alternate" type="text/html" title="Software, code, and repositories" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/software-citations</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-06-17-software-citations"><![CDATA[<p>A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.</p>
-
-<!-- more -->
-
-<h2 id="replication-packages-and-version-control">Replication packages and version control</h2>
-
-<p>Fact: all replication packages contain code.</p>
-
-<p>Note: sometimes, that’s an Excel file, but that’s still code.</p>
-
-<p>But few seem to stem from version control repositories. The most common version control software these days is <code class="language-plaintext highlighter-rouge">git</code>, though I’ve seen a few uses of <code class="language-plaintext highlighter-rouge">svn</code>. Both are popular because they usually come accompanied by online web services that allow authors to showcase their code, as well as conduct a few other key functions that I will get to.</p>
-
-<p>By far the most popular as of 2021 is <a href="https://github.com">Github</a> - in fact, this <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-06-17-software-citations.md">blog post</a> and website are hosted on Github-provided resources. Others include <a href="https://gitlab.com">Gitlab</a>, <a href="https://bitbucket.org">Bitbucket</a>, and for <code class="language-plaintext highlighter-rouge">svn</code>, <a href="https://sourceforge.net/">SourceForge</a>.</p>
-
-<p>Version control allows for, well, version control. This is particularly relevant for replication packages, since code probably is evolving. Which version was used to generate the tables and figures in the paper is very important information.</p>
-
-<p>While authors are able to “lock in” a version that was used when they submit to the AEA Data Editor (via <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>), ideally, that version is locked in <strong>prior</strong> to submitting.</p>
-
-<h2 id="locking-in-versions">Locking in versions</h2>
-
-<p>If using version control, creating a “locked in” version that corresponds to a particular version of the paper is easy. It may be called different things (“releases” on Github and in <code class="language-plaintext highlighter-rouge">svn</code>, “tags” in native <code class="language-plaintext highlighter-rouge">git</code>), but it achieves the same function: It marks a particularly version of code.</p>
-
-<p>That <code class="language-plaintext highlighter-rouge">tag</code> can contain additional “metadata” - an “<a href="https://git-scm.com/docs/git-tag">annotated tag</a>” or a “<a href="https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository">Github release</a>” can be quite verbose. But in all cases, the key is to uniquely identify the version of the code that was used to do something, or that corresponds to something.</p>
-
-<p>NOTE: strictly speaking, those <code class="language-plaintext highlighter-rouge">tags</code> are not necessary. Authors could simply point to a particular “commit hash”, e.g. “<code class="language-plaintext highlighter-rouge">https://github.com/&lt;user&gt;/&lt;project&gt;/tree/&lt;hash&gt;</code>” to uniquely point to a particular version as well (similarly on <code class="language-plaintext highlighter-rouge">svn</code>, pointing to revision numbers). But <code class="language-plaintext highlighter-rouge">tags</code> are a tad more human readable than <a href="https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483"><code class="language-plaintext highlighter-rouge">https://github.com/AEADataEditor/replication-template-development/tree/7634e14ee9a0a433db1ab6f25609dfb4c6876483</code></a>.</p>
-
-<h2 id="archiving-versions">Archiving Versions</h2>
-
-<p>Once authors have identified a particular version of the code, there remains of course the issue that Github &amp; Co. are not “trusted repositories”. So authors will still need to somehow archive that particular version.</p>
-
-<p>One convenience of using features like “Github releases” or even tags on Github is that the interface provides a convenient link to download a ZIP or TAR file without all the extra <code class="language-plaintext highlighter-rouge">git</code> information.</p>
-
-<p><img src="/images/github-release-screenshot-assets.png" alt="Screenshot of download links on Github release" /></p>
-
-<p>Once you have the ZIP or TAR, you can manually send this off to a trusted repository. That’s what most authors are or should be doing when submitting to the <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>, or for that matter for any journal’s supplementary materials archive.</p>
-
-<p>However, that is tedious, and at least for Github, there is a different (automated) option: <a href="https://guides.github.com/activities/citable-code/">linking it to Zenodo</a>. Authors should consult the (very easy) details in the link, but in a nutshell, this is what happens:</p>
-
-<ul>
-  <li>you set up the link. Takes a bit of work the first time, but then it’s done, forever.</li>
-  <li>every time a release is made, the ZIP file is sent automatically to Zenodo, and creates an archive, with a DOI and a preservation guarantee.
-    <ul>
-      <li>The Zenodo deposit links back to the particular release/tag on Github</li>
-    </ul>
-  </li>
-  <li>some cosmetic editing (to Zenodo metadata, to eye candy such as a DOI badge) can make it pretty, but are not needed.</li>
-</ul>
-
-<h2 id="example">Example</h2>
-
-<p>For an example see</p>
-
-<ul>
-  <li>the <a href="https://github.com/social-science-data-editors/template_README/">source code for template README on Github</a>, including any <a href="https://github.com/social-science-data-editors/template_README/releases">releases</a></li>
-  <li>the <a href="https://social-science-data-editors.github.io/template_README/">page generated from the source code on Github.io</a></li>
-  <li>the “badge”: <a href="https://doi.org/10.5281/zenodo.4319999"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4319999.svg" alt="DOI badge" /></a></li>
-  <li>the <a href="https://doi.org/10.5281/zenodo.4319999">archived version on Zenodo</a></li>
-</ul>
-
-<p><img src="/images/zenodo-readme-v1.png" alt="template README on Zenodo" /></p>
-
-<p>The version - in fact, any future version - is now properly archived at a trusted repository.</p>
-
-<h2 id="citing-software-versions">Citing Software Versions</h2>
-
-<p>Last but not least, but in particular when the code authors generated is of more general utility (a Stata or R package for a new econometric technique), <strong>citing the software</strong> is a must (see <a href="https://www.force11.org/software-citation-principles">FORCE11 Software Citation Principles</a>,<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>)</p>
-
-<p>By creating archived versions, Zenodo, or any other trusted repository, provides a DOI that can then be cited:</p>
-
-<blockquote>
-  <p>Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Zenodo. https://doi.org/10.5281/zen0do.12345</p>
-</blockquote>
-
-<p>Naturally, authors could also cite the Github-hosted version, but only with the authority of a (transient, ephemerous) website:</p>
-
-<blockquote>
-  <p>Smith, A. and J. Wesson. 2021. “15-fold quantum fixed effects, R package.” v0.2-alpha. Github. Last accessed at https://github.com/smith-wesson/cdqfe/releases/tag/v0.2-alpha on June 17, 2025.</p>
-</blockquote>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. 2016. Software Citation Principles. <em>PeerJ Computer Science</em> 2:e86. DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Software" /><category term="Code" /><summary type="html"><![CDATA[A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="restricted-access" /><category term="AEJ:Micro" /><category term="CASD" /><category term="cascad" /><summary type="html"><![CDATA[I wanted to highlight a particular interesting article in the latest AEJ: Microeconomics from the perspective of replicability and reproducibility.]]></summary></entry></feed>

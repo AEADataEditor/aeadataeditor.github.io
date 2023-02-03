@@ -215,6 +215,12 @@ var store = [{
         "url": "/posts/2023-01-26-oldest-replication-package",
         "teaser": null
       },{
+        "title": "The oldest replication package, overall?",
+        "excerpt":"After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surprise! After all these years of loving maintenance by James MacKinnon, pioneer of data archives, it has migrated from old-style web pages (gopher pages, originally, I...","categories": [],
+        "tags": ["migration","reproducibility"],
+        "url": "/posts/2023-02-02-oldest-replication-package-jae",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
