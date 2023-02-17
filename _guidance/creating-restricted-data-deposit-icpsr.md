@@ -82,6 +82,7 @@ All access options require an **application**, a **secure computer or room**, an
 
 - **Secure Download**: Approved researchers can securely download to the secure location specified in an application.
 - **Virtual Data Enclave (VDE)**:  Approved researchers access the data in a secure remote desktop (Windows) on ICPSR’s servers. They are unable to remove files from the system. To obtain output, ICPSR conduct a disclosure review on requested files. This is similar in technology and process to files available through NORC (which provides services to the Bureau of Labor Statistics and the Economic Research Service of the Department of Agriculture) and various European access mechanisms.
+  - For more information on the VDE, see [ICPSR VDE website](https://www.icpsr.umich.edu/VDE/)
 - **Physical Data Enclave (PDE)**: The researcher must travel to Ann Arbor, MI, and access the data in a secure room on ICPSR's premises.
 
 The AEA will support any of these access methods. 
