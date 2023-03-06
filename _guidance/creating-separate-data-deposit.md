@@ -127,4 +127,4 @@ The following example uses two linked deposits. All code is available for unrest
 - [Code deposit](https://doi.org/10.3886/E131761V1): this deposit can be freely downloaded
 - [Deposit of restricted-access data](https://doi.org/10.3886/E139263V1): this deposit contains the sensitive data, and requires that interested parties apply, and demonstrate IRB approval. It is, however, available to anybody who qualifies.
 
-To learn more about how to create restricted DATA deposits for AEA (and other) journals, visit [our guide to depositing restricted data at ICPSR](creating-restricted-data-deposit-icpsr.md).
+To learn more about how to create restricted DATA deposits for AEA (and other) journals, visit [our guide to depositing restricted data at ICPSR](creating-restricted-data-deposit-icpsr).

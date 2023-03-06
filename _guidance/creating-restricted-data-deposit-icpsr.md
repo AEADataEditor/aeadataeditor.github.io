@@ -11,7 +11,7 @@ This guide describes how to create a restricted-access data deposit at ICPSR, as
 
 ### Preliminaries
 
-All restricted-access deposits should ONLY include materials that absolutely need to be restricted. In general, that implies that all code, and any non-sensitive data, must be [separately deposited](data-deposit-aea.md) under an open license. 
+All restricted-access deposits should ONLY include materials that absolutely need to be restricted. In general, that implies that all code, and any non-sensitive data, must be [separately deposited](data-deposit-aea) under an open license. 
 
 ### Special notes on preparation
 
