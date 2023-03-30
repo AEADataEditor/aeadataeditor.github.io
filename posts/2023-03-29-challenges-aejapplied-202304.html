@@ -1,0 +1,772 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles - Office of the AEA Data Editor</title>
+<meta name="description" content="I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304">
+
+
+  <meta property="og:description" content="I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles">
+  <meta name="twitter:description" content="I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2023-03-29T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles">
+    <meta itemprop="description" content="I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.">
+    <meta itemprop="datePublished" content="2023-03-29T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  11 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-03-29T00:00:00-04:00">March 29, 2023</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#using-zenodo-to-augment-primary-replication-packages">Using Zenodo to augment primary replication packages</a><ul><li><a href="#tools-that-we-used">Tools that we used</a></li></ul></li><li><a href="#using-compute-capsules-for-easy-reproduction">Using compute capsules for easy reproduction</a><ul><li><a href="#tools-that-we-used-1">Tools that we used</a></li></ul></li><li><a href="#what-are-still-unsolved-issues-in-these-scenarios">What are still unsolved issues in these scenarios</a></li><li><a href="#disclosures">Disclosures</a></li><li><a href="#references">References</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <p>I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (<a href="https://www.aeaweb.org/issues/715">April 2023</a>) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.</p>
+
+<!-- more -->
+
+<p>The two articles are</p>
+
+<ul>
+  <li>
+    <p><a href="https://doi.org/10.1257/app.20200398">Infrastructure Costs</a> (Leah Brooks and Zachary Liscow)</p>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.1257/app.20200196">DETER-ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement</a> (Juliano Assunção, Clarissa Gandour and Romero Rocha)</p>
+  </li>
+</ul>
+
+<p>Each of these articles posed a different challenge to my team. In all cases, they are highly complex analyses with large, sometimes very large, data sources.</p>
+
+<h2 id="using-zenodo-to-augment-primary-replication-packages">Using Zenodo to augment primary replication packages</h2>
+
+<p>First, let me consider the impressive work by 
+Leah Brooks and Zachary Liscow, “<a href="https://doi.org/10.1257/app.20200398">Infrastructure Costs</a>”.</p>
+
+<p><img src="/images/aejapplied-715-2.png" alt="Brooks and Liscow paper" /></p>
+
+<p>The paper conducts an investigation of the cost of building the US Interstate Highway System, from the 60s to the 80s. There are a lot of miles in the Highway system (about 49,000 miles or 79,000 kilometers), and their data covers a long time period in which much data was not necessarily easily available as digital records. As they so blithely say, “we digitize annual state-level spending data from 1956 to the present… first to use more than a few years of these data…”. While that’s already a lot, they also use the “USGS National Map 3DEP 1-Arc-second Digital Elevation Models” and “National Wetlands Inventory of the United States - State and Substate Shapefiles” (among others) in the analysis. Each of these sources have several hundred files and several dozen gigabytes of data:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Size (GB)</th>
+      <th>Count (files)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USGS National Map 3DEP 1-Arc-second Digital Elevation Models</td>
+      <td>83.8</td>
+      <td>3449</td>
+    </tr>
+    <tr>
+      <td>National Wetlands Inventory of the United States - State and Substate Shapefiles</td>
+      <td>49.3</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <td>Remainder of the <a href="https://doi.org/10.3886/E144281V1">replication package</a></td>
+      <td>18.53</td>
+      <td>940</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>While both of these sources are in the public domain, they are large, and were, in fact, augmented by the authors.</p>
+
+<p>Two problems arose for us: how do we make these data available to others, and how do we highlight the value-added that the authors have contributed?</p>
+
+<p>The first problem arises because openICPSR, the repository used as the primary deposit for AEA replication packages, does not handle deposits of more than 20GB gracefully. As of 2023, it is slow to create such deposits, and very slow for others to re-use these packages. There also appear to be hard limits around 30GB and 1,000 files.</p>
+
+<p>The second problem is a more philosophical one. While anybody can go back to USGS or the US. Fish and Wildlife Service to obtain these data, most US government agencies do not properly curate or preserve their data. These data may not be there, or they may no longer be there in this format. In fact, for the USGS data, the authors used DVDs that were originally purchased from the US government, augmented by targeted downloads from an interactive, non-scriptable downloader, to fill in missing rasters.</p>
+
+<p>We addressed both of these problems by creating two auxiliary deposits on Zenodo, and removing the data from the primary replication package on openICPSR. The resulting two Zenodo archives are part of the (growing) <a href="https://zenodo.org/communities/aeajournals/">American Economic Association community on Zenodo</a>:</p>
+
+<p><img src="/images/aejapplied-715-2-zenodo-1.png" alt="one of the Zenodo deposits" /></p>
+
+<ul>
+  <li>U.S. Geological Survey, &amp; Brooks, Leah. (2022). “USGS National Map 3DEP 1 Arc-second Digital Elevation Models (DEMs): Full Coverage for U.S. Interstate Highway System [Data set].” Zenodo. <a href="https://doi.org/10.5281/zenodo.5830968">https://doi.org/10.5281/zenodo.5830968</a></li>
+  <li>U.S. Fish &amp; Wildlife Service. (2022). “National Wetlands Inventory of the United States - State and Substate Shapefiles (Version v2018) [Data set].” Zenodo. <a href="https://doi.org/10.5281/zenodo.5823387">https://doi.org/10.5281/zenodo.5823387</a></li>
+</ul>
+
+<p>While downloading nearly 130GB of data from any repository can still be challenging in time and robustness, these data resources are now available.</p>
+
+<h3 id="tools-that-we-used">Tools that we used</h3>
+
+<ul>
+  <li><a href="https://github.com/AEADataEditor/Upload-to-Zenodo">Zenodo uploader via API</a>, originally written by a former RA, to upload all files.</li>
+  <li><a href="https://github.com/dvolgyes/zenodo_get"><code class="language-plaintext highlighter-rouge">zenodo_get</code></a> to re-download thousands of files.</li>
+</ul>
+
+<p>Oh, and because it still takes over 250GB of local disk space and substantial processing time to reproduce the replication package, this is one of the replication packages that we inspected (deeply), but which we did NOT actually run. However, we are confident that a replicator with sufficient resources (including time) can do so. Nevertheless, should a replicator encounter issues, please do contact us, and we will, in turn, contact the authors, if appropriate, to update their replication package as per our <a href="https://www.aeaweb.org/journals/data/policy-revisions">revision policy</a>.</p>
+
+<h2 id="using-compute-capsules-for-easy-reproduction">Using compute capsules for easy reproduction</h2>
+
+<p>I have previously discussed the <a href="https://aeadataeditor.github.io/posts/2021-11-16-docker">use of Docker in economics</a>. In “<a href="https://doi.org/10.1257/app.20200196">DETER-ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement</a>”, Juliano Assunção, Clarissa Gandour and Romero Rocha collect a whole lot of publicly available Brazilian data, clean it all, and for this article, analyze a particular aspect of it (cloud cover preventing the DETER system from working in a particular area). Because this is a part of what their home institution (the <a href="https://cpiglobal.org">Climate Policy Initiative</a>) does regularly, the data cleaning is part of a data processing pipeline, and run in R. The analysis, as with so many analyses created by economists, runs in Stata.</p>
+
+<p>While it is possible to create a pipeline using both R and Stata, either by combining multiple containers in sequence, or <a href="https://github.com/AEADataEditor/docker-stata-R-example">by combining Stata and R in the same container</a>, this is typically not possible (or very hard) in the easy-to-use online interfaces to Docker such as <a href="https://codeocean.com">CodeOcean</a> and <a href="https://wholetale.org">Wholetale</a>. However, in this case, we wanted to make the analysis easily accessible to others. That also argued against combining the two parts into a single compute capsule: the data processing takes about three weeks, while the core analysis only takes a few minutes.</p>
+
+<p>So in coordination with me, the authors (corresponding author Clarissa Gandour) split the analysis out in a self-standing “capsule” (<a href="https://doi.org/10.24433/CO.5098352.v1">https://doi.org/10.24433/CO.5098352.v1</a>), while the whole processing pipeline is made available in the main replication package on openICPSR (<a href="https://doi.org/10.3886/E132281V1">https://doi.org/10.3886/E132281V1</a>). Interested replicators can go through the whole data cleaning process (as required by <a href="https://www.aeaweb.org/journals/data/data-code-policy">our policy</a>), but if instead they want to focus on the analysis, they can do so with a couple of clicks in CodeOcean.</p>
+
+<p><img src="/images/aejapplied-715-6-codeocean.png" alt="Copy a capsule" /></p>
+
+<p>They can, of course, also run the analysis on their own computer, either following the instructions in the README while running with their own copy of Stata, or running it on their own computer through Docker, using the CodeOcean-provided container combined with their own license.</p>
+
+<p>In this case, we did not run the final version of the data cleaning pipeline, because we inspected the code, ran parts of it, and assessed that it was reproducible (we had run the first draft of the data cleaning pipeline, and sent the authors our feedback). We <em>also</em> did not run the analysis part - not because it’s not feasible, but because the authors ran the analysis on CodeOcean to produce the output in the manuscript. It is that output - together with a screen capture of Stata as it is chugging along - which is visible in the CodeOcean interface:</p>
+
+<p><img src="/images/aejapplied-715-6-codeocean-run.png" alt="Results from run" /></p>
+
+<p>We thus did not <em>need</em> to run it, because the authors had run it in an environment which we know is fundamentally reproducible.</p>
+
+<h3 id="tools-that-we-used-1">Tools that we used</h3>
+
+<ul>
+  <li><a href="https://codeocean.com">CodeOcean</a> - academic users have 10 free hours per month</li>
+  <li><a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a> on local machines, to test the independent reproducibility of the package
+    <ul>
+      <li>including the <a href="https://hub.docker.com/r/dataeditors/stata17">Docker Stata image</a> that <a href="https://github.com/AEADataEditor/docker-stata">I prepare</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="what-are-still-unsolved-issues-in-these-scenarios">What are still unsolved issues in these scenarios</h2>
+
+<p>The two articles illustrate a few key points when it comes to larger-than-usual analyses. First, despite the size of the data, it is feasible to archive and preserve the data in ways that makes it usable for others. However, neither article is fully integrated, when theoretically that is possible. In the Brooks and Liscow article, the current version of the code does not dynamically download the Zenodo-hosted data - that is a manual process. In the Assunção, Gandour, and Rocha article, the data cleaning pipeline is not in CodeOcean, because in the end, the authors would still have needed to copy the output from their data cleaning into the analysis capsule.</p>
+
+<p>Would it be possible to chain two CodeOcean capsules - one running the “DETER” three-week data cleaning pipeline, the other the 5 minute data analysis code?</p>
+
+<p><img src="/images/chained-analysis.png" alt="Chained capsules" /></p>
+
+<p>As of 2023, it is not, at least not in the public product (it is a feature of CodeOcean’s on-premise solutions, however). Could the Brooks and Liscow article have integrated data storage on Zenodo from the start? Solutions that do so exist (see <a href="https://snakemake.readthedocs.io/en/v7.6.2/snakefiles/remote_files.html">Snakemake</a> and one of its front-ends <a href="https://show-your.work/en/latest/">show your work!</a>), but are rarely seen in economics (and come with their own reproducibility demons).</p>
+
+<p>The Assunção, Gandour, and Rocha capsule is, however, an example of how porting the analysis code for the article, and then using it as the primary interface for the final versions is feasible.</p>
+
+<p>While time-consuming, the upload of some of the key value-added files from the Brooks and Liscow article have already proven useful to others - while the original replication package has had 34 unique visitors, the Zenodo-hosted data have had 173 and 103 unique visitors as of this writing! Whether this ultimately leads to more citations (another metric that apparently some folks care about) remains to be seen in the future.</p>
+
+<h2 id="disclosures">Disclosures</h2>
+
+<p>As noted, CodeOcean currently offers academics 10 hours of compute time per month for free. They have also supported the Data Editor’s work with a generous compute quota (which allows us to run weeks-long analyses). I am neither paid, nor do I detain any shares in CodeOcean, nor do I receive a commission for any new customers signing up for a CodeOcean account (which in fact is free). Docker is a commercial company, and I am a paying individual subscriber in order to host container images that the AEA uses. Running containers on personal computers remains free, and running containers on most Linux servers is also free (there are many ways to run containers, not just using Docker’s runtime). Wholetale is an academic infrastructure funded by the National Science Foundation. I have been part of such funding in the past through a <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1541450&amp;HistoricalAwards=false">subaward</a>, and am currently collaborating with the maintainers of Wholetale on a <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2209629&amp;HistoricalAwards=false">project</a> that, if successful, would be beneficial to Wholetale. And CodeOcean. And a bunch of other computing infrastructures around the world. Wholetale is free to use, without limitations.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="6e56ee69-5af9-4291-94f1-5d6927775bc5">Assunção, Juliano, Clarissa Gandour, and Romero Rocha. 2021. “Replication Capsule for: DETERring Deforestation in the Amazon: Environmental Monitoring and Law Enforcement.” <i>American Economic Journal: Applied Economics</i>. https://doi.org/10.24433/CO.5098352.v1.</span></li>
+<li><span id="10.1257/app.20200196">———. 2023. “DETER-Ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement.” <i>American Economic Journal: Applied Economics</i> 15 (2): 125–56. https://doi.org/10.1257/app.20200196.</span></li>
+<li><span id="brooks-liscow-package">Brooks, Leah, and Zachary Liscow. 2023. “Data and Code for: Infrastructure Costs.” [Replication package]. American Economic Association [publisher], 2023. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E144281V1.</span></li>
+<li><span id="10.1257/app.20200398">———. 2023. “Infrastructure Costs.” <i>American Economic Journal: Applied Economics</i> 15 (2): 1–30. https://doi.org/10.1257/app.20200398.</span></li>
+<li><span id="u_s_fish_wildlife_service_2022_5823387">U.S. Fish &amp; Wildlife Service. 2022. “National Wetlands Inventory of the United States - 
+                   State and Substate Shapefiles.” Zenodo. https://doi.org/10.5281/zenodo.5823387.</span></li>
+<li><span id="u_s_geological_survey_2022_5830968">U.S. Geological Survey, and Leah Brooks. 2022. “USGS National Map 3DEP 1 Arc-Second Digital 
+                   Elevation Models (DEMs): Full Coverage for U.S.
+                   Interstate Highway System.” Zenodo. https://doi.org/10.5281/zenodo.5830968.</span></li></ol>
+<p>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#aej-applied" class="page__taxonomy-item" rel="tag">AEJ:Applied</a><span class="sep">, </span>
+    
+      <a href="/tags/#big-data" class="page__taxonomy-item" rel="tag">big data</a><span class="sep">, </span>
+    
+      <a href="/tags/#complex-projects" class="page__taxonomy-item" rel="tag">complex projects</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2023-03-29T00:00:00-04:00">March 29, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Some+remarks+on+challenges+and+solutions+when+conducting+reproducibility+checking+for+two+recent+AEJ%3AApplied+articles%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2023-03-29-challenges-aejapplied-202304" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2023-03-29-challenges-aejapplied-202304" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-02-02-oldest-replication-package-jae" rel="permalink">The oldest replication package, overall?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surp...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-01-26-oldest-replication-package" rel="permalink">The oldest AEA replication package
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-01-25-dcas-compliance" rel="permalink">DCAS v1.0 Compliance Self-Assessment
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          11 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+On 2022-12-15, various data editors, including myself, launched the Data and Code Availability Standard (DCAS).  In this post, I will do a self-assessment o...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2022-12-15-launching-dcas" rel="permalink">Launching DCAS
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+The data editors of the journals of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies,  the Canadian Journa...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2023-03-29-challenges-aejapplied-202304.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
