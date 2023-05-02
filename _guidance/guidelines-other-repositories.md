@@ -71,7 +71,7 @@ The **contents** of the deposit must, of course, satisfy all other requirements 
 Some repositories allow for the upload of files via API or import from online services. This may be useful for particularly large data deposits.
 
 - Zenodo: See [documentation for the Zenodo API](https://developers.zenodo.org/). An example for a simple uploader in Python is on the [AEA Github repository](https://github.com/AEADataEditor/Upload-to-Zenodo). The [zenodo_get](https://pypi.org/project/zenodo-get/) ([Github source](https://github.com/dvolgyes/zenodo_get)) Python package allows to download entire packages. The API can also be used to download individual files from Zenodo.
-- Dataverse: See [documentation for Dataverse API](https://guides.dataverse.org/en/5.12/api/index.html). A R package `[dataverse-client-r](https://github.com/IQSS/dataverse-client-r)` can download individual files or complete packages. [pyDataverse](https://pydataverse.readthedocs.io/en/latest/) is Python code  to interface with Dataverses.
+- Dataverse: See [documentation for Dataverse API](https://guides.dataverse.org/en/5.12/api/index.html). A R package [`dataverse-client-r`](https://github.com/IQSS/dataverse-client-r) can download individual files or complete packages. [pyDataverse](https://pydataverse.readthedocs.io/en/latest/) is Python code  to interface with Dataverses.
 
 ## Publishing, saving, and sharing
 
