@@ -29,18 +29,6 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Start the deposit process Go to the AEA Data and Code Repository, and start the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
-        "teaser": null
-      },{
-        "title": "Frequently Asked Questions",
-        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
@@ -75,6 +63,18 @@ var store = [{
         "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-separate-data-deposit",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Start the deposit process Go to the AEA Data and Code Repository, and start the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Frequently Asked Questions",
+        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
@@ -455,9 +455,87 @@ var store = [{
         "url": "/talks/2022-09-07-oslo",
         "teaser": null
       },{
+        "title": "Replication and Research Transparency",
+        "excerpt":"Abstract Research has to be transparent in order to be considered as credible and valid. Reproduction and replication are practices that seek to establish the validity of research. At the same time, replication is a time-consuming activity that may be conflicting with the pursuit of other goals of research in...","categories": [],
+        "tags": [],
+        "url": "/talks/2022-09-13-vfs-panel",
+        "teaser": null
+      },{
         "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers when data are confidential",
         "excerpt":"Abstract   Presentation by Lars Vilhuber on how best to prepare reproducible and transparent packages when data are confidential.   Live slides are available at this link.  ","categories": [],
         "tags": [],
         "url": "/talks/2022-09-23-fsrdc",
+        "teaser": null
+      },{
+        "title": "Reproducible Research Fundamentals: Why does reproducibility matter for economics research",
+        "excerpt":"Abstract   Variation of the “Lessons learned” talk, given to new World Bank interns.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-10-04-wb",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Context and Lessons learned from 1,000 papers",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
+        "tags": [],
+        "url": "/talks/2022-12-02-mcmaster",
+        "teaser": null
+      },{
+        "title": "Reproducibility when data are confidential or big",
+        "excerpt":"Abstract   Presentation at the Banco de Portugal Workshop on Reproducibility of Scientific Results. URL for live slides is https://larsvilhuber.github.io/reproducibility-confidential-bigdata-bplim/  ","categories": [],
+        "tags": [],
+        "url": "/talks/2022-12-19-banco-de-portugal",
+        "teaser": null
+      },{
+        "title": "Coffee with Data Editors",
+        "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with data editors from...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-01-06-coffee",
+        "teaser": null
+      },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with Lars Vilhuber, Data...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-02-09-berkeley-ama",
+        "teaser": null
+      },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with Lars Vilhuber, Data...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-02-10-stanford-ama",
+        "teaser": null
+      },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with Lars Vilhuber, Data...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-02-22-uoft-ama",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Context and Lessons learned from 1,663 papers",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-03-31-mea",
+        "teaser": null
+      },{
+        "title": "Replication and Research Transparency in Empirical Economics",
+        "excerpt":"Abstract Several top journals (including those of the RES) have recently initiated efforts to insure that published empirical results can be replicated. Not all journals have followed suit, however, as this can be expensive. At the same time, many journals are reluctant to publish comments that raise questions about the...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-04-04-res-panel",
+        "teaser": null
+      },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with Lars Vilhuber, Data...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-04-26-hu-berlin-ama",
+        "teaser": null
+      },{
+        "title": "Kontinuierliche Transparenz und Reproduzierbarkeit bei akademischen Publikationen: Ansätze und Techniken",
+        "excerpt":"Abstract   Part of a Symposium on open science in ecoomics (in German).  ","categories": [],
+        "tags": [],
+        "url": "/talks/2023-04-27-zbw-berlin",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Context and Lessons learned from 1,663 papers",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-05-11-uva",
         "teaser": null
       }]
