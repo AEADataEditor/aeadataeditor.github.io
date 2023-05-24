@@ -130,6 +130,7 @@ Upload files in the way you expect the files to be organized in order to run the
 - [ ] Do not upload manuscripts, appendices, responses to editors, etc.
 - [ ] Directory structure does not contain redundant/ superfluous directories
 - [ ] Do not upload data that you do not have the rights to publish!
+- [ ] Do not upload confidential data!
 
 ---
 
@@ -141,7 +142,7 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Restricted-access data
 
-**Do not upload data that you do not want published!** 
+> **DO NOT UPLOAD data that you do not want published!** 
 
 - Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published.
 
@@ -156,12 +157,10 @@ Upload files in the way you expect the files to be organized in order to run the
 
 **TL;DR version:**
 
-- [ ] upload any restricted data (and only the restricted data) to a separate deposit
-- [ ] call the deposit "Supplementary data for: (TITLE OF PAPER)"
+- [ ] Choose where to upload any restricted data (but not HERE)
+- [ ] If you are able to provide the data to the Data Editor, select the appropriate checkbox on the [DCAF](https://www.aeaweb.org/journals/forms/data-code-availability) but **DO NOT** upload the data here (even temporarily). You will be sent a secure upload form.
+- [ ] Be sure to answer the [Submission questions](#submission-questions) with respect to the data that you **have** deposited, not data withheld or deposited elsewhere
 - [ ] proceed as usual as outlined below
-- [ ] when [submitting to the Data Editor](#submitting-to-the-data-editor), answer `Yes` to the questions "Can individuals be identified?" and "Are the data sensitive?", and ensure that the "Distribution Method" is noted as "Restricted Access".
-- [ ] Make a note of the temporary secondary deposit number in the [DCAF](https://www.aeaweb.org/journals/forms/data-code-availability).
-  - The DOI for this supplementary deposit might change; it is not determined the same way [as usual](#citing-your-deposit). 
 
 #### Tips
 
@@ -198,7 +197,7 @@ LICENSE.txt
 
 ### Submitting to the Data Editor
 
-Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should **submit** the deposit, by changing the **status** of the deposit:
+Once you are satisfied that all (publishable) data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should **submit** the deposit, by changing the **status** of the deposit:
 
 ![submit project](/images/project-submit.png)
 
@@ -208,7 +207,7 @@ Choose "Submit to AEA" (or "Resubmit") under "Change Status".
 
 You will be presented with a page to confirm that you are going through with the submission. You will then be presented with a page, asking various questions. 
 
-> You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that may have been used as part of the manuscript's analysis, but that are not present in this particular deposit. 
+> You should answer these questions in regards to the **data in the deposit** you are submitting. The answer should NOT consider any other data that may have been used as part of the manuscript's analysis, but that are not present in this particular deposit. 
 
 Contact the Data Editor if you have any questions or concerns.
 
@@ -216,19 +215,19 @@ Contact the Data Editor if you have any questions or concerns.
 
 ![Identification question 1](/images/icpsr-submit-q1.png)
 
-The normal answer to this question is "No." 
+The normal answer to this question is "No." If you would answer "Yes" to this question, go back to [Restricted-Access data](#restricted-access-data), or contact the Data Editor for clarification.
 
 ##### Are the data sensitive?
 
 ![Sensitivity question 2](/images/icpsr-submit-q2.png)
 
-The normal answer to this question is "No." 
+The normal answer to this question is "No." If you would answer "Yes" to this question, go back to [Restricted-Access data](#restricted-access-data), or contact the Data Editor for clarification.
 
 ##### Distribution question
 
 ![Distribution question](/images/icpsr-submit-q3.png)
 
-You should answer this one as a function of the earlier answers. "Public download" means users will be registered users of openICPSR and consent to the license (next question), without further controls. "Restricted access" means that data will be distributed through ICPSR's [Restricted Data Access Mechanism](https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/).
+You should answer this one as a function of the earlier answers. "Public download" means users will be registered users of openICPSR and consent to the license (next question), without further controls. "Restricted access" means that data will be distributed through ICPSR's [Restricted Data Access Mechanism](https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/). Every replication package must have AT LEAST ONE deposit that is unrestricted. If you are uncertain, go back to [Restricted-Access data](#restricted-access-data), or contact the Data Editor for clarification.
 
 #### Choose a license
 

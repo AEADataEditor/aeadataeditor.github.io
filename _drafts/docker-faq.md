@@ -52,3 +52,16 @@ From easy to complex/sophisticated solutions, all except for the bare-bones clou
 - https://www.paperspace.com/ Starts to be a bit more complex, but works. $
 - https://www.digitalocean.com/ also has easy to use "droplets", there's even a R package to run it from local to cloud: https://www.r-bloggers.com/2015/05/teaching-r-course-use-analogsea-to-run-your-customized-rstudio-in-digital-ocean/
 - Google Colab
+
+
+
+    "Sharing" (but not preserving) images can be done via Docker Hub. Other container registries exist as well - Microsoft (Azure), Github, Google Cloud all have docker registries. A comparable service is for Singularity images.
+    Preserving containers can be done by exporting them into TAR files, then using Zenodo etc. to preserve them. They can be large! See https://docs.docker.com/engine/reference/commandline/save/ for Docker commands. That should be the primary​ way of preserving it for the journal!
+    Containers are "opaque" - they hide what's in them, similar to simply posting a ZIP file of "stuff". It is not efficient to store 100kB of Matlab code in a 5GB container that is tarred up. People do not NEED docker to run Matlab + Dynare scripts (but it is convenient). So my recommendations (which I submit as "draft our" recommendations) is that
+        the container image is auxiliary in the sense that it contains all software (here: Matlab + Dynare), but none of the scripts and data. In other words, the script and data should be "mounted" into the image, not copied into the image. See https://solutions.posit.co/envs-pkgs/environments/docker/#code for an example. 
+        the replication package should STILL have instructions on what software is needed (i.e., Matlab + Dynare)
+        it should be feasible to download the Matlab + dynare code separately (possibly: two different Zenodo archives, but definitely not a monolithic TAR or ZIP file on Zenodo, since you can't download individual files out of Zenodo-hosted ZIP file).
+        full instructions on how to (command line) run the Docker image should be provided as part of the README (e.g. "docker -v /path/to/code:/code -v /path/to/data:/data image/paperdocker")
+    There is an official Matlab container https://www.mathworks.com/help/cloudcenter/ug/matlab-container-on-docker-hub.html which ideally serves as base for what this author has constructed as a container. Note that it must install any needed toolboxes - it comes without any! Alternatively, you could use the Matlab container provided by CodeOcean (which does have toolboxes installed). The Mathworks page above has the command line needed to run with a license. Careful: the container MUST NOT contain the author's license file... (they are responsible for it. You can test by running the container without feeding it a license, if it works, well, they installed it...) Not including a license is not easy - it should not be in any of the layers, ever... 
+
+Put differently, one thing that Joan's RA should do is to test if Matlab + Dynare code can be run without the container. It should - it's a pretty standard setup - and that's what's really important for reproducibility and replicability by others.
