@@ -1,4 +1,10 @@
 var store = [{
+        "title": "Licensing Guidance",
+        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/Licensing_guidance.html",
+        "teaser": null
+      },{
         "title": "A discussion about various things",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -9,12 +15,6 @@ var store = [{
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/LICENSE-template.html",
-        "teaser": null
-      },{
-        "title": "Licensing Guidance",
-        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -41,12 +41,6 @@ var store = [{
         "url": "/aea-de-guidance/next",
         "teaser": null
       },{
-        "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/preparing-for-data-deposit",
-        "teaser": null
-      },{
         "title": "Guidance on testing replicability of code",
         "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
         "tags": [],
@@ -71,12 +65,6 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
-        "title": "Frequently Asked Questions",
-        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/FAQ.html",
-        "teaser": null
-      },{
         "title": "Guidance on how to prepare a comment based on a replication",
         "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
         "tags": [],
@@ -93,6 +81,18 @@ var store = [{
         "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
+        "teaser": null
+      },{
+        "title": "Frequently Asked Questions",
+        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/FAQ.html",
+        "teaser": null
+      },{
+        "title": "Preparing your files for verification",
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
         "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
