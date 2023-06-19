@@ -15,6 +15,7 @@ There are two main reasons why authors may want to deposit at a different reposi
 
 - They may have already created a deposit (for instance, when releasing a working paper). Deposits should remain where they are, reducing duplication and ambiguity (but see below for changes that may need to be made).
   - Some institutions or research labs habitually create deposits. Example: [J-PAL's Dataverse](https://dataverse.harvard.edu/dataverse/jpal)
+  - The [Zenodo-Github](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) integration may have been used; see notes about [Title](#title), below.
 - Certain repositories may have additional features that are not available on the AEA's repository at openICPSR.
   - As of 2022, openICPSR struggles with data deposits that have more than 1,000 files or more than 30GB of content.
   - Harvard Dataverse offers up to **1TB** for free. An **API** is available.
@@ -28,6 +29,7 @@ The **title** should clearly distinguish paper and replication package.
 - Other repositories may offer to automatically prefix the paper title with "`Replication package for: TITLE OF PAPER`". That is acceptable, but not preferred, as it obfuscates what the deposit actually contains.
 - Simply repeating the title of the paper is not acceptable.
 - Prefixing the title of the paper with "`Data for:`" when the replication package actually contains code is not acceptable.
+- Users of the Zenodo-Github integration may want to use the [CITATION.cff] file in their Github repository, see [citation-file-format.github.io/](https://citation-file-format.github.io/), [Github documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files), and the [Citation File generator](https://citation-file-format.github.io/cff-initializer-javascript/)
 
 ## README
 
@@ -149,7 +151,7 @@ Soon.
 
 ### Zenodo
 
-When editing the metadata, depositors should add the "American Economic Association" community. The AEA Data Editor will be notified, and will verify compliance, then accept the request.
+When editing the metadata, depositors should add the "[American Economic Association]([AEA Journal Community](https://zenodo.org/communities/aeajournals/))" community. The AEA Data Editor will be notified, and will verify compliance, then accept the request. All Zenodo deposits that are in connection with AEA replication package are listed in the [AEA Journal Community](https://zenodo.org/communities/aeajournals/).
 
 ![Communities field on Zenodo](/images/zenodo-community-empty.png)
 
