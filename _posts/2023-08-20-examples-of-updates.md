@@ -32,14 +32,11 @@ For changes that do not affect the results in the actual manuscript, it is suffi
 
 In a nutshell, this is described in the [policy](https://www.aeaweb.org/journals/data/policy-revisions), you should
 
-Our general policy about how to update is posted here:
-
-- Do **NOT** make a new deposit; edit the old deposit ([contact us](mailto:dataeditor@aeapubs.org) if you don't remember who  last accessed the deposit, or if your email has changed), creating a new version.
+- Do **NOT** make a new deposit; edit the old deposit ([contact us](mailto:dataeditor@aeapubs.org) if you don't remember who  last accessed the deposit, or if your email has changed), creating a new version (if you didn't use openICPSR, refer to the relevant repository's instructions on how to create a new **version**):
 
 ![Create a new version on openICPSR](/images/icpsr-create-new-version.png)
 
 - Prepare the changes: Download the **published** archive (not your private copy of it), and make changes to code and/or data.
-- Create a new version (on openICPSR, or elsewhere - procedures may differ for other systems)
 - Edit the README and possibly create a "Changes.txt" or "Changelog.txt".
 - In the deposit, delete the INDIVIDUAL files that need to be changed, then re-upload them (openICPSR does not allow you to simply replace by uploading... sorry)
 - Make changes to **NO** other files. 
