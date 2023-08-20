@@ -8,7 +8,7 @@ tags:
   - reproducibility
 ---
 
-I have previously posted about [how to update a replication package, after initial publication](). We do get more than a dozen such updates a year (see my annual reports).I'll describe a few examples.
+I have previously posted about [how to update a replication package, after initial publication](https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication). We do get more than a dozen such updates a year (see my annual reports). I'll describe the process and give a few examples here.
 
 <!-- more -->
 
