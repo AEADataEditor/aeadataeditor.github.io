@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-08-20T12:04:01-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Details on how to update a replication package post-publication</title><link href="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates" rel="alternate" type="text/html" title="Details on how to update a replication package post-publication" /><published>2023-08-20T00:00:00-04:00</published><updated>2023-08-20T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/examples-of-updates</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates"><![CDATA[<p>I have previously posted about <a href="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication">how to update a replication package, after initial publication</a>. We do get more than a dozen such updates a year (see my <a href="https://aeadataeditor.github.io/publications/">annual reports</a>). I’ll describe the process and give a few examples here.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-08-20T12:05:37-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Details on how to update a replication package post-publication</title><link href="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates" rel="alternate" type="text/html" title="Details on how to update a replication package post-publication" /><published>2023-08-20T00:00:00-04:00</published><updated>2023-08-20T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/examples-of-updates</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates"><![CDATA[<p>I have previously posted about <a href="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication">how to update a replication package, after initial publication</a>. We do get more than a dozen such updates a year (see my <a href="https://aeadataeditor.github.io/publications/">annual reports</a>). I’ll describe the process and give a few examples here.</p>
 
 <!-- more -->
 
@@ -26,17 +26,14 @@
 
 <p>In a nutshell, this is described in the <a href="https://www.aeaweb.org/journals/data/policy-revisions">policy</a>, you should</p>
 
-<p>Our general policy about how to update is posted here:</p>
-
 <ul>
-  <li>Do <strong>NOT</strong> make a new deposit; edit the old deposit (<a href="mailto:dataeditor@aeapubs.org">contact us</a> if you don’t remember who  last accessed the deposit, or if your email has changed), creating a new version.</li>
+  <li>Do <strong>NOT</strong> make a new deposit; edit the old deposit (<a href="mailto:dataeditor@aeapubs.org">contact us</a> if you don’t remember who  last accessed the deposit, or if your email has changed), creating a new version (if you didn’t use openICPSR, refer to the relevant repository’s instructions on how to create a new <strong>version</strong>):</li>
 </ul>
 
 <p><img src="/images/icpsr-create-new-version.png" alt="Create a new version on openICPSR" /></p>
 
 <ul>
   <li>Prepare the changes: Download the <strong>published</strong> archive (not your private copy of it), and make changes to code and/or data.</li>
-  <li>Create a new version (on openICPSR, or elsewhere - procedures may differ for other systems)</li>
   <li>Edit the README and possibly create a “Changes.txt” or “Changelog.txt”.</li>
   <li>In the deposit, delete the INDIVIDUAL files that need to be changed, then re-upload them (openICPSR does not allow you to simply replace by uploading… sorry)</li>
   <li>Make changes to <strong>NO</strong> other files.</li>
