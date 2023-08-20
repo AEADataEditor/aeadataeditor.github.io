@@ -1,4 +1,10 @@
 var store = [{
+        "title": "License template",
+        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/LICENSE-template.html",
+        "teaser": null
+      },{
         "title": "Licensing Guidance",
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
@@ -9,12 +15,6 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
-        "teaser": null
-      },{
-        "title": "License template",
-        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/LICENSE-template.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -29,22 +29,10 @@ var store = [{
         "url": "/aea-de-guidance/creating-separate-data-deposit",
         "teaser": null
       },{
-        "title": "Creating a Restricted Data Deposit  for AEA Publications",
-        "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
-        "teaser": null
-      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Start the deposit process Go to the AEA Data and Code Repository, and start the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Frequently Asked Questions",
@@ -53,22 +41,10 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Preparing your files for verification",
@@ -83,10 +59,10 @@ var store = [{
         "url": "/aea-de-guidance/reproducibility-checks",
         "teaser": null
       },{
-        "title": "Privately sharing restricted-access data with the AEA Data Editor",
-        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Start the deposit process Go to the AEA Data and Code Repository, and start the...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/sharing-restricted-data",
+        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
@@ -99,6 +75,30 @@ var store = [{
         "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-openicpsr",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
+        "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
+        "teaser": null
+      },{
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
+        "teaser": null
+      },{
+        "title": "Privately sharing restricted-access data with the AEA Data Editor",
+        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -225,6 +225,12 @@ var store = [{
         "excerpt":"I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories. The...","categories": [],
         "tags": ["big data","complex projects","AEJ:Applied"],
         "url": "/posts/2023-03-29-challenges-aejapplied-202304",
+        "teaser": null
+      },{
+        "title": "Details on how to update a replication package post-publication",
+        "excerpt":"I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual reports).I’ll describe a few examples. When to update You should update your replication package if there is an error in one of...","categories": [],
+        "tags": ["updating","improvement","reproducibility"],
+        "url": "/posts/2023-08-20-examples-of-updates",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",

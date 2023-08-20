@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-07-05T11:27:35-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles</title><link href="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304" rel="alternate" type="text/html" title="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles" /><published>2023-03-29T00:00:00-04:00</published><updated>2023-03-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/challenges-aejapplied-202304</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304"><![CDATA[<p>I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (<a href="https://www.aeaweb.org/issues/715">April 2023</a>) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2023-08-20T11:56:09-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Details on how to update a replication package post-publication</title><link href="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates" rel="alternate" type="text/html" title="Details on how to update a replication package post-publication" /><published>2023-08-20T00:00:00-04:00</published><updated>2023-08-20T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/examples-of-updates</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-08-20-examples-of-updates"><![CDATA[<p>I have previously posted about <a href="">how to update a replication package, after initial publication</a>. We do get more than a dozen such updates a year (see my annual reports).I’ll describe a few examples.</p>
+
+<!-- more -->
+
+<h2 id="when-to-update">When to update</h2>
+
+<p>You should update your replication package if</p>
+
+<ul>
+  <li>there is an error in one of the code or data files that was detected subsequent to publication.</li>
+  <li>you are aware of an improvement in accessibility of the replication package (data in more robust data formats, additional data documentation, more efficient code)</li>
+  <li>you are made aware of some other issue with the replication package that needs to be addressed</li>
+</ul>
+
+<p>Only the original authors can make these changes, but anybody can detect such changes. We field change requests coming from students attempting to replicate a package, researchers with access to restricted data that we did not have access to, or authors themselves who noticed, or were made aware of, issues with their deposit. In all cases where the initial notice does not involve the author, the Data Editor, or the Co-editor responsible for the article, will contact the author.</p>
+
+<h2 id="whom-to-contact">Whom to contact</h2>
+
+<p>For changes that do not affect the results in the actual manuscript, it is sufficient to contact the Data Editor (I may still reach out to the Editor in charge). For any corrections that affect manuscript or online appendix tables, figure, results, or conclusions, please contact the Editor in charge first, as these may require a corrigendum, erratum, or other corrections.</p>
+
+<blockquote>
+  <p>The remainder of this post will only address the changes made to the replication package, not to any other published materials.</p>
+</blockquote>
+
+<h2 id="how-to-update">How to update</h2>
+
+<p>In a nutshell, this is described in the <a href="https://www.aeaweb.org/journals/data/policy-revisions">policy</a>, you should</p>
+
+<p>Our general policy about how to update is posted here:</p>
+
+<ul>
+  <li>Do <strong>NOT</strong> make a new deposit; edit the old deposit (<a href="mailto:dataeditor@aeapubs.org">contact us</a> if you don’t remember who  last accessed the deposit, or if your email has changed), creating a new version.</li>
+</ul>
+
+<p><img src="/images/icpsr-create-new-version.png" alt="Create a new version on openICPSR" /></p>
+
+<ul>
+  <li>Prepare the changes: Download the <strong>published</strong> archive (not your private copy of it), and make changes to code and/or data.</li>
+  <li>Create a new version (on openICPSR, or elsewhere - procedures may differ for other systems)</li>
+  <li>Edit the README and possibly create a “Changes.txt” or “Changelog.txt”.</li>
+  <li>In the deposit, delete the INDIVIDUAL files that need to be changed, then re-upload them (openICPSR does not allow you to simply replace by uploading… sorry)</li>
+  <li>Make changes to <strong>NO</strong> other files.</li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Re-submit</a> to the Data Editor.</li>
+</ul>
+
+<h2 id="what-happens-after-update">What happens after update</h2>
+
+<p>After you have submitted the update to the replication package,</p>
+
+<ul>
+  <li>the Data Editor will review the deposit for compliance with the  <a href="https://www.aeaweb.org/journals/data/policy-revisions">policy</a>. Changes may be requested.</li>
+  <li>the Data Editor will publish the revised replication package (usually, this becomes <strong>V2</strong>). A new DOI is assigned.</li>
+  <li>Depending on the type of change being made, the “version of record” (linked from the article page) is adjusted (see <a href="https://www.aeaweb.org/journals/data/policy-revisions#version">what the policy has to say about that</a>). NOTE: Usually, the version of record is NOT modified.</li>
+  <li>In all cases, accessing the original deposit (<strong>V1</strong>) will show a banner at the top, directing interested parties to the new version.</li>
+</ul>
+
+<p><img src="/images/icpsr-version2-banner.png" alt="Redirect on openICPSR page" /></p>
+
+<h2 id="examples">Examples</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.aeaweb.org/journals/data/policy-revisions#version">https://doi.org/10.3886/E148361V1</a> - <a href="https://doi.org/10.3886/E148361V2">https://doi.org/10.3886/E148361V2</a> - only the README was updated (clarified), see top of the (revised) README. For this one, we updated the version of record - see link at <a href="https://doi.org/10.1257/aeri.20210201">https://doi.org/10.1257/aeri.20210201</a> - because no code was impacted, and the change was a clarification. The change was initiated by the authors.</p>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E172902V1">https://doi.org/10.3886/E172902V1</a> - <a href="https://doi.org/10.3886/E172902V2">https://doi.org/10.3886/E172902V2</a> - A (small) piece of code was corrected. Since this affected the functionality of the code (though no output from the code), this did NOT change version of record - see the link to the replication package at <a href="https://doi.org/10.1257/aer.20200961">https://doi.org/10.1257/aer.20200961</a>. A researcher contacted the Data Editor, who then contacted the authors.</p>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E184461V1">https://doi.org/10.3886/E184461V1</a> - <a href="https://doi.org/10.3886/E184461V2">https://doi.org/10.3886/E184461V2</a> - A data-related issue (copyright and terms of use) required us to remove some data files from the deposit. This is one of the few cases where a replication package was “de-accessioned” – the original deposit is still viewable (the list of files is still there), but cannot be downloaded. In this case, <strong>V2</strong> became the version of record because (a) <strong>V1</strong> is no longer functional (b) the impact does not affect the results of the (successful) reproduction, though it is now clear that part of the package needs proprietary data.</p>
+  </li>
+</ul>
+
+<h2 id="some-helpful-links">Some helpful links</h2>
+
+<ul>
+  <li><a href="https://www.aeaweb.org/journals/data/policy-revisions">The replication package revision policy at the AEA</a></li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Guidance on how to re-submit</a> (hint: it’s much like the initial submission…)</li>
+</ul>]]></content><author><name>AEA Data Editor</name></author><category term="updating" /><category term="improvement" /><category term="reproducibility" /><summary type="html"><![CDATA[I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual reports).I’ll describe a few examples.]]></summary></entry><entry><title type="html">Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles</title><link href="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304" rel="alternate" type="text/html" title="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles" /><published>2023-03-29T00:00:00-04:00</published><updated>2023-03-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/challenges-aejapplied-202304</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304"><![CDATA[<p>I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (<a href="https://www.aeaweb.org/issues/715">April 2023</a>) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.</p>
 
 <!-- more -->
 
@@ -1323,57 +1400,4 @@ LICENSEID=6521234
       <p>DellaVigna, Stefano and Devin Pope. 2021. “Compute Capsule for: Stability of Experimental Results: Forecasts and Evidence” [Source Code]. <em>CodeOcean</em>. https://doi.org/10.24433/CO.0687784.v1, which accompanies a <a href="https://doi.org/10.1257/mic.20200129">2022 article in American Economic Journal: Microeconomics</a>, and which is also archived in the more traditional location as DellaVigna, Stefano, and Devin Pope. 2021. “Data and Code for: Stability of Experimental Results: Forecasts and Evidence.” <em>American Economic Association</em> [publisher], <em>Inter-university Consortium for Political and Social Research</em> [distributor]. https://doi.org/10.3886/E135221V1 <a href="#fnref:stefano" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:stefano:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Docker" /><category term="Code" /><summary type="html"><![CDATA[In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the right solution. We illustrate how we addressed some of those cases using container technology throughout this post.]]></summary></entry><entry><title type="html">How to prepare replication packages for papers that used confidential data</title><link href="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential" rel="alternate" type="text/html" title="How to prepare replication packages for papers that used confidential data" /><published>2021-11-08T00:00:00-05:00</published><updated>2021-11-08T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/replication-pkg-confidential</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2021-11-08-replication-pkg-confidential"><![CDATA[<p>On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really <a href="https://twitter.com/AeaData/status/1457815800438562828">short thread</a>.</p>
-
-<!-- more -->
-
-<p><img src="/images/img-2021-11-08-1.png" alt="inquiry" /></p>
-
-<p>The very general answer is: The guidance is the same as for any other paper, including with public data:</p>
-
-<blockquote>
-  <p>describe where the data came from, describe how others can get the data, provide all the code, describe how to run code, create README for it all.</p>
-</blockquote>
-
-<p>The only part that’s different is that getting access to the data WAS complicated for you, and MIGHT be a tad complicated/long/costly/impossible for others. Details, details…</p>
-
-<p>But concretely, here are a few pointers.</p>
-
-<ol>
-  <li>First, start with our <a href="https://social-science-data-editors.github.io/template_README/">fabulous template README</a>. Really, it helps! Available at <a href="https://social-science-data-editors.github.io/template_README/">https://social-science-data-editors.github.io/template_README/</a></li>
-</ol>
-
-<p><a href="https://social-science-data-editors.github.io/template_README/"><img src="/images/img-2021-11-08-2.png" alt="README" /></a></p>
-
-<ol>
-  <li>In order to describe data availability, split into two:
-    <ul>
-      <li>how did YOU get access to the data, and</li>
-      <li>how can OTHERS get access to the same data.</li>
-      <li>The two are not always the same, but are both relevant.</li>
-    </ul>
-  </li>
-</ol>
-
-<p>Examples include <a href="https://social-science-data-editors.github.io/guidance/DCAS_Restricted_data.html#us-census-bureau-and-fsrdc">this excellent description</a> from a paper by <a href="https://faculty.tuck.dartmouth.edu/teresa-fort/">Teresa Fort</a> (<a href="https://twitter.com/Tfpiasecki">@Tfpiasecki</a>). Or <a href="https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html#example-for-confidential-data">this description</a> by Fadlon and Nielsen about Danish data</p>
-
-<p>Note: That’s for the data which you <em>cannot</em> share - because it is not yours to share. In general, the statistical agencies, or other providers, control access. You, the author, can only share information about <em>how</em> to access.</p>
-
-<p>Furthermore,  you should also make an archive <em>WITHIN</em> the secure computing facility - of anything that cannot be shared, to the extent permissible, and as long as possible. And then provide information about it in the README.</p>
-
-<ol>
-  <li>Code: <strong>All</strong> code needs to be provided - no exceptions! Redactions for security/privacy are OK. Requesting code is standard practice in most secure computing facilities, but might take some time, so do it as soon as possible if you have not already done so.</li>
-</ol>
-
-<p>In the unlikely event that you get push back from whatever agency provided you with the data, contact your favorite data editor.</p>
-
-<ol>
-  <li>
-    <p>All public use data you might have introduced to the secure computing facility are expected to be provided in the replication package, including where they came from. You probably had to describe the provenance anyway in order to import them (most secure computing facilities, such as the US FSRDC or the Canadian CRDCN, require such documentation).</p>
-  </li>
-  <li>
-    <p>Do not forget to cite data! See our <a href="https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html">Guidance on Data Citation</a></p>
-  </li>
-</ol>
-
-<p>And if you have questions, contact us!</p>]]></content><author><name>AEA Data Editor</name></author><category term="restricted-access" /><category term="administrative" /><category term="replication package" /><summary type="html"><![CDATA[On a tangent: we get this question regularly - how to prepare replication packages for papers that used confidential data (here: by statistical agencies). A really short thread.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="FAQ" /><category term="Twitter" /><category term="Docker" /><category term="Code" /><summary type="html"><![CDATA[In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the right solution. We illustrate how we addressed some of those cases using container technology throughout this post.]]></summary></entry></feed>
