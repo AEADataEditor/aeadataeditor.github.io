@@ -1,7 +1,7 @@
 name: Missing data or code
 description: Use this form to alert the Data Editor to information missing in a replication package
 title: "[Missing data]: "
-labels: ["missing", "triage"]
+labels: ["missing", "triage","reported issue"]
 assignees:
   - larsvilhuber
 body:
