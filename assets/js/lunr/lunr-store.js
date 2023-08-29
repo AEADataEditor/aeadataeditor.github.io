@@ -233,6 +233,12 @@ var store = [{
         "url": "/posts/2023-08-20-examples-of-updates",
         "teaser": null
       },{
+        "title": "Access to replication packages retrieval and deposit interrupted",
+        "excerpt":"The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period. The AEA Code and Data Repository is therefore not...","categories": [],
+        "tags": ["openICPSR","problem","notice"],
+        "url": "/posts/2023-08-29-notice-downtime",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
