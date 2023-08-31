@@ -1,5 +1,5 @@
 ---
-title:  "Access to replication packages retrieval and deposit interrupted"
+title:  "RESOLVED - Access to replication packages retrieval and deposit interrupted"
 date: 2023-08-29
 mastodon: 
 tags:
@@ -7,6 +7,8 @@ tags:
   - problem
   - notice
 ---
+
+> THIS HAS BEEN RESOLVED. Please [deposit as usual](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html)!
 
 The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, [Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period](https://umich.edu/announcements/). The AEA Code and Data Repository is therefore not accessible at this time, for both authors seeking to deposit their required replication package, and for interested readers to obtain published replication packages. A few operational notes from us follow.
 
