@@ -233,8 +233,8 @@ var store = [{
         "url": "/posts/2023-08-20-examples-of-updates",
         "teaser": null
       },{
-        "title": "Access to replication packages retrieval and deposit interrupted",
-        "excerpt":"The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period. The AEA Code and Data Repository is therefore not...","categories": [],
+        "title": "RESOLVED - Access to replication packages retrieval and deposit interrupted",
+        "excerpt":"THIS HAS BEEN RESOLVED. Please deposit as usual! The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period. The...","categories": [],
         "tags": ["openICPSR","problem","notice"],
         "url": "/posts/2023-08-29-notice-downtime",
         "teaser": null
