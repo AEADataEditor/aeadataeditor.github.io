@@ -60,7 +60,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in...","categories": [],
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
@@ -78,7 +78,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Start the deposit process Go to the AEA Data and Code Repository, and start the...","categories": [],
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
