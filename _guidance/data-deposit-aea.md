@@ -3,7 +3,7 @@ title: Guidance on how to deposit data at the AEA Data and Code Repository
 toc: true
 layout: single
 date: 2021-09-06
-last_modified: 2023-09-07
+modified: 2023-09-07
 ---
 
 ### Tutorial

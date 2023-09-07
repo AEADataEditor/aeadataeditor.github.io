@@ -2,7 +2,7 @@
 title: Preparing your files for verification
 toc: true
 date: 2021-04-08
-last_modified: 2023-09-07
+modified: 2023-09-07
 ---
 
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
