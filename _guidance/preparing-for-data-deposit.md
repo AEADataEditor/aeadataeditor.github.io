@@ -2,10 +2,11 @@
 title: Preparing your files for verification
 toc: true
 date: 2021-04-08
+last_modified: 2023-09-07
 ---
 
 This document describes how to best **prepare a replication package** for an AEA journal. Much of the guidance here
-is not specific to our journals - in fact, the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
+is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.
 
 > ![Link to DCAS Icon](https://datacodestandard.org/assets/img/DCAS-1.0.png) 
 The Data Editor of the American Economic Association endorses DCAS, 
@@ -17,6 +18,7 @@ compatible with DCAS.
 
 > - Keep in mind: The replication package is meant to be run by others, who have none of the setup, packages, and data that the original author might have, on computers that may not run the same operating system. 
 > - Treat the replication package as one of the methods to convey the methods that lead to your manuscript's conclusions. Consider it a teaching tool, targeting young graduate students who may not be in your field.
+
 
 ### Describing the contents of your replication package
 
@@ -238,7 +240,7 @@ Ideally, once you have prepared your replication package, you should re-run the 
 
 Once you are done preparing your replication package, you should upload it:
 
-- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). Other trusted repositories are acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](guidelines-other-repositories). 
+- if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). Other trusted repositories may be acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](guidelines-other-repositories). 
 - if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](https://www.aeaweb.org/journals/data/faq#restricted) and [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data)).
 - if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it **must** be made available on a trusted repository - other methods are then no longer acceptable.
 
@@ -251,7 +253,16 @@ Before proceeding, do check:
 - [ ] your data and code deposit contains all code, including code to read in raw data, *even when the data cannot be provided*.
 - [ ] your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.
 
+### Assistance
+
+If, in the process of preparing your replication package, you have questions that are not addressed by these guidelines, please contact us:
+
+- We are on [Twitter](https://twitter.com/AeaData) and [Mastodon](https://mstdn.social/@aeadata/).
+- Contact us via the AEA's [Contact form](https://www.aeaweb.org/contact)
+- Reach out to the editor handling your paper, who knows how to reach us (but might also have the answer).
+- Reach out to us directly (you know how to find us).
+
 ### Next step
 
-If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea).
+If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea) (or your chosen alternate trusted repository).
 

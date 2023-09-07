@@ -3,6 +3,7 @@ title: Guidance on how to deposit data at the AEA Data and Code Repository
 toc: true
 layout: single
 date: 2021-09-06
+last_modified: 2023-09-07
 ---
 
 ### Tutorial
@@ -10,6 +11,18 @@ date: 2021-09-06
 For a video tutorial on this process, see [this Youtube video](https://www.youtube.com/watch?v=wRytQcotLGc).
 
 > If you are depositing at a different trusted repository, please be sure that your deposit complies with our [Display Guidelines for Trusted Repositories](guidelines-other-repositories)
+
+
+### Assistance
+
+If, in the process of uploading your replication package, you have questions that are not addressed by these guidelines, please contact us:
+
+- We are on [Twitter](https://twitter.com/AeaData) and [Mastodon](https://mstdn.social/@aeadata/).
+- Contact us via the AEA's [Contact form](https://www.aeaweb.org/contact)
+- Reach out to the editor handling your paper, who knows how to reach us (but might also have the answer).
+- Reach out to us directly (you know how to find us).
+
+In some cases, the [openICPSR helpdesk](https://www.openicpsr.org/openicpsr/contactUs) may be able to help you, but with any content matter, please contact us, not them. 
 
 ### Start the deposit process
 
@@ -54,7 +67,6 @@ Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea
 - [ ] Any additional metadata elements
 
 ---
-
 
 Start by providing the metadata (descriptors) for the data and code you are uploading.
 
@@ -126,7 +138,7 @@ Upload files in the way you expect the files to be organized in order to run the
 #### Checklist for Uploading
 
 - [ ] README is in PDF or TXT format 
-- [ ] Do not upload a ZIP file - [IMPORT IT](#tips)! 
+- [ ] Do not upload a ZIP file - [IMPORT IT](#importing-zip-files)! 
 - [ ] Do not upload manuscripts, appendices, responses to editors, etc.
 - [ ] Directory structure does not contain redundant/ superfluous directories
 - [ ] Do not upload data that you do not have the rights to publish!
@@ -134,17 +146,35 @@ Upload files in the way you expect the files to be organized in order to run the
 
 ---
 
-#### Some caveats
+### Some caveats and tips
+
+#### Importing ZIP files
+
+We said it above: 
+
+> **Do not upload a ZIP file** - IMPORT IT! 
+
+![screenshot of upload and import options](/images/upload-import-icpsr.png)
+
+- It is possible to **IMPORT a ZIP file** (do **NOT** upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
+  - See the [tutorial](https://www.youtube.com/watch?v=wRytQcotLGc?t=135)
+  - A well prepared ZIP file has NO folder in the root
+  - macOS users should [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists)
+  - Instructional videos: [macOS](https://www.youtube.com/watch?v=fCfVu55YsJg), [Windows](https://www.youtube.com/watch?v=wRytQcotLGc?t=135)
+- The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.
+
+
+#### File size and count
 
 - If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized, though we may also suggest other, more suitable repositories. Size of the deposit is **never** a reason not to provide materials, as we have found solutions for every single case so far.
-- If you have **more than 1,000 files** in your deposit, talk to us before uploading, after consulting [the guidance in the previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-more-than-1000-files).
-- The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.
+- If you have **more than 1,000 files** in your deposit, please read [the guidance in the previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-more-than-1000-files), and if that doesn't solve it, [talk to us](#assistance) before uploading, 
+
 
 #### Restricted-access data
 
 > **DO NOT UPLOAD data that you do not want published!** 
 
-- Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published.
+- **Contact the AEA Data Editor** if you are able to share data for reproducibility checks that cannot be published.
 
 > - Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data) page.
 > - See [instructions in previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data)
@@ -164,13 +194,6 @@ Upload files in the way you expect the files to be organized in order to run the
 
 #### Tips
 
-![screenshot of upload and import options](/images/upload-import-icpsr.png)
-
-- It is possible to **IMPORT a ZIP file** (do **NOT** upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
-  - See the [tutorial](https://www.youtube.com/watch?v=wRytQcotLGc?t=135)
-  - A well prepared ZIP file has NO folder in the root
-  - macOS users should [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists)
-  - Instructional videos: [macOS](https://www.youtube.com/watch?v=fCfVu55YsJg), [Windows](https://www.youtube.com/watch?v=wRytQcotLGc?t=135)
 - Please upload the README (in PDF or TXT) as the very first file - ensuring that it can be found easily by browsers of the archive.
   - It is OK to upload Markdown or Word documents in addition to, but not instead of the PDF or TXT version
 - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
@@ -253,10 +276,12 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 - if the project has already been published before, and you are updating it, then the "V1" will be incremented. See [our FAQ](FAQ.md)
 - You should then cite your deposit as follows (see [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)):
 
+
 |                                                                                                                                                                                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Romer, Christina D., and David H. Romer**. 2010. "Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks." *American Economic Association* [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1. |
 |                                                                                                                                                                                                                                                                                                                                      |
+- Note that the DOI **will not work** until (at the very end of the review process) the deposit is published. This is **normal**.
 
 #### Give it a try
 
