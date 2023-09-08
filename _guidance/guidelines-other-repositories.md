@@ -3,6 +3,7 @@ title: Display Guidelines for Trusted Repositories (other than AEA Data and Code
 toc: true
 layout: single
 date: 2023-01-23
+modified: 2023-09-08
 ---
 
 The AEA accepts replication packages from any **trusted** repository (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). If you have doubts about whether a particular repository qualifies as a "trusted" repository, contact the AEA Data Editor before unnecessarily duplicating the deposit. 
@@ -132,7 +133,19 @@ Authors will need to edit the metadata under the "Related Publications" heading:
 
 ### Adding related manuscript to Dataverse
 
-Soon.
+This should be applicable to any Dataverse instance.
+
+- Log in to your Dataverse account
+- Under profile name, click on "`My Data`", wait for information to load
+- Then click on the correct dataset / code / replication package
+- Click on `Edit Data > Metadata`
+- scroll down to "`Related publication`"
+- choose DOI under "`Identifier Type`"
+- paste the DOI provided
+- You may need to remove an older (obsolete) entry
+- Save and then don't forget to publish 
+
+> Contributed by Charlotte Cavaillé.
 
 ### Adding related manuscript to Zenodo
 
