@@ -277,11 +277,13 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 - You should then cite your deposit as follows (see [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)):
 
 
-|                                                                                                                                                                                                                                                                                                                                      |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                |
+|----------------------------------------------------------------------------------------------------------------|
 | **Romer, Christina D., and David H. Romer**. 2010. "Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks." *American Economic Association* [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1. |
-|                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                                                |
+
 - Note that the DOI **will not work** until (at the very end of the review process) the deposit is published. This is **normal**.
+- You do **not** need to add your replication package citation to the manuscript, as it will be added automatically. 
 
 #### Give it a try
 
