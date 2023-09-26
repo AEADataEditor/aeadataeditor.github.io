@@ -38,9 +38,8 @@ layout: default
         {% endif %}
         {% if page.joint %}
           <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i>Joint with </strong> 
-          {% for author in page.joint %}
-            {% if forloop.index != 1 %},{% endif %} 
-            {% author %}
+            {% for c in page.joint %}
+            {{ c }}{% if forloop.last == false %},{% endif %}
           {% endfor %}</p>
         {% endif %}
         
