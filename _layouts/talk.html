@@ -30,14 +30,25 @@ layout: default
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        {% if page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Originally posted:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
+        {% if page.modified %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Last modified:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+        {% if page.joint %}
+          <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i>Joint with </strong> 
+          {% for author in page.joint %}
+            {% if forloop.index != 1 %},{% endif %} 
+            {% author %}
+          {% endfor %}</p>
+        {% endif %}
+        
 
         <!-- {% if page.type %} -->
-          <p>{{page.type}} at {{ page.venue }},  {{page.location}} 
+          <p>{{page.type}} 
+            {% if page.venue %}at {{ page.venue }}{% if page.location %}, {{page.location}}{% endif %}{% endif %}
+
             <ul>
               {% if page.doi %}
               <li> <a href="https://doi.org/{{ page.doi }}" alt="Slides">Slides</a> 
