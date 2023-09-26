@@ -1,10 +1,4 @@
 var store = [{
-        "title": "Licensing Guidance",
-        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/Licensing_guidance.html",
-        "teaser": null
-      },{
         "title": "A discussion about various things",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -15,6 +9,12 @@ var store = [{
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/LICENSE-template.html",
+        "teaser": null
+      },{
+        "title": "Licensing Guidance",
+        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -33,6 +33,18 @@ var store = [{
         "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/FAQ.html",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Preparing your files for verification",
@@ -65,12 +77,6 @@ var store = [{
         "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
-        "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/",
-        "teaser": null
-      },{
         "title": "Guidance on how to prepare a comment based on a replication",
         "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
         "tags": [],
@@ -93,12 +99,6 @@ var store = [{
         "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
-        "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/next",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -567,5 +567,29 @@ var store = [{
         "excerpt":"Abstract Miklós Koren and Lars Vilhuber, data editors of the Review of Economic Studies and the American Economic Association Journals require that you share your code and data in a replication package at the end of your research project. Following some best practices from day 1 can not only help...","categories": [],
         "tags": [],
         "url": "/talks/2023-08-28-barcelona",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Context and Lessons learned from 1,000 papers",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,800 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I frame the discussion in the context of the history...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-09-12-tokyo",
+        "teaser": null
+      },{
+        "title": "Transparency and Reproducibility in Economics: Context and Lessons learned from 1,000 papers",
+        "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,800 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I frame the discussion in the context of the history...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-09-16-osaka",
+        "teaser": null
+      },{
+        "title": "(Full day) Reproducibility Workshop Nihon",
+        "excerpt":"Abstract 9:00 Overview of reproducibility and replicability in economics, including replication packages (presentation) 10:00-10:50 … Let’s make a replication package (hands-on using a simple example, from directory structure to (almost) deposit at a trusted repository) 11:00-11:50 … Principles and structure of replication packages (including README files) 11:50-13:00 … Lunch time...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-09-19-osaka",
+        "teaser": null
+      },{
+        "title": "(Full day) Reproducibility Workshop Nihon",
+        "excerpt":"Abstract 9:00 Overview of reproducibility and replicability in economics, including replication packages (presentation) 10:00-10:50 … Let’s make a replication package (hands-on using a simple example, from directory structure to (almost) deposit at a trusted repository) 11:00-11:50 … Principles and structure of replication packages (including README files) 11:50-13:00 … Lunch time...","categories": [],
+        "tags": [],
+        "url": "/talks/2023-09-20-tokyo",
         "teaser": null
       }]
