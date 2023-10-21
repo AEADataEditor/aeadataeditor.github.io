@@ -22,6 +22,31 @@ There are two main reasons why authors may want to deposit at a different reposi
   - Harvard Dataverse offers up to **1TB** for free. An **API** is available.
   - Zenodo offers **50GB** per default, but can easily be expanded to more than **200GB** upon request. An API to download individual files is available.
 
+## Additional (generic) guidance
+
+### Zenodo
+
+The AEA has a "community" on Zenodo: [https://zenodo.org/communities/aeajournals](https://zenodo.org/communities/aeajournals)
+
+On Zenodo, you should use the "Submit for review" functionality if you do not already have a public deposit:
+
+- Only draft deposits can be submitted for review
+- Both the uploader (you) and the curator (the AEA Data Editor) can modify metadata and files
+
+> Zenodo [Create new upload](https://help.zenodo.org/docs/deposit/create-new-upload/), but do NOT publish!
+>
+> - We strongly suggest not uploading a ZIP file, unless you need to preserve folder structure.
+> - The README must be individually uploaded and [selected as the file to display](https://help.zenodo.org/docs/deposit/manage-files/#preview).
+
+> Zenodo [Submit for Review](https://help.zenodo.org/docs/share/submit-for-review/)
+
+If you already have a published deposit, you can "Submit to community". 
+
+- Only published deposits can be submitted for inclusion in a community
+- Only metadata can be edited (any revision to files can only be handled by creating a new version)
+
+> Zenodo [Submit to community for inclusion](https://help.zenodo.org/docs/share/submit-to-community/)
+
 ## Title
 
 The **title** should clearly distinguish paper and replication package. 
@@ -34,11 +59,15 @@ The **title** should clearly distinguish paper and replication package.
 
 ## README
 
-The **README** must use the  [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/) if the deposit is for a full replication package. If the deposit is for data-only, a simplified README is acceptable, but should 
+The **README** must conform to the  [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/) if the deposit is for a full replication package. If the deposit is for data-only, a simplified README is acceptable, but should 
 
 - describe salient characteristics of the data,
 - the source of the data
 - license information
+
+The README must be present in PDF format (other additional formats are acceptable).
+
+> If the platform allows, select the README as the default file to display.
 
 ## Summary / Abstract
 
@@ -73,7 +102,11 @@ The **contents** of the deposit must, of course, satisfy all other requirements 
 
 Some repositories allow for the upload of files via API or import from online services. This may be useful for particularly large data deposits.
 
-- Zenodo: See [documentation for the Zenodo API](https://developers.zenodo.org/). An example for a simple uploader in Python is on the [AEA Github repository](https://github.com/AEADataEditor/Upload-to-Zenodo). The [zenodo_get](https://pypi.org/project/zenodo-get/) ([Github source](https://github.com/dvolgyes/zenodo_get)) Python package allows to download entire packages. The API can also be used to download individual files from Zenodo.
+- Zenodo: See [documentation for the Zenodo legacy API](https://developers.zenodo.org/). An example for a simple uploader in Python is on the [AEA Github repository](https://github.com/AEADataEditor/Upload-to-Zenodo). 
+- Zenodo: The legacy API can also be used to download individual files from Zenodo. The [zenodo_get](https://pypi.org/project/zenodo-get/) ([Github source](https://github.com/dvolgyes/zenodo_get)) Python package allows to download entire packages. 
+
+>  Zenodo: The legacy API is being deprecated. Once newer guidance and tools are available, we will update this page. For now, Zenodo points to [InvenioRDM](https://inveniordm.docs.cern.ch/reference/rest_api_index/) for API guidance (2023)
+
 - Dataverse: See [documentation for Dataverse API](https://guides.dataverse.org/en/5.12/api/index.html). A R package [`dataverse-client-r`](https://github.com/IQSS/dataverse-client-r) can download individual files or complete packages. [pyDataverse](https://pydataverse.readthedocs.io/en/latest/) is Python code  to interface with Dataverses.
 
 ## Publishing, saving, and sharing
@@ -82,7 +115,7 @@ Some repositories offer the ability to share the contents of the deposit prior t
 
 Otherwise, authors must publish the repository, and communicate the DOI to the AEA Data Editor as part of the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability).
 
-- Zenodo: pre-publication sharing not available
+- Zenodo: see [link sharing](https://help.zenodo.org/docs/share/link-sharing/) or [submit for review](https://help.zenodo.org/docs/share/submit-for-review/)
 - Dataverse: See [Private URL to Review Unpublished Dataset](https://guides.dataverse.org/en/5.12/user/dataset-management.html#)
 
 ## After publication of the manuscript
@@ -149,30 +182,23 @@ This should be applicable to any Dataverse instance.
 
 ### Adding related manuscript to Zenodo
 
-- Log in to Zenodo, and select your deposit (choose "Upload", which will show all previous uploads)
-- Edit the deposit
-- Scroll down to `Related identifiers`
-- Choose "`Add another related identifier`" to create an empty field.
-- Enter 
-  - the DOI in the first field. 
-  - Choose "is supplemented by this upload" for the relationship
-  - Choose "Journal article" to identify the "resource type" that the DOI points to.
+- See [Edit published records](https://help.zenodo.org/docs/deposit/manage-records/#edit) for details on how to edit the metadata of a deposit (a "record")
+- Go to [My Uploads](https://zenodo.org/me/uploads) and find the record.
+- Click `Edit`
+- Scroll down to `Related works`
+- Choose "`Add related work`" 
+- Then 
+  - Choose `is supplement to` as `Relation`. 
+  - Enter the DOI of the published article into the field `Identifier`
+  - Choose `DOI` as `Scheme`
+  - Choose "Publication/Journal article" as `Resource type`
+- Optionally choose `Preview`, then `Publish`. 
 
-![Edit related on Zenodo](/images/zenodo-edit-related.png)
+This does NOT create a new version. Do not change any files.
 
 ## Special notes
 
-### Zenodo
-
-When editing the metadata, depositors should add the "[American Economic Association]([AEA Journal Community](https://zenodo.org/communities/aeajournals/))" community. The AEA Data Editor will be notified, and will verify compliance, then accept the request. All Zenodo deposits that are in connection with AEA replication package are listed in the [AEA Journal Community](https://zenodo.org/communities/aeajournals/).
-
-![Communities field on Zenodo](/images/zenodo-community-empty.png)
-
-
-![Selecting AEA in the Communities field on Zenodo](/images/zenodo-community-select.png)
-
-
-![AEA selected in the Communities field on Zenodo](/images/zenodo-community-aea.png)
+None at present.
 
 ## Updating a Pre-Existing Deposit
 
