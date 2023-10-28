@@ -61,6 +61,7 @@ body:
         - label: Gitlab
         - label: Dataverse
         - label: openICPSR
+        - label: Personal Computer
   - type: textarea
     id: logs
     attributes:
