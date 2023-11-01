@@ -1,0 +1,725 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>NDAs, DUAs in the verification process - Office of the AEA Data Editor</title>
+<meta name="description" content="Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site:     Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.    Don’t know how to make it happen.   A few thoughts.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="NDAs, DUAs in the verification process">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2023-11-01-ndas">
+
+
+  <meta property="og:description" content="Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site:     Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.    Don’t know how to make it happen.   A few thoughts.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="NDAs, DUAs in the verification process">
+  <meta name="twitter:description" content="Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site:     Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.    Don’t know how to make it happen.   A few thoughts.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2023-11-01-ndas">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2023-11-01T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2023-11-01-ndas">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="NDAs, DUAs in the verification process">
+    <meta itemprop="description" content="Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site:  Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.  Don’t know how to make it happen.A few thoughts.">
+    <meta itemprop="datePublished" content="2023-11-01T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">NDAs, DUAs in the verification process
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  10 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-11-01T00:00:00-04:00">November 01, 2023</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>Toni Whited (EIC of Journal of Financial Economics) had the following question on the <a href="https://twitter.com/toniwhited/status/1718011879480787363">ex-bird site</a>:</p>
+
+<blockquote>
+  <p>Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.</p>
+
+  <p>Don’t know how to make it happen.</p>
+</blockquote>
+
+<p>A few thoughts.</p>
+
+<!-- more -->
+
+<h2 id="ndas-with-clauses">NDAs with clauses</h2>
+
+<p>I have started to see researchers incorporate such clauses into NDAs. Very rare, but possible. More generally, certain NDAs allow to add “third parties” to an existing contract - no special clause necessary, but researchers must be aware of the possibility.</p>
+
+<h2 id="ndas-without-clauses">NDAs without clauses</h2>
+
+<p>In some cases, no additional clause is needed. Read the NDA carefully: can you assign a new member of the research team (e.g., a new RA at your co-author’s university) to the contract, with minor hassles (simple notification)? Yes? Then you can probably also assign a journal verifier to the contract! Verifiers can be the “RA” on the contract, and can obtain the data (compliant with any other access restrictions). In many cases, authors have then been able to provide us with a non-publishable extract of the same data, for the duration of the verification process. We can sign a NDA with the authors, if needed, but most are fine with an email promise to delete the data. Our process is outlined <a href="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">here</a>.</p>
+
+<h2 id="journal-verifiers-with-access">Journal verifiers with access</h2>
+
+<p>Another thing is that in some cases, as long as both the authors and the verifiers are (separately) subscribers, data may be able to be shared. But caution: not every “subscription” is the same. For instance, when researchers use WRDS data, they cannot directly share the data. In principle, I should be able to access the same data sources - as <a href="https://johnson.library.cornell.edu/database/wharton-research-data-services-wrds/">Cornell is also a subscriber</a>. But WRDS subscriptions have a huge menu of sub-options. The researcher may be able to access WRDS <a href="https://github.com/chrisconlon/CommonOwnerReplication/blob/master/code/1_Download_WRDS_Data.py">via the Python API</a>, but as it turns out, my subscription does not extend to that!<sup id="fnref:conlon" role="doc-noteref"><a href="#fn:conlon" class="footnote" rel="footnote">1</a></sup></p>
+
+<h2 id="journal-verifiers-acquiring-access">Journal verifiers acquiring access</h2>
+
+<p>In some cases, there is a <strong>generalized access mechanism</strong>. Thus, while the researcher cannot share the data with us, because the DUA or NDA does not allow for it, it is relatively straightforward for the journal verifier to obtain access. For instance,</p>
+
+<ul>
+  <li><a href="https://psidonline.isr.umich.edu/default.aspx">PSID</a> (see <a href="https://simba.isr.umich.edu/U/CondUse.aspx">Conditions of use</a>)</li>
+  <li><a href="https://www.worldvaluessurvey.org/wvs.jsp">World Values Survey</a> (WVS)</li>
+  <li><a href="https://dhsprogram.com/">Demographic and Health Surveys</a> (DHS) (note banner at <a href="https://dhsprogram.com/data/dataset_admin/login_main.cfm">Data Download site</a>)</li>
+  <li><a href="https://www.diw.de/en/diw_01.c.678568.en/research_data_center_soep.html">German Socio-Economic Panel</a> (SOEP) (see <a href="https://www.diw.de/en/diw_01.c.601584.en/data_access.html#c_741347">Data Access rules</a>)</li>
+</ul>
+
+<p>all do not allow for redistribution of the data, even of their “publicly accessible” data.</p>
+
+<blockquote>
+  <p>Hint: if there is a login, a checkbox, or something else you need to click on in order to download the data, it is very likely that you cannot simply re-publish (distribute, post) the data (but that is neither a sufficient nor a necessary condition).</p>
+</blockquote>
+
+<p>But in all three cases, the journal verifier can obtain access to the data, and verify the replication package.</p>
+
+<p>Some of these mechanisms have easy ways for researchers to make re-acquiring the data easy:</p>
+
+<ul>
+  <li>PSID offers both the ability to <a href="https://simba.isr.umich.edu/DC/c.aspx">share “carts”</a> and to deposit extracts in a compliant way at the <a href="">PSID repository</a></li>
+  <li>SOEP assigns DOI to datasets, allowing to ask for the exact same dataset. See <a href="https://doi.org/10.5684/soep.v35.1">https://doi.org/10.5684/soep.v35.1</a> for an example.</li>
+</ul>
+
+<p>While a bit of a hassle, this does allow journals to obtain the same data. Note that this is not always easy or possible: for instance, if the original author used the SOEP data in Europe, they will have had a different access than my US-based team will have, because non-European users only get access to a 95% sample.</p>
+
+<p>Also, Cornell has so far not been able to agree to the terms of use required to even sign a data use agreement, something about GDPR etc… So what do we do then?</p>
+
+<h2 id="using-third-party-verifiers-with-access">Using third party verifiers with access</h2>
+
+<p>When NDAs or DUAs cannot be quickly adjusted, or no parallel data access exists, one can reach out to other verifiers. The AEA has a <a href="https://www.aeaweb.org/journals/data/policy-third-party">policy</a> on that, and we regularly reach out to folks who we know have access. That would be the case for the SOEP above: reach out to a replicator in Europe (for instance, a fellow Europe-based data editor).</p>
+
+<p>More generally, this will be true for data that have complicated and long-winding access procedures, and where simply it is completely out-of-scope (because illegal) for researchers to provide journals with access to the data. This was the case for the <a href="https://www.casd.eu/en/sources/french-customs-data/">French customs data</a> that we used in the <a href="https://aeadataeditor.github.io/aea-de-guidance/2021-10-28-reproducibility-restricted-france.html">Piveteau (2021) replication</a>. The data are available through <a href="https://www.casd.eu/">CASD</a>, the French data access center, and the <a href="https://www.cascad.tech/">cascad</a> replicators have access to CASD, quickly, on a case-by-case basis. We can reach out to them for access to these data. Sometimes, agency or data custodian staff themselves can help out - we’ve had pilot projects with the German IAB, with the Bureau of Labor Statistics, and with the World Bank. This will not always work - volunteering time may be fine in academia, but is not always feasible when working with government or supra-national agencies.</p>
+
+<p>But back to Toni’s point: in principle, if we applied that principle to the journal-centric process, one solution is to have external referees, selected because they have access to the data, conduct the verification, in accordance with some basic principles.</p>
+
+<h2 id="taking-the-computations-to-the-data-instead-of-the-data-to-my-computer">Taking the computations to the data, instead of the data to “my” computer</h2>
+
+<p>Toni also wanted to “replicate results on an air-gapped machine.” While that specific security protocol almost certainly won’t satisfy many data providers these days (they want encrypted hard drives, secure login processes, etc., and want the whole thing documented), this does also suggest another process: rather than bring the data to “my” computer, take the computation to “their” computer (or some other authorized system). In a few cases, we have been granted (legitimate, documented) computer access to servers that are authorized to access the restricted data, always remaining in compliance with the authors’ data access protocol. We have so far been granted legitimate and documented access to computers at UC San Diego, the NBER, Harvard Business School, and University of Uppsala, to name a few (thank you!). This not only solves the data access problem, in some cases it also solves the computational resource problem - sufficient parallel cores, licensed software, etc. This is different from the third-party verification process, above, because in this case, we (the journal verifiers) access the data, and run the code that the authors provided elsewhere.</p>
+
+<h2 id="the-big-caveat">The big caveat</h2>
+
+<p>Of course, none of the above will work if the original NDA and data access is idiosyncratic. In all of the above processes, a secondary outcome is that we can improve the authors’ description of how <strong>somebody</strong> (not just the editorial folks) can get access to the data, and restrictions limiting this. In some cases, the only possible documentation is “<strong>this will not work for anybody else.</strong>” Getting access to firm-specific data is often heavily dependent on interpersonal relationships, and while that might work to simply extending an NDA, it only works if the original relationship continues to exist. So none of these methods will work in all cases. The fallback is then something that Toni’s journal, and a few other econ journals, but not the AEA (!), require: provide some synthetic or simulated data, that at least allows to assess that the code would in principle run. But at least the fact that access <strong>is</strong> idiosyncratic should be made clear.</p>
+
+<h2 id="some-data-from-us">Some data from us</h2>
+
+<p>So how does this work at the AEA in practice? I pulled some stats today from our tracking system. Over the past 12 months, <a href="https://www.aeaweb.org/journals/forms/data-code-availability">authors have identified</a> <strong>112 times</strong> that they might be able to provide us privately access to the data, through one of the mechanisms above. In <strong>86 cases</strong>, after review of conditions, cost, and availability of resources, we pursued those offers in some fashion. That includes figuring out NDAs or privately shared data. It does not cover when we requested data ourselves from third parties, which happened in <strong>22 cases</strong> (some of those cases overlap). In <strong>84 cases</strong>, one of those methods culminated with us coming to terms with whoever controlled the data, and  obtaining access to the data.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Accessing confidential data as part of the verification process is not easy, but it is possible. Ensuring that others can re-use the data is sometimes easier, especially for researchers in the same field, in others harder, when a special clause in the NDA allowed the journal access, but cannot be extended to arbitrary future researchers. And the process must be allowed to fail, because interesting and illuminating research can be conducted with data that cannot be shared. In fact, an update to one of those NDAs negotiations just hit my inbox as I am writing this, and is likely to fail, due to the data provider not being willing to grant an exception or an extension in line with Toni’s original hope and request. That’s life, and is fine - it will not hold up the rest of the verification process that we are conducting, and will still ultimately lead to the publication of the paper.</p>
+
+<p>I see our goal as (data) editors to make these kind of constraints as clear as possible, for all future readers, for a very long time. After all, somebody might still want to correct the record in 100 years, or review what we knew now. It’s not like those articles are going anywhere, even if the data just might disappear! See one of the first “<strong>data corrections</strong>” I’m aware of, by Irving Fisher, 1911<sup id="fnref:irving" role="doc-noteref"><a href="#fn:irving" class="footnote" rel="footnote">2</a></sup>.</p>
+
+<h2 id="additional-readings">Additional readings</h2>
+
+<ul>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/2021-10-28-reproducibility-restricted-france.html">2021 post on example of checking confidential data</a></li>
+  <li><a href="https://www.aeaweb.org/journals/data/policy-third-party">AEA policy on third-party replicators</a></li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">AEA process for obtaining not-for-distribution data</a></li>
+  <li>Vilhuber, Lars. 2023. “<a href="https://doi.org/10.1016/j.jeconom.2023.05.001">Reproducibility and transparency versus privacy and confidentiality: Reflections from a data editor</a>, Journal of Econometrics, Volume 235, Issue 2, <a href="https://doi.org/10.1016/j.jeconom.2023.05.001">https://doi.org/10.1016/j.jeconom.2023.05.001</a> (<a href="https://doi.org/10.48550/arXiv.2305.14478">OA version on arXiv</a>)</li>
+</ul>
+
+<h2 id="footnotes">Footnotes!</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:conlon" role="doc-endnote">
+      <p>We ultimately used a <a href="https://www.aeaweb.org/journals/data/policy-third-party">third-party replicator</a> with access to the Python API to verify the article. The replication package was found to be perfectly reproducible. See <a href="https://doi.org/10.1257/aer.20191302">Conlon, Chris, and Eric So. 2021. “Common Ownership and Corporate Control.” <em>American Economic Review</em>, 111 (3): 1012-48.</a> for the article, and <a href="https://doi.org/10.3886/E120083V1">https://doi.org/10.3886/E120083V1</a> for the replication package. <a href="#fnref:conlon" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:irving" role="doc-endnote">
+      <p>Fisher, Irving. “‘The Equation of Exchange,’ 1896-1910.” The American Economic Review, vol. 1, no. 2, 1911, pp. 296–305. JSTOR, http://www.jstor.org/stable/1804304. Accessed 1 Nov. 2023. <a href="#fnref:irving" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#confidential" class="page__taxonomy-item" rel="tag">confidential</a><span class="sep">, </span>
+    
+      <a href="/tags/#dua" class="page__taxonomy-item" rel="tag">DUA</a><span class="sep">, </span>
+    
+      <a href="/tags/#nda" class="page__taxonomy-item" rel="tag">NDA</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2023-11-01T00:00:00-04:00">November 1, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=NDAs%2C+DUAs+in+the+verification+process%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2023-11-01-ndas" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2023-11-01-ndas" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-08-29-notice-downtime" rel="permalink">RESOLVED - Access to replication packages retrieval and deposit interrupted
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  THIS HAS BEEN RESOLVED. Please deposit as usual!
+
+
+The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sun...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-08-20-examples-of-updates" rel="permalink">Details on how to update a replication package post-publication
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-03-29-challenges-aejapplied-202304" rel="permalink">Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          11 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-02-02-oldest-replication-package-jae" rel="permalink">The oldest replication package, overall?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surp...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2023-11-01-ndas.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -239,6 +239,12 @@ var store = [{
         "url": "/posts/2023-08-29-notice-downtime",
         "teaser": null
       },{
+        "title": "NDAs, DUAs in the verification process",
+        "excerpt":"Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site: Econ and finance journals are getting their acts together wrt reproducibility. A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties...","categories": [],
+        "tags": ["NDA","DUA","confidential"],
+        "url": "/posts/2023-11-01-ndas",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
