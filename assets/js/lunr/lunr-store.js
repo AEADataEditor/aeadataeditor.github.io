@@ -1,10 +1,4 @@
 var store = [{
-        "title": "A discussion about various things",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
-        "teaser": null
-      },{
         "title": "License template",
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
@@ -17,10 +11,28 @@ var store = [{
         "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
+        "title": "A discussion about various things",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
+        "teaser": null
+      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
+        "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -71,12 +83,6 @@ var store = [{
         "url": "/aea-de-guidance/creating-separate-data-deposit",
         "teaser": null
       },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
-        "teaser": null
-      },{
         "title": "Guidance on how to prepare a comment based on a replication",
         "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
         "tags": [],
@@ -87,12 +93,6 @@ var store = [{
         "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-openicpsr",
-        "teaser": null
-      },{
-        "title": "Creating a Restricted Data Deposit  for AEA Publications",
-        "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
         "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
