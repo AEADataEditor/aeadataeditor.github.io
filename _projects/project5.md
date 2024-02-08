@@ -26,12 +26,12 @@ Interns will learn and observe parts of the scientific publication process. They
 
 While the internship is new, the LDI Lab has been training undergraduate replicators for the past 6 years, and has employed more than 175 students. Students report that the experience is valuable in their future careers, including in the private sector, government, and as graduate students in academia.
 
-**Intership experience:**
+**Internship experience:**
 While interns will be working remotely, they will be part of a team of interns and regular (undergraduate) staff in the LDI Replication Lab, meeting at least twice a week. They will be mentored by academic staff at their own institution as well. They will have the opportunity to interact with other interns and staff, and to learn from each other. They will also have the opportunity to interact regularly with the AEA Data Editor and his staff.
 
 
 **Required Qualifications/Skills/Experience:**
-Some experience with empirical social science data analysis using statistical software is required. Knowledge of at least one of Stata, Matlab, R or SAS is required, as is familiarity with the Windows Desktop environment. Experience with Git and the command line (Linux, Mac, or Powershell) are assets. Applicants must be current Cornell students, residing in the United States.
+Some experience with empirical social science data analysis using statistical software is required. Knowledge of at least one of Stata, Matlab, R or SAS is required, as is familiarity with the Windows Desktop environment. Experience with Git and the command line (Linux, Mac, or Powershell) are assets. Applicants must be current students at a participating institution, residing in the United States.
 
 **Start and end dates:**
 The internship will broadly start after institution-specific final exams over, and thus vary, but broadly, the internship will take place between mid-May and mid-August, for 10-12 weeks (depends on the institution). 
