@@ -604,4 +604,16 @@ var store = [{
         "tags": [],
         "url": "/talks/2023-09-20-tokyo",
         "teaser": null
+      },{
+        "title": "Reproducible Research from Day 1",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-01-05-san-antonio",
+        "teaser": null
+      },{
+        "title": "Advanced methods for self-verification of reproducibility",
+        "excerpt":"Abstract In this second session, data editors describe a few possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-01-06-san-antonio",
+        "teaser": null
       }]
