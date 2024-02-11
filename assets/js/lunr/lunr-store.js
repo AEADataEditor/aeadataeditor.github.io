@@ -616,4 +616,16 @@ var store = [{
         "tags": [],
         "url": "/talks/2024-01-06-san-antonio",
         "teaser": null
+      },{
+        "title": "École d’été du CIQSS en reproductibilité de la recherche (in French)",
+        "excerpt":"Abstract Cette formation fournira une vue d’ensemble des enjeux en matière de reproductibilité de la recherche et proposera la marche à suivre pour réaliser un projet reproductible. (For the same workshop in English, see one week later) Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-05-14-montreal",
+        "teaser": null
+      },{
+        "title": "QICSS Summer School on Research Reproducibility",
+        "excerpt":"Abstract This training will provide an overview of issues related to research reproducibility and will propose the steps to follow to carry out a replicable project. (For the same workshop in French, see one week earlier) Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop is...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-05-21-montreal",
+        "teaser": null
       }]
