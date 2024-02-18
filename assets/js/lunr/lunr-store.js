@@ -617,6 +617,12 @@ var store = [{
         "url": "/talks/2024-01-06-san-antonio",
         "teaser": null
       },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Questions and Coffee with AEA Data Editor Lars Vilhuber Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be? Are you unsure if the data you are using...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-01-29-umich",
+        "teaser": null
+      },{
         "title": "Ask a Data Editor Anything",
         "excerpt":"Abstract The growing focus on archiving and curating research data, along with promoting reproducible research, is highly relevant to our faculty and graduate students across all domains of empirical social sciences. This relevance is underscored by the considerable progress in the AEA data policy. This event is sponsored by the...","categories": [],
         "tags": [],

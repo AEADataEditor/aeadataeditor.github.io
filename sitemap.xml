@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/LICENSE-template.html</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/Licensing_guidance.html</loc>
@@ -14,7 +14,7 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/addtl-data-citation-guidance</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/reproducibility-checks</loc>
@@ -26,7 +26,7 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea</loc>
@@ -34,15 +34,15 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/FAQ.html</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/next</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit</loc>
@@ -70,7 +70,7 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/aea-de-guidance/step-by-step</loc>
-<lastmod>2024-02-12T16:52:57-05:00</lastmod>
+<lastmod>2024-02-18T11:35:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted</loc>
@@ -413,6 +413,10 @@
 <lastmod>2024-01-06T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>https://aeadataeditor.github.io/talks/2024-01-29-umich</loc>
+<lastmod>2024-01-29T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://aeadataeditor.github.io/talks/2024-02-14</loc>
 <lastmod>2024-02-14T00:00:00-05:00</lastmod>
 </url>
@@ -480,6 +484,6 @@
 </url>
 <url>
 <loc>https://aeadataeditor.github.io/assets/pdfs/aea-data-editor-response-SI-FTAC-RFI-20210728.pdf</loc>
-<lastmod>2024-02-12T16:52:25-05:00</lastmod>
+<lastmod>2024-02-18T11:35:24-05:00</lastmod>
 </url>
 </urlset>
