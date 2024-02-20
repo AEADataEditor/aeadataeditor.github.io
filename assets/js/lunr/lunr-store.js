@@ -640,4 +640,22 @@ var store = [{
         "tags": [],
         "url": "/talks/2024-05-21-montreal",
         "teaser": null
+      },{
+        "title": "Training on reproducible methods in empirical economics",
+        "excerpt":"Preliminary! The session still needs to be confirmed. Details to follow. Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-05-30-cea",
+        "teaser": null
+      },{
+        "title": "Reproducibility from Day 1 to Day T",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-06-29-weai",
+        "teaser": null
+      },{
+        "title": "Training on reproducible methods in empirical economics",
+        "excerpt":"Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later,...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-09-05-eale",
+        "teaser": null
       }]
