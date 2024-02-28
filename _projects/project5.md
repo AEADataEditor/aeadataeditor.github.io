@@ -57,11 +57,11 @@ Training in 2024 will take place at **Wellesley College** on **April 6, 2024**. 
 
 *1. Accommodation*
 
-Wellesley cannot offer on-campus accommodation, unfortunately. The best option is the Verve Hotel in Natick, which is about a 10 to 15 minute ride to campus. The participants can get corporate rates if they book through Wellesley's corporate link: https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/. The rate should be approximately $170 a night (as of February 2024). If they have any issues with booking, they can contact their local organizer.
+Wellesley cannot offer on-campus accommodation, unfortunately. The best option is the Verve Hotel in Natick, which is about a 10 to 15 minute ride to campus. The participants can get corporate rates if they book through Wellesley's corporate link: [https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/](https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/). The rate should be approximately $170 a night (as of February 2024). If they have any issues with booking, they can contact their local organizer.
 
 *2. Transportation options*
 
-From the airport to the Verve Hotel, people can either take a cab or use the Logan Express bus headed to Framingham (which is a cheaper option). They can purchase tickets on the bus or in advance here: https://loganexpress.com/buy-tickets.asp. They can then take a cab from the Logan Express bus station in Framingham to the Verve Hotel (less than a 5 minute ride) or arrange in advance for the hotel's complimentary shuttle from the bus station by calling the front desk at 508-653-8800, extension 6.
+From the airport to the Verve Hotel, people can either take a cab or use the Logan Express bus headed to Framingham (which is a cheaper option). They can purchase tickets on the bus or in advance here: [https://loganexpress.com/buy-tickets.asp](https://loganexpress.com/buy-tickets.asp). They can then take a cab from the Logan Express bus station in Framingham to the Verve Hotel (less than a 5 minute ride) or arrange in advance for the hotel's complimentary shuttle from the bus station by calling the front desk at 508-653-8800, extension 6.
 
 *3. Meals*
 
