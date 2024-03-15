@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-02-28T16:18:29-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">NDAs, DUAs in the verification process</title><link href="https://aeadataeditor.github.io/posts/2023-11-01-ndas" rel="alternate" type="text/html" title="NDAs, DUAs in the verification process" /><published>2023-11-01T00:00:00-04:00</published><updated>2023-11-01T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/ndas</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-11-01-ndas"><![CDATA[<p>Toni Whited (EIC of Journal of Financial Economics) had the following question on the <a href="https://twitter.com/toniwhited/status/1718011879480787363">ex-bird site</a>:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-03-15T11:11:43-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">NDAs, NDAs, and NDAs: How to describe access to data that cannot be published</title><link href="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux" rel="alternate" type="text/html" title="NDAs, NDAs, and NDAs: How to describe access to data that cannot be published" /><published>2024-03-15T00:00:00-04:00</published><updated>2024-03-15T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/nda-redux</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux"><![CDATA[<p>I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access description when data were obtained via a non-disclosure agreement (NDA):</p>
+
+<blockquote>
+  <p>[…] the data are from a commercial company under a non-disclosure agreement […] asked to include “data sharing plans (for all data, documentation, and code used in analysis)”. […] Can you think of any example language that the researcher could borrow from to include in the data sharing plan?</p>
+</blockquote>
+
+<p>(paraphrased)</p>
+
+<!-- more -->
+
+<p>The use of some sort of data access restriction is quite common in economics. We have a few examples listed here:</p>
+
+<p>https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html</p>
+
+<p>None of those directly address when an NDA is required, but the generic “confidential data” example is straightforward to adapt:</p>
+
+<p>https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html#example-for-confidential-data</p>
+
+<blockquote>
+  <p>The data for this project are confidential, but may be obtained with Data Use Agreements with the Massachusetts Department of Elementary and Secondary Education (DESE). Researchers interested in access to the data may contact [NAME] at [EMAIL], also see www.doe.mass.edu/research/contact.html. It can take some months to negotiate data use agreements and gain access to the data. The author will assist with any reasonable replication attempts for two years following publication.</p>
+</blockquote>
+
+<p>As general guidance, journal (data) editors seek the following information:</p>
+
+<ul>
+  <li>how did the author access the data? (describe how the initial contact was made, what type of agreements, such as NDAs, were signed, and what they restrict and why)</li>
+  <li>how can others​ access the data? (“Contact the vice president of academic interaction, and request “data on gooble-dee-gooks” from 2002-2022.”) Importantly, the author should address whether the exact data can be obtained by others, or if this was a pull from a dynamic database, and while generically the same data might be available in a few years’ time, the exact data will never be obtainable. Or that after 10 years, regulatory requirements force the data provider to delete the data. Or whatever is needed to assess the likelihood of being able to access such data. Costs and delays are also important.</li>
+  <li>In some cases, authors may already know that the regime within the data provider has changed in such a fashion that the data are no longer available to anybody going forward - that may not be an impediment for the paper being published, but it is important to know (the data are fundamentally unverifiable)</li>
+</ul>
+
+<p>This is summarized in the Data and Code Availability Standard, that many econ journals now adhere to: https://datacodestandard.org/</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>Here are some examples (not all exactly corresponding to a single-entity NDA):</p>
+
+<h3 id="gross--sampat-2023">Gross &amp; Sampat (2023)</h3>
+
+<blockquote>
+  <p>Gross, Daniel P., and Bhaven N. Sampat. 2023. “America, Jump-Started: World War II R&amp;D and the Takeoff of the US Innovation System.” American Economic Review, 113 (12): 3323-56. https://doi.org/10.1257/aer.20221365</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://doi.org/10.1257/aer.20221365">Article</a></li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E192375V1">Replication package</a></p>
+  </li>
+  <li>Some data are included, others are not, because subject to redistribution restrictions, but are obtainable under various agreement, and others are commercially available for payment (thus a variety of DUA types)</li>
+  <li>For instance, they state “<em>Derwent Innovation (2018), EPO (2017) PATSTAT, and the Dun &amp;Bradstreet (1980) data were obtained through institutional subscriptions.</em>”</li>
+  <li>Excellent data availability statements in the README.</li>
+</ul>
+
+<h3 id="cullen--perez-truglia-2023">Cullen &amp; Perez-Truglia (2023)</h3>
+
+<blockquote>
+  <p>Cullen, Zoë, and Ricardo Perez-Truglia. 2023. “The Old Boys’ Club: Schmoozing and the Gender Gap.” American Economic Review, 113 (7): 1703-40. https://doi.org/10.1257/aer.20210863</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://doi.org/10.1257/aer.20210863">Article</a></li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E182243V1">Replication package</a></p>
+  </li>
+  <li>Data were collected at a company that the first author was an employee of. The company cannot be named (and is pruned from the author’s CV!)</li>
+  <li>README states “The data was collected by the authors in collaboration with a large financial institution via surveys. Zoe Cullen was an employee of the institution, which remains unnamed to protect the confidentially of the firm, at the time of data collection.”</li>
+  <li>An extreme form of NDA, which happens a few times.</li>
+</ul>
+
+<h3 id="zussman-2023">Zussman (2023)</h3>
+
+<blockquote>
+  <p>Zussman, Asaf. 2023. “Discrimination in Times of Crises and the Role of the Media.” American Economic Journal: Applied Economics, 15 (4): 422-51. https://doi.org/10.1257/app.20210732</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://doi.org/10.1257/app.20210732">Article</a></li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E175242V1">Replication package</a></p>
+  </li>
+  <li>The data were scraped from a (named) public website, but contain names of doctors. The data were not made available due to ethical concerns, but the access procedure (repeatable by anybody) is described in detail.</li>
+  <li>The author explains that  “<em>The project received approval from the Ethics Committee of the Faculty of Social Sciences at the Hebrew University and from the University Ethics Committee (IRB) under the condition that identifying information about the doctors, most importantly doctor license numbers and names, will not become publicly available.</em>”</li>
+  <li>Similar:  Cage et al (2023) <a href="https://doi.org/10.1257/aer.20211509">https://doi.org/10.1257/aer.20211509</a> which contains names of Nazi collaborators.</li>
+</ul>
+
+<h3 id="kuhn---shen-2023">Kuhn &amp;  Shen (2023)</h3>
+
+<blockquote>
+  <p>Kuhn, Peter, and Kailing Shen. 2023. “What Happens When Employers Can No Longer Discriminate in Job Ads?” American Economic Review, 113 (4): 1013-48. https://doi.org/10.1257/aer.20211127</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://doi.org/10.1257/aer.20211127">Article</a></li>
+  <li>
+    <p><a href="https://doi.org/10.3886/E183021V1">Replication package</a></p>
+  </li>
+  <li>Internal data from a named Chinese company (XMRC.com) are used, but not published, in “<em>accordance with XMRC’s wishes</em>” (read: NDA/DUA). This is how the authors obtained the data.</li>
+  <li>But the limited data used for the analysis are deposited in the Research Data Center of the IZA (a German research center) and can be analyzed on a remote computing platform</li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>In all of the above, focus was on transparency of the two components of the data availability statement: original access, and subsequent access.</p>
+
+<h2 id="postscript-access-by-the-journal-is-not-the-same-as-public-access">Postscript: Access by the journal is not the same as public access</h2>
+
+<p>I will note that in many of these cases, the files were made available to the journal’s Data Editor (=me) under a derivative or implicit NDA, allowing the journal to verify veracity of the analysis, despite the data not being publishable. In cases where the source cannot be named, the Data Editor may enter into an NDA with the author to learn the name of the source, to verify plausibility, without revealing the information publicly. While all of these are second-best access methods, they are far better than obscurity and opacity.</p>
+
+<h2 id="additional-readings">Additional readings</h2>
+
+<ul>
+  <li><a href="https://aeadataeditor.github.io/posts/2023-11-01-ndas.html">2023 post on NDAs</a></li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/2021-10-28-reproducibility-restricted-france.html">2021 post on example of checking confidential data</a></li>
+  <li><a href="https://www.aeaweb.org/journals/data/policy-third-party">AEA policy on third-party replicators</a></li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data">AEA process for obtaining not-for-distribution data</a></li>
+  <li>Vilhuber, Lars. 2023. “<a href="https://doi.org/10.1016/j.jeconom.2023.05.001">Reproducibility and transparency versus privacy and confidentiality: Reflections from a data editor</a>, Journal of Econometrics, Volume 235, Issue 2, <a href="https://doi.org/10.1016/j.jeconom.2023.05.001">https://doi.org/10.1016/j.jeconom.2023.05.001</a> (<a href="https://doi.org/10.48550/arXiv.2305.14478">OA version on arXiv</a>)</li>
+</ul>]]></content><author><name>AEA Data Editor</name></author><category term="NDA" /><category term="DUA" /><category term="confidential" /><category term="DCAS" /><category term="access" /><summary type="html"><![CDATA[I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access description when data were obtained via a non-disclosure agreement (NDA): […] the data are from a commercial company under a non-disclosure agreement […] asked to include “data sharing plans (for all data, documentation, and code used in analysis)”. […] Can you think of any example language that the researcher could borrow from to include in the data sharing plan? (paraphrased)]]></summary></entry><entry><title type="html">NDAs, DUAs in the verification process</title><link href="https://aeadataeditor.github.io/posts/2023-11-01-ndas" rel="alternate" type="text/html" title="NDAs, DUAs in the verification process" /><published>2023-11-01T00:00:00-04:00</published><updated>2023-11-01T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/ndas</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-11-01-ndas"><![CDATA[<p>Toni Whited (EIC of Journal of Financial Economics) had the following question on the <a href="https://twitter.com/toniwhited/status/1718011879480787363">ex-bird site</a>:</p>
 
 <blockquote>
   <p>Econ and finance journals are getting their acts together wrt reproducibility.  A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine.</p>
@@ -831,63 +946,4 @@ We have obtained such permission via email correspondence on 16 November 2022.
 
 <p>Data providers have not all adapted to a world where data citations are ubiquitious, or should be. Sometimes it takes a little extra work.</p>
 
-<p>Note that data citations should appear both in the manuscript (upon first mention of the data) and in the README (properly formatted as in the manuscript).</p>]]></content><author><name>AEA Data Editor</name></author><category term="license" /><category term="terms of use" /><category term="copyright" /><category term="reproducibility" /><category term="provenance" /><summary type="html"><![CDATA[The template README required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “But the data is publicly available.” Let me try to disentangle that somewhat.]]></summary></entry><entry><title type="html">A short example of how to update a replication package</title><link href="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication" rel="alternate" type="text/html" title="A short example of how to update a replication package" /><published>2022-11-09T00:00:00-05:00</published><updated>2022-11-09T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/updating_post_publication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-09-updating-post-publication"><![CDATA[<p>The AEA Data and Code Availability does not just require that authors publish a replication package - it also encourages authors to improve upon the replication package. Here is an example.</p>
-
-<!-- more -->
-
-<blockquote>
-  <p>[NOTE] I am posting about this update with permission by the author.</p>
-</blockquote>
-
-<h3 id="links">Links</h3>
-
-<ul>
-  <li><a href="https://www.aeaweb.org/journals/policies/data-code">Data and Code Availability Policy</a></li>
-  <li><a href="https://www.aeaweb.org/journals/data/policy-revisions">Revision Policy</a>’</li>
-  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-was-wondering-whether-and-how-i-can-update-the-published-repository-for-our-paper-i-was-contacted-by-a-researcher-who-is-doing-a-replication--couple-of-minor-issues--forgotten-to-include-two-auxiliary-datasets-in-the-repository-without-which-one-of-the-programs-does-not-run-successfully">Instructions how to create a new version on openICPSR</a></li>
-</ul>
-
-<h3 id="tldr">TLDR</h3>
-
-<p>In a nutshell, when authors, or replicators, or somebody on the internet, identifies an issue with a package, they have a few options to identify and publish a solution for it, so that others can benefit the update.</p>
-
-<p>They can submit a comment to the journal, when the issue is a scientific one that materially affects the outcome and the conclusions.</p>
-
-<p>They can write a new article, triggered by an issue identified through the reproduction or replication attempt. This can be an original new article, or a replication-specific article (<a href="https://onlinelibrary.wiley.com/page/journal/10991255/homepage/News.html#replication">for instance, at the Journal of Applied Econometrics</a>).</p>
-
-<p>They can record the issue on platforms such as the <a href="https://www.socialsciencereproduction.org/">Social Science Reproduction Platform</a> or the <a href="https://replication.uni-goettingen.de/">Replication Wiki</a>.</p>
-
-<p>Or, if the issue is really minor, or is simply an improvement, authors can post a revision of replication package according to the <strong><a href="https://www.aeaweb.org/journals/data/policy-revisions">AEA Revision Policy</a></strong>.</p>
-
-<p>This post describes the latter.</p>
-
-<h3 id="timeline">Timeline</h3>
-
-<ul>
-  <li>Oct 2019: Replication package was submitted to Data Editor (one of the first 200 cases). A first report was sent back to the author (they were simpler back then…), the author revised the package, and re-submitted an improved package.</li>
-  <li>Nov 2019: The revised package was accepted (after 1 round). We were unable to access all data, but improved the documentation of the data sources.</li>
-  <li>April 2020: Publication of the manuscript: <a href="https://doi.org/10.1257/aer.20171732">https://doi.org/10.1257/aer.20171732</a>, and of the replication package: <a href="https://doi.org/10.3886/E112121V1">https://doi.org/10.3886/E112121V1</a>. <img src="/images/revpolicy-article1.png" alt="article page" /> <img src="/images/revpolicy-data1.png" alt="replication package v1" /></li>
-  <li>Sometime in 2020: a replicator, with access to the data, reports to the author various small issues, in particular missing files.</li>
-  <li>Jan 2021: Author reaches out to AEA Data Editor,  and wants to correct the data deposit, so that future replicators can access the missing files. A case is created by the AEA Data Editor to follow up.</li>
-  <li><em>Life intrudes</em> 🤷‍♂️</li>
-  <li>Oct 2022: Author updates the replication package, together with a Changelog (as required by policy), creating a V2. The revised package is published: <a href="https://doi.org/10.3886/E112121V2">https://doi.org/10.3886/E112121V2</a>, and the V1 now has a banner identifying that a newer version is available. <img src="/images/revpolicy-data2.png" alt="revised data package" /></li>
-</ul>
-
-<h3 id="notes">Notes</h3>
-
-<ul>
-  <li>The original deposit - the version of record - remains available, and downloadable.</li>
-  <li>The article page continues to link to the original deposit (V1) because it is the version of record.</li>
-  <li>The original deposit has a banner indicating that a newer package is available, and directs to that newer deposit.</li>
-  <li>The original deposit and the revised deposit contain cross-links.</li>
-</ul>
-
-<h3 id="conclusion">Conclusion</h3>
-
-<p>This is a great example of how the ability to update replication packages is a key part, previously underexploited and not transparent, in improving science. Such updates happen for a variety of reasons multiple times a year. Sometimes, they happen for less happy reasons, such as a data provider requests that a file be removed because posting the file is not compliant with their terms of use. In other cases, authors simply post a better README, after having received feedback from students or replicators.</p>
-
-<p>Revisions and new versions can be created on all regularly used repositories, such as <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">openICPSR</a>, <a href="https://zenodo.org/communities/aeajournals/">Zenodo</a>, and <a href="https://dataverse.harvard.edu/">Dataverse</a>.</p>
-
-<p>When authors publish their replication packages prior to submission, such revisions allow them to incorporate the changes made during the editorial process, whether related to the scientific or the computational content of the paper.</p>
-
-<!-- Ref: AEAREP-228 -->]]></content><author><name>AEA Data Editor</name></author><category term="updating" /><category term="improvement" /><category term="reproducibility" /><summary type="html"><![CDATA[The AEA Data and Code Availability does not just require that authors publish a replication package - it also encourages authors to improve upon the replication package. Here is an example.]]></summary></entry></feed>
+<p>Note that data citations should appear both in the manuscript (upon first mention of the data) and in the README (properly formatted as in the manuscript).</p>]]></content><author><name>AEA Data Editor</name></author><category term="license" /><category term="terms of use" /><category term="copyright" /><category term="reproducibility" /><category term="provenance" /><summary type="html"><![CDATA[The template README required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “But the data is publicly available.” Let me try to disentangle that somewhat.]]></summary></entry></feed>

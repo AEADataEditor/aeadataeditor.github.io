@@ -23,28 +23,10 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
-        "teaser": null
-      },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposit",
-        "teaser": null
-      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Frequently Asked Questions",
@@ -71,10 +53,28 @@ var store = [{
         "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/reproducibility-checks",
+        "teaser": null
+      },{
         "title": "Privately sharing restricted-access data with the AEA Data Editor",
         "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/sharing-restricted-data",
+        "teaser": null
+      },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposit",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
         "teaser": null
       },{
         "title": "Guidance on how to prepare a comment based on a replication",
@@ -243,6 +243,12 @@ var store = [{
         "excerpt":"Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site: Econ and finance journals are getting their acts together wrt reproducibility. A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties...","categories": [],
         "tags": ["NDA","DUA","confidential"],
         "url": "/posts/2023-11-01-ndas",
+        "teaser": null
+      },{
+        "title": "NDAs, NDAs, and NDAs: How to describe access to data that cannot be published",
+        "excerpt":"I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access description when data were obtained via a non-disclosure agreement (NDA): […] the data are from a commercial company under a non-disclosure agreement […] asked...","categories": [],
+        "tags": ["NDA","DUA","confidential","DCAS","access"],
+        "url": "/posts/2024-03-15-nda-redux",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",
