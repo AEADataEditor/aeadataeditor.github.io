@@ -130,6 +130,7 @@ Otherwise, authors must publish the repository, and communicate the DOI to the A
 
 - Zenodo: see [link sharing](https://help.zenodo.org/docs/share/link-sharing/) or [submit for review](https://help.zenodo.org/docs/share/submit-for-review/)
 - Dataverse: See [Private URL to Review Unpublished Dataset](https://guides.dataverse.org/en/5.12/user/dataset-management.html#)
+- Codeocean: Invite the AEA Data Editor as a [collaborator to the capsule](https://help.codeocean.com/en/articles/1052886-sharing-capsules).
 
 ## After publication of the manuscript
 
