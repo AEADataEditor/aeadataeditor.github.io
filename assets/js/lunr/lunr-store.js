@@ -635,6 +635,24 @@ var store = [{
         "url": "/talks/2024-02-14",
         "teaser": null
       },{
+        "title": "Data Editor AMA",
+        "excerpt":"Abstract Questions and Coffee with AEA Data Editor Lars Vilhuber Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be? Are you unsure if the data you are using...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-03-22-chicago",
+        "teaser": null
+      },{
+        "title": "Reproducibility in Economics: Open Q&A with the American Economic Association's Data Editor",
+        "excerpt":"Time 2:00pm - 3:30pm Room TBD Abstract Reproducibility in Economics: Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be?...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-04-04-boston",
+        "teaser": null
+      },{
+        "title": "Reproducibility in Economics: Open Q&A with the American Economic Association's Data Editor",
+        "excerpt":"Time 4:00pm - 5:30pm Room E51-345 Abstract Reproducibility in Economics: Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be?...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-04-04-cambridge",
+        "teaser": null
+      },{
         "title": "École d’été du CIQSS en reproductibilité de la recherche (in French)",
         "excerpt":"Abstract Cette formation fournira une vue d’ensemble des enjeux en matière de reproductibilité de la recherche et proposera la marche à suivre pour réaliser un projet reproductible. (For the same workshop in English, see one week later) Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop...","categories": [],
         "tags": [],
