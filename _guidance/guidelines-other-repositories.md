@@ -21,6 +21,7 @@ There are two main reasons why authors may want to deposit at a different reposi
   - As of 2022, openICPSR struggles with data deposits that have more than 1,000 files or more than 30GB of content.
   - Harvard Dataverse offers up to **1TB** for free. An **API** is available.
   - Zenodo offers **50GB** per default, but can easily be expanded to more than **200GB** upon request. An API to download individual files is available.
+  - Codeocean offers 2GB per capsule, but allows for easy in-the-cloud computing, i.e., replicators can immediately [duplicate a capsule](https://help.codeocean.com/en/articles/1217599-duplicating-a-compute-capsule?q=export) and start running it. 
 
 ## Additional (generic) guidance
 
@@ -46,6 +47,18 @@ If you already have a published deposit, you can "Submit to community".
 - Only metadata can be edited (any revision to files can only be handled by creating a new version)
 
 > Zenodo [Submit to community for inclusion](https://help.zenodo.org/docs/share/submit-to-community/)
+
+### Codeocean
+
+If you can publish your data freely, and the data is less than 2GB, you can construct your entire replication package on CodeOcean. If on the other hand your replication package requires future replicators to download data, then you will not be able to use Codeocean.
+
+You can deduce the presumptive DOI on Codeocean from the capsule number, visible in the address bar of your browser, e.g.,
+
+> `https://codeocean.com/capsule/1234567/tree`
+
+You can compute the DOI in the following way:
+
+{% include deposit-doi-codeocean.html %}
 
 ## Title
 
@@ -214,6 +227,17 @@ Good examples can be found in the [AEA Journal Community](https://zenodo.org/com
 
 - U.S. Geological Survey, & Brooks, Leah. (2022). USGS National Map 3DEP 1 Arc-second Digital Elevation Models (DEMs): Full Coverage for U.S. Interstate Highway System [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.5830968](https://doi.org/10.5281/zenodo.5830968) (83GB)
 - Ministerio de Desarrollo Productivo Argentina, Daruich, Diego, Kozlowski, Julian, & Vilhuber, Lars. (2022). Precios Claros (2016-05 - 2018-03) [Data set]. In American Economic Journal: Macroeconomics. Zenodo. [https://doi.org/10.5281/zenodo.6568295](https://doi.org/10.5281/zenodo.6568295) (44GB, about 1,200 files)
+
+### Codeocean
+
+Some examples of replication packages on CodeOcean are:
+
+- Ryan Chahrour, Robert Ulbricht (2022) Compute Capsule for: Robust Predictions for DSGE Models with Incomplete Information [Source Code]. [https://doi.org/10.24433/CO.5177698.v1](https://doi.org/10.24433/CO.5177698.v1)
+- Mónica García-Pérez, José Fernandez, Sandra Orozco-Aleman (2024) Compute Capsule for: Unraveling the Hispanic Health Paradox [Source Code]. [https://doi.org/10.24433/CO.7234900.v1](https://doi.org/10.24433/CO.7234900.v1)
+
+### Dataverse
+
+- Cavaillé, Charlotte, 2022, "Replication Code for "Immigration and Support for Redistribution: Lessons from Europe"", [https://doi.org/10.7910/DVN/6WTDRH](https://doi.org/10.7910/DVN/6WTDRH), Harvard Dataverse, V3 
 
 ## Note
 

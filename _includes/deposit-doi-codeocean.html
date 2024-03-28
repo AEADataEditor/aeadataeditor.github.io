@@ -1,0 +1,33 @@
+
+<form id="myForm">
+<table>
+ <tr><td>Codeocean capsule number:</td> <td> <input type="text" name="projectid"></td></tr>
+  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="v1"></td></tr>
+  <tr><td>Title:</td> <td> <input type="text" name="title" value="Title of paper"></td></tr>
+  <tr><td>Authors:</td> <td> <input type="text" name="title" value="Author names"></td></tr>
+  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI"></td></tr>
+  </table>
+</form>
+
+<p id="DOI"></p>
+<table>
+<tr><td>
+<p id="citation"></p>
+</td></tr></table>
+
+<script>
+function myFunction() {
+  const date = new Date();
+  var doipre = "https://doi.org/10.24433/CO.";
+  var titlepre = "Compute Capsule for: ";
+  var str0 = document.getElementById('myForm').elements[0].value;
+  var authors = document.getElementById('myForm').elements[3].value;
+  var str2 = document.getElementById('myForm').elements[2].value;
+  var str3 = document.getElementById('myForm').elements[1].value;
+  var title = titlepre.concat(str2);
+  var doi = doipre.concat(str0).concat(".").concat(str3);
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. " + date.getFullYear() + ". \"" + title + "\" <i>Codeocean</i>  [distributor]. " + doi;
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
+  
+}
+</script>
