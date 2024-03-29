@@ -642,7 +642,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Reproducibility in Economics: Open Q&A with the American Economic Association's Data Editor",
-        "excerpt":"Time 2:00pm - 3:30pm Room TBD Abstract Reproducibility in Economics: Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be?...","categories": [],
+        "excerpt":"Time 2:00pm - 3:30pm Room Wheelock 423 Abstract Reproducibility in Economics: Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may...","categories": [],
         "tags": [],
         "url": "/talks/2024-04-04-boston",
         "teaser": null
