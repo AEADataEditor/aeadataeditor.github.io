@@ -23,7 +23,70 @@ There are two main reasons why authors may want to deposit at a different reposi
   - Zenodo offers **50GB** per default, but can easily be expanded to more than **200GB** upon request. An API to download individual files is available.
   - Codeocean offers 2GB per capsule, but allows for easy in-the-cloud computing, i.e., replicators can immediately [duplicate a capsule](https://help.codeocean.com/en/articles/1217599-duplicating-a-compute-capsule?q=export) and start running it. 
 
-## Additional (generic) guidance
+
+## Title
+
+The **title** should clearly distinguish paper and replication package. 
+
+- The AEA requires "`Data and Code for: TITLE OF PAPER`" when both data and code are part of the replication package, with variants for data-only, code-only, and additional data packages ("`supplemental data`") that may be created to allow for different licensing (for instance, see [this guide on creating a separate data deposit](creating-separate-data-deposit))
+- Other repositories may offer to automatically prefix the paper title with "`Replication package for: TITLE OF PAPER`". That is acceptable, but not preferred, as it obfuscates what the deposit actually contains.
+- Simply repeating the title of the paper is not acceptable.
+- Prefixing the title of the paper with "`Data for:`" when the replication package actually contains code is not acceptable.
+- Users of the Zenodo-Github integration may want to use the [CITATION.cff] file in their Github repository, see [citation-file-format.github.io/](https://citation-file-format.github.io/), [Github documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files), and the [Citation File generator](https://citation-file-format.github.io/cff-initializer-javascript/)
+
+## README
+
+The **README** must conform to the  [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/) if the deposit is for a full replication package. If the deposit is for data-only, a simplified README is acceptable, but should 
+
+- describe salient characteristics of the data,
+- the source of the data
+- license information
+
+The README must be present in PDF format (other additional formats are acceptable). The README should be able to be viewed and/or downloaded independently from the rest of the deposit, i.e., it should not be part of a single ZIP file.
+
+> If the platform allows, select the README as the default file to display.
+
+## Summary / Abstract
+
+The summary should be short, but informative. It can include the abstract of the article itself. It should not include information on the related article (which has its own field). 
+
+## Additional fields / metadata
+
+Some repositories have the ability to provide related articles (most) or other related information. 
+
+Authors will need to return to these sites to update these fields with
+
+- the DOI of the published manuscript
+- the DOI of any related deposits 
+
+This ensures that the information is findable in both directions, not just from the article to the data and code.
+
+> NOTE: In any repository other than the AEA's openICPSR repository, this action must be undertaken by the **author**, **after** the publication of the article. It cannot be done by AEA staff.
+
+## ZIP files
+
+- if possible, expand all ZIP files, so that individual files can be downloaded, while preserving directory structure (may not be possible on all platforms)
+- under no circumstances should it be necessary to download a (possibly very large) ZIP file to read the README. The README should be available as a separate file.
+- if ZIP files must be used, the visual display of the trusted repository should allow to inspect ZIP files
+  - for instance, the filenames in a ZIP file can be viewed on Zenodo, but are not browsable on Dataverse or ICPSR.
+  - when ZIP files cannot be inspected before downloading, the deposit must be amended to "expand" the ZIP file. Exceptions to this rule should be requested from the AEA Data Editor.
+
+## Contents
+
+The **contents** of the deposit must, of course, satisfy all other requirements for AEA replication packages.
+
+### Uploading and downloading large quantities of files
+
+Some repositories allow for the upload of files via API or import from online services. This may be useful for particularly large data deposits.
+
+- Zenodo: See [documentation for the Zenodo legacy API](https://developers.zenodo.org/). An example for a simple uploader in Python is on the [AEA Github repository](https://github.com/AEADataEditor/Upload-to-Zenodo). 
+- Zenodo: The legacy API can also be used to download individual files from Zenodo. The [zenodo_get](https://pypi.org/project/zenodo-get/) ([Github source](https://github.com/dvolgyes/zenodo_get)) Python package allows to download entire packages. 
+
+>  Zenodo: The legacy API is being deprecated. Once newer guidance and tools are available, we will update this page. For now, Zenodo points to [InvenioRDM](https://inveniordm.docs.cern.ch/reference/rest_api_index/) for API guidance (2023)
+
+- Dataverse: See [documentation for Dataverse API](https://guides.dataverse.org/en/5.12/api/index.html). A R package [`dataverse-client-r`](https://github.com/IQSS/dataverse-client-r) can download individual files or complete packages. [pyDataverse](https://pydataverse.readthedocs.io/en/latest/) is Python code  to interface with Dataverses.
+
+## Additional repository-specific guidance
 
 ### Zenodo
 
@@ -60,67 +123,6 @@ You can compute the DOI in the following way:
 
 {% include deposit-doi-codeocean.html %}
 
-## Title
-
-The **title** should clearly distinguish paper and replication package. 
-
-- The AEA requires "`Data and Code for: TITLE OF PAPER`" when both data and code are part of the replication package, with variants for data-only, code-only, and additional data packages ("`supplemental data`") that may be created to allow for different licensing (for instance, see [this guide on creating a separate data deposit](creating-separate-data-deposit))
-- Other repositories may offer to automatically prefix the paper title with "`Replication package for: TITLE OF PAPER`". That is acceptable, but not preferred, as it obfuscates what the deposit actually contains.
-- Simply repeating the title of the paper is not acceptable.
-- Prefixing the title of the paper with "`Data for:`" when the replication package actually contains code is not acceptable.
-- Users of the Zenodo-Github integration may want to use the [CITATION.cff] file in their Github repository, see [citation-file-format.github.io/](https://citation-file-format.github.io/), [Github documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files), and the [Citation File generator](https://citation-file-format.github.io/cff-initializer-javascript/)
-
-## README
-
-The **README** must conform to the  [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/) if the deposit is for a full replication package. If the deposit is for data-only, a simplified README is acceptable, but should 
-
-- describe salient characteristics of the data,
-- the source of the data
-- license information
-
-The README must be present in PDF format (other additional formats are acceptable).
-
-> If the platform allows, select the README as the default file to display.
-
-## Summary / Abstract
-
-The summary should be short, but informative. It can include the abstract of the article itself. It should not include information on the related article (which has its own field). 
-
-## Additional fields / metadata
-
-Some repositories have the ability to provide related articles (most) or other related information. 
-
-Authors will need to return to these sites to update these fields with
-
-- the DOI of the published manuscript
-- the DOI of any related deposits 
-
-This ensures that the information is findable in both directions, not just from the article to the data and code.
-
-> NOTE: In any repository other than the AEA's openICPSR repository, this action must be undertaken by the **author**, **after** the publication of the article. It cannot be done by AEA staff.
-
-## ZIP files
-
-- if possible, expand all ZIP files, so that individual files can be downloaded.
-- under no circumstances should it be necessary to download a (possibly) very large ZIP file to read the README.
-- if ZIP files must be used, the visual display of the trusted repository should allow to inspect ZIP files
-  - for instance, the filenames in a ZIP file can be viewed on Zenodo, but are not browsable on Dataverse or ICPSR.
-  - when ZIP files cannot be inspected before downloading, the deposit must be amended to "expand" the ZIP file. Exceptions to this rule should be requested from the AEA Data Editor.
-
-## Contents
-
-The **contents** of the deposit must, of course, satisfy all other requirements for AEA replication packages.
-
-### Uploading and downloading large quantities of files
-
-Some repositories allow for the upload of files via API or import from online services. This may be useful for particularly large data deposits.
-
-- Zenodo: See [documentation for the Zenodo legacy API](https://developers.zenodo.org/). An example for a simple uploader in Python is on the [AEA Github repository](https://github.com/AEADataEditor/Upload-to-Zenodo). 
-- Zenodo: The legacy API can also be used to download individual files from Zenodo. The [zenodo_get](https://pypi.org/project/zenodo-get/) ([Github source](https://github.com/dvolgyes/zenodo_get)) Python package allows to download entire packages. 
-
->  Zenodo: The legacy API is being deprecated. Once newer guidance and tools are available, we will update this page. For now, Zenodo points to [InvenioRDM](https://inveniordm.docs.cern.ch/reference/rest_api_index/) for API guidance (2023)
-
-- Dataverse: See [documentation for Dataverse API](https://guides.dataverse.org/en/5.12/api/index.html). A R package [`dataverse-client-r`](https://github.com/IQSS/dataverse-client-r) can download individual files or complete packages. [pyDataverse](https://pydataverse.readthedocs.io/en/latest/) is Python code  to interface with Dataverses.
 
 ## Publishing, saving, and sharing
 
