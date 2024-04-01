@@ -53,6 +53,25 @@ The internship is remote.
 
 Training in 2024 will take place at **Wellesley College** on **April 6, 2024**. Participants should plan to arrive the day before. Training will end by 6PM at the latest, it is thus possible to leave the same evening, or the next day.
 
+### Agenda for training day
+
+| Time  |  Location: see email                           |
+|-------|-----------------------------------------------------------|
+|  8:00 | Breakfast  |
+|  9:00 |  **Introduction**      |
+| 10:00 |  **A template README, Reproducible practices**                     |
+| 11:00 | **Data provenance, data citations**  |
+| 12:00 |  Lunch Break                                               |
+| 13:00 |  **What will you be doing in the Lab**                    |
+| 14:00 |  **Command line/Git/Markdown/Version control**                    |
+| 15:00 |  **A prototypical replication report**                        |
+| 16:00 | **A walkthrough of the workflow for unpublished articles**|
+| 17:00 | **How to run Stata code** |
+| 17:30 | End   (probably earlier), walk to restaurant                      |
+| 18:00 | Restaurant |
+
+There will be various breaks throughout the day.
+
 ### Additional details on training day
 
 *1. Accommodation*
@@ -66,6 +85,46 @@ From the airport to the Verve Hotel, people can either take a cab or use the Log
 *3. Meals*
 
 We are grateful to Wellesley College for  providing  breakfast and lunch on campus on April 6 during the training, and dinner on TBD. If any participants have dietary restrictions, they should please their local organizer know.
+
+## Follow-up activities: Test cases and peer mentoring
+
+In the table below, Days 1-4 are as follows:
+
+
+- Day 1: April 8
+- Day 2: April 11
+- Day 3: April 15
+- Day 4: APril 18
+
+### Test cases
+
+Test cases are worked through, and jointly handled, including with repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
+
+- each test article should take you no more than 2-3 hours of work (decreasing as you progress)
+  - Test article 1: Data is available, Stata
+  - Test article 2: No data is available, only "dry" analysis
+  - Test article 3: Data is available, Matlab
+
+###  Live Peer group mentoring with existing replicators
+
+  - Day 1, 17:30 (second test article) (Zoom) (TBD)
+  - Day 2, 17:30 (third test article) (Zoom) (TBD)
+  - Day 3, 17:30 (general Q&A) (Zoom) (TBD)
+
+### Schedule
+
+
+| Time     | Day 1 (Zoom)                 |  Day 2 (Zoom)                    | Day 3 (Zoom)                            | Day 4 |
+|----------|-----------------------------------|---------------------------------------|----------------------------------------|----------------------------------------|
+| 8:00-9:00     | **Start on first article (Zoom)** | **Follow-up on first test article, discuss second article**   |  **Follow-up on second test article, third test article**  | **Follow-up on all test articles**<br>**Wrap-up of training, next steps** (Zoom) | 
+| (self-paced)| Work on first test article     | Work on second article                | Work on third article
+| 17:30- 18:30    | *Introduce second test article* <br>(Peer mentoring) | *Introduce third test article*<br/> (Peer mentoring) |  *General questions*<br/> (Peer mentoring)  |  |
+|          | Finish first test article           |  Finish second test article         |  Finish third test article    ||                                   
+
+
+## Start of work
+
+The actual work in the Lab will start at various dates, depending on your institution's exam schedule and other details. Contact your local coordinator for the exact start date if you are unsure.
 
 ## Questions and Answers
 
