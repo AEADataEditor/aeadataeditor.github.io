@@ -58,15 +58,15 @@ Training in 2024 will take place at **Wellesley College** on **April 6, 2024**. 
 | Time  |  Location: see email                           |
 |-------|-----------------------------------------------------------|
 |  8:00 | Breakfast  |
-|  9:00 |  **Introduction**      |
-| 10:00 |  **A template README, Reproducible practices**                     |
-| 11:00 | **Data provenance, data citations**  |
+|  9:00 |  **[Introduction](https://labordynamicsinstitute.github.io/replicability-training-presentation/#1)**      |
+| 10:00 |  **[Reproducible Practices](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1a.html#1), [Template README](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1b.html#1)**                     |
+| 11:00 | **Data provenance, [Data Citations](https://labordynamicsinstitute.github.io/replicability-training-presentation/part2.html#1)**  |
 | 12:00 |  Lunch Break                                               |
 | 13:00 |  **What will you be doing in the Lab**                    |
-| 14:00 |  **Command line/Git/Markdown/Version control**                    |
+| 14:00 |  **[Command Line/Git](https://labordynamicsinstitute.github.io/replicability-training-presentation/part4.html)**                    |
 | 15:00 |  **A prototypical replication report**                        |
-| 16:00 | **A walkthrough of the workflow for unpublished articles**|
-| 17:00 | **How to run Stata code** |
+| 16:00 | **A walkthrough of the [Workflow](https://labordynamicsinstitute.github.io/ldilab-manual/11-00-jira-workflow.html)**|
+| 17:00 | **[How to run Stata](https://labordynamicsinstitute.github.io/replicability-training-presentation/part5.html)** |
 | 17:30 | End   (probably earlier), walk to restaurant                      |
 | 18:00 | Restaurant |
 
