@@ -24,11 +24,33 @@ compatible with DCAS.
 
 Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
 
-- The AEA requires that the README follow a prescribed schema.  Please use the [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/).
+- The AEA requires that the README contain a number of information elements.  A convenient way to ensure that these elements are present is to use the [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/); however, you are free to provide this information in a format of your choice as well.
 
 ![template README](/images/template-readme-700x433.png)
 
-Follow the instructions within the template README, and provide it as part of your replication package.
+The following information is required in the README (unless a modifier indicates otherwise):
+
+- [ ] Data Availability and Provenance Statements
+  - [ ] Statement about Rights
+  - [ ] License for Data (optional, but recommended)
+  - [ ] Details on each Data Source
+- [ ] Dataset list
+- [ ] Computational requirements
+  - [ ] Software Requirements
+  - [ ] Controlled Randomness (as necessary)
+  - [ ] Memory, Runtime, and Storage Requirements
+- [ ] Description of programs/code
+  - [ ] License for Code (Optional, but recommended) 
+- [ ] Instructions to Replicators
+  - [ ] Details (as necessary)
+- [ ] List of tables and programs
+- [ ] References (Optional, but recommended) 
+
+Some more information is provided below, a full discussion is available at the [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/).
+
+The README should be in a format that is easily readable online, such as a PDF or a TXT file. You can provide a Word or LaTeX source for the README as well, but that is not required.
+
+Provide the README as part of your replication package, ideally in the root directory.
 
 ### Data Citations
 
@@ -232,7 +254,7 @@ By default, the openICPSR deposit attributes a [Creative Commons Attribution 4.0
 
 ### Re-run your replication package
 
-Ideally, once you have prepared your replication package, you should re-run the code again, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical. 
+Ideally, once you have prepared your replication package, **you should re-run the code again**, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical. 
 
 - Wherever possible, we strongly encourage running in batch (non-interactive) mode.
 
