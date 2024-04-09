@@ -257,6 +257,12 @@ var store = [{
         "url": "/posts/2024-04-09-census-packages",
         "teaser": null
       },{
+        "title": "AEJ Best Papers 2024 and replication packages",
+        "excerpt":"The annual American Economic Journal (AEJ) Best Paper Awards highlight the best paper published in each of the American Economic Journals: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics over the last three years. Nominations are provided by AEA members, and winners are selected by the journals’ Boards of Editors. More...","categories": [],
+        "tags": ["best papers","replication packages"],
+        "url": "/posts/2024-04-10-aej-best-papers-2024",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
