@@ -1,6 +1,8 @@
 ---
 title:  "AEJ Best Papers 2024 and replication packages"
 date: 2024-04-10
+classes: wide
+datatable: true
 mastodon: 
 twitter:
 bluesky:
@@ -15,33 +17,20 @@ The decision process is on the overall scientific merit. On this page, I list th
 
 <!-- more -->
 
-
-<table class="display">
-  {% for row in site.data.aej-best-papers-2024 %}
-    {% if forloop.first %}
-    <thead>
-    <tr>
-      {% for cell in row %}
-        {% if forloop.last %}
-          {% continue %}
-        {% else %}
-        <th>{{ cell[0] }}</th>
-        {% endif %}
-      {% endfor %}
-    </tr>
-    </thead>
-    {% endif %}
-
   <!-- manually constructing table -->
-  <!-- "Journal","Title","Authors","DOI","Date","Package DOI" -->
-  <tr>
-    <td> {{ row["Journal"] }} </td>
-    <td> {{ row["Title"] }} </td>
-    <td> {{ row["Authors"] }} </td>
-    <td> {{ row["Date"] }} </td>
-    <td> <a href="{{ row["DOI"] }}" alt="Link to article DOI">{{ row["DOI"] }}</a></td>
-    <td> <a href="{{ row["Package DOI"] }}" alt="Link to Replication Package">{{ row["Package DOI"]</a></td>
-  </tr>
-  {% endfor %}
-</table>
+  <!-- "Journal","Title","Authors","DOI","Date","Package DOI","Requires confidential or proprietary data","Data Editor ran","Notes" -->
+
+{% for row in site.data.aej-best-papers-2024 %}
+## {{ row["Journal"] }} 
+
+>  {{ row["Authors"] }}. "{{ row["Title"] }}" *{{ row["Journal"] }}* ({{ row["Date"] }}). [{{ row["DOI"] }}](https://doi.org/{{ row["DOI"] }}) 
+  
+- Replication package: [{{ row["Package DOI"] }}](https://doi.org/{{ row["Package DOI"] }})
+- Does the replication package require confidential or proprietary data? **{{ row["Requires confidential or proprietary data"] }}**
+- Did the Data Editor run the package? **{{ row["Data Editor ran"] }}**
+- Additional notes:    *{{ row["Notes"]}}*
+
+
+{% endfor %}
+
 
