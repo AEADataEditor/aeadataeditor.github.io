@@ -1,5 +1,5 @@
 ---
-title:  "Some remarks on coding when data are confidential"
+title:  "Examples of replication packages for research conducted in FSRDCs"
 date: 2024-04-09
 mastodon: 
 twitter:
