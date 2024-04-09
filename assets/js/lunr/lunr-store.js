@@ -671,6 +671,12 @@ var store = [{
         "url": "/talks/2024-04-04-cambridge",
         "teaser": null
       },{
+        "title": "A chat with Data Librarians and the AEA Data Editor",
+        "excerpt":"Abstract The NEEDLS group is co-led by Charissa Jefferson, Labor Economics Librarian, Princeton University Library and Whitney Kramer, ILR Research and Data Librarian at Cornell University, and is composed of data-oriented librarians around North-East universities. The Data Editor met with the group to explain the AEA Data and Code Availability...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-04-09-needls",
+        "teaser": null
+      },{
         "title": "École d’été du CIQSS en reproductibilité de la recherche (in French)",
         "excerpt":"Abstract Cette formation fournira une vue d’ensemble des enjeux en matière de reproductibilité de la recherche et proposera la marche à suivre pour réaliser un projet reproductible. (For the same workshop in English, see one week later) Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop...","categories": [],
         "tags": [],
