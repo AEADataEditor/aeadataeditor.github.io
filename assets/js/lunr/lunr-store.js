@@ -263,6 +263,12 @@ var store = [{
         "url": "/posts/2024-04-10-aej-best-papers-2024",
         "teaser": null
       },{
+        "title": "Random notes from the AMAs",
+        "excerpt":"In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used. AEA Data and Code Availability Policy https://www.aeaweb.org/journals/data/data-code-policy, and if revising a package, https://www.aeaweb.org/journals/data/revisions-policy Restricted data To access restricted data, the author and Editor...","categories": [],
+        "tags": ["data editor tips","replication packages"],
+        "url": "/posts/2024-04-11-random-notes-ama",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
