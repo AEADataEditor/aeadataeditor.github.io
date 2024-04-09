@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-04-08T10:10:28-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">NDAs, NDAs, and NDAs: How to describe access to data that cannot be published</title><link href="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux" rel="alternate" type="text/html" title="NDAs, NDAs, and NDAs: How to describe access to data that cannot be published" /><published>2024-03-15T00:00:00-04:00</published><updated>2024-03-15T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/nda-redux</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux"><![CDATA[<p>I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access description when data were obtained via a non-disclosure agreement (NDA):</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-04-09T10:30:52-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Some remarks on coding when data are confidential</title><link href="https://aeadataeditor.github.io/posts/2024-04-09-census-packages" rel="alternate" type="text/html" title="Some remarks on coding when data are confidential" /><published>2024-04-09T00:00:00-04:00</published><updated>2024-04-09T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/census-packages</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-09-census-packages"><![CDATA[<p>I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.</p>
+
+<!-- more -->
+
+<h2 id="the-problem">The problem</h2>
+
+<p>The data, and sometimes (only sometimes) pieces of code, are confidential. If this is something you encounter, read on.</p>
+
+<h2 id="this-is-not-new">This is not new</h2>
+
+<p>See my <a href="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential">earlier post almost exactly two years ago</a> and this <a href="https://larsvilhuber.github.io/reproducibility-confidential-fsrdc/">2022 tutorial</a> that I developed from that.</p>
+
+<h2 id="general-guidance">General Guidance</h2>
+
+<ul>
+  <li>https://social-science-data-editors.github.io/guidance/DCAS_Restricted_data.html#us-census-bureau-and-fsrdc</li>
+  <li>https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#self-generated-repositories</li>
+</ul>
+
+<h2 id="examples">Examples!</h2>
+
+<p>Two excellent examples:</p>
+
+<h3 id="example-1-berger-herkenhoof-and-mongey-2022">Example 1: Berger, Herkenhoof, and Mongey (2022)</h3>
+
+<blockquote>
+  <p>Berger, David, Herkenhoff, Kyle, and Mongey, Simon. Data and Code for: Labor Market Power. Nashville, TN: American Economic Association [publisher], 2022. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2022-12-07. <a href="https://doi.org/10.3886/E154241V2">https://doi.org/10.3886/E154241V2</a></p>
+</blockquote>
+
+<p>Not only code, but faces the problem that IRS data cannot have variables revealed. Workarounds galore.</p>
+
+<h3 id="example-2-yeh-macoluso-and-hershbein-2022">Example 2: Yeh, Macoluso, and Hershbein (2022)</h3>
+
+<blockquote>
+  <p>Yeh, Chen, Macaluso, Claudia, and Hershbein, Brad. Code for: “Monopsony in the U.S. Labor Market.” Nashville, TN: American Economic Association [publisher], 2022. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2022-11-28. https://doi.org/10.3886/E162581V1</p>
+</blockquote>
+
+<h3 id="example-3-fort-2017">Example 3: Fort (2017)</h3>
+
+<p>This replication package is a bit older, but is an excellent example that I have repurposed as guidance for others:</p>
+
+<blockquote>
+  <p>Teresa C. Fort, Technology and Production Fragmentation: Domestic versus Foreign Sourcing, The Review of Economic Studies, Volume 84, Issue 2, April 2017, Pages 650–687, <a href="https://doi.org/10.1093/restud/rdw057">https://doi.org/10.1093/restud/rdw057</a></p>
+</blockquote>
+
+<p>and the <a href="https://social-science-data-editors.github.io/guidance/copies/Fort2016-Readme.pdf">copy of the README</a>.</p>
+
+<p>Note that this package was created before the installation of the current generation of data editors, so relied on none of that (official) expertise!</p>
+
+<p>Many more out there.</p>
+
+<h2 id="ask-the-research-data-center">Ask the research data center</h2>
+
+<p>The US Census Bureau has procedures in place to review code (it’s actually part of the release system), as do many other systems. Some parts of the code will need to be redacted, but you can get very functional code released (see the <a href="https://larsvilhuber.github.io/reproducibility-confidential-fsrdc/">2022 tutorial</a> on how to set this up from the start).</p>
+
+<h2 id="but-dont-take-no-for-an-answer">But: Don’t take “No” for an answer!</h2>
+
+<p>There are sometimes some old practices in place in restricted-access environments that do not have 100s of researchers flowing through (for instance, smaller countries, places with newer centers, etc.). Sometimes, you need to push back. You can rely on the Data Editors - me, others - to help you do that. I have successfully educated data custodians, who justifiably fear releasing too much confidential data, on what can be done reliably and robustly, at least with code.</p>
+
+<h2 id="dotting-the-is-and-crossing-the-ts">Dotting the i’s and crossing the t’s</h2>
+
+<p>We usually require that an <strong>internal</strong> archive be created at the institution holding the data, so that regardless of how much or how little is released, internally, a fully reproducible archive exists, accessible for those with permission to access. The permissions necessary , and permission granted in the replication package so that others, with appropriate access, can access those files. See the first example above for an excellent example of that, and <a href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#self-generated-repositories">this guidance</a> on how to do so in the absence of a formal internal archive.</p>]]></content><author><name>AEA Data Editor</name></author><category term="confidential data" /><category term="complex projects" /><summary type="html"><![CDATA[I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.]]></summary></entry><entry><title type="html">NDAs, NDAs, and NDAs: How to describe access to data that cannot be published</title><link href="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux" rel="alternate" type="text/html" title="NDAs, NDAs, and NDAs: How to describe access to data that cannot be published" /><published>2024-03-15T00:00:00-04:00</published><updated>2024-03-15T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/nda-redux</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-03-15-nda-redux"><![CDATA[<p>I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access description when data were obtained via a non-disclosure agreement (NDA):</p>
 
 <blockquote>
   <p>[…] the data are from a commercial company under a non-disclosure agreement […] asked to include “data sharing plans (for all data, documentation, and code used in analysis)”. […] Can you think of any example language that the researcher could borrow from to include in the data sharing plan?</p>
@@ -846,99 +907,4 @@ The data editors of the journals of the <a href="https://www.aeaweb.org/journals
       <p>The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. <a href="#fnref:res" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><category term="dcas" /><summary type="html"><![CDATA[The data editors of the journals of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy. The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. &#8617; The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. &#8617;]]></summary></entry><entry><title type="html">What is this LICENSE thing</title><link href="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use" rel="alternate" type="text/html" title="What is this LICENSE thing" /><published>2022-11-16T00:00:00-05:00</published><updated>2022-11-16T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/where-are-the-terms-of-use</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2022-11-16-where-are-the-terms-of-use"><![CDATA[<p>The <a href="https://social-science-data-editors.github.io/template_README/">template README</a> required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “<em>But the data is publicly available.</em>” Let me try to disentangle that somewhat.</p>
-
-<!-- more -->
-
-<h2 id="the-statement-about-rights">The statement about rights</h2>
-
-<p>The statement says</p>
-
-<blockquote>
-  <p>I certify that the author(s) of the manuscript have documented 
-permission to redistribute/publish the data contained within this 
-replication package. Appropriate permission are documented in the 
-LICENSE.txt file.</p>
-</blockquote>
-
-<p>Two questions arise: what does this mean, and what is an author supposed to do with the LICENSE.txt file? And then of course, how to cite it all.</p>
-
-<h3 id="questions-and-some-answers">Questions and some answers</h3>
-
-<p>Here are a few questions that arise</p>
-
-<blockquote>
-  <p>Do you require licensing information for all the data that we are using, or just the specific data that is provided in the replication package?</p>
-</blockquote>
-
-<p>Many econ papers use data from multiple sources, including data that are clearly confidential. Some data sources are not confidential, but are subject to copyright or licensing agreements. The replication package should ONLY contain data that can be redistributed, and the statement ONLY pertains to such data. It does not pertain to data not included within the replication package.</p>
-
-<p>Of course, a good chunk of the README is spent describing ALL the data sources, including the confidential ones, the non-confidential ones that are copyrighted, the non-confidential ones that are proprietary, or otherwise subject to redistribution restrictions. ALL data provenance must be described, sufficient for a replicator to start from scratch, ignoring even the data provided within the replication package. That description should contain the licensing information for every dataset as well, at least in summary. It should list pertinent conditions and restrictions, for instance: application process, required residency or citizenship, etc. The LICENSE.txt is more likely to contain a long text in legalese, the formal permission to use the data that is in fact <em>included</em> in the package.</p>
-
-<blockquote>
-  <p>Why can’t I redistribute this data, since it is publicly available?</p>
-</blockquote>
-
-<p>I’ll take the IPUMS CPS and the S&amp;P 500 as an example.</p>
-
-<p>“Publicly available” does not mean that you have the rights to distribute. For instance, you can use the <a href="https://fred.stlouisfed.org/series/SP500">S&amp;P 500 data distributed by FRED</a>, but you are not allowed to re-distribute that data, as noted on the page there. You would describe that in the README, but the license would not be in the LICENSE.txt, because you are not, in fact, including the data!</p>
-
-<p>Turning to the CPS: When CPS data is pulled directly from the <a href="https://www.census.gov/programs-surveys/cps.html">US Census Bureau website</a>, it is in the “public domain,” i.e., not subject to copyright (Note that this is not clear from the Census Bureau’s website, which simply assumes that you know that! Check the <a href="https://www.usa.gov/government-works">USA.gov</a> website for an explanation.)</p>
-
-<p>But when you obtain it through other sources (<a href="https://ceprdata.org/">CEPR</a>, <a href="https://www.epi.org/data/">EPI</a>, <a href="https://www.ipums.org/projects/ipums-cps">IPUMS</a>), you have to read the terms of use, since by re-packaging the data, the <strong>files</strong> containing the data​ are subject to copyright by the redistributor… .</p>
-
-<p>If you are using the IPUMS data, the terms of use describe what you can do with the data: <a href="https://www.ipums.org/about/terms">https://www.ipums.org/about/terms</a>. As it turns out, you can​ redistribute an extract from their database, and that​ is what you should list in the LICENSE.txt.</p>
-
-<p>Note that other licenses are “sticky” - if you obtain data that is under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> (Creative Commons) license, then you can do with the data what you want - but you must include the CC-BY license and the original source attribution. In essence, that part of your data is also under a CC-BY license.</p>
-
-<blockquote>
-  <p>What goes into the LICENSE.txt?</p>
-</blockquote>
-
-<p><img src="/images/openicpsr-license.png" alt="LICENSE txt image" /></p>
-
-<p>This is straightforward if you have a single source. It should state the permissions and conditions that are attached to that file. If the data you obtained has a LICENSE.txt (some do), then simply include that with your deposit. Licenses can be long - they are written in legalese, because they are, in fact, legal permission to do something with the data.</p>
-
-<p>If you created or collected the primary data yourself, you define the LICENSE. By default, deposits on openICPSR have a CC-BY license. We have a small discussion of how to choose licenses at the <a href="https://aeadataeditor.github.io/aea-de-guidance/Licensing_guidance">AEA Data Editor’s website</a> and the <a href="https://social-science-data-editors.github.io/guidance/Licensing_guidance.html">Social Science Data Editors’ website</a>.</p>
-
-<p>If you have multiple data sources, it becomes a bit more complicated. The LICENSE.txt can be a simple collation of the various terms of use/ licenses/etc. So you could have:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>For IPUMS CPS files, IPUMS' Standard Redistribution Terms 
-apply (https://www.ipums.org/about/terms#redistribution)
-
-    You will not redistribute the data without permission. You may 
-    publish a subset of the data to meet journal requirements for 
-    accessing data related to a particular publication. Contact us for
-    permission for any other redistribution; we will consider requests
-    for free and commercial redistribution. 
-
-Applies to: AHTUS, ATUS, CPS, GeoMarker, HigherEd, IHGIS, MEPS, MTUS, NHGIS, NHIS
-
-For UNCTAD TRAINS data:
-
-The TRAINS Terms of Use at https://trainsonline.unctad.org/disclaimer state that users
-
-   are not allowed to disseminate the data or parts of the 
-   database in other dissemination tools unless written 
-   permission is given by the Chief of UNCTAD's Trade 
-   Information Section, Trade Analysis Branch, Division on 
-   International Goods and Commodities. 
-
-We have obtained such permission via email correspondence on 16 November 2022. 
-</code></pre></div></div>
-
-<blockquote>
-  <p>OK, so how do I cite the data?</p>
-</blockquote>
-
-<p>Thank you for that question, since most researchers in economics do NOT cite the data. See this <a href="https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html">extensive discussion</a> over on the Social Science Data Editor website, consult the <a href="https://www.aeaweb.org/journals/policies/sample-references">AEA Style Reference</a>, and remember that not all data distributors provide suggested citations that satisfy the <a href="https://force11.org/info/joint-declaration-of-data-citation-principles-final/">Data Citation Principles</a>. If they ask you to cite a working paper, do so, but <strong>also</strong> cite the data correctly.</p>
-
-<blockquote>
-  <p>Most of this data was collected in 2016, but the <a href="https://www.ahtusdata.org/ahtus/citation.shtml">IPUMS AHTUS data citation page</a> only lists the 2018 version. I am unable to find a historic example of this specific citation.</p>
-</blockquote>
-
-<p>IPUMS doesn’t make it easy, I know.  There is a not-so-obvious list of versions of the data at this URL: <a href="https://www.ipums.org/projects/ipums-time-use">https://www.ipums.org/projects/ipums-time-use</a>. The <a href="https://www.ahtusdata.org/ahtus-action/revisions">IPUMS Time Use Revision history page</a> does NOT list the DOIs for the various version. So as far as I can deduce from that, you would have used V1.0 of the AHTUS data, which has DOI <strong>10.18128/D061.V1.0</strong>. You can use <a href="https://citation.crosscite.org/">https://citation.crosscite.org/</a>, or simply adapt their suggested citation accordingly.</p>
-
-<p>Data providers have not all adapted to a world where data citations are ubiquitious, or should be. Sometimes it takes a little extra work.</p>
-
-<p>Note that data citations should appear both in the manuscript (upon first mention of the data) and in the README (properly formatted as in the manuscript).</p>]]></content><author><name>AEA Data Editor</name></author><category term="license" /><category term="terms of use" /><category term="copyright" /><category term="reproducibility" /><category term="provenance" /><summary type="html"><![CDATA[The template README required by various econ journals asks for a statement about the rights to RE-distribute data. Many economists are confused by this: “But the data is publicly available.” Let me try to disentangle that somewhat.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="standards" /><category term="reproducibility" /><category term="provenance" /><category term="dcas" /><summary type="html"><![CDATA[The data editors of the journals of the American Economic Association1, of the Royal Economic Society2, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have joined forces to proudly launch DCAS, the Data and Code Availability Standard. This set of rules regarding what constitutes an appropriate data and code replication package will help authors comply with journals’ data and code availability policies. DCAS provides a standard, meant to make compliance easier by setting common requirements across all participating journals, and to help journals create and align their data and code availability policy. The journals of the American Economic Association are the American Economic Review, AER: Insights, and the American Economic Journal: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics. &#8617; The journals of the Royal Economic Society are the Econometrics Journal and the Economic Journal. &#8617;]]></summary></entry></feed>

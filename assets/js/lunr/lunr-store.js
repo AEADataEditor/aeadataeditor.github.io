@@ -251,6 +251,12 @@ var store = [{
         "url": "/posts/2024-03-15-nda-redux",
         "teaser": null
       },{
+        "title": "Some remarks on coding when data are confidential",
+        "excerpt":"I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance. The problem The data, and sometimes (only sometimes) pieces of code, are confidential. If...","categories": [],
+        "tags": ["confidential data","complex projects"],
+        "url": "/posts/2024-04-09-census-packages",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

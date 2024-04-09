@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Reproducible GIS - Office of the AEA Data Editor</title>
-<meta name="description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+<!-- begin _includes/seo.html --><title>Some remarks on coding when data are confidential - Office of the AEA Data Editor</title>
+<meta name="description" content="I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.">
 
 
   <meta name="author" content="AEA Data Editor">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Office of the AEA Data Editor">
-<meta property="og:title" content="Reproducible GIS">
-<meta property="og:url" content="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+<meta property="og:title" content="Some remarks on coding when data are confidential">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2024-04-09-census-packages">
 
 
-  <meta property="og:description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
+  <meta property="og:description" content="I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.">
 
 
 
@@ -32,9 +32,9 @@
 
 
   <meta name="twitter:site" content="@AEAData">
-  <meta name="twitter:title" content="Reproducible GIS">
-  <meta name="twitter:description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
-  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+  <meta name="twitter:title" content="Some remarks on coding when data are confidential">
+  <meta name="twitter:description" content="I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2024-04-09-census-packages">
 
   
     <meta name="twitter:card" content="summary">
@@ -49,14 +49,14 @@
 
 
 
-  <meta property="article:published_time" content="2021-02-10T00:00:00-05:00">
+  <meta property="article:published_time" content="2024-04-09T00:00:00-04:00">
 
 
 
 
 
 
-<link rel="canonical" href="https://aeadataeditor.github.io/posts/2021-02-10-reproducible-gis">
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2024-04-09-census-packages">
 
 
 
@@ -290,30 +290,31 @@
 
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Reproducible GIS">
-    <meta itemprop="description" content="A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.">
-    <meta itemprop="datePublished" content="February 10, 2021">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Some remarks on coding when data are confidential">
+    <meta itemprop="description" content="I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.">
+    <meta itemprop="datePublished" content="2024-04-09T00:00:00-04:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Reproducible GIS
+          <h1 class="page__title" itemprop="headline">Some remarks on coding when data are confidential
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
 
   
-	  1 minute read
+	  3 minute read
 	
 </p>
           
         
         
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2021-02-10T00:00:00-05:00">February 10, 2021</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-04-09T00:00:00-04:00">April 09, 2024</time></p>
+        
         
         
              
@@ -323,75 +324,72 @@
       
 
       <section class="page__content" itemprop="text">
-        <div>
-          On this page:
-          <ul class="inline_toc" id="my_toc"><li><a href="#reproducibility-and-gis">Reproducibility and GIS</a></li><li><a href="#checklist-for-reproducible-maps">Checklist for reproducible maps</a></li><li><a href="#resources">Resources</a><ul><li><a href="#stata">Stata</a></li><li><a href="#r">R</a></li><li><a href="#python">Python</a></li><li><a href="#arcgis">ArcGIS</a></li><li><a href="#qgis">QGIS</a></li></ul></li><li><a href="#summary">Summary</a></li><li><a href="#ps">PS</a></li><li><a href="#follow-the-conversation">Follow the conversation</a></li></ul>
+       
+        
 
-        </div>
-        <p>A note on reproducible GIS by economists: it’s mostly absent. Here are some tips.</p>
+      
+        <p>I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance.</p>
 
 <!-- more -->
 
-<h2 id="reproducibility-and-gis">Reproducibility and GIS</h2>
+<h2 id="the-problem">The problem</h2>
 
-<p>Reproducibility means that the inputs and methods can be repeated by a (somewhat) knowledgeable person. For GIS, that <em>might</em> (should) mean code, but it <em>definitely</em> means at least SOME instructions. Even if they are manual….</p>
+<p>The data, and sometimes (only sometimes) pieces of code, are confidential. If this is something you encounter, read on.</p>
 
-<p>Maps are data. While your typical Stata/Matlab/R/Julia graph is data projected into Cartesian coordinates, maps are data projected into geographic coordinates. So at a minimum, we need to know what the inputs to the map are, same as we need to know inputs to graphs.</p>
+<h2 id="this-is-not-new">This is not new</h2>
 
-<p>So “data + code” + “<code class="language-plaintext highlighter-rouge">graph twoway scatter x y</code>” -&gt; 📈📉,</p>
+<p>See my <a href="https://aeadataeditor.github.io/posts/2022-04-13-coding-confidential">earlier post almost exactly two years ago</a> and this <a href="https://larsvilhuber.github.io/reproducibility-confidential-fsrdc/">2022 tutorial</a> that I developed from that.</p>
 
-<p><img src="https://pbs.twimg.com/media/Et31MkpXcAQg8Nw.png" alt="" /></p>
-
-<p>and “data + code” + “<code class="language-plaintext highlighter-rouge">maptile x, geo(state)</code>” -&gt; 🗺️. Or “data + code” + “<em>instructions(ArcGIS)</em>” -&gt; 🗺️.</p>
-
-<p><img src="https://pbs.twimg.com/media/Et3048TXcAIx20f.png" alt="" /></p>
-
-<p>Note that for a map, “data” includes shapefiles (including provenance of the shapefile)</p>
-
-<h2 id="checklist-for-reproducible-maps">Checklist for reproducible maps</h2>
+<h2 id="general-guidance">General Guidance</h2>
 
 <ul>
-  <li>✅ data (+ provenance)</li>
-  <li>✅ code (manipulates data)</li>
-  <li>✅ shapefile (provides coordinates)</li>
-  <li>✅ code (preferred) or instructions (sufficient)</li>
+  <li>https://social-science-data-editors.github.io/guidance/DCAS_Restricted_data.html#us-census-bureau-and-fsrdc</li>
+  <li>https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#self-generated-repositories</li>
 </ul>
 
-<h2 id="resources">Resources</h2>
+<h2 id="examples">Examples!</h2>
 
-<p>A few tentative resources are collected at <a href="https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html">https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html</a> (please suggest improvements!), with some other links below:</p>
+<p>Two excellent examples:</p>
 
-<h3 id="stata">Stata</h3>
+<h3 id="example-1-berger-herkenhoof-and-mongey-2022">Example 1: Berger, Herkenhoof, and Mongey (2022)</h3>
 
-<p><a href="https://www.stata.com/support/faqs/graphics/spmap-and-maps/">Stata FAQ on maps</a>, including the <a href="https://ideas.repec.org/c/boc/bocode/s456812.html">spmap package</a> and the <a href="https://michaelstepner.com/maptile/">maptile package</a> by <a href="https://twitter.com/michaelstepner">@michaelstepner</a></p>
+<blockquote>
+  <p>Berger, David, Herkenhoff, Kyle, and Mongey, Simon. Data and Code for: Labor Market Power. Nashville, TN: American Economic Association [publisher], 2022. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2022-12-07. <a href="https://doi.org/10.3886/E154241V2">https://doi.org/10.3886/E154241V2</a></p>
+</blockquote>
 
-<h3 id="r">R</h3>
+<p>Not only code, but faces the problem that IRS data cannot have variables revealed. Workarounds galore.</p>
 
-<p>The core <a href="https://r-spatial.github.io/sf/">sf library</a>, <a href="https://staff.washington.edu/phurvitz/r_gis/">reproducible GIS practices in R</a>  and interactions with GIS software (and integrated as a dependency into many great packages)</p>
-<h3 id="python">Python</h3>
+<h3 id="example-2-yeh-macoluso-and-hershbein-2022">Example 2: Yeh, Macoluso, and Hershbein (2022)</h3>
 
-<p><a href="https://geopandas.org/">GeoPandas</a> and others</p>
+<blockquote>
+  <p>Yeh, Chen, Macaluso, Claudia, and Hershbein, Brad. Code for: “Monopsony in the U.S. Labor Market.” Nashville, TN: American Economic Association [publisher], 2022. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2022-11-28. https://doi.org/10.3886/E162581V1</p>
+</blockquote>
 
-<h3 id="arcgis">ArcGIS</h3>
+<h3 id="example-3-fort-2017">Example 3: Fort (2017)</h3>
 
-<p>ArcGIS can also be scripted (via python) and now <a href="https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/pro-notebooks.htm">integrates Jupyter-like notebooks</a></p>
+<p>This replication package is a bit older, but is an excellent example that I have repurposed as guidance for others:</p>
 
-<h3 id="qgis">QGIS</h3>
+<blockquote>
+  <p>Teresa C. Fort, Technology and Production Fragmentation: Domestic versus Foreign Sourcing, The Review of Economic Studies, Volume 84, Issue 2, April 2017, Pages 650–687, <a href="https://doi.org/10.1093/restud/rdw057">https://doi.org/10.1093/restud/rdw057</a></p>
+</blockquote>
 
-<p>Staying #opensource: <a href="https://www.qgis.org/">QGIS</a> has “<a href="https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html">Graphical Modeler</a>”, and look for tutorials on “<a href="https://courses.spatialthoughts.com/">Automating GIS Workflows</a>”</p>
+<p>and the <a href="https://social-science-data-editors.github.io/guidance/copies/Fort2016-Readme.pdf">copy of the README</a>.</p>
 
-<h2 id="summary">Summary</h2>
+<p>Note that this package was created before the installation of the current generation of data editors, so relied on none of that (official) expertise!</p>
 
-<p>Please try to create scripted maps, but always describe what data you are mapping, and where you got the shapefiles from (note: copyrights might apply, permissions might need to be obtained!)</p>
+<p>Many more out there.</p>
 
-<h2 id="ps">PS</h2>
+<h2 id="ask-the-research-data-center">Ask the research data center</h2>
 
-<p>And for those exceptions from scripting: a 2-3 sentence description of what you did would be sufficient. And for the unscripted ArcGIS which you did before you learned how to script stuff: a 4-5 sentence description may be sufficient as well.</p>
+<p>The US Census Bureau has procedures in place to review code (it’s actually part of the release system), as do many other systems. Some parts of the code will need to be redacted, but you can get very functional code released (see the <a href="https://larsvilhuber.github.io/reproducibility-confidential-fsrdc/">2022 tutorial</a> on how to set this up from the start).</p>
 
-<h2 id="follow-the-conversation">Follow the conversation</h2>
+<h2 id="but-dont-take-no-for-an-answer">But: Don’t take “No” for an answer!</h2>
 
-<p>Slightly modified from
-<a href="https://twitter.com/AeaData/status/1359516297990701057">https://twitter.com/AeaData/status/1359516297990701057</a></p>
+<p>There are sometimes some old practices in place in restricted-access environments that do not have 100s of researchers flowing through (for instance, smaller countries, places with newer centers, etc.). Sometimes, you need to push back. You can rely on the Data Editors - me, others - to help you do that. I have successfully educated data custodians, who justifiably fear releasing too much confidential data, on what can be done reliably and robustly, at least with code.</p>
+
+<h2 id="dotting-the-is-and-crossing-the-ts">Dotting the i’s and crossing the t’s</h2>
+
+<p>We usually require that an <strong>internal</strong> archive be created at the institution holding the data, so that regardless of how much or how little is released, internally, a fully reproducible archive exists, accessible for those with permission to access. The permissions necessary , and permission granted in the replication package so that others, with appropriate access, can access those files. See the first example above for an excellent example of that, and <a href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#self-generated-repositories">this guidance</a> on how to do so in the absence of a formal internal archive.</p>
 
         
       </section>
@@ -408,16 +406,18 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#faq" class="page__taxonomy-item" rel="tag">FAQ</a><span class="sep">, </span>
+      <a href="/tags/#complex-projects" class="page__taxonomy-item" rel="tag">complex projects</a><span class="sep">, </span>
     
-      <a href="/tags/#gis" class="page__taxonomy-item" rel="tag">GIS</a><span class="sep">, </span>
-    
-      <a href="/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a>
+      <a href="/tags/#confidential-data" class="page__taxonomy-item" rel="tag">confidential data</a>
     
     </span>
   </p>
 
 
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2024-04-09T00:00:00-04:00">April 9, 2024</time></p>
 
 
       </footer>
@@ -427,24 +427,13 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Reproducible+GIS%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-02-10-reproducible-gis" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Some+remarks+on+coding+when+data+are+confidential%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-04-09-census-packages" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2021-02-10-reproducible-gis" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-04-09-census-packages" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
-  <nav class="pagination">
-    
-      <a href="/posts/2021-01-31-day-in-the-life" class="pagination--pager" title="A Day in the Life of a Data Editor
-">Previous</a>
-    
-    
-      <a href="/posts/2021-03-31-what-data" class="pagination--pager" title="What data to provide
-">Next</a>
-    
-  </nav>
-
     </div>
 
     
@@ -453,49 +442,8 @@
   
   
     <div class="page__related">
-      
-        <h4 class="page__related-title">You May Also Enjoy</h4>
-      
+      <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/posts/2024-04-09-census-packages" rel="permalink">Some remarks on coding when data are confidential
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Res...</p>
-  </article>
-</div>
-
         
           
 
@@ -621,8 +569,48 @@ The AEA uses the openICPSR repository for the deposit and dissemination of repli
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2023-08-20-examples-of-updates" rel="permalink">Details on how to update a replication package post-publication
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual...</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
+  
   
 </div>
 
@@ -633,7 +621,7 @@ The AEA uses the openICPSR repository for the deposit and dissemination of repli
 <div class="page__footer-follow page__footer-custom">
     <ul class="social-icons">
       <li><strong>Suggestions and comments:</strong></li>
-             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2021-02-10-reproducible-gis.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2024-04-09-census-packages.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
              <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
               <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
              <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
