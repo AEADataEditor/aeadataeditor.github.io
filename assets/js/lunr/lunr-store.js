@@ -251,7 +251,7 @@ var store = [{
         "url": "/posts/2024-03-15-nda-redux",
         "teaser": null
       },{
-        "title": "Some remarks on coding when data are confidential",
+        "title": "Examples of replication packages for research conducted in FSRDCs",
         "excerpt":"I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the Federal Statistical Research Data Centers (FSRDCs) and others. Here are some examples and guidance. The problem The data, and sometimes (only sometimes) pieces of code, are confidential. If...","categories": [],
         "tags": ["confidential data","complex projects"],
         "url": "/posts/2024-04-09-census-packages",
