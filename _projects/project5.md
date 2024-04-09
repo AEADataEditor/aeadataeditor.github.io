@@ -88,13 +88,6 @@ We are grateful to Wellesley College for  providing  breakfast and lunch on camp
 
 ## Follow-up activities: Test cases and peer mentoring
 
-In the table below, Days 1-4 are as follows:
-
-
-- Day 1: April 8
-- Day 2: April 11
-- Day 3: April 15
-- Day 4: APril 18
 
 ### Test cases
 
@@ -107,19 +100,19 @@ Test cases are worked through, and jointly handled, including with repeated peer
 
 ###  Live Peer group mentoring with existing replicators
 
-  - Day 1, 17:30 (second test article) (Zoom) (TBD)
-  - Day 2, 17:30 (third test article) (Zoom) (TBD)
-  - Day 3, 17:30 (general Q&A) (Zoom) (TBD)
+(all sessions on Zoom, see calendar invite for details)
 
-### Schedule
+April 10 @ 6PM Stata : Kareena, Gary
+April 15 @ 6PM Confidential data : Ilona, Bianca
+April 17 @ 6PM Matlab : Jessica, Gary
 
+### Follow-up meetings:
 
-| Time     | Day 1 (Zoom)                 |  Day 2 (Zoom)                    | Day 3 (Zoom)                            | Day 4 |
-|----------|-----------------------------------|---------------------------------------|----------------------------------------|----------------------------------------|
-| 8:00-9:00     | **Start on first article (Zoom)** | **Follow-up on first test article, discuss second article**   |  **Follow-up on second test article, third test article**  | **Follow-up on all test articles**<br>**Wrap-up of training, next steps** (Zoom) | 
-| (self-paced)| Work on first test article     | Work on second article                | Work on third article
-| 17:30- 18:30    | *Introduce second test article* <br>(Peer mentoring) | *Introduce third test article*<br/> (Peer mentoring) |  *General questions*<br/> (Peer mentoring)  |  |
-|          | Finish first test article           |  Finish second test article         |  Finish third test article    ||                                   
+Meetings with Lars, which is both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions.
+
+April 12 @ 10 AM
+April 16 @ 10 AM
+April 19 @ 10 AM
 
 
 ## Start of work
