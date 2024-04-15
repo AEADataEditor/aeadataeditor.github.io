@@ -659,6 +659,12 @@ var store = [{
         "url": "/talks/2024-03-22-chicago",
         "teaser": null
       },{
+        "title": "Don't Worry, Be (Reproducibly) Happy! Reproducibility from Day 1 and Day X",
+        "excerpt":"Joint with Marie Connolly (UQAM and CEA Data Editor) and Sofia Encarnación (Cornell University, Assistant Data Editor, AEA)   Abstract   A brief overview of reproducible practices from Day 1 to the submission, by experienced data editors.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2024-03-23-mea-chicago",
+        "teaser": null
+      },{
         "title": "Reproducibility in Economics: Open Q&A with the American Economic Association's Data Editor",
         "excerpt":"Time 2:00pm - 3:30pm Room Wheelock 423 Abstract Reproducibility in Economics: Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may...","categories": [],
         "tags": [],
