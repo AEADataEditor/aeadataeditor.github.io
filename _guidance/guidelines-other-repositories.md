@@ -142,16 +142,9 @@ Here are some guidelines on how to do that update:
 
 ### Adding manuscript DOI to CodeOcean capsule
 
-Authors will need to edit the metadata:
+Authors will need to email Codeocean support, providing them with the capsule number and the DOI to be linked from the capsule. Support will update the capsule metadata. 
 
-- Log in to CodeOcean
-- Navigate to the "Metadata" tab. 
-- You may have to click "Start editing" at the top of the middle window.
-- Add the DOI (it is usually recorded as "to be published").
-- If all rules above were followed, no other changes are necessary. 
-- Then "Submit for publication"
-
-CodeOcean will then verify the deposit again. Normally, this should not generate a new version (`V2`), but rather, a `V1.1`. The DOI of the deposit should not change. 
+Normally, this should not generate a new version (`V2`), but rather, a `V1.1`. The DOI of the deposit should not change. 
 
 ![Updated CodeOcean after adding manuscript DOI](/images/codeocean-update-link-doi.png)
 
