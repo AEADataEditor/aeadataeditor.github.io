@@ -1,5 +1,5 @@
 ---
-title: Internship with the AEA Data Editor
+title: Internship with the AEA Data Editor Summer 2024
 collection: projects
 type: "projects"
 date: 2024-02-01
@@ -8,7 +8,7 @@ toc: true
 
 The AEA Data Editor is happy to announce a pilot project for an **internship with the AEA Data Editor.** The collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and  University of Colorado Boulder**. 
 
-> NOTE: Interns cannot apply independently at this time. If you are a student at one of the above institutions, please contact the local organizer. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2025.
+> NOTE: Interns cannot apply independently at this time. Applications for 2024 are closed. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2025.
 
 The internship will be a 10-12 week, part-time (20 hours per week) *paid* position. 
 
