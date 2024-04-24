@@ -293,8 +293,8 @@ var store = [{
         "url": "/projects/project4",
         "teaser": null
       },{
-        "title": "Internship with the AEA Data Editor",
-        "excerpt":"The AEA Data Editor is happy to announce a pilot project for an internship with the AEA Data Editor. The collaborating institutions are Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and University of Colorado Boulder. NOTE: Interns cannot apply independently at this time. If...","categories": [],
+        "title": "Internship with the AEA Data Editor Summer 2024",
+        "excerpt":"The AEA Data Editor is happy to announce a pilot project for an internship with the AEA Data Editor. The collaborating institutions are Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and University of Colorado Boulder. NOTE: Interns cannot apply independently at this time. Applications...","categories": [],
         "tags": [],
         "url": "/projects/project5",
         "teaser": null
