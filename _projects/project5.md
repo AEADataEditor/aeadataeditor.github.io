@@ -102,17 +102,17 @@ Test cases are worked through, and jointly handled, including with repeated peer
 
 (all sessions on Zoom, see calendar invite for details)
 
-April 10 @ 6PM Stata : Kareena, Gary
-April 15 @ 6PM Confidential data : Ilona, Bianca
-April 17 @ 6PM Matlab : Jessica, Gary
+- April 10 @ 6PM Stata : Kareena, Gary
+- April 15 @ 6PM Confidential data : Ilona, Bianca
+- April 17 @ 6PM Matlab : Jessica, Gary
 
 ### Follow-up meetings:
 
 Meetings with Lars, which is both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions.
 
-April 12 @ 10 AM
-April 16 @ 10 AM
-April 19 @ 10 AM
+- April 12 @ 10 AM
+- April 16 @ 10 AM
+- April 19 @ 10 AM (POSTPONED)
 
 
 ## Start of work
