@@ -696,7 +696,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Training on reproducible methods in empirical economics",
-        "excerpt":"Preliminary! The session still needs to be confirmed. Details to follow. Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day...","categories": [],
+        "excerpt":"Preliminary! The session still needs to be confirmed. Details to follow. Abstract Session 1: “Reproducibility from Day 1” [May 31] Link to session Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following...","categories": [],
         "tags": [],
         "url": "/talks/2024-05-30-cea",
         "teaser": null
