@@ -1,4 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-04-27T12:07:17-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Random notes from the AMAs</title><link href="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama" rel="alternate" type="text/html" title="Random notes from the AMAs" /><published>2024-04-11T00:00:00-04:00</published><updated>2024-04-11T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/random-notes-ama</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama"><![CDATA[<p>In the AMAs (<a href="https://aeadataeditor.github.io/talks/">see past and future AMAs</a>), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-04-29T10:56:39-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use and redistribution of data</title><link href="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data" rel="alternate" type="text/html" title="On the use and redistribution of data" /><published>2024-04-29T00:00:00-04:00</published><updated>2024-04-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/use-and-reuse-of-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data"><![CDATA[<p>Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.</p>
+
+<!-- more -->
+
+<h2 id="a-scenario">A scenario</h2>
+
+<p>You are happily browsing along the internet, and find an fabulous dataset you think you can use for your awesome idea. Download, analyze, submit, publish, … all good. But then the pesky journal asks for a replication package. Easy, right? Wrap up the code, the data, upload, … all good? Maybe. Possibly not.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>Many data used by economists stems from other data sources. Most of these data sources are on the internet. Anybody can use data that’s on the internet and do with it what they want, right?</p>
+
+<p>As the discussion surrounding copyright and artificial intelligence shows, the answer is complex.<sup id="fnref:nytai" role="doc-noteref"><a href="#fn:nytai" class="footnote" rel="footnote">1</a></sup><sup id="fnref:silverman" role="doc-noteref"><a href="#fn:silverman" class="footnote" rel="footnote">2</a></sup> There is a concept of “fair use” in US copyright law, and in particular, it has been used to allow for legal webscraping.<sup id="fnref:webscraping" role="doc-noteref"><a href="#fn:webscraping" class="footnote" rel="footnote">3</a></sup></p>
+
+<p>But that applies primarily for “use”. If you want to publish the data you obtained from elsewhere, that is no longer necessarily considered (fair) “use”, it falls under “redistribution” or “publication”.</p>
+
+<h2 id="the-solution">The solution</h2>
+
+<p>In principle, the solution is for data providers to establish clear terms of use and licenses. And many do, especially in the commercial space. In general, you will find that “terms of use” restrict certains uses and rights, and “licenses” allow or grant certain uses and rights.</p>
+
+<p>Historically, it was software that was licensed, and “open source” licenses have a long history. Many such licenses are listed at the “<a href="https://opensource.org/licenses">open source initiative</a>”.</p>
+
+<p>For data, a popular set of licenses are the “<a href="https://creativecommons.org/licenses/">Creative Commons</a>” licenses. These licenses are designed to be easy to understand and to use, and allow for a wide range of uses - including <strong>redistribution</strong>. The CC-BY license is abundantly clear about what it allows:</p>
+
+<blockquote>
+  <p><a href="https://creativecommons.org/licenses/by/4.0/">CC By 4.0 DEED</a>:</p>
+
+  <p>You are free to:</p>
+
+  <ul>
+    <li>Share — copy and redistribute the material in any medium or format for any purpose, even commercially. 
+[…]</li>
+  </ul>
+
+</blockquote>
+
+<p>Other data licenses exist that allow for redistribution explicitly:</p>
+
+<ul>
+  <li><a href="https://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License (ODbL)</a></li>
+  <li>various government “open data” licenses, such as the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">UK Open Government License</a> and Statistics Canada’s <a href="https://www.statcan.gc.ca/en/reference/licence">Statistics Canada Open Licence</a>.</li>
+</ul>
+
+<p>(often times, the differences are minor between these licenses).</p>
+
+<h2 id="the-problem-part-2">The problem, part 2</h2>
+
+<p>The problem is that many (academic) data providers still do not show or apply these licenses, and have no terms of use, or ones that are hidden. It thus becomes difficult for researchers to know what they can and cannot do with the data they find, leading to avoidable confusion.</p>
+
+<p>Sometimes, these are identified at the time of downloading the data. For instance, the widely-used <a href="https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp">World Values Survey</a> displays four conditions to researchers who (after registering) download the data:</p>
+
+<p><img src="/images/wvs-download-screenshot-20240429.png" alt="WVS download conditions" /></p>
+
+<p>It otherwise mentions the “non-redistribution license” or that “data redistribution is prohibited” in multiple places, but there is no single “Terms of Use” page, or a “WVS License” page that is easily accessible and referenceable.</p>
+
+<p>Even when terms of use are provided, permissions and restrictions are not necessarily linked together. For instance, the fabulous <a href="https://dhsprogram.com/">DHS Program</a> states on many of its pages</p>
+
+<blockquote>
+  <p>The DHS Program is authorized to distribute, at no cost, unrestricted survey data files for legitimate academic research.</p>
+</blockquote>
+
+<p>but one has to search for the <a href="https://dhsprogram.com/data/Terms-of-Use.cfm">Terms of Use</a>, tucked in between “Contraceptive Calendar Tutorial” and “DHS Github Code Share”, which state (also very clearly)</p>
+
+<blockquote>
+  <p>Conditions of Use for The DHS Program datasets 
+(applies to all datasets downloaded from The DHS Program website: www.dhsprogram.com)</p>
+
+  <p>[…]</p>
+  <ul>
+    <li>Agree that the datasets <strong>will not be shared</strong> with other researchers without the written consent of The DHS Program.</li>
+  </ul>
+</blockquote>
+
+<p>(emphasis added). Many researchers include DHS data in their replication packages, and active data editors like myself have to remind them to remove the data from the replication package.</p>
+
+<h2 id="the-takeaways">The takeaways</h2>
+
+<h3 id="data-providers">Data providers</h3>
+
+<ul>
+  <li>Data providers should have a clear “Terms of Use” page, or a “License” page, that is easily accessible and referenceable.</li>
+  <li>They should also include the license and conditions in every download.</li>
+  <li>When data formats that allow for annotation (Stata, SAS), embed the license information in the dataset itself.</li>
+</ul>
+
+<h3 id="researchers">Researchers</h3>
+
+<ul>
+  <li>Always record the terms of use and license when you download the data.</li>
+  <li>Search for “terms of use” or “license” on data providers’ websites.</li>
+  <li>If the website asks for registration, it is highly likely that there are redistribution restrictions.</li>
+  <li>Request that data providers make their terms of use and licenses more visible and accessible.</li>
+  <li>Consult (and update) the <a href="https://social-science-data-editors.github.io/reference/TermsOfUse.html">Social Science Data Editors’ Terms of Use database</a>.</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:nytai" role="doc-endnote">
+      <p>New York Times has sued OpenAI and Microsoft for having used their texts, see <a href="https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/">https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/</a>. <a href="#fnref:nytai" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:silverman" role="doc-endnote">
+      <p>Sarah Silverman and other authors have sued OpenAI over the use of their texts, but parts of that lawsuit have been dismissed, see <a href="https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/">https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/</a>. <a href="#fnref:silverman" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:webscraping" role="doc-endnote">
+      <p>See <a href="https://techcrunch.com/2022/04/18/web-scraping-legal-court/">https://techcrunch.com/2022/04/18/web-scraping-legal-court/</a>. <a href="#fnref:webscraping" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="licenses" /><summary type="html"><![CDATA[Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.]]></summary></entry><entry><title type="html">Random notes from the AMAs</title><link href="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama" rel="alternate" type="text/html" title="Random notes from the AMAs" /><published>2024-04-11T00:00:00-04:00</published><updated>2024-04-11T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/random-notes-ama</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama"><![CDATA[<p>In the AMAs (<a href="https://aeadataeditor.github.io/talks/">see past and future AMAs</a>), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.</p>
 
 <!-- more -->
 
@@ -676,46 +783,4 @@ Leah Brooks and Zachary Liscow, “<a href="https://doi.org/10.1257/app.20200398
 
 <blockquote>
   <p>Koenker, R. (1988), Asymptotic Theory And Econometric Practice, Journal of Applied Econometrics, 3(2), 139-147. https://doi.org/10.1002/jae.3950030205</p>
-</blockquote>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surprise!]]></summary></entry><entry><title type="html">The oldest AEA replication package</title><link href="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package" rel="alternate" type="text/html" title="The oldest AEA replication package" /><published>2023-01-26T00:00:00-05:00</published><updated>2023-01-26T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-01-26-oldest-replication-package"><![CDATA[<p>We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.</p>
-
-<!-- more -->
-
-<p>I actually don’t know the answer to that. But the oldest replication package we have in the (migrated) AEA archives is:</p>
-
-<blockquote>
-  <p>Frankel, Jeffrey A., and Romer, David H. Replication data for: Does Trade Cause Growth? Nashville, TN: American Economic Association [publisher], 1999. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-12. <a href="https://doi.org/10.3886/E113211V1">https://doi.org/10.3886/E113211V1</a>.</p>
-</blockquote>
-
-<p>which accompanies this article:</p>
-
-<blockquote>
-  <p>Frankel, Jeffrey A, and David Romer. “Does Trade Cause Growth?” American Economic Review 89, no. 3 (June 1999): 379–99. <a href="https://doi.org/10.1257/aer.89.3.379">https://doi.org/10.1257/aer.89.3.379</a>.</p>
-</blockquote>
-
-<p>Find out yourself: a (fully reproducible) way to verify this (there are better ways, of course)</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w"> </span><span class="c1"># I'm lazy</span><span class="w">
-
-</span><span class="n">baseurl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://github.com/AEADataEditor/aea-supplement-migration/raw/master/data/acquired"</span><span class="w">
-</span><span class="c1"># alternatively, if running locally</span><span class="w">
-</span><span class="c1"># baseurl &lt;- "data/acquired"</span><span class="w">
-</span><span class="n">aea_article_data</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
-                                        </span><span class="s2">"aea_article_data.csv.gz"</span><span class="p">))</span><span class="w">
-</span><span class="n">aea_issue_data</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
-                                        </span><span class="s2">"aea_issue_data.csv.gz"</span><span class="p">))</span><span class="w">
-</span><span class="n">aea_icpsr_mapping</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">file.path</span><span class="p">(</span><span class="n">baseurl</span><span class="p">,</span><span class="w">
-                                        </span><span class="s2">"aea_icpsr_mapping.20191014.txt"</span><span class="p">),</span><span class="w">
-                              </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"icpsr_doi"</span><span class="p">,</span><span class="s2">"zipfile"</span><span class="p">))</span><span class="w">  </span><span class="o">%&gt;%</span><span class="w"> 
-                    </span><span class="n">mutate</span><span class="p">(</span><span class="n">zipfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_remove</span><span class="p">(</span><span class="n">zipfile</span><span class="p">,</span><span class="w">
-                                                </span><span class="n">fixed</span><span class="p">(</span><span class="s2">"Original Zip: "</span><span class="p">)))</span><span class="w">
-</span><span class="n">aea_deposits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">aea_article_data</span><span class="p">,</span><span class="n">aea_icpsr_mapping</span><span class="p">,</span><span class="w">
-                          </span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"icpsr_package_name"</span><span class="o">=</span><span class="s2">"zipfile"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
-  </span><span class="n">left_join</span><span class="p">(</span><span class="n">aea_issue_data</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"issue_id"</span><span class="p">))</span><span class="w">
-</span><span class="c1"># oldest package</span><span class="w">
-</span><span class="n">aea_deposits</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">year</span><span class="o">==</span><span class="nf">min</span><span class="p">(</span><span class="n">aea_deposits</span><span class="o">$</span><span class="n">year</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
-  </span><span class="n">select</span><span class="p">(</span><span class="n">doi</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">journal</span><span class="p">,</span><span class="n">volume</span><span class="p">,</span><span class="n">issue</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="n">icpsr_doi</span><span class="p">)</span><span class="w">
-
-</span></code></pre></div></div>
-
-<p>(<a href="https://github.com/AEADataEditor/aea-supplement-migration/blob/ab235cbf1e0e1965a71263d15e1d0f3983fdba9c/programs/oldest-package.R">source</a>)</p>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[We were recently discussing among data editors what the oldest replication package (in Econ and Political Science) might be.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surprise!]]></summary></entry></feed>

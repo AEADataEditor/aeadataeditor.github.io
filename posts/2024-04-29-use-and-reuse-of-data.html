@@ -1,0 +1,732 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>On the use and redistribution of data - Office of the AEA Data Editor</title>
+<meta name="description" content="Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="On the use and redistribution of data">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data">
+
+
+  <meta property="og:description" content="Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="On the use and redistribution of data">
+  <meta name="twitter:description" content="Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2024-04-29T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="On the use and redistribution of data">
+    <meta itemprop="description" content="Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.">
+    <meta itemprop="datePublished" content="2024-04-29T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">On the use and redistribution of data
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  5 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-04-29T00:00:00-04:00">April 29, 2024</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.</p>
+
+<!-- more -->
+
+<h2 id="a-scenario">A scenario</h2>
+
+<p>You are happily browsing along the internet, and find an fabulous dataset you think you can use for your awesome idea. Download, analyze, submit, publish, … all good. But then the pesky journal asks for a replication package. Easy, right? Wrap up the code, the data, upload, … all good? Maybe. Possibly not.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>Many data used by economists stems from other data sources. Most of these data sources are on the internet. Anybody can use data that’s on the internet and do with it what they want, right?</p>
+
+<p>As the discussion surrounding copyright and artificial intelligence shows, the answer is complex.<sup id="fnref:nytai" role="doc-noteref"><a href="#fn:nytai" class="footnote" rel="footnote">1</a></sup><sup id="fnref:silverman" role="doc-noteref"><a href="#fn:silverman" class="footnote" rel="footnote">2</a></sup> There is a concept of “fair use” in US copyright law, and in particular, it has been used to allow for legal webscraping.<sup id="fnref:webscraping" role="doc-noteref"><a href="#fn:webscraping" class="footnote" rel="footnote">3</a></sup></p>
+
+<p>But that applies primarily for “use”. If you want to publish the data you obtained from elsewhere, that is no longer necessarily considered (fair) “use”, it falls under “redistribution” or “publication”.</p>
+
+<h2 id="the-solution">The solution</h2>
+
+<p>In principle, the solution is for data providers to establish clear terms of use and licenses. And many do, especially in the commercial space. In general, you will find that “terms of use” restrict certains uses and rights, and “licenses” allow or grant certain uses and rights.</p>
+
+<p>Historically, it was software that was licensed, and “open source” licenses have a long history. Many such licenses are listed at the “<a href="https://opensource.org/licenses">open source initiative</a>”.</p>
+
+<p>For data, a popular set of licenses are the “<a href="https://creativecommons.org/licenses/">Creative Commons</a>” licenses. These licenses are designed to be easy to understand and to use, and allow for a wide range of uses - including <strong>redistribution</strong>. The CC-BY license is abundantly clear about what it allows:</p>
+
+<blockquote>
+  <p><a href="https://creativecommons.org/licenses/by/4.0/">CC By 4.0 DEED</a>:</p>
+
+  <p>You are free to:</p>
+
+  <ul>
+    <li>Share — copy and redistribute the material in any medium or format for any purpose, even commercially. 
+[…]</li>
+  </ul>
+
+</blockquote>
+
+<p>Other data licenses exist that allow for redistribution explicitly:</p>
+
+<ul>
+  <li><a href="https://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License (ODbL)</a></li>
+  <li>various government “open data” licenses, such as the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">UK Open Government License</a> and Statistics Canada’s <a href="https://www.statcan.gc.ca/en/reference/licence">Statistics Canada Open Licence</a>.</li>
+</ul>
+
+<p>(often times, the differences are minor between these licenses).</p>
+
+<h2 id="the-problem-part-2">The problem, part 2</h2>
+
+<p>The problem is that many (academic) data providers still do not show or apply these licenses, and have no terms of use, or ones that are hidden. It thus becomes difficult for researchers to know what they can and cannot do with the data they find, leading to avoidable confusion.</p>
+
+<p>Sometimes, these are identified at the time of downloading the data. For instance, the widely-used <a href="https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp">World Values Survey</a> displays four conditions to researchers who (after registering) download the data:</p>
+
+<p><img src="/images/wvs-download-screenshot-20240429.png" alt="WVS download conditions" /></p>
+
+<p>It otherwise mentions the “non-redistribution license” or that “data redistribution is prohibited” in multiple places, but there is no single “Terms of Use” page, or a “WVS License” page that is easily accessible and referenceable.</p>
+
+<p>Even when terms of use are provided, permissions and restrictions are not necessarily linked together. For instance, the fabulous <a href="https://dhsprogram.com/">DHS Program</a> states on many of its pages</p>
+
+<blockquote>
+  <p>The DHS Program is authorized to distribute, at no cost, unrestricted survey data files for legitimate academic research.</p>
+</blockquote>
+
+<p>but one has to search for the <a href="https://dhsprogram.com/data/Terms-of-Use.cfm">Terms of Use</a>, tucked in between “Contraceptive Calendar Tutorial” and “DHS Github Code Share”, which state (also very clearly)</p>
+
+<blockquote>
+  <p>Conditions of Use for The DHS Program datasets 
+(applies to all datasets downloaded from The DHS Program website: www.dhsprogram.com)</p>
+
+  <p>[…]</p>
+  <ul>
+    <li>Agree that the datasets <strong>will not be shared</strong> with other researchers without the written consent of The DHS Program.</li>
+  </ul>
+</blockquote>
+
+<p>(emphasis added). Many researchers include DHS data in their replication packages, and active data editors like myself have to remind them to remove the data from the replication package.</p>
+
+<h2 id="the-takeaways">The takeaways</h2>
+
+<h3 id="data-providers">Data providers</h3>
+
+<ul>
+  <li>Data providers should have a clear “Terms of Use” page, or a “License” page, that is easily accessible and referenceable.</li>
+  <li>They should also include the license and conditions in every download.</li>
+  <li>When data formats that allow for annotation (Stata, SAS), embed the license information in the dataset itself.</li>
+</ul>
+
+<h3 id="researchers">Researchers</h3>
+
+<ul>
+  <li>Always record the terms of use and license when you download the data.</li>
+  <li>Search for “terms of use” or “license” on data providers’ websites.</li>
+  <li>If the website asks for registration, it is highly likely that there are redistribution restrictions.</li>
+  <li>Request that data providers make their terms of use and licenses more visible and accessible.</li>
+  <li>Consult (and update) the <a href="https://social-science-data-editors.github.io/reference/TermsOfUse.html">Social Science Data Editors’ Terms of Use database</a>.</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:nytai" role="doc-endnote">
+      <p>New York Times has sued OpenAI and Microsoft for having used their texts, see <a href="https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/">https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/</a>. <a href="#fnref:nytai" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:silverman" role="doc-endnote">
+      <p>Sarah Silverman and other authors have sued OpenAI over the use of their texts, but parts of that lawsuit have been dismissed, see <a href="https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/">https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/</a>. <a href="#fnref:silverman" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:webscraping" role="doc-endnote">
+      <p>See <a href="https://techcrunch.com/2022/04/18/web-scraping-legal-court/">https://techcrunch.com/2022/04/18/web-scraping-legal-court/</a>. <a href="#fnref:webscraping" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#licenses" class="page__taxonomy-item" rel="tag">licenses</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#terms-of-use" class="page__taxonomy-item" rel="tag">terms of use</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2024-04-29T00:00:00-04:00">April 29, 2024</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=On+the+use+and+redistribution+of+data%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-04-29-use-and-reuse-of-data" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-04-29-use-and-reuse-of-data" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-11-random-notes-ama" rel="permalink">Random notes from the AMAs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-10-aej-best-papers-2024" rel="permalink">AEJ Best Papers 2024 and replication packages
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The annual American Economic Journal (AEJ) Best Paper Awards highlight the best paper published in each of the American Economic Journals: Applied Economics,...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-09-census-packages" rel="permalink">Examples of replication packages for research conducted in FSRDCs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I have been asked a few times about guidance for replication packages that use confidential data in research data centers, e.g., the  Federal Statistical Res...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-03-15-nda-redux" rel="permalink">NDAs, NDAs, and NDAs: How to describe access to data that cannot be published
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I was recently forwarded a question from a data librarian discussion list, and invited to respond to the question of “example language” for a data access des...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2024-04-29-use-and-reuse-of-data.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

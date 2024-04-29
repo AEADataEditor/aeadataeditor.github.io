@@ -269,6 +269,12 @@ var store = [{
         "url": "/posts/2024-04-11-random-notes-ama",
         "teaser": null
       },{
+        "title": "On the use and redistribution of data",
+        "excerpt":"Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details. A...","categories": [],
+        "tags": ["data editor tips","replication packages","terms of use","licenses"],
+        "url": "/posts/2024-04-29-use-and-reuse-of-data",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
