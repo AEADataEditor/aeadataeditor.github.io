@@ -83,8 +83,46 @@ In many cases, the data citation for a public-use dataset has a unique URL that 
 
 However, in many other cases where the URL does not lead directly to the dataset, a separate "Data Availability Statement" needs to be provided, as part of the README. A simple data citation is not sufficient. See [general guidance on data availability statements](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html), and [some examples in the template README](https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements).
 
+### Code
 
-### Ideal structure of a replication package
+It should be obvious that your replication package should contain all code used to generate the results in your manuscript.
+
+#### Code to include
+
+This includes 
+
+- [ ] code to read in raw data,
+- [ ] code to clean and process data, 
+- [ ] code to analyze data and estimate models, and
+- [ ] code to generate tables and figures.
+
+This applies even to
+
+- [ ] maps and other complex visualizations ([guidance](https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html))
+- [ ] web scraping code
+- [ ] code that processes confidential data (see below)
+- [ ] code that anonymizes data
+- [ ] code that prepares surveys and runs experiments ([guidance](https://www.aeaweb.org/journals/data/policy-experimental-surveys))
+
+In all cases, it is possible that "code" is not a program, but human-readable instructions on how to perform a manipulation. 
+
+- For instance, despite the [availability of scriptable GIS software](https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html), many economists prefer to use GUI-based GIS software, and manually construct maps.
+- For instance, many websites providing data have only an interactive process to acquire or request data, and no single download link. In such cases, detailed instructions on how to acquire the data may be necessary (see [https://doi.org/10.5281/zenodo.10983009](https://doi.org/10.5281/zenodo.10983009) for an example). We do encourage authors to use APIs where available.
+
+#### How to include
+
+Code should be included in its "native" form, i.e., the format that the software expects to read it in. For instance, Stata code should be in `.do` files, R code in `.R` files, Qualtrics surveys in `.qsf` files, etc.
+
+#### No manual modifications
+
+The replication package should reproduce the tables and figures, as well as any in-text numbers, by **running code without manual intervention**. 
+
+> The only exception to this rule is a single change to set a small number of program and data directory paths.
+
+While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is **not acceptable** to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper. 
+
+
+### Data structure of a replication package
 
 The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete "deposits", or only subdirectories thereof. However, deposits of replication packages at other trusted repositories are also accepted, as long as they satisfy the requirements described here.
 
@@ -117,17 +155,9 @@ results/
   figure2.pdf
 ```
 
-#### No manual modifications
-
-The replication package should reproduce the tables and figures, as well as any in-text numbers, by **running code without manual intervention**. 
-
-> The only exception to this rule is a single change to set a small number of program and data directory paths.
-
-While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is **not acceptable** to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper. 
-
 #### Structure in the presence of more than 1,000 files
 
-As of 2021, ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code must be unzipped, though we still insist on the "smallest possible configuration".
+ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code must be unzipped, though we still insist on the "smallest possible configuration".
 
 In most cases, it is a particular directory that is the primary culprit. Say you have
 
