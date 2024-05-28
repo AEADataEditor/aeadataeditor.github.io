@@ -119,6 +119,13 @@ Meetings with Lars, which is both follow-up to any further questions interns hav
 
 The actual work in the Lab will start at various dates, depending on your institution's exam schedule and other details. Contact your local coordinator for the exact start date if you are unsure.
 
+- Early start: May 20
+- Kickoff meeting: May 30, 10AM Eastern
+
+## Additional activities
+
+Interns are invited to participate in a weekly webinar, highlighting career paths in economics (and where they might lead other than economics), and the role of reproducibility and transparency in those paths. See the [webinar schedule](https://labordynamicsinstitute.github.io/summer-camp-2024/) for more details.
+
 ## Questions and Answers
 
 **Will I need to find accomodation in Ithaca?**
