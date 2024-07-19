@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-06-14T09:46:24-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use and redistribution of data</title><link href="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data" rel="alternate" type="text/html" title="On the use and redistribution of data" /><published>2024-04-29T00:00:00-04:00</published><updated>2024-04-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/use-and-reuse-of-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data"><![CDATA[<p>Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-07-19T13:26:24-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use and reuse of within-project code</title><link href="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication" rel="alternate" type="text/html" title="On the use and reuse of within-project code" /><published>2024-07-19T00:00:00-04:00</published><updated>2024-07-19T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/functions-and-code-duplication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication"><![CDATA[<p>We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.</p>
+
+<!-- more -->
+
+<p>It introduces lots of failure points - not necessarily in the final package, but in the development process.</p>
+
+<h2 id="the-example">The example</h2>
+
+<p>Consider that you are halfway through your project. You have a base model, and three variants thereof. Each of which is the base model, copied into three different directories, with minimal modifications in the code. For sake of clarity, and with no loss of generality intended:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code/
+    base-model/
+            base-model.m
+    robustness-check-1/
+            base-model.m
+    robustness-check-2/
+            base-model.m
+    robustness-check-3/
+            base-model.m
+</code></pre></div></div>
+
+<p>where a <code class="language-plaintext highlighter-rouge">diff</code> between <code class="language-plaintext highlighter-rouge">base-model.m</code> and <code class="language-plaintext highlighter-rouge">robustness-check-1/base-model.m</code> would show only a few lines changed:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff code/base-model/base-model.m code/robustness-check-1/base-model.m
+</span><span class="p">13073c13073
+</span><span class="gd">&lt; a=1;
+</span><span class="p">---
+</span><span class="gi">&gt; a=2;
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>Note: the change would appear to be in line 13073, which is awfully subtle… this is inspired by real-life examples!</p>
+</blockquote>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>Now imagine that your thesis advisor, or a reviewer, identifies a key problem in the implemented algorithm. You fix it in <code class="language-plaintext highlighter-rouge">base-model.m</code>, but now need to fix it in all the other modified copies too. Will there be any typos when you implement the patch? What if there are not three robustness checks, but 30? Or 300 different parameterizations of a simulation?</p>
+
+<p>The techy programmer might decide to do this with <code class="language-plaintext highlighter-rouge">patch</code> in conjunction with <code class="language-plaintext highlighter-rouge">git</code>, but that already counts as advanced functionality (I probably lost a lot of readers with the first part of that sentence…)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create a patch from the updates to the base model</span>
+git diff d362f6..3bd22 <span class="o">&gt;</span> patch.diff
+<span class="c"># apply the patch to the robustness check</span>
+patch code/robustness-check-1/base-model.m &lt; patch.diff
+</code></pre></div></div>
+
+<p>but that is not a robust solution that scales to the 30 or 300 robustness checks.</p>
+
+<h2 id="a-possible-solution">A possible solution</h2>
+
+<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions" role="doc-noteref"><a href="#fn:functions" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>So should one go about the above problem? My rule of thumb is:</p>
+
+<ul>
+  <li>Copy code once, fine, don’t do it again.</li>
+  <li>Copy it twice, stop, and create a function.</li>
+  <li>Copy it three times: don’t even go there!</li>
+</ul>
+
+<p>Assuming that you are using MATLAB (where we seem to see this often), you should treat the core model code as a “function” (even if you do not explicitly program it that way), and then call that “function” multiple times. In a nutshell:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code/
+    core-simulation/
+            parametrized-simulation.m
+    base-model.m
+    robustness-check-1.m
+    robustness-check-2.m
+    robustness-check-3.m
+</code></pre></div></div>
+
+<p>where</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% base-model.m</span>
+
+<span class="c1">% We set the base model to have the following parameters,</span>
+<span class="c1">% as per Section 2 of the paper:</span>
+<span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">% We then call the core simulation code</span>
+<span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
+</code></pre></div></div>
+
+<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function" role="doc-noteref"><a href="#fn:proper-function" class="footnote" rel="footnote">2</a></sup></p>
+
+<p>The robustness checks might then have</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% robustness-check-1.m</span>
+
+<span class="c1">% We set the model to have the following parameters,</span>
+<span class="c1">% as per Section 3 of the paper:</span>
+
+<span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="c1">% This differs from the base model</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">% We then call the core simulation code</span>
+<span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
+</code></pre></div></div>
+
+<p>or go through a loop of multiple values:</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% robustness-check-2.m</span>
+
+
+<span class="c1">% We set the model to have the following parameters,</span>
+<span class="c1">% as per Section 4 of the paper:</span>
+
+<span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="c1">% We now explore the space of a within this context.</span>
+<span class="k">for</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span>
+    <span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
+<span class="k">end</span>
+
+<span class="c1">% Summarize results from exploration</span>
+
+<span class="n">summarize</span><span class="o">-</span><span class="n">results</span>
+
+</code></pre></div></div>
+
+<h2 id="other-languages">Other languages</h2>
+
+<p>Is that a MATLAB-specific problem? No. We see similar issues in Stata, R, Python, and other languages. The core solution is the same: write functions, and call them multiple times, instead of copying code around, and hard-coding parameters.</p>
+
+<h2 id="other-situations">Other situations</h2>
+
+<p>The above example had continuous (well, kind of) parameter spaces. What if they are discontinuous? You can still loop over a whole set of specifications by storing them in a file - yes, an Excel file is fine! - and reading them in (in MATLAB, <a href="https://www.mathworks.com/help/matlab/import_export/ways-to-import-spreadsheets.html"><code class="language-plaintext highlighter-rouge">readtable</code></a>). For example,</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% Read the Excel spreadsheet</span>
+<span class="p">[</span><span class="n">num</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">raw</span><span class="p">]</span> <span class="o">=</span> <span class="nb">xlsread</span><span class="p">(</span><span class="s1">'your_spreadsheet.xlsx'</span><span class="p">);</span>
+
+<span class="c1">% Get the number of rows in the data</span>
+<span class="p">[</span><span class="n">numRows</span><span class="p">,</span> <span class="o">~</span><span class="p">]</span> <span class="o">=</span> <span class="nb">size</span><span class="p">(</span><span class="n">raw</span><span class="p">);</span>
+
+<span class="c1">% Loop over each row, starting from the second row (assuming first row is header)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">:</span><span class="n">numRows</span>
+    <span class="c1">% Extract values from columns A, B, and C</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>  <span class="c1">% Column A</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>  <span class="c1">% Column B</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>  <span class="c1">% Column C</span>
+    
+    <span class="c1">% Call the function something() with the extracted values</span>
+    <span class="nb">result</span> <span class="o">=</span> <span class="n">something</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+    
+    <span class="c1">% You can do something with the result here if needed</span>
+    <span class="c1">% For example, store it in an array or print it</span>
+    <span class="nb">disp</span><span class="p">([</span><span class="s1">'Result for row '</span><span class="p">,</span> <span class="nb">num2str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">': '</span><span class="p">,</span> <span class="nb">num2str</span><span class="p">(</span><span class="nb">result</span><span class="p">)]);</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>(straight from <a href="https://claude.ai/">Claude AI</a>)</p>
+
+<h2 id="summarizing-it-and-creating-tables">Summarizing it and creating tables</h2>
+
+<p>Of course, you now also have  to properly capture all those results, store them, and be able to summarize them, and create tables from them. That’s another story.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:functions" role="doc-endnote">
+      <p>See for instance <a href="https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e">https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e</a>, but this will be repeated many times. I was personally influenced by reading the (very accessible, but 900 pages!) “<a href="https://bookshop.org/p/books/code-complete-steve-mcconnell/12551815?ean=9780735619678">Code Complete</a>” by Steve McConnell. Desirable internal design characteristics include “minimal complexity” (KISS), “ease of maintenance”, and “reusability” <a href="#fnref:functions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:proper-function" role="doc-endnote">
+      <p>In a proper function, you would pass the parameters as arguments, and validate that they are the right ones, etc.: <code class="language-plaintext highlighter-rouge">core-model(a,b,c)</code>. Read the programming language specific manual on how to properly write functions: <a href="https://www.stata.com/manuals/u17.pdf">Stata</a>, <a href="https://adv-r.hadley.nz/functions.html#functions">R via Hadley</a>, <a href="https://www.mathworks.com/help/matlab/ref/function.html">MATLAB</a>, etc. <a href="#fnref:proper-function" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="code" /><category term="function libraries" /><summary type="html"><![CDATA[We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.]]></summary></entry><entry><title type="html">On the use and redistribution of data</title><link href="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data" rel="alternate" type="text/html" title="On the use and redistribution of data" /><published>2024-04-29T00:00:00-04:00</published><updated>2024-04-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/use-and-reuse-of-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-29-use-and-reuse-of-data"><![CDATA[<p>Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.</p>
 
 <!-- more -->
 
@@ -753,34 +920,4 @@ Leah Brooks and Zachary Liscow, “<a href="https://doi.org/10.1257/app.20200398
 <li><span id="u_s_geological_survey_2022_5830968">U.S. Geological Survey, and Leah Brooks. 2022. “USGS National Map 3DEP 1 Arc-Second Digital 
                    Elevation Models (DEMs): Full Coverage for U.S.
                    Interstate Highway System.” Zenodo. https://doi.org/10.5281/zenodo.5830968.</span></li></ol>
-<p>.</p>]]></content><author><name>AEA Data Editor</name></author><category term="big data" /><category term="complex projects" /><category term="AEJ:Applied" /><summary type="html"><![CDATA[I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.]]></summary></entry><entry><title type="html">The oldest replication package, overall?</title><link href="https://aeadataeditor.github.io/posts/2023-02-02-oldest-replication-package-jae" rel="alternate" type="text/html" title="The oldest replication package, overall?" /><published>2023-02-02T00:00:00-05:00</published><updated>2023-02-02T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/oldest-replication-package-jae</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-02-02-oldest-replication-package-jae"><![CDATA[<p>After our recent discussion about the oldest <strong>AEA</strong> replication package, I navigated over to the <strong>really</strong> old archive at the Journal of Applied Econometrics. Surprise!</p>
-
-<!-- more -->
-
-<p>After all these years of loving maintenance by James MacKinnon, pioneer of data archives, it has migrated from old-style web pages (<a href="https://en.wikipedia.org/wiki/Gopher_(protocol)">gopher pages</a>, originally, I think!)</p>
-
-<p>The new JAE archive is now at ZBW in Germany.</p>
-
-<h2 id="old-pages">Old pages</h2>
-
-<p>The <a href="http://qed.econ.queensu.ca/jae/legacy.html">old pages</a> were at Queen’s University, Kingston, ON, Canada.</p>
-
-<p><img src="/images/jae-old-2022.png" alt="old JAE Data Archive pages" /></p>
-
-<h2 id="new-pages">New pages</h2>
-
-<p>The <a href="https://journaldata.zbw.eu/journals/jae">new pages</a> are at the ZBW in Germany.</p>
-
-<p><img src="/images/jae-new-2023.png" alt="new JAE Archive pages" /></p>
-
-<h2 id="oldest-replication-package">Oldest replication package</h2>
-
-<p>The honors of the oldest replication package should probably go to … Roger Koenker!</p>
-
-<blockquote>
-  <p>Koenker, Roger (1988): Asymptotic theory and econometric practice (replication data). Version: 1. Journal of Applied Econometrics. Dataset. http://dx.doi.org/10.15456/jae.2022313.1129100068</p>
-</blockquote>
-
-<blockquote>
-  <p>Koenker, R. (1988), Asymptotic Theory And Econometric Practice, Journal of Applied Econometrics, 3(2), 139-147. https://doi.org/10.1002/jae.3950030205</p>
-</blockquote>]]></content><author><name>AEA Data Editor</name></author><category term="migration" /><category term="reproducibility" /><summary type="html"><![CDATA[After our recent discussion about the oldest AEA replication package, I navigated over to the really old archive at the Journal of Applied Econometrics. Surprise!]]></summary></entry></feed>
+<p>.</p>]]></content><author><name>AEA Data Editor</name></author><category term="big data" /><category term="complex projects" /><category term="AEJ:Applied" /><summary type="html"><![CDATA[I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.]]></summary></entry></feed>
