@@ -24,11 +24,14 @@ compatible with DCAS.
 
 Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the "README". 
 
-- The AEA requires that the README contain a number of information elements.  A convenient way to ensure that these elements are present is to use the [template README for social science replication packages](https://social-science-data-editors.github.io/template_README/); however, you are free to provide this information in a format of your choice as well.
+- The AEA requires that the README contain a number of information elements.  A convenient way to ensure that these elements are present is to use the [template README for social science replication packages v1.1](https://social-science-data-editors.github.io/template_README/); however, you are free to provide this information in a format of your choice as well.
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7293838.svg)](https://doi.org/10.5281/zenodo.7293838)
 
 ![template README](/images/template-readme-700x433.png)
 
-The following information is required in the README (unless a modifier indicates otherwise):
+The following information is **required** in the README (unless a modifier indicates otherwise):
 
 - [ ] Data Availability and Provenance Statements
   - [ ] Statement about Rights
@@ -50,7 +53,7 @@ Some more information is provided below, a full discussion is available at the [
 
 The README should be in a format that is easily readable online, such as a PDF or a TXT file. You can provide a Word or LaTeX source for the README as well, but that is not required.
 
-Provide the README as part of your replication package, ideally in the root directory.
+Provide the README as part of your replication package, **ideally in the root directory.**
 
 ### Data Citations
 
