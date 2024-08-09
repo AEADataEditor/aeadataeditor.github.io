@@ -283,7 +283,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 |                                                                                                                |
 
 - Note that the DOI **will not work** until (at the very end of the review process) the deposit is published. This is **normal**.
-- You do **not** need to add your replication package citation to the manuscript, as it will be added automatically. 
+- You do **not** need to add your replication package citation to the manuscript's **list of references**, as it will be added automatically. However, you do need to add the in-text citation, ideally the first time you mention the data, in particular the data you collected.
 
 #### Give it a try
 
