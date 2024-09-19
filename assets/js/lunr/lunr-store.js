@@ -1,10 +1,4 @@
 var store = [{
-        "title": "License template",
-        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/LICENSE-template.html",
-        "teaser": null
-      },{
         "title": "Licensing Guidance",
         "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
         "tags": [],
@@ -17,22 +11,22 @@ var store = [{
         "url": "/aea-de-guidance/2021-01-05-answers-to-questions",
         "teaser": null
       },{
+        "title": "License template",
+        "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/LICENSE-template.html",
+        "teaser": null
+      },{
         "title": "Additional data citation guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
+        "title": "Data deposit guidance",
+        "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposit",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
+        "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
         "title": "Frequently Asked Questions",
@@ -71,6 +65,18 @@ var store = [{
         "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
       },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposit",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
         "title": "Guidance on how to prepare a comment based on a replication",
         "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
         "tags": [],
@@ -87,12 +93,6 @@ var store = [{
         "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
-        "teaser": null
-      },{
-        "title": "Data deposit guidance",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
         "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
@@ -723,5 +723,17 @@ var store = [{
         "excerpt":"Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later,...","categories": [],
         "tags": [],
         "url": "/talks/2024-09-05-eale",
+        "teaser": null
+      },{
+        "title": "Training on reproducible methods in empirical economics when data are confidential",
+        "excerpt":"Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later,...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-09-12-fsrdc",
+        "teaser": null
+      },{
+        "title": "TBD",
+        "excerpt":"Abstract Several top journals have recently initiated efforts to insure that published empirical results can be replicated. The panel will discuss fundamental aims and incentives of replication as well as concrete tools, procedures, and publication outlets. Chair: Arieda Muço, Central European University Speakers: Prof Maia Güell, University of Edinburgh; Data...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-10-07-vienna-panel",
         "teaser": null
       }]
