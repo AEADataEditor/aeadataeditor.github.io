@@ -4,8 +4,8 @@ collection: talks
 type: "Panel"
 date: 2024-10-07
 location: "Vienna, Austria"
-venue: "Wirtschaftsuniversität Wien and Central European University"
-mainurl: 
+venue: "Wirtschaftsuniversität Wien"
+mainurl: https://bsky.app/profile/ariedamuco.bsky.social/post/3l4tun2kqsb2a
 doi: 
 maindoi: 
 ---
@@ -26,3 +26,5 @@ Speakers:
 - Miklós Koren, Central European University, Data Editor for the Review of Economic Studies
 
 - **Lars Vilhuber**, Cornell University, Data Editor for the American Economic Association journals
+
+Sponsored by *Wirtschaftsuniversität Wien* and *The Review of Economic Studies*.
