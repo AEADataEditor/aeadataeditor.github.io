@@ -90,15 +90,21 @@ var store = [{
         "teaser": null
       },{
         "title": "Creating a Restricted Data Deposit  for AEA Publications",
-        "excerpt":"This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice as of July 2022, but may change. The process of creating restricted-access data deposits remains...","categories": [],
+        "excerpt":"THIS GUIDE IS OUTDATED, AND SHOULD NOT BE FOLLOWED. IT IS KEPT FOR HISTORICAL REASONS. This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice...","categories": [],
         "tags": [],
-        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
         "teaser": null
       },{
         "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
         "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
+        "excerpt":"The original guide on how to deposit restricted-access data on openICPSR is available here. DO NOT USE THOSE INSTRUCTIONS, AS THEY ARE NO LONGER ACCURATE. The AEA requires that data be as open as legally and ethically possible. To deposit restricted-access data, to the best of our knowledge, no uniquely...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
         "title": "Data deposit guidance",
