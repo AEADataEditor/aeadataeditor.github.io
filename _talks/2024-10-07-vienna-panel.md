@@ -25,6 +25,6 @@ Speakers:
 
 - Miklós Koren, Central European University, Data Editor for the Review of Economic Studies
 
-- **Lars Vilhuber**, Cornell University, Data Editor for the American Economic Association journals
+- **Lars Vilhuber**, Cornell University, Data Editor for the American Economic Association journals [[slides](https://larsvilhuber.github.io/reproducibility-internship/)]
 
 Sponsored by *Wirtschaftsuniversität Wien* and *The Review of Economic Studies*.
