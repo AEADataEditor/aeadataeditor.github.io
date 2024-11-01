@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-10-06T04:31:09-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use and reuse of within-project code</title><link href="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication" rel="alternate" type="text/html" title="On the use and reuse of within-project code" /><published>2024-07-19T00:00:00-04:00</published><updated>2024-07-19T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/functions-and-code-duplication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication"><![CDATA[<p>We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-11-01T18:37:21-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">How to respond to data provider requests for data removal (take-down requests)</title><link href="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests" rel="alternate" type="text/html" title="How to respond to data provider requests for data removal (take-down requests)" /><published>2024-11-01T00:00:00-04:00</published><updated>2024-11-01T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/psid-requests</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests"><![CDATA[<p>The <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.</p>
+
+<p>So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by <a href="https://www.aeaweb.org/journals/forms/data-code-archive-agreement">signing an agreement</a>) to not withdrawing the replication package. How to proceed? Read on!</p>
+
+<!-- more -->
+
+<h2 id="in-a-nutshell">In a nutshell</h2>
+
+<p>The gist of the solution is the following, for AEA manuscripts (which I obviously know well), but probably similarly for other journals:</p>
+
+<ul>
+  <li>Remove the infringing data from V1 of the replication package.</li>
+  <li>[Ideally] Create a new, separate deposit that is in compliance with the data provider’s terms of use.</li>
+  <li>Document the new location of the now absent data in the README of the replication package.</li>
+  <li>Submit the revised replication package to the journal.</li>
+  <li>The journal publishes V2 of the replication package, which is now compliant.</li>
+</ul>
+
+<h2 id="an-example-psid-data">An example: PSID data</h2>
+
+<p>For years, I as Data Editor have alerted authors when I detected data that infringes on terms of use. Two of the most frequent cases are the Panel Study of Income Dynamics (PSID) and the UNSD’s Comtrade data. We even have an <a href="https://www.aeaweb.org/journals/data/faq#psid">FAQ entry dedicated to the PSID case</a> and a <a href="https://github.com/AEADataEditor/replication-template/blob/master/sample-language-report.md?plain=1#L243">copy-and-paste entry in our “most frequent errors” document</a>.</p>
+
+<p>But what if PSID data does end up in a deposit, either because I missed it (believe it or not, I’m not perfect), or because the replication package was published before the Data Editor was appointed?<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> In fact, on November 1, 2024, the folks at PSID did just that: Contacted a large number of authors that had included PSID data in their replication packages, asking them to remove the data.</p>
+
+<p>It is worth reminding that the <a href="https://simba.isr.umich.edu/U/CondUse.aspx">PSID terms of use</a>, which everybody agrees to when downloading the data, are quite clear:</p>
+
+<blockquote>
+  <ol>
+    <li>Not transfer PSID public data that has been downloaded from the website, including user-created data extracts, to any third parties…</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>So what can authors do?</p>
+</blockquote>
+
+<h3 id="preliminary-steps">Preliminary steps</h3>
+
+<p>The first steps involve getting access to your own replication package. This may differ by when the replication package was published.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+
+<ul>
+  <li>For authors with papers published before 2019 (approximately)
+    <ul>
+      <li>All authors will need to get an openICPSR login, which will serve them both for the changes to the AEA and for creating the new PSID deposit.</li>
+      <li>They will need to request access to the deposit. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may be able to help with that. The authors should mention the URL or DOI, and the openICPSR login they want the deposit associated with.</li>
+    </ul>
+  </li>
+  <li>
+    <p>For authors with more recent papers:</p>
+
+    <ul>
+      <li>They will need to re-create an ICPSR account <strong>with the same email as previously used</strong> since <a href="https://researcherpassport.icpsr.umich.edu/help">ICPSR changed their login system in Feb 2024</a>. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may help with that.</li>
+      <li>They need to then <a href="https://www.aeaweb.org/journals/data/revisions-policy#createnewversion">create a new version</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/icpsr-create-new-version.png" alt="Create a new version" />]</p>
+
+<h3 id="rules-that-apply-to-revisions-of-replication-packages">Rules that apply to revisions of replication packages</h3>
+
+<p>Here are a few simple rules:</p>
+
+<ul>
+  <li>The modified package should differ only as necessary from the original package. Less work for the author, greater clarity for replicators, everybody wins.</li>
+  <li>Journal-specific policies may apply. For instance, the AEA has a <a href="https://www.aeaweb.org/journals/data/revisions-policy">Policy on Revisions of Data and Code Deposits in the AEA Data and Code Repository</a>. Among other things, it requires that all changes be clearly identified.</li>
+</ul>
+
+<h3 id="fixing-the-problem">Fixing the problem</h3>
+
+<p>Once the preliminaries are done, here’s what authors need to do to remain compliant with AEA policy (similar rules may apply at other journals):</p>
+
+<ul>
+  <li>PSID actually has a way to properly and openly preserve the user-created extracts in compliance with their terms of use. It is the <a href="https://www.openicpsr.org/openicpsr/psid">PSID Repository on openICPSR</a>.</li>
+  <li>For sake of discussion, the “original replication package” is V1. The replacement replication package will be V2.</li>
+</ul>
+
+<p><img src="/images/psid-repository.png" alt="Image of PSID repository" /></p>
+
+<ul>
+  <li>For sake of discussion, consider the case where V1 contains a single file <code class="language-plaintext highlighter-rouge">psid.dta</code>.</li>
+  <li>Authors should <a href="https://www.openicpsr.org/openicpsr/psid/deposit-instructions">create a new deposit at the PSID repository</a> with title “Supplementary data for: [NAME OF THE MANUSCRIPT]”.
+    <ul>
+      <li>Put into it ONLY the PSID data <code class="language-plaintext highlighter-rouge">psid.dta</code>.</li>
+      <li>You might want to add the DOI of V1 and the DOI of the manuscript in the “Related publications” section.</li>
+      <li>Publish it.</li>
+      <li>Remember the DOI (not the URL). Call this the “PSID DOI”.</li>
+    </ul>
+  </li>
+  <li>Log on to the V1 deposit. You should be in “Modifying” mode.</li>
+  <li>Remove (delete) the same PSID data you just uploaded into the PSID deposit, from the openICPSR AEA deposit V1.</li>
+  <li>Update the README with “PSID data for this package can be obtained from [PSID DOI]” in an appropriate location. The ideal README follows the <a href="https://doi.org/10.5281/zenodo.7293838">Template README published by the Social Science Data Editors</a>, but make only minimal changes to the README in this deposit. Delete the old README (<em>completely</em>), upload the new README (in PDF format).</li>
+  <li><a href="https://www.aeaweb.org/journals/data/revisions-policy#identifying">Create a <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</a>  Identify changes made. E.g. “V2: Moved PSID data to [PSID DOI]”. Upload the <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</li>
+  <li>(Optional) Link to the PSID DOI in the “Related publications” section of the deposit.</li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Re-Submit to the AEA</a></li>
+  <li>Contact the <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> and ask them to “Unpublish” the V1 deposit.</li>
+</ul>
+
+<p><img src="/images/project-submit.png" alt="(Re-)Submit to the AEA" /></p>
+
+<h3 id="the-end-state">The end state</h3>
+
+<p>After all the fixes,</p>
+
+<ul>
+  <li>V1 is still visible, but can no longer be downloaded.</li>
+  <li>the PSID deposit is now available. Users who want to download the data have to agree to the PSID’s terms of use. You are now in compliance with the PSID’s terms of use!</li>
+  <li>V2 is published, contains no PSID data, links to the PSID deposit, and remains otherwise available to replicators. You are still in compliance with the AEA publication agreements and your obligations as an AEA author!</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>The problem outlined above is not unique to the PSID. We have seen “takedown” requests from the German Socio-Economic Panel and others, and I have prevented inadvertent publication of UNSD Comtrade data, Compustat data, commercial data, PII-laden data, etc. The PSID is relatively unique in that it has a mechanism to actually preserve the author-created extracts. A few other such mechanisms exist, but they are by no means universal. Most “takedown” requests can only be satisfied with the deletion of data, and the inclusion of detailed information on how others can obtain the data from the original data provider - an error-prone and not ideal process.</p>
+
+<p>Authors should feel free to reach out to their journal’s data and reproducibility editor with questions about the available options.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I was appointed as Data Editor position  in 2018, and we started verification of packages in 2019. We also only do a cursory review of Papers and Proceedings, though they remain subject to the same Data and Code Availability Policy. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>The dividing line is approximately Oct 1, 2019. In 2019, <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">we migrated approximately 2,500 older replication packages into openICPSR</a>. Authors were not involved in this process, and so do not have operational access to the replication package. They do, however, have ownership of the deposit, and can request access to it. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><summary type="html"><![CDATA[The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data. So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!]]></summary></entry><entry><title type="html">On the use and reuse of within-project code</title><link href="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication" rel="alternate" type="text/html" title="On the use and reuse of within-project code" /><published>2024-07-19T00:00:00-04:00</published><updated>2024-07-19T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/functions-and-code-duplication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication"><![CDATA[<p>We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.</p>
 
 <!-- more -->
 
@@ -781,143 +905,4 @@ None of those directly address when an NDA is required, but the generic “<a hr
 <ul>
   <li><a href="https://www.aeaweb.org/journals/data/policy-revisions">The replication package revision policy at the AEA</a></li>
   <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Guidance on how to re-submit</a> (hint: it’s much like the initial submission…)</li>
-</ul>]]></content><author><name>AEA Data Editor</name></author><category term="updating" /><category term="improvement" /><category term="reproducibility" /><summary type="html"><![CDATA[I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual reports). I’ll describe the process and give a few examples here.]]></summary></entry><entry><title type="html">Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles</title><link href="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304" rel="alternate" type="text/html" title="Some remarks on challenges and solutions when conducting reproducibility checking for two recent AEJ:Applied articles" /><published>2023-03-29T00:00:00-04:00</published><updated>2023-03-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/challenges-aejapplied-202304</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-03-29-challenges-aejapplied-202304"><![CDATA[<p>I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (<a href="https://www.aeaweb.org/issues/715">April 2023</a>) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.</p>
-
-<!-- more -->
-
-<p>The two articles are</p>
-
-<ul>
-  <li>
-    <p><a href="https://doi.org/10.1257/app.20200398">Infrastructure Costs</a> (Leah Brooks and Zachary Liscow)</p>
-  </li>
-  <li>
-    <p><a href="https://doi.org/10.1257/app.20200196">DETER-ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement</a> (Juliano Assunção, Clarissa Gandour and Romero Rocha)</p>
-  </li>
-</ul>
-
-<p>Each of these articles posed a different challenge to my team. In all cases, they are highly complex analyses with large, sometimes very large, data sources.</p>
-
-<h2 id="using-zenodo-to-augment-primary-replication-packages">Using Zenodo to augment primary replication packages</h2>
-
-<p>First, let me consider the impressive work by 
-Leah Brooks and Zachary Liscow, “<a href="https://doi.org/10.1257/app.20200398">Infrastructure Costs</a>”.</p>
-
-<p><img src="/images/aejapplied-715-2.png" alt="Brooks and Liscow paper" /></p>
-
-<p>The paper conducts an investigation of the cost of building the US Interstate Highway System, from the 60s to the 80s. There are a lot of miles in the Highway system (about 49,000 miles or 79,000 kilometers), and their data covers a long time period in which much data was not necessarily easily available as digital records. As they so blithely say, “we digitize annual state-level spending data from 1956 to the present… first to use more than a few years of these data…”. While that’s already a lot, they also use the “USGS National Map 3DEP 1-Arc-second Digital Elevation Models” and “National Wetlands Inventory of the United States - State and Substate Shapefiles” (among others) in the analysis. Each of these sources have several hundred files and several dozen gigabytes of data:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Component</th>
-      <th>Size (GB)</th>
-      <th>Count (files)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>USGS National Map 3DEP 1-Arc-second Digital Elevation Models</td>
-      <td>83.8</td>
-      <td>3449</td>
-    </tr>
-    <tr>
-      <td>National Wetlands Inventory of the United States - State and Substate Shapefiles</td>
-      <td>49.3</td>
-      <td>150</td>
-    </tr>
-    <tr>
-      <td>Remainder of the <a href="https://doi.org/10.3886/E144281V1">replication package</a></td>
-      <td>18.53</td>
-      <td>940</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>While both of these sources are in the public domain, they are large, and were, in fact, augmented by the authors.</p>
-
-<p>Two problems arose for us: how do we make these data available to others, and how do we highlight the value-added that the authors have contributed?</p>
-
-<p>The first problem arises because openICPSR, the repository used as the primary deposit for AEA replication packages, does not handle deposits of more than 20GB gracefully. As of 2023, it is slow to create such deposits, and very slow for others to re-use these packages. There also appear to be hard limits around 30GB and 1,000 files.</p>
-
-<p>The second problem is a more philosophical one. While anybody can go back to USGS or the US. Fish and Wildlife Service to obtain these data, most US government agencies do not properly curate or preserve their data. These data may not be there, or they may no longer be there in this format. In fact, for the USGS data, the authors used DVDs that were originally purchased from the US government, augmented by targeted downloads from an interactive, non-scriptable downloader, to fill in missing rasters.</p>
-
-<p>We addressed both of these problems by creating two auxiliary deposits on Zenodo, and removing the data from the primary replication package on openICPSR. The resulting two Zenodo archives are part of the (growing) <a href="https://zenodo.org/communities/aeajournals/">American Economic Association community on Zenodo</a>:</p>
-
-<p><img src="/images/aejapplied-715-2-zenodo-1.png" alt="one of the Zenodo deposits" /></p>
-
-<ul>
-  <li>U.S. Geological Survey, &amp; Brooks, Leah. (2022). “USGS National Map 3DEP 1 Arc-second Digital Elevation Models (DEMs): Full Coverage for U.S. Interstate Highway System [Data set].” Zenodo. <a href="https://doi.org/10.5281/zenodo.5830968">https://doi.org/10.5281/zenodo.5830968</a></li>
-  <li>U.S. Fish &amp; Wildlife Service. (2022). “National Wetlands Inventory of the United States - State and Substate Shapefiles (Version v2018) [Data set].” Zenodo. <a href="https://doi.org/10.5281/zenodo.5823387">https://doi.org/10.5281/zenodo.5823387</a></li>
-</ul>
-
-<p>While downloading nearly 130GB of data from any repository can still be challenging in time and robustness, these data resources are now available.</p>
-
-<h3 id="tools-that-we-used">Tools that we used</h3>
-
-<ul>
-  <li><a href="https://github.com/AEADataEditor/Upload-to-Zenodo">Zenodo uploader via API</a>, originally written by a former RA, to upload all files.</li>
-  <li><a href="https://github.com/dvolgyes/zenodo_get"><code class="language-plaintext highlighter-rouge">zenodo_get</code></a> to re-download thousands of files.</li>
-</ul>
-
-<p>Oh, and because it still takes over 250GB of local disk space and substantial processing time to reproduce the replication package, this is one of the replication packages that we inspected (deeply), but which we did NOT actually run. However, we are confident that a replicator with sufficient resources (including time) can do so. Nevertheless, should a replicator encounter issues, please do contact us, and we will, in turn, contact the authors, if appropriate, to update their replication package as per our <a href="https://www.aeaweb.org/journals/data/policy-revisions">revision policy</a>.</p>
-
-<h2 id="using-compute-capsules-for-easy-reproduction">Using compute capsules for easy reproduction</h2>
-
-<p>I have previously discussed the <a href="https://aeadataeditor.github.io/posts/2021-11-16-docker">use of Docker in economics</a>. In “<a href="https://doi.org/10.1257/app.20200196">DETER-ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement</a>”, Juliano Assunção, Clarissa Gandour and Romero Rocha collect a whole lot of publicly available Brazilian data, clean it all, and for this article, analyze a particular aspect of it (cloud cover preventing the DETER system from working in a particular area). Because this is a part of what their home institution (the <a href="https://cpiglobal.org">Climate Policy Initiative</a>) does regularly, the data cleaning is part of a data processing pipeline, and run in R. The analysis, as with so many analyses created by economists, runs in Stata.</p>
-
-<p>While it is possible to create a pipeline using both R and Stata, either by combining multiple containers in sequence, or <a href="https://github.com/AEADataEditor/docker-stata-R-example">by combining Stata and R in the same container</a>, this is typically not possible (or very hard) in the easy-to-use online interfaces to Docker such as <a href="https://codeocean.com">CodeOcean</a> and <a href="https://wholetale.org">Wholetale</a>. However, in this case, we wanted to make the analysis easily accessible to others. That also argued against combining the two parts into a single compute capsule: the data processing takes about three weeks, while the core analysis only takes a few minutes.</p>
-
-<p>So in coordination with me, the authors (corresponding author Clarissa Gandour) split the analysis out in a self-standing “capsule” (<a href="https://doi.org/10.24433/CO.5098352.v1">https://doi.org/10.24433/CO.5098352.v1</a>), while the whole processing pipeline is made available in the main replication package on openICPSR (<a href="https://doi.org/10.3886/E132281V1">https://doi.org/10.3886/E132281V1</a>). Interested replicators can go through the whole data cleaning process (as required by <a href="https://www.aeaweb.org/journals/data/data-code-policy">our policy</a>), but if instead they want to focus on the analysis, they can do so with a couple of clicks in CodeOcean.</p>
-
-<p><img src="/images/aejapplied-715-6-codeocean.png" alt="Copy a capsule" /></p>
-
-<p>They can, of course, also run the analysis on their own computer, either following the instructions in the README while running with their own copy of Stata, or running it on their own computer through Docker, using the CodeOcean-provided container combined with their own license.</p>
-
-<p>In this case, we did not run the final version of the data cleaning pipeline, because we inspected the code, ran parts of it, and assessed that it was reproducible (we had run the first draft of the data cleaning pipeline, and sent the authors our feedback). We <em>also</em> did not run the analysis part - not because it’s not feasible, but because the authors ran the analysis on CodeOcean to produce the output in the manuscript. It is that output - together with a screen capture of Stata as it is chugging along - which is visible in the CodeOcean interface:</p>
-
-<p><img src="/images/aejapplied-715-6-codeocean-run.png" alt="Results from run" /></p>
-
-<p>We thus did not <em>need</em> to run it, because the authors had run it in an environment which we know is fundamentally reproducible.</p>
-
-<h3 id="tools-that-we-used-1">Tools that we used</h3>
-
-<ul>
-  <li><a href="https://codeocean.com">CodeOcean</a> - academic users have 10 free hours per month</li>
-  <li><a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a> on local machines, to test the independent reproducibility of the package
-    <ul>
-      <li>including the <a href="https://hub.docker.com/r/dataeditors/stata17">Docker Stata image</a> that <a href="https://github.com/AEADataEditor/docker-stata">I prepare</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="what-are-still-unsolved-issues-in-these-scenarios">What are still unsolved issues in these scenarios</h2>
-
-<p>The two articles illustrate a few key points when it comes to larger-than-usual analyses. First, despite the size of the data, it is feasible to archive and preserve the data in ways that makes it usable for others. However, neither article is fully integrated, when theoretically that is possible. In the Brooks and Liscow article, the current version of the code does not dynamically download the Zenodo-hosted data - that is a manual process. In the Assunção, Gandour, and Rocha article, the data cleaning pipeline is not in CodeOcean, because in the end, the authors would still have needed to copy the output from their data cleaning into the analysis capsule.</p>
-
-<p>Would it be possible to chain two CodeOcean capsules - one running the “DETER” three-week data cleaning pipeline, the other the 5 minute data analysis code?</p>
-
-<p><img src="/images/chained-analysis.png" alt="Chained capsules" /></p>
-
-<p>As of 2023, it is not, at least not in the public product (it is a feature of CodeOcean’s on-premise solutions, however). Could the Brooks and Liscow article have integrated data storage on Zenodo from the start? Solutions that do so exist (see <a href="https://snakemake.readthedocs.io/en/v7.6.2/snakefiles/remote_files.html">Snakemake</a> and one of its front-ends <a href="https://show-your.work/en/latest/">show your work!</a>), but are rarely seen in economics (and come with their own reproducibility demons).</p>
-
-<p>The Assunção, Gandour, and Rocha capsule is, however, an example of how porting the analysis code for the article, and then using it as the primary interface for the final versions is feasible.</p>
-
-<p>While time-consuming, the upload of some of the key value-added files from the Brooks and Liscow article have already proven useful to others - while the original replication package has had 34 unique visitors, the Zenodo-hosted data have had 173 and 103 unique visitors as of this writing! Whether this ultimately leads to more citations (another metric that apparently some folks care about) remains to be seen in the future.</p>
-
-<h2 id="disclosures">Disclosures</h2>
-
-<p>As noted, CodeOcean currently offers academics 10 hours of compute time per month for free. They have also supported the Data Editor’s work with a generous compute quota (which allows us to run weeks-long analyses). I am neither paid, nor do I detain any shares in CodeOcean, nor do I receive a commission for any new customers signing up for a CodeOcean account (which in fact is free). Docker is a commercial company, and I am a paying individual subscriber in order to host container images that the AEA uses. Running containers on personal computers remains free, and running containers on most Linux servers is also free (there are many ways to run containers, not just using Docker’s runtime). Wholetale is an academic infrastructure funded by the National Science Foundation. I have been part of such funding in the past through a <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1541450&amp;HistoricalAwards=false">subaward</a>, and am currently collaborating with the maintainers of Wholetale on a <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=2209629&amp;HistoricalAwards=false">project</a> that, if successful, would be beneficial to Wholetale. And CodeOcean. And a bunch of other computing infrastructures around the world. Wholetale is free to use, without limitations.</p>
-
-<h2 id="references">References</h2>
-
-<ol class="bibliography"><li><span id="6e56ee69-5af9-4291-94f1-5d6927775bc5">Assunção, Juliano, Clarissa Gandour, and Romero Rocha. 2021. “Replication Capsule for: DETERring Deforestation in the Amazon: Environmental Monitoring and Law Enforcement.” <i>American Economic Journal: Applied Economics</i>. https://doi.org/10.24433/CO.5098352.v1.</span></li>
-<li><span id="10.1257/app.20200196">———. 2023. “DETER-Ing Deforestation in the Amazon: Environmental Monitoring and Law Enforcement.” <i>American Economic Journal: Applied Economics</i> 15 (2): 125–56. https://doi.org/10.1257/app.20200196.</span></li>
-<li><span id="brooks-liscow-package">Brooks, Leah, and Zachary Liscow. 2023. “Data and Code for: Infrastructure Costs.” [Replication package]. American Economic Association [publisher], 2023. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E144281V1.</span></li>
-<li><span id="10.1257/app.20200398">———. 2023. “Infrastructure Costs.” <i>American Economic Journal: Applied Economics</i> 15 (2): 1–30. https://doi.org/10.1257/app.20200398.</span></li>
-<li><span id="u_s_fish_wildlife_service_2022_5823387">U.S. Fish &amp; Wildlife Service. 2022. “National Wetlands Inventory of the United States - 
-                   State and Substate Shapefiles.” Zenodo. https://doi.org/10.5281/zenodo.5823387.</span></li>
-<li><span id="u_s_geological_survey_2022_5830968">U.S. Geological Survey, and Leah Brooks. 2022. “USGS National Map 3DEP 1 Arc-Second Digital 
-                   Elevation Models (DEMs): Full Coverage for U.S.
-                   Interstate Highway System.” Zenodo. https://doi.org/10.5281/zenodo.5830968.</span></li></ol>
-<p>.</p>]]></content><author><name>AEA Data Editor</name></author><category term="big data" /><category term="complex projects" /><category term="AEJ:Applied" /><summary type="html"><![CDATA[I wanted to briefly discuss the challenges when conducting data provenance and reproducibility checks, for complex and highly interesting articles, with the example of two articles in the most recent (April 2023) issue of the American Economic Journal: Applied Economics. The solutions involved online compute capsules and alternative repositories.]]></summary></entry></feed>
+</ul>]]></content><author><name>AEA Data Editor</name></author><category term="updating" /><category term="improvement" /><category term="reproducibility" /><summary type="html"><![CDATA[I have previously posted about how to update a replication package, after initial publication. We do get more than a dozen such updates a year (see my annual reports). I’ll describe the process and give a few examples here.]]></summary></entry></feed>

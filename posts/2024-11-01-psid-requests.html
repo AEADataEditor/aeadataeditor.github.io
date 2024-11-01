@@ -1,0 +1,747 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to respond to data provider requests for data removal (take-down requests) - Office of the AEA Data Editor</title>
+<meta name="description" content="The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.  So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="How to respond to data provider requests for data removal (take-down requests)">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests">
+
+
+  <meta property="og:description" content="The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.  So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="How to respond to data provider requests for data removal (take-down requests)">
+  <meta name="twitter:description" content="The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.  So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2024-11-01T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to respond to data provider requests for data removal (take-down requests)">
+    <meta itemprop="description" content="The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!">
+    <meta itemprop="datePublished" content="2024-11-01T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">How to respond to data provider requests for data removal (take-down requests)
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-11-01T00:00:00-04:00">November 01, 2024</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>The <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.</p>
+
+<p>So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by <a href="https://www.aeaweb.org/journals/forms/data-code-archive-agreement">signing an agreement</a>) to not withdrawing the replication package. How to proceed? Read on!</p>
+
+<!-- more -->
+
+<h2 id="in-a-nutshell">In a nutshell</h2>
+
+<p>The gist of the solution is the following, for AEA manuscripts (which I obviously know well), but probably similarly for other journals:</p>
+
+<ul>
+  <li>Remove the infringing data from V1 of the replication package.</li>
+  <li>[Ideally] Create a new, separate deposit that is in compliance with the data provider’s terms of use.</li>
+  <li>Document the new location of the now absent data in the README of the replication package.</li>
+  <li>Submit the revised replication package to the journal.</li>
+  <li>The journal publishes V2 of the replication package, which is now compliant.</li>
+</ul>
+
+<h2 id="an-example-psid-data">An example: PSID data</h2>
+
+<p>For years, I as Data Editor have alerted authors when I detected data that infringes on terms of use. Two of the most frequent cases are the Panel Study of Income Dynamics (PSID) and the UNSD’s Comtrade data. We even have an <a href="https://www.aeaweb.org/journals/data/faq#psid">FAQ entry dedicated to the PSID case</a> and a <a href="https://github.com/AEADataEditor/replication-template/blob/master/sample-language-report.md?plain=1#L243">copy-and-paste entry in our “most frequent errors” document</a>.</p>
+
+<p>But what if PSID data does end up in a deposit, either because I missed it (believe it or not, I’m not perfect), or because the replication package was published before the Data Editor was appointed?<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> In fact, on November 1, 2024, the folks at PSID did just that: Contacted a large number of authors that had included PSID data in their replication packages, asking them to remove the data.</p>
+
+<p>It is worth reminding that the <a href="https://simba.isr.umich.edu/U/CondUse.aspx">PSID terms of use</a>, which everybody agrees to when downloading the data, are quite clear:</p>
+
+<blockquote>
+  <ol>
+    <li>Not transfer PSID public data that has been downloaded from the website, including user-created data extracts, to any third parties…</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>So what can authors do?</p>
+</blockquote>
+
+<h3 id="preliminary-steps">Preliminary steps</h3>
+
+<p>The first steps involve getting access to your own replication package. This may differ by when the replication package was published.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+
+<ul>
+  <li>For authors with papers published before 2019 (approximately)
+    <ul>
+      <li>All authors will need to get an openICPSR login, which will serve them both for the changes to the AEA and for creating the new PSID deposit.</li>
+      <li>They will need to request access to the deposit. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may be able to help with that. The authors should mention the URL or DOI, and the openICPSR login they want the deposit associated with.</li>
+    </ul>
+  </li>
+  <li>
+    <p>For authors with more recent papers:</p>
+
+    <ul>
+      <li>They will need to re-create an ICPSR account <strong>with the same email as previously used</strong> since <a href="https://researcherpassport.icpsr.umich.edu/help">ICPSR changed their login system in Feb 2024</a>. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may help with that.</li>
+      <li>They need to then <a href="https://www.aeaweb.org/journals/data/revisions-policy#createnewversion">create a new version</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/icpsr-create-new-version.png" alt="Create a new version" />]</p>
+
+<h3 id="rules-that-apply-to-revisions-of-replication-packages">Rules that apply to revisions of replication packages</h3>
+
+<p>Here are a few simple rules:</p>
+
+<ul>
+  <li>The modified package should differ only as necessary from the original package. Less work for the author, greater clarity for replicators, everybody wins.</li>
+  <li>Journal-specific policies may apply. For instance, the AEA has a <a href="https://www.aeaweb.org/journals/data/revisions-policy">Policy on Revisions of Data and Code Deposits in the AEA Data and Code Repository</a>. Among other things, it requires that all changes be clearly identified.</li>
+</ul>
+
+<h3 id="fixing-the-problem">Fixing the problem</h3>
+
+<p>Once the preliminaries are done, here’s what authors need to do to remain compliant with AEA policy (similar rules may apply at other journals):</p>
+
+<ul>
+  <li>PSID actually has a way to properly and openly preserve the user-created extracts in compliance with their terms of use. It is the <a href="https://www.openicpsr.org/openicpsr/psid">PSID Repository on openICPSR</a>.</li>
+  <li>For sake of discussion, the “original replication package” is V1. The replacement replication package will be V2.</li>
+</ul>
+
+<p><img src="/images/psid-repository.png" alt="Image of PSID repository" /></p>
+
+<ul>
+  <li>For sake of discussion, consider the case where V1 contains a single file <code class="language-plaintext highlighter-rouge">psid.dta</code>.</li>
+  <li>Authors should <a href="https://www.openicpsr.org/openicpsr/psid/deposit-instructions">create a new deposit at the PSID repository</a> with title “Supplementary data for: [NAME OF THE MANUSCRIPT]”.
+    <ul>
+      <li>Put into it ONLY the PSID data <code class="language-plaintext highlighter-rouge">psid.dta</code>.</li>
+      <li>You might want to add the DOI of V1 and the DOI of the manuscript in the “Related publications” section.</li>
+      <li>Publish it.</li>
+      <li>Remember the DOI (not the URL). Call this the “PSID DOI”.</li>
+    </ul>
+  </li>
+  <li>Log on to the V1 deposit. You should be in “Modifying” mode.</li>
+  <li>Remove (delete) the same PSID data you just uploaded into the PSID deposit, from the openICPSR AEA deposit V1.</li>
+  <li>Update the README with “PSID data for this package can be obtained from [PSID DOI]” in an appropriate location. The ideal README follows the <a href="https://doi.org/10.5281/zenodo.7293838">Template README published by the Social Science Data Editors</a>, but make only minimal changes to the README in this deposit. Delete the old README (<em>completely</em>), upload the new README (in PDF format).</li>
+  <li><a href="https://www.aeaweb.org/journals/data/revisions-policy#identifying">Create a <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</a>  Identify changes made. E.g. “V2: Moved PSID data to [PSID DOI]”. Upload the <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</li>
+  <li>(Optional) Link to the PSID DOI in the “Related publications” section of the deposit.</li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Re-Submit to the AEA</a></li>
+  <li>Contact the <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> and ask them to “Unpublish” the V1 deposit.</li>
+</ul>
+
+<p><img src="/images/project-submit.png" alt="(Re-)Submit to the AEA" /></p>
+
+<h3 id="the-end-state">The end state</h3>
+
+<p>After all the fixes,</p>
+
+<ul>
+  <li>V1 is still visible, but can no longer be downloaded.</li>
+  <li>the PSID deposit is now available. Users who want to download the data have to agree to the PSID’s terms of use. You are now in compliance with the PSID’s terms of use!</li>
+  <li>V2 is published, contains no PSID data, links to the PSID deposit, and remains otherwise available to replicators. You are still in compliance with the AEA publication agreements and your obligations as an AEA author!</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>The problem outlined above is not unique to the PSID. We have seen “takedown” requests from the German Socio-Economic Panel and others, and I have prevented inadvertent publication of UNSD Comtrade data, Compustat data, commercial data, PII-laden data, etc. The PSID is relatively unique in that it has a mechanism to actually preserve the author-created extracts. A few other such mechanisms exist, but they are by no means universal. Most “takedown” requests can only be satisfied with the deletion of data, and the inclusion of detailed information on how others can obtain the data from the original data provider - an error-prone and not ideal process.</p>
+
+<p>Authors should feel free to reach out to their journal’s data and reproducibility editor with questions about the available options.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I was appointed as Data Editor position  in 2018, and we started verification of packages in 2019. We also only do a cursory review of Papers and Proceedings, though they remain subject to the same Data and Code Availability Policy. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>The dividing line is approximately Oct 1, 2019. In 2019, <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">we migrated approximately 2,500 older replication packages into openICPSR</a>. Authors were not involved in this process, and so do not have operational access to the replication package. They do, however, have ownership of the deposit, and can request access to it. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#terms-of-use" class="page__taxonomy-item" rel="tag">terms of use</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2024-11-01T00:00:00-04:00">November 1, 2024</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=How+to+respond+to+data+provider+requests+for+data+removal+%28take-down+requests%29%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-11-01-psid-requests" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2024-11-01-psid-requests" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-07-19-functions-and-code-duplication" rel="permalink">On the use and reuse of within-project code
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only m...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-29-use-and-reuse-of-data" rel="permalink">On the use and redistribution of data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the dat...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-11-random-notes-ama" rel="permalink">Random notes from the AMAs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-10-aej-best-papers-2024" rel="permalink">AEJ Best Papers 2024 and replication packages
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The annual American Economic Journal (AEJ) Best Paper Awards highlight the best paper published in each of the American Economic Journals: Applied Economics,...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2024-11-01-psid-requests.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

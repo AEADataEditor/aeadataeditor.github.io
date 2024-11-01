@@ -23,16 +23,64 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposit",
+        "teaser": null
+      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
         "teaser": null
       },{
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/reproducibility-checks",
+        "teaser": null
+      },{
+        "title": "Privately sharing restricted-access data with the AEA Data Editor",
+        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-restricted-data",
+        "teaser": null
+      },{
+        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
+        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Sharing of Pre-Publication openICPSR deposits",
+        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-openicpsr",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
+        "excerpt":"THIS GUIDE IS OUTDATED, AND SHOULD NOT BE FOLLOWED. IT IS KEPT FOR HISTORICAL REASONS. This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
+        "teaser": null
+      },{
         "title": "Frequently Asked Questions",
         "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/FAQ.html",
+        "teaser": null
+      },{
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
+        "title": "Creating a Restricted Data Deposit  for AEA Publications",
+        "excerpt":"The original guide on how to deposit restricted-access data on openICPSR is available here. DO NOT USE THOSE INSTRUCTIONS, AS THEY ARE NO LONGER ACCURATE. The AEA requires that data be as open as legally and ethically possible. To deposit restricted-access data, to the best of our knowledge, no uniquely...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
         "title": "Step by step guidance",
@@ -53,58 +101,10 @@ var store = [{
         "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
-        "teaser": null
-      },{
-        "title": "Privately sharing restricted-access data with the AEA Data Editor",
-        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/sharing-restricted-data",
-        "teaser": null
-      },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposit",
-        "teaser": null
-      },{
-        "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
-        "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/data-deposit-aea",
-        "teaser": null
-      },{
         "title": "Guidance on how to prepare a comment based on a replication",
         "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/replication-comment",
-        "teaser": null
-      },{
-        "title": "Sharing of Pre-Publication openICPSR deposits",
-        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/sharing-openicpsr",
-        "teaser": null
-      },{
-        "title": "Creating a Restricted Data Deposit  for AEA Publications",
-        "excerpt":"THIS GUIDE IS OUTDATED, AND SHOULD NOT BE FOLLOWED. IT IS KEPT FOR HISTORICAL REASONS. This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
-        "teaser": null
-      },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
-        "title": "Creating a Restricted Data Deposit  for AEA Publications",
-        "excerpt":"The original guide on how to deposit restricted-access data on openICPSR is available here. DO NOT USE THOSE INSTRUCTIONS, AS THEY ARE NO LONGER ACCURATE. The AEA requires that data be as open as legally and ethically possible. To deposit restricted-access data, to the best of our knowledge, no uniquely...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -285,6 +285,12 @@ var store = [{
         "excerpt":"We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for...","categories": [],
         "tags": ["data editor tips","replication packages","code","function libraries"],
         "url": "/posts/2024-07-19-functions-and-code-duplication",
+        "teaser": null
+      },{
+        "title": "How to respond to data provider requests for data removal (take-down requests)",
+        "excerpt":"The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s,...","categories": [],
+        "tags": ["data editor tips","replication packages","terms of use"],
+        "url": "/posts/2024-11-01-psid-requests",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",
