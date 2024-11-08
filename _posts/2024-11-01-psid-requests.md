@@ -81,7 +81,7 @@ Once the preliminaries are done, here's what authors need to do to remain compli
 
 - Authors should [create a new deposit at the PSID repository](https://www.openicpsr.org/openicpsr/psid/deposit-instructions) with title "**Supplementary data** for: [NAME OF THE MANUSCRIPT]". 
   - Put into it ONLY the PSID data `psid.dta`. Do not put other things into this deposit.
-  - You might want to add the **DOI** of V1 and the **DOI** of the manuscript in the "Related publications" section.
+  - You might want to add the **DOI** of V1 and the **DOI** of the manuscript in the "Related publications" section  (use the `Import from DOI` functionality, choose `is supplemented by` for the `Relationship` field)
   - Publish it. 
   - Remember the DOI (not the URL). Call this the "[PSID DOI]". Replace this with the **actual** DOI everywhere it is mentioned below!
 
@@ -99,7 +99,7 @@ V1: Original deposit
 V2: PSID data moved to [PSID DOI]
 ```
 - Upload the `CHANGES.txt`.
-- Link to the [PSID DOI] in the "Related publications" section of the deposit.
+- Link to the [PSID DOI] in the "Related publications" section of the deposit (use the `Import from DOI` functionality, choose `is supplemented by` for the `Relationship` field)
 - You *may* have to add the "manuscript number" to the metadata, see [this link](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#scope-of-project-section). Use the last part of the DOI of the paper, e.g. if the paper DOI is `https://doi.org/10.1257/aer.p20161120` then the "manuscript number" should be `aer.p20161120`.
 - [Re-Submit to the AEA](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor)
 - Contact the [openICPSR helpdesk](https://www.openicpsr.org/openicpsr/contactUs) and ask them to "Unpublish" the V1 deposit.	
