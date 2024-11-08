@@ -75,17 +75,32 @@ Once the preliminaries are done, here's what authors need to do to remain compli
 
 ![Image of PSID repository](/images/psid-repository.png)
 
-- For sake of discussion, consider the case where V1 contains a single file `psid.dta`. 
-- Authors should [create a new deposit at the PSID repository](https://www.openicpsr.org/openicpsr/psid/deposit-instructions) with title "Supplementary data for: [NAME OF THE MANUSCRIPT]". 
-  - Put into it ONLY the PSID data `psid.dta`. 
-  - You might want to add the DOI of V1 and the DOI of the manuscript in the "Related publications" section.
+- For sake of discussion, consider the case where V1 contains a single file `psid.dta`.
+
+#### PSID deposit
+
+- Authors should [create a new deposit at the PSID repository](https://www.openicpsr.org/openicpsr/psid/deposit-instructions) with title "**Supplementary data** for: [NAME OF THE MANUSCRIPT]". 
+  - Put into it ONLY the PSID data `psid.dta`. Do not put other things into this deposit.
+  - You might want to add the **DOI** of V1 and the **DOI** of the manuscript in the "Related publications" section.
   - Publish it. 
-  - Remember the DOI (not the URL). Call this the "PSID DOI".
+  - Remember the DOI (not the URL). Call this the "[PSID DOI]". Replace this with the **actual** DOI everywhere it is mentioned below!
+
+#### Back in the AEA deposit
+
 - Log on to the V1 deposit. You should be in "Modifying" mode.
-- Remove (delete) the same PSID data you just uploaded into the PSID deposit, from the openICPSR AEA deposit V1. 
-- Update the README with "PSID data for this package can be obtained from [PSID DOI]" in an appropriate location. The ideal README follows the [Template README published by the Social Science Data Editors](https://doi.org/10.5281/zenodo.7293838), but make only minimal changes to the README in this deposit. Delete the old README (*completely*), upload the new README (in PDF format).
-- [Create a `CHANGES.txt`.](https://www.aeaweb.org/journals/data/revisions-policy#identifying)  Identify changes made. E.g. "V2: Moved PSID data to [PSID DOI]". Upload the `CHANGES.txt`.
-- (Optional) Link to the PSID DOI in the "Related publications" section of the deposit.
+- Remove (delete) the same PSID data (`psid.dta`) you just uploaded into the PSID deposit, from the openICPSR AEA deposit V1. 
+- Update the README with "PSID data for this package can be obtained from [PSID DOI]" in an appropriate location. The ideal README follows the [Template README published by the Social Science Data Editors](https://doi.org/10.5281/zenodo.7293838), but make only minimal changes to the README in this deposit.
+  - Delete the old README (*completely*),
+  - Upload the new README (in PDF format) to the same location the original one was
+- [Create a `CHANGES.txt`.](https://www.aeaweb.org/journals/data/revisions-policy#identifying)  Identify changes made. E.g. "V2: Moved PSID data to [PSID DOI]".  It should look something like this:
+
+```
+V1: Original deposit
+V2: PSID data moved to [PSID DOI]
+```
+- Upload the `CHANGES.txt`.
+- Link to the [PSID DOI] in the "Related publications" section of the deposit.
+- You *may* have to add the "manuscript number" to the metadata, see [this link](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#scope-of-project-section). Use the last part of the DOI of the paper, e.g. if the paper DOI is `https://doi.org/10.1257/aer.p20161120` then the "manuscript number" should be `aer.p20161120`.
 - [Re-Submit to the AEA](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor)
 - Contact the [openICPSR helpdesk](https://www.openicpsr.org/openicpsr/contactUs) and ask them to "Unpublish" the V1 deposit.	
 
