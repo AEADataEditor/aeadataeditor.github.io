@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-11-08T16:39:13-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">How to respond to data provider requests for data removal (take-down requests)</title><link href="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests" rel="alternate" type="text/html" title="How to respond to data provider requests for data removal (take-down requests)" /><published>2024-11-01T00:00:00-04:00</published><updated>2024-11-01T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/psid-requests</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests"><![CDATA[<p>The <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2024-11-19T11:12:47-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">How to respond to data provider requests for data removal (take-down requests)</title><link href="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests" rel="alternate" type="text/html" title="How to respond to data provider requests for data removal (take-down requests)" /><published>2024-11-01T00:00:00-04:00</published><updated>2024-11-01T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/psid-requests</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-11-01-psid-requests"><![CDATA[<p>The <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.</p>
 
 <p>So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by <a href="https://www.aeaweb.org/journals/forms/data-code-archive-agreement">signing an agreement</a>) to not withdrawing the replication package. How to proceed? Read on!</p>
 
@@ -20,7 +20,7 @@
 
 <p>For years, I as Data Editor have alerted authors when I detected data that infringes on terms of use. Two of the most frequent cases are the Panel Study of Income Dynamics (PSID) and the UNSD’s Comtrade data. We even have an <a href="https://www.aeaweb.org/journals/data/faq#psid">FAQ entry dedicated to the PSID case</a> and a <a href="https://github.com/AEADataEditor/replication-template/blob/master/sample-language-report.md?plain=1#L243">copy-and-paste entry in our “most frequent errors” document</a>.</p>
 
-<p>But what if PSID data does end up in a deposit, either because I missed it (believe it or not, I’m not perfect), or because the replication package was published before the Data Editor was appointed?<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> In fact, on November 1, 2024, the folks at PSID did just that: Contacted a large number of authors that had included PSID data in their replication packages, asking them to remove the data.</p>
+<p>But what if PSID data does end up in a deposit, either because I missed it (believe it or not, I’m not perfect), or because the replication package was published before the Data Editor was appointed?<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> In fact, on November 1, 2024, the folks at PSID did just that: Contacted a large number of authors that had included PSID data in their replication packages, asking them to remove the data.</p>
 
 <p>It is worth reminding that the <a href="https://simba.isr.umich.edu/U/CondUse.aspx">PSID terms of use</a>, which everybody agrees to when downloading the data, are quite clear:</p>
 
@@ -36,7 +36,7 @@
 
 <h3 id="preliminary-steps">Preliminary steps</h3>
 
-<p>The first steps involve getting access to your own replication package. This may differ by when the replication package was published.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+<p>The first steps involve getting access to your own replication package. This may differ by when the replication package was published.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
 <ul>
   <li>For authors with papers published before 2019 (approximately)
@@ -138,10 +138,10 @@ V2: PSID data moved to [PSID DOI]
 <p>Authors should feel free to reach out to their journal’s data and reproducibility editor with questions about the available options.</p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>I was appointed as Data Editor position  in 2018, and we started verification of packages in 2019. We also only do a cursory review of Papers and Proceedings, though they remain subject to the same Data and Code Availability Policy. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>The dividing line is approximately Oct 1, 2019. In 2019, <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">we migrated approximately 2,500 older replication packages into openICPSR</a>. Authors were not involved in this process, and so do not have operational access to the replication package. They do, however, have ownership of the deposit, and can request access to it. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -195,7 +195,7 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 
 <h2 id="a-possible-solution">A possible solution</h2>
 
-<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions" role="doc-noteref"><a href="#fn:functions" class="footnote" rel="footnote">1</a></sup></p>
+<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions"><a href="#fn:functions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
 <p>So should one go about the above problem? My rule of thumb is:</p>
 
@@ -230,7 +230,7 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 <span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
 </code></pre></div></div>
 
-<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function" role="doc-noteref"><a href="#fn:proper-function" class="footnote" rel="footnote">2</a></sup></p>
+<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function"><a href="#fn:proper-function" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
 <p>The robustness checks might then have</p>
 
@@ -305,10 +305,10 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 <p>Of course, you now also have  to properly capture all those results, store them, and be able to summarize them, and create tables from them. That’s another story.</p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:functions" role="doc-endnote">
+    <li id="fn:functions">
       <p>See for instance <a href="https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e">https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e</a>, but this will be repeated many times. I was personally influenced by reading the (very accessible, but 900 pages!) “<a href="https://bookshop.org/p/books/code-complete-steve-mcconnell/12551815?ean=9780735619678">Code Complete</a>” by Steve McConnell. Desirable internal design characteristics include “minimal complexity” (KISS), “ease of maintenance”, and “reusability” <a href="#fnref:functions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:proper-function" role="doc-endnote">
+    <li id="fn:proper-function">
       <p>In a proper function, you would pass the parameters as arguments, and validate that they are the right ones, etc.: <code class="language-plaintext highlighter-rouge">core-model(a,b,c)</code>. Read the programming language specific manual on how to properly write functions: <a href="https://www.stata.com/manuals/u17.pdf">Stata</a>, <a href="https://adv-r.hadley.nz/functions.html#functions">R via Hadley</a>, <a href="https://www.mathworks.com/help/matlab/ref/function.html">MATLAB</a>, etc. <a href="#fnref:proper-function" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -324,7 +324,7 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 
 <p>Many data used by economists stems from other data sources. Most of these data sources are on the internet. Anybody can use data that’s on the internet and do with it what they want, right?</p>
 
-<p>As the discussion surrounding copyright and artificial intelligence shows, the answer is complex.<sup id="fnref:nytai" role="doc-noteref"><a href="#fn:nytai" class="footnote" rel="footnote">1</a></sup><sup id="fnref:silverman" role="doc-noteref"><a href="#fn:silverman" class="footnote" rel="footnote">2</a></sup> There is a concept of “fair use” in US copyright law, and in particular, it has been used to allow for legal webscraping.<sup id="fnref:webscraping" role="doc-noteref"><a href="#fn:webscraping" class="footnote" rel="footnote">3</a></sup></p>
+<p>As the discussion surrounding copyright and artificial intelligence shows, the answer is complex.<sup id="fnref:nytai"><a href="#fn:nytai" class="footnote" rel="footnote" role="doc-noteref">1</a></sup><sup id="fnref:silverman"><a href="#fn:silverman" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> There is a concept of “fair use” in US copyright law, and in particular, it has been used to allow for legal webscraping.<sup id="fnref:webscraping"><a href="#fn:webscraping" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
 
 <p>But that applies primarily for “use”. If you want to publish the data you obtained from elsewhere, that is no longer necessarily considered (fair) “use”, it falls under “redistribution” or “publication”.</p>
 
@@ -409,13 +409,13 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:nytai" role="doc-endnote">
+    <li id="fn:nytai">
       <p>New York Times has sued OpenAI and Microsoft for having used their texts, see <a href="https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/">https://www.washingtonpost.com/technology/2024/01/04/nyt-ai-copyright-lawsuit-fair-use/</a>. <a href="#fnref:nytai" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:silverman" role="doc-endnote">
+    <li id="fn:silverman">
       <p>Sarah Silverman and other authors have sued OpenAI over the use of their texts, but parts of that lawsuit have been dismissed, see <a href="https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/">https://www.reuters.com/legal/litigation/openai-gets-partial-win-authors-us-copyright-lawsuit-2024-02-13/</a>. <a href="#fnref:silverman" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:webscraping" role="doc-endnote">
+    <li id="fn:webscraping">
       <p>See <a href="https://techcrunch.com/2022/04/18/web-scraping-legal-court/">https://techcrunch.com/2022/04/18/web-scraping-legal-court/</a>. <a href="#fnref:webscraping" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
@@ -739,7 +739,7 @@ None of those directly address when an NDA is required, but the generic “<a hr
 
 <h2 id="journal-verifiers-with-access">Journal verifiers with access</h2>
 
-<p>Another thing is that in some cases, as long as both the authors and the verifiers are (separately) subscribers, data may be able to be shared. But caution: not every “subscription” is the same. For instance, when researchers use WRDS data, they cannot directly share the data. In principle, I should be able to access the same data sources - as <a href="https://johnson.library.cornell.edu/database/wharton-research-data-services-wrds/">Cornell is also a subscriber</a>. But WRDS subscriptions have a huge menu of sub-options. The researcher may be able to access WRDS <a href="https://github.com/chrisconlon/CommonOwnerReplication/blob/master/code/1_Download_WRDS_Data.py">via the Python API</a>, but as it turns out, my subscription does not extend to that!<sup id="fnref:conlon" role="doc-noteref"><a href="#fn:conlon" class="footnote" rel="footnote">1</a></sup></p>
+<p>Another thing is that in some cases, as long as both the authors and the verifiers are (separately) subscribers, data may be able to be shared. But caution: not every “subscription” is the same. For instance, when researchers use WRDS data, they cannot directly share the data. In principle, I should be able to access the same data sources - as <a href="https://johnson.library.cornell.edu/database/wharton-research-data-services-wrds/">Cornell is also a subscriber</a>. But WRDS subscriptions have a huge menu of sub-options. The researcher may be able to access WRDS <a href="https://github.com/chrisconlon/CommonOwnerReplication/blob/master/code/1_Download_WRDS_Data.py">via the Python API</a>, but as it turns out, my subscription does not extend to that!<sup id="fnref:conlon"><a href="#fn:conlon" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
 <h2 id="journal-verifiers-acquiring-access">Journal verifiers acquiring access</h2>
 
@@ -795,7 +795,7 @@ None of those directly address when an NDA is required, but the generic “<a hr
 
 <p>Accessing confidential data as part of the verification process is not easy, but it is possible. Ensuring that others can re-use the data is sometimes easier, especially for researchers in the same field, in others harder, when a special clause in the NDA allowed the journal access, but cannot be extended to arbitrary future researchers. And the process must be allowed to fail, because interesting and illuminating research can be conducted with data that cannot be shared. In fact, an update to one of those NDAs negotiations just hit my inbox as I am writing this, and is likely to fail, due to the data provider not being willing to grant an exception or an extension in line with Toni’s original hope and request. That’s life, and is fine - it will not hold up the rest of the verification process that we are conducting, and will still ultimately lead to the publication of the paper.</p>
 
-<p>I see our goal as (data) editors to make these kind of constraints as clear as possible, for all future readers, for a very long time. After all, somebody might still want to correct the record in 100 years, or review what we knew now. It’s not like those articles are going anywhere, even if the data just might disappear! See one of the first “<strong>data corrections</strong>” I’m aware of, by Irving Fisher, 1911.<sup id="fnref:irving" role="doc-noteref"><a href="#fn:irving" class="footnote" rel="footnote">2</a></sup></p>
+<p>I see our goal as (data) editors to make these kind of constraints as clear as possible, for all future readers, for a very long time. After all, somebody might still want to correct the record in 100 years, or review what we knew now. It’s not like those articles are going anywhere, even if the data just might disappear! See one of the first “<strong>data corrections</strong>” I’m aware of, by Irving Fisher, 1911.<sup id="fnref:irving"><a href="#fn:irving" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
 <h2 id="additional-readings">Additional readings</h2>
 
@@ -810,10 +810,10 @@ None of those directly address when an NDA is required, but the generic “<a hr
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:conlon" role="doc-endnote">
+    <li id="fn:conlon">
       <p>We ultimately used a <a href="https://www.aeaweb.org/journals/data/policy-third-party">third-party replicator</a> with access to the Python API to verify the article. The replication package was found to be perfectly reproducible. See <a href="https://doi.org/10.1257/aer.20191302">Conlon, Chris, and Eric So. 2021. “Common Ownership and Corporate Control.” <em>American Economic Review</em>, 111 (3): 1012-48.</a> for the article, and <a href="https://doi.org/10.3886/E120083V1">https://doi.org/10.3886/E120083V1</a> for the replication package. <a href="#fnref:conlon" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:irving" role="doc-endnote">
+    <li id="fn:irving">
       <p>Fisher, Irving. “‘The Equation of Exchange,’ 1896-1910.” The American Economic Review, vol. 1, no. 2, 1911, pp. 296–305. JSTOR, http://www.jstor.org/stable/1804304. Accessed 1 Nov. 2023. <a href="#fnref:irving" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>

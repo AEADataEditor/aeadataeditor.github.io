@@ -378,7 +378,7 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 
 <h2 id="a-possible-solution">A possible solution</h2>
 
-<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions" role="doc-noteref"><a href="#fn:functions" class="footnote" rel="footnote">1</a></sup></p>
+<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions"><a href="#fn:functions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
 <p>So should one go about the above problem? My rule of thumb is:</p>
 
@@ -413,7 +413,7 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 <span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
 </code></pre></div></div>
 
-<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function" role="doc-noteref"><a href="#fn:proper-function" class="footnote" rel="footnote">2</a></sup></p>
+<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function"><a href="#fn:proper-function" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
 <p>The robustness checks might then have</p>
 
@@ -488,10 +488,10 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 <p>Of course, you now also have  to properly capture all those results, store them, and be able to summarize them, and create tables from them. That’s another story.</p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:functions" role="doc-endnote">
+    <li id="fn:functions">
       <p>See for instance <a href="https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e">https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e</a>, but this will be repeated many times. I was personally influenced by reading the (very accessible, but 900 pages!) “<a href="https://bookshop.org/p/books/code-complete-steve-mcconnell/12551815?ean=9780735619678">Code Complete</a>” by Steve McConnell. Desirable internal design characteristics include “minimal complexity” (KISS), “ease of maintenance”, and “reusability” <a href="#fnref:functions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:proper-function" role="doc-endnote">
+    <li id="fn:proper-function">
       <p>In a proper function, you would pass the parameters as arguments, and validate that they are the right ones, etc.: <code class="language-plaintext highlighter-rouge">core-model(a,b,c)</code>. Read the programming language specific manual on how to properly write functions: <a href="https://www.stata.com/manuals/u17.pdf">Stata</a>, <a href="https://adv-r.hadley.nz/functions.html#functions">R via Hadley</a>, <a href="https://www.mathworks.com/help/matlab/ref/function.html">MATLAB</a>, etc. <a href="#fnref:proper-function" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>

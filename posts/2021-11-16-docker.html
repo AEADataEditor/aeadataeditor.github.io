@@ -350,21 +350,21 @@
 
 <h2 id="what-are-containers">What are containers</h2>
 
-<p>Containers are “implementations of operating system-level virtualization,” <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> typically on Linux. The most common version is provided by <a href="https://docker.com">Docker</a>, but several other implementations exist, such as <a href="https://singularity.hpcng.org/">Singularity</a>. The use of containers as part of replication packages in economics is extremely low, and yet they have some advantages. This post will explore both pre-submission and post-publication uses of containers, as well as several shortcomings.</p>
+<p>Containers are “implementations of operating system-level virtualization,” <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> typically on Linux. The most common version is provided by <a href="https://docker.com">Docker</a>, but several other implementations exist, such as <a href="https://singularity.hpcng.org/">Singularity</a>. The use of containers as part of replication packages in economics is extremely low, and yet they have some advantages. This post will explore both pre-submission and post-publication uses of containers, as well as several shortcomings.</p>
 
 <p>In a nutshell,</p>
 
 <blockquote>
-  <p>“A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.” <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+  <p>“A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.” <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 </blockquote>
 
 <p>In particular, this means that all dependencies are handled, and there should be virtually no differences across time, users’ operating system, and software implementation in reproducing the outcomes of software.</p>
 
-<p>Containers also isolate the computation from the host system, so that no user-specific settings (stuff you have configured over the past 10 years of working on a project) are carried through into the container, up to a point. That kind of isolation can also be achieved in various ways: for the cognescenti (also called geeks), <code class="language-plaintext highlighter-rouge">chroot</code> environments on Unix systems go back to the early 1980s <sup id="fnref:chroot" role="doc-noteref"><a href="#fn:chroot" class="footnote" rel="footnote">3</a></sup>, and “virtual machines” probably go back to 1960s IBM mainframes <sup id="fnref:vm" role="doc-noteref"><a href="#fn:vm" class="footnote" rel="footnote">4</a></sup>)</p>
+<p>Containers also isolate the computation from the host system, so that no user-specific settings (stuff you have configured over the past 10 years of working on a project) are carried through into the container, up to a point. That kind of isolation can also be achieved in various ways: for the cognescenti (also called geeks), <code class="language-plaintext highlighter-rouge">chroot</code> environments on Unix systems go back to the early 1980s <sup id="fnref:chroot"><a href="#fn:chroot" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>, and “virtual machines” probably go back to 1960s IBM mainframes <sup id="fnref:vm"><a href="#fn:vm" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>)</p>
 
 <h2 id="containers-and-reproducibility">Containers and reproducibility</h2>
 
-<p>Containers can, but do not necessarily contribute to reproducibility and replicability. For an excellent introduction, see Boettinger (2015) <sup id="fnref:intro" role="doc-noteref"><a href="#fn:intro" class="footnote" rel="footnote">5</a></sup>. Once created, containers can (should) reliably reproduce the context and output they were designed to handle. Because containers typically use a plain-text script for their creation (so-called <code class="language-plaintext highlighter-rouge">Dockerfile</code>), they can contribute to transparency. However, containers can also be interactively created, or incorporate externally created packages, which may lead to some black-box actions that are not transparent. Thus, containers can generate reproducible output, but not be themselves reproducibly created. Furthermore, if containers rely on external resources – for instance, accessing the internet to download data from an API, or installed “latest” packages – the output generated may not be reproduced, though it may still be considered replicable.</p>
+<p>Containers can, but do not necessarily contribute to reproducibility and replicability. For an excellent introduction, see Boettinger (2015) <sup id="fnref:intro"><a href="#fn:intro" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Once created, containers can (should) reliably reproduce the context and output they were designed to handle. Because containers typically use a plain-text script for their creation (so-called <code class="language-plaintext highlighter-rouge">Dockerfile</code>), they can contribute to transparency. However, containers can also be interactively created, or incorporate externally created packages, which may lead to some black-box actions that are not transparent. Thus, containers can generate reproducible output, but not be themselves reproducibly created. Furthermore, if containers rely on external resources – for instance, accessing the internet to download data from an API, or installed “latest” packages – the output generated may not be reproduced, though it may still be considered replicable.</p>
 
 <h2 id="containers-in-computational-social-science">Containers in computational social science</h2>
 
@@ -377,7 +377,7 @@
   <li>The Holy Grail in Economics: Run Stata through a container</li>
 </ul>
 
-<p>The examples here are based on personal research experience as well as the experience when attempting to conduct reproducibility verifications on nearly 1,000 economics articles. They are by no means meant to be exhaustive or cover all the possible uses of containers. We should note that many of these examples are retro-actively ported to containers, and may not constitute the optimal setup. In our experience with 1,000 economics articles, as of November 2021, we have encountered only 1 (in words: <strong>one</strong>) that used any Docker in their submission to the AEA journals: Lamadon, Mogstad, and Setzler, “Imperfect Competition, Compensating Differentials and Rent Sharing in the U.S. Labor Market”,<sup id="fnref:lms" role="doc-noteref"><a href="#fn:lms" class="footnote" rel="footnote">6</a></sup> who leveraged 4 different CodeOcean compute capsules to support their analyses (we will return to CodeOcean later).</p>
+<p>The examples here are based on personal research experience as well as the experience when attempting to conduct reproducibility verifications on nearly 1,000 economics articles. They are by no means meant to be exhaustive or cover all the possible uses of containers. We should note that many of these examples are retro-actively ported to containers, and may not constitute the optimal setup. In our experience with 1,000 economics articles, as of November 2021, we have encountered only 1 (in words: <strong>one</strong>) that used any Docker in their submission to the AEA journals: Lamadon, Mogstad, and Setzler, “Imperfect Competition, Compensating Differentials and Rent Sharing in the U.S. Labor Market”,<sup id="fnref:lms"><a href="#fn:lms" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> who leveraged 4 different CodeOcean compute capsules to support their analyses (we will return to CodeOcean later).</p>
 
 <h2 id="running-r-julia-python-in-docker">Running R, Julia, Python in Docker</h2>
 
@@ -387,7 +387,7 @@
 
 <h3 id="a-really-simple-example-with-r">A Really Simple Example with R</h3>
 
-<p>To start, we identify from instructions provided by the author both the version of R and the required packages. From the required packages, we use a standard <a href="https://github.com/AEADataEditor/docker-r-starter/blob/main/setup.R">setup program</a> and add those libraries to the list of dependencies.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">7</a></sup> We then leverage the <a href="https://hub.docker.com/u/rocker">R Docker images</a> maintained by the <a href="https://github.com/rocker-org/rocker">Rocker group</a>, and build a custom R Docker image that should have all dependencies as articulated by the authors:</p>
+<p>To start, we identify from instructions provided by the author both the version of R and the required packages. From the required packages, we use a standard <a href="https://github.com/AEADataEditor/docker-r-starter/blob/main/setup.R">setup program</a> and add those libraries to the list of dependencies.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> We then leverage the <a href="https://hub.docker.com/u/rocker">R Docker images</a> maintained by the <a href="https://github.com/rocker-org/rocker">Rocker group</a>, and build a custom R Docker image that should have all dependencies as articulated by the authors:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Dockerfile</code>:</li>
@@ -398,7 +398,7 @@
 COPY setup.R .
 RUN Rscript setup.R
 </code></pre></div></div>
-<p>That’s already all there is to creating a Docker image! Of course, it now needs to be built:<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">8</a></sup></p>
+<p>That’s already all there is to creating a Docker image! Of course, it now needs to be built:<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">8</a></sup></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DOCKER_BUILDKIT=1 docker build . -t $MYHUBID/$MYIMG:$TAG
 </code></pre></div></div>
@@ -459,7 +459,7 @@ docker run -it --rm -v $(pwd)/subdir:/code -w /code $MYHUBID/${MYIMG}:$TAG Rscri
 
 <h2 id="compiling-fortran-code-through-a-container">Compiling Fortran code through a container</h2>
 
-<p>Compilers are the workhorses for high-performance computing, and many economists will program compute-intensive routines in Fortran, then compile and run such code. Both open-source <sup id="fnref:osfortran" role="doc-noteref"><a href="#fn:osfortran" class="footnote" rel="footnote">9</a></sup> and commercial<sup id="fnref:commfortran" role="doc-noteref"><a href="#fn:commfortran" class="footnote" rel="footnote">10</a></sup> are available. We describe two use cases for using Fortran in combination with Docker.</p>
+<p>Compilers are the workhorses for high-performance computing, and many economists will program compute-intensive routines in Fortran, then compile and run such code. Both open-source <sup id="fnref:osfortran"><a href="#fn:osfortran" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> and commercial<sup id="fnref:commfortran"><a href="#fn:commfortran" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> are available. We describe two use cases for using Fortran in combination with Docker.</p>
 
 <h3 id="ce-fortran">CE Fortran</h3>
 
@@ -554,11 +554,11 @@ docker run --rm -it -w /code \
 
 <h2 id="running-docker-the-easy-way">Running Docker the Easy Way</h2>
 
-<p>Of course, this may all seem overwhelming and complicated, as any new piece of software. Which is why several services are available that make this all a lot easier. These include <a href="https://codeocean.com/">CodeOcean</a>, <a href="https://wholetale.org/">WholeTale</a>, <a href="https://mybinder.org/">Binder</a>, and others (see Konkol et al, 2020,<sup id="fnref:konkol" role="doc-noteref"><a href="#fn:konkol" class="footnote" rel="footnote">11</a></sup> for a broader overview). Behind the scenes, these use containers as well, sometimes built on the fly, but also able to archive the containers, ensuring persistence of what hopefully are reproducible containers.</p>
+<p>Of course, this may all seem overwhelming and complicated, as any new piece of software. Which is why several services are available that make this all a lot easier. These include <a href="https://codeocean.com/">CodeOcean</a>, <a href="https://wholetale.org/">WholeTale</a>, <a href="https://mybinder.org/">Binder</a>, and others (see Konkol et al, 2020,<sup id="fnref:konkol"><a href="#fn:konkol" class="footnote" rel="footnote" role="doc-noteref">11</a></sup> for a broader overview). Behind the scenes, these use containers as well, sometimes built on the fly, but also able to archive the containers, ensuring persistence of what hopefully are reproducible containers.</p>
 
 <p>We have started to use these services to enable reproducibility verification in an environment which allows us, when the time inevitably arrives, to share the exact environment with the authors in order to debug code. In contrast with the statement “Author, please use this Docker image to reproduce the issue”, the request “Author, please click on this URL to reproduce the issue” is much simpler. Several authors have been offered both options (no RCT…), and have generally preferred the option of an online easy interface to the ability to run Docker or Singularity locally.</p>
 
-<p>And we have started to leverage the ability to also publish these reproducible artifacts. Recent examples include Rossi (2021)<sup id="fnref:rossi" role="doc-noteref"><a href="#fn:rossi" class="footnote" rel="footnote">12</a></sup> and DellaVigna and Pope (2021)<sup id="fnref:stefano" role="doc-noteref"><a href="#fn:stefano" class="footnote" rel="footnote">13</a></sup>. In both cases, we were able to populate the <a href="https://doi.org/10.24433/CO.7940775.v1">CodeOcean</a> <a href="https://doi.org/10.24433/CO.0687784.v1">capsule</a> when we ran into reproducibility issues, sharing it (via a URL) with the authors, and solving the issue that both satisfied the AEA Data Editor, and is likely to satisfy future replicators as well.</p>
+<p>And we have started to leverage the ability to also publish these reproducible artifacts. Recent examples include Rossi (2021)<sup id="fnref:rossi"><a href="#fn:rossi" class="footnote" rel="footnote" role="doc-noteref">12</a></sup> and DellaVigna and Pope (2021)<sup id="fnref:stefano"><a href="#fn:stefano" class="footnote" rel="footnote" role="doc-noteref">13</a></sup>. In both cases, we were able to populate the <a href="https://doi.org/10.24433/CO.7940775.v1">CodeOcean</a> <a href="https://doi.org/10.24433/CO.0687784.v1">capsule</a> when we ran into reproducibility issues, sharing it (via a URL) with the authors, and solving the issue that both satisfied the AEA Data Editor, and is likely to satisfy future replicators as well.</p>
 
 <p>We are working with the <a href="https://wholetale.org/">WholeTale</a> on similar usage scenarios, and are open to working with authors’ choices whereever those may lead.</p>
 
@@ -704,8 +704,8 @@ LICENSEID=6521234
 <h3 id="economics-articles-and-replication-packages-using-docker">Economics Articles and Replication Packages using Docker</h3>
 
 <ul>
-  <li>Rossi (<a href="https://doi.org/10.1257/jel.20201479">JEL, 2021</a>): “Forecasting in the presence of instabilities: How do we know whether models predict”<sup id="fnref:rossi:1" role="doc-noteref"><a href="#fn:rossi" class="footnote" rel="footnote">12</a></sup></li>
-  <li>DellaVigna and Pope (<a href="https://doi.org/10.1257/mic.20200129">American Economic Journal: Microeconomics, 2022</a>) “Stability of Experimental Results: Forecasts and Evidence”<sup id="fnref:stefano:1" role="doc-noteref"><a href="#fn:stefano" class="footnote" rel="footnote">13</a></sup></li>
+  <li>Rossi (<a href="https://doi.org/10.1257/jel.20201479">JEL, 2021</a>): “Forecasting in the presence of instabilities: How do we know whether models predict”<sup id="fnref:rossi:1"><a href="#fn:rossi" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
+  <li>DellaVigna and Pope (<a href="https://doi.org/10.1257/mic.20200129">American Economic Journal: Microeconomics, 2022</a>) “Stability of Experimental Results: Forecasts and Evidence”<sup id="fnref:stefano:1"><a href="#fn:stefano" class="footnote" rel="footnote" role="doc-noteref">13</a></sup></li>
   <li>Bonhomme, Lamadon, and Manresa (<a href="https://doi.org/10.3982/ECTA15722">Econometrica, 2019</a>): “A distributional framework for matched employer-employee data”, <a href="https://github.com/tlamadon/blm-replicate">Github repository</a></li>
   <li>Sergio Firpo, Vitor Possebom. 2018. “Synthetic Control Method: Inference, Sensitivity Analysis and Confidence Sets” Journal of Causal Inference 6.2, <a href="https://doi.org/10.1515/jci-2016-0026">https://doi.org/10.1515/jci-2016-0026</a>. <a href="https://doi.org/10.24433/CO.23bd238f-38c5-4b3e-82f4-3a1624fd8a33">Compute Capsule at CodeOcean</a></li>
   <li>Matias D. Cattaneo, Nicolás Idrobo, Rocío Titiunik. 2018.  “A Practical Introduction to Regression Discontinuity Designs: Volume I” <a href="https://doi.org/10.24433/CO.263b2a1e-bbc1-45c9-af03-23ac11032950">Compute Capsule at CodeOcean</a></li>
@@ -753,7 +753,7 @@ LICENSEID=6521234
 
 <h3 id="services">Services</h3>
 
-<p>These are the services listed in Konkol et (2020)<sup id="fnref:konkol:1" role="doc-noteref"><a href="#fn:konkol" class="footnote" rel="footnote">11</a></sup> that use Docker</p>
+<p>These are the services listed in Konkol et (2020)<sup id="fnref:konkol:1"><a href="#fn:konkol" class="footnote" rel="footnote" role="doc-noteref">11</a></sup> that use Docker</p>
 
 <ul>
   <li><a href="https://codeocean.com">CodeOcean</a></li>
@@ -783,43 +783,43 @@ LICENSEID=6521234
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Wikipedia. 2021. “List of Linux containers.” <a href="hhttps://en.wikipedia.org/w/index.php?title=List_of_Linux_containers&amp;oldid=1015376890">wikipedia.org/wiki/List_of_Linux_containers</a>, accessed on 2021-07-07. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p>Docker.com. 2021. “What is a Container.” <a href="https://web.archive.org/web/20210609145942/https://www.docker.com/resources/what-container">docker.com/resources/what-container</a>, accessed on 2021-07-07. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:chroot" role="doc-endnote">
+    <li id="fn:chroot">
       <p>Wikipedia. 2021a. “chroot”. <a href="https://en.wikipedia.org/w/index.php?title=Chroot&amp;oldid=1044767727">https://en.wikipedia.org/w/index.php?title=Chroot&amp;oldid=1044767727</a>, accessed 2021-11-19. <a href="#fnref:chroot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:vm" role="doc-endnote">
+    <li id="fn:vm">
       <p>Wikipedia. 2021b. “Hardware virtualization”. <a href="https://en.wikipedia.org/w/index.php?title=Hardware_virtualization&amp;oldid=1053629506">https://en.wikipedia.org/w/index.php?title=Hardware_virtualization&amp;oldid=1053629506</a>, accessed 2021-11-19 <a href="#fnref:vm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:intro" role="doc-endnote">
+    <li id="fn:intro">
       <p>Boettiger, Carl. “An Introduction to Docker for Reproducible Research.” ACM SIGOPS Operating Systems Review 49, no. 1 (January 20, 2015): 71–79. <a href="https://doi.org/10.1145/2723872.2723882">https://doi.org/10.1145/2723872.2723882</a>. <a href="#fnref:intro" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:lms" role="doc-endnote">
+    <li id="fn:lms">
       <p>Lamadon, Thibaut, Magne Mogstad, and Bradley Setzler. 2022. “<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190790">Imperfect Competition, Compensating Differentials and Rent Sharing in the U.S. Labor Market.</a>” <em>American Economic Review</em> with <a href="https://github.com/setzler/LMS">Github repository</a> and <a href="https://doi.org/10.24433/CO.7147919.v1">1</a> <a href="https://doi.org/10.24433/CO.3047157.v1">2</a> <a href="https://doi.org/10.24433/CO.4775581.v1">3</a> <a href="https://doi.org/10.24433/CO.3648033.v1">4</a> compute capsules. <a href="#fnref:lms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>Even without using the <code class="language-plaintext highlighter-rouge">checkpoint</code> package, we might use the <a href="https://cran.microsoft.com/snapshot/">MRAN snapshot server</a>, but a faster method is provided by the binary packages provided by the <a href="https://packagemanager.rstudio.com/">Rstudio Public Package Manager</a> used by the Rocker images. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4" role="doc-endnote">
+    <li id="fn:4">
       <p>For additional steps, and complete instructions, see <a href="https://github.com/AEADataEditor/docker-r-starter">github.com/AEADataEditor/docker-r-starter</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:osfortran" role="doc-endnote">
+    <li id="fn:osfortran">
       <p><a href="https://gcc.gnu.org/fortran/">GNU Fortran</a> and various LLVM-based Fortran front-ends are available, see a list at <a href="https://fortran-lang.org/compilers/">fortran-lang.org/compilers/</a>. <a href="#fnref:osfortran" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:commfortran" role="doc-endnote">
+    <li id="fn:commfortran">
       <p><a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/all-toolkits.html">Intel</a> and <a href="https://www.nag.com/nag-compiler">NAG</a> are popular. <a href="#fnref:commfortran" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:konkol" role="doc-endnote">
+    <li id="fn:konkol">
       <p>Konkol, Markus, Daniel Nüst, and Laura Goulier. 2020. “Publishing Computational Research - a Review of Infrastructures for Reproducible and Transparent Scholarly Communication.” Research Integrity and Peer Review 5, no. 1 (July 14, 2020): 10. <a href="https://doi.org/10.1186/s41073-020-00095-y">https://doi.org/10.1186/s41073-020-00095-y</a>. <a href="#fnref:konkol" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:konkol:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:rossi" role="doc-endnote">
+    <li id="fn:rossi">
       <p>Rossi, Barbara. 2021. “Compute Capsule for: Forecasting in the presence of instabilities: How do we know whether models predict [Source Code].” <em>CodeOcean</em>. <a href="https://doi.org/10.24433/CO.7940775.v1">https://doi.org/10.24433/CO.7940775.v1</a>, which accompanies her  article in the Journal of Economic Literature (<a href="https://doi.org/10.1257/jel.20201479">Rossi, 2021</a>), and which is also archived in the more traditional location as Rossi, Barbara. 2021. “Data and Code for: Forecasting in the Presence of Instabilities.” <em>American Economic Association</em> [publisher], <em>Inter-university Consortium for Political and Social Research</em> [distributor]. <a href="https://doi.org/10.3886/E147225V1">https://doi.org/10.3886/E147225V1</a> <a href="#fnref:rossi" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:rossi:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:stefano" role="doc-endnote">
+    <li id="fn:stefano">
       <p>DellaVigna, Stefano and Devin Pope. 2021. “Compute Capsule for: Stability of Experimental Results: Forecasts and Evidence” [Source Code]. <em>CodeOcean</em>. https://doi.org/10.24433/CO.0687784.v1, which accompanies a <a href="https://doi.org/10.1257/mic.20200129">2022 article in American Economic Journal: Microeconomics</a>, and which is also archived in the more traditional location as DellaVigna, Stefano, and Devin Pope. 2021. “Data and Code for: Stability of Experimental Results: Forecasts and Evidence.” <em>American Economic Association</em> [publisher], <em>Inter-university Consortium for Political and Social Research</em> [distributor]. https://doi.org/10.3886/E135221V1 <a href="#fnref:stefano" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:stefano:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
   </ol>
