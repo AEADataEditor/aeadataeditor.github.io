@@ -748,4 +748,16 @@ var store = [{
         "tags": [],
         "url": "/talks/2024-10-07-vienna-panel",
         "teaser": null
+      },{
+        "title": "Open Q&A with Data Editors of the AEA, ECTA, and WEAI",
+        "excerpt":"Time   5:30pm - 6:30pm   Room   310   Abstract   Meet w/ Lars Vilhuber (AEA), Joan Llull (Econometrica) &amp; Farasat Bokhari (Economic Inquiry, WEAI) to learn &amp; ask about best practices in preparing replication packages for publications in Economics.   Local organizer: Amy O’Hara     ","categories": [],
+        "tags": [],
+        "url": "/talks/2024-11-22-dc",
+        "teaser": null
+      },{
+        "title": "Open Q&A with the American Economic Association's Data Editor",
+        "excerpt":"Time 1:00pm - 2:30pm Room “National Harbor 1” Abstract Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be? Are...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-11-23-appam",
+        "teaser": null
       }]
