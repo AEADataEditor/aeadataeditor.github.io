@@ -23,16 +23,28 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
-        "title": "Creating separate linked data archives",
-        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/creating-separate-data-deposit",
-        "teaser": null
-      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea-guidance",
+        "teaser": null
+      },{
+        "title": "Frequently Asked Questions",
+        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/FAQ.html",
+        "teaser": null
+      },{
+        "title": "Step by step guidance",
+        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/",
+        "teaser": null
+      },{
+        "title": "Preparing your files for verification",
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-data-deposit",
         "teaser": null
       },{
         "title": "Guidance on testing replicability of code",
@@ -47,10 +59,22 @@ var store = [{
         "url": "/aea-de-guidance/sharing-restricted-data",
         "teaser": null
       },{
+        "title": "Creating separate linked data archives",
+        "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-separate-data-deposit",
+        "teaser": null
+      },{
         "title": "Guidance on how to deposit data at the AEA Data and Code Repository",
         "excerpt":"Tutorial For a video tutorial on this process, see this Youtube video. If you are depositing at a different trusted repository, please be sure that your deposit complies with our Display Guidelines for Trusted Repositories Assistance If, in the process of uploading your replication package, you have questions that are...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/data-deposit-aea",
+        "teaser": null
+      },{
+        "title": "Guidance on how to prepare a comment based on a replication",
+        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
         "title": "Sharing of Pre-Publication openICPSR deposits",
@@ -63,12 +87,6 @@ var store = [{
         "excerpt":"THIS GUIDE IS OUTDATED, AND SHOULD NOT BE FOLLOWED. IT IS KEPT FOR HISTORICAL REASONS. This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
-        "teaser": null
-      },{
-        "title": "Frequently Asked Questions",
-        "excerpt":"… although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Please be sure to check out the official list of FAQ first. Should you have other questions not appearing on either page, please create a new issue on Github, ask the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
         "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
@@ -84,27 +102,9 @@ var store = [{
         "teaser": null
       },{
         "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/",
-        "teaser": null
-      },{
-        "title": "Step by step guidance",
         "excerpt":"What to expect next The next steps happen behind the scenes, until you receive the replication report: Assignment The editorial office assigns the manuscript to the AEA Data Editor, using the “ScholarOne” (ex-Manuscript Central) system. Verification The AEA Data Editor team downloads materials from openICPSR, conducts reproducibility checks, and then...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/next",
-        "teaser": null
-      },{
-        "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/preparing-for-data-deposit",
-        "teaser": null
-      },{
-        "title": "Guidance on how to prepare a comment based on a replication",
-        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/replication-comment",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -291,6 +291,12 @@ var store = [{
         "excerpt":"The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s,...","categories": [],
         "tags": ["data editor tips","replication packages","terms of use"],
         "url": "/posts/2024-11-01-psid-requests",
+        "teaser": null
+      },{
+        "title": "On the use of Excel for reproducible tables",
+        "excerpt":"I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in...","categories": [],
+        "tags": ["data editor tips","replication packages","code","Excel"],
+        "url": "/posts/2025-01-17-tables-in-excel",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",
@@ -759,5 +765,17 @@ var store = [{
         "excerpt":"Time 1:00pm - 2:30pm Room “National Harbor 1” Abstract Open Q&amp;A with the American Economic Association’s Data Editor Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be? Are...","categories": [],
         "tags": [],
         "url": "/talks/2024-11-23-appam",
+        "teaser": null
+      },{
+        "title": "AEA/ES Data Editors' Tutorial 1",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-01-03-san-francisco",
+        "teaser": null
+      },{
+        "title": "AEA/ES Data Editors' Tutorial 2",
+        "excerpt":"Abstract Data editors describe possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to check that it works. Questions from...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-01-04-san-francisco",
         "teaser": null
       }]

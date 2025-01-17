@@ -1,0 +1,952 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>On the use of Excel for reproducible tables - Office of the AEA Data Editor</title>
+<meta name="description" content="I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="On the use of Excel for reproducible tables">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel">
+
+
+  <meta property="og:description" content="I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="On the use of Excel for reproducible tables">
+  <meta name="twitter:description" content="I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2025-01-17T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="On the use of Excel for reproducible tables">
+    <meta itemprop="description" content="I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.">
+    <meta itemprop="datePublished" content="2025-01-17T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">On the use of Excel for reproducible tables
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  7 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-01-17T00:00:00-05:00">January 17, 2025</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.</p>
+
+<!-- more -->
+
+<p>The typical table in economics papers will have up to 9 columns, and 5-25 rows. Seeking out, then copy-pasting up to 225 numbers per table is a lot of work, inhibits re-running of code (because “too complicated”), and is a source of errors. There are many packages out there that might allow you to construct a custom table in the programming language of your choice<sup id="fnref:note1"><a href="#fn:note1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, such as <strong>(Stata)</strong> <a href="http://repec.org/bocode/e/estout/estout.html">estout</a>,<sup id="fnref:estout"><a href="#fn:estout" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> <a href="https://ideas.repec.org/c/boc/bocode/s456416.html">outreg2</a>,<sup id="fnref:outreg2"><a href="#fn:outreg2" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> <a href="https://julianreif.com/regsave/">regsave</a>, <sup id="fnref:regsave"><a href="#fn:regsave" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>, <strong>(R)</strong>  <a href="https://cran.r-project.org/web/packages/stargazer/">stargazer</a>,<sup id="fnref:stargazer"><a href="#fn:stargazer" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>, <a href="https://modelsummary.com/">modelsummary</a>,<sup id="fnref:modelsummary"><a href="#fn:modelsummary" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> and many others in R, Julia, Python, etc.</p>
+
+<p>Jann, Ben (2007): Making regression tables simplified. The Stata Journal 7(2): 227-244.</p>
+
+<p>Here, however, I want to emphasize a custom approach that leverages what most people already know: how to use cell references in Excel. I combine a simple export of regression output to Excel sheets, combined with an Excel template. The replication package would contain the (possibly pre-populated) Excel template, and voilà! A reproducible table is born, and updated every time the code is re-run. While you might still need to update the table in your paper (or correctly <a href="https://answers.microsoft.com/en-us/msoffice/forum/all/insert-and-link-excel-table-to-word/8bffbcad-c9af-4725-a86f-0d650d168113">link an Excel sheet to Word</a> so that it also auto-updates…)</p>
+
+<blockquote>
+  <p>A more complete version, including with downloadable sample code and any improvements and error corrections, is available at <a href="https://larsvilhuber.github.io/writing-r-to-excel/">https://larsvilhuber.github.io/writing-r-to-excel/</a>.</p>
+</blockquote>
+
+<h2 id="the-example">The Example</h2>
+
+<p>The included file <a href="https://larsvilhuber.github.io/writing-r-to-excel/regression_results.xlsx"><code class="language-plaintext highlighter-rouge">regression_results.xlsx</code></a> has a tab called “My funny table”, which references the content of the two other tabs:</p>
+
+<p><img src="https://larsvilhuber.github.io/writing-r-to-excel/excel-formula.png" alt="My funny table" /></p>
+
+<p>The content of the two tabs <code class="language-plaintext highlighter-rouge">Regression1</code> and <code class="language-plaintext highlighter-rouge">Regression2</code> will be filled with the output from  two regressions. I have explicitly not set a seed, so that the values change very time you run the file. You can verify that the “funny table” is automatically updated with the latest results.</p>
+
+<blockquote>
+  <p>You can find the full code as a Quarto (R) file at <a href="https://github.com/larsvilhuber/writing-r-to-excel">https://github.com/larsvilhuber/writing-r-to-excel</a>.</p>
+</blockquote>
+
+<h2 id="setup">Setup</h2>
+
+<p>Load required packages and set up environment. The package <a href="https://cran.r-project.org/web/packages/openxlsx/index.html">openxlsx</a> is used in preference to <code class="language-plaintext highlighter-rouge">writexl</code> because we explicitly want to preserve the contens of any existing (formatted!) Excel file.</p>
+
+<pre><code class="language-{r}">library(tidyverse)
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
+</code></pre></div></div>
+
+<pre><code class="language-{r}">library(openxlsx)
+library(broom)
+</code></pre>
+
+<h2 id="data-generation">Data Generation</h2>
+
+<p>Create sample datasets for the regression analyses.</p>
+
+<pre><code class="language-{r}"># Create sample data for first regression
+set.seed(123)
+data1 &lt;- tibble(
+  x1 = rnorm(100),
+  x2 = rnorm(100),
+  y1 = 2*x1 + 0.5*x2 + rnorm(100)
+)
+
+# Create sample data for second regression
+data2 &lt;- tibble(
+  z1 = rnorm(100),
+  z2 = rnorm(100),
+  z3 = rnorm(100),
+  y2 = 1.5*z1 - 0.8*z2 + 0.3*z3 + rnorm(100)
+)
+</code></pre>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>Perform regression analyses on both datasets.</p>
+
+<pre><code class="language-{r}"># Run regressions
+reg1 &lt;- lm(y1 ~ x1 + x2, data = data1)
+reg2 &lt;- lm(y2 ~ z1 + z2 + z3, data = data2)
+
+# Convert regression results to tidy format
+reg1_results &lt;- tidy(reg1)
+reg2_results &lt;- tidy(reg2)
+</code></pre>
+
+<h3 id="save-results">Save Results</h3>
+
+<p>Depending on what you want to do, you could simply post-process the existing tables, creating a simple dataset that is printed. Here, we save the individual results as datasets.
+If you were to split this document into three parts – <code class="language-plaintext highlighter-rouge">Data generation</code>, <code class="language-plaintext highlighter-rouge">Analysis</code>, and <code class="language-plaintext highlighter-rouge">Tables</code> – then this would be the last part of your analysis part.</p>
+
+<pre><code class="language-{r}"># Save regression results as RDS files
+saveRDS(reg1_results, "regression1_results.rds")
+saveRDS(reg2_results, "regression2_results.rds")
+</code></pre>
+
+<h2 id="tables">Tables</h2>
+
+<h3 id="formatting-results-via-excel">Formatting Results via Excel</h3>
+
+<p>Here, however, we want to simulate what might be a far more complex table.</p>
+
+<pre><code class="language-{r}"># Read data back in, as if we were a separate program
+
+reg1_results &lt;- readRDS("regression1_results.rds")
+reg2_results &lt;- readRDS("regression2_results.rds")
+</code></pre>
+
+<p>I use a function here, in order to handle the case when a file exists, and when one doesn’t. The very first time you would use this, no Excel file exists, but subsequent runs would overwrite the tabs within the existing file.</p>
+
+<pre><code class="language-{r}"># Function to write to Excel, creating file if it doesn't exist
+write_to_excel &lt;- function(results_list, filename) {
+  # Check if file exists
+  if (!file.exists(filename)) {
+    # Create new workbook if file doesn't exist
+    message("Creating new file")
+    wb &lt;- createWorkbook()
+  } else {
+    # Load existing workbook if file exists
+    message("Re-using existing file")
+    wb &lt;- loadWorkbook(filename)
+  }
+  
+  # Loop through the results list and write/overwrite sheets
+  for (sheet_name in names(results_list)) {
+    # Remove sheet if it already exists
+    if (sheet_name %in% names(wb)) {
+      removeWorksheet(wb, sheet_name)
+    }
+    # Add new worksheet
+    addWorksheet(wb, sheet_name)
+    # Write data to worksheet
+    writeData(wb, sheet_name, results_list[[sheet_name]])
+  }
+  
+  # Save workbook
+  saveWorkbook(wb, filename, overwrite = TRUE)
+}
+
+# Create list of results
+regression_results &lt;- list(
+  "Regression1" = reg1_results,
+  "Regression2" = reg2_results
+)
+
+# Write to Excel file
+write_to_excel(regression_results, "regression_results.xlsx")
+</code></pre>
+
+<h3 id="display-results-here">Display Results Here</h3>
+
+<p>Show the regression results in the document.</p>
+
+<pre><code class="language-{r}"># Display results from first regression
+cat("Results from Regression 1:\n")
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Results from Regression 1:
+</code></pre></div></div>
+
+<pre><code class="language-{r}">knitr::kable(reg1_results)
+</code></pre>
+
+<p>{.cell-output-display}</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">term</th>
+      <th style="text-align: right">estimate</th>
+      <th style="text-align: right">std.error</th>
+      <th style="text-align: right">statistic</th>
+      <th style="text-align: right">p.value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">(Intercept)</td>
+      <td style="text-align: right">0.1350654</td>
+      <td style="text-align: right">0.0961401</td>
+      <td style="text-align: right">1.404882</td>
+      <td style="text-align: right">0.1632508</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x1</td>
+      <td style="text-align: right">1.8668285</td>
+      <td style="text-align: right">0.1048695</td>
+      <td style="text-align: right">17.801445</td>
+      <td style="text-align: right">0.0000000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x2</td>
+      <td style="text-align: right">0.5238113</td>
+      <td style="text-align: right">0.0989947</td>
+      <td style="text-align: right">5.291307</td>
+      <td style="text-align: right">0.0000008</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-{r}">cat("\nResults from Regression 2:\n")
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Results from Regression 2:
+</code></pre></div></div>
+
+<pre><code class="language-{r}">knitr::kable(reg2_results)
+</code></pre>
+
+<p>{.cell-output-display}</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">term</th>
+      <th style="text-align: right">estimate</th>
+      <th style="text-align: right">std.error</th>
+      <th style="text-align: right">statistic</th>
+      <th style="text-align: right">p.value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">(Intercept)</td>
+      <td style="text-align: right">-0.1563012</td>
+      <td style="text-align: right">0.1048648</td>
+      <td style="text-align: right">-1.490501</td>
+      <td style="text-align: right">0.1393709</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">z1</td>
+      <td style="text-align: right">1.4305458</td>
+      <td style="text-align: right">0.1009734</td>
+      <td style="text-align: right">14.167548</td>
+      <td style="text-align: right">0.0000000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">z2</td>
+      <td style="text-align: right">-0.7925999</td>
+      <td style="text-align: right">0.1079181</td>
+      <td style="text-align: right">-7.344456</td>
+      <td style="text-align: right">0.0000000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">z3</td>
+      <td style="text-align: right">0.2206171</td>
+      <td style="text-align: right">0.1141786</td>
+      <td style="text-align: right">1.932210</td>
+      <td style="text-align: right">0.0562816</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="directory-contents">Directory Contents</h3>
+
+<p>Show files created in the working directory.</p>
+
+<pre><code class="language-{r}"># List all files in current working directory
+list.files(pattern = "(xlsx|rds)$")
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] "regression_results.xlsx"          "regression_results_template.xlsx"
+[3] "regression1_results.rds"          "regression2_results.rds"         
+</code></pre></div></div>
+
+<h2 id="housekeeping">Housekeeping</h2>
+
+<pre><code class="language-{r}">sessionInfo()
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.2 (2024-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26100)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Toronto
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] broom_1.0.7      openxlsx_4.2.7.1 lubridate_1.9.4  forcats_1.0.0   
+ [5] stringr_1.5.1    dplyr_1.1.4      purrr_1.0.2      readr_2.1.5     
+ [9] tidyr_1.3.1      tibble_3.2.1     ggplot2_3.5.1    tidyverse_2.0.0 
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6      jsonlite_1.8.9    compiler_4.4.2    renv_1.0.11      
+ [5] zip_2.3.1         Rcpp_1.0.13-1     tidyselect_1.2.1  scales_1.3.0     
+ [9] yaml_2.3.10       fastmap_1.2.0     R6_2.5.1          generics_0.1.3   
+[13] knitr_1.49        backports_1.5.0   munsell_0.5.1     pillar_1.9.0     
+[17] tzdb_0.4.0        rlang_1.1.4       utf8_1.2.4        stringi_1.8.4    
+[21] xfun_0.49         timechange_0.3.0  cli_3.6.3         withr_3.0.2      
+[25] magrittr_2.0.3    digest_0.6.37     grid_4.4.2        rstudioapi_0.17.1
+[29] hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.1   
+[33] glue_1.8.0        fansi_1.0.6       colorspace_2.1-1  rmarkdown_2.29   
+[37] tools_4.4.2       pkgconfig_2.0.3   htmltools_0.5.8.1
+</code></pre></div></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:note1">
+      <p>The same basic toolkit can be used to construct the figure of your choice, but I’ll concentrate on tables here. <a href="#fnref:note1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:estout">
+      <p>Jann, Ben (2005): Making regression tables from stored estimates. The Stata Journal 5(3): 288-308 and <a href="#fnref:estout" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:outreg2">
+      <p>Roy Wada, 2005. “<a href="https://ideas.repec.org/c/boc/bocode/s456416.html">OUTREG2: Stata module to arrange regression outputs into an illustrative table</a>,” Statistical Software Components S456416, Boston College Department of Economics, revised 17 Aug 2014. <a href="#fnref:outreg2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:regsave">
+      <p>Julian Reif, 2008. “<a href="https://ideas.repec.org/c/boc/bocode/s456964.html">REGSAVE: Stata module to save regression results to a Stata-formatted dataset</a>,” Statistical Software Components S456964, Boston College Department of Economics, revised 03 Dec 2023. <a href="#fnref:regsave" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:stargazer">
+      <p>Hlavac M (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables. Social Policy Institute, Bratislava, Slovakia. R package version 5.2.3, <a href="https://CRAN.R-project.org/package=stargazer">https://CRAN.R-project.org/package=stargazer</a>. <a href="#fnref:stargazer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:modelsummary">
+      <p>Arel-Bundock V (2022). “modelsummary: Data and Model Summaries in R.” Journal of Statistical Software, 103(1), 1–23. <a href="https://doi.org/10.18637/jss.v103.i01">https://doi.org/10.18637/jss.v103.i01</a>. <a href="#fnref:modelsummary" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#code" class="page__taxonomy-item" rel="tag">code</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#excel" class="page__taxonomy-item" rel="tag">Excel</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-01-17T00:00:00-05:00">January 17, 2025</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=On+the+use+of+Excel+for+reproducible+tables%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2025-01-17-tables-in-excel" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2025-01-17-tables-in-excel" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-11-01-psid-requests" rel="permalink">How to respond to data provider requests for data removal (take-down requests)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cas...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-07-19-functions-and-code-duplication" rel="permalink">On the use and reuse of within-project code
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only m...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-29-use-and-reuse-of-data" rel="permalink">On the use and redistribution of data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the dat...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-11-random-notes-ama" rel="permalink">Random notes from the AMAs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2025-01-17-tables-in-excel.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
