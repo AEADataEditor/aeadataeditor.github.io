@@ -19,8 +19,7 @@ The typical table in economics papers will have up to 9 columns, and 5-25 rows. 
 
 [^note1]:  The same basic toolkit can be used to construct the figure of your choice, but I'll concentrate on tables here.
 
-[^estout]:  Jann, Ben (2005): Making regression tables from stored estimates. The Stata Journal 5(3): 288-308 and 
-Jann, Ben (2007): Making regression tables simplified. The Stata Journal 7(2): 227-244. 
+[^estout]:  Jann, Ben (2005): Making regression tables from stored estimates. The Stata Journal 5(3): 288-308 and Jann, Ben (2007): Making regression tables simplified. The Stata Journal 7(2): 227-244. 
 
 [^outreg2]: Roy Wada, 2005. "[OUTREG2: Stata module to arrange regression outputs into an illustrative table](https://ideas.repec.org/c/boc/bocode/s456416.html)," Statistical Software Components S456416, Boston College Department of Economics, revised 17 Aug 2014. 
 
@@ -54,7 +53,7 @@ Load required packages and set up environment. The package [openxlsx](https://cr
 
 
 
-```{r}
+```r
 library(tidyverse)
 ```
 
@@ -76,7 +75,7 @@ library(tidyverse)
 
 
 
-```{r}
+```r
 library(openxlsx)
 library(broom)
 ```
@@ -92,7 +91,7 @@ Create sample datasets for the regression analyses.
 
 
 
-```{r}
+```r
 # Create sample data for first regression
 set.seed(123)
 data1 <- tibble(
@@ -121,7 +120,7 @@ Perform regression analyses on both datasets.
 
 
 
-```{r}
+```r
 # Run regressions
 reg1 <- lm(y1 ~ x1 + x2, data = data1)
 reg2 <- lm(y2 ~ z1 + z2 + z3, data = data2)
@@ -145,7 +144,7 @@ If you were to split this document into three parts -- `Data generation`, `Analy
 
 
 
-```{r}
+```r
 # Save regression results as RDS files
 saveRDS(reg1_results, "regression1_results.rds")
 saveRDS(reg2_results, "regression2_results.rds")
@@ -167,7 +166,7 @@ Here, however, we want to simulate what might be a far more complex table.
 
 
 
-```{r}
+```r
 # Read data back in, as if we were a separate program
 
 reg1_results <- readRDS("regression1_results.rds")
@@ -184,7 +183,7 @@ I use a function here, in order to handle the case when a file exists, and when 
 
 
 
-```{r}
+```r
 # Function to write to Excel, creating file if it doesn't exist
 write_to_excel <- function(results_list, filename) {
   # Check if file exists
@@ -234,25 +233,12 @@ Show the regression results in the document.
 
 
 
-```{r}
+```r
 # Display results from first regression
-cat("Results from Regression 1:\n")
-```
 
-
-
-```
-Results from Regression 1:
-```
-
-
-
-
-```{r}
 knitr::kable(reg1_results)
 ```
 
- {.cell-output-display}
 
 
 |term        |  estimate| std.error| statistic|   p.value|
@@ -262,27 +248,13 @@ knitr::kable(reg1_results)
 |x2          | 0.5238113| 0.0989947|  5.291307| 0.0000008|
 
 
+```r
+# Display results from second regression
 
-
-```{r}
-cat("\nResults from Regression 2:\n")
+knitr::kable(reg1_results)knitr::kable(reg2_results)
 ```
 
 
-
-```
-
-Results from Regression 2:
-```
-
-
-
-
-```{r}
-knitr::kable(reg2_results)
-```
-
- {.cell-output-display}
 
 
 |term        |   estimate| std.error| statistic|   p.value|
@@ -308,7 +280,7 @@ Show files created in the working directory.
 
 
 
-```{r}
+```r
 # List all files in current working directory
 list.files(pattern = "(xlsx|rds)$")
 ```
@@ -332,7 +304,7 @@ list.files(pattern = "(xlsx|rds)$")
 
 
 
-```{r}
+```r
 sessionInfo()
 ```
 
