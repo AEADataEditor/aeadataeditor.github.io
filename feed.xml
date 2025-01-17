@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2025-01-17T09:38:01-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use of Excel for reproducible tables</title><link href="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel" rel="alternate" type="text/html" title="On the use of Excel for reproducible tables" /><published>2025-01-17T00:00:00-05:00</published><updated>2025-01-17T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/tables-in-excel</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel"><![CDATA[<p>I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2025-01-17T10:23:19-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use of Excel for reproducible tables</title><link href="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel" rel="alternate" type="text/html" title="On the use of Excel for reproducible tables" /><published>2025-01-17T00:00:00-05:00</published><updated>2025-01-17T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/tables-in-excel</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel"><![CDATA[<p>I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.</p>
 
 <!-- more -->
 
 <p>The typical table in economics papers will have up to 9 columns, and 5-25 rows. Seeking out, then copy-pasting up to 225 numbers per table is a lot of work, inhibits re-running of code (because “too complicated”), and is a source of errors. There are many packages out there that might allow you to construct a custom table in the programming language of your choice<sup id="fnref:note1"><a href="#fn:note1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, such as <strong>(Stata)</strong> <a href="http://repec.org/bocode/e/estout/estout.html">estout</a>,<sup id="fnref:estout"><a href="#fn:estout" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> <a href="https://ideas.repec.org/c/boc/bocode/s456416.html">outreg2</a>,<sup id="fnref:outreg2"><a href="#fn:outreg2" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> <a href="https://julianreif.com/regsave/">regsave</a>, <sup id="fnref:regsave"><a href="#fn:regsave" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>, <strong>(R)</strong>  <a href="https://cran.r-project.org/web/packages/stargazer/">stargazer</a>,<sup id="fnref:stargazer"><a href="#fn:stargazer" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>, <a href="https://modelsummary.com/">modelsummary</a>,<sup id="fnref:modelsummary"><a href="#fn:modelsummary" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> and many others in R, Julia, Python, etc.</p>
-
-<p>Jann, Ben (2007): Making regression tables simplified. The Stata Journal 7(2): 227-244.</p>
 
 <p>Here, however, I want to emphasize a custom approach that leverages what most people already know: how to use cell references in Excel. I combine a simple export of regression output to Excel sheets, combined with an Excel template. The replication package would contain the (possibly pre-populated) Excel template, and voilà! A reproducible table is born, and updated every time the code is re-run. While you might still need to update the table in your paper (or correctly <a href="https://answers.microsoft.com/en-us/msoffice/forum/all/insert-and-link-excel-table-to-word/8bffbcad-c9af-4725-a86f-0d650d168113">link an Excel sheet to Word</a> so that it also auto-updates…)</p>
 
@@ -28,8 +26,8 @@
 
 <p>Load required packages and set up environment. The package <a href="https://cran.r-project.org/web/packages/openxlsx/index.html">openxlsx</a> is used in preference to <code class="language-plaintext highlighter-rouge">writexl</code> because we explicitly want to preserve the contens of any existing (formatted!) Excel file.</p>
 
-<pre><code class="language-{r}">library(tidyverse)
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
@@ -43,53 +41,53 @@
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
 </code></pre></div></div>
 
-<pre><code class="language-{r}">library(openxlsx)
-library(broom)
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">openxlsx</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">broom</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <h2 id="data-generation">Data Generation</h2>
 
 <p>Create sample datasets for the regression analyses.</p>
 
-<pre><code class="language-{r}"># Create sample data for first regression
-set.seed(123)
-data1 &lt;- tibble(
-  x1 = rnorm(100),
-  x2 = rnorm(100),
-  y1 = 2*x1 + 0.5*x2 + rnorm(100)
-)
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create sample data for first regression</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
+</span><span class="n">data1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tibble</span><span class="p">(</span><span class="w">
+  </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w">
+  </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w">
+  </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="n">x1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.5</span><span class="o">*</span><span class="n">x2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">)</span><span class="w">
+</span><span class="p">)</span><span class="w">
 
-# Create sample data for second regression
-data2 &lt;- tibble(
-  z1 = rnorm(100),
-  z2 = rnorm(100),
-  z3 = rnorm(100),
-  y2 = 1.5*z1 - 0.8*z2 + 0.3*z3 + rnorm(100)
-)
-</code></pre>
+</span><span class="c1"># Create sample data for second regression</span><span class="w">
+</span><span class="n">data2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tibble</span><span class="p">(</span><span class="w">
+  </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w">
+  </span><span class="n">z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w">
+  </span><span class="n">z3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w">
+  </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="o">*</span><span class="n">z1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">0.8</span><span class="o">*</span><span class="n">z2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.3</span><span class="o">*</span><span class="n">z3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">)</span><span class="w">
+</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <h2 id="analysis">Analysis</h2>
 
 <p>Perform regression analyses on both datasets.</p>
 
-<pre><code class="language-{r}"># Run regressions
-reg1 &lt;- lm(y1 ~ x1 + x2, data = data1)
-reg2 &lt;- lm(y2 ~ z1 + z2 + z3, data = data2)
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Run regressions</span><span class="w">
+</span><span class="n">reg1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data1</span><span class="p">)</span><span class="w">
+</span><span class="n">reg2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">z1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z3</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data2</span><span class="p">)</span><span class="w">
 
-# Convert regression results to tidy format
-reg1_results &lt;- tidy(reg1)
-reg2_results &lt;- tidy(reg2)
-</code></pre>
+</span><span class="c1"># Convert regression results to tidy format</span><span class="w">
+</span><span class="n">reg1_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tidy</span><span class="p">(</span><span class="n">reg1</span><span class="p">)</span><span class="w">
+</span><span class="n">reg2_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tidy</span><span class="p">(</span><span class="n">reg2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="save-results">Save Results</h3>
 
 <p>Depending on what you want to do, you could simply post-process the existing tables, creating a simple dataset that is printed. Here, we save the individual results as datasets.
 If you were to split this document into three parts – <code class="language-plaintext highlighter-rouge">Data generation</code>, <code class="language-plaintext highlighter-rouge">Analysis</code>, and <code class="language-plaintext highlighter-rouge">Tables</code> – then this would be the last part of your analysis part.</p>
 
-<pre><code class="language-{r}"># Save regression results as RDS files
-saveRDS(reg1_results, "regression1_results.rds")
-saveRDS(reg2_results, "regression2_results.rds")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Save regression results as RDS files</span><span class="w">
+</span><span class="n">saveRDS</span><span class="p">(</span><span class="n">reg1_results</span><span class="p">,</span><span class="w"> </span><span class="s2">"regression1_results.rds"</span><span class="p">)</span><span class="w">
+</span><span class="n">saveRDS</span><span class="p">(</span><span class="n">reg2_results</span><span class="p">,</span><span class="w"> </span><span class="s2">"regression2_results.rds"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <h2 id="tables">Tables</h2>
 
@@ -97,68 +95,61 @@ saveRDS(reg2_results, "regression2_results.rds")
 
 <p>Here, however, we want to simulate what might be a far more complex table.</p>
 
-<pre><code class="language-{r}"># Read data back in, as if we were a separate program
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Read data back in, as if we were a separate program</span><span class="w">
 
-reg1_results &lt;- readRDS("regression1_results.rds")
-reg2_results &lt;- readRDS("regression2_results.rds")
-</code></pre>
+</span><span class="n">reg1_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="s2">"regression1_results.rds"</span><span class="p">)</span><span class="w">
+</span><span class="n">reg2_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="s2">"regression2_results.rds"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <p>I use a function here, in order to handle the case when a file exists, and when one doesn’t. The very first time you would use this, no Excel file exists, but subsequent runs would overwrite the tabs within the existing file.</p>
 
-<pre><code class="language-{r}"># Function to write to Excel, creating file if it doesn't exist
-write_to_excel &lt;- function(results_list, filename) {
-  # Check if file exists
-  if (!file.exists(filename)) {
-    # Create new workbook if file doesn't exist
-    message("Creating new file")
-    wb &lt;- createWorkbook()
-  } else {
-    # Load existing workbook if file exists
-    message("Re-using existing file")
-    wb &lt;- loadWorkbook(filename)
-  }
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Function to write to Excel, creating file if it doesn't exist</span><span class="w">
+</span><span class="n">write_to_excel</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">results_list</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="c1"># Check if file exists</span><span class="w">
+  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">file.exists</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="c1"># Create new workbook if file doesn't exist</span><span class="w">
+    </span><span class="n">message</span><span class="p">(</span><span class="s2">"Creating new file"</span><span class="p">)</span><span class="w">
+    </span><span class="n">wb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">createWorkbook</span><span class="p">()</span><span class="w">
+  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="c1"># Load existing workbook if file exists</span><span class="w">
+    </span><span class="n">message</span><span class="p">(</span><span class="s2">"Re-using existing file"</span><span class="p">)</span><span class="w">
+    </span><span class="n">wb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">loadWorkbook</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w">
   
-  # Loop through the results list and write/overwrite sheets
-  for (sheet_name in names(results_list)) {
-    # Remove sheet if it already exists
-    if (sheet_name %in% names(wb)) {
-      removeWorksheet(wb, sheet_name)
-    }
-    # Add new worksheet
-    addWorksheet(wb, sheet_name)
-    # Write data to worksheet
-    writeData(wb, sheet_name, results_list[[sheet_name]])
-  }
+  </span><span class="c1"># Loop through the results list and write/overwrite sheets</span><span class="w">
+  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">sheet_name</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">results_list</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="c1"># Remove sheet if it already exists</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sheet_name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">wb</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">removeWorksheet</span><span class="p">(</span><span class="n">wb</span><span class="p">,</span><span class="w"> </span><span class="n">sheet_name</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="c1"># Add new worksheet</span><span class="w">
+    </span><span class="n">addWorksheet</span><span class="p">(</span><span class="n">wb</span><span class="p">,</span><span class="w"> </span><span class="n">sheet_name</span><span class="p">)</span><span class="w">
+    </span><span class="c1"># Write data to worksheet</span><span class="w">
+    </span><span class="n">writeData</span><span class="p">(</span><span class="n">wb</span><span class="p">,</span><span class="w"> </span><span class="n">sheet_name</span><span class="p">,</span><span class="w"> </span><span class="n">results_list</span><span class="p">[[</span><span class="n">sheet_name</span><span class="p">]])</span><span class="w">
+  </span><span class="p">}</span><span class="w">
   
-  # Save workbook
-  saveWorkbook(wb, filename, overwrite = TRUE)
-}
+  </span><span class="c1"># Save workbook</span><span class="w">
+  </span><span class="n">saveWorkbook</span><span class="p">(</span><span class="n">wb</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-# Create list of results
-regression_results &lt;- list(
-  "Regression1" = reg1_results,
-  "Regression2" = reg2_results
-)
+</span><span class="c1"># Create list of results</span><span class="w">
+</span><span class="n">regression_results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="w">
+  </span><span class="s2">"Regression1"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg1_results</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Regression2"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg2_results</span><span class="w">
+</span><span class="p">)</span><span class="w">
 
-# Write to Excel file
-write_to_excel(regression_results, "regression_results.xlsx")
-</code></pre>
+</span><span class="c1"># Write to Excel file</span><span class="w">
+</span><span class="n">write_to_excel</span><span class="p">(</span><span class="n">regression_results</span><span class="p">,</span><span class="w"> </span><span class="s2">"regression_results.xlsx"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="display-results-here">Display Results Here</h3>
 
 <p>Show the regression results in the document.</p>
 
-<pre><code class="language-{r}"># Display results from first regression
-cat("Results from Regression 1:\n")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Display results from first regression</span><span class="w">
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Results from Regression 1:
-</code></pre></div></div>
-
-<pre><code class="language-{r}">knitr::kable(reg1_results)
-</code></pre>
-
-<p>{.cell-output-display}</p>
+</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">reg1_results</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <table>
   <thead>
@@ -195,17 +186,10 @@ cat("Results from Regression 1:\n")
   </tbody>
 </table>
 
-<pre><code class="language-{r}">cat("\nResults from Regression 2:\n")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Display results from second regression</span><span class="w">
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-Results from Regression 2:
-</code></pre></div></div>
-
-<pre><code class="language-{r}">knitr::kable(reg2_results)
-</code></pre>
-
-<p>{.cell-output-display}</p>
+</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">reg1_results</span><span class="p">)</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">reg2_results</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <table>
   <thead>
@@ -253,9 +237,9 @@ Results from Regression 2:
 
 <p>Show files created in the working directory.</p>
 
-<pre><code class="language-{r}"># List all files in current working directory
-list.files(pattern = "(xlsx|rds)$")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># List all files in current working directory</span><span class="w">
+</span><span class="n">list.files</span><span class="p">(</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"(xlsx|rds)$"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] "regression_results.xlsx"          "regression_results_template.xlsx"
 [3] "regression1_results.rds"          "regression2_results.rds"         
@@ -263,8 +247,8 @@ list.files(pattern = "(xlsx|rds)$")
 
 <h2 id="housekeeping">Housekeeping</h2>
 
-<pre><code class="language-{r}">sessionInfo()
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R version 4.4.2 (2024-10-31 ucrt)
 Platform: x86_64-w64-mingw32/x64
@@ -310,7 +294,7 @@ loaded via a namespace (and not attached):
       <p>The same basic toolkit can be used to construct the figure of your choice, but I’ll concentrate on tables here. <a href="#fnref:note1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:estout">
-      <p>Jann, Ben (2005): Making regression tables from stored estimates. The Stata Journal 5(3): 288-308 and <a href="#fnref:estout" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Jann, Ben (2005): Making regression tables from stored estimates. The Stata Journal 5(3): 288-308 and Jann, Ben (2007): Making regression tables simplified. The Stata Journal 7(2): 227-244. <a href="#fnref:estout" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:outreg2">
       <p>Roy Wada, 2005. “<a href="https://ideas.repec.org/c/boc/bocode/s456416.html">OUTREG2: Stata module to arrange regression outputs into an illustrative table</a>,” Statistical Software Components S456416, Boston College Department of Economics, revised 17 Aug 2014. <a href="#fnref:outreg2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
