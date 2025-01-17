@@ -251,7 +251,7 @@ knitr::kable(reg1_results)
 ```r
 # Display results from second regression
 
-knitr::kable(reg1_results)knitr::kable(reg2_results)
+knitr::kable(reg2_results)
 ```
 
 
