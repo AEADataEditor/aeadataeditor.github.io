@@ -307,7 +307,7 @@
 
 
   
-	  8 minute read
+	  9 minute read
 	
 </p>
           
@@ -458,9 +458,46 @@ V2: PSID data moved to [PSID DOI]
 
 <ul>
   <li>V1 is still visible, but can no longer be downloaded.</li>
+</ul>
+
+<p><img src="/images/openICPSR-study-unpublished.png" alt="Unpublished deposit shows banner" /></p>
+
+<ul>
   <li>the PSID deposit is now available. Users who want to download the data have to agree to the PSID’s terms of use. You are now in compliance with the PSID’s terms of use!</li>
   <li>V2 is published, contains no PSID data, links to the PSID deposit, and remains otherwise available to replicators. You are still in compliance with the AEA publication agreements and your obligations as an AEA author!</li>
 </ul>
+
+<h3 id="an-example">An example</h3>
+
+<p>Fran Blau and Larry Kahn had a JEL article (with replication package!) back in 2016:</p>
+
+<blockquote>
+  <p>Blau, Francine D., and Lawrence M. Kahn. “The Gender Wage Gap: Extent, Trends, and Explanations.” Journal of Economic Literature 55, no. 3 (September 2017): 789–865. <a href="https://doi.org/10.1257/jel.20160995">https://doi.org/10.1257/jel.20160995</a>.</p>
+</blockquote>
+
+<p>The relevant original replication package was migrated to openICPSR in 2019, and its contents can still be viewed here, <strong>but not downloaded</strong>:</p>
+
+<blockquote>
+  <p>Blau, Francine D., and Kahn, Lawrence M. Replication data for: The Gender Wage Gap: Extent, Trends, and Explanations. Nashville, TN: American Economic Association [publisher], 2017. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-12. <a href="https://doi.org/10.3886/E113913V1">https://doi.org/10.3886/E113913V1</a></p>
+</blockquote>
+
+<p>The amended replication package is now available, and linked from the earlier one (note the V2, and the later publication date):</p>
+
+<blockquote>
+  <p>Blau, Francine D., and Kahn, Lawrence M. Replication data for: The Gender Wage Gap: Extent, Trends, and Explanations. Nashville, TN: American Economic Association [publisher], 2024. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2024-11-14. <a href="https://doi.org/10.3886/E113913V2">https://doi.org/10.3886/E113913V2</a></p>
+</blockquote>
+
+<p>The required <code class="language-plaintext highlighter-rouge">CHANGES.txt</code> reads</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>V1: Original version
+V2: Moved PSID data to https://doi.org/10.3886/E210483V1 and updated README.
+</code></pre></div></div>
+
+<p>and the new PSID deposit is referenced there, in the related publications, and in the README.</p>
+
+<blockquote>
+  <p>Kahn, Lawrence, and Francine Blau. “Supplementary for: Francine D. Blau and Lawrence M. Kahn, ‘The Gender Wage Gap: Extent, Trends, and Explanations’, Journal of Economic Literature , 55 ,3 (Sept 2017): 789-865.” ICPSR - Interuniversity Consortium for Political and Social Research, 2024. <a href="https://doi.org/10.3886/E210483V1">https://doi.org/10.3886/E210483V1</a>.<sup id="fnref:note"><a href="#fn:note" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+</blockquote>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -474,6 +511,9 @@ V2: PSID data moved to [PSID DOI]
     </li>
     <li id="fn:2">
       <p>The dividing line is approximately Oct 1, 2019. In 2019, <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">we migrated approximately 2,500 older replication packages into openICPSR</a>. Authors were not involved in this process, and so do not have operational access to the replication package. They do, however, have ownership of the deposit, and can request access to it. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:note">
+      <p>A shorter and perfectly acceptable name would have been “Supplementary for: The Gender Wage Gap: Extent, Trends, and Explanations”. The supplementary data could also be linked back to the original replication package, for clarity. <a href="#fnref:note" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
