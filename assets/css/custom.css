@@ -1,0 +1,9 @@
+---
+# custom CSS
+---
+
+# add a class background for R, Stata, and Python code blocks
+pre.language-r, pre.language-stata, pre.language-python {
+  background-color: #f4f4f4;
+  border: 1px solid #d9d9d9;
+}
