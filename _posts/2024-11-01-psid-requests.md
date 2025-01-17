@@ -111,8 +111,38 @@ V2: PSID data moved to [PSID DOI]
 After all the fixes,
 
 - V1 is still visible, but can no longer be downloaded. 
+
+![Unpublished deposit shows banner](/images/openICPSR-study-unpublished.png)
+
 - the PSID deposit is now available. Users who want to download the data have to agree to the PSID's terms of use. You are now in compliance with the PSID's terms of use!
 - V2 is published, contains no PSID data, links to the PSID deposit, and remains otherwise available to replicators. You are still in compliance with the AEA publication agreements and your obligations as an AEA author!
+
+### An example
+
+Fran Blau and Larry Kahn had a JEL article (with replication package!) back in 2016:
+
+> Blau, Francine D., and Lawrence M. Kahn. “The Gender Wage Gap: Extent, Trends, and Explanations.” Journal of Economic Literature 55, no. 3 (September 2017): 789–865. <https://doi.org/10.1257/jel.20160995>.
+
+The relevant original replication package was migrated to openICPSR in 2019, and its contents can still be viewed here, **but not downloaded**:
+
+> Blau, Francine D., and Kahn, Lawrence M. Replication data for: The Gender Wage Gap: Extent, Trends, and Explanations. Nashville, TN: American Economic Association [publisher], 2017. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-12. <https://doi.org/10.3886/E113913V1>
+
+The amended replication package is now available, and linked from the earlier one (note the V2, and the later publication date):
+
+> Blau, Francine D., and Kahn, Lawrence M. Replication data for: The Gender Wage Gap: Extent, Trends, and Explanations. Nashville, TN: American Economic Association [publisher], 2024. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2024-11-14. <https://doi.org/10.3886/E113913V2>
+
+The required `CHANGES.txt` reads
+
+```
+V1: Original version
+V2: Moved PSID data to https://doi.org/10.3886/E210483V1 and updated README.
+```
+
+and the new PSID deposit is referenced there, in the related publications, and in the README.
+
+> Kahn, Lawrence, and Francine Blau. “Supplementary for: Francine D. Blau and Lawrence M. Kahn, ‘The Gender Wage Gap: Extent, Trends, and Explanations’, Journal of Economic Literature , 55 ,3 (Sept 2017): 789-865.” ICPSR - Interuniversity Consortium for Political and Social Research, 2024. <https://doi.org/10.3886/E210483V1>.[^note]
+
+[^note]: A shorter and perfectly acceptable name would have been "Supplementary for: The Gender Wage Gap: Extent, Trends, and Explanations". The supplementary data could also be linked back to the original replication package, for clarity.
 
 ### Conclusion
 
