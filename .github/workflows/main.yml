@@ -19,13 +19,13 @@ jobs:
     # uses: ruby/setup-ruby@v1
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.2
+        ruby-version: 3.3.4
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Build Jekyll website
       run: |
         set -xo pipefail
         rm -rf _site/*
-        gem install bundler -v 2.4.22
+        gem install bundler -v 2.6.3
         bundle install
         bundle exec jekyll build
     - name: Deploy
