@@ -46,3 +46,7 @@ When a [DOI is available](https://huggingface.co/docs/hub/en/doi), which can onl
 
 
 Please be sure to also provide the exact version of the Python packages used (e.g., `SentenceTransformer`), so that any default parameters are clearly identifiable, should they change across versions.
+
+## Intellectual property
+
+US Copyright Office: <https://arstechnica.com/tech-policy/2025/01/copyright-office-suggests-ai-copyright-debate-was-settled-in-1965/>
