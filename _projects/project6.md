@@ -45,7 +45,7 @@ Some experience with empirical social science data analysis using statistical so
 
 **Start and end dates:**
 
-The internship will broadly start after institution-specific final exams over, and thus vary, but broadly, the internship will take place between mid-May and mid-August, for 10-12 weeks (depends on the institution). 
+The internship will broadly start after institution-specific final exams are over, and thus vary, but broadly, the internship will take place between mid-May and mid-August, for 10-12 weeks (depends on the institution). 
 
 **Requirements:**
 
@@ -111,7 +111,7 @@ There will be various breaks throughout the day.
 
 ### Test cases
 
-Test cases are worked through, and jointly handled, including with repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
+Test cases are worked through and jointly handled, including repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
 
 - each test article should take you no more than 2-3 hours of work (decreasing as you progress)
   - Test article 1: Data is available, Stata
@@ -125,7 +125,7 @@ Test cases are worked through, and jointly handled, including with repeated peer
 
 ### Follow-up meetings:
 
-Meetings with Lars, which is both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions.
+Meetings with Lars, which include both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions.
 
 
 
