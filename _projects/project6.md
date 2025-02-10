@@ -15,7 +15,7 @@ This page is best viewed at <https://aeadataeditor.github.io/projects/project6>.
 
 The AEA Data Editor is happy to announce an **internship with the AEA Data Editor.** The collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and  University of Colorado Boulder**. 
 
-> NOTE: Interns cannot apply independently at this time. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2025 or later.
+> NOTE: Interns cannot apply independently at this time. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2025 or later. Information about the [2024 Pilot Internship](https://aeadataeditor.github.io/projects/project5) is available.
 
 The internship will be a 10-12 week, part-time (20 hours per week) *paid* position. 
 
