@@ -48,7 +48,7 @@ It may also be the case that you are able to redistribute the sensitive data you
 ## What you should do: Creating and using a separate data deposit
 
 1. Create a separate (new) deposit at one of the trusted repositories. This is separate from your article's replication package. We'll call this the "DATA deposit."
-    - See for example [a tutorial by the Harvard Astrophysics Library for Zenodo](https://library.cfa.harvard.edu/data-archiving-and-sharing).
+    - See for example [a tutorial by the Harvard Astrophysics Library for Zenodo](https://library.cfa.harvard.edu/data-archiving-and-sharing) and for [DataLumos](creating-datalumos-deposit) on this site.
     - The title would be something meaningful like "Historical FERC Form 714 submissions."
     - Authors should be you, and possibly the original agency (the latter enhances findability).
     - Provide the raw data files (if not archived elsewhere - but that's the point, most often).
