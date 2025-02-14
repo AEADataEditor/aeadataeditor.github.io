@@ -41,6 +41,12 @@ var store = [{
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr",
         "teaser": null
       },{
+        "title": "Step-by-Step tutorial on how to deposit data at DataLumos",
+        "excerpt":"DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the Tips for Using DataLumos on their website first. When and what to deposit U.S. Government data are freely available. In fact, they are in...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/creating-datalumos-deposit",
+        "teaser": null
+      },{
         "title": "Data deposit guidance",
         "excerpt":" ","categories": [],
         "tags": [],

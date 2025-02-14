@@ -1,0 +1,666 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Step-by-Step tutorial on how to deposit data at DataLumos - Office of the AEA Data Editor</title>
+<meta name="description" content="DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the Tips for Using DataLumos on their website first.  When  and what to deposit  U.S. Government data are freely available. In fact, they are in the public domain within the US (the situation outside of the US is a bit more ambiguous). However, unless these data are preserved at the Library of Congress or the National Archives and Records Administration, they can be deleted or re-organized at any time, and data might be lost.1  You should deposit public domain or otherwise freely available data (e.g., CC-BY)     when you first use them   if they are not preserved elsewhere   If you are not in the US and depositing non-US data, you should preferentially use your local archives, such as     Swedish National Data Service   GESIS in Germany   or more generally, re3data.org   Before depositing  Search existing holdings to see if the data have already been deposited:     ICPSR (will search openICPSR and DataLumos as well)   Dataverse (the Harvard Dataverse will also search through federated dataverses)   DataCite a registry for dataset DOIs   Google Dataset search   Start the deposit process  Go to the DataLumos, and choose Add Data Now:  .  You may need to create an ICPSR account first.  Create a new project  Then, create a new project:    Name the project    Title the project accurately and descriptively, preferably using the exact title provided by the agency originally issuing the data. This will help others find the data, and connect it with its original location.  Do not add your name, your paper, etc.  Describe the project  You should now provide additional information in the Project Description:    Data Producer (Government agency)  Data produced by or associated with a specific US government agency should list the agency as the author of the data in the Government Agency/Principal Investigator(s) field. Click on the + add value and switch to the Organization/Agency tab of the pop-up window.    You should start typing, typically with the full name of the department without acronyms. In the example screenshot, while the agency is typically referred to as “OPM”, it was found by typing United States Office of P before the type-ahead found the agency. Try to avoid creating new variants of the name. However, if you cannot find it, simply write the name of the agency as accurately as possible.    Summary field  You should provide ideally relevant information taken verbatim from the original website. You can then add information on when the data were downloaded or scraped, and if you wish, who did this.  Original Distribution URL  Provide the URL where the data were originally found.     Try to remove tracking parameters from the URL (anything after a ?)   If the URL is very long, try to find a shorter one that goes to the same location.   If the data are found on a page with multiple datasets, provide the URL of that page. You can then add more information in the summary field.     Additional information (metadata)     Try to capture a PDF or a screenshot of the website as it was when you downloaded it. This can be useful. The PDF can be uploaded as part of the next step.   Also try to identify any additional documentation, such as codebooks.   Upload data files  Importing a ZIP file  You should try to preserve the data in its original arrangement, with any subdirectories. The best way to achieve this is to compile a ZIP file of the preserved data.  You then Import from ZIP, which will expand the ZIP file, preserving the directory structure. This makes it easier for others to download individual files.2     The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.        ⚠️ WARNING: The process of both uploading and unpacking the ZIP file can take some time, depending on the size of the file. Be patient!   Uploading individual files  For other files, they can be added individually. Use the Upload Files button.    You can now choose, or drag-and-drop, the files to be uploaded. While files are being uploaded, others can be added     ⚠️ WARNING: Files are immediately uploaded!          In the example, we also uploaded (not imported) a more comprehensive ZIP file that contained a complete mirror of the website. However, the core data files were imported, and show up in the Files folder.        ⚠️ WARNING: The process of uploading and then subsequently checking the files can take some time, depending on the size of the file. Be patient! ⏱️   Files that are still being checked are indicated with File not available for download 🗑️.  Publishing the deposit  Start the publishing workflow  When everything is ready, on the right-hand side is a 📣 Publish Project button.    You can review the information as it will be published again:    Submission questions  You will then be presented with a page, asking various questions.     You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that have not been uploaded. Usually, if you downloaded it from a public website without registration requirements, the answer to the first two questions is “No”.   Can individuals be identified?    The normal answer to this question is “No.”  Are the data sensitive?    The normal answer to this question is “No.”  Distribution question     If both previous answers are No, this question does not appear.     You should answer this one as a function of the earlier answers. “Public download” means users will be registered users of openICPSR and consent to the license (next question), without further controls. “Restricted access” means that data will be distributed through ICPSR’s Restricted Data Access Mechanism.  Delayed Dissemination  Usually, you would answer this with No.  Choose a license    You should choose a license from the drop-down menu. If depositing data that came from a U.S. government website, you would normally choose “Public Domain mark”.  Read the agreement and consent  Reminder that you should always read the agreements that you consent to!  Finalizing  Press “Publish data.” It might take a while for the data to be published.  Final outcome  Back in the workspace, you should now see, bottom right, a list of the Published Versions:    If you click on the version number, you will be taken to the published version:    Citing the deposited data  Remember to cite the data in any publication that uses these data. You should use the provided Project Citation, adapted to your citation style.     United States Office of Personnel Management (OPM). Fedscope Datasets Available from OPM. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2025-02-13. https://doi.org/10.3886/E219172V1   Remember to use the DOI, and not the visible URL in your browser bar. To learn more about how to cite data, see ICPSR guidance and Guidance by Social Science Data Editors.                Some agencies have exceptions, where archives are separately created and DOI assigned. Always check first. &#8617;                 Future users will still be able to download the entire collection as a ZIP file, using the download facility of the DataLumos site. &#8617;">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Step-by-Step tutorial on how to deposit data at DataLumos">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/creating-datalumos-deposit">
+
+
+  <meta property="og:description" content="DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the Tips for Using DataLumos on their website first.  When  and what to deposit  U.S. Government data are freely available. In fact, they are in the public domain within the US (the situation outside of the US is a bit more ambiguous). However, unless these data are preserved at the Library of Congress or the National Archives and Records Administration, they can be deleted or re-organized at any time, and data might be lost.1  You should deposit public domain or otherwise freely available data (e.g., CC-BY)     when you first use them   if they are not preserved elsewhere   If you are not in the US and depositing non-US data, you should preferentially use your local archives, such as     Swedish National Data Service   GESIS in Germany   or more generally, re3data.org   Before depositing  Search existing holdings to see if the data have already been deposited:     ICPSR (will search openICPSR and DataLumos as well)   Dataverse (the Harvard Dataverse will also search through federated dataverses)   DataCite a registry for dataset DOIs   Google Dataset search   Start the deposit process  Go to the DataLumos, and choose Add Data Now:  .  You may need to create an ICPSR account first.  Create a new project  Then, create a new project:    Name the project    Title the project accurately and descriptively, preferably using the exact title provided by the agency originally issuing the data. This will help others find the data, and connect it with its original location.  Do not add your name, your paper, etc.  Describe the project  You should now provide additional information in the Project Description:    Data Producer (Government agency)  Data produced by or associated with a specific US government agency should list the agency as the author of the data in the Government Agency/Principal Investigator(s) field. Click on the + add value and switch to the Organization/Agency tab of the pop-up window.    You should start typing, typically with the full name of the department without acronyms. In the example screenshot, while the agency is typically referred to as “OPM”, it was found by typing United States Office of P before the type-ahead found the agency. Try to avoid creating new variants of the name. However, if you cannot find it, simply write the name of the agency as accurately as possible.    Summary field  You should provide ideally relevant information taken verbatim from the original website. You can then add information on when the data were downloaded or scraped, and if you wish, who did this.  Original Distribution URL  Provide the URL where the data were originally found.     Try to remove tracking parameters from the URL (anything after a ?)   If the URL is very long, try to find a shorter one that goes to the same location.   If the data are found on a page with multiple datasets, provide the URL of that page. You can then add more information in the summary field.     Additional information (metadata)     Try to capture a PDF or a screenshot of the website as it was when you downloaded it. This can be useful. The PDF can be uploaded as part of the next step.   Also try to identify any additional documentation, such as codebooks.   Upload data files  Importing a ZIP file  You should try to preserve the data in its original arrangement, with any subdirectories. The best way to achieve this is to compile a ZIP file of the preserved data.  You then Import from ZIP, which will expand the ZIP file, preserving the directory structure. This makes it easier for others to download individual files.2     The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.        ⚠️ WARNING: The process of both uploading and unpacking the ZIP file can take some time, depending on the size of the file. Be patient!   Uploading individual files  For other files, they can be added individually. Use the Upload Files button.    You can now choose, or drag-and-drop, the files to be uploaded. While files are being uploaded, others can be added     ⚠️ WARNING: Files are immediately uploaded!          In the example, we also uploaded (not imported) a more comprehensive ZIP file that contained a complete mirror of the website. However, the core data files were imported, and show up in the Files folder.        ⚠️ WARNING: The process of uploading and then subsequently checking the files can take some time, depending on the size of the file. Be patient! ⏱️   Files that are still being checked are indicated with File not available for download 🗑️.  Publishing the deposit  Start the publishing workflow  When everything is ready, on the right-hand side is a 📣 Publish Project button.    You can review the information as it will be published again:    Submission questions  You will then be presented with a page, asking various questions.     You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that have not been uploaded. Usually, if you downloaded it from a public website without registration requirements, the answer to the first two questions is “No”.   Can individuals be identified?    The normal answer to this question is “No.”  Are the data sensitive?    The normal answer to this question is “No.”  Distribution question     If both previous answers are No, this question does not appear.     You should answer this one as a function of the earlier answers. “Public download” means users will be registered users of openICPSR and consent to the license (next question), without further controls. “Restricted access” means that data will be distributed through ICPSR’s Restricted Data Access Mechanism.  Delayed Dissemination  Usually, you would answer this with No.  Choose a license    You should choose a license from the drop-down menu. If depositing data that came from a U.S. government website, you would normally choose “Public Domain mark”.  Read the agreement and consent  Reminder that you should always read the agreements that you consent to!  Finalizing  Press “Publish data.” It might take a while for the data to be published.  Final outcome  Back in the workspace, you should now see, bottom right, a list of the Published Versions:    If you click on the version number, you will be taken to the published version:    Citing the deposited data  Remember to cite the data in any publication that uses these data. You should use the provided Project Citation, adapted to your citation style.     United States Office of Personnel Management (OPM). Fedscope Datasets Available from OPM. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2025-02-13. https://doi.org/10.3886/E219172V1   Remember to use the DOI, and not the visible URL in your browser bar. To learn more about how to cite data, see ICPSR guidance and Guidance by Social Science Data Editors.                Some agencies have exceptions, where archives are separately created and DOI assigned. Always check first. &#8617;                 Future users will still be able to download the entire collection as a ZIP file, using the download facility of the DataLumos site. &#8617;">
+
+
+
+  <meta property="og:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+
+
+
+  <meta name="twitter:site" content="@AEAData">
+  <meta name="twitter:title" content="Step-by-Step tutorial on how to deposit data at DataLumos">
+  <meta name="twitter:description" content="DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the Tips for Using DataLumos on their website first.  When  and what to deposit  U.S. Government data are freely available. In fact, they are in the public domain within the US (the situation outside of the US is a bit more ambiguous). However, unless these data are preserved at the Library of Congress or the National Archives and Records Administration, they can be deleted or re-organized at any time, and data might be lost.1  You should deposit public domain or otherwise freely available data (e.g., CC-BY)     when you first use them   if they are not preserved elsewhere   If you are not in the US and depositing non-US data, you should preferentially use your local archives, such as     Swedish National Data Service   GESIS in Germany   or more generally, re3data.org   Before depositing  Search existing holdings to see if the data have already been deposited:     ICPSR (will search openICPSR and DataLumos as well)   Dataverse (the Harvard Dataverse will also search through federated dataverses)   DataCite a registry for dataset DOIs   Google Dataset search   Start the deposit process  Go to the DataLumos, and choose Add Data Now:  .  You may need to create an ICPSR account first.  Create a new project  Then, create a new project:    Name the project    Title the project accurately and descriptively, preferably using the exact title provided by the agency originally issuing the data. This will help others find the data, and connect it with its original location.  Do not add your name, your paper, etc.  Describe the project  You should now provide additional information in the Project Description:    Data Producer (Government agency)  Data produced by or associated with a specific US government agency should list the agency as the author of the data in the Government Agency/Principal Investigator(s) field. Click on the + add value and switch to the Organization/Agency tab of the pop-up window.    You should start typing, typically with the full name of the department without acronyms. In the example screenshot, while the agency is typically referred to as “OPM”, it was found by typing United States Office of P before the type-ahead found the agency. Try to avoid creating new variants of the name. However, if you cannot find it, simply write the name of the agency as accurately as possible.    Summary field  You should provide ideally relevant information taken verbatim from the original website. You can then add information on when the data were downloaded or scraped, and if you wish, who did this.  Original Distribution URL  Provide the URL where the data were originally found.     Try to remove tracking parameters from the URL (anything after a ?)   If the URL is very long, try to find a shorter one that goes to the same location.   If the data are found on a page with multiple datasets, provide the URL of that page. You can then add more information in the summary field.     Additional information (metadata)     Try to capture a PDF or a screenshot of the website as it was when you downloaded it. This can be useful. The PDF can be uploaded as part of the next step.   Also try to identify any additional documentation, such as codebooks.   Upload data files  Importing a ZIP file  You should try to preserve the data in its original arrangement, with any subdirectories. The best way to achieve this is to compile a ZIP file of the preserved data.  You then Import from ZIP, which will expand the ZIP file, preserving the directory structure. This makes it easier for others to download individual files.2     The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.        ⚠️ WARNING: The process of both uploading and unpacking the ZIP file can take some time, depending on the size of the file. Be patient!   Uploading individual files  For other files, they can be added individually. Use the Upload Files button.    You can now choose, or drag-and-drop, the files to be uploaded. While files are being uploaded, others can be added     ⚠️ WARNING: Files are immediately uploaded!          In the example, we also uploaded (not imported) a more comprehensive ZIP file that contained a complete mirror of the website. However, the core data files were imported, and show up in the Files folder.        ⚠️ WARNING: The process of uploading and then subsequently checking the files can take some time, depending on the size of the file. Be patient! ⏱️   Files that are still being checked are indicated with File not available for download 🗑️.  Publishing the deposit  Start the publishing workflow  When everything is ready, on the right-hand side is a 📣 Publish Project button.    You can review the information as it will be published again:    Submission questions  You will then be presented with a page, asking various questions.     You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that have not been uploaded. Usually, if you downloaded it from a public website without registration requirements, the answer to the first two questions is “No”.   Can individuals be identified?    The normal answer to this question is “No.”  Are the data sensitive?    The normal answer to this question is “No.”  Distribution question     If both previous answers are No, this question does not appear.     You should answer this one as a function of the earlier answers. “Public download” means users will be registered users of openICPSR and consent to the license (next question), without further controls. “Restricted access” means that data will be distributed through ICPSR’s Restricted Data Access Mechanism.  Delayed Dissemination  Usually, you would answer this with No.  Choose a license    You should choose a license from the drop-down menu. If depositing data that came from a U.S. government website, you would normally choose “Public Domain mark”.  Read the agreement and consent  Reminder that you should always read the agreements that you consent to!  Finalizing  Press “Publish data.” It might take a while for the data to be published.  Final outcome  Back in the workspace, you should now see, bottom right, a list of the Published Versions:    If you click on the version number, you will be taken to the published version:    Citing the deposited data  Remember to cite the data in any publication that uses these data. You should use the provided Project Citation, adapted to your citation style.     United States Office of Personnel Management (OPM). Fedscope Datasets Available from OPM. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2025-02-13. https://doi.org/10.3886/E219172V1   Remember to use the DOI, and not the visible URL in your browser bar. To learn more about how to cite data, see ICPSR guidance and Guidance by Social Science Data Editors.                Some agencies have exceptions, where archives are separately created and DOI assigned. Always check first. &#8617;                 Future users will still be able to download the entire collection as a ZIP file, using the download facility of the DataLumos site. &#8617;">
+  <meta name="twitter:url" content="https://aeadataeditor.github.io/aea-de-guidance/creating-datalumos-deposit">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://aeadataeditor.github.io/images/thumbnail_website_logo">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@AEAData">
+  
+
+
+
+  <meta property="article:published_time" content="2025-02-14T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/creating-datalumos-deposit">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/AEAData" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Step-by-Step tutorial on how to deposit data at DataLumos">
+    <meta itemprop="description" content="DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the Tips for Using DataLumos on their website first.When  and what to depositU.S. Government data are freely available. In fact, they are in the public domain within the US (the situation outside of the US is a bit more ambiguous). However, unless these data are preserved at the Library of Congress or the National Archives and Records Administration, they can be deleted or re-organized at any time, and data might be lost.1You should deposit public domain or otherwise freely available data (e.g., CC-BY)  when you first use them  if they are not preserved elsewhereIf you are not in the US and depositing non-US data, you should preferentially use your local archives, such as  Swedish National Data Service  GESIS in Germany  or more generally, re3data.orgBefore depositingSearch existing holdings to see if the data have already been deposited:  ICPSR (will search openICPSR and DataLumos as well)  Dataverse (the Harvard Dataverse will also search through federated dataverses)  DataCite a registry for dataset DOIs  Google Dataset searchStart the deposit processGo to the DataLumos, and choose Add Data Now:.You may need to create an ICPSR account first.Create a new projectThen, create a new project:Name the projectTitle the project accurately and descriptively, preferably using the exact title provided by the agency originally issuing the data. This will help others find the data, and connect it with its original location.Do not add your name, your paper, etc.Describe the projectYou should now provide additional information in the Project Description:Data Producer (Government agency)Data produced by or associated with a specific US government agency should list the agency as the author of the data in the Government Agency/Principal Investigator(s) field. Click on the + add value and switch to the Organization/Agency tab of the pop-up window.You should start typing, typically with the full name of the department without acronyms. In the example screenshot, while the agency is typically referred to as “OPM”, it was found by typing United States Office of P before the type-ahead found the agency. Try to avoid creating new variants of the name. However, if you cannot find it, simply write the name of the agency as accurately as possible.Summary fieldYou should provide ideally relevant information taken verbatim from the original website. You can then add information on when the data were downloaded or scraped, and if you wish, who did this.Original Distribution URLProvide the URL where the data were originally found.  Try to remove tracking parameters from the URL (anything after a ?)  If the URL is very long, try to find a shorter one that goes to the same location.  If the data are found on a page with multiple datasets, provide the URL of that page. You can then add more information in the summary field.Additional information (metadata)  Try to capture a PDF or a screenshot of the website as it was when you downloaded it. This can be useful. The PDF can be uploaded as part of the next step.  Also try to identify any additional documentation, such as codebooks.Upload data filesImporting a ZIP fileYou should try to preserve the data in its original arrangement, with any subdirectories. The best way to achieve this is to compile a ZIP file of the preserved data.You then Import from ZIP, which will expand the ZIP file, preserving the directory structure. This makes it easier for others to download individual files.2  The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.  ⚠️ WARNING: The process of both uploading and unpacking the ZIP file can take some time, depending on the size of the file. Be patient!Uploading individual filesFor other files, they can be added individually. Use the Upload Files button.You can now choose, or drag-and-drop, the files to be uploaded. While files are being uploaded, others can be added  ⚠️ WARNING: Files are immediately uploaded!  In the example, we also uploaded (not imported) a more comprehensive ZIP file that contained a complete mirror of the website. However, the core data files were imported, and show up in the Files folder.  ⚠️ WARNING: The process of uploading and then subsequently checking the files can take some time, depending on the size of the file. Be patient! ⏱️Files that are still being checked are indicated with File not available for download 🗑️.Publishing the depositStart the publishing workflowWhen everything is ready, on the right-hand side is a 📣 Publish Project button.You can review the information as it will be published again:Submission questionsYou will then be presented with a page, asking various questions.  You should answer these questions in regards to the data in the deposit you are submitting. The answer should NOT consider any other data that have not been uploaded. Usually, if you downloaded it from a public website without registration requirements, the answer to the first two questions is “No”.Can individuals be identified?The normal answer to this question is “No.”Are the data sensitive?The normal answer to this question is “No.”Distribution question  If both previous answers are No, this question does not appear.You should answer this one as a function of the earlier answers. “Public download” means users will be registered users of openICPSR and consent to the license (next question), without further controls. “Restricted access” means that data will be distributed through ICPSR’s Restricted Data Access Mechanism.Delayed DisseminationUsually, you would answer this with No.Choose a licenseYou should choose a license from the drop-down menu. If depositing data that came from a U.S. government website, you would normally choose “Public Domain mark”.Read the agreement and consentReminder that you should always read the agreements that you consent to!FinalizingPress “Publish data.” It might take a while for the data to be published.Final outcomeBack in the workspace, you should now see, bottom right, a list of the Published Versions:If you click on the version number, you will be taken to the published version:Citing the deposited dataRemember to cite the data in any publication that uses these data. You should use the provided Project Citation, adapted to your citation style.  United States Office of Personnel Management (OPM). Fedscope Datasets Available from OPM. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2025-02-13. https://doi.org/10.3886/E219172V1Remember to use the DOI, and not the visible URL in your browser bar. To learn more about how to cite data, see ICPSR guidance and Guidance by Social Science Data Editors.            Some agencies have exceptions, where archives are separately created and DOI assigned. Always check first. &#8617;              Future users will still be able to download the entire collection as a ZIP file, using the download facility of the DataLumos site. &#8617;      ">
+    <meta itemprop="datePublished" content="2025-02-14T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Step-by-Step tutorial on how to deposit data at DataLumos
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-02-14T00:00:00-05:00">February 14, 2025</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#when--and-what-to-deposit">When  and what to deposit</a></li><li><a href="#before-depositing">Before depositing</a></li><li><a href="#start-the-deposit-process">Start the deposit process</a></li><li><a href="#create-a-new-project">Create a new project</a></li><li><a href="#name-the-project">Name the project</a></li><li><a href="#describe-the-project">Describe the project</a><ul><li><a href="#data-producer-government-agency">Data Producer (Government agency)</a></li><li><a href="#summary-field">Summary field</a></li><li><a href="#original-distribution-url">Original Distribution URL</a></li><li><a href="#additional-information-metadata">Additional information (metadata)</a></li></ul></li><li><a href="#upload-data-files">Upload data files</a><ul><li><a href="#importing-a-zip-file">Importing a ZIP file</a></li><li><a href="#uploading-individual-files">Uploading individual files</a></li></ul></li><li><a href="#publishing-the-deposit">Publishing the deposit</a><ul><li><a href="#start-the-publishing-workflow">Start the publishing workflow</a></li><li><a href="#submission-questions">Submission questions</a><ul><li><a href="#can-individuals-be-identified">Can individuals be identified?</a></li><li><a href="#are-the-data-sensitive">Are the data sensitive?</a></li><li><a href="#distribution-question">Distribution question</a></li></ul></li><li><a href="#delayed-dissemination">Delayed Dissemination</a></li><li><a href="#choose-a-license">Choose a license</a></li><li><a href="#read-the-agreement-and-consent">Read the agreement and consent</a></li><li><a href="#finalizing">Finalizing</a></li></ul></li></ul></li><li><a href="#final-outcome">Final outcome</a></li><li><a href="#citing-the-deposited-data">Citing the deposited data</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <p>DataLumos is an ICPSR archive for crowd-sourced deposits of government data resources. This tutorial shows how to create a deposit at DataLumos. You should read the <a href="https://www.datalumos.org/datalumos/static/tips">Tips for Using DataLumos</a> on their website first.</p>
+
+<h2 id="when--and-what-to-deposit">When  and what to deposit</h2>
+
+<p>U.S. Government data are freely available. In fact, they are in the <a href="https://en.wikipedia.org/wiki/Copyright_status_of_works_by_the_federal_government_of_the_United_States">public domain</a> within the US (the situation outside of the US is a bit more ambiguous). However, unless these data are preserved at the <a href="https://www.loc.gov/">Library of Congress</a> or the <a href="https://www.archives.gov/">National Archives and Records Administration</a>, they can be deleted or re-organized at any time, and data might be lost.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>You should deposit public domain or otherwise freely available data (e.g., <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>)</p>
+
+<ul>
+  <li>when you first use them</li>
+  <li>if they are not preserved elsewhere</li>
+</ul>
+
+<p>If you are not in the US and depositing non-US data, you should preferentially use your local archives, such as</p>
+
+<ul>
+  <li><a href="https://snd.se/en">Swedish National Data Service</a></li>
+  <li><a href="https://www.gesis.org/en/landingpage/data-gesis">GESIS in Germany</a></li>
+  <li>or more generally, <a href="https://www.re3data.org/">re3data.org</a></li>
+</ul>
+
+<h2 id="before-depositing">Before depositing</h2>
+
+<p>Search existing holdings to see if the data have already been deposited:</p>
+
+<ul>
+  <li><a href="https://www.icpsr.umich.edu/web/pages/">ICPSR</a> (will search openICPSR and DataLumos as well)</li>
+  <li><a href="https://dataverse.harvard.edu/">Dataverse</a> (the Harvard Dataverse will also search through federated dataverses)</li>
+  <li><a href="https://commons.datacite.org/">DataCite</a> a registry for dataset DOIs</li>
+  <li><a href="https://datasetsearch.research.google.com/">Google Dataset search</a></li>
+</ul>
+
+<h2 id="start-the-deposit-process">Start the deposit process</h2>
+
+<p>Go to the <a href="https://www.datalumos.org/datalumos/">DataLumos</a>, and choose <code class="language-plaintext highlighter-rouge">Add Data Now</code>:</p>
+
+<p><a href="https://www.datalumos.org/datalumos/workspace"><img src="/images/datalumos-10.png" alt="Start process" /></a>.</p>
+
+<p>You may need to create an ICPSR account first.</p>
+
+<h2 id="create-a-new-project">Create a new project</h2>
+
+<p>Then, create a new project:</p>
+
+<p><img src="/images/datalumos-11.png" alt="Create new project" /></p>
+
+<h2 id="name-the-project">Name the project</h2>
+
+<p><img src="/images/datalumos-12.png" alt="Name the project" /></p>
+
+<p>Title the project accurately and descriptively, preferably using the exact title provided by the agency originally issuing the data. This will help others find the data, and connect it with its original location.</p>
+
+<p>Do not add your name, your paper, etc.</p>
+
+<h2 id="describe-the-project">Describe the project</h2>
+
+<p>You should now provide additional information in the <code class="language-plaintext highlighter-rouge">Project Description</code>:</p>
+
+<p><img src="/images/datalumos-1.png" alt="screenshot of project description" /></p>
+
+<h3 id="data-producer-government-agency">Data Producer (Government agency)</h3>
+
+<p>Data produced by or associated with a specific US government agency should list the agency as the author of the data in the <code class="language-plaintext highlighter-rouge">Government Agency/Principal Investigator(s)</code> field. Click on the <code class="language-plaintext highlighter-rouge">+ add value</code> and switch to the <code class="language-plaintext highlighter-rouge">Organization/Agency</code> tab of the pop-up window.</p>
+
+<p><img src="/images/datalumos-13.png" alt="Organization/Agency tab" /></p>
+
+<p>You should start typing, typically with the full name of the department without acronyms. In the example screenshot, while the agency is typically referred to as “OPM”, it was found by typing <code class="language-plaintext highlighter-rouge">United States Office of P</code> before the type-ahead found the agency. Try to avoid creating new variants of the name. However, if you cannot find it, simply write the name of the agency as accurately as possible.</p>
+
+<p><img src="/images/datalumos-2.png" alt="Name of the Agency" /></p>
+
+<h3 id="summary-field">Summary field</h3>
+
+<p>You should provide ideally relevant information taken verbatim from the original website. You can then add information on when the data were downloaded or scraped, and if you wish, who did this.</p>
+
+<h3 id="original-distribution-url">Original Distribution URL</h3>
+
+<p>Provide the URL where the data were originally found.</p>
+
+<ul>
+  <li>Try to remove tracking parameters from the URL (anything after a <code class="language-plaintext highlighter-rouge">?</code>)</li>
+  <li>If the URL is very long, try to find a shorter one that goes to the same location.</li>
+  <li>If the data are found on a page with multiple datasets, provide the URL of that page. You can then add more information in the summary field.</li>
+</ul>
+
+<p><img src="/images/datalumos-7.png" alt="Original URL" /></p>
+
+<h3 id="additional-information-metadata">Additional information (metadata)</h3>
+
+<ul>
+  <li>Try to capture a PDF or a screenshot of the website as it was when you downloaded it. This can be useful. The PDF can be uploaded as part of the next step.</li>
+  <li>Also try to identify any additional documentation, such as codebooks.</li>
+</ul>
+
+<h2 id="upload-data-files">Upload data files</h2>
+
+<h3 id="importing-a-zip-file">Importing a ZIP file</h3>
+
+<p>You should try to preserve the data in its original arrangement, with any subdirectories. The best way to achieve this is to compile a ZIP file of the preserved data.</p>
+
+<p>You then <code class="language-plaintext highlighter-rouge">Import from ZIP</code>, which will expand the ZIP file, preserving the directory structure. This makes it easier for others to download individual files.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+
+<blockquote>
+  <p>The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing.</p>
+</blockquote>
+
+<p><img src="/images/datalumos-9.png" alt="Importing from ZIP" /></p>
+
+<blockquote>
+  <p>⚠️ WARNING: The process of both uploading and unpacking the ZIP file can take some time, depending on the size of the file. Be patient!</p>
+</blockquote>
+
+<h3 id="uploading-individual-files">Uploading individual files</h3>
+
+<p>For other files, they can be added individually. Use the <code class="language-plaintext highlighter-rouge">Upload Files</code> button.</p>
+
+<p><img src="/images/datalumos-3.png" alt="Upload files" /></p>
+
+<p>You can now choose, or drag-and-drop, the files to be uploaded. While files are being uploaded, others can be added</p>
+
+<blockquote>
+  <p>⚠️ WARNING: Files are immediately uploaded!</p>
+</blockquote>
+
+<p><img src="/images/datalumos-4.png" alt="Uploading files" /></p>
+
+<p><img src="/images/datalumos-5.png" alt="Uploading more files" /></p>
+
+<blockquote>
+  <p>In the example, we also uploaded (not imported) a more comprehensive ZIP file that contained a complete mirror of the website. However, the core data files were <code class="language-plaintext highlighter-rouge">imported</code>, and show up in the <code class="language-plaintext highlighter-rouge">Files</code> folder.</p>
+</blockquote>
+
+<p><img src="/images/datalumos-8.png" alt="Uploaded files" /></p>
+
+<blockquote>
+  <p>⚠️ WARNING: The process of uploading and then subsequently checking the files can take some time, depending on the size of the file. Be patient! ⏱️</p>
+</blockquote>
+
+<p>Files that are still being checked are indicated with <code class="language-plaintext highlighter-rouge">File not available for download 🗑️</code>.</p>
+
+<h2 id="publishing-the-deposit">Publishing the deposit</h2>
+
+<h3 id="start-the-publishing-workflow">Start the publishing workflow</h3>
+
+<p>When everything is ready, on the right-hand side is a <code class="language-plaintext highlighter-rouge">📣 Publish Project</code> button.</p>
+
+<p><img src="/images/datalumos-14.png" alt="Publish project" /></p>
+
+<p>You can review the information as it will be published again:</p>
+
+<p><img src="/images/datalumos-15.png" alt="Review information" /></p>
+
+<h3 id="submission-questions">Submission questions</h3>
+
+<p>You will then be presented with a page, asking various questions.</p>
+
+<blockquote>
+  <p>You should answer these questions in regards to the <strong>data in the deposit</strong> you are submitting. The answer should NOT consider any other data that have not been uploaded. Usually, if you downloaded it from a public website without registration requirements, the answer to the first two questions is “No”.</p>
+</blockquote>
+
+<h5 id="can-individuals-be-identified">Can individuals be identified?</h5>
+
+<p><img src="/images/icpsr-submit-q1.png" alt="Identification question 1" /></p>
+
+<p>The normal answer to this question is “No.”</p>
+
+<h5 id="are-the-data-sensitive">Are the data sensitive?</h5>
+
+<p><img src="/images/icpsr-submit-q2.png" alt="Sensitivity question 2" /></p>
+
+<p>The normal answer to this question is “No.”</p>
+
+<h5 id="distribution-question">Distribution question</h5>
+
+<blockquote>
+  <p>If both previous answers are <code class="language-plaintext highlighter-rouge">No</code>, this question does not appear.</p>
+</blockquote>
+
+<p><img src="/images/icpsr-submit-q3.png" alt="Distribution question" /></p>
+
+<p>You should answer this one as a function of the earlier answers. “Public download” means users will be registered users of openICPSR and consent to the license (next question), without further controls. “Restricted access” means that data will be distributed through ICPSR’s <a href="https://www.icpsr.umich.edu/web/pages/ICPSR/access/restricted/">Restricted Data Access Mechanism</a>.</p>
+
+<h4 id="delayed-dissemination">Delayed Dissemination</h4>
+
+<p>Usually, you would answer this with <code class="language-plaintext highlighter-rouge">No</code>.</p>
+
+<h4 id="choose-a-license">Choose a license</h4>
+
+<p><img src="/images/icpsr-submit-q4-license.png" alt="License question" /></p>
+
+<p>You should choose a license from the drop-down menu. If depositing data that came from a U.S. government website, you would normally choose “Public Domain mark”.</p>
+
+<h4 id="read-the-agreement-and-consent">Read the agreement and consent</h4>
+
+<p>Reminder that you should always read the agreements that you consent to!</p>
+
+<h4 id="finalizing">Finalizing</h4>
+
+<p>Press “Publish data.” It might take a while for the data to be published.</p>
+
+<h2 id="final-outcome">Final outcome</h2>
+
+<p>Back in the workspace, you should now see, bottom right, a list of the <code class="language-plaintext highlighter-rouge">Published Versions</code>:</p>
+
+<p><img src="/images/datalumos-16.png" alt="Published version workspace" /></p>
+
+<p>If you click on the version number, you will be taken to the published version:</p>
+
+<p><a href="https://doi.org/10.3886/E219172V1"><img src="/images/datalumos-17.png" alt="Published version" /></a></p>
+
+<h2 id="citing-the-deposited-data">Citing the deposited data</h2>
+
+<p>Remember to cite the data in any publication that uses these data. You should use the provided <code class="language-plaintext highlighter-rouge">Project Citation</code>, adapted to your citation style.</p>
+
+<blockquote>
+  <p>United States Office of Personnel Management (OPM). Fedscope Datasets Available from OPM. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2025-02-13. https://doi.org/10.3886/E219172V1</p>
+</blockquote>
+
+<p>Remember to use the DOI, and not the visible URL in your browser bar. To learn more about how to cite data, see <a href="https://www.icpsr.umich.edu/web/pages/datamanagement/citations.html">ICPSR guidance</a> and <a href="https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html">Guidance by Social Science Data Editors</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Some agencies have exceptions, where archives are separately created and DOI assigned. Always check first. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Future users will still be able to download the entire collection as a ZIP file, using the download facility of the DataLumos site. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-02-14T00:00:00-05:00">February 14, 2025</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=AEAData&text=Step-by-Step+tutorial+on+how+to+deposit+data+at+DataLumos%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fcreating-datalumos-deposit" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fcreating-datalumos-deposit" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/creating-datalumos-deposit.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AEAData" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
