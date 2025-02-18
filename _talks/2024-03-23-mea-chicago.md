@@ -2,7 +2,7 @@
 title: "Don't Worry, Be (Reproducibly) Happy! Reproducibility from Day 1 and Day X"
 collection: talks
 type: "Talk"
-date: 2024-03-22
+date: 2024-03-23
 location: "Chicago, Illinois"
 venue: "Midwest Economics Association Annual Meetings 2024"
 mainurl: https://virtual.oxfordabstracts.com/#/event/4777/submission/415
