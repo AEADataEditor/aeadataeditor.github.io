@@ -180,7 +180,7 @@ We said it above:
 > - See [instructions in previous Step 1](/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data)
 > - Be sure to only include PII data that you are allowed to publish (f.i., politicians' names, etc.). We recommend using the J-PAL maintained PII-Scan for R <https://github.com/J-PAL/PII-Scan> or PII-Scan for Stata <https://github.com/J-PAL/stata_PII_scan> to get an idea of potential PII in your dataset.
 
-⚠️ 📢 You remain ultimately responsible for ensuring that no PII is included in the published replication package.
+⚠️ 📢 You remain ultimately responsible for ensuring that no **unauthorized** PII is included in the published replication package.
 
 - If you can share the data more broadly, but want to control access, you **must** create a separate deposit for the parts of the data that are sensitive  while keeping the code, and any non-sensitive data, in the "primary" deposit as described on the present page. Your README must describe how to combine the two deposits.
 
