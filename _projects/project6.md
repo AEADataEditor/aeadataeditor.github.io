@@ -50,7 +50,7 @@ The internship will broadly start after institution-specific final exams are ove
 **Requirements:**
 
 Training is required as a condition of hiring. While employed, attendance (via Zoom) at two weekly meetings is required.
-Training will take place **in April** in person, and on several subsequent days (TBD) remotely. Live attendance is  expected, plus some significant self-paced work. 
+Training will take place **on April 12 and 13** in person **at [Wellesley College](https://www.wellesley.edu/)**, and on several subsequent days (TBD) remotely. Live attendance is  expected, plus some significant self-paced work. 
 
  
 **Remuneration:** Starting wage is $15.75 per hour, up to 20 hours per week.
@@ -63,7 +63,7 @@ The internship is remote.
 
 ### Location and date of training day
 
-Training in 2025 will take place at **TBD** on **TBD**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
+Training in 2025 will take place at **at [Wellesley College](https://www.wellesley.edu/)** on **on April 12 and 13**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
 
 ### Agenda for training day 1
 
@@ -134,7 +134,7 @@ Meetings with Lars, which include both follow-up to any further questions intern
 The actual work in the Lab will start at various dates, depending on your institution's exam schedule and other details. Contact your local coordinator for the exact start date if you are unsure.
 
 - Early start: As coordinated
-- Kickoff meeting: May 30, 10AM Eastern
+- Kickoff meeting: TBD, around May 30, 10AM Eastern
 
 ## Additional activities
 
