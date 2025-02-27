@@ -12,6 +12,8 @@ We will send you a filled-out checklist, verifying compliance with each item. Th
 
 > If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a **\***.
 
+A printable checklist is available [here](/assets/pdfs/pandp2025-checklist.pdf).
+
 ## List of required items
 
 ### Title
