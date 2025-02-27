@@ -29,7 +29,7 @@ feature_row:
     btn_class: "btn--primary"
     url: "https://www.aeaweb.org/journals/"
 #
-feature_row:
+feature_row2:
   - image_path: /images/noun-conference-5995416.png
     alt: "C"
     title: "P&P"
@@ -57,9 +57,8 @@ feature_row:
 {% include feature_row %}
 
 
-{% include feature_row id="intermediate" type="center" %}
+{% include feature_row id="feature_row2" %}
 
-{% include feature_row id="last" type="center" %}
 
 
 
