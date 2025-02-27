@@ -44,7 +44,7 @@ feature_row2:
     url: "/aea-de-guidance/next"
     btn_label: "Next steps"
     btn_class: "btn--primary btn--center"
-  - image_path: /images/noun_settings-3836219.png
+  - image_path: /images/noun-settings-3836219.png
     alt: "X"
     title: "Approximate process flow"
     btn_label: "Bigger"
