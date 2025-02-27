@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
+        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. P&amp;P The same rules apply to the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/",
         "teaser": null
@@ -111,6 +111,12 @@ var store = [{
         "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-for-data-deposit",
+        "teaser": null
+      },{
+        "title": "Preparing your replication package for Papers and Proceedings",
+        "excerpt":"Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2. However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-pandp",
         "teaser": null
       },{
         "title": "Data deposit guidance",

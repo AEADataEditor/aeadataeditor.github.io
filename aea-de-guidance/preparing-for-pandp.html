@@ -1,0 +1,508 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Preparing your replication package for Papers and Proceedings - Office of the AEA Data Editor</title>
+<meta name="description" content="Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2.     However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully compliant with the AEA Data and Code Availability Policy. Should a reader or user of your replication package find errors or omissions at a later stage, you will be asked to remedy the situation in line with our Policy on Revisions of Data and Code Deposits.   We will send you a filled-out checklist, verifying compliance with each item. This page provides a bit of guidance on how to get a perfect score.     If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a *.   List of required items  Title  Suggested: “Data and code for: (NAME OF PAPER)”  Principal Investigators  This corresponds to the authors of the article; however, these need not be in the same order as in the article.  Please ensure that all authors have affiliations; if not affiliated,  use “Independent Researcher”.  Summary  Suggested: The abstract from the article and/or a note that this is  data and/or code accompanying the article.  JEL Classification	*  May be the same JEL codes as the article.  Manuscript ID	*  Manuscript tracking numbers in the format  “PandP-2021-xxxx”  No ZIP Files *  No visible ZIP files. Use “Import from ZIP” on openICPSR. This is supported on Dataverse deposits, but not on Zenodo and some others.  README Format  Must be PDF, TXT, or MD. DOCX generally not accepted, unless the relevant repository allows for Web preview without download of DOCX files.  README Content  The README content must be fully compliant with the Template README.  We check that at least the following sections must be present to be compliant:     Data Availability and Provenance Statements   Details on Each Data Source (sufficient for others to obtain the same data from the original source)   Computational Requirements   Instructions to Replicators.   Code  Deposits must always contain code, even if data cannot be included. The provided code must be complete, including for construction  of the analysis data from raw data, and for appendix tables and  figures, and all inline numbers.  Data  Please only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB.  Survey/Experimental materials  These must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the Policy for Papers Conducting Experiments and Collecting Primary Data.  The replication package must contain any computer programs,  configuration files, or scripts used to run the experiment or  develop the survey instrument, e.g., z-Tree code, Qualtrics,  SurveyCTO, LimeSurvey.  List of suggested (metadata) items  The following items are suggested for better findability of the replication package by searches.     Subject Terms, e.g., “Machine Learning”, “Randomized Control Trial”, …   Geographic Coverage *, e.g, “United States”, “Florida, U.S.”, “Indonesia”, …   Time Period(s) *, e.g., “1982-2008”   Funding Sources   Collection Dates *   Data Types   Data Sources   Unit of Observation">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Preparing your replication package for Papers and Proceedings">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-pandp">
+
+
+  <meta property="og:description" content="Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2.     However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully compliant with the AEA Data and Code Availability Policy. Should a reader or user of your replication package find errors or omissions at a later stage, you will be asked to remedy the situation in line with our Policy on Revisions of Data and Code Deposits.   We will send you a filled-out checklist, verifying compliance with each item. This page provides a bit of guidance on how to get a perfect score.     If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a *.   List of required items  Title  Suggested: “Data and code for: (NAME OF PAPER)”  Principal Investigators  This corresponds to the authors of the article; however, these need not be in the same order as in the article.  Please ensure that all authors have affiliations; if not affiliated,  use “Independent Researcher”.  Summary  Suggested: The abstract from the article and/or a note that this is  data and/or code accompanying the article.  JEL Classification	*  May be the same JEL codes as the article.  Manuscript ID	*  Manuscript tracking numbers in the format  “PandP-2021-xxxx”  No ZIP Files *  No visible ZIP files. Use “Import from ZIP” on openICPSR. This is supported on Dataverse deposits, but not on Zenodo and some others.  README Format  Must be PDF, TXT, or MD. DOCX generally not accepted, unless the relevant repository allows for Web preview without download of DOCX files.  README Content  The README content must be fully compliant with the Template README.  We check that at least the following sections must be present to be compliant:     Data Availability and Provenance Statements   Details on Each Data Source (sufficient for others to obtain the same data from the original source)   Computational Requirements   Instructions to Replicators.   Code  Deposits must always contain code, even if data cannot be included. The provided code must be complete, including for construction  of the analysis data from raw data, and for appendix tables and  figures, and all inline numbers.  Data  Please only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB.  Survey/Experimental materials  These must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the Policy for Papers Conducting Experiments and Collecting Primary Data.  The replication package must contain any computer programs,  configuration files, or scripts used to run the experiment or  develop the survey instrument, e.g., z-Tree code, Qualtrics,  SurveyCTO, LimeSurvey.  List of suggested (metadata) items  The following items are suggested for better findability of the replication package by searches.     Subject Terms, e.g., “Machine Learning”, “Randomized Control Trial”, …   Geographic Coverage *, e.g, “United States”, “Florida, U.S.”, “Indonesia”, …   Time Period(s) *, e.g., “1982-2008”   Funding Sources   Collection Dates *   Data Types   Data Sources   Unit of Observation">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-02-26T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-pandp">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Preparing your replication package for Papers and Proceedings">
+    <meta itemprop="description" content="Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2.  However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully compliant with the AEA Data and Code Availability Policy. Should a reader or user of your replication package find errors or omissions at a later stage, you will be asked to remedy the situation in line with our Policy on Revisions of Data and Code Deposits.We will send you a filled-out checklist, verifying compliance with each item. This page provides a bit of guidance on how to get a perfect score.  If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a *.List of required itemsTitleSuggested: “Data and code for: (NAME OF PAPER)”Principal InvestigatorsThis corresponds to the authors of the article; however, these need not be in the same order as in the article.Please ensure that all authors have affiliations; if not affiliated, use “Independent Researcher”.SummarySuggested: The abstract from the article and/or a note that this is data and/or code accompanying the article.JEL Classification	*May be the same JEL codes as the article.Manuscript ID	*Manuscript tracking numbers in the format  “PandP-2021-xxxx”No ZIP Files *No visible ZIP files. Use “Import from ZIP” on openICPSR. This is supported on Dataverse deposits, but not on Zenodo and some others.README FormatMust be PDF, TXT, or MD. DOCX generally not accepted, unless the relevant repository allows for Web preview without download of DOCX files.README ContentThe README content must be fully compliant with the Template README.We check that at least the following sections must be present to be compliant:  Data Availability and Provenance Statements  Details on Each Data Source (sufficient for others to obtain the same data from the original source)  Computational Requirements  Instructions to Replicators.CodeDeposits must always contain code, even if data cannot be included. The provided code must be complete, including for construction of the analysis data from raw data, and for appendix tables and figures, and all inline numbers.DataPlease only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB.Survey/Experimental materialsThese must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the Policy for Papers Conducting Experiments and Collecting Primary Data.The replication package must contain any computer programs, configuration files, or scripts used to run the experiment or develop the survey instrument, e.g., z-Tree code, Qualtrics, SurveyCTO, LimeSurvey.List of suggested (metadata) itemsThe following items are suggested for better findability of the replication package by searches.  Subject Terms, e.g., “Machine Learning”, “Randomized Control Trial”, …  Geographic Coverage *, e.g, “United States”, “Florida, U.S.”, “Indonesia”, …  Time Period(s) *, e.g., “1982-2008”  Funding Sources  Collection Dates *  Data Types  Data Sources  Unit of Observation">
+    <meta itemprop="datePublished" content="2025-02-26T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Preparing your replication package for Papers and Proceedings
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-02-26T00:00:00-05:00">February 26, 2025</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#list-of-required-items">List of required items</a><ul><li><a href="#title">Title</a></li><li><a href="#principal-investigators">Principal Investigators</a></li><li><a href="#summary">Summary</a></li><li><a href="#jel-classification-">JEL Classification	*</a></li><li><a href="#manuscript-id-">Manuscript ID	*</a></li><li><a href="#no-zip-files-">No ZIP Files *</a></li><li><a href="#readme-format">README Format</a></li><li><a href="#readme-content">README Content</a></li><li><a href="#code">Code</a></li><li><a href="#data">Data</a></li><li><a href="#surveyexperimental-materials">Survey/Experimental materials</a></li></ul></li><li><a href="#list-of-suggested-metadata-items">List of suggested (metadata) items</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <p>Much of the preparation for the replication packages for papers published in <a href="https://www.aeaweb.org/journals/pandp">Papers and Proceedings</a> is the same as for the AEA journals, see <a href="preparing-for-data-deposit.html">Step 1</a> and <a href="data-deposit-aea.html">Step 2</a>.</p>
+
+<blockquote>
+  <p>However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully compliant with the <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a>. Should a reader or user of your replication package find errors or omissions at a later stage, you will be asked to remedy the situation in line with our <a href="https://www.aeaweb.org/journals/data/revisions-policy">Policy on Revisions of Data and Code Deposits</a>.</p>
+</blockquote>
+
+<p>We will send you a filled-out checklist, verifying compliance with each item. This page provides a bit of guidance on how to get a perfect score.</p>
+
+<blockquote>
+  <p>If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a <strong>*</strong>.</p>
+</blockquote>
+
+<h2 id="list-of-required-items">List of required items</h2>
+
+<h3 id="title">Title</h3>
+
+<p>Suggested: “Data and code for: (NAME OF PAPER)”</p>
+
+<h3 id="principal-investigators">Principal Investigators</h3>
+
+<p>This corresponds to the authors of the article; however, these need not be in the same order as in the article.</p>
+
+<p>Please ensure that all authors have affiliations; if not affiliated, 
+use “Independent Researcher”.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>Suggested: The abstract from the article and/or a note that this is 
+data and/or code accompanying the article.</p>
+
+<h3 id="jel-classification-">JEL Classification	*</h3>
+
+<p>May be the same JEL codes as the article.</p>
+
+<h3 id="manuscript-id-">Manuscript ID	*</h3>
+
+<p>Manuscript tracking numbers in the format  “PandP-2021-xxxx”</p>
+
+<h3 id="no-zip-files-">No ZIP Files *</h3>
+
+<p>No visible ZIP files. Use “Import from ZIP” on openICPSR. This is supported on Dataverse deposits, but not on Zenodo and some others.</p>
+
+<h3 id="readme-format">README Format</h3>
+
+<p>Must be PDF, TXT, or MD. DOCX generally not accepted, unless the relevant repository allows for Web preview without download of DOCX files.</p>
+
+<h3 id="readme-content">README Content</h3>
+
+<p>The README content must be fully compliant with the <a href="https://social-science-data-editors.github.io/template_README/">Template README</a>.</p>
+
+<p>We check that at least the following sections must be present to be compliant:</p>
+
+<ul>
+  <li>Data Availability and Provenance Statements</li>
+  <li>Details on Each Data Source (sufficient for others to obtain the same data from the original source)</li>
+  <li>Computational Requirements</li>
+  <li>Instructions to Replicators.</li>
+</ul>
+
+<h3 id="code">Code</h3>
+
+<p>Deposits must always contain code, even if data cannot be included. The provided code must be <strong>complete</strong>, including for construction 
+of the analysis data from raw data, and for appendix tables and 
+figures, and all inline numbers.</p>
+
+<h3 id="data">Data</h3>
+
+<p>Please only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB.</p>
+
+<h3 id="surveyexperimental-materials">Survey/Experimental materials</h3>
+
+<p>These must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the <a href="https://www.aeaweb.org/journals/data/policy-experimental-surveys">Policy for Papers Conducting Experiments and Collecting Primary Data</a>.</p>
+
+<p>The replication package must contain any computer programs, 
+configuration files, or scripts used to run the experiment or 
+develop the survey instrument, e.g., z-Tree code, Qualtrics, 
+SurveyCTO, LimeSurvey.</p>
+
+<h2 id="list-of-suggested-metadata-items">List of suggested (metadata) items</h2>
+
+<p>The following items are suggested for better findability of the replication package by searches.</p>
+
+<ul>
+  <li>Subject Terms, e.g., “Machine Learning”, “Randomized Control Trial”, …</li>
+  <li>Geographic Coverage *, e.g, “United States”, “Florida, U.S.”, “Indonesia”, …</li>
+  <li>Time Period(s) *, e.g., “1982-2008”</li>
+  <li>Funding Sources</li>
+  <li>Collection Dates *</li>
+  <li>Data Types</li>
+  <li>Data Sources</li>
+  <li>Unit of Observation</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-02-26T00:00:00-05:00">February 26, 2025</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Preparing+your+replication+package+for+Papers+and+Proceedings%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-for-pandp" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-for-pandp" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/preparing-for-pandp.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
