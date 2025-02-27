@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Step by step guidance",
-        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. P&amp;P The same rules apply to the...","categories": [],
+        "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/",
         "teaser": null
