@@ -33,7 +33,7 @@ What is the README for? README in the social sciences serve multiple purposes: g
 
 We provide templates/examples for Data and Code Availability Statement: 
 
-- where do the data come from (see the [Data Citation Principles[(https://www.force11.org/datacitationprinciples)), 
+- where do the data come from (see the [Data Citation Principles](https://www.force11.org/datacitationprinciples)), 
 - any access restrictions, 
 - how the data can be used (licenses). 
 
