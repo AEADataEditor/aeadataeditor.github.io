@@ -773,6 +773,12 @@ var store = [{
         "url": "/talks/2024-10-07-vienna-panel",
         "teaser": null
       },{
+        "title": "ZBW Coffee Lecture on Open Science Education: A reproducibility internship?",
+        "excerpt":"Abstract The LDI Replication Lab verifies computational reproducibility of papers appearing in AEA journals with undergraduate students, who experience hands-on engagement with data and code for conditionally accepted manuscripts. We believe that exposure to and training in well-structured programming will benefit students both in academia and the private sector. They...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-11-07-zbw-coffee",
+        "teaser": null
+      },{
         "title": "Open Q&A with Data Editors of the AEA, ECTA, and WEAI",
         "excerpt":"Time   5:30pm - 6:30pm   Room   310   Abstract   Meet w/ Lars Vilhuber (AEA), Joan Llull (Econometrica) &amp; Farasat Bokhari (Economic Inquiry, WEAI) to learn &amp; ask about best practices in preparing replication packages for publications in Economics.   Local organizer: Amy O’Hara     ","categories": [],
         "tags": [],
