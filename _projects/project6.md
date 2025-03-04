@@ -96,15 +96,16 @@ There will be various breaks throughout the day.
 
 *1. Accommodation*
 
-(Participants will need to pay for their own accomodations. Participating institutions usually cover this.)
+Wellesley cannot offer on-campus accommodation, unfortunately. The best option is the Verve Hotel in Natick, which is about a 10 to 15 minute ride to campus. The participants can get corporate rates if they book through Wellesley's corporate link: [https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/](https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/). The rate should be approximately $158 a night (as of March 2025). If they have any issues with booking, they can contact their local organizer.
 
 *2. Transportation options*
 
-(Participants will need to pay for their own travel. Participating institutions usually cover this.)
+From the airport to the Verve Hotel, people can either take a cab or use the Logan Express bus headed to Framingham (which is a cheaper option). They can purchase tickets on the bus or in advance here: [https://loganexpress.com/buy-tickets.asp](https://loganexpress.com/buy-tickets.asp). They can then take a cab from the Logan Express bus station in Framingham to the Verve Hotel (less than a 5 minute ride) or arrange in advance for the hotel's complimentary shuttle from the bus station by calling the front desk at 508-653-8800, extension 6.
 
 *3. Meals*
 
-(Meals will be provided. A joint dinner on Saturday will happen, TBD)
+We are grateful to Wellesley College for  providing  breakfast and lunch on campus on April 12/13 during the training, and dinner on Saturday. If any participants have dietary restrictions, they should please their local organizer know.
+
 
 ## Follow-up activities: Test cases and peer mentoring
 
