@@ -74,7 +74,7 @@ Training in 2025 will take place at **at [Wellesley College](https://www.wellesl
 | 10:00 |  **[Reproducible Practices](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1a.html#1), [Template README](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1b.html#1)**                     |
 | 11:00 | **Data provenance, [Data Citations](https://labordynamicsinstitute.github.io/replicability-training-presentation/part2.html#1)**  |
 | 12:00 |  Lunch Break                                               |
-| 13:00 |  **What will you be doing in the Lab**                    |
+| 13:00 |  **What will you be doing in the Lab**  (see [manual](https://labordynamicsinstitute.github.io/ldilab-manual/)                  |
 | 14:00 |  **[Command Line/Git](https://labordynamicsinstitute.github.io/replicability-training-presentation/part4.html)**                    |
 | 15:00 |  **A prototypical replication report**                        |
 | 16:00 | **A walkthrough of the [Workflow](https://labordynamicsinstitute.github.io/ldilab-manual/11-00-jira-workflow.html)**|
@@ -109,7 +109,7 @@ We are grateful to Wellesley College for  providing  breakfast and lunch on camp
 
 ## Follow-up activities: Test cases and peer mentoring
 
-
+> You should bookmark the "[LDI Lab Training manual](https://labordynamicsinstitute.github.io/ldilab-manual/)"     
 ### Test cases
 
 Test cases are worked through and jointly handled, including repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
