@@ -4,6 +4,14 @@ collection: projects
 type: "projects"
 date: 2025-02-10
 toc: true
+dates:
+  followup1: 2025-04-16
+  followup2: 2025-04-21
+  followup3: 2025-04-25
+  followup4: 2025-05-05
+  peermentor1: 2025-04-17
+  peermentor2: 2025-04-23
+  peermentor3: 2025-04-30
 ---
 
 
@@ -121,13 +129,24 @@ Test cases are worked through and jointly handled, including repeated peer mento
 
 ###  Live Peer group mentoring with existing replicators
 
-(all sessions on Zoom, see calendar invite for details)
+Test cases are worked through, and jointly handled, including with repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
+
+- each test article should take you no more than 5 hours of work (decreasing as you progress)
+- each session is **live** on **Zoom** (for details, see calendar invite).
+
+- Test article 1 peer-mentoring session: **{{ page.dates.peermentoring1 }}** (6-7 PM Eastern)
+- Test article 2 peer-mentoring session: **{{ page.dates.peermentoring2 }}** (6-7 PM Eastern)
+- Test article 3 peer-mentoring session: **{{ page.dates.peermentoring3 }}** (6-7 PM Eastern)
 
 
 ### Follow-up meetings:
 
-Meetings with Lars, which include both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions.
+Meetings with Lars, which include both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions. These are also on **Zoom**, see calendar invites for details.
 
+- Followup 1: **{{ page.dates.followup1 }}** (6-7 PM Eastern)
+- Followup 2: **{{ page.dates.followup2 }}** (6-7 PM Eastern)
+- Followup 3: **{{ page.dates.followup3 }}** (6-7 PM Eastern)
+- Final meeting: **{{ page.dates.followup4 }}** (6-7 PM Eastern)
 
 
 ## Start of work
@@ -135,7 +154,7 @@ Meetings with Lars, which include both follow-up to any further questions intern
 The actual work in the Lab will start at various dates, depending on your institution's exam schedule and other details. Contact your local coordinator for the exact start date if you are unsure.
 
 - Early start: As coordinated
-- Kickoff meeting: TBD, around May 30, 10AM Eastern
+- Kickoff meeting: June 2, 2025, 10AM Eastern
 
 ## Additional activities
 
