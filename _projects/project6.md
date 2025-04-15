@@ -134,9 +134,9 @@ Test cases are worked through, and jointly handled, including with repeated peer
 - each test article should take you no more than 5 hours of work (decreasing as you progress)
 - each session is **live** on **Zoom** (for details, see calendar invite).
 
-- Test article 1 peer-mentoring session: **{{ page.dates.peermentoring1 }}** (6-7 PM Eastern)
-- Test article 2 peer-mentoring session: **{{ page.dates.peermentoring2 }}** (6-7 PM Eastern)
-- Test article 3 peer-mentoring session: **{{ page.dates.peermentoring3 }}** (6-7 PM Eastern)
+- Test article 1 peer-mentoring session: **{{ page.dates.peermentor1 }}** (6-7 PM Eastern)
+- Test article 2 peer-mentoring session: **{{ page.dates.peermentor2 }}** (6-7 PM Eastern)
+- Test article 3 peer-mentoring session: **{{ page.dates.peermentor3 }}** (6-7 PM Eastern)
 
 
 ### Follow-up meetings:
