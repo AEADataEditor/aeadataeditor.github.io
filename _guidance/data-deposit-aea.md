@@ -17,7 +17,7 @@ For a video tutorial on this process, see [this Youtube video](https://www.youtu
 
 If, in the process of uploading your replication package, you have questions that are not addressed by these guidelines, please contact us:
 
-- We are on [Twitter](https://twitter.com/AeaData) and [Mastodon](https://mstdn.social/@aeadata/).
+- We are on [BlueSky](https://bsky.app/profile/aeadata.bsky.social), [Mastodon](https://mstdn.social/@aeadata/).
 - Contact us via the AEA's [Contact form](https://www.aeaweb.org/contact)
 - Reach out to the editor handling your paper, who knows how to reach us (but might also have the answer).
 - Reach out to us directly (you know how to find us).
