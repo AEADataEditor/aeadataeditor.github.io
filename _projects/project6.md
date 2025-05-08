@@ -158,7 +158,7 @@ The actual work in the Lab will start at various dates, depending on your instit
 
 ## Additional activities
 
-Interns are invited to participate in a weekly webinar, highlighting career paths in economics (and where they might lead other than economics), and the role of reproducibility and transparency in those paths. See the [webinar schedule from 2024](https://labordynamicsinstitute.github.io/summer-camp-2024/) for some details. The 2025 schedule is TBD.
+Interns are invited to participate in a weekly webinar, highlighting career paths in economics (and where they might lead other than economics), and the role of reproducibility and transparency in those paths. See the [webinar schedule](https://labordynamicsinstitute.github.io/summer-camp-chats/).
 
 ## Questions and Answers
 
