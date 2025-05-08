@@ -802,4 +802,28 @@ var store = [{
         "tags": [],
         "url": "/talks/2025-01-04-san-francisco",
         "teaser": null
+      },{
+        "title": "La crédibilité de la recherche : comment améliorer la reproductibilité en sciences économiques",
+        "excerpt":"A discussion on the credibility of research with two data editors   (The discussion will be in French)   Join us in beautiful Orford, Quebec, just north of Vermont.   Marie Connolly is Data Editor for the Canadian Journal of Economics.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2025-05-14-orford",
+        "teaser": null
+      },{
+        "title": "QICSS Summer School on Research Reproducibility",
+        "excerpt":"Abstract This intensive (1.5 day) training explores the fundamental principles of reproducibility, a pillar of open science that ensures the transparency and credibility of scientific research. You will discover best practices to make your work reproducible, from data management to code documentation, version control and results publication. Prerequisites: Previous knowledge...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-05-26-montreal",
+        "teaser": null
+      },{
+        "title": "Reproducibility from the data editor's perspective",
+        "excerpt":"Time   9:00-10:30 AM (Mexico City time)   Note   I may also be available for individual meetings June 16 and 19.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2025-06-17-mexico",
+        "teaser": null
+      },{
+        "title": "Reproducibility from Day 1 to Day T",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-06-22-weai",
+        "teaser": null
       }]
