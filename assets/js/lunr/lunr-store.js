@@ -816,7 +816,7 @@ var store = [{
         "teaser": null
       },{
         "title": "CEA Panel on Reproducibility",
-        "excerpt":"Abstract   To come.  ","categories": [],
+        "excerpt":"Location 8:30am-10am, UQAM, Pavillon DS, 320, rue Ste-Catherine est, room DS-R510 Abstract Recent AI developments, particularly large language models (LLMs), came out in full force in the last couple of years, with an increasing use by researchers in all fields. How is this changing the way economists handle the reproducibility...","categories": [],
         "tags": [],
         "url": "/talks/2025-05-30-cea",
         "teaser": null
