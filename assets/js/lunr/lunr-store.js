@@ -815,6 +815,12 @@ var store = [{
         "url": "/talks/2025-05-26-montreal",
         "teaser": null
       },{
+        "title": "CEA Panel on Reproducibility",
+        "excerpt":"Abstract   To come.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2025-05-30-cea",
+        "teaser": null
+      },{
         "title": "Reproducibility from the data editor's perspective",
         "excerpt":"Time   9:00-10:30 AM (Mexico City time)   Note   I may also be available for individual meetings June 16 and 19.  ","categories": [],
         "tags": [],
@@ -825,5 +831,11 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2025-06-22-weai",
+        "teaser": null
+      },{
+        "title": "Practical Guidance for Open Science in Your Research",
+        "excerpt":"Abstract Open Science is a key ingredient for credible research. Many also think that it is hard. We provide an accessible introduction into the topic and the concepts. We distill results from surveys of 100s of economists and reproducibility checks on 1000s of replication packages into practical guidance on best...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-09-14-vfs",
         "teaser": null
       }]
