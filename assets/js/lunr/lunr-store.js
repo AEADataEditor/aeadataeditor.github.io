@@ -838,4 +838,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2025-09-14-vfs",
         "teaser": null
+      },{
+        "title": "Open Science  - Increasing Research Transparency in Economics",
+        "excerpt":"Abstract Over the past years, several international associations in economics have introduced systematic reproducibility checks of submissions and a number of initiatives have been coordinating large scale efforts to conduct ex-post reproducibility checks of published papers. Beyond reproducibility, replications in a wider sense and meta studies have been conducted to...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-09-15-vfs",
+        "teaser": null
       }]
