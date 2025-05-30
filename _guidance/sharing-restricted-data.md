@@ -51,7 +51,7 @@ AEA authors are required to submit a [Data and Code Availability Form](https://w
 
 The AEA Data Editor is an employee of an educational institution, not the AEA itself (see [main page](https://aeadataeditor.github.io/) for the current AEA Data Editor's affiliation). Thus, all access rights are constrained by rules at that educational institution. 
 
-- If an NDA needs to be signed, the use of [Cornell’s Individual Standard Non-Disclosure Agreement](https://researchservices.cornell.edu/resources/individual-standard-non-disclosure-agreement-nda) (as of 2021) is the most time-efficient. Deviations thereof may need approval by the host institution's office of sponsored research and may delay signature of the agreement.
+- If an NDA needs to be signed, the use of [Cornell’s Individual Standard Non-Disclosure Agreement](https://researchservices.cornell.edu/resources/standard-individualunilateral-non-disclosure-agreement-nda) (as of 2021) is the most time-efficient. Deviations thereof may need approval by the host institution's office of sponsored research and may delay signature of the agreement.
 
 - If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.
 

@@ -50,3 +50,7 @@ Please be sure to also provide the exact version of the Python packages used (e.
 ## Intellectual property
 
 US Copyright Office: <https://arstechnica.com/tech-policy/2025/01/copyright-office-suggests-ai-copyright-debate-was-settled-in-1965/>
+
+## Databasing prompts
+
+<https://bsky.app/profile/jonmellon.bsky.social/post/3lhtiq2myfc2i>
