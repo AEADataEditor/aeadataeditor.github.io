@@ -833,6 +833,12 @@ var store = [{
         "url": "/talks/2025-06-22-weai",
         "teaser": null
       },{
+        "title": "Conversation on Replication Packages with SOLE Mentees",
+        "excerpt":"Time   11:00am - 12:30pm   Abstract   General Q&amp;A about replication packages, loosely based on topics available at https://larsvilhuber.github.io/tutorial-reproducibility-2025/.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2025-06-25-sole-mentees",
+        "teaser": null
+      },{
         "title": "Practical Guidance for Open Science in Your Research",
         "excerpt":"Abstract Open Science is a key ingredient for credible research. Many also think that it is hard. We provide an accessible introduction into the topic and the concepts. We distill results from surveys of 100s of economists and reproducibility checks on 1000s of replication packages into practical guidance on best...","categories": [],
         "tags": [],
