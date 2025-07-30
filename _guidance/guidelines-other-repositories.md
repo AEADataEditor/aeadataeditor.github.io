@@ -111,6 +111,8 @@ If you already have a published deposit, you can "Submit to community".
 
 > Zenodo [Submit to community for inclusion](https://help.zenodo.org/docs/share/submit-to-community/)
 
+At the time of writing, [Zenodo allows](https://help.zenodo.org/docs/deposit/manage-files/) for "up to 50GB per record with a maximum of 100 files." To the extent possible (conditional on preserving directory structure), you should unzip as many files as possible. 
+
 ### Codeocean
 
 If you can publish your data freely, and the data is less than 2GB, you can construct your entire replication package on CodeOcean. If on the other hand your replication package requires future replicators to download data, then you will not be able to use Codeocean.
