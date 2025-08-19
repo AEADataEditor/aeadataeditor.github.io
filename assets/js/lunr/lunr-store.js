@@ -311,6 +311,12 @@ var store = [{
         "url": "/posts/2025-01-17-tables-in-excel",
         "teaser": null
       },{
+        "title": "On the Dangers of Online Storage",
+        "excerpt":"We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on? The Problem It turns out...","categories": [],
+        "tags": ["data editor tips","replication packages","Dropbox","OneDrive","Box"],
+        "url": "/posts/2025-08-18-dropbox-etc",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

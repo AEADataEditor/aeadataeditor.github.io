@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2025-08-11T21:39:40-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the use of Excel for reproducible tables</title><link href="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel" rel="alternate" type="text/html" title="On the use of Excel for reproducible tables" /><published>2025-01-17T00:00:00-05:00</published><updated>2025-01-17T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/tables-in-excel</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel"><![CDATA[<p>I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2025-08-18T21:38:25-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">On the Dangers of Online Storage</title><link href="https://aeadataeditor.github.io/posts/2025-08-18-dropbox-etc" rel="alternate" type="text/html" title="On the Dangers of Online Storage" /><published>2025-08-18T00:00:00-04:00</published><updated>2025-08-18T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/dropbox-etc</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2025-08-18-dropbox-etc"><![CDATA[<p>We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?</p>
+
+<!-- more -->
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>It turns out that online storage solutions, such as Dropbox, OneDrive, and Box (without necessarily limiting ourselves to these), provide a really “convenient” feature: They show you all the thousands of files you have accumulated, including over the 8 years this project has been underway. But they don’t want to put 2TB of data on your laptop. So the files you see are NOT really there… they leave placeholders in place.</p>
+
+<p>What happens when you want to access these files? You double-click on them, and then it takes a bit longer for your Word, Acrobat, or Stata to open the file, because in the background, OneDropBoxDrive is quickly downloading the file for you, as if it had always been there. Sometimes, the application files, because it is taking too long, but you try again, and it works. You think “huh, stupid computer”  and go on with your work.</p>
+
+<p>So what happens when you zip up these files? Well, it turns out, in many cases (not entirely clear when), ZIP file creators are perfectly happy to NOT be patient, and simply zip up the placeholders. Which are empty files.</p>
+
+<p>When you then upload these ZIP files to deposits like the AEA’s <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">Data and Code Repository</a>, the system there happily unzips the files. And perfectly preserves a bunch of empty files.</p>
+
+<p><img src="/images/icpsr-zero-byte-files.png" alt="Empty files on openICPSR" /></p>
+
+<p>The problem is as bad on other repositories, such as the various Dataverses out there, or <a href="https://zenodo.org/">Zenodo</a>.</p>
+
+<h2 id="the-partial-solution">The partial Solution</h2>
+
+<p>We have added to our ingest scripts a <a href="https://github.com/AEADataEditor/replication-template/blob/master/automations/06_check_duplicates_and_zero_bytes.sh">check for zero-byte files</a>, which will flag these files. But this is relatively new, and not all replicators catch this early on. Leading to frustrating delays for everybody.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>How do YOU (the author) avoid this problem? Two paths:</p>
+
+<ul>
+  <li>You could simply set the project directory to be “always available offline” (or whatever DriveBoxOneDrop may call it). So they gobble up all the storage space they need.  Then, when you ZIP them up, they will all be there. When you are done, you can flip them back to “online only” if you want (until you get back the report from us asking you to fix stuff…)</li>
+  <li>Or, you can simply go to the BoxDriveDropOne website, and download the entire project from there, as a ZIP file, ready to upload.</li>
+</ul>
+
+<blockquote>
+  <p>For Dropbox, here’s what you do:</p>
+
+  <ul>
+    <li>Go to <a href="https://www.dropbox.com/home">https://www.dropbox.com/home</a>. If you are not logged on there, go to your Dropbox icon in the system tray (Windows, Linux) or menu bar (Mac), and select “Launch Dropbox Website”.</li>
+    <li>Navigate to the folder you want to download. You want to see the files in the folder (be “in”  the folder).</li>
+  </ul>
+
+  <p><img src="/images/dropbox-sample-folder.png" alt="Dropbox folder view" /></p>
+
+  <ul>
+    <li>Click on the gear icon ⚙️ to the right of the folder name, and select “Download”</li>
+  </ul>
+
+  <p><img src="/images/dropbox-sample-folder-download.png" alt="Dropbox download menu" /></p>
+</blockquote>
+
+<p>Voilà! You have a ZIP file with all the files in it, ready to upload to your deposit, with no chance at all that some files are missing.<sup id="fnref:a"><a href="#fn:a" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:a">
+      <p>Unless, of course, the files are missing on your DropOneBoxDrive, and the problem is not the software…. <a href="#fnref:a" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="Dropbox" /><category term="OneDrive" /><category term="Box" /><summary type="html"><![CDATA[We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?]]></summary></entry><entry><title type="html">On the use of Excel for reproducible tables</title><link href="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel" rel="alternate" type="text/html" title="On the use of Excel for reproducible tables" /><published>2025-01-17T00:00:00-05:00</published><updated>2025-01-17T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/tables-in-excel</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2025-01-17-tables-in-excel"><![CDATA[<p>I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many copy-paste errors, and a bad idea. I describe here one way to avoid this, even when the researcher does not want to invest in a new tool.</p>
 
 <!-- more -->
 
@@ -1168,41 +1224,4 @@ None of those directly address when an NDA is required, but the generic “<a hr
       <p>Fisher, Irving. “‘The Equation of Exchange,’ 1896-1910.” The American Economic Review, vol. 1, no. 2, 1911, pp. 296–305. JSTOR, http://www.jstor.org/stable/1804304. Accessed 1 Nov. 2023. <a href="#fnref:irving" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="NDA" /><category term="DUA" /><category term="confidential" /><summary type="html"><![CDATA[Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site: Econ and finance journals are getting their acts together wrt reproducibility. A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine. Don’t know how to make it happen. A few thoughts.]]></summary></entry><entry><title type="html">RESOLVED - Access to replication packages retrieval and deposit interrupted</title><link href="https://aeadataeditor.github.io/posts/2023-08-29-notice-downtime" rel="alternate" type="text/html" title="RESOLVED - Access to replication packages retrieval and deposit interrupted" /><published>2023-08-29T00:00:00-04:00</published><updated>2023-08-29T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/notice-downtime</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2023-08-29-notice-downtime"><![CDATA[<blockquote>
-  <p>THIS HAS BEEN RESOLVED. Please <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html">deposit as usual</a>!</p>
-</blockquote>
-
-<p>The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, <a href="https://umich.edu/announcements/">Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period</a>. The AEA Code and Data Repository is therefore not accessible at this time, for both authors seeking to deposit their required replication package, and for interested readers to obtain published replication packages. A few operational notes from us follow.</p>
-
-<!-- more -->
-
-<p><img src="/images/umich-down-20230829.png" alt="Screenshot of Umich website" /></p>
-
-<h2 id="for-depositors">For depositors</h2>
-
-<p>Authors who just received a conditional acceptance from an AEA journal are required to deposit their replication package at openICPSR. New depositors will receive a message with temporary instructions (see below). Authors who received their notification in recent weeks, and who are still working on completing their deposit, will also be contacted.</p>
-
-<blockquote>
-  <p>“The deposit of replication packages at openICPSR is temporarily interrupted (see https://umich.edu/announcements/). As a temporary measure, you can satisfy your deposit requirement by following these instructions:</p>
-
-  <ul>
-    <li>create a ZIP file of your replication package, as you would deposit it on openICPSR. <strong>DO NOT INCLUDE ANY CONFIDENTIAL DATA.</strong></li>
-    <li>name the ZIP file “{manuscript number}.zip” (e.g., “AER-2023-0000.zip”)</li>
-    <li>upload it at the URL (provided))</li>
-  </ul>
-
-  <p>The temporary upload URL is xxxxx. It will only be open as a long as the openICPSR website is inaccessible. Once openICPSR is back online, you will need to complete the normal upload process as outlined at https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html.
-“</p>
-</blockquote>
-
-<p>The URL will be contained in the email message that depositors will receive.</p>
-
-<p>IMPORTANT: This only delays, but does not replace the usual deposit process. Authors will ultimately still need to complete the deposit, once openICPSR is back online.</p>
-
-<h2 id="for-interested-readers">For interested readers</h2>
-
-<p>Unfortunately, there is no short-term replacement for access to published replication packages. ICPSR has a robust preservation strategy, and we expect no long-term impact on availability of replication packages. We hope that they are able to resolve the issues affecting their network as soon as possible.</p>
-
-<h2 id="any-concerns">Any concerns</h2>
-
-<p>If you have any concerns regarding a specific replication package, please contact the Data Editor by email.</p>]]></content><author><name>AEA Data Editor</name></author><category term="openICPSR" /><category term="problem" /><category term="notice" /><summary type="html"><![CDATA[THIS HAS BEEN RESOLVED. Please deposit as usual! The AEA uses the openICPSR repository for the deposit and dissemination of replication packages. On Sunday, Aug 27 2023, the University of Michigan, the home institution for openICPSR, had to take all of their systems offline for an undetermined time period. The AEA Code and Data Repository is therefore not accessible at this time, for both authors seeking to deposit their required replication package, and for interested readers to obtain published replication packages. A few operational notes from us follow.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="NDA" /><category term="DUA" /><category term="confidential" /><summary type="html"><![CDATA[Toni Whited (EIC of Journal of Financial Economics) had the following question on the ex-bird site: Econ and finance journals are getting their acts together wrt reproducibility. A bigger issue now is data acquired via NDAs. I wish it were normal for NDAs to have a clause letting third parties replicate results on an air-gapped machine. Don’t know how to make it happen. A few thoughts.]]></summary></entry></feed>

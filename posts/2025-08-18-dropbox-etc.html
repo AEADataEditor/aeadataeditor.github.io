@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>An example of reproducibility checking when data is restricted-access - Office of the AEA Data Editor</title>
-<meta name="description" content="I wanted to highlight a recently (2020-04-30) published article in the AEJ:Economic Policy as an example of reproducibility checking when data is restricted-access.">
+<!-- begin _includes/seo.html --><title>On the Dangers of Online Storage - Office of the AEA Data Editor</title>
+<meta name="description" content="We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?">
 
 
   <meta name="author" content="AEA Data Editor">
@@ -19,26 +19,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Office of the AEA Data Editor">
-<meta property="og:title" content="An example of reproducibility checking when data is restricted-access">
-<meta property="og:url" content="https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted">
+<meta property="og:title" content="On the Dangers of Online Storage">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2025-08-18-dropbox-etc">
 
 
-  <meta property="og:description" content="I wanted to highlight a recently (2020-04-30) published article in the AEJ:Economic Policy as an example of reproducibility checking when data is restricted-access.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2020-06-30T00:00:00-04:00">
+  <meta property="og:description" content="We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?">
 
 
 
 
 
 
-<link rel="canonical" href="https://aeadataeditor.github.io/posts/2020-06-30-example-of-reproducible-restricted">
+
+  <meta property="article:published_time" content="2025-08-18T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2025-08-18-dropbox-etc">
 
 
 
@@ -268,15 +268,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="An example of reproducibility checking when data is restricted-access">
-    <meta itemprop="description" content="I wanted to highlight a recently (2020-04-30) published article in the AEJ:Economic Policy as an example of reproducibility checking when data is restricted-access.">
-    <meta itemprop="datePublished" content="2020-06-30T00:00:00-04:00">
+    <meta itemprop="headline" content="On the Dangers of Online Storage">
+    <meta itemprop="description" content="We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?">
+    <meta itemprop="datePublished" content="2025-08-18T00:00:00-04:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">An example of reproducibility checking when data is restricted-access
+          <h1 class="page__title" itemprop="headline">On the Dangers of Online Storage
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -290,7 +290,7 @@
         
         
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2020-06-30T00:00:00-04:00">June 30, 2020</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-08-18T00:00:00-04:00">August 18, 2025</time></p>
         
         
         
@@ -305,41 +305,63 @@
         
 
       
-        <p>I wanted to highlight a recently (2020-04-30) published article in the <a href="https://www.aeaweb.org/journals/pol">AEJ:Economic Policy</a> as an example of reproducibility checking when data is restricted-access.</p>
+        <p>We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the replicators hits one, then many files that are empty or … weird. What’s going on?</p>
 
 <!-- more -->
 
+<h2 id="the-problem">The Problem</h2>
+
+<p>It turns out that online storage solutions, such as Dropbox, OneDrive, and Box (without necessarily limiting ourselves to these), provide a really “convenient” feature: They show you all the thousands of files you have accumulated, including over the 8 years this project has been underway. But they don’t want to put 2TB of data on your laptop. So the files you see are NOT really there… they leave placeholders in place.</p>
+
+<p>What happens when you want to access these files? You double-click on them, and then it takes a bit longer for your Word, Acrobat, or Stata to open the file, because in the background, OneDropBoxDrive is quickly downloading the file for you, as if it had always been there. Sometimes, the application files, because it is taking too long, but you try again, and it works. You think “huh, stupid computer”  and go on with your work.</p>
+
+<p>So what happens when you zip up these files? Well, it turns out, in many cases (not entirely clear when), ZIP file creators are perfectly happy to NOT be patient, and simply zip up the placeholders. Which are empty files.</p>
+
+<p>When you then upload these ZIP files to deposits like the AEA’s <a href="https://www.openicpsr.org/openicpsr/search/aea/studies">Data and Code Repository</a>, the system there happily unzips the files. And perfectly preserves a bunch of empty files.</p>
+
+<p><img src="/images/icpsr-zero-byte-files.png" alt="Empty files on openICPSR" /></p>
+
+<p>The problem is as bad on other repositories, such as the various Dataverses out there, or <a href="https://zenodo.org/">Zenodo</a>.</p>
+
+<h2 id="the-partial-solution">The partial Solution</h2>
+
+<p>We have added to our ingest scripts a <a href="https://github.com/AEADataEditor/replication-template/blob/master/automations/06_check_duplicates_and_zero_bytes.sh">check for zero-byte files</a>, which will flag these files. But this is relatively new, and not all replicators catch this early on. Leading to frustrating delays for everybody.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>How do YOU (the author) avoid this problem? Two paths:</p>
+
+<ul>
+  <li>You could simply set the project directory to be “always available offline” (or whatever DriveBoxOneDrop may call it). So they gobble up all the storage space they need.  Then, when you ZIP them up, they will all be there. When you are done, you can flip them back to “online only” if you want (until you get back the report from us asking you to fix stuff…)</li>
+  <li>Or, you can simply go to the BoxDriveDropOne website, and download the entire project from there, as a ZIP file, ready to upload.</li>
+</ul>
+
 <blockquote>
-  <p>Leung, Pauline, and Christopher O’Leary. 2020. “Unemployment Insurance and Means-Tested Program Interactions: Evidence from Administrative Data.” American Economic Journal: Economic Policy, 12 (2): 159-92. <a href="https://doi.org/10.1257/pol.20170262">https://doi.org/10.1257/pol.20170262</a></p>
+  <p>For Dropbox, here’s what you do:</p>
+
+  <ul>
+    <li>Go to <a href="https://www.dropbox.com/home">https://www.dropbox.com/home</a>. If you are not logged on there, go to your Dropbox icon in the system tray (Windows, Linux) or menu bar (Mac), and select “Launch Dropbox Website”.</li>
+    <li>Navigate to the folder you want to download. You want to see the files in the folder (be “in”  the folder).</li>
+  </ul>
+
+  <p><img src="/images/dropbox-sample-folder.png" alt="Dropbox folder view" /></p>
+
+  <ul>
+    <li>Click on the gear icon ⚙️ to the right of the folder name, and select “Download”</li>
+  </ul>
+
+  <p><img src="/images/dropbox-sample-folder-download.png" alt="Dropbox download menu" /></p>
 </blockquote>
 
-<p><img src="/images/aejpolicy-2020-05-leung.png" alt="AEJ:Policy 20170262" /></p>
+<p>Voilà! You have a ZIP file with all the files in it, ready to upload to your deposit, with no chance at all that some files are missing.<sup id="fnref:a"><a href="#fn:a" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
-<p>This manuscript was part of our earliest reproducibility checks - it was assigned to us in early April 2019. But with one caveat that I’ll hold till the end, it is an excellent example of a well-documented, and as it turns out, reproducible article. Even if the data is confidential and restricted-access!</p>
-
-<p>The data underlying the analysis is administrative data from various state agencies in Michigan, and it would have been difficult and time-consuming for us replicators to request access.</p>
-
-<p><img src="/images/aejpolicy-2020-05-leung-readme.png" alt="AEJ:Policy 20170262 README" /></p>
-
-<p>We reached out to the authors and asked whether they would be able to add a 3rd-party to their research protocol - either a member of our team or somebody at their institution (<a href="https://www.upjohn.org">@Upjohninstitute</a>) who was not involved in the original research.</p>
-
-<p>The authors connected us with a research associate at their institution who had legal access to the data. The procedure happened, as much as possible, at arms-length: the 3rd-party replicator followed only written instructions that are publicly available, as per our <a href="https://aeadataeditor.github.io/aea-de-guidance/protocol-3rd-party-replication.html">protocol</a>.</p>
-
-<p>In fact, all information and code came from the researchers’ replication archive at openICPSR, which is now available at <a href="https://doi.org/10.3886/E109704V1">https://doi.org/10.3886/E109704V1</a>. However, the replicator had access prior to publication of the archive, and what you see now is not what they had access to.</p>
-
-<p><img src="/images/aejpolicy-2020-05-leung-openicpsr.png" alt="AEJ:Policy 20170262 openICPSR" /></p>
-
-<p>That’s because the replicator identified and suggested multiple (small, but meaningful) edits to README and programs, to make the replication easier for subsequent replicators.</p>
-
-<p>They also identified (minor) various numerical discrepancies, typically at the 3rd decimal place, that we tracked down to  differences in the versions of the Stata package <a href="https://sites.google.com/site/rdpackages/rdrobust"><code class="language-plaintext highlighter-rouge">rdrobust</code></a>. After discussions with <code class="language-plaintext highlighter-rouge">rdrobust</code> authors and manuscript authors, the replication package now contains the exact version of <code class="language-plaintext highlighter-rouge">rdrobust</code> used for the analysis.</p>
-
-<p>Overall, the report received from the 3rd party replicator was useful confirmation that the code that anybody can see would work well on the data that few people can see, and materially improved the replication package.</p>
-
-<p>Take-away message: While we cannot do reproducibility checks on restricted-access data in a timely fashion for all papers that use restricted-access data, there are still many opportunities to do so, and we will always attempt to do so.</p>
-
-<p>In fact, since that paper was reproduced, we have been able to make similar attempts at reproduction for about a dozen other papers, for which we reached out to various individuals or institutions. We have also signed NDA or DUA for various datasets, to obtain copies ourselves. Not all attempts succeed, but expect to see more such verifications in the future.</p>
-
-<p>Caveat I alluded to: We were still refining our various checks and guidance documents. While the authors did an excellent job citing various data sources (in the <a href="https://www.aeaweb.org/doi/10.1257/pol.20170262.appx">online appendix</a>), we did not ask them to add a data citation for the core confidential data. That would be different today.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:a">
+      <p>Unless, of course, the files are missing on your DropOneBoxDrive, and the problem is not the software…. <a href="#fnref:a" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -356,9 +378,15 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#aejpolicy" class="page__taxonomy-item" rel="tag">AEJPolicy</a><span class="sep">, </span>
+      <a href="/tags/#box" class="page__taxonomy-item" rel="tag">Box</a><span class="sep">, </span>
     
-      <a href="/tags/#restricted-access" class="page__taxonomy-item" rel="tag">restricted-access</a>
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#dropbox" class="page__taxonomy-item" rel="tag">Dropbox</a><span class="sep">, </span>
+    
+      <a href="/tags/#onedrive" class="page__taxonomy-item" rel="tag">OneDrive</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a>
     
     </span>
   </p>
@@ -367,7 +395,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2020-06-30T00:00:00-04:00">June 30, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2025-08-18T00:00:00-04:00">August 18, 2025</time></p>
 
 
       </footer>
@@ -377,9 +405,9 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=An+example+of+reproducibility+checking+when+data+is+restricted-access%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2020-06-30-example-of-reproducible-restricted" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=On+the+Dangers+of+Online+Storage%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2025-08-18-dropbox-etc" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2020-06-30-example-of-reproducible-restricted" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2025-08-18-dropbox-etc" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -394,45 +422,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/posts/2025-08-18-dropbox-etc" rel="permalink">On the Dangers of Online Storage
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the...</p>
-  </article>
-</div>
-
         
           
 
@@ -500,7 +489,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          10 minute read
+          9 minute read
         
       </span>
     
@@ -551,6 +540,45 @@
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-04-29-use-and-reuse-of-data" rel="permalink">On the use and redistribution of data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the dat...</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -564,7 +592,7 @@
 <div class="page__footer-follow page__footer-custom">
     <ul class="social-icons">
       <li><strong>Suggestions and comments:</strong></li>
-             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2020-06-30-Example-of-reproducible-restricted.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2025-08-18-dropbox-etc.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
              <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
               <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
              <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
