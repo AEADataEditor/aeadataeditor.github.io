@@ -21,11 +21,11 @@ We see this far too often: When we go to check the deposit that authors submit t
 
 It turns out that online storage solutions, such as Dropbox, OneDrive, and Box (without necessarily limiting ourselves to these), provide a really "convenient" feature: They show you all the thousands of files you have accumulated, including over the 8 years this project has been underway. But they don't want to put 2TB of data on your laptop. So the files you see are NOT really there... they leave placeholders in place. 
 
-What happens when you want to access these files? You double-click on them, and then it takes a bit longer for your Word, Acrobat, or Stata to open the file, because in the background, OneDropBoxDrive is quickly downloading the file for you, as if it had always been there. Sometimes, the application files, because it is taking too long, but you try again, and it works. You think "huh, stupid computer"  and go on with your work.
+What happens when you want to access these files? You double-click on them, and then it takes a bit longer for your Word, Acrobat, or Stata to open the file, because in the background, OneDropBoxDrive is quickly downloading the file for you, as if it had always been there. Sometimes, the application crashes, because OneDropBoxDrive is taking too long, but you try again, and it works. You think "huh, stupid computer"  and go on with your work.
 
 So what happens when you zip up these files? Well, it turns out, in many cases (not entirely clear when), ZIP file creators are perfectly happy to NOT be patient, and simply zip up the placeholders. Which are empty files. 
 
-When you then upload these ZIP files to deposits like the AEA's [Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies), the system there happily unzips the files. And perfectly preserves a bunch of empty files.
+When you then upload these ZIP files to deposits like the AEA's [Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies), the system there happily unzips the ZIP file. And perfectly preserves a bunch of empty files.
 
 ![Empty files on openICPSR](/images/icpsr-zero-byte-files.png)
 
