@@ -276,7 +276,7 @@ For less frequently used software, provide a URL where the software can be obtai
 
   - essentially, if not listed in the figure above, provide information on how to obtain software
   - if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.
-  - as of 2021, the AEA Data Editor has access to the software on [this list](https://ciser.cornell.edu/computing/computing-account-software/), and any open-source (free) software that can be installed on Windows, Linux, and macOS.
+  - as of 2021, the AEA Data Editor has access to the software on [this list](https://socialsciences.cornell.edu/computing-and-data/software), and any open-source (free) software that can be installed on Windows, Linux, and macOS.
 
 ### Choosing a license
 
