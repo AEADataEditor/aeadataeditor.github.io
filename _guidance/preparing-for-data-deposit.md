@@ -200,7 +200,7 @@ When the replication package relies on confidential data that cannot be shared, 
 - prepare a confidential (partial) replication package
   - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example below.
 - preserve (archive) the confidential replication package
-  - If the data cannot be removed from a secure enclave, they should nevertheless be archived wherever the confidential data are kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved))
+  - If the data cannot be removed from a secure enclave, they should nevertheless be archived wherever the confidential data are kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ/ensure-confidential-preservation.html))
   - If the data can be shared, but are subject to access restrictions, follow  [this guide on creating a separate data deposit](creating-separate-data-deposit) and, when creating the restricted deposit at ICPSR, follow [these instructions on how to do so](creating-restricted-data-deposit-icpsr).
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
   - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example below.
