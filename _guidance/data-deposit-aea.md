@@ -30,8 +30,6 @@ In some cases, the [openICPSR helpdesk](https://www.openicpsr.org/openicpsr/cont
 [![Start deposit](/images/icpsr-start-your-deposit-v2.png)](https://www.openicpsr.org/openicpsr/workspace?create=true&archive=aea)
 
 
-:::{admonition} Details
-:class: dropdown
 
 Go to the [AEA Data and Code Repository](https://www.icpsr.umich.edu/sites/aea/home), and start the process. 
 Once there, click on the "Share Data" link:
@@ -40,7 +38,6 @@ Once there, click on the "Share Data" link:
 
 You will be taken to a page explaining some of the technical details. Click on the "[Start Your deposit](https://www.openicpsr.org/openicpsr/workspace?create=true&archive=aea)" button to initiate the deposit process itself. 
 
-:::
 
 ---
 
