@@ -23,16 +23,46 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
+        "title": "Guidance on testing replicability of code",
+        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/reproducibility-checks",
+        "teaser": null
+      },{
+        "title": "Privately sharing restricted-access data with the AEA Data Editor",
+        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-restricted-data",
+        "teaser": null
+      },{
         "title": "Creating separate linked data archives",
         "excerpt":"Every time we see that a lot of effort went into creating a data resource, we don’t want to have that sit hidden in a replication package. We want to give data packages with significant value-added their own deposit, separately cited, and with much better discoverability. This is also relevant...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-separate-data-deposit",
         "teaser": null
       },{
+        "title": "Guidance on how to prepare a comment based on a replication",
+        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/replication-comment",
+        "teaser": null
+      },{
+        "title": "Sharing of Pre-Publication openICPSR deposits",
+        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/sharing-openicpsr",
+        "teaser": null
+      },{
         "title": "Creating a Restricted Data Deposit  for AEA Publications",
         "excerpt":"THIS GUIDE IS OUTDATED, AND SHOULD NOT BE FOLLOWED. IT IS KEPT FOR HISTORICAL REASONS. This guide describes how to create a restricted-access data deposit at ICPSR, associated with an AEA publication. The guide also describes what authors should expect in terms of timelines and process. This reflects current practice...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
+        "teaser": null
+      },{
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
         "teaser": null
       },{
         "title": "Creating a Restricted Data Deposit  for AEA Publications",
@@ -65,36 +95,6 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
-        "title": "Guidance on testing replicability of code",
-        "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/reproducibility-checks",
-        "teaser": null
-      },{
-        "title": "Privately sharing restricted-access data with the AEA Data Editor",
-        "excerpt":"In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”). If you are able to more broadly share sensitive data with any user who...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/sharing-restricted-data",
-        "teaser": null
-      },{
-        "title": "Guidance on how to prepare a comment based on a replication",
-        "excerpt":"You may have found an issue in a published article related to some of the computations therein, and are preparing a comment. This note describes how you should prepare the replication package that accompanies the comment, to ensure clarity and transparency of your replication package. Provide a strong link to...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/replication-comment",
-        "teaser": null
-      },{
-        "title": "Sharing of Pre-Publication openICPSR deposits",
-        "excerpt":"In certain situations, authors might want to provide access to others (co-authors, persons interested in the replication package) prior to publication of the openICPSR deposit. This may be a better solution than sending around ZIP files, as it ensures that the version the recipients of the share see is the...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/sharing-openicpsr",
-        "teaser": null
-      },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
@@ -117,6 +117,12 @@ var store = [{
         "excerpt":"Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2. However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-for-pandp",
+        "teaser": null
+      },{
+        "title": "Preparing your code for computational verification",
+        "excerpt":"The steps in this document are being used in a pilot project. This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages. Overview We will describe a few...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package",
         "teaser": null
       },{
         "title": "Data deposit guidance",
