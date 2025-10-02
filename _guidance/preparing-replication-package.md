@@ -157,6 +157,180 @@ do "$rootdir/code/04_figures1-4.do"
 
 > In neither scenario did we hard-code the path to our project directory `/my/computer/users/me/project`. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.
 
+### Step 2: Path names
+
+Windows computers use `\` (backslashes) in path names, while Mac and Linux computers use `/` (forward slashes). 
+
+Two facts:
+
+- **Every statistical programming language can use generic path names using `/` (forward slashes).** This ensures wide reproducibility.
+- The use of `\` (backslashes) in path names breaks code on Mac and Linux computers.
+
+About 40% of replication packages in economics appear to be submitted by researchers using computers running MacOS or Linux. With a bit of simplified math, if we believe that is representative of what future replicators will do, that means that 40% of users will not be able to run 60% of replication packages without some potentially widespread edits, because of those backslashes.
+
+You should thus replace all path names in your code to use `/` (forward slashes), or appropriate functions. This is straightforward:
+
+#### Stata
+
+```stata
+// Instead of
+use "data\analysis\combined_data.dta", clear
+// Use
+use "data/analysis/combined_data.dta", clear
+// or better
+use "$rootdir/data/analysis/combined_data.dta", clear
+```
+
+#### R
+
+```r
+# Instead of
+data <- read.csv("data\\analysis\\combined_data.csv")
+# Use
+data <- read.csv("data/analysis/combined_data.csv")
+# or better
+data <- read.csv(file.path(rootdir, "data", "analysis", "combined_data.csv"))
+```
+
+and similarly for other languages.
+
+#### Implementing
+
+In many cases, you can just globally replace all `\` with `/` in your code files. Caution however is warranted if your code explicitly writes out $LaTeX$ code, which also (legitimately) uses `\`. In that case, you will need to be more careful.
+
+#### Expert tip
+
+If using a (Bash or Zsh) terminal, you likely have the `sed` command available. You can use it to replace all backslashes with forward slashes in all `.do` files in the `code` directory as follows:
+
+```bash
+sed -i 's+\\+/+g' code/*.do
+```
+
+### Step 3: Dependencies
+
+#### Stata packages
+
+Stata users frequently use user-written packages, which are made available to the Stata community via the [Stata Journal](https://www.stata-journal.com/), [SSC](https://ideas.repec.org/s/boc/bocode.html), or Github. They are typically installed using a small number of variants of the `net install` command (including `ssc install`). 
+
+Replicators need to have the same versions of these packages installed. Stata does not (currently) provide a way to install older versions of packages, and a regular occurrence of reproducibility failure is due to changes in packages over time. We have some simple solutions to this problem. 
+
+First, use an environment to permanently install-project specific packages once and for all.
+
+
+**Define the environment** in your main file, after setting `$rootdir`:
+
+
+> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html> and <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129>
+
+
+```stata
+/* install any packages locally */
+di "=== Redirecting where Stata searches for ado files ==="
+capture mkdir "$rootdir/ado"
+adopath - PERSONAL
+adopath - OLDPLACE
+adopath - SITE
+sysdir set PLUS     "$rootdir/ado/plus"
+sysdir set PERSONAL "$rootdir/ado"       // may be needed for some packages
+sysdir
+```
+
+From this point on, all installed packages will be installed into `$rootdir/ado`, and Stata will look there first when loading packages.
+
+**Install packages once** if not present, but don't reinstall if already present. 
+
+
+> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L174>
+
+```stata
+*** Add required packages from SSC to this list ***
+local ssc_packages ""
+    // Example:
+    // local ssc_packages "estout boottest"
+    // 
+    display in red "============ Installing packages/commands from SSC ============="
+    display in red "== Packages: `ssc_packages'"
+    if !missing("`ssc_packages'") {
+        foreach pkg in `ssc_packages' {
+            capture which `pkg'
+            if _rc == 111 {                 
+               dis "Installing `pkg'"
+                ssc install `pkg'
+            }
+            which `pkg'
+        }
+    }
+```
+
+**Some special cases** (usually not necessary)
+
+*For some packages, the package name is not the same thing as the command name.* Example: `moremata`. For these packages, the above code does not work. Use this code:[^unconditional-packages]
+
+[^unconditional-packages]: A more customized setup might check for a package-specific file in the `ado` directory, such as the `<package>.pkg`, but this is more complex and may not always work. 
+
+
+> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L187>
+
+```stata
+    // If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.
+    // examples are moremata, egennmore, blindschemes, etc.
+local ssc_unconditional ""
+/* add unconditionally installed packages */
+    display in red "=============== Unconditionally installed packages from SSC ==============="
+    display in red "== Packages: `ssc_unconditional'"
+    if !missing("`ssc_unconditional'") {
+        foreach pkg in `ssc_unconditional' {
+            dis "Installing `pkg'"
+            cap ssc install `pkg'
+        }
+    }
+```
+
+*Packages that are not on SSC may need to be `net install`ed from other sources,* including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:
+
+
+```stata
+    // If you have packages that need to be unconditionally installed from other sources (not SSC), then list them here.
+    // Example: grc1leg
+  net install grc1leg, from("http://www.stata.com/users/vwiggins/")
+    // Example when net install is not an option 
+  cap mkdir "$rootdir/ado/plus/e"
+  cap copy http://www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado "$rootdir/ado/plus/e/ebayes.ado"
+```
+
+***Adding to replication package***
+
+The following files should be included in your replication package:
+
+```bash
+code/ado/*
+```
+
+#### R packages
+
+For R packages, we suggest that users use `renv`, and do not set a specific CRAN mirror. We refer users to the [renv documentation](https://rstudio.github.io/renv/articles/renv.html) for details, but in a nutshell, for an existing R project that is not using `renv`, the following commands should be run in the R console:
+
+```r
+install.packages("renv")  # only once
+renv::init()               # only once per project
+renv::snapshot()           # only once per project, after all packages are installed. You should choose to install all packages detected, then snapshotting.
+renv::status()             # to check status
+```
+
+This will create a file `renv.lock` in the top-level directory of your project. 
+
+***Adding to replication package***
+
+The following files should be included in your replication package:
+
+```bash
+.Rprofile
+renv.lock
+renv/activate.R
+renv/settings.json
+```
+
+Do not include the entire `renv` directory, in particular not the `renv/library` subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.
 
 
 
