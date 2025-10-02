@@ -332,7 +332,110 @@ renv/settings.json
 
 Do not include the entire `renv` directory, in particular not the `renv/library` subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.
 
+### Step 4: Displays
+
+Displays (figures and tables) should be written out to external files, and the authors' versions, as used in the manuscript, should be provided. In the prototypical replication package structure above, these files would be in the `results` directory.
+
+> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/03-automatically_saving_figures.html> and <https://github.com/labordynamicsinstitute/replicability-training/wiki/How-to-output-tables-and-figures>
+
+**Figures**
+
+- All figures can be written out to files. Journals like `pdf` and `eps` files, but `png` are convenient. You can output multiple formats.
+- Whenever you have displayed a figure, also `export`it to a file. It's a simple command.
+
+*Stata*
+
+```stata
+// Example for PNG
+graph export "$rootdir/results/figure1.png", replace width(1200) height(800) 
+// Example for PDF
+graph export "$rootdir/results/figure1.pdf", replace
+```
+
+*R*
+
+```r
+# Example for PNG if using standard R
+png(filename = file.path(rootdir, "results", "figure1.png"), width = 1200, height = 800)
+plot(x, y)  # your plotting code here
+dev.off() 
+# Example if using ggplot2
+ggsave(filename = file.path(rootdir, "results", "figure1.png"), plot = myplot, width = 12, height = 8, units = "in", dpi = 100)
+```
+
+*More complex figures*
+
+For more complex figures, it may be easier to simply write out the data underlying the figure to an Excel sheet, and create the figure there. See <https://github.com/labordynamicsinstitute/replicability-training/wiki/How-to-output-tables-and-figures#arbitrary-data-to-excel>  on how to write out the underlying data. **You would then include the Excel file that maps the data into a figure with your replication package.**
 
 
+**Tables**
 
+Tables may be more complex. Simple tables can be written out using various tools:
 
+*Stata*
+
+`esttab` or `outreg2`, also `putexcel`. For fancier stuff, treat tables as data, use `regsave` or `export excel` to manipulate.
+
+*R*
+
+`xtable`, `stargazer`, others.
+
+*More complex tables*
+
+For more complex tables, it may be easier to simply write out entire matrices, or individual numbers, to an Excel sheet, and compose the table there. See <https://github.com/labordynamicsinstitute/replicability-training/wiki/How-to-output-tables-and-figures#examples> for an example, especially if you have already been compiling your tables in Excel. **You would then include the Excel file that maps the data into your preferred table layout with your replication package.**
+
+### Step 5: Testing in containers
+
+After you have made all the above changes, you should test your code in an appropriate **authorized** container.
+
+> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
+
+The following list of containers are authorized for testing, as they are reliably available, and achieve the desired transparency. 
+
+- Install the software necessary for running containers.
+  - For Windows, install [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/).
+  - For Mac, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/) or [OrbStack](https://orbstack.dev).
+  - For Linux, install Docker engine,  [Podman](https://podman.io/getting-started/installation), or use [Apptainer](https://apptainer.org/). These can all also be installed on Windows under Windows Subsystem for Linux (WSL).
+
+- Use one of the following containers:
+  - Stata containers for versions 19now back to 11, provided by the Social Science Data Editors at <https://hub.docker.com/u/dataeditors>, such as `dataeditors/stata18_5-mp:2025-02-26`.
+  - R containers provided by the [Rocker Project](https://www.rocker-project.org/), such as `rocker/r-ver:4.3.1` or `rocker/tidyverse:4.3.1` (which includes the `tidyverse` packages).
+
+> When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary. 
+
+- Run the container, mounting your project directory into the container. For example, if your project is in `/my/computer/users/me/project`, you would use a command such as this (example for Stata):
+
+```bash
+VERSION=18_5
+TAG=2025-02-26
+MYHUBID=dataeditors
+MYIMG=stata${VERSION}
+TYPE=mp
+STATALIC=/path/to/your/stata/stata.lic
+
+docker run -it --rm \
+  -v ${STATALIC}:/usr/local/stata/stata.lic \
+  -v $(pwd):/project \
+  -w /project \
+  $MYHUBID/${MYIMG}-${TYPE}:${TAG} -b main.do
+```
+
+if using a **Scenario B** setup. If using a **Scenario A** setup, use
+
+```bash
+docker run -it --rm \
+  -v ${STATALIC}:/usr/local/stata/stata.lic \
+  -v $(pwd):/project \
+  -w /project/code \
+  $MYHUBID/${MYIMG}-${TYPE}:${TAG} -b main.do
+```
+
+### Success
+
+If your code runs without error, and produces all expected output files, you are done! You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` as evidence.
+
+If your code does run into problems, the generated `main.log` should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.
+
+### Problems?
+
+If you run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.
