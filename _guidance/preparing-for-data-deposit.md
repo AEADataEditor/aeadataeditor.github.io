@@ -26,6 +26,7 @@ Every replication package requires a document outlining where the data comes fro
 
 - The AEA requires that the README contain a number of information elements.  A convenient way to ensure that these elements are present is to use the [template README for social science replication packages v1.1](https://social-science-data-editors.github.io/template_README/); however, you are free to provide this information in a format of your choice as well.
 
+<div style="page-break-after: always;"></div>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7293838.svg)](https://doi.org/10.5281/zenodo.7293838)
 
@@ -54,6 +55,7 @@ Some more information is provided below, a full discussion is available at the [
 The README should be in a format that is easily readable online, such as a PDF or a TXT file. You can provide a Word or LaTeX source for the README as well, but that is not required.
 
 Provide the README as part of your replication package, **ideally in the root directory.**
+<div style="page-break-after: always;"></div>
 
 ### Data Citations
 

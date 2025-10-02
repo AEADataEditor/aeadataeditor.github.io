@@ -14,6 +14,8 @@ We will describe a few checks and edits you should make to your code, in order t
 
 Much more extensive guidance on the issues addressed here is available at <https://larsvilhuber.github.io/self-checking-reproducibility/>. We reference specific chapters there at each of the steps.
 
+<div style="page-break-after: always;"></div>
+
 ## Checklist
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
@@ -28,6 +30,7 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
 - [ ] **Testing in containers**: After all changes were made, the code was run using an appropriate **authorized** container, and the generated log files are provided.
 
 ---
+<div style="page-break-after: always;"></div>
 
 ## Detailed instructions
 
