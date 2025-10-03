@@ -405,6 +405,10 @@ The following list of containers are authorized for testing, as they are reliabl
 
 - Run the container, mounting your project directory into the container. For example, if your project is in `/my/computer/users/me/project`, you would use a command such as this (example for Stata):
 
+**Preliminaries** 
+
+(may need some adjustment)
+
 ```bash
 VERSION=18_5
 TAG=2025-02-26
@@ -412,7 +416,11 @@ MYHUBID=dataeditors
 MYIMG=stata${VERSION}
 TYPE=mp
 STATALIC=/path/to/your/stata/stata.lic
+```
 
+**Run the container**
+
+```bash
 docker run -it --rm \
   -v ${STATALIC}:/usr/local/stata/stata.lic \
   -v $(pwd):/project \
