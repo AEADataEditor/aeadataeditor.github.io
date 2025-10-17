@@ -45,7 +45,7 @@ You will be taken to a page explaining some of the technical details. Click on t
 
 #### Required
 
-- [ ] **Title** (Suggested: "*Data and Code for: (NAME OF PAPER)*")
+- [ ] **Title** (Either: "*Data and Code for: (NAME OF PAPER)*" or "*Code for: (NAME OF PAPER)*")
   - If only data, or only code are provided, adjust accordingly.
 - [ ] "**Principal Investigators**" (=Authors)
   - These need not be in the same order as on the paper. 
