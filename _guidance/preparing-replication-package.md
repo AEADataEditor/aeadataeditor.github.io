@@ -14,7 +14,10 @@ We will describe a few checks and edits you should make to your code, in order t
 
 Much more extensive guidance on the issues addressed here is available at <https://larsvilhuber.github.io/self-checking-reproducibility/>. We reference specific chapters there at each of the steps.
 
+> ⚠️❗ **IMPORTANT:** All but the last steps can be done by anybody, no special system requirements required. However, if you are in an institution that does not allow you to install container software (Docker, OrbStack, etc.), and does not have such technology installed on a Linux cluster you have access to, then please do all the other steps, and the AEA Data Editor team will take care of the last step. 
+
 <div style="page-break-after: always;"></div>
+
 
 ## Checklist
 
