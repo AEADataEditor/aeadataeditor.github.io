@@ -8,6 +8,9 @@ date: 2025-10-02
 
 This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
+
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software. Admissible containers are listed in the [Step 5 section: authorized containers](#authorized-containers). We are not currently attempting to generalize this to multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
+
 ## Overview
 
 We will describe a few checks and edits you should make to your code, in order to ensure maximum reproducibility. We then describe how to test for reproducibility before submitting to the Data Editor. All steps have been tested by undergraduate replicators, and should be easy to implement. Whether they take a lot of time depends on your specific code, but generally, these adjustments can be made by somebody with good knowledge of the code base very quickly.
@@ -391,18 +394,30 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 
 After you have made all the above changes, you should test your code in an appropriate **authorized** container.
 
+
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip this step. The AEA Data Editor team will take care of the last step. 
+
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
 
+#### Authorized containers
+
 The following list of containers are authorized for testing, as they are reliably available, and achieve the desired transparency. 
+
+- Stata containers for versions 19now back to 11, provided by the Social Science Data Editors at <https://hub.docker.com/u/dataeditors>, such as `dataeditors/stata18_5-mp:2025-02-26`. (requires a license)
+- R containers provided by the [Rocker Project](https://www.rocker-project.org/), such as `rocker/r-ver:4.3.1` or `rocker/tidyverse:4.3.1` (which includes the `tidyverse` packages).
+- MATLAB + Dynare containers provided by the [Dynare Project](https://www.dynare.org/new-dynare-release/dynare-docker-released/) at <https://hub.docker.com/r/dynare/dynare>, such as `dynare/dynare:5.3-2024-05-21`. See the [project page](https://www.dynare.org/new-dynare-release/dynare-docker-released/) for the mapping betweeen containers and MATLAB versions. (requires a MATLAB license)
+
+If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked, but may be too advanced for the typical user.
+
+> ⚠️❗ **IMPORTANT:** Do not simply provide us with a custom container not on the list above. Transparency requires that the container be built, using a `Dockerfile` or `apptainer.def` file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known "standard" sources, such as "Docker Official Images" in the Dockerhub `library` space (e.g., <https://hub.docker.com/_/python>).
+
+#### Steps
 
 - Install the software necessary for running containers.
   - For Windows, install [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/).
   - For Mac, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/) or [OrbStack](https://orbstack.dev).
   - For Linux, install Docker engine,  [Podman](https://podman.io/getting-started/installation), or use [Apptainer](https://apptainer.org/). These can all also be installed on Windows under Windows Subsystem for Linux (WSL).
 
-- Use one of the following containers:
-  - Stata containers for versions 19now back to 11, provided by the Social Science Data Editors at <https://hub.docker.com/u/dataeditors>, such as `dataeditors/stata18_5-mp:2025-02-26`.
-  - R containers provided by the [Rocker Project](https://www.rocker-project.org/), such as `rocker/r-ver:4.3.1` or `rocker/tidyverse:4.3.1` (which includes the `tidyverse` packages).
 
 > When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary. 
 
@@ -441,7 +456,7 @@ docker run -it --rm \
   $MYHUBID/${MYIMG}-${TYPE}:${TAG} -b main.do
 ```
 
-### Success
+#### Success
 
 If your code runs without error, and produces all expected output files, you are done! You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` as evidence.
 
