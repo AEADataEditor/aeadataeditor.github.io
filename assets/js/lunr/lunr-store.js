@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Preparing your code for computational verification",
-        "excerpt":"The steps in this document are being used in a pilot project. This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages. Overview We will describe a few...","categories": [],
+        "excerpt":"The steps in this document are being used in a pilot project. This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages. ⚠️❗ IMPORTANT: At this point, you...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package",
         "teaser": null
