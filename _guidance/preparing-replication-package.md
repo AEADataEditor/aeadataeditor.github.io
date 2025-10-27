@@ -417,6 +417,7 @@ If you know of a different container that we should add to this list, please let
   - For Windows, install [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/).
   - For Mac, install [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/) or [OrbStack](https://orbstack.dev).
   - For Linux, install Docker engine,  [Podman](https://podman.io/getting-started/installation), or use [Apptainer](https://apptainer.org/). These can all also be installed on Windows under Windows Subsystem for Linux (WSL).
+- All example commands below are from a Bash or Zsh terminal, which are standard on Mac and Linux, as well as on Windows if using WSL. If you do not have WSL on Windows and are using the Powershell, the same principles apply, but the syntax may be different.
 
 
 > When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary. 
@@ -425,40 +426,65 @@ If you know of a different container that we should add to this list, please let
 
 **Preliminaries** 
 
-(may need some adjustment)
+(may need some adjustment, depending on your license)
 
 ```bash
 VERSION=18_5
 TAG=2025-02-26
 MYHUBID=dataeditors
 MYIMG=stata${VERSION}
+CONTAINER=$MYHUBID/${MYIMG}-${TYPE}:${TAG} 
 TYPE=mp
 STATALIC=/path/to/your/stata/stata.lic
 ```
+
+Explanations:
+
+- `VERSION`: This is the Stata version. StataNow is referenced with a `_5` suffix, otherwise, this corresponds to your (major) Stata version number.
+- `TAG`: This is the date the container was built, in `YYYY-MM-DD` format. Recent Stata containers do not (on purpose) have a `latest` tag, but older ones (that are no longer maintained) do, and can replace the date with `latest`.
+- `CONTAINER`:  is the fully qualified name of the container to be used. It is built from various components. For Stata images, these are maintained by `dataeditors` on Dockerhub. All available Stata containers and tags can be viewed on <https://hub.docker.com/u/dataeditors>. The precise way to call the container may depend on the version. For instance, for versions prior to `18`, the `-${TYPE}` suffix is not used.
+- `STATALIC`: Is the path (in the notation used by the terminal you are using) to your Stata license file `stata.lic`. You need to have a valid Stata license file for the version of Stata you are using.
+
+> If you have only an older license, or a non-MP license, you may need to replace `VERSION`, `TAG`, and `TYPE` accordingly. For instance, if you have a Stata 16 SE license, you would set `VERSION=16`, `TAG=2023-06-13`, and `TYPE=se`, and remove `-${TYPE}` from the `CONTAINER` definition.
+
+
+
+**Test the container**
+
+```bash
+docker run -it --rm \
+  --volume ${STATALIC}:/usr/local/stata/stata.lic \
+  --entrypoint stata-${TYPE} \
+  ${CONTAINER}
+```
+
+You should see the usual Stata prompt. Type `exit` to leave Stata.
 
 **Run the container**
 
 ```bash
 docker run -it --rm \
-  -v ${STATALIC}:/usr/local/stata/stata.lic \
-  -v $(pwd):/project \
-  -w /project \
-  $MYHUBID/${MYIMG}-${TYPE}:${TAG} -b main.do
+  --volume ${STATALIC}:/usr/local/stata/stata.lic \
+  --volume $(pwd):/project \
+  --workdir /project \
+  --entrypoint stata-${TYPE} \
+  ${CONTAINER} -b main.do
 ```
 
 if using a **Scenario B** setup. If using a **Scenario A** setup, use
 
 ```bash
 docker run -it --rm \
-  -v ${STATALIC}:/usr/local/stata/stata.lic \
-  -v $(pwd):/project \
-  -w /project/code \
-  $MYHUBID/${MYIMG}-${TYPE}:${TAG} -b main.do
+  --volume ${STATALIC}:/usr/local/stata/stata.lic \
+  --volume $(pwd):/project \
+  --workdir /project/code \
+  --entrypoint stata-${TYPE} \
+  ${CONTAINER} -b main.do
 ```
 
 #### Success
 
-If your code runs without error, and produces all expected output files, you are done! You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` as evidence.
+If your code runs without error, and produces all expected output files, you are done! You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` (which should be in the same directory as `main.do`) as evidence.
 
 If your code does run into problems, the generated `main.log` should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.
 
