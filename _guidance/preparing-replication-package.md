@@ -268,6 +268,7 @@ local ssc_packages ""
             which `pkg'
         }
     }
+ado
 ```
 
 **Some special cases** (usually not necessary)
@@ -292,6 +293,7 @@ local ssc_unconditional ""
             cap ssc install `pkg'
         }
     }
+ado
 ```
 
 *Packages that are not on SSC may need to be `net install`ed from other sources,* including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:
@@ -304,6 +306,7 @@ local ssc_unconditional ""
     // Example when net install is not an option 
   cap mkdir "$rootdir/ado/plus/e"
   cap copy http://www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado "$rootdir/ado/plus/e/ebayes.ado"
+ado
 ```
 
 ***Adding to replication package***
