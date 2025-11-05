@@ -26,14 +26,16 @@ Much more extensive guidance on the issues addressed here is available at <https
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
-- [ ] **Main file**: A single main file is provided that runs all code.
-- [ ] **Path names**: All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
-- [ ] **Dependencies**: All packages/libraries/dependencies are installed via code once. 
+- [ ] [**Main file**](#step-1-main-file): A single main file is provided that runs all code.
+- [ ] [**Path names**](#step-2-path-names): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
+- [ ] [**Dependencies**](#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
-- [ ] **Displays**: All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
-- [ ] **Testing in containers**: After all changes were made, the code was run using an appropriate **authorized** container, and the generated log files are provided.
+- [ ] [**Displays**](#step-5-testing-in-containers): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
+- [ ] [**Testing in containers**](#step-5-testing-in-containers): After all changes were made, the code was run 
+  - [ ] using an appropriate **authorized** container, and the generated log files are provided. 
+  - [ ] alternatively, the code was run after having been downloaded from the deposit in a new directory (or on a new computer)
 
 ---
 <div style="page-break-after: always;"></div>
@@ -395,7 +397,7 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 After you have made all the above changes, you should test your code in an appropriate **authorized** container.
 
 
-> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip this step. The AEA Data Editor team will take care of the last step. 
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip [to the alternative approach]. While inferior, it will provide some re-assurance. The AEA Data Editor team will take care of running in a container. 
 
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
 
@@ -481,6 +483,15 @@ docker run -it --rm \
   --entrypoint stata-${TYPE} \
   ${CONTAINER} -b main.do
 ```
+
+#### Alternative approach (no Docker)
+
+If you do not have, or cannot, install Docker, use this alternative approach to test your code:
+
+- Download your entire replication package from the draft openICPSR deposit, into a new directory on your computer, or onto a different computer where you have not previously run the code.
+- Run the code from that new location. 
+  - For Stata, close all Stata windows, and then double-click on the `main.do` file.  This should generate a `main.log` file in the same directory as `main.do`.
+  - For R, from a terminal, type `R CMD BATCH main.R`. Or open RStudio, and in the **Terminal** tab (not the **Console** tab), type `R CMD BATCH main.R`. This should generate a `main.Rout` file in the same directory as `main.R`.
 
 #### Success
 
