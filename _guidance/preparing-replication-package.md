@@ -26,14 +26,14 @@ Much more extensive guidance on the issues addressed here is available at <https
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
-- [ ] [**Main file**](#step-1-main-file): A single main file is provided that runs all code.
-- [ ] [**Path names**](#step-2-path-names): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
-- [ ] [**Dependencies**](#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
+- [ ] [**Step 1: Main file**](#step-1-main-file): A single main file is provided that runs all code.
+- [ ] [**Step 2: Path names**](#step-2-path-names): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
+- [ ] [**Step 3: Dependencies**](#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
-- [ ] [**Displays**](#step-5-testing-in-containers): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
-- [ ] [**Testing in containers**](#step-5-testing-in-containers): After all changes were made, the code was run 
+- [ ] [**Step 4: Displays**](#step-4-displays): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
+- [ ] [**Step 5: Testing in containers**](#step-5-testing-in-containers): After all changes were made, the code was run 
   - [ ] using an appropriate **authorized** container, and the generated log files are provided. 
   - [ ] alternatively, the code was run after having been downloaded from the deposit in a new directory (or on a new computer)
 
