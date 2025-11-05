@@ -400,7 +400,7 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 After you have made all the above changes, you should test your code in an appropriate **authorized** container.
 
 
-> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip [to the alternative approach]. While inferior, it will provide some re-assurance. The AEA Data Editor team will take care of running in a container. 
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip [to the alternative approach](#alternative-approach-no-docker). While inferior, it will provide some re-assurance. The AEA Data Editor team will take care of running in a container. 
 
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
 
