@@ -27,7 +27,7 @@ Much more extensive guidance on the issues addressed here is available at <https
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
 - [ ] [**Step 1: Main file**](#step-1-main-file): A single main file is provided that runs all code.
-- [ ] [**Step 2: Path names**](#step-2-path-names): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
+- [ ] [**Step 2: Path names**](#step-2-path-names-and-case): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
 - [ ] [**Step 3: Dependencies**](#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
@@ -165,18 +165,22 @@ do "$rootdir/code/04_figures1-4.do"
 
 > In neither scenario did we hard-code the path to our project directory `/my/computer/users/me/project`. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.
 
-### Step 2: Path names
+### Step 2: Path names and case
 
-Windows computers use `\` (backslashes) in path names, while Mac and Linux computers use `/` (forward slashes). 
+Two issues:
 
-Two facts:
+- Windows computers use `\` (backslashes) in path names, while Mac and Linux computers use `/` (forward slashes). The use of `\` (backslashes) in path names breaks code on Mac and Linux computers.
+
+- Windows and Mac computers use case-insensitive file systems, while Linux computers use case-sensitive file systems.
+
+Both of these issues need to be addressed. You are helped by a straightforward but often forgotten (or unknown) observation:
+
 
 - **Every statistical programming language can use generic path names using `/` (forward slashes).** This ensures wide reproducibility.
-- The use of `\` (backslashes) in path names breaks code on Mac and Linux computers.
 
 About 40% of replication packages in economics appear to be submitted by researchers using computers running MacOS or Linux. With a bit of simplified math, if we believe that is representative of what future replicators will do, that means that 40% of users will not be able to run 60% of replication packages without some potentially widespread edits, because of those backslashes.
 
-You should thus replace all path names in your code to use `/` (forward slashes), or appropriate functions. This is straightforward:
+You should thus **replace all path names in your code to use `/` (forward slashes)**, or appropriate functions, and take care to write **case-sensitive file and path names**. This is straightforward:
 
 #### Stata
 
