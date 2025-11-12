@@ -141,7 +141,7 @@ code/
 ```
 
 
-In this case, the following generic main file will work: 
+In this case, the following generic main file will work (though see [Step 3 Dependencies](#step-3-dependencies))
 
 ```stata
 local scenario "B"          // Scenario B: main is in project top-level directory
@@ -232,7 +232,7 @@ First, use an environment to permanently install-project specific packages once 
 **Define the environment** in your main file, after setting `$rootdir`:
 
 
-> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html> and <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129>
+> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html> and <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129>. Use [this code fragment to simply insert both Step 1 and Step 3](https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d).
 
 
 ```stata
@@ -252,7 +252,7 @@ From this point on, all installed packages will be installed into `$rootdir/ado`
 **Install packages once** if not present, but don't reinstall if already present. 
 
 
-> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L174>
+> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L174>, though you should be able to just use your own install code as well, if it worked before.
 
 ```stata
 *** Add required packages from SSC to this list ***
