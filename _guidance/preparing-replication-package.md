@@ -36,6 +36,7 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
 - [ ] [**Step 5: Testing in containers**](#step-5-testing-in-containers): After all changes were made, the code was run 
   - [ ] using an appropriate **authorized** container, and the generated log files are provided. 
   - [ ] alternatively, the code was run after having been downloaded from the deposit in a new directory (or on a new computer)
+- [ ] (usually not necessary) [**Finalize**](#finalize-readme): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
 
 ---
 <div style="page-break-after: always;"></div>
@@ -502,9 +503,45 @@ If you do not have, or cannot, install Docker, use this alternative approach to 
 
 #### Success
 
-If your code runs without error, and produces all expected output files, you are done! You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` (which should be in the same directory as `main.do`) as evidence.
-
 If your code does run into problems, the generated `main.log` should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.
+
+
+If your code runs without error, and produces all expected output files, you are done! 
+
+### Finalize README
+
+> Reference: <https://social-science-data-editors.github.io/template_README/template-README.html>
+
+This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above. 
+
+- [**Software**:](https://social-science-data-editors.github.io/template_README/template-README.html#software-requirements) If you used a container, specify which container you used (name and tag, e.g., `dataeditors/stata18_5-mp:2025-02-26`). Be precise when describing the StataMP version - the number of cores matters! (`StataMP-4` may not behave the same way as `StataMP-8`.)
+- [**Hardware**:](https://social-science-data-editors.github.io/template_README/template-README.html#memory-runtime-storage-requirements) Verify that the description of your computer (CPU, number of cores, RAM, disk space) is accurate.
+- [**Run time**:](https://social-science-data-editors.github.io/template_README/template-README.html#memory-runtime-storage-requirements) Provide an estimate of the expected run time, however trivial it might be. It matters to the replicator!
+
+**Examples:**
+
+```
+- OS: "openSUSE Leap 15.6"
+- Processor:  13th Gen Intel(R) Core(TM) i7-1365U, 12 cores
+- Memory available: 30GB memory
+- Docker version 28.4.0-ce, build 249d679a6 
+- stata version 18-mp-i (Docker image dataeditors/stata18-mp-i:2024-12-18) (born date: "18 Dec 2024") with 32 core license
+
+Code ran for about 35 hours.
+```
+
+```
+- OS: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
+- Stata/MP4 19.5 ("21 May 2025")
+- MATLAB R2025a
+
+Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.
+```
+
+
+### Submitting
+
+You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` (which should be in the same directory as `main.do`) as evidence.
 
 ### Problems?
 
