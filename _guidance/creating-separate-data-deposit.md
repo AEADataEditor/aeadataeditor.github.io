@@ -91,15 +91,16 @@ In addition, you might want to save the website to the [Internet archive](archiv
 
 Some trusted repositories offer the option to make what are called "collections", "communities", "dataverses", or similar. This can be used for single projects, entire institutes, or journals
 
-- [Harvard Dataverse](https://dataverse.harvard.edu): "*Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.*"
-  - Example: [Bracero data](https://dataverse.harvard.edu/dataverse/bracero) stores both raw data and cleaned data within a "dataverse"
-  - Tutorial: [IQSS Tutorial](https://youtu.be/5l4VZ-T2WYE?t=3780)
-- [Zenodo Communities](https://zenodo.org/communities): "Communities created and curated by Zenodo users"
-  - Example: [Labor Dynamics Institute](https://zenodo.org/communities/labordynamicsinstitute/) collects presentations and data related to their activities on Zenodo
-  - Example: [Economic Journal Community](https://zenodo.org/communities/ej-replication-repository) stores replication packages for articles published in the Economic Journal
 - [openICPSR](https://www.openicpsr.org/openicpsr/repository/) offers branded repositories. However, these are not free.
   - Example: [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea) hosts the AEA's replication packages
   - Example: [DataLumos](https://www.datalumos.org/datalumos/) preserves "valuable government data resources"
+- [Zenodo Communities](https://zenodo.org/communities): "Communities created and curated by Zenodo users"
+  - The [AEA Community on Zenodo](https://zenodo.org/communities/aeajournals/) collects replication packages and supplementary data for AEA journals that are deposited on Zenodo. 
+  - Example: [Labor Dynamics Institute](https://zenodo.org/communities/labordynamicsinstitute/) collects presentations and data related to their activities on Zenodo
+  - Example: [Economic Journal Community](https://zenodo.org/communities/ej-replication-repository) stores replication packages for articles published in the Economic Journal
+- [Harvard Dataverse](https://dataverse.harvard.edu): "*Organize datasets and gather metrics in your own repository. A dataverse is a container for all your datasets, files, and metadata.*"
+  - Example: [Bracero data](https://dataverse.harvard.edu/dataverse/bracero) stores both raw data and cleaned data within a "dataverse"
+  - Tutorial: [IQSS Tutorial](https://youtu.be/5l4VZ-T2WYE?t=3780)
 
 ### Curation vs. Preservation
 
