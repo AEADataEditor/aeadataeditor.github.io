@@ -27,7 +27,7 @@ Much more extensive guidance on the issues addressed here is available at <https
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
 - [ ] [**Step 1: Main file**](#step-1-main-file): A single main file is provided that runs all code.
-- [ ] [**Step 2: Path names**](#step-2-path-names-and-case): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.)
+- [ ] [**Step 2: Path names**](#step-2-path-names-and-case): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).
 - [ ] [**Step 3: Dependencies**](#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
@@ -79,6 +79,10 @@ where
 For illustration purposes, we have used Stata `.do` files, and outputs in a variety of formats, but the same principles apply to other software, and to any output formats.
 
 > Note that we did not specify where the `main.do` file will be! 
+
+### Short-cut
+
+> If you want to include the key code pieces for Stata that are needed to comply with Steps 1-3, you can use  [this code fragment](https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d).
 
 ### Step 1: Main file
 
@@ -207,6 +211,19 @@ data <- read.csv(file.path(rootdir, "data", "analysis", "combined_data.csv"))
 
 and similarly for other languages.
 
+Finally, you should not hard-code your `rootdir`. Set the **project root directory dynamically**:
+
+```stata
+global rootdir : pwd   
+```
+
+```r
+# if using the here package:
+rootdir <- here::here()
+# or the rprojroot package
+rootdir <- rprojroot::find_root_file("README.pdf")  # or other marker file
+```
+
 #### Implementing
 
 In many cases, you can just globally replace all `\` with `/` in your code files. Caution however is warranted if your code explicitly writes out $LaTeX$ code, which also (legitimately) uses `\`. In that case, you will need to be more careful.
@@ -233,7 +250,7 @@ First, use an environment to permanently install-project specific packages once 
 **Define the environment** in your main file, after setting `$rootdir`:
 
 
-> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html> and <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129>. Use [this code fragment to simply insert both Step 1 and Step 3](https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d).
+> Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html> and <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129>. 
 
 
 ```stata
@@ -253,7 +270,7 @@ From this point on, all installed packages will be installed into `$rootdir/ado`
 **Install packages once** if not present, but don't reinstall if already present. 
 
 
-> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L174>, though you should be able to just use your own install code as well, if it worked before.
+> Reference: <https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14>, though you should be able to just use your own install code as well, if it worked before.
 
 ```stata
 *** Add required packages from SSC to this list ***
@@ -283,7 +300,7 @@ ado
 [^unconditional-packages]: A more customized setup might check for a package-specific file in the `ado` directory, such as the `<package>.pkg`, but this is more complex and may not always work. 
 
 
-> Reference: <https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L187>
+> Reference: <https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27>
 
 ```stata
     // If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.
@@ -498,12 +515,14 @@ If you do not have, or cannot, install Docker, use this alternative approach to 
 
 - Download your entire replication package from the draft openICPSR deposit, into a new directory on your computer, or onto a different computer where you have not previously run the code.
 - Run the code from that new location. 
-  - For Stata, close all Stata windows, and then double-click on the `main.do` file.  This should generate a `main.log` file in the same directory as `main.do`.
-  - For R, from a terminal, type `R CMD BATCH main.R`. Or open RStudio, and in the **Terminal** tab (not the **Console** tab), type `R CMD BATCH main.R`. This should generate a `main.Rout` file in the same directory as `main.R`.
+  - For Stata, close all Stata windows, and then double-click on the `main.do` file. This should generate a `main.log` file in the same directory as `main.do`.
+    - For R, from a terminal or the RStudio **Terminal** tab, type `R CMD BATCH main.R`, or if using `renv`, `R --no-save --no-restore -f main.R > main.Rout`.[^noteshell]  This should generate a `main.Rout` file in the same directory as `main.R`.
+
+[^noteshell]: In PowerShell, you can use `R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout`. 
 
 #### Success
 
-If your code does run into problems, the generated `main.log` should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.
+If your code does run into problems, the generated `main.log` or `main.Rout` should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.
 
 
 If your code runs without error, and produces all expected output files, you are done! 
@@ -541,7 +560,7 @@ Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portio
 
 ### Submitting
 
-You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log` (which should be in the same directory as `main.do`) as evidence.
+You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence.
 
 ### Problems?
 
