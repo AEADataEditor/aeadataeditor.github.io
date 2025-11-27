@@ -82,7 +82,7 @@ For illustration purposes, we have used Stata `.do` files, and outputs in a vari
 
 ### Short-cut
 
-> If you want to include the key code pieces for Stata that are needed to comply with Steps 1-3, you can use  [this code fragment](https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d).
+> If you want to include the key code pieces for Stata that are needed to comply with Steps 1-3, you can use  [this code fragment](https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d). Note that you do not HAVE to use this specific code, if your code already has equivalent features!
 
 ### Step 1: Main file
 
@@ -107,9 +107,7 @@ code/
 ...
 ```
 
-In this case, the following generic main file will work: [^scenarioa-main]
-
-[^scenarioa-main]: See the LDI Replication Lab's setup [here](https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L71).
+In this case, the following generic main file will work, with `scenario` set to `"A"`.
 
 ```stata
 local scenario "A"          // Scenario A: main is in code directory
@@ -146,7 +144,7 @@ code/
 ```
 
 
-In this case, the following generic main file will work (though see [Step 3 Dependencies](#step-3-dependencies))
+In this case, the following generic main file will work, with `scenario` set to `"B"`(though see [Step 3 Dependencies](#step-3-dependencies))
 
 ```stata
 local scenario "B"          // Scenario B: main is in project top-level directory
@@ -169,6 +167,22 @@ do "$rootdir/code/04_figures1-4.do"
 #### Important
 
 > In neither scenario did we hard-code the path to our project directory `/my/computer/users/me/project`. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.
+
+Finally, you should not hard-code your `rootdir`. Set the **project root directory dynamically**:
+
+```stata
+global rootdir : pwd   
+```
+
+```r
+# if using the here package:
+rootdir <- here::here()
+# or the rprojroot package
+rootdir <- rprojroot::find_root_file("README.pdf")  # or other marker file
+```
+
+> IMPORTANT: your code MUST contain the line (Stata) `global rootdir : pwd` (or equivalent) to set the project root directory dynamically. 
+
 
 ### Step 2: Path names and case
 
@@ -211,18 +225,6 @@ data <- read.csv(file.path(rootdir, "data", "analysis", "combined_data.csv"))
 
 and similarly for other languages.
 
-Finally, you should not hard-code your `rootdir`. Set the **project root directory dynamically**:
-
-```stata
-global rootdir : pwd   
-```
-
-```r
-# if using the here package:
-rootdir <- here::here()
-# or the rprojroot package
-rootdir <- rprojroot::find_root_file("README.pdf")  # or other marker file
-```
 
 #### Implementing
 
