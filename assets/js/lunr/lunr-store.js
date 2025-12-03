@@ -359,6 +359,12 @@ var store = [{
         "url": "/projects/project6",
         "teaser": null
       },{
+        "title": "Internship with the AEA Data Editor Summer 2026",
+        "excerpt":"We are planning to have another round of an internship with the AEA Data Editor.. The collaborating institutions are Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and University of Colorado Boulder. We are looking for additional journals to provide us with articles, and additional...","categories": [],
+        "tags": [],
+        "url": "/projects/project7",
+        "teaser": null
+      },{
         "title": "Improving Metadata",
         "excerpt":"Emails sent Authors of articles may have received the following email: Dear Dr. So-and-so, Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository at openICPSR as the default archive for its supplements. The migration increases the findability of your data through a variety...","categories": [],
         "tags": [],
