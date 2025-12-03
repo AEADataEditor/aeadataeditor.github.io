@@ -862,4 +862,16 @@ var store = [{
         "tags": [],
         "url": "/talks/2025-09-15-vfs",
         "teaser": null
+      },{
+        "title": "AEA/ES Data Editors' Tutorial 1",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
+        "tags": [],
+        "url": "/talks/2026-01-03-philadelphia",
+        "teaser": null
+      },{
+        "title": "AEA/ES Data Editors' Tutorial 2",
+        "excerpt":"Abstract Data editors describe possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to check that it works. Questions from...","categories": [],
+        "tags": [],
+        "url": "/talks/2026-01-04-philadelphia",
+        "teaser": null
       }]
