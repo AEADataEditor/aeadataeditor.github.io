@@ -1,7 +1,7 @@
 ---
 title: Preparing your code for computational verification
 toc: true
-date: 2025-10-02
+date: 2025-12-04
 ---
 
 > The steps in this document are being used in a pilot project. 
@@ -17,7 +17,7 @@ We will describe a few checks and edits you should make to your code, in order t
 
 Much more extensive guidance on the issues addressed here is available at <https://larsvilhuber.github.io/self-checking-reproducibility/>. We reference specific chapters there at each of the steps.
 
-> ⚠️❗ **IMPORTANT:** All but the last steps can be done by anybody, no special system requirements required. However, if you are in an institution that does not allow you to install container software (Docker, OrbStack, etc.), and does not have such technology installed on a Linux cluster you have access to, then please do all the other steps, and the AEA Data Editor team will take care of the last step. 
+> ⚠️❗ **IMPORTANT:** All but the last steps can be done by anybody, no special system requirements required, and independent of your ability to share confidential data. However, the last step may not be possible in an institution that does not allow you to install container software (Docker, OrbStack, etc.), and does not have such technology installed on a Linux cluster. We provide a public website where you can leverage containers for verification, but you should not use it for confidential data. In that case, please do all the other steps. 
 
 <div style="page-break-after: always;"></div>
 
@@ -35,7 +35,7 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
 - [ ] [**Step 4: Displays**](#step-4-displays): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
 - [ ] [**Step 5: Testing in containers**](#step-5-testing-in-containers): After all changes were made, the code was run 
   - [ ] using an appropriate **authorized** container, and the generated log files are provided. 
-  - [ ] alternatively, the code was run after having been downloaded from the deposit in a new directory (or on a new computer)
+  - [ ] using the provided website, a certified ZIP file was created, and is provided instead of the original replication package.
 - [ ] (usually not necessary) [**Finalize**](#finalize-readme): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
 
 ---
@@ -424,7 +424,7 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 After you have made all the above changes, you should test your code in an appropriate **authorized** container.
 
 
-> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip [to the alternative approach](#alternative-approach-no-docker). While inferior, it will provide some re-assurance. The AEA Data Editor team will take care of running in a container. 
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight [to the alternative approach](#alternative-approach-no-docker).  
 
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
 
@@ -438,7 +438,7 @@ The following list of containers are authorized for testing, as they are reliabl
 
 If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked, but may be too advanced for the typical user.
 
-> ⚠️❗ **IMPORTANT:** Do not simply provide us with a custom container not on the list above. Transparency requires that the container be built, using a `Dockerfile` or `apptainer.def` file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known "standard" sources, such as "Docker Official Images" in the Dockerhub `library` space (e.g., <https://hub.docker.com/_/python>).
+> ⚠️❗ **IMPORTANT:** Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a `Dockerfile` or `apptainer.def` file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known "standard" sources, such as "Docker Official Images" in the Dockerhub `library` space (e.g., <https://hub.docker.com/_/python>).
 
 #### Steps
 
@@ -511,16 +511,30 @@ docker run -it --rm \
   ${CONTAINER} -b main.do
 ```
 
-#### Alternative approach (no Docker)
+#### Alternative approach 
 
-If you do not have, or cannot, install Docker, use this alternative approach to test your code:
+If you cannot run Docker on your computer, we make available the [SIVACOR](https://sivacor.org) service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO). 
 
-- Download your entire replication package from the draft openICPSR deposit, into a new directory on your computer, or onto a different computer where you have not previously run the code.
+> In fact, we will run your code using this same system to verify compliance with all of the above steps! 
+
+[![SIVACOR landing page](/images/sivacor-login.png)](https://sivacor.org)
+
+For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.
+
+
+
+#### Fallback: Run on a different computer
+
+If you do not have, or cannot, install Docker, and you cannot use SIVACOR, use this alternative approach to test your code:
+
+- Download your entire replication package from the draft openICPSR deposit, onto a **different computer** where you have not previously run the code.
 - Run the code from that new location. 
   - For Stata, close all Stata windows, and then double-click on the `main.do` file. This should generate a `main.log` file in the same directory as `main.do`.
     - For R, from a terminal or the RStudio **Terminal** tab, type `R CMD BATCH main.R`, or if using `renv`, `R --no-save --no-restore -f main.R > main.Rout`.[^noteshell]  This should generate a `main.Rout` file in the same directory as `main.R`.
 
 [^noteshell]: In PowerShell, you can use `R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout`. 
+
+We note that in our experience, this approach is much less reliable. 
 
 #### Success
 
