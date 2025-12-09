@@ -44,7 +44,7 @@ Examples of replication packages in economics can be found at the [AEA Data and 
 
 Interns will learn and observe parts of the scientific publication process. They will learn and practice the details of the process of reproducibility checking, and will experience the challenges of ensuring that data and code are available and functional. At the end of their internship, they will have run and learned to debug code for multiple papers (typically around 5-6), reviewed output, prepared reports which will be read by senior economists throughout the world (after review by the Data Editor). They may encounter and learn about novel software and data sources, as well as how to run code on multiple platforms, including powerful Windows and Linux servers. 
 
-While the internship is new, the LDI Lab has been training undergraduate replicators for the past 6 years, and has employed more than 175 students. Students report that the experience is valuable in their future careers, including in the private sector, government, and as graduate students in academia.
+While the internship is new, the LDI Lab has been training undergraduate replicators for the past 6 years, and has employed **more than 200 students**. Students report that the experience is valuable in their future careers, including in the private sector, government, and as graduate students in academia.
 
 **Internship experience:**
 
@@ -61,10 +61,10 @@ The internship will broadly start after institution-specific final exams are ove
 **Requirements:**
 
 Training is required as a condition of hiring. While employed, attendance (via Zoom) at two weekly meetings is required.
-Training will take place **on April 12 and 13** in person **at [Wellesley College](https://www.wellesley.edu/)**, and on several subsequent days (TBD) remotely. Live attendance is  expected, plus some significant self-paced work. 
+Training will take place **on TBD and TBD+1** (usually a weekend) *in person* **at TBD**, and on several subsequent days (TBD) remotely. Live attendance is  expected, plus some significant self-paced work. 
 
  
-**Remuneration:** Starting wage is $15.75 per hour, up to 20 hours per week.
+**Remuneration:** Starting wage is $16.00 per hour, up to 20 hours per week.
 
 ## Organizational Details
 
@@ -74,7 +74,7 @@ The internship is remote.
 
 ### Location and date of training day
 
-Training in 2026 will take place at **at [Wellesley College](https://www.wellesley.edu/)** on **on April 12 and 13**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
+Training in 2026 will take place at **at TBD** on **on TBD and TBD+1**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
 
 ### Agenda for training day 1
 
