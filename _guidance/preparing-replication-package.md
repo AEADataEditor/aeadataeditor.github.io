@@ -424,7 +424,7 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 After you have made all the above changes, you should test your code in an appropriate **authorized** container.
 
 
-> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight [to the alternative approach](#alternative-approach-no-docker).  
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight [to the alternative approach](#alternative-approach).  
 
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/80-docker.html> 
 
