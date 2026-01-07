@@ -886,4 +886,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2026-01-04-philadelphia",
         "teaser": null
+      },{
+        "title": "Notre Dame Lab for Economic Opportunities Pre-docs",
+        "excerpt":"Time   12:00pm - 1:30pm   Abstract   General talk about reproducibility in the work of pre-docs, loosely based on topics available at https://larsvilhuber.github.io/tutorial-reproducibility-2025/.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2026-01-09-leo-nd",
+        "teaser": null
       }]
