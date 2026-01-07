@@ -23,6 +23,12 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
+        "title": "Preparing your files for verification",
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-data-deposit",
+        "teaser": null
+      },{
         "title": "Guidance on testing replicability of code",
         "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
         "tags": [],
@@ -107,16 +113,16 @@ var store = [{
         "url": "/aea-de-guidance/next",
         "teaser": null
       },{
-        "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/preparing-for-data-deposit",
-        "teaser": null
-      },{
         "title": "Preparing your replication package for Papers and Proceedings",
         "excerpt":"Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2. However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-for-pandp",
+        "teaser": null
+      },{
+        "title": null,
+        "excerpt":"For the checklist, see previous page. This document describes how to prepare your code for verification in detail, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages. ⚠️❗ IMPORTANT: At this point, you should only be seeing...","categories": [],
+        "tags": null,
+        "url": "/aea-de-guidance/preparing-replication-package-details",
         "teaser": null
       },{
         "title": "Preparing your code for computational verification",
