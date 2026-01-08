@@ -65,7 +65,7 @@ The internship will broadly start after institution-specific final exams are ove
 **Requirements:**
 
 Training is required as a condition of hiring. While employed, attendance (via Zoom) at two weekly meetings is required.
-Training will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**, and on several subsequent days ({{ pages.dates.followup1}} - {{ pages.dates.followup4}}) remotely. Live attendance is  expected, plus some significant self-paced work. 
+Training will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**, and on several subsequent days ({{ pages.dates.followup1 }} - {{ pages.dates.followup4 }}) remotely. Live attendance is  expected, plus some significant self-paced work. 
 
  
 **Remuneration:** Starting wage is $16.25 per hour, up to 20 hours per week.
