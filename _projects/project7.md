@@ -5,13 +5,17 @@ type: "projects"
 date: 2026-02-10
 toc: true
 dates:
-  followup1: 2026-04-18
-  followup2: 2026-04-21
-  followup3: 2026-04-25
-  followup4: 2026-05-05
-  peermentor1: 2026-04-17
-  peermentor2: 2026-04-23
-  peermentor3: 2026-04-30
+  trainingday1: 2026-04-11
+  trainingday2: 2026-04-12
+  followup1: 2026-04-13
+  followup2: 2026-04-15
+  followup3: 2026-04-17
+  followup4: 2026-04-20
+  peermentor1: 2026-04-13
+  peermentor2: 2026-04-15
+  peermentor3: 2026-04-17
+locations:
+  training: "Wellesley College"
 ---
 
 
@@ -61,10 +65,10 @@ The internship will broadly start after institution-specific final exams are ove
 **Requirements:**
 
 Training is required as a condition of hiring. While employed, attendance (via Zoom) at two weekly meetings is required.
-Training will take place **on TBD and TBD+1** (usually a weekend) *in person* **at TBD**, and on several subsequent days (TBD) remotely. Live attendance is  expected, plus some significant self-paced work. 
+Training will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**, and on several subsequent days ({{ pages.dates.followup1}} - {{ pages.dates.followup4}}) remotely. Live attendance is  expected, plus some significant self-paced work. 
 
  
-**Remuneration:** Starting wage is $16.00 per hour, up to 20 hours per week.
+**Remuneration:** Starting wage is $16.25 per hour, up to 20 hours per week.
 
 ## Organizational Details
 
@@ -74,7 +78,7 @@ The internship is remote.
 
 ### Location and date of training day
 
-Training in 2026 will take place at **at TBD** on **on TBD and TBD+1**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
+Training in 2026 will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
 
 ### Agenda for training day 1
 
@@ -115,12 +119,13 @@ From the airport to the Verve Hotel, people can either take a cab or use the Log
 
 *3. Meals*
 
-We are grateful to Wellesley College for  providing  breakfast and lunch on campus on April 12/13 during the training, and dinner on Saturday. If any participants have dietary restrictions, they should please their local organizer know.
+We are grateful to Wellesley College for  providing  breakfast and lunch on campus during the training, and dinner on Saturday. If any participants have dietary restrictions, they should please let their local organizer know (there will also be a survey sent out).
 
 
 ## Follow-up activities: Test cases and peer mentoring
 
-> You should bookmark the "[LDI Lab Training manual](https://labordynamicsinstitute.github.io/ldilab-manual/)"     
+> You should bookmark the "[LDI Lab Training manual](https://labordynamicsinstitute.github.io/ldilab-manual/)"   
+
 ### Test cases
 
 Test cases are worked through and jointly handled, including repeated peer mentoring by senior (experienced) RAs in the Lab. Three (non-consecutive) days are set aside for the peer-mentoring and walk-throughs, but work on these test cases can be done any time (adapted to individual class and exam schedules). We *strongly* suggest doing these immediately after the in-person training, however, as experience has shown that those who delay too long will ultimately struggle later in their work.
@@ -157,11 +162,16 @@ Meetings with Lars, which include both follow-up to any further questions intern
 The actual work in the Lab will start at various dates, depending on your institution's exam schedule and other details. Contact your local coordinator for the exact start date if you are unsure.
 
 - Early start: As coordinated
-- Kickoff meeting: June 2, 2026, 10AM Eastern
+- Kickoff meeting: TBD, 2026, 10AM Eastern
+
+{% comment %}
 
 ## Additional activities
 
+
 Interns are invited to participate in a weekly webinar, highlighting career paths in economics (and where they might lead other than economics), and the role of reproducibility and transparency in those paths. See the [webinar schedule](https://labordynamicsinstitute.github.io/summer-camp-chats/).
+
+{% endcomment %}
 
 ## Questions and Answers
 
