@@ -2,7 +2,7 @@
 title: Internship with the AEA Data Editor Summer 2026
 collection: projects
 type: "projects"
-date: 2026-02-10
+date: 2026-01-08
 toc: true
 dates:
   trainingday1: 2026-04-11
