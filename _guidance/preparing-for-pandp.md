@@ -10,7 +10,7 @@ Much of the preparation for the replication packages for papers published in [Pa
 
 We will send you a filled-out checklist, verifying compliance with each item. This page provides a bit of guidance on how to get a perfect score.
 
-> If your deposit is at a repository that does not support a specific item in the checklist, it is fine to skip. These special features are denoted by a **\***.
+> The use of the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea) is strongly encouraged. Other repositories and archives considered to be "trusted" may be acceptable (Github is not a "trusted" archive). Other repositories may not  support a specific item in the checklist, it is fine to skip. These special features are denoted by a **\***.
 
 A printable checklist is available [here](/assets/pdfs/pandp2025-checklist.pdf).
 
@@ -32,15 +32,15 @@ use "Independent Researcher".
 Suggested: The abstract from the article and/or a note that this is 
 data and/or code accompanying the article.
 
-### JEL Classification	\*
+### JEL Classification	**\***
 
 May be the same JEL codes as the article.
 
-### Manuscript ID	\*
+### Manuscript ID	**\***
 
 Manuscript tracking numbers in the format  "PandP-2021-xxxx"
 
-### No ZIP Files \*
+### No ZIP Files **\***
 
 No visible ZIP files. Use "Import from ZIP" on openICPSR. This is supported on Dataverse deposits, but not on Zenodo and some others.
 
@@ -69,7 +69,7 @@ figures, and all inline numbers.
 
 Please only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB. 
 
-### Survey/Experimental materials \*
+### Survey/Experimental materials 
 
 These must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the [Policy for Papers Conducting Experiments and Collecting Primary Data](https://www.aeaweb.org/journals/data/policy-experimental-surveys). 
 
@@ -83,10 +83,10 @@ SurveyCTO, LimeSurvey.
 The following items are suggested for better findability of the replication package by searches.
 
 - Subject Terms, e.g., “Machine Learning”, “Randomized Control Trial”, ...
-- Geographic Coverage \*, e.g, “United States”, “Florida, U.S.”, “Indonesia”, ...
-- Time Period(s) \*, e.g., “1982-2008” 
+- Geographic Coverage **\***, e.g, “United States”, “Florida, U.S.”, “Indonesia”, ...
+- Time Period(s) **\***, e.g., “1982-2008” 
 - Funding Sources	
-- Collection Dates \*
+- Collection Dates **\***
 - Data Types	
 - Data Sources
 - Unit of Observation
