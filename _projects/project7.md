@@ -21,12 +21,12 @@ locations:
 
 {% comment %} 
 
-This page is best viewed at <https://aeadataeditor.github.io/projects/project6>.
+This page is best viewed at <https://aeadataeditor.github.io/projects/project7>.
 
 {% endcomment %}
 
 <!-- The AEA Data Editor is happy to announce an **internship with the AEA Data Editor.**-->
-We are planning to have another round of an **internship with the AEA Data Editor.**.  The collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and  University of Colorado Boulder**.  We are looking for additional journals to provide us with articles, and additional local organizers at other institutions in order to scale up.
+We are planning to have another round of an **internship with the AEA Data Editor.**.  The collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame,  University of Colorado Boulder**, and **Hamilton College**.  We are looking for additional journals to provide us with articles, and additional local organizers at other institutions in order to scale up.
 
 
 
