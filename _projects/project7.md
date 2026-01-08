@@ -7,10 +7,10 @@ toc: true
 dates:
   trainingday1: 2026-04-11
   trainingday2: 2026-04-12
-  followup1: 2026-04-13
-  followup2: 2026-04-15
-  followup3: 2026-04-17
-  followup4: 2026-04-20
+  followup1: 2026-04-14
+  followup2: 2026-04-16
+  followup3: 2026-04-20
+  followup4: 2026-05-xx
   peermentor1: 2026-04-13
   peermentor2: 2026-04-15
   peermentor3: 2026-04-17
@@ -111,7 +111,7 @@ There will be various breaks throughout the day.
 
 *1. Accommodation*
 
-Wellesley cannot offer on-campus accommodation, unfortunately. The best option is the Verve Hotel in Natick, which is about a 10 to 15 minute ride to campus. The participants can get corporate rates if they book through Wellesley's corporate link: [https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/](https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/). The rate should be approximately $158 a night (as of March 2026). If they have any issues with booking, they can contact their local organizer.
+Wellesley cannot offer on-campus accommodation, unfortunately. The best option is the Verve Hotel in Natick, which is about a 10 to 15 minute ride to campus. The participants can get corporate rates if they book through Wellesley's corporate link: [https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/](https://www.hilton.com/en/hotels/bosqeup-the-verve-hotel-boston-natick/). The rate should be approximately $158 a night (as of March 2025). If they have any issues with booking, they can contact their local organizer.
 
 *2. Transportation options*
 
