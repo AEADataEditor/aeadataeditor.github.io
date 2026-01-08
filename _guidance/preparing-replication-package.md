@@ -38,11 +38,11 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
 
 
 
-### Submitting
+## Submitting
 
 You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence.
 
-### Problems?
+## Problems?
 
 If you run into problems at any step, please reach out. If you only run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.
 
