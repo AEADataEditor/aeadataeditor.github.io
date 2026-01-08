@@ -50,7 +50,7 @@ Must be PDF, TXT, or MD. DOCX generally not accepted, unless the relevant reposi
 
 ### README Content	
 
-The README content must be fully compliant with the [Template README](https://social-science-data-editors.github.io/template_README/). 
+The README content must contain all the required elements as per the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy#dcas-13). A good starting point is the [Template README](https://social-science-data-editors.github.io/template_README/), which provides guidance on what to provide for each of the required elements.
 
 We check that at least the following sections must be present to be compliant:
 
@@ -69,7 +69,7 @@ figures, and all inline numbers.
 
 Please only include data that you are allowed to publish. The README should provide instructions for any data that you are not allowed to publish. For large deposits, contact the AEA Data Editor. Maximum of 20GB. 
 
-### Survey/Experimental materials 
+### Survey/Experimental materials \*
 
 These must be provided, if the manuscript references an experiment, an RCT, or a survey, in line with the [Policy for Papers Conducting Experiments and Collecting Primary Data](https://www.aeaweb.org/journals/data/policy-experimental-surveys). 
 
