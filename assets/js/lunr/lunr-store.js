@@ -892,4 +892,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2026-01-09-leo-nd",
         "teaser": null
+      },{
+        "title": "Reproducibilidad con Impacto: Cómo la Ciencia Abierta Puede Cambiar el Mundo",
+        "excerpt":"Time   4:30 PM (Chile, UTC-3) / 2:30 PM (Ithaca, NY, UTC-5)   Abstract   Presentation slides at https://larsvilhuber.github.io/presentation-2026-01/. Presentation is primarily in English.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2026-01-23-atc26",
+        "teaser": null
       }]
