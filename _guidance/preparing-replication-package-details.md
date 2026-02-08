@@ -144,6 +144,9 @@ Finally, you should not hard-code your `rootdir`. Set the **project root directo
 
 ```stata
 global rootdir : pwd   
+// Example
+datadir   = "$rootdir/data/raw" 
+outputdir = "$rootdir/data/clean" 
 ```
 
 ```r
@@ -151,6 +154,21 @@ global rootdir : pwd
 rootdir <- here::here()
 # or the rprojroot package
 rootdir <- rprojroot::find_root_file("README.pdf")  # or other marker file
+# Example
+datadir   = file.path(rootdir, "data", "raw") 
+outputdir = file.path(rootdir, "data", "clean") 
+```
+
+```python
+import os 
+from pathlib import Path
+
+# Set directories
+code_dir = Path(__file__).resolve().parent      
+rootdir = code_dir.parent    
+# Example
+datadir   = rootdir / "data" / "raw" 
+outputdir = rootdir / "data" / "clean" 
 ```
 
 > IMPORTANT: your code MUST contain the line (Stata) `global rootdir : pwd` (or equivalent) to set the project root directory dynamically. 
