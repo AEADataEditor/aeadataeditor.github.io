@@ -34,7 +34,7 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
 - [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [Details](preparing-replication-package-step4)
 - [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [Details](preparing-replication-package-step5)
-- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-details#finalize-readme): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
+- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
 
 
 
