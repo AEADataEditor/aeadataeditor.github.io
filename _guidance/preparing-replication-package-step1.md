@@ -30,6 +30,7 @@ code/
 In this case, the following generic main file will work, with `scenario` set to `"A"`.
 
 ```stata
+// Stata example
 local scenario "A"          // Scenario A: main is in code directory
 local pwd : pwd                     // This always captures the current directory
 
@@ -67,6 +68,7 @@ code/
 In this case, the following generic main file will work, with `scenario` set to `"B"`(though see [Step 3 Dependencies](preparing-replication-package-step3))
 
 ```stata
+// Stata example
 local scenario "B"          // Scenario B: main is in project top-level directory
 local pwd : pwd                     // This always captures the current directory
 
@@ -91,6 +93,7 @@ do "$rootdir/code/04_figures1-4.do"
 Finally, you should not hard-code your `rootdir`. Set the **project root directory dynamically**:
 
 ```stata
+// Stata:
 global rootdir : pwd
 // Example
 datadir   = "$rootdir/data/raw"
@@ -98,6 +101,7 @@ outputdir = "$rootdir/data/clean"
 ```
 
 ```r
+# R:
 # if using the here package:
 rootdir <- here::here()
 # or the rprojroot package
@@ -108,6 +112,7 @@ outputdir = file.path(rootdir, "data", "clean")
 ```
 
 ```python
+# Python:
 import os
 from pathlib import Path
 
@@ -127,14 +132,17 @@ If your code uses directories that may start out empty, or may not exist on the 
 
 
 ```stata
+// Stata:
 cap mkdir "$outputdir"
 ```
 
 ```r
+# R:
 dir.create(outputdir, showWarnings = FALSE, recursive = TRUE)
 ```
 
 ```python
+# Python:
 outputdir.mkdir(parents=True, exist_ok=True)
 ```
 
