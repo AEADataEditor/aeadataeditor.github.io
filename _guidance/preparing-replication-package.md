@@ -26,14 +26,14 @@ Much more extensive guidance on the issues addressed here is available at <https
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
-- [ ] [**Step 1: Main file**](preparing-replication-package-details#step-1-main-file): A single main file is provided that runs all code.
-- [ ] [**Step 2: Path names**](preparing-replication-package-details#step-2-path-names-and-case): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).
-- [ ] [**Step 3: Dependencies**](preparing-replication-package-details#step-3-dependencies): All packages/libraries/dependencies are installed via code once. 
+- [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file is provided that runs all code. | [Details](preparing-replication-package-details#step-1-main-file)
+- [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below). | [Details](preparing-replication-package-details#step-2-path-names-and-case)
+- [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once. | [Details](preparing-replication-package-details#step-3-dependencies)
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
-- [ ] [**Step 4: Displays**](preparing-replication-package-details#step-4-displays): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. 
-- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-details#step-5-testing-in-containers): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).
+- [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided. | [Details](preparing-replication-package-details#step-4-displays)
+- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations). | [Details](preparing-replication-package-details#step-5-testing-in-containers)
 - [ ] (usually not necessary) [**Finalize**](preparing-replication-package-details#finalize-readme): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
 
 
@@ -46,4 +46,4 @@ You can now submit your replication package to the Data Editor, along with the c
 
 If you run into problems at any step, please reach out. If you only run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.
 
-[![Gory Details](/images/next-details-red.png)](preparing-replication-package-details)
+[![Gory Details](/images/next-button-details.png)](preparing-replication-package-details)
