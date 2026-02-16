@@ -1,0 +1,554 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Step 3: Dependencies - Office of the AEA Data Editor</title>
+<meta name="description" content="◀ Back to Checklist       Back to Details       ◀ Previous: Step 2           Stata packages  Stata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the net install command (including ssc install).  Replicators need to have the same versions of these packages installed. Stata does not (currently) provide a way to install older versions of packages, and a regular occurrence of reproducibility failure is due to changes in packages over time. We have some simple solutions to this problem.  First, use an environment to permanently install-project specific packages once and for all.  Define the environment in your main file, after setting $rootdir:     Reference: https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html and https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129.   /* install any packages locally */ di &quot;=== Redirecting where Stata searches for ado files ===&quot; capture mkdir &quot;$rootdir/ado&quot; adopath - PERSONAL adopath - OLDPLACE adopath - SITE sysdir set PLUS     &quot;$rootdir/ado/plus&quot; sysdir set PERSONAL &quot;$rootdir/ado&quot;       // may be needed for some packages sysdir   From this point on, all installed packages will be installed into $rootdir/ado, and Stata will look there first when loading packages.  Install packages once if not present, but don’t reinstall if already present.     Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14, though you should be able to just use your own install code as well, if it worked before.   *** Add required packages from SSC to this list *** local ssc_packages &quot;&quot;     // Example:     // local ssc_packages &quot;estout boottest&quot;     //     display in red &quot;============ Installing packages/commands from SSC =============&quot;     display in red &quot;== Packages: `ssc_packages&#39;&quot;     if !missing(&quot;`ssc_packages&#39;&quot;) {         foreach pkg in `ssc_packages&#39; {             capture which `pkg&#39;             if _rc == 111 {                dis &quot;Installing `pkg&#39;&quot;                 ssc install `pkg&#39;             }             which `pkg&#39;         }     }  ado   Some special cases (usually not necessary)  For some packages, the package name is not the same thing as the command name. Example: moremata. For these packages, the above code does not work. Use this code:1     Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27       // If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.     // examples are moremata, egennmore, blindschemes, etc. local ssc_unconditional &quot;&quot; /* add unconditionally installed packages */     display in red &quot;=============== Unconditionally installed packages from SSC ===============&quot;     display in red &quot;== Packages: `ssc_unconditional&#39;&quot;     if !missing(&quot;`ssc_unconditional&#39;&quot;) {         foreach pkg in `ssc_unconditional&#39; {             dis &quot;Installing `pkg&#39;&quot;             cap ssc install `pkg&#39;         }     }  ado   Packages that are not on SSC may need to be net installed from other sources, including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:      // If you have packages that need to be unconditionally installed from other sources (not SSC), then list them here.     // Example: grc1leg   net install grc1leg, from(&quot;http://www.stata.com/users/vwiggins/&quot;)     // Example when net install is not an option   cap mkdir &quot;$rootdir/ado/plus/e&quot;   cap copy http://www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado &quot;$rootdir/ado/plus/e/ebayes.ado&quot;  ado   Adding to replication package  The following files should be included in your replication package:  code/ado/*   R packages  For R packages, we suggest that users use renv, and do not set a specific CRAN mirror. We refer users to the renv documentation for details, but in a nutshell, for an existing R project that is not using renv, the following commands should be run in the R console:  install.packages(&quot;renv&quot;)  # only once renv::init()               # only once per project renv::snapshot()           # only once per project, after all packages are installed. You should choose to install all packages detected, then snapshotting. renv::status()             # to check status   This will create a file renv.lock in the top-level directory of your project.  Adding to replication package  The following files should be included in your replication package:  .Rprofile renv.lock renv/activate.R renv/settings.json   Do not include the entire renv directory, in particular not the renv/library subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.                    A more customized setup might check for a package-specific file in the ado directory, such as the &lt;package&gt;.pkg, but this is more complex and may not always work. &#8617;">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Step 3: Dependencies">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step3">
+
+
+  <meta property="og:description" content="◀ Back to Checklist       Back to Details       ◀ Previous: Step 2           Stata packages  Stata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the net install command (including ssc install).  Replicators need to have the same versions of these packages installed. Stata does not (currently) provide a way to install older versions of packages, and a regular occurrence of reproducibility failure is due to changes in packages over time. We have some simple solutions to this problem.  First, use an environment to permanently install-project specific packages once and for all.  Define the environment in your main file, after setting $rootdir:     Reference: https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html and https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129.   /* install any packages locally */ di &quot;=== Redirecting where Stata searches for ado files ===&quot; capture mkdir &quot;$rootdir/ado&quot; adopath - PERSONAL adopath - OLDPLACE adopath - SITE sysdir set PLUS     &quot;$rootdir/ado/plus&quot; sysdir set PERSONAL &quot;$rootdir/ado&quot;       // may be needed for some packages sysdir   From this point on, all installed packages will be installed into $rootdir/ado, and Stata will look there first when loading packages.  Install packages once if not present, but don’t reinstall if already present.     Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14, though you should be able to just use your own install code as well, if it worked before.   *** Add required packages from SSC to this list *** local ssc_packages &quot;&quot;     // Example:     // local ssc_packages &quot;estout boottest&quot;     //     display in red &quot;============ Installing packages/commands from SSC =============&quot;     display in red &quot;== Packages: `ssc_packages&#39;&quot;     if !missing(&quot;`ssc_packages&#39;&quot;) {         foreach pkg in `ssc_packages&#39; {             capture which `pkg&#39;             if _rc == 111 {                dis &quot;Installing `pkg&#39;&quot;                 ssc install `pkg&#39;             }             which `pkg&#39;         }     }  ado   Some special cases (usually not necessary)  For some packages, the package name is not the same thing as the command name. Example: moremata. For these packages, the above code does not work. Use this code:1     Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27       // If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.     // examples are moremata, egennmore, blindschemes, etc. local ssc_unconditional &quot;&quot; /* add unconditionally installed packages */     display in red &quot;=============== Unconditionally installed packages from SSC ===============&quot;     display in red &quot;== Packages: `ssc_unconditional&#39;&quot;     if !missing(&quot;`ssc_unconditional&#39;&quot;) {         foreach pkg in `ssc_unconditional&#39; {             dis &quot;Installing `pkg&#39;&quot;             cap ssc install `pkg&#39;         }     }  ado   Packages that are not on SSC may need to be net installed from other sources, including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:      // If you have packages that need to be unconditionally installed from other sources (not SSC), then list them here.     // Example: grc1leg   net install grc1leg, from(&quot;http://www.stata.com/users/vwiggins/&quot;)     // Example when net install is not an option   cap mkdir &quot;$rootdir/ado/plus/e&quot;   cap copy http://www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado &quot;$rootdir/ado/plus/e/ebayes.ado&quot;  ado   Adding to replication package  The following files should be included in your replication package:  code/ado/*   R packages  For R packages, we suggest that users use renv, and do not set a specific CRAN mirror. We refer users to the renv documentation for details, but in a nutshell, for an existing R project that is not using renv, the following commands should be run in the R console:  install.packages(&quot;renv&quot;)  # only once renv::init()               # only once per project renv::snapshot()           # only once per project, after all packages are installed. You should choose to install all packages detected, then snapshotting. renv::status()             # to check status   This will create a file renv.lock in the top-level directory of your project.  Adding to replication package  The following files should be included in your replication package:  .Rprofile renv.lock renv/activate.R renv/settings.json   Do not include the entire renv directory, in particular not the renv/library subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.                    A more customized setup might check for a package-specific file in the ado directory, such as the &lt;package&gt;.pkg, but this is more complex and may not always work. &#8617;">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-16T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step3">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Step 3: Dependencies">
+    <meta itemprop="description" content="            ◀ Back to Checklist      Back to Details      ◀ Previous: Step 2      Stata packagesStata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the net install command (including ssc install).Replicators need to have the same versions of these packages installed. Stata does not (currently) provide a way to install older versions of packages, and a regular occurrence of reproducibility failure is due to changes in packages over time. We have some simple solutions to this problem.First, use an environment to permanently install-project specific packages once and for all.Define the environment in your main file, after setting $rootdir:  Reference: https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html and https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129./* install any packages locally */di &quot;=== Redirecting where Stata searches for ado files ===&quot;capture mkdir &quot;$rootdir/ado&quot;adopath - PERSONALadopath - OLDPLACEadopath - SITEsysdir set PLUS     &quot;$rootdir/ado/plus&quot;sysdir set PERSONAL &quot;$rootdir/ado&quot;       // may be needed for some packagessysdirFrom this point on, all installed packages will be installed into $rootdir/ado, and Stata will look there first when loading packages.Install packages once if not present, but don’t reinstall if already present.  Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14, though you should be able to just use your own install code as well, if it worked before.*** Add required packages from SSC to this list ***local ssc_packages &quot;&quot;    // Example:    // local ssc_packages &quot;estout boottest&quot;    //    display in red &quot;============ Installing packages/commands from SSC =============&quot;    display in red &quot;== Packages: `ssc_packages&#39;&quot;    if !missing(&quot;`ssc_packages&#39;&quot;) {        foreach pkg in `ssc_packages&#39; {            capture which `pkg&#39;            if _rc == 111 {               dis &quot;Installing `pkg&#39;&quot;                ssc install `pkg&#39;            }            which `pkg&#39;        }    } adoSome special cases (usually not necessary)For some packages, the package name is not the same thing as the command name. Example: moremata. For these packages, the above code does not work. Use this code:1  Reference: https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27    // If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.    // examples are moremata, egennmore, blindschemes, etc.local ssc_unconditional &quot;&quot;/* add unconditionally installed packages */    display in red &quot;=============== Unconditionally installed packages from SSC ===============&quot;    display in red &quot;== Packages: `ssc_unconditional&#39;&quot;    if !missing(&quot;`ssc_unconditional&#39;&quot;) {        foreach pkg in `ssc_unconditional&#39; {            dis &quot;Installing `pkg&#39;&quot;            cap ssc install `pkg&#39;        }    } adoPackages that are not on SSC may need to be net installed from other sources, including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:    // If you have packages that need to be unconditionally installed from other sources (not SSC), then list them here.    // Example: grc1leg  net install grc1leg, from(&quot;http://www.stata.com/users/vwiggins/&quot;)    // Example when net install is not an option  cap mkdir &quot;$rootdir/ado/plus/e&quot;  cap copy http://www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado &quot;$rootdir/ado/plus/e/ebayes.ado&quot; adoAdding to replication packageThe following files should be included in your replication package:code/ado/*R packagesFor R packages, we suggest that users use renv, and do not set a specific CRAN mirror. We refer users to the renv documentation for details, but in a nutshell, for an existing R project that is not using renv, the following commands should be run in the R console:install.packages(&quot;renv&quot;)  # only oncerenv::init()               # only once per projectrenv::snapshot()           # only once per project, after all packages are installed. You should choose to install all packages detected, then snapshotting.renv::status()             # to check statusThis will create a file renv.lock in the top-level directory of your project.Adding to replication packageThe following files should be included in your replication package:.Rprofilerenv.lockrenv/activate.Rrenv/settings.jsonDo not include the entire renv directory, in particular not the renv/library subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.            A more customized setup might check for a package-specific file in the ado directory, such as the &lt;package&gt;.pkg, but this is more complex and may not always work. &#8617;      ">
+    <meta itemprop="datePublished" content="2026-02-16T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Step 3: Dependencies
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#stata-packages">Stata packages</a></li><li><a href="#r-packages">R packages</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <table>
+  <tbody>
+    <tr>
+      <td><a href="preparing-replication-package">◀ Back to Checklist</a></td>
+      <td><a href="preparing-replication-package-details">Back to Details</a></td>
+      <td><a href="preparing-replication-package-step2">◀ Previous: Step 2</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="stata-packages">Stata packages</h2>
+
+<p>Stata users frequently use user-written packages, which are made available to the Stata community via the <a href="https://www.stata-journal.com/">Stata Journal</a>, <a href="https://ideas.repec.org/s/boc/bocode.html">SSC</a>, or Github. They are typically installed using a small number of variants of the <code class="language-plaintext highlighter-rouge">net install</code> command (including <code class="language-plaintext highlighter-rouge">ssc install</code>).</p>
+
+<p>Replicators need to have the same versions of these packages installed. Stata does not (currently) provide a way to install older versions of packages, and a regular occurrence of reproducibility failure is due to changes in packages over time. We have some simple solutions to this problem.</p>
+
+<p>First, use an environment to permanently install-project specific packages once and for all.</p>
+
+<p><strong>Define the environment</strong> in your main file, after setting <code class="language-plaintext highlighter-rouge">$rootdir</code>:</p>
+
+<blockquote>
+  <p>Reference: <a href="https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html">https://larsvilhuber.github.io/self-checking-reproducibility/12-environments-in-stata.html</a> and <a href="https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129">https://github.com/AEADataEditor/replication-template/blob/master/template-config.do#L129</a>.</p>
+</blockquote>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* install any packages locally */</span>
+<span class="k">di</span><span class="w"> </span><span class="s2">"=== Redirecting where Stata searches for ado files ==="</span>
+<span class="k">capture</span><span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="s2">"$rootdir/ado"</span>
+<span class="k">adopath</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">PERSONAL</span>
+<span class="k">adopath</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">OLDPLACE</span>
+<span class="k">adopath</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">SITE</span>
+<span class="k">sysdir</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">PLUS</span><span class="w">     </span><span class="s2">"$rootdir/ado/plus"</span>
+<span class="k">sysdir</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">PERSONAL</span><span class="w"> </span><span class="s2">"$rootdir/ado"</span><span class="w">       </span><span class="c1">// may be needed for some packages</span>
+<span class="k">sysdir</span>
+</code></pre></div></div>
+
+<p>From this point on, all installed packages will be installed into <code class="language-plaintext highlighter-rouge">$rootdir/ado</code>, and Stata will look there first when loading packages.</p>
+
+<p><strong>Install packages once</strong> if not present, but don’t reinstall if already present.</p>
+
+<blockquote>
+  <p>Reference: <a href="https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14">https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L14</a>, though you should be able to just use your own install code as well, if it worked before.</p>
+</blockquote>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">*** Add required packages from SSC to this list ***</span>
+<span class="kt">local</span><span class="w"> </span><span class="n">ssc_packages</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">    </span><span class="c1">// Example:</span>
+<span class="w">    </span><span class="c1">// local ssc_packages "estout boottest"</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="k">    display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"============ Installing packages/commands from SSC ============="</span>
+<span class="k">    display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"== Packages: `ssc_packages'"</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="o">!</span><span class="nf">missing</span><span class="p">(</span><span class="s2">"`ssc_packages'"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kr">foreach</span><span class="w"> </span><span class="n">pkg</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="s2">`ssc_packages'</span><span class="w"> </span><span class="p">{</span>
+<span class="k">            capture</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="s2">`pkg'</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="n">_rc</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">111</span><span class="w"> </span><span class="p">{</span>
+<span class="k">               dis</span><span class="w"> </span><span class="s2">"Installing `pkg'"</span>
+<span class="k">                ssc</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="s2">`pkg'</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="k">            which</span><span class="w"> </span><span class="s2">`pkg'</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k"> ado</span>
+</code></pre></div></div>
+
+<p><strong>Some special cases</strong> (usually not necessary)</p>
+
+<p><em>For some packages, the package name is not the same thing as the command name.</em> Example: <code class="language-plaintext highlighter-rouge">moremata</code>. For these packages, the above code does not work. Use this code:<sup id="fnref:unconditional-packages"><a href="#fn:unconditional-packages" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<blockquote>
+  <p>Reference: <a href="https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27">https://gist.github.com/larsvilhuber/d8b643a408d425ef2a80385b6377870d#file-part2_of_main-do-L27</a></p>
+</blockquote>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">// If you have packages that need to be unconditionally installed (the name of the package differs from the included commands), then list them here.</span>
+<span class="w">    </span><span class="c1">// examples are moremata, egennmore, blindschemes, etc.</span>
+<span class="kt">local</span><span class="w"> </span><span class="n">ssc_unconditional</span><span class="w"> </span><span class="s2">""</span>
+<span class="cm">/* add unconditionally installed packages */</span>
+<span class="k">    display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"=============== Unconditionally installed packages from SSC ==============="</span>
+<span class="k">    display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"== Packages: `ssc_unconditional'"</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="o">!</span><span class="nf">missing</span><span class="p">(</span><span class="s2">"`ssc_unconditional'"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kr">foreach</span><span class="w"> </span><span class="n">pkg</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="s2">`ssc_unconditional'</span><span class="w"> </span><span class="p">{</span>
+<span class="k">            dis</span><span class="w"> </span><span class="s2">"Installing `pkg'"</span>
+<span class="k">            cap</span><span class="w"> </span><span class="n">ssc</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="s2">`pkg'</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k"> ado</span>
+</code></pre></div></div>
+
+<p><em>Packages that are not on SSC may need to be <code class="language-plaintext highlighter-rouge">net install</code>ed from other sources,</em> including Github and personal websites. Again, this does not neatly work with a specific command check, and thus you may need to unconditionally install them. Use this code:</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">// If you have packages that need to be unconditionally installed from other sources (not SSC), then list them here.</span>
+<span class="w">    </span><span class="c1">// Example: grc1leg</span>
+<span class="k">  net</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">grc1leg</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="p">(</span><span class="s2">"http://www.stata.com/users/vwiggins/"</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// Example when net install is not an option</span>
+<span class="k">  cap</span><span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="s2">"$rootdir/ado/plus/e"</span>
+<span class="k">  cap</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">http</span><span class="o">:</span><span class="c1">//www.sacarny.com/wp-content/uploads/2015/08/ebayes.ado "$rootdir/ado/plus/e/ebayes.ado"</span>
+<span class="k"> ado</span>
+</code></pre></div></div>
+
+<p><strong><em>Adding to replication package</em></strong></p>
+
+<p>The following files should be included in your replication package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code/ado/<span class="k">*</span>
+</code></pre></div></div>
+
+<h2 id="r-packages">R packages</h2>
+
+<p>For R packages, we suggest that users use <code class="language-plaintext highlighter-rouge">renv</code>, and do not set a specific CRAN mirror. We refer users to the <a href="https://rstudio.github.io/renv/articles/renv.html">renv documentation</a> for details, but in a nutshell, for an existing R project that is not using <code class="language-plaintext highlighter-rouge">renv</code>, the following commands should be run in the R console:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"renv"</span><span class="p">)</span><span class="w">  </span><span class="c1"># only once</span><span class="w">
+</span><span class="n">renv</span><span class="o">::</span><span class="n">init</span><span class="p">()</span><span class="w">               </span><span class="c1"># only once per project</span><span class="w">
+</span><span class="n">renv</span><span class="o">::</span><span class="n">snapshot</span><span class="p">()</span><span class="w">           </span><span class="c1"># only once per project, after all packages are installed. You should choose to install all packages detected, then snapshotting.</span><span class="w">
+</span><span class="n">renv</span><span class="o">::</span><span class="n">status</span><span class="p">()</span><span class="w">             </span><span class="c1"># to check status</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This will create a file <code class="language-plaintext highlighter-rouge">renv.lock</code> in the top-level directory of your project.</p>
+
+<p><strong><em>Adding to replication package</em></strong></p>
+
+<p>The following files should be included in your replication package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.Rprofile
+renv.lock
+renv/activate.R
+renv/settings.json
+</code></pre></div></div>
+
+<p>Do not include the entire <code class="language-plaintext highlighter-rouge">renv</code> directory, in particular not the <code class="language-plaintext highlighter-rouge">renv/library</code> subdirectory, as it is platform-specific (of no use to other platforms), and can be very large.</p>
+
+<hr />
+
+<p><a href="preparing-replication-package-step4"><img src="/images/next-button-step4.png" alt="Next: Step 4" /></a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:unconditional-packages">
+      <p>A more customized setup might check for a package-specific file in the <code class="language-plaintext highlighter-rouge">ado</code> directory, such as the <code class="language-plaintext highlighter-rouge">&lt;package&gt;.pkg</code>, but this is more complex and may not always work. <a href="#fnref:unconditional-packages" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Step+3%3A+Dependencies%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step3" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step3" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/preparing-replication-package-step3.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,10 +1,4 @@
 var store = [{
-        "title": "Licensing Guidance",
-        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/Licensing_guidance.html",
-        "teaser": null
-      },{
         "title": "A discussion about various things",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -15,6 +9,12 @@ var store = [{
         "excerpt":"save “LICENSE.txt” as part of your deposit modify the COPYRIGHT line. Modified BSD License (https://opensource.org/licenses/BSD-3-Clause) - applies to all code, scripts, programs, and SOFTWARE. This is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/LICENSE-template.html",
+        "teaser": null
+      },{
+        "title": "Licensing Guidance",
+        "excerpt":"This site does not provide legal guidance. The information below is provided for discussion and as a suggestion only. Authors should consult with a qualified party, such as a university counsel or a lawyer, as appropriate. When depositing in a Code and Data Repository, a license needs to be chosen....","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/Licensing_guidance.html",
         "teaser": null
       },{
         "title": "Additional data citation guidance",
@@ -65,12 +65,6 @@ var store = [{
         "url": "/aea-de-guidance/creating-restricted-data-deposit-icpsr-old",
         "teaser": null
       },{
-        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
-        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/guidelines-other-repositories",
-        "teaser": null
-      },{
         "title": "Creating a Restricted Data Deposit  for AEA Publications",
         "excerpt":"The original guide on how to deposit restricted-access data on openICPSR is available here. DO NOT USE THOSE INSTRUCTIONS, AS THEY ARE NO LONGER ACCURATE. The AEA requires that data be as open as legally and ethically possible. To deposit restricted-access data, to the best of our knowledge, no uniquely...","categories": [],
         "tags": [],
@@ -101,6 +95,12 @@ var store = [{
         "url": "/aea-de-guidance/FAQ.html",
         "teaser": null
       },{
+        "title": "Display Guidelines for Trusted Repositories (other than AEA Data and Code Repository)",
+        "excerpt":"The AEA accepts replication packages from any trusted repository (see list), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the AEA Data and Code Repository. If you have doubts about...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/guidelines-other-repositories",
+        "teaser": null
+      },{
         "title": "Step by step guidance",
         "excerpt":"The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the AEA Data and Code Availability Policy. Note that the AEA’s Data and Code Availability Policy is compatible with the Data and Code Availability Standard v1.0. Prepare Prepare your data and code replication...","categories": [],
         "tags": [],
@@ -129,6 +129,36 @@ var store = [{
         "excerpt":"The steps in this document are being used in a pilot project. This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages. ⚠️❗ IMPORTANT: At this point, you...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package",
+        "teaser": null
+      },{
+        "title": "Step 1: Main file",
+        "excerpt":"◀ Back to Checklist Back to Details You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-step1",
+        "teaser": null
+      },{
+        "title": "Step 2: Path names and case",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 1 Two issues: Windows computers use \\ (backslashes) in path names, while Mac and Linux computers use / (forward slashes). The use of \\ (backslashes) in path names breaks code on Mac and Linux computers. Windows and Mac computers use...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-step2",
+        "teaser": null
+      },{
+        "title": "Step 3: Dependencies",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 2 Stata packages Stata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the net install command (including...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-step3",
+        "teaser": null
+      },{
+        "title": "Step 4: Displays",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 3 Displays (figures and tables) should be written out to external files, and the authors’ versions, as used in the manuscript, should be provided. In the prototypical replication package structure above, these files would be in the results directory. Reference:...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-step4",
+        "teaser": null
+      },{
+        "title": "Step 5: Testing in containers",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 4 After you have made all the above changes, you should test your code in an appropriate authorized container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-step5",
         "teaser": null
       },{
         "title": "Data deposit guidance",

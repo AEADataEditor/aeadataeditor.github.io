@@ -1,0 +1,555 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Step 1: Main file - Office of the AEA Data Editor</title>
+<meta name="description" content="◀ Back to Checklist       Back to Details              You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main file.      Reference: https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html   Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:  Scenario A: main is in the code directory  The most frequent scenario we see (which we call Scenario A) amongst economists is that the main file is in the code directory:  README.pdf data/ ... code/   main.do   01_readcps.do   02_readfred.do ...   In this case, the following generic main file will work, with scenario set to &quot;A&quot;.  local scenario &quot;A&quot;          // Scenario A: main is in code directory local pwd : pwd                     // This always captures the current directory  if &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first     cd .. } global rootdir : pwd                // Now capture the directory to use as rootdir display in red &quot;Rootdir has been set to: $rootdir&quot; cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd  // Now run the rest of the code do &quot;$rootdir/code/01_readcps.do&quot; do &quot;$rootdir/code/02_readfred.do&quot; do &quot;$rootdir/code/03_table1-5.do&quot; do &quot;$rootdir/code/04_figures1-4.do&quot;   Scenario B: main is in the top-level directory  More common in other computational sciences, but also present amongst economists, is that the main file is in the top-level directory:  README.pdf main.do data/ ... code/   01_readcps.do   02_readfred.do ...   In this case, the following generic main file will work, with scenario set to &quot;B&quot;(though see Step 3 Dependencies)  local scenario &quot;B&quot;          // Scenario B: main is in project top-level directory local pwd : pwd                     // This always captures the current directory  if &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first     cd .. } global rootdir : pwd                // Now capture the directory to use as rootdir display in red &quot;Rootdir has been set to: $rootdir&quot; cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd  // Now run the rest of the code do &quot;$rootdir/code/01_readcps.do&quot; do &quot;$rootdir/code/02_readfred.do&quot; do &quot;$rootdir/code/03_table1-5.do&quot; do &quot;$rootdir/code/04_figures1-4.do&quot;   Important     In neither scenario did we hard-code the path to our project directory /my/computer/users/me/project. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.   Finally, you should not hard-code your rootdir. Set the project root directory dynamically:  global rootdir : pwd // Example datadir   = &quot;$rootdir/data/raw&quot; outputdir = &quot;$rootdir/data/clean&quot;   # if using the here package: rootdir &lt;- here::here() # or the rprojroot package rootdir &lt;- rprojroot::find_root_file(&quot;README.pdf&quot;)  # or other marker file # Example datadir   = file.path(rootdir, &quot;data&quot;, &quot;raw&quot;) outputdir = file.path(rootdir, &quot;data&quot;, &quot;clean&quot;)   import os from pathlib import Path  # Set directories code_dir = Path(__file__).resolve().parent rootdir = code_dir.parent # Example datadir   = rootdir / &quot;data&quot; / &quot;raw&quot; outputdir = rootdir / &quot;data&quot; / &quot;clean&quot;      IMPORTANT: your code MUST contain the line (Stata) global rootdir : pwd (or equivalent) to set the project root directory dynamically.   Creating directories programmatically  If your code uses directories that may start out empty, or may not exist on the replicators’ computers, you must create them programmatically.  cap mkdir &quot;$outputdir&quot;   dir.create(outputdir, showWarnings = FALSE, recursive = TRUE)   outputdir.mkdir(parents=True, exist_ok=True)">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Step 1: Main file">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step1">
+
+
+  <meta property="og:description" content="◀ Back to Checklist       Back to Details              You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main file.      Reference: https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html   Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:  Scenario A: main is in the code directory  The most frequent scenario we see (which we call Scenario A) amongst economists is that the main file is in the code directory:  README.pdf data/ ... code/   main.do   01_readcps.do   02_readfred.do ...   In this case, the following generic main file will work, with scenario set to &quot;A&quot;.  local scenario &quot;A&quot;          // Scenario A: main is in code directory local pwd : pwd                     // This always captures the current directory  if &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first     cd .. } global rootdir : pwd                // Now capture the directory to use as rootdir display in red &quot;Rootdir has been set to: $rootdir&quot; cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd  // Now run the rest of the code do &quot;$rootdir/code/01_readcps.do&quot; do &quot;$rootdir/code/02_readfred.do&quot; do &quot;$rootdir/code/03_table1-5.do&quot; do &quot;$rootdir/code/04_figures1-4.do&quot;   Scenario B: main is in the top-level directory  More common in other computational sciences, but also present amongst economists, is that the main file is in the top-level directory:  README.pdf main.do data/ ... code/   01_readcps.do   02_readfred.do ...   In this case, the following generic main file will work, with scenario set to &quot;B&quot;(though see Step 3 Dependencies)  local scenario &quot;B&quot;          // Scenario B: main is in project top-level directory local pwd : pwd                     // This always captures the current directory  if &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first     cd .. } global rootdir : pwd                // Now capture the directory to use as rootdir display in red &quot;Rootdir has been set to: $rootdir&quot; cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd  // Now run the rest of the code do &quot;$rootdir/code/01_readcps.do&quot; do &quot;$rootdir/code/02_readfred.do&quot; do &quot;$rootdir/code/03_table1-5.do&quot; do &quot;$rootdir/code/04_figures1-4.do&quot;   Important     In neither scenario did we hard-code the path to our project directory /my/computer/users/me/project. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.   Finally, you should not hard-code your rootdir. Set the project root directory dynamically:  global rootdir : pwd // Example datadir   = &quot;$rootdir/data/raw&quot; outputdir = &quot;$rootdir/data/clean&quot;   # if using the here package: rootdir &lt;- here::here() # or the rprojroot package rootdir &lt;- rprojroot::find_root_file(&quot;README.pdf&quot;)  # or other marker file # Example datadir   = file.path(rootdir, &quot;data&quot;, &quot;raw&quot;) outputdir = file.path(rootdir, &quot;data&quot;, &quot;clean&quot;)   import os from pathlib import Path  # Set directories code_dir = Path(__file__).resolve().parent rootdir = code_dir.parent # Example datadir   = rootdir / &quot;data&quot; / &quot;raw&quot; outputdir = rootdir / &quot;data&quot; / &quot;clean&quot;      IMPORTANT: your code MUST contain the line (Stata) global rootdir : pwd (or equivalent) to set the project root directory dynamically.   Creating directories programmatically  If your code uses directories that may start out empty, or may not exist on the replicators’ computers, you must create them programmatically.  cap mkdir &quot;$outputdir&quot;   dir.create(outputdir, showWarnings = FALSE, recursive = TRUE)   outputdir.mkdir(parents=True, exist_ok=True)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-16T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step1">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Step 1: Main file">
+    <meta itemprop="description" content="            ◀ Back to Checklist      Back to Details        You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main file.  Reference: https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.htmlCreating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:Scenario A: main is in the code directoryThe most frequent scenario we see (which we call Scenario A) amongst economists is that the main file is in the code directory:README.pdfdata/...code/  main.do  01_readcps.do  02_readfred.do...In this case, the following generic main file will work, with scenario set to &quot;A&quot;.local scenario &quot;A&quot;          // Scenario A: main is in code directorylocal pwd : pwd                     // This always captures the current directoryif &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first    cd ..}global rootdir : pwd                // Now capture the directory to use as rootdirdisplay in red &quot;Rootdir has been set to: $rootdir&quot;cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd// Now run the rest of the codedo &quot;$rootdir/code/01_readcps.do&quot;do &quot;$rootdir/code/02_readfred.do&quot;do &quot;$rootdir/code/03_table1-5.do&quot;do &quot;$rootdir/code/04_figures1-4.do&quot;Scenario B: main is in the top-level directoryMore common in other computational sciences, but also present amongst economists, is that the main file is in the top-level directory:README.pdfmain.dodata/...code/  01_readcps.do  02_readfred.do...In this case, the following generic main file will work, with scenario set to &quot;B&quot;(though see Step 3 Dependencies)local scenario &quot;B&quot;          // Scenario B: main is in project top-level directorylocal pwd : pwd                     // This always captures the current directoryif &quot;`scenario&#39;&quot; == &quot;A&quot; {             // If in Scenario A, we need to change directory first    cd ..}global rootdir : pwd                // Now capture the directory to use as rootdirdisplay in red &quot;Rootdir has been set to: $rootdir&quot;cd &quot;`pwd&#39;&quot;                            // Return to where we were before and never again use cd// Now run the rest of the codedo &quot;$rootdir/code/01_readcps.do&quot;do &quot;$rootdir/code/02_readfred.do&quot;do &quot;$rootdir/code/03_table1-5.do&quot;do &quot;$rootdir/code/04_figures1-4.do&quot;Important  In neither scenario did we hard-code the path to our project directory /my/computer/users/me/project. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.Finally, you should not hard-code your rootdir. Set the project root directory dynamically:global rootdir : pwd// Exampledatadir   = &quot;$rootdir/data/raw&quot;outputdir = &quot;$rootdir/data/clean&quot;# if using the here package:rootdir &lt;- here::here()# or the rprojroot packagerootdir &lt;- rprojroot::find_root_file(&quot;README.pdf&quot;)  # or other marker file# Exampledatadir   = file.path(rootdir, &quot;data&quot;, &quot;raw&quot;)outputdir = file.path(rootdir, &quot;data&quot;, &quot;clean&quot;)import osfrom pathlib import Path# Set directoriescode_dir = Path(__file__).resolve().parentrootdir = code_dir.parent# Exampledatadir   = rootdir / &quot;data&quot; / &quot;raw&quot;outputdir = rootdir / &quot;data&quot; / &quot;clean&quot;  IMPORTANT: your code MUST contain the line (Stata) global rootdir : pwd (or equivalent) to set the project root directory dynamically.Creating directories programmaticallyIf your code uses directories that may start out empty, or may not exist on the replicators’ computers, you must create them programmatically.cap mkdir &quot;$outputdir&quot;dir.create(outputdir, showWarnings = FALSE, recursive = TRUE)outputdir.mkdir(parents=True, exist_ok=True)">
+    <meta itemprop="datePublished" content="2026-02-16T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Step 1: Main file
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#scenario-a-main-is-in-the-code-directory">Scenario A: main is in the code directory</a></li><li><a href="#scenario-b-main-is-in-the-top-level-directory">Scenario B: main is in the top-level directory</a></li><li><a href="#important">Important</a></li><li><a href="#creating-directories-programmatically">Creating directories programmatically</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <table>
+  <tbody>
+    <tr>
+      <td><a href="preparing-replication-package">◀ Back to Checklist</a></td>
+      <td><a href="preparing-replication-package-details">Back to Details</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called <code class="language-plaintext highlighter-rouge">main.do</code> if you already have one, but you may need to update your existing main file.</p>
+</blockquote>
+
+<blockquote>
+  <p>Reference: <a href="https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html">https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html</a></p>
+</blockquote>
+
+<p>Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:</p>
+
+<h2 id="scenario-a-main-is-in-the-code-directory">Scenario A: <code class="language-plaintext highlighter-rouge">main</code> is in the <code class="language-plaintext highlighter-rouge">code</code> directory</h2>
+
+<p>The most frequent scenario we see (which we call <strong>Scenario A</strong>) amongst economists is that the main file is in the <code class="language-plaintext highlighter-rouge">code</code> directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>README.pdf
+data/
+...
+code/
+  main.do
+  01_readcps.do
+  02_readfred.do
+...
+</code></pre></div></div>
+
+<p>In this case, the following generic main file will work, with <code class="language-plaintext highlighter-rouge">scenario</code> set to <code class="language-plaintext highlighter-rouge">"A"</code>.</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">local</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="s2">"A"</span><span class="w">          </span><span class="c1">// Scenario A: main is in code directory</span>
+<span class="kt">local</span><span class="w"> </span><span class="n">pwd</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pwd</span><span class="w">                     </span><span class="c1">// This always captures the current directory</span>
+
+<span class="kr">if</span><span class="w"> </span><span class="s2">"`scenario'"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"A"</span><span class="w"> </span><span class="p">{</span><span class="w">             </span><span class="c1">// If in Scenario A, we need to change directory first</span>
+<span class="k">    cd</span><span class="w"> </span><span class="o">..</span>
+<span class="p">}</span>
+<span class="kt">global</span><span class="w"> </span><span class="n">rootdir</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pwd</span><span class="w">                </span><span class="c1">// Now capture the directory to use as rootdir</span>
+<span class="k">display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"Rootdir has been set to: $rootdir"</span>
+<span class="k">cd</span><span class="w"> </span><span class="s2">"`pwd'"</span><span class="w">                            </span><span class="c1">// Return to where we were before and never again use cd</span>
+
+<span class="c1">// Now run the rest of the code</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/01_readcps.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/02_readfred.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/03_table1-5.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/04_figures1-4.do"</span>
+</code></pre></div></div>
+
+<h2 id="scenario-b-main-is-in-the-top-level-directory">Scenario B: <code class="language-plaintext highlighter-rouge">main</code> is in the top-level directory</h2>
+
+<p>More common in other computational sciences, but also present amongst economists, is that the main file is in the top-level directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>README.pdf
+main.do
+data/
+...
+code/
+  01_readcps.do
+  02_readfred.do
+...
+</code></pre></div></div>
+
+<p>In this case, the following generic main file will work, with <code class="language-plaintext highlighter-rouge">scenario</code> set to <code class="language-plaintext highlighter-rouge">"B"</code>(though see <a href="preparing-replication-package-step3">Step 3 Dependencies</a>)</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">local</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="s2">"B"</span><span class="w">          </span><span class="c1">// Scenario B: main is in project top-level directory</span>
+<span class="kt">local</span><span class="w"> </span><span class="n">pwd</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pwd</span><span class="w">                     </span><span class="c1">// This always captures the current directory</span>
+
+<span class="kr">if</span><span class="w"> </span><span class="s2">"`scenario'"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"A"</span><span class="w"> </span><span class="p">{</span><span class="w">             </span><span class="c1">// If in Scenario A, we need to change directory first</span>
+<span class="k">    cd</span><span class="w"> </span><span class="o">..</span>
+<span class="p">}</span>
+<span class="kt">global</span><span class="w"> </span><span class="n">rootdir</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pwd</span><span class="w">                </span><span class="c1">// Now capture the directory to use as rootdir</span>
+<span class="k">display</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="s2">"Rootdir has been set to: $rootdir"</span>
+<span class="k">cd</span><span class="w"> </span><span class="s2">"`pwd'"</span><span class="w">                            </span><span class="c1">// Return to where we were before and never again use cd</span>
+
+<span class="c1">// Now run the rest of the code</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/01_readcps.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/02_readfred.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/03_table1-5.do"</span>
+<span class="k">do</span><span class="w"> </span><span class="s2">"$rootdir/code/04_figures1-4.do"</span>
+</code></pre></div></div>
+
+<h2 id="important">Important</h2>
+
+<blockquote>
+  <p>In neither scenario did we hard-code the path to our project directory <code class="language-plaintext highlighter-rouge">/my/computer/users/me/project</code>. This is not an omission, and it is important, because it allows the code to be run on any computer, without modification.</p>
+</blockquote>
+
+<p>Finally, you should not hard-code your <code class="language-plaintext highlighter-rouge">rootdir</code>. Set the <strong>project root directory dynamically</strong>:</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">global</span><span class="w"> </span><span class="n">rootdir</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pwd</span>
+<span class="c1">// Example</span>
+<span class="n">datadir</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">"$rootdir/data/raw"</span>
+<span class="n">outputdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"$rootdir/data/clean"</span>
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># if using the here package:</span><span class="w">
+</span><span class="n">rootdir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">here</span><span class="o">::</span><span class="n">here</span><span class="p">()</span><span class="w">
+</span><span class="c1"># or the rprojroot package</span><span class="w">
+</span><span class="n">rootdir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rprojroot</span><span class="o">::</span><span class="n">find_root_file</span><span class="p">(</span><span class="s2">"README.pdf"</span><span class="p">)</span><span class="w">  </span><span class="c1"># or other marker file</span><span class="w">
+</span><span class="c1"># Example</span><span class="w">
+</span><span class="n">datadir</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">file.path</span><span class="p">(</span><span class="n">rootdir</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w"> </span><span class="s2">"raw"</span><span class="p">)</span><span class="w">
+</span><span class="n">outputdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file.path</span><span class="p">(</span><span class="n">rootdir</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w"> </span><span class="s2">"clean"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="n">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Set directories
+</span><span class="n">code_dir</span> <span class="o">=</span> <span class="nc">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">).</span><span class="nf">resolve</span><span class="p">().</span><span class="n">parent</span>
+<span class="n">rootdir</span> <span class="o">=</span> <span class="n">code_dir</span><span class="p">.</span><span class="n">parent</span>
+<span class="c1"># Example
+</span><span class="n">datadir</span>   <span class="o">=</span> <span class="n">rootdir</span> <span class="o">/</span> <span class="sh">"</span><span class="s">data</span><span class="sh">"</span> <span class="o">/</span> <span class="sh">"</span><span class="s">raw</span><span class="sh">"</span>
+<span class="n">outputdir</span> <span class="o">=</span> <span class="n">rootdir</span> <span class="o">/</span> <span class="sh">"</span><span class="s">data</span><span class="sh">"</span> <span class="o">/</span> <span class="sh">"</span><span class="s">clean</span><span class="sh">"</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>IMPORTANT: your code MUST contain the line (Stata) <code class="language-plaintext highlighter-rouge">global rootdir : pwd</code> (or equivalent) to set the project root directory dynamically.</p>
+</blockquote>
+
+<h2 id="creating-directories-programmatically">Creating directories programmatically</h2>
+
+<p>If your code uses directories that may start out empty, or may not exist on the replicators’ computers, you must create them programmatically.</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">cap</span><span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="s2">"$outputdir"</span>
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dir.create</span><span class="p">(</span><span class="n">outputdir</span><span class="p">,</span><span class="w"> </span><span class="n">showWarnings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">recursive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">outputdir</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><a href="preparing-replication-package-step2"><img src="/images/next-button-step2.png" alt="Next: Step 2" /></a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Step+1%3A+Main+file%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step1" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step1" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/preparing-replication-package-step1.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

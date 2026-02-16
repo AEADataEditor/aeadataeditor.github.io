@@ -1,0 +1,610 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Step 5: Testing in containers - Office of the AEA Data Editor</title>
+<meta name="description" content="◀ Back to Checklist       Back to Details       ◀ Previous: Step 4           After you have made all the above changes, you should test your code in an appropriate authorized container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.  Using the SIVACOR website  We have developed the SIVACOR service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO).     In fact, we will run your code using this same system to verify compliance with all of the above steps!     For more information on how to use SIVACOR, see https://docs.sivacor.org/. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.  Authorized containers  SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at https://docs.sivacor.org/docs/images/. In general, Stata, R, and MATLAB (with Dynare) are supported.  If you know of a different container that we should add to this list, please let us know. The AEA Data Editor’s Github profile has a few other containers that have worked..  Testing using Docker locally (advanced)  If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody’s needs.     ⚠️❗ IMPORTANT: If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight to the alternative approach.      ⚠️❗ IMPORTANT: Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a Dockerfile or apptainer.def file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known “standard” sources, such as “Docker Official Images” in the Dockerhub library space (e.g., https://hub.docker.com/_/python).   Steps     Install the software necessary for running containers.            For Windows, install Docker Desktop for Windows.       For Mac, install Docker Desktop for Mac or OrbStack.       For Linux, install Docker engine,  Podman, or use Apptainer. These can all also be installed on Windows under Windows Subsystem for Linux (WSL).           All example commands below are from a Bash or Zsh terminal, which are standard on Mac and Linux, as well as on Windows if using WSL. If you do not have WSL on Windows and are using the Powershell, the same principles apply, but the syntax may be different.      When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary.      Run the container, mounting your project directory into the container. For example, if your project is in /my/computer/users/me/project, you would use a command such as this (example for Stata):   Preliminaries  (may need some adjustment, depending on your license)  VERSION=18_5 TAG=2025-02-26 MYHUBID=dataeditors MYIMG=stata${VERSION} CONTAINER=$MYHUBID/${MYIMG}-${TYPE}:${TAG} TYPE=mp STATALIC=/path/to/your/stata/stata.lic   Explanations:     VERSION: This is the Stata version. StataNow is referenced with a _5 suffix, otherwise, this corresponds to your (major) Stata version number.   TAG: This is the date the container was built, in YYYY-MM-DD format. Recent Stata containers do not (on purpose) have a latest tag, but older ones (that are no longer maintained) do, and can replace the date with latest.   CONTAINER:  is the fully qualified name of the container to be used. It is built from various components. For Stata images, these are maintained by dataeditors on Dockerhub. All available Stata containers and tags can be viewed on https://hub.docker.com/u/dataeditors. The precise way to call the container may depend on the version. For instance, for versions prior to 18, the -${TYPE} suffix is not used.   STATALIC: Is the path (in the notation used by the terminal you are using) to your Stata license file stata.lic. You need to have a valid Stata license file for the version of Stata you are using.      If you have only an older license, or a non-MP license, you may need to replace VERSION, TAG, and TYPE accordingly. For instance, if you have a Stata 16 SE license, you would set VERSION=16, TAG=2023-06-13, and TYPE=se, and remove -${TYPE} from the CONTAINER definition.   Test the container  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --entrypoint stata-${TYPE} \   ${CONTAINER}   You should see the usual Stata prompt. Type exit to leave Stata.  Run the container  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --volume $(pwd):/project \   --workdir /project \   --entrypoint stata-${TYPE} \   ${CONTAINER} -b main.do   if using a Scenario B setup. If using a Scenario A setup, use  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --volume $(pwd):/project \   --workdir /project/code \   --entrypoint stata-${TYPE} \   ${CONTAINER} -b main.do   Fallback: Run on a different computer  If you do not have, or cannot, install Docker, and you cannot use SIVACOR, use this alternative approach to test your code:     Download your entire replication package from the draft openICPSR deposit, onto a different computer where you have not previously run the code.   Run the code from that new location.            For Stata, close all Stata windows, and then double-click on the main.do file. This should generate a main.log file in the same directory as main.do.                    For R, from a terminal or the RStudio Terminal tab, type R CMD BATCH main.R, or if using renv, R --no-save --no-restore -f main.R &gt; main.Rout.1  This should generate a main.Rout file in the same directory as main.R.                           We note that in our experience, this approach is much less reliable.  Success  If your code does run into problems, the generated main.log or main.Rout should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.  If your code runs without error, and produces all expected output files, you are done!  Finalize README     Reference: https://social-science-data-editors.github.io/template_README/template-README.html   This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above.     Software: If you used a container, specify which container you used (name and tag, e.g., dataeditors/stata18_5-mp:2025-02-26). Be precise when describing the StataMP version - the number of cores matters! (StataMP-4 may not behave the same way as StataMP-8.)   Hardware: Verify that the description of your computer (CPU, number of cores, RAM, disk space) is accurate.   Run time: Provide an estimate of the expected run time, however trivial it might be. It matters to the replicator!   Examples:  - OS: &quot;openSUSE Leap 15.6&quot; - Processor:  13th Gen Intel(R) Core(TM) i7-1365U, 12 cores - Memory available: 30GB memory - Docker version 28.4.0-ce, build 249d679a6 - stata version 18-mp-i (Docker image dataeditors/stata18-mp-i:2024-12-18) (born date: &quot;18 Dec 2024&quot;) with 32 core license  Code ran for about 35 hours.   - OS: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB - Stata/MP4 19.5 (&quot;21 May 2025&quot;) - MATLAB R2025a  Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.   Submitting  You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated main.log/main.Rout as evidence.  Problems?  If you run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.    ◀ Back to Checklist                In PowerShell, you can use R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout. &#8617;">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Step 5: Testing in containers">
+<meta property="og:url" content="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step5">
+
+
+  <meta property="og:description" content="◀ Back to Checklist       Back to Details       ◀ Previous: Step 4           After you have made all the above changes, you should test your code in an appropriate authorized container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.  Using the SIVACOR website  We have developed the SIVACOR service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO).     In fact, we will run your code using this same system to verify compliance with all of the above steps!     For more information on how to use SIVACOR, see https://docs.sivacor.org/. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.  Authorized containers  SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at https://docs.sivacor.org/docs/images/. In general, Stata, R, and MATLAB (with Dynare) are supported.  If you know of a different container that we should add to this list, please let us know. The AEA Data Editor’s Github profile has a few other containers that have worked..  Testing using Docker locally (advanced)  If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody’s needs.     ⚠️❗ IMPORTANT: If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight to the alternative approach.      ⚠️❗ IMPORTANT: Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a Dockerfile or apptainer.def file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known “standard” sources, such as “Docker Official Images” in the Dockerhub library space (e.g., https://hub.docker.com/_/python).   Steps     Install the software necessary for running containers.            For Windows, install Docker Desktop for Windows.       For Mac, install Docker Desktop for Mac or OrbStack.       For Linux, install Docker engine,  Podman, or use Apptainer. These can all also be installed on Windows under Windows Subsystem for Linux (WSL).           All example commands below are from a Bash or Zsh terminal, which are standard on Mac and Linux, as well as on Windows if using WSL. If you do not have WSL on Windows and are using the Powershell, the same principles apply, but the syntax may be different.      When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary.      Run the container, mounting your project directory into the container. For example, if your project is in /my/computer/users/me/project, you would use a command such as this (example for Stata):   Preliminaries  (may need some adjustment, depending on your license)  VERSION=18_5 TAG=2025-02-26 MYHUBID=dataeditors MYIMG=stata${VERSION} CONTAINER=$MYHUBID/${MYIMG}-${TYPE}:${TAG} TYPE=mp STATALIC=/path/to/your/stata/stata.lic   Explanations:     VERSION: This is the Stata version. StataNow is referenced with a _5 suffix, otherwise, this corresponds to your (major) Stata version number.   TAG: This is the date the container was built, in YYYY-MM-DD format. Recent Stata containers do not (on purpose) have a latest tag, but older ones (that are no longer maintained) do, and can replace the date with latest.   CONTAINER:  is the fully qualified name of the container to be used. It is built from various components. For Stata images, these are maintained by dataeditors on Dockerhub. All available Stata containers and tags can be viewed on https://hub.docker.com/u/dataeditors. The precise way to call the container may depend on the version. For instance, for versions prior to 18, the -${TYPE} suffix is not used.   STATALIC: Is the path (in the notation used by the terminal you are using) to your Stata license file stata.lic. You need to have a valid Stata license file for the version of Stata you are using.      If you have only an older license, or a non-MP license, you may need to replace VERSION, TAG, and TYPE accordingly. For instance, if you have a Stata 16 SE license, you would set VERSION=16, TAG=2023-06-13, and TYPE=se, and remove -${TYPE} from the CONTAINER definition.   Test the container  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --entrypoint stata-${TYPE} \   ${CONTAINER}   You should see the usual Stata prompt. Type exit to leave Stata.  Run the container  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --volume $(pwd):/project \   --workdir /project \   --entrypoint stata-${TYPE} \   ${CONTAINER} -b main.do   if using a Scenario B setup. If using a Scenario A setup, use  docker run -it --rm \   --volume ${STATALIC}:/usr/local/stata/stata.lic \   --volume $(pwd):/project \   --workdir /project/code \   --entrypoint stata-${TYPE} \   ${CONTAINER} -b main.do   Fallback: Run on a different computer  If you do not have, or cannot, install Docker, and you cannot use SIVACOR, use this alternative approach to test your code:     Download your entire replication package from the draft openICPSR deposit, onto a different computer where you have not previously run the code.   Run the code from that new location.            For Stata, close all Stata windows, and then double-click on the main.do file. This should generate a main.log file in the same directory as main.do.                    For R, from a terminal or the RStudio Terminal tab, type R CMD BATCH main.R, or if using renv, R --no-save --no-restore -f main.R &gt; main.Rout.1  This should generate a main.Rout file in the same directory as main.R.                           We note that in our experience, this approach is much less reliable.  Success  If your code does run into problems, the generated main.log or main.Rout should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.  If your code runs without error, and produces all expected output files, you are done!  Finalize README     Reference: https://social-science-data-editors.github.io/template_README/template-README.html   This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above.     Software: If you used a container, specify which container you used (name and tag, e.g., dataeditors/stata18_5-mp:2025-02-26). Be precise when describing the StataMP version - the number of cores matters! (StataMP-4 may not behave the same way as StataMP-8.)   Hardware: Verify that the description of your computer (CPU, number of cores, RAM, disk space) is accurate.   Run time: Provide an estimate of the expected run time, however trivial it might be. It matters to the replicator!   Examples:  - OS: &quot;openSUSE Leap 15.6&quot; - Processor:  13th Gen Intel(R) Core(TM) i7-1365U, 12 cores - Memory available: 30GB memory - Docker version 28.4.0-ce, build 249d679a6 - stata version 18-mp-i (Docker image dataeditors/stata18-mp-i:2024-12-18) (born date: &quot;18 Dec 2024&quot;) with 32 core license  Code ran for about 35 hours.   - OS: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB - Stata/MP4 19.5 (&quot;21 May 2025&quot;) - MATLAB R2025a  Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.   Submitting  You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated main.log/main.Rout as evidence.  Problems?  If you run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.    ◀ Back to Checklist                In PowerShell, you can use R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout. &#8617;">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-16T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package-step5">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Step 5: Testing in containers">
+    <meta itemprop="description" content="            ◀ Back to Checklist      Back to Details      ◀ Previous: Step 4      After you have made all the above changes, you should test your code in an appropriate authorized container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.Using the SIVACOR websiteWe have developed the SIVACOR service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO).  In fact, we will run your code using this same system to verify compliance with all of the above steps!For more information on how to use SIVACOR, see https://docs.sivacor.org/. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.Authorized containersSIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at https://docs.sivacor.org/docs/images/. In general, Stata, R, and MATLAB (with Dynare) are supported.If you know of a different container that we should add to this list, please let us know. The AEA Data Editor’s Github profile has a few other containers that have worked..Testing using Docker locally (advanced)If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody’s needs.  ⚠️❗ IMPORTANT: If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight to the alternative approach.  ⚠️❗ IMPORTANT: Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a Dockerfile or apptainer.def file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known “standard” sources, such as “Docker Official Images” in the Dockerhub library space (e.g., https://hub.docker.com/_/python).Steps  Install the software necessary for running containers.          For Windows, install Docker Desktop for Windows.      For Mac, install Docker Desktop for Mac or OrbStack.      For Linux, install Docker engine,  Podman, or use Apptainer. These can all also be installed on Windows under Windows Subsystem for Linux (WSL).        All example commands below are from a Bash or Zsh terminal, which are standard on Mac and Linux, as well as on Windows if using WSL. If you do not have WSL on Windows and are using the Powershell, the same principles apply, but the syntax may be different.  When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary.  Run the container, mounting your project directory into the container. For example, if your project is in /my/computer/users/me/project, you would use a command such as this (example for Stata):Preliminaries(may need some adjustment, depending on your license)VERSION=18_5TAG=2025-02-26MYHUBID=dataeditorsMYIMG=stata${VERSION}CONTAINER=$MYHUBID/${MYIMG}-${TYPE}:${TAG}TYPE=mpSTATALIC=/path/to/your/stata/stata.licExplanations:  VERSION: This is the Stata version. StataNow is referenced with a _5 suffix, otherwise, this corresponds to your (major) Stata version number.  TAG: This is the date the container was built, in YYYY-MM-DD format. Recent Stata containers do not (on purpose) have a latest tag, but older ones (that are no longer maintained) do, and can replace the date with latest.  CONTAINER:  is the fully qualified name of the container to be used. It is built from various components. For Stata images, these are maintained by dataeditors on Dockerhub. All available Stata containers and tags can be viewed on https://hub.docker.com/u/dataeditors. The precise way to call the container may depend on the version. For instance, for versions prior to 18, the -${TYPE} suffix is not used.  STATALIC: Is the path (in the notation used by the terminal you are using) to your Stata license file stata.lic. You need to have a valid Stata license file for the version of Stata you are using.  If you have only an older license, or a non-MP license, you may need to replace VERSION, TAG, and TYPE accordingly. For instance, if you have a Stata 16 SE license, you would set VERSION=16, TAG=2023-06-13, and TYPE=se, and remove -${TYPE} from the CONTAINER definition.Test the containerdocker run -it --rm \  --volume ${STATALIC}:/usr/local/stata/stata.lic \  --entrypoint stata-${TYPE} \  ${CONTAINER}You should see the usual Stata prompt. Type exit to leave Stata.Run the containerdocker run -it --rm \  --volume ${STATALIC}:/usr/local/stata/stata.lic \  --volume $(pwd):/project \  --workdir /project \  --entrypoint stata-${TYPE} \  ${CONTAINER} -b main.doif using a Scenario B setup. If using a Scenario A setup, usedocker run -it --rm \  --volume ${STATALIC}:/usr/local/stata/stata.lic \  --volume $(pwd):/project \  --workdir /project/code \  --entrypoint stata-${TYPE} \  ${CONTAINER} -b main.doFallback: Run on a different computerIf you do not have, or cannot, install Docker, and you cannot use SIVACOR, use this alternative approach to test your code:  Download your entire replication package from the draft openICPSR deposit, onto a different computer where you have not previously run the code.  Run the code from that new location.          For Stata, close all Stata windows, and then double-click on the main.do file. This should generate a main.log file in the same directory as main.do.                  For R, from a terminal or the RStudio Terminal tab, type R CMD BATCH main.R, or if using renv, R --no-save --no-restore -f main.R &gt; main.Rout.1  This should generate a main.Rout file in the same directory as main.R.                    We note that in our experience, this approach is much less reliable.SuccessIf your code does run into problems, the generated main.log or main.Rout should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.If your code runs without error, and produces all expected output files, you are done!Finalize README  Reference: https://social-science-data-editors.github.io/template_README/template-README.htmlThis step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above.  Software: If you used a container, specify which container you used (name and tag, e.g., dataeditors/stata18_5-mp:2025-02-26). Be precise when describing the StataMP version - the number of cores matters! (StataMP-4 may not behave the same way as StataMP-8.)  Hardware: Verify that the description of your computer (CPU, number of cores, RAM, disk space) is accurate.  Run time: Provide an estimate of the expected run time, however trivial it might be. It matters to the replicator!Examples:- OS: &quot;openSUSE Leap 15.6&quot;- Processor:  13th Gen Intel(R) Core(TM) i7-1365U, 12 cores- Memory available: 30GB memory- Docker version 28.4.0-ce, build 249d679a6- stata version 18-mp-i (Docker image dataeditors/stata18-mp-i:2024-12-18) (born date: &quot;18 Dec 2024&quot;) with 32 core licenseCode ran for about 35 hours.- OS: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB- Stata/MP4 19.5 (&quot;21 May 2025&quot;)- MATLAB R2025aCode runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.SubmittingYou can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated main.log/main.Rout as evidence.Problems?If you run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.◀ Back to Checklist            In PowerShell, you can use R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout. &#8617;      ">
+    <meta itemprop="datePublished" content="2026-02-16T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Step 5: Testing in containers
+</h1>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#using-the-sivacor-website">Using the SIVACOR website</a></li><li><a href="#authorized-containers">Authorized containers</a></li><li><a href="#testing-using-docker-locally-advanced">Testing using Docker locally (advanced)</a><ul><li><a href="#steps">Steps</a></li><li><a href="#preliminaries">Preliminaries</a></li><li><a href="#test-the-container">Test the container</a></li><li><a href="#run-the-container">Run the container</a></li></ul></li><li><a href="#fallback-run-on-a-different-computer">Fallback: Run on a different computer</a></li><li><a href="#success">Success</a></li><li><a href="#finalize-readme">Finalize README</a></li><li><a href="#submitting">Submitting</a></li><li><a href="#problems">Problems?</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        
+
+      
+        <table>
+  <tbody>
+    <tr>
+      <td><a href="preparing-replication-package">◀ Back to Checklist</a></td>
+      <td><a href="preparing-replication-package-details">Back to Details</a></td>
+      <td><a href="preparing-replication-package-step4">◀ Previous: Step 4</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>After you have made all the above changes, you should test your code in an appropriate <strong>authorized</strong> container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.</p>
+
+<h2 id="using-the-sivacor-website">Using the SIVACOR website</h2>
+
+<p>We have developed the <a href="https://sivacor.org">SIVACOR</a> service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO).</p>
+
+<blockquote>
+  <p>In fact, we will run your code using this same system to verify compliance with all of the above steps!</p>
+</blockquote>
+
+<p><a href="https://sivacor.org"><img src="/images/sivacor-login.png" alt="SIVACOR landing page" /></a></p>
+
+<p>For more information on how to use SIVACOR, see <a href="https://docs.sivacor.org/">https://docs.sivacor.org/</a>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.</p>
+
+<h2 id="authorized-containers">Authorized containers</h2>
+
+<p>SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at <a href="https://docs.sivacor.org/docs/images/">https://docs.sivacor.org/docs/images/</a>. In general, Stata, R, and MATLAB (with Dynare) are supported.</p>
+
+<p>If you know of a different container that we should add to this list, please let us know. The <a href="https://github.com/AEADataEditor/">AEA Data Editor’s Github profile</a> has a few other containers that have worked..</p>
+
+<h2 id="testing-using-docker-locally-advanced">Testing using Docker locally (advanced)</h2>
+
+<p>If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody’s needs.</p>
+
+<blockquote>
+  <p>⚠️❗ <strong>IMPORTANT:</strong> If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight <a href="#alternative-approach">to the alternative approach</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>⚠️❗ <strong>IMPORTANT:</strong> Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a <code class="language-plaintext highlighter-rouge">Dockerfile</code> or <code class="language-plaintext highlighter-rouge">apptainer.def</code> file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known “standard” sources, such as “Docker Official Images” in the Dockerhub <code class="language-plaintext highlighter-rouge">library</code> space (e.g., <a href="https://hub.docker.com/_/python">https://hub.docker.com/_/python</a>).</p>
+</blockquote>
+
+<h3 id="steps">Steps</h3>
+
+<ul>
+  <li>Install the software necessary for running containers.
+    <ul>
+      <li>For Windows, install <a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop for Windows</a>.</li>
+      <li>For Mac, install <a href="https://docs.docker.com/desktop/install/mac-install/">Docker Desktop for Mac</a> or <a href="https://orbstack.dev">OrbStack</a>.</li>
+      <li>For Linux, install Docker engine,  <a href="https://podman.io/getting-started/installation">Podman</a>, or use <a href="https://apptainer.org/">Apptainer</a>. These can all also be installed on Windows under Windows Subsystem for Linux (WSL).</li>
+    </ul>
+  </li>
+  <li>All example commands below are from a Bash or Zsh terminal, which are standard on Mac and Linux, as well as on Windows if using WSL. If you do not have WSL on Windows and are using the Powershell, the same principles apply, but the syntax may be different.</li>
+</ul>
+
+<blockquote>
+  <p>When code has been adjusted as in Steps 1-4, no complex adjustment of containers is necessary.</p>
+</blockquote>
+
+<ul>
+  <li>Run the container, mounting your project directory into the container. For example, if your project is in <code class="language-plaintext highlighter-rouge">/my/computer/users/me/project</code>, you would use a command such as this (example for Stata):</li>
+</ul>
+
+<h3 id="preliminaries">Preliminaries</h3>
+
+<p>(may need some adjustment, depending on your license)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">VERSION</span><span class="o">=</span>18_5
+<span class="nv">TAG</span><span class="o">=</span>2025-02-26
+<span class="nv">MYHUBID</span><span class="o">=</span>dataeditors
+<span class="nv">MYIMG</span><span class="o">=</span>stata<span class="k">${</span><span class="nv">VERSION</span><span class="k">}</span>
+<span class="nv">CONTAINER</span><span class="o">=</span><span class="nv">$MYHUBID</span>/<span class="k">${</span><span class="nv">MYIMG</span><span class="k">}</span>-<span class="k">${</span><span class="nv">TYPE</span><span class="k">}</span>:<span class="k">${</span><span class="nv">TAG</span><span class="k">}</span>
+<span class="nv">TYPE</span><span class="o">=</span>mp
+<span class="nv">STATALIC</span><span class="o">=</span>/path/to/your/stata/stata.lic
+</code></pre></div></div>
+
+<p>Explanations:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">VERSION</code>: This is the Stata version. StataNow is referenced with a <code class="language-plaintext highlighter-rouge">_5</code> suffix, otherwise, this corresponds to your (major) Stata version number.</li>
+  <li><code class="language-plaintext highlighter-rouge">TAG</code>: This is the date the container was built, in <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> format. Recent Stata containers do not (on purpose) have a <code class="language-plaintext highlighter-rouge">latest</code> tag, but older ones (that are no longer maintained) do, and can replace the date with <code class="language-plaintext highlighter-rouge">latest</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">CONTAINER</code>:  is the fully qualified name of the container to be used. It is built from various components. For Stata images, these are maintained by <code class="language-plaintext highlighter-rouge">dataeditors</code> on Dockerhub. All available Stata containers and tags can be viewed on <a href="https://hub.docker.com/u/dataeditors">https://hub.docker.com/u/dataeditors</a>. The precise way to call the container may depend on the version. For instance, for versions prior to <code class="language-plaintext highlighter-rouge">18</code>, the <code class="language-plaintext highlighter-rouge">-${TYPE}</code> suffix is not used.</li>
+  <li><code class="language-plaintext highlighter-rouge">STATALIC</code>: Is the path (in the notation used by the terminal you are using) to your Stata license file <code class="language-plaintext highlighter-rouge">stata.lic</code>. You need to have a valid Stata license file for the version of Stata you are using.</li>
+</ul>
+
+<blockquote>
+  <p>If you have only an older license, or a non-MP license, you may need to replace <code class="language-plaintext highlighter-rouge">VERSION</code>, <code class="language-plaintext highlighter-rouge">TAG</code>, and <code class="language-plaintext highlighter-rouge">TYPE</code> accordingly. For instance, if you have a Stata 16 SE license, you would set <code class="language-plaintext highlighter-rouge">VERSION=16</code>, <code class="language-plaintext highlighter-rouge">TAG=2023-06-13</code>, and <code class="language-plaintext highlighter-rouge">TYPE=se</code>, and remove <code class="language-plaintext highlighter-rouge">-${TYPE}</code> from the <code class="language-plaintext highlighter-rouge">CONTAINER</code> definition.</p>
+</blockquote>
+
+<h3 id="test-the-container">Test the container</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
+  <span class="nt">--volume</span> <span class="k">${</span><span class="nv">STATALIC</span><span class="k">}</span>:/usr/local/stata/stata.lic <span class="se">\</span>
+  <span class="nt">--entrypoint</span> stata-<span class="k">${</span><span class="nv">TYPE</span><span class="k">}</span> <span class="se">\</span>
+  <span class="k">${</span><span class="nv">CONTAINER</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p>You should see the usual Stata prompt. Type <code class="language-plaintext highlighter-rouge">exit</code> to leave Stata.</p>
+
+<h3 id="run-the-container">Run the container</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
+  <span class="nt">--volume</span> <span class="k">${</span><span class="nv">STATALIC</span><span class="k">}</span>:/usr/local/stata/stata.lic <span class="se">\</span>
+  <span class="nt">--volume</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/project <span class="se">\</span>
+  <span class="nt">--workdir</span> /project <span class="se">\</span>
+  <span class="nt">--entrypoint</span> stata-<span class="k">${</span><span class="nv">TYPE</span><span class="k">}</span> <span class="se">\</span>
+  <span class="k">${</span><span class="nv">CONTAINER</span><span class="k">}</span> <span class="nt">-b</span> main.do
+</code></pre></div></div>
+
+<p>if using a <strong>Scenario B</strong> setup. If using a <strong>Scenario A</strong> setup, use</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
+  <span class="nt">--volume</span> <span class="k">${</span><span class="nv">STATALIC</span><span class="k">}</span>:/usr/local/stata/stata.lic <span class="se">\</span>
+  <span class="nt">--volume</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/project <span class="se">\</span>
+  <span class="nt">--workdir</span> /project/code <span class="se">\</span>
+  <span class="nt">--entrypoint</span> stata-<span class="k">${</span><span class="nv">TYPE</span><span class="k">}</span> <span class="se">\</span>
+  <span class="k">${</span><span class="nv">CONTAINER</span><span class="k">}</span> <span class="nt">-b</span> main.do
+</code></pre></div></div>
+
+<h2 id="fallback-run-on-a-different-computer">Fallback: Run on a different computer</h2>
+
+<p>If you do not have, or cannot, install Docker, and you cannot use SIVACOR, use this alternative approach to test your code:</p>
+
+<ul>
+  <li>Download your entire replication package from the draft openICPSR deposit, onto a <strong>different computer</strong> where you have not previously run the code.</li>
+  <li>Run the code from that new location.
+    <ul>
+      <li>For Stata, close all Stata windows, and then double-click on the <code class="language-plaintext highlighter-rouge">main.do</code> file. This should generate a <code class="language-plaintext highlighter-rouge">main.log</code> file in the same directory as <code class="language-plaintext highlighter-rouge">main.do</code>.
+        <ul>
+          <li>For R, from a terminal or the RStudio <strong>Terminal</strong> tab, type <code class="language-plaintext highlighter-rouge">R CMD BATCH main.R</code>, or if using <code class="language-plaintext highlighter-rouge">renv</code>, <code class="language-plaintext highlighter-rouge">R --no-save --no-restore -f main.R &gt; main.Rout</code>.<sup id="fnref:noteshell"><a href="#fn:noteshell" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>  This should generate a <code class="language-plaintext highlighter-rouge">main.Rout</code> file in the same directory as <code class="language-plaintext highlighter-rouge">main.R</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>We note that in our experience, this approach is much less reliable.</p>
+
+<h2 id="success">Success</h2>
+
+<p>If your code does run into problems, the generated <code class="language-plaintext highlighter-rouge">main.log</code> or <code class="language-plaintext highlighter-rouge">main.Rout</code> should have clues as to what went wrong. You should be able to fix these issues, and re-run the code in the container, until it runs without error.</p>
+
+<p>If your code runs without error, and produces all expected output files, you are done!</p>
+
+<h2 id="finalize-readme">Finalize README</h2>
+
+<blockquote>
+  <p>Reference: <a href="https://social-science-data-editors.github.io/template_README/template-README.html">https://social-science-data-editors.github.io/template_README/template-README.html</a></p>
+</blockquote>
+
+<p>This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above.</p>
+
+<ul>
+  <li><a href="https://social-science-data-editors.github.io/template_README/template-README.html#software-requirements"><strong>Software</strong>:</a> If you used a container, specify which container you used (name and tag, e.g., <code class="language-plaintext highlighter-rouge">dataeditors/stata18_5-mp:2025-02-26</code>). Be precise when describing the StataMP version - the number of cores matters! (<code class="language-plaintext highlighter-rouge">StataMP-4</code> may not behave the same way as <code class="language-plaintext highlighter-rouge">StataMP-8</code>.)</li>
+  <li><a href="https://social-science-data-editors.github.io/template_README/template-README.html#memory-runtime-storage-requirements"><strong>Hardware</strong>:</a> Verify that the description of your computer (CPU, number of cores, RAM, disk space) is accurate.</li>
+  <li><a href="https://social-science-data-editors.github.io/template_README/template-README.html#memory-runtime-storage-requirements"><strong>Run time</strong>:</a> Provide an estimate of the expected run time, however trivial it might be. It matters to the replicator!</li>
+</ul>
+
+<p><strong>Examples:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- OS: "openSUSE Leap 15.6"
+- Processor:  13th Gen Intel(R) Core(TM) i7-1365U, 12 cores
+- Memory available: 30GB memory
+- Docker version 28.4.0-ce, build 249d679a6
+- stata version 18-mp-i (Docker image dataeditors/stata18-mp-i:2024-12-18) (born date: "18 Dec 2024") with 32 core license
+
+Code ran for about 35 hours.
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- OS: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
+- Stata/MP4 19.5 ("21 May 2025")
+- MATLAB R2025a
+
+Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.
+</code></pre></div></div>
+
+<h2 id="submitting">Submitting</h2>
+
+<p>You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated <code class="language-plaintext highlighter-rouge">main.log</code>/<code class="language-plaintext highlighter-rouge">main.Rout</code> as evidence.</p>
+
+<h2 id="problems">Problems?</h2>
+
+<p>If you run into problems in Step 5, no worries, simply submit all the files as modified in Steps 1-4, along with the completed checklist, and we will handle the remaining issues.</p>
+
+<hr />
+
+<p><a href="preparing-replication-package">◀ Back to Checklist</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:noteshell">
+      <p>In PowerShell, you can use <code class="language-plaintext highlighter-rouge">R --no-save --no-restore -f main.R | Out-File -Encoding UTF8 main.Rout</code>. <a href="#fnref:noteshell" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-02-16T00:00:00-05:00">February 16, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Step+5%3A+Testing+in+containers%20https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step5" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Faea-de-guidance%2Fpreparing-replication-package-step5" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_guidance/preparing-replication-package-step5.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
