@@ -131,6 +131,12 @@ var store = [{
         "url": "/aea-de-guidance/preparing-replication-package",
         "teaser": null
       },{
+        "title": "Finalize README",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 5 Finalize README Reference: https://social-science-data-editors.github.io/template_README/template-README.html This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above. Software: If you...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-finalize",
+        "teaser": null
+      },{
         "title": "Step 1: Main file",
         "excerpt":"◀ Back to Checklist Back to Details You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main...","categories": [],
         "tags": [],
