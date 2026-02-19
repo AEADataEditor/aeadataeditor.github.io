@@ -365,6 +365,12 @@ var store = [{
         "url": "/posts/2025-08-18-dropbox-etc",
         "teaser": null
       },{
+        "title": "Preparing Replication Packages for 2026 AEA Papers and Proceedings",
+        "excerpt":"For authors preparing the replication packages that accompany their 2026 AEA Papers and Proceedings publication www.aeaweb.org/journals/pandp: Here are some notes on preparing your replication package. Much of the preparation for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 for basic preparation...","categories": [],
+        "tags": ["data editor tips","replication packages","Papers and Proceedings","compliance"],
+        "url": "/posts/2026-01-19-preparing-pandp-replication-packages",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
