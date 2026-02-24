@@ -33,34 +33,16 @@ layout: default
         {% if page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Last modified:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% if page.modified or page.mode or page.slides or page.recording or page.joint %}
+        <p class="page__meta">{% assign sep = "" %}
+          {% if page.modified %}{{ sep }}<i class="fa fa-fw fa-calendar" aria-hidden="true"></i><span class="sr-only">Last modified:</span> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% assign sep = " &middot; " %}{% endif %}
+          {% if page.mode %}{{ sep }}{% if page.mode == "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}<span class="sr-only">Mode:</span> {{ page.mode }}{% assign sep = " &middot; " %}{% endif %}
+          {% if page.slides %}{{ sep }}<i class="fa-solid fa-chalkboard" aria-hidden="true"></i><span class="sr-only">Slides:</span> <a href="{{ page.slides }}">Available</a>{% assign sep = " &middot; " %}{% endif %}
+          {% if page.recording %}{{ sep }}<i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="sr-only">Recording:</span> <a href="{{ page.recording }}">Available</a>{% assign sep = " &middot; " %}{% endif %}
+          {% if page.joint %}{{ sep }}<i class="fa fa-fw fa-users" aria-hidden="true"></i><span class="sr-only">Joint with:</span> {% for c in page.joint %}{{ c }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}
+        </p>
         {% endif %}
-        {% if page.mode %}
-          <p class="page__meta"><strong>
-            {% if page.mode == "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}
-            Mode:</strong> {{ page.mode }}
-          </p>
-        {% endif %}
-        {% if page.slides %}
-          <p class="page__meta"><strong>
-            <i class="fa-solid fa-chalkboard" aria-hidden="true"></i>
-            Slides:</strong> <a href="{{ page.slides }}" alt="Slides">Available</a>
-          </p>
-        {% endif %}
-        {% if page.recording %}
-          <p class="page__meta"><strong>
-            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-            Recording:</strong> <a href="{{ page.recording }}" alt="Video recording">Available</a>
-          </p>
-        {% endif %}
-        {% if page.joint %}
-          <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i> Joint with </strong> 
-            {% for c in page.joint %}
-            {{ c }}{% if forloop.last == false %},{% endif %}
-          {% endfor %}</p>
-        {% endif %}
-        
+
 
         <!-- {% if page.type %} -->
           <p>{{page.type}} 
