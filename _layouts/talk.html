@@ -42,6 +42,18 @@ layout: default
             Mode:</strong> {{ page.mode }}
           </p>
         {% endif %}
+        {% if page.slides %}
+          <p class="page__meta"><strong>
+            <i class="fa-solid fa-chalkboard" aria-hidden="true"></i>
+            Slides:</strong> <a href="{{ page.slides }}" alt="Slides">Available</a>
+          </p>
+        {% endif %}
+        {% if page.recording %}
+          <p class="page__meta"><strong>
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            Recording:</strong> <a href="{{ page.recording }}" alt="Video recording">Available</a>
+          </p>
+        {% endif %}
         {% if page.joint %}
           <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i>Joint with </strong> 
             {% for c in page.joint %}
