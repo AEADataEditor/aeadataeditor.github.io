@@ -870,7 +870,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Reproducibility in Economics: Why and how",
-        "excerpt":" ","categories": [],
+        "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
         "tags": [],
         "url": "/talks/2025-02-27-qicss",
         "teaser": null
@@ -948,7 +948,7 @@ var store = [{
         "teaser": null
       },{
         "title": "La reproductibilité en économie pourquoi et comment",
-        "excerpt":"Presentation slides   Marie Connolly is Data Editor for the Canadian Journal of Economics. The session was jointly sponsored by the AEA and the Econometric Society.  ","categories": [],
+        "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
         "tags": [],
         "url": "/talks/2026-02-12-ciqss",
         "teaser": null
