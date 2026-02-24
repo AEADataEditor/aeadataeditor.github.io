@@ -33,15 +33,14 @@ layout: default
         {% if page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.modified or page.mode or page.slides or page.recording or page.joint %}
         <p class="page__meta">{% assign sep = "" %}
           {% if page.modified %}{{ sep }}<i class="fa fa-fw fa-calendar" aria-hidden="true"></i><span class="sr-only">Last modified:</span> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% assign sep = " &middot; " %}{% endif %}
           {% if page.mode %}{{ sep }}{% if page.mode == "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}<span class="sr-only">Mode:</span> {{ page.mode }}{% assign sep = " &middot; " %}{% endif %}
+          {% if page.language %}{% assign talk_languages = page.language %}{% else %}{% assign talk_languages = "en-us" | split: "," %}{% endif %}{{ sep }}<i class="fa-solid fa-language" aria-hidden="true"></i><span class="sr-only">Language:</span> {% for lang in talk_languages %}{% assign lang_trimmed = lang | strip %}{% if lang_trimmed == "en" or lang_trimmed == "en-us" %}<span role="img" aria-label="English (US)">🇺🇸</span>{% elsif lang_trimmed == "fr" %}<span role="img" aria-label="French">🇫🇷</span>{% elsif lang_trimmed == "es" %}<span role="img" aria-label="Spanish">🇪🇸</span>{% elsif lang_trimmed == "de" %}<span role="img" aria-label="German">🇩🇪</span>{% elsif lang_trimmed == "pt" %}<span role="img" aria-label="Portuguese">🇵🇹</span>{% else %}<span>{{ lang_trimmed }}</span>{% endif %}{% endfor %}{% assign sep = " &middot; " %}
           {% if page.slides %}{{ sep }}<i class="fa-solid fa-chalkboard" aria-hidden="true"></i><span class="sr-only">Slides:</span> <a href="{{ page.slides }}">Available</a>{% assign sep = " &middot; " %}{% endif %}
           {% if page.recording %}{{ sep }}<i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="sr-only">Recording:</span> <a href="{{ page.recording }}">Available</a>{% assign sep = " &middot; " %}{% endif %}
           {% if page.joint %}{{ sep }}<i class="fa fa-fw fa-users" aria-hidden="true"></i><span class="sr-only">Joint with:</span> {% for c in page.joint %}{{ c }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}
         </p>
-        {% endif %}
 
 
         <!-- {% if page.type %} -->
