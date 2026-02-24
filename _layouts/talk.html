@@ -38,7 +38,7 @@ layout: default
         {% endif %}
         {% if page.mode %}
           <p class="page__meta"><strong>
-            {% if page.mode = "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}
+            {% if page.mode == "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}
             Mode:</strong> {{ page.mode }}
           </p>
         {% endif %}
@@ -55,7 +55,7 @@ layout: default
           </p>
         {% endif %}
         {% if page.joint %}
-          <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i>Joint with </strong> 
+          <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i> Joint with </strong> 
             {% for c in page.joint %}
             {{ c }}{% if forloop.last == false %},{% endif %}
           {% endfor %}</p>
