@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-02-14
 location: "London, UK"
+mode: "In-Person"
 venue: "Workshop on Love Your Code (UKDS)"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3677115

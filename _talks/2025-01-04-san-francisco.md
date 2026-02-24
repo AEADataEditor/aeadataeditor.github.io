@@ -6,6 +6,7 @@ date: 2025-01-04
 joint: 
   - Marie Connolly
 location: "San Francisco, CA"
+mode: "In-Person"
 venue: "American Economic Association 2025 Annual Conference"
 mainurl: https://www.aeaweb.org/conference/2025/program/1295
 doi: 

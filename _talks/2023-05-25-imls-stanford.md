@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2023-05-25
 location: "Online"
+mode: "Online"
 venue: "IMLS National Forums on Data Quality"
 mainurl: https://sites.google.com/view/imls2022-data-quality/home
 doi: 10.5281/zenodo.7975298

@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-04-01
 location: "Online"
+mode: "Online"
 venue: "Cornell University Webinar together with BITSS"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3735536

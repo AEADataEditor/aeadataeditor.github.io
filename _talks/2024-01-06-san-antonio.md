@@ -6,6 +6,7 @@ date: 2024-01-06
 joint: 
   - Marie Connolly
 location: "San Antonio, Texas"
+mode: "In-Person"
 venue: "American Economic Association 2024 Annual Conference"
 mainurl: https://www.aeaweb.org/conference/2024/program/1444
 doi: 

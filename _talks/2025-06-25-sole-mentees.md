@@ -4,6 +4,7 @@ collection: talks
 type: "AMA"
 date: 2025-06-25
 location: "Online, by invitation"
+mode: "Online"
 venue: "SOLE Mentoring Program"
 mainurl: 
 doi: 

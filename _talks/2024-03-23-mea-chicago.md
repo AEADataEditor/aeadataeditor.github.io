@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2024-03-23
 location: "Chicago, Illinois"
+mode: "In-Person"
 venue: "Midwest Economics Association Annual Meetings 2024"
 mainurl: https://virtual.oxfordabstracts.com/#/event/4777/submission/415
 doi: 

@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-02-12
 location: "Paris, France"
+mode: "In-Person"
 venue: "HEC Paris"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3666011

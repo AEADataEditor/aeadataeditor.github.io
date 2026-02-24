@@ -4,6 +4,7 @@ collection: talks
 type: "AMA"
 date: 2024-04-04
 location: "Cambridge, MA"
+mode: "In-Person"
 venue: "Economics Department, MIT"
 mainurl: 
 doi: 

@@ -4,6 +4,7 @@ collection: talks
 type: "Webinar"
 date: 2024-11-07
 location: "online"
+mode: "Online"
 venue: "Leibniz Informationszentrum Wirtschaft (ZBW)"
 mainurl: https://openeconomics.zbw.eu/en/coffee-lectures-on-open-science-education/
 doi: 

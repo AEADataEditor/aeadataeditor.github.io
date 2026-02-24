@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-12-08
 location: "Online"
+mode: "Online"
 venue: "Brookings Institution"
 mainurl: https://github.com/labordynamicsinstitute/practices-presentation-2020
 doi: 10.5281/zenodo.4311917

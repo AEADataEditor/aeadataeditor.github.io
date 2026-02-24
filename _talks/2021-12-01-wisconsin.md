@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2021-12-01
 location: "Online, Madison, Wisconsin"
+mode: "Online"
 venue: "University of Wisconsin - Center for Demography of Health and Aging"
 mainurl: https://cdha.wisc.edu/training/
 doi: 10.5281/zenodo.5748311

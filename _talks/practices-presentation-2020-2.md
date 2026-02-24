@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-11-20
 location: "Online"
+mode: "Online"
 venue: "Beyond the Numbers (St. Louis Fed)"
 mainurl: https://github.com/labordynamicsinstitute/beyond-2020-presentation
 doi: 10.5281/zenodo.4281633

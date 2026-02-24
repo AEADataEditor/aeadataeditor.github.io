@@ -4,6 +4,7 @@ collection: talks
 type: "Panel"
 date: 2024-10-07
 location: "Vienna, Austria"
+mode: "In-Person"
 venue: "Wirtschaftsuniversität Wien"
 mainurl: https://bsky.app/profile/ariedamuco.bsky.social/post/3l4tun2kqsb2a
 doi: 

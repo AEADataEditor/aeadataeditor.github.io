@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-06-27
 location: "Online"
+mode: "Online"
 venue: "WEAI Virtual 95th Conference"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3911311

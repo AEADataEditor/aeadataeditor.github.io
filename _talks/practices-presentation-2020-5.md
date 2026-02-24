@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-09-24
 location: "Online"
+mode: "Online"
 venue: "RT2 2020"
 mainurl: https://github.com/labordynamicsinstitute/practices-presentation-2020
 doi: 10.5281/zenodo.4048572

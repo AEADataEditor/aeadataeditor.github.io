@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2022-12-19
 location: "Porto, Portugal"
+mode: "In-Person"
 venue: "Banco de Portugal Workshop on Reproducibility of Scientific Results"
 mainurl: https://github.com/BPLIM/Workshops/tree/master/BPLIM2022
 doi: 

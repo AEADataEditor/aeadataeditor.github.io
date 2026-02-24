@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2021-12-15
 location: "Online, Lisbon, Portugal"
+mode: "Online"
 venue: "Banco de Portugal Workshop on Reproducibility of Scientific Results"
 mainurl: https://github.com/BPLIM/Workshops/tree/master/BPLIM2021
 doi: 10.5281/zenodo.5786464

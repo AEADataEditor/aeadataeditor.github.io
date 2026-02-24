@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-03-20
 location: "Online"
+mode: "Online"
 venue: "TIER Spring 2020 Webcast Series"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3719355

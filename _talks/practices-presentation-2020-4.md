@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-10-09
 location: "Online"
+mode: "Online"
 venue: "Cornell Libraries"
 mainurl: https://github.com/labordynamicsinstitute/practices-presentation-2020
 doi: 10.5281/zenodo.4073995
