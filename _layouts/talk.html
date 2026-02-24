@@ -36,6 +36,12 @@ layout: default
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Last modified:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% endif %}
+        {% if page.mode %}
+          <p class="page__meta"><strong>
+            {% if page.mode = "Online" %}<i class="fa fa-brands fa-slideshare" aria-hidden="true"></i>{% else %}<i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>{% endif %}
+            Mode:</strong> {{ page.mode }}
+          </p>
+        {% endif %}
         {% if page.joint %}
           <p class="page__meta"><strong><i class="fa fa-fw fa-users" aria-hidden="true"></i>Joint with </strong> 
             {% for c in page.joint %}
