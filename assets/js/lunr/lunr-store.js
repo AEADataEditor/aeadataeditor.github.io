@@ -869,6 +869,12 @@ var store = [{
         "url": "/talks/2025-01-04-san-francisco",
         "teaser": null
       },{
+        "title": "Reproducibility in Economics: Why and how",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/talks/2025-02-27-qicss",
+        "teaser": null
+      },{
         "title": "La crédibilité de la recherche : comment améliorer la reproductibilité en sciences économiques",
         "excerpt":"A discussion on the credibility of research with two data editors   (The discussion will be in French)   Join us in beautiful Orford, Quebec, just north of Vermont.   Marie Connolly is Data Editor for the Canadian Journal of Economics.  ","categories": [],
         "tags": [],
