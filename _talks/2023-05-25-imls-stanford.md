@@ -3,7 +3,7 @@ title: "Reproducibility and Preservation: Lessons learned from 1,663 papers in E
 collection: talks
 type: "Talk"
 date: 2023-05-25
-location: "Online"
+location: "Stanford, CA, USA"
 mode: "Online"
 venue: "IMLS National Forums on Data Quality"
 mainurl: https://sites.google.com/view/imls2022-data-quality/home

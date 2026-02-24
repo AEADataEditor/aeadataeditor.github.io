@@ -3,9 +3,10 @@ title: "ZBW Coffee Lecture on Open Science Education: A reproducibility internsh
 collection: talks
 type: "Webinar"
 date: 2024-11-07
-location: "online"
+location: "Hamburg, Germany"
 mode: "Online"
 venue: "Leibniz Informationszentrum Wirtschaft (ZBW)"
+recording: https://www.youtube.com/watch?v=9pmyJ7Q32e4
 mainurl: https://openeconomics.zbw.eu/en/coffee-lectures-on-open-science-education/
 doi: 
 maindoi: 
