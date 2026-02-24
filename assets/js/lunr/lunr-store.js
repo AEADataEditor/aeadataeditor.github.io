@@ -940,4 +940,10 @@ var store = [{
         "tags": [],
         "url": "/talks/2026-01-23-atc26",
         "teaser": null
+      },{
+        "title": "La reproductibilité en économie pourquoi et comment",
+        "excerpt":"Presentation slides   Marie Connolly is Data Editor for the Canadian Journal of Economics. The session was jointly sponsored by the AEA and the Econometric Society.  ","categories": [],
+        "tags": [],
+        "url": "/talks/2026-02-12-ciqss",
+        "teaser": null
       }]
