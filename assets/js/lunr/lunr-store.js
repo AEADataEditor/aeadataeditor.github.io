@@ -857,6 +857,12 @@ var store = [{
         "url": "/talks/2024-11-23-appam",
         "teaser": null
       },{
+        "title": "Creating Reproducible Research Even When Data Are Confidential",
+        "excerpt":"Abstract The presentation discusses best practices for creating reproducible research when working with confidential data. It discusses what the core ingredients of a good README are, as well as licensing of data and code from the perspective of a public institution. Marie Connolly is Data Editor for the Canadian Journal...","categories": [],
+        "tags": [],
+        "url": "/talks/2024-12-06-ottawa",
+        "teaser": null
+      },{
         "title": "AEA/ES Data Editors' Tutorial 1",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
@@ -873,6 +879,12 @@ var store = [{
         "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
         "tags": [],
         "url": "/talks/2025-02-27-qicss",
+        "teaser": null
+      },{
+        "title": "Discussion with the Research Publication Group at the Federal Reserve Board",
+        "excerpt":"Topics The meeting was interactive. Questions: Let us know about the latest developments in replication practices for the AEA and the profession. Can you outline the basic principles and purpose of replication? Perhaps this would be a summary of AEA requirements and mention of how other publishers are addressing this....","categories": [],
+        "tags": [],
+        "url": "/talks/2025-03-31-frb",
         "teaser": null
       },{
         "title": "La crédibilité de la recherche : comment améliorer la reproductibilité en sciences économiques",
@@ -903,6 +915,12 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2025-06-22-weai",
+        "teaser": null
+      },{
+        "title": "Reproducibility from Day 1 to Day T (Part 2)",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
+        "tags": [],
+        "url": "/talks/2025-06-23-weai",
         "teaser": null
       },{
         "title": "Conversation on Replication Packages with SOLE Mentees",
