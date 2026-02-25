@@ -8,7 +8,8 @@ mode: "In-Person"
 venue: "Midwest Economics Association Annual Meetings 2024"
 mainurl: https://virtual.oxfordabstracts.com/#/event/4777/submission/415
 doi: 
-maindoi: 
+maindoi:
+participants: 30
 ---
 
 Joint with *Marie Connolly* (UQAM and CEA Data Editor) and *Sofia Encarnación* (Cornell University, Assistant Data Editor, AEA)
