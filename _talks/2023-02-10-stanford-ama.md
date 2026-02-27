@@ -4,6 +4,7 @@ collection: talks
 type: "AMA"
 date: 2023-02-10
 location: "Stanford, CA"
+mode: "In-Person"
 venue: "Stanford Economics Department/ Graduate Business School"
 mainurl: 
 doi: 

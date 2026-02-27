@@ -4,6 +4,7 @@ collection: talks
 type: "AMA"
 date: 2023-02-09
 location: "Berkeley, CA"
+mode: "In-Person"
 venue: "UC Berkeley Economics Department"
 mainurl: 
 doi: 

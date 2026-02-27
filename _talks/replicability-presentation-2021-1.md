@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2021-05-10
 location: "Washington, DC, USA"
+mode: "In-Person"
 venue: "CNSTAT Expert meeting on Guidance on Data Sharing for NIA Longitudinal Studies"
 mainurl: 
 doi: 10.5281/zenodo.4791013

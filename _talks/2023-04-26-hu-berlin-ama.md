@@ -4,6 +4,7 @@ collection: talks
 type: "AMA"
 date: 2023-04-26
 location: "Berlin, Germany"
+mode: "In-Person"
 venue: "Humbold University, Economics Department"
 mainurl: 
 doi: 

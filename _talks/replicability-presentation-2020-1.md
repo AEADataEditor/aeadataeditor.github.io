@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-02-07
 location: "Washington, DC, USA"
+mode: "In-Person"
 venue: "Urban Institute"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3662907

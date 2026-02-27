@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2022-09-05
 location: "Stockholm, Sweden"
+mode: "In-Person"
 venue: "Stockholm School of Economics"
 mainurl: https://www.hhs.se
 doi: 10.5281/zenodo.7055317

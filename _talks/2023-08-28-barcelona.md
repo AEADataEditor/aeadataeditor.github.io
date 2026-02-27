@@ -6,6 +6,7 @@ date: 2023-08-28
 joint: 
   - Miklós Koren
 location: "Barcelona, Catalunya, Spain"
+mode: "In-Person"
 venue: "European Economic Association 2023 Annual Conference"
 mainurl: https://eea-esem-2023.org/sessions/reproducible-research-day-1
 doi: 

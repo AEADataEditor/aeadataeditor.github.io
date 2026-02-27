@@ -5,6 +5,7 @@ collection: talks
 type: "Panel"
 date: 2023-04-27
 location: "Berlin, Germany"
+mode: "In-Person"
 mainurl: https://www.zbw.eu/de/ueber-zbw/veranstaltungen/symposium-open-science-forschungstransparenz-in-den-wirtschaftswissenschaften
 doi: 10.5281/zenodo.7875797
 maindoi: 

@@ -4,6 +4,7 @@ collection: talks
 type: "Talk"
 date: 2020-11-06
 location: "Online"
+mode: "Online"
 venue: "University of Waterloo, Canada (SWORDC Data Talk)"
 mainurl: https://github.com/labordynamicsinstitute/practices-presentation-2020
 doi: 10.5281/zenodo.4250890

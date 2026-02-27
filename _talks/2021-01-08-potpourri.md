@@ -3,7 +3,8 @@ title: "Reproducibility Potpourri - or why we need a standard README"
 collection: talks
 type: "Talk"
 date: 2021-01-08
-location: "Online"
+location: "Berkeley, CA"
+mode: "Online"
 venue: "BITSS Annual Meeting"
 mainurl: https://www.bitss.org/events/9thbitssam/
 doi: 

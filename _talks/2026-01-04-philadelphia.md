@@ -6,6 +6,8 @@ date: 2026-01-04
 joint: 
   - Marie Connolly
 location: "Philadelphia, PA, USA"
+mode: "In-Person"
+participants: 25
 venue: "American Economic Association 2026 Annual Conference"
 mainurl: https://www.aeaweb.org/conference/2026/preliminary/1058
 doi: 

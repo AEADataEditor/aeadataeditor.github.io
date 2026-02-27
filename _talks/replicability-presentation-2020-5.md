@@ -3,7 +3,9 @@ title: "Implementing Increased Transparency and Reproducibility in Economics"
 collection: talks
 type: "Talk"
 date: 2020-04-01
-location: "Online"
+location: "Ithaca, NY"
+mode: "Online"
+recording: https://www.youtube.com/watch?v=pj-y3dLDOEA
 venue: "Cornell University Webinar together with BITSS"
 mainurl: https://github.com/labordynamicsinstitute/replicability-presentation-2020
 doi: 10.5281/zenodo.3735536
