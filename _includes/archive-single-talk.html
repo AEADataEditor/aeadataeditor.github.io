@@ -36,6 +36,7 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%Y - %m - %d' }}</p>{% endif %}
+    {% if post.language %}<p class="page__meta">{% for lang in post.language %}<img src="https://unpkg.com/language-icons/icons/{{ lang }}.svg" alt="{{ lang | upcase }}" title="{{ lang | upcase }}" style="height:1.2em; vertical-align:middle; margin-right:2px;">{% endfor %}</p>{% endif %}
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
     {% if post.doi %}<p class="archive__item-excerpt" itemprop="description"><a href="https://doi.org/{{ post.doi }}" alt="Slides"><img src="https://zenodo.org/badge/DOI/{{ post.doi }}.svg" alt="image of DOI"></a></p>{% endif %}
   </article>

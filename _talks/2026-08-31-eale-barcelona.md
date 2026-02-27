@@ -8,7 +8,7 @@ mode: "In-person"
 language:
     - en
     - es
-    - catalan
+    - ca
 venue: "EALE 2026 conference"
 mainurl: 
 doi: 
