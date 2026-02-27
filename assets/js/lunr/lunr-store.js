@@ -887,6 +887,12 @@ var store = [{
         "url": "/talks/2025-03-31-frb",
         "teaser": null
       },{
+        "title": "Training for AEA Data Editor Internship Summer 2025",
+        "excerpt":"Date/Time April 12-13, 2025 (two-day training session) Abstract This is the in-person training session for the AEA Data Editor Internship program (second cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, and University of Colorado Boulder. The training...","categories": ["dataeditor"],
+        "tags": ["workshop","internship","training"],
+        "url": "/talks/2025-04-12-wellesley",
+        "teaser": null
+      },{
         "title": "La crédibilité de la recherche : comment améliorer la reproductibilité en sciences économiques",
         "excerpt":"A discussion on the credibility of research with two data editors   (The discussion will be in French)   Join us in beautiful Orford, Quebec, just north of Vermont.   Marie Connolly is Data Editor for the Canadian Journal of Economics.  ","categories": [],
         "tags": [],
@@ -969,5 +975,35 @@ var store = [{
         "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
         "tags": [],
         "url": "/talks/2026-02-12-ciqss",
+        "teaser": null
+      },{
+        "title": "Training for AEA Data Editor Internship Summer 2026",
+        "excerpt":"Date/Time April 11-12, 2026 (two-day training session) Abstract This is the in-person training session for the AEA Data Editor Internship program (third cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College....","categories": ["dataeditor"],
+        "tags": ["workshop","internship","training"],
+        "url": "/talks/2026-04-11-wellesley",
+        "teaser": null
+      },{
+        "title": "École d’été du CIQSS: Reproductibilité en recherche – Garantir la transparence et la crédibilité de vos travaux  (in French)",
+        "excerpt":"Date/Time 11 mai (9h à 16h) et 12 mai (13h à 16h), 2026 Abstract Cette formation intensive explore les principes fondamentaux de la reproductibilité, un pilier de la science ouverte qui assure la transparence et la crédibilité de la recherche scientifique. Vous découvrirez les meilleures pratiques pour rendre votre travail...","categories": ["dataeditor"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-05-11-montreal",
+        "teaser": null
+      },{
+        "title": "CEA Summer School on Research Reproducibility",
+        "excerpt":"Abstract This intensive training explores the fundamental principles of reproducibility, a pillar of open science that ensures the transparency and credibility of scientific research. You will discover best practices to make your work reproducible, from data management to code documentation, version control, and results publication. OBJECTIVES Master the challenges and...","categories": [],
+        "tags": [],
+        "url": "/talks/2026-05-28-vancouver-cea",
+        "teaser": null
+      },{
+        "title": "Reproducibility from Day 1 to Day T",
+        "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
+        "tags": [],
+        "url": "/talks/2026-06-30-weai",
+        "teaser": null
+      },{
+        "title": "TBD (but training in reproducibility)",
+        "excerpt":"Abstract   We are planning a workshop on reproducibility in economics for the EALE 2026 conference in Barcelona, with multiple data editors attending.  Stay tuned!  ","categories": [],
+        "tags": [],
+        "url": "/talks/2026-08-31-eale-barcelona",
         "teaser": null
       }]

@@ -1,0 +1,484 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Training for AEA Data Editor Internship Summer 2026 - Office of the AEA Data Editor</title>
+<meta name="description" content="Date/Time  April 11-12, 2026 (two-day training session)  Abstract  This is the in-person training session for the AEA Data Editor Internship program (third cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College.  The training covers:    Introduction to the scientific publication process and reproducibility checking   Reproducible practices and template README files   Data provenance and data citations   Command line and Git version control   The replication workflow and report writing   Running statistical software (Stata and others)   Hands-on work on test cases with assistance   For more information, see Internship Summer 2026.     NOTE: Participation in the training can be arranged, but applications to the internship must be done via participating colleges. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2026 or later, no later than March 15, 2026.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Training for AEA Data Editor Internship Summer 2026">
+<meta property="og:url" content="https://aeadataeditor.github.io/talks/2026-04-11-wellesley">
+
+
+  <meta property="og:description" content="Date/Time  April 11-12, 2026 (two-day training session)  Abstract  This is the in-person training session for the AEA Data Editor Internship program (third cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College.  The training covers:    Introduction to the scientific publication process and reproducibility checking   Reproducible practices and template README files   Data provenance and data citations   Command line and Git version control   The replication workflow and report writing   Running statistical software (Stata and others)   Hands-on work on test cases with assistance   For more information, see Internship Summer 2026.     NOTE: Participation in the training can be arranged, but applications to the internship must be done via participating colleges. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2026 or later, no later than March 15, 2026.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-04-11T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/talks/2026-04-11-wellesley">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Training for AEA Data Editor Internship Summer 2026">
+    <meta itemprop="description" content="Date/TimeApril 11-12, 2026 (two-day training session)AbstractThis is the in-person training session for the AEA Data Editor Internship program (third cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College.The training covers:  Introduction to the scientific publication process and reproducibility checking  Reproducible practices and template README files  Data provenance and data citations  Command line and Git version control  The replication workflow and report writing  Running statistical software (Stata and others)  Hands-on work on test cases with assistanceFor more information, see Internship Summer 2026.  NOTE: Participation in the training can be arranged, but applications to the internship must be done via participating colleges. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2026 or later, no later than March 15, 2026.">
+    <meta itemprop="datePublished" content="April 11, 2026">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Training for AEA Data Editor Internship Summer 2026
+</h1>
+          
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="2026-04-11T00:00:00-04:00">April 11, 2026</time></p>
+        
+        <p class="page__meta">
+          
+          <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i><span class="sr-only">Mode:</span> In-person
+           &middot; <i class="fa-solid fa-language" aria-hidden="true"></i><span class="sr-only">Language:</span> <span role="img" aria-label="English (US)">🇺🇸</span>
+          
+          
+          
+        </p>
+        
+
+
+        <!--  -->
+          <p>Workshop 
+            at Wellesley College, Wellesley, MA
+
+            <ul>
+              
+              
+              
+                <li>For more information, see <a href="https://aeadataeditor.github.io/projects/project7" alt="mainpage">https://aeadataeditor.github.io/projects/project7</a> </li>
+              
+            </ul>
+          </p>
+        <!--  -->
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h2 id="datetime">Date/Time</h2>
+
+<p>April 11-12, 2026 (two-day training session)</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>This is the in-person training session for the <strong>AEA Data Editor Internship</strong> program (third cohort). The internship is a collaborative effort between <strong>Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder</strong>, and <strong>Hamilton College</strong>.</p>
+
+<p>The training covers:</p>
+<ul>
+  <li>Introduction to the scientific publication process and reproducibility checking</li>
+  <li>Reproducible practices and template README files</li>
+  <li>Data provenance and data citations</li>
+  <li>Command line and Git version control</li>
+  <li>The replication workflow and report writing</li>
+  <li>Running statistical software (Stata and others)</li>
+  <li>Hands-on work on test cases with assistance</li>
+</ul>
+
+<p>For more information, see <a href="https://aeadataeditor.github.io/projects/project7">Internship Summer 2026</a>.</p>
+
+<blockquote>
+  <p>NOTE: Participation in the training can be arranged, but applications to the internship must be done via participating colleges. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2026 or later, no later than March 15, 2026.</p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#internship" class="page__taxonomy-item" rel="tag">internship</a><span class="sep">, </span>
+    
+      <a href="/tags/#training" class="page__taxonomy-item" rel="tag">training</a><span class="sep">, </span>
+    
+      <a href="/tags/#workshop" class="page__taxonomy-item" rel="tag">workshop</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#dataeditor" class="page__taxonomy-item" rel="tag">dataeditor</a>
+    
+    </span>
+  </p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Training+for+AEA+Data+Editor+Internship+Summer+2026%20https%3A%2F%2Faeadataeditor.github.io%2Ftalks%2F2026-04-11-wellesley" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Ftalks%2F2026-04-11-wellesley" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/talks/2026-02-12-ciqss" class="pagination--pager" title="La reproductibilité en économie pourquoi et comment
+">Previous</a>
+    
+    
+      <a href="/talks/2026-05-11-montreal" class="pagination--pager" title="École d’été du CIQSS: Reproductibilité en recherche – Garantir la transparence et la crédibilité de vos travaux  (in French)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+  </article>
+
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_talks/2026-04-11-wellesley.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
