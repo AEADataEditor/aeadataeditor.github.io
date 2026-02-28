@@ -44,4 +44,4 @@ Non-local students who would like to apply for a limited number of $500 travel g
 </div>
 
 
-*Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop is sponsored by and the [Research Chair in Intergenerational Economics at ESG UQAM](https://grch.esg.uqam.ca/) and a Sloan grant to Cornell University (Lars Vilhuber).*
+*Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop is sponsored by and the [Research Chair in Intergenerational Economics at ESG UQAM](https://grch.esg.uqam.ca/) and a [Sloan grant](https://sloan.org/grant-detail/g-2023-22326) to Cornell University (Lars Vilhuber).*
