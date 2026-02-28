@@ -5,9 +5,9 @@ type: "Workshop"
 date: 2026-05-28
 joint: 
   - Marie Connolly
-location: "Montréal, Canada"
-venue: "Canadian Economics Association meetings / Quebec inter-University Centre for Social Statistics (QICSS)"
-mainurl: https://larsvilhuber.github.io/summer-school-qicss-2025/
+location: "Vancouver, Canada"
+venue: "Canadian Economics Association meetings"
+mainurl: https://larsvilhuber.github.io/summer-school-sfu-ubc-2026/
 doi: 
 maindoi: 
 ---
@@ -44,4 +44,4 @@ Non-local students who would like to apply for a limited number of $500 travel g
 </div>
 
 
-*Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop is sponsored by the CIQSS and the [Groupe de recherche sur le capital humain (GRCH)](https://grch.esg.uqam.ca/) at ESG UQAM.*
+*Marie Connolly is Data Editor for the Canadian Journal of Economics. The workshop is sponsored by and the [Research Chair in Intergenerational Economics at ESG UQAM](https://grch.esg.uqam.ca/) and a Sloan grant to Cornell University (Lars Vilhuber).*
