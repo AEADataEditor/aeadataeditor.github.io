@@ -34,7 +34,7 @@
       {% endif %}
     </h3>
     {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.language %}<p class="page__meta">{% for lang in post.language %}<img src="https://unpkg.com/language-icons/icons/{{ lang }}.svg" alt="{{ lang | upcase }}" title="{{ lang | upcase }}" style="height:1.2em; vertical-align:middle; margin-right:2px;">{% endfor %}</p>{% endif %}
+    <p class="page__meta">{% if post.language %}{% assign post_langs = post.language %}{% else %}{% assign post_langs = "en" | split: "," %}{% endif %}{% for lang in post_langs %}{% assign lang_code = lang | strip | split: "-" | first %}<img src="https://unpkg.com/language-icons/icons/{{ lang_code }}.svg" alt="{{ lang_code | upcase }}" title="{{ lang_code | upcase }}" style="height:1.2em; vertical-align:middle; margin-right:2px;">{% endfor %}</p>
     {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{post.type}} at {{ post.venue }},  {{post.location}}</p>{% endif %}
     </li>
   </article>
