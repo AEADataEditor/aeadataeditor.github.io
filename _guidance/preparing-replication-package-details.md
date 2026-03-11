@@ -1,5 +1,5 @@
 ---
-title: Preparing your code for computational verification: Details
+title: "Preparing your code for computational verification: Details"
 toc: true
 date: 2026-01-07
 ---
