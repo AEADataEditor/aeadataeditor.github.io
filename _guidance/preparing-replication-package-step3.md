@@ -99,6 +99,15 @@ local ssc_unconditional ""
  ado
 ```
 
+
+**Indexing Mata libraries** (sometimes necessary, always useful)
+
+When Stata packages include Mata libraries, the (separate) Mata index of such files needs to be updated. This is a very quick operation, and never hurts to include it, after all installs.
+
+```stata
+    mata: mata mlib index
+```
+
 ***Adding to replication package***
 
 The following files should be included in your replication package:
