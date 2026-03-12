@@ -947,6 +947,12 @@ var store = [{
         "url": "/talks/2025-09-15-vfs",
         "teaser": null
       },{
+        "title": "Preparing for Reproducibility",
+        "excerpt":"Agenda Session 1, Monday Sep 29 1-2:30p EDT Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package...","categories": ["dataeditor"],
+        "tags": ["workshop"],
+        "url": "/talks/2025-09-29-cleveland",
+        "teaser": null
+      },{
         "title": "AEA/ES Data Editors' Tutorial 1",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
@@ -975,6 +981,18 @@ var store = [{
         "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
         "tags": [],
         "url": "/talks/2026-02-12-ciqss",
+        "teaser": null
+      },{
+        "title": "Replication packages en économie : préparation, bonnes pratiques et attentes des revues - surtout lorsque les données sont confidentielles",
+        "excerpt":"La reproductibilité des résultats occupe aujourd’hui une place croissante dans la recherche empirique en économie et dans les politiques éditoriales des revues scientifiques. De nombreuses revues demandent désormais aux auteurs de fournir un replication package, c’est-à-dire l’ensemble des données, du code et de la documentation permettant de reproduire les analyses...","categories": ["dataeditor"],
+        "tags": ["presentation"],
+        "url": "/talks/2026-04-02-insee",
+        "teaser": null
+      },{
+        "title": "Enhancing Scientific Integrity: Progress and Opportunities in the Social and Behavioral Sciences - A Workshop ",
+        "excerpt":"This workshop will bring together researchers, journal editors, publishers, funders, and scientific association leaders to identify practical, forward-looking strategies for strengthening data integrity and transparency in the social and behavioral sciences. Participants will explore innovative tools and frameworks to detect and prevent errors, promote accountability, and reinforce public trust in...","categories": ["dataeditor,","open-science"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-04-23-nasem",
         "teaser": null
       },{
         "title": "Training for AEA Data Editor Internship Summer 2026",
