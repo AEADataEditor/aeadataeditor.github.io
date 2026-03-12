@@ -995,16 +995,16 @@ var store = [{
         "url": "/talks/2026-04-02-insee",
         "teaser": null
       },{
-        "title": "Enhancing Scientific Integrity: Progress and Opportunities in the Social and Behavioral Sciences - A Workshop ",
-        "excerpt":"This workshop will bring together researchers, journal editors, publishers, funders, and scientific association leaders to identify practical, forward-looking strategies for strengthening data integrity and transparency in the social and behavioral sciences. Participants will explore innovative tools and frameworks to detect and prevent errors, promote accountability, and reinforce public trust in...","categories": ["dataeditor,","open-science"],
-        "tags": ["workshop"],
-        "url": "/talks/2026-04-23-nasem",
-        "teaser": null
-      },{
         "title": "Training for AEA Data Editor Internship Summer 2026",
         "excerpt":"Date/Time April 11-12, 2026 (two-day training session) Abstract This is the in-person training session for the AEA Data Editor Internship program (third cohort). The internship is a collaborative effort between Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College....","categories": ["dataeditor"],
         "tags": ["workshop","internship","training"],
         "url": "/talks/2026-04-11-wellesley",
+        "teaser": null
+      },{
+        "title": "Enhancing Scientific Integrity: Progress and Opportunities in the Social and Behavioral Sciences - A Workshop ",
+        "excerpt":"This workshop will bring together researchers, journal editors, publishers, funders, and scientific association leaders to identify practical, forward-looking strategies for strengthening data integrity and transparency in the social and behavioral sciences. Participants will explore innovative tools and frameworks to detect and prevent errors, promote accountability, and reinforce public trust in...","categories": ["dataeditor,","open-science"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-04-23-nasem",
         "teaser": null
       },{
         "title": "École d’été du CIQSS: Reproductibilité en recherche – Garantir la transparence et la crédibilité de vos travaux  (in French)",
