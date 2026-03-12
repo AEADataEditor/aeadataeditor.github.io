@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research from Day 1"
 collection: talks
-type: "Presentation"
+type: "Talk"
 date: 2024-01-05
 joint: 
   - Marie Connolly

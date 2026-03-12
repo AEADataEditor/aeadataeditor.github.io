@@ -1,7 +1,7 @@
 ---
 title: "Advanced methods for self-verification of reproducibility"
 collection: talks
-type: "Presentation"
+type: "Talk"
 date: 2024-01-06
 joint: 
   - Marie Connolly

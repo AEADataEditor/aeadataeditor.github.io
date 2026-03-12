@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research from Day 1"
 collection: talks
-type: "Presentation"
+type: "Talk"
 date: 2023-08-28
 joint: 
   - Miklós Koren

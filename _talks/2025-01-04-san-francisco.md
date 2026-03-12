@@ -1,7 +1,7 @@
 ---
 title: "AEA/ES Data Editors' Tutorial 2"
 collection: talks
-type: "Presentation"
+type: "Talk"
 date: 2025-01-04
 joint: 
   - Marie Connolly
