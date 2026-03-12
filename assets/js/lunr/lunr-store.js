@@ -983,6 +983,12 @@ var store = [{
         "url": "/talks/2026-02-12-ciqss",
         "teaser": null
       },{
+        "title": "Reproducible Research with Sensitive and Restricted Data",
+        "excerpt":"More and more journals require that you share your code and data in a replication package at the end of your research project. That can be a challenge, when some parts of your research data are confidential. There are many ways to construct a replication package, and even more situations...","categories": ["dataeditor"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-03-18-syracuse",
+        "teaser": null
+      },{
         "title": "Replication packages en économie : préparation, bonnes pratiques et attentes des revues - surtout lorsque les données sont confidentielles",
         "excerpt":"La reproductibilité des résultats occupe aujourd’hui une place croissante dans la recherche empirique en économie et dans les politiques éditoriales des revues scientifiques. De nombreuses revues demandent désormais aux auteurs de fournir un replication package, c’est-à-dire l’ensemble des données, du code et de la documentation permettant de reproduire les analyses...","categories": ["dataeditor"],
         "tags": ["presentation"],
