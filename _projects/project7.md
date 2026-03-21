@@ -26,7 +26,7 @@ This page is best viewed at <https://aeadataeditor.github.io/projects/project7>.
 {% endcomment %}
 
 <!-- The AEA Data Editor is happy to announce an **internship with the AEA Data Editor.**-->
-We are planning to have another round of an **internship with the AEA Data Editor.**.  The collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame,  University of Colorado Boulder**, and **Hamilton College**.  We are looking for additional journals to provide us with articles, and additional local organizers at other institutions in order to scale up.
+We are planning to have another round of an **internship with the AEA Data Editor.**.  Collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame,  University of Colorado Boulder**, and **Hamilton College**, with additional support from the **World Bank (DIME)** and  **[PREDOC.org](https://www.predoc.org/)** program.
 
 
 
@@ -78,7 +78,8 @@ The internship is remote.
 
 ### Location and date of training day
 
-Training in 2026 will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest, it is thus possible to leave the same evening, or the next day.
+Training in 2026 will take place **on {{ page.dates.trainingday1 }} and {{ page.dates.trainingday2 }}**  *in person* **at {{ page.locations.training }}**. Participants should plan to arrive the day before. Training will end by **noon on the second day** at the latest. Participants should have received more detailed information by email, but if you have not, please contact your local organizer.
+
 
 ### Agenda for training day 1
 
