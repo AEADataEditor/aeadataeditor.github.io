@@ -1025,8 +1025,8 @@ var store = [{
         "url": "/talks/2026-06-30-weai",
         "teaser": null
       },{
-        "title": "TBD (but training in reproducibility)",
-        "excerpt":"Abstract   We are planning a workshop on reproducibility in economics for the EALE 2026 conference in Barcelona, with multiple data editors attending.  Stay tuned!  ","categories": [],
+        "title": "Data and Replication Panel",
+        "excerpt":"Time   Monday August 31st,     13:00   (just before the opening of the conference)   Abstract   The conference includes a Data and Replication Session, open to all participants and led by Data Editors from leading academic journals:      Marie Connolly (Canadian Journal of Economics)   Joan Llull (Econometric Society)   Lars Vilhuber (American Economic Association)  ","categories": [],
         "tags": [],
         "url": "/talks/2026-08-31-eale-barcelona",
         "teaser": null
