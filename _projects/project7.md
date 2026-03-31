@@ -86,7 +86,7 @@ Training in 2026 will take place **on {{ page.dates.trainingday1 }} and {{ page.
 | Time  |  Location: see email                           |
 |-------|-----------------------------------------------------------|
 |  8:00 | Breakfast  |
-|  9:00 |  **[Introduction](https://labordynamicsinstitute.github.io/replicability-training-presentation/#1)**      |
+|  9:00 |  **[Introduction](https://labordynamicsinstitute.github.io/replicability-training-presentation/#1)** (with additional intro from **World Bank**)     |
 | 10:00 |  **[Reproducible Practices](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1a.html#1), [Template README](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1b.html#1)**                     |
 | 11:00 | **Data provenance, [Data Citations](https://labordynamicsinstitute.github.io/replicability-training-presentation/part2.html#1)**  |
 | 12:00 |  Lunch Break                                               |
@@ -105,7 +105,8 @@ There will be various breaks throughout the day.
 | Time  |  Location: see email                           |
 |-------|-----------------------------------------------------------|
 |  8:00 | Breakfast  |
-|  9:00 |  **Work on test cases with assistance**      |
+|  9:00 |  **Work on test cases with assistance**   (parallel)   |
+| 9:00 | **The process at the World Bank** (with **World Bank** staff)  |
 | 12:00 |  Lunch boxes and End |      
 
 ### Additional details on training day
