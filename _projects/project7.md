@@ -7,10 +7,10 @@ toc: true
 dates:
   trainingday1: 2026-04-11
   trainingday2: 2026-04-12
-  followup1: 2026-04-14
-  followup2: 2026-04-16
-  followup3: 2026-04-20
-  followup4: 2026-05-xx
+  followup1: 2026-04-16
+  followup2: 2026-04-21
+  followup3: "as necessary"
+  followup4: 2026-05-TBD
   peermentor1: 2026-04-13
   peermentor2: 2026-04-15
   peermentor3: 2026-04-17
