@@ -151,19 +151,19 @@ Test cases are worked through, and jointly handled, including with repeated peer
 - each test article should take you no more than 5 hours of work (decreasing as you progress)
 - each session is **live** on **Zoom** (for details, see calendar invite).
 
-- Test article 1 peer-mentoring session: **{{ page.dates.peermentor1 }}** **{{ page.dates.peermentor1time }}**
-- Test article 2 peer-mentoring session: **{{ page.dates.peermentor2 }}** **{{ page.dates.peermentor2time }}**
-- Test article 3 peer-mentoring session: **{{ page.dates.peermentor3 }}** **{{ page.dates.peermentor3time }}**
+- Test article 1 peer-mentoring session: **{{ page.dates.peermentor1 }}** {{ page.dates.peermentor1time }}
+- Test article 2 peer-mentoring session: **{{ page.dates.peermentor2 }}** {{ page.dates.peermentor2time }}
+- Test article 3 peer-mentoring session: **{{ page.dates.peermentor3 }}** {{ page.dates.peermentor3time }}
 
 
 ### Follow-up meetings:
 
 Meetings with Lars, which include both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions. These are also on **Zoom**, see calendar invites for details.
 
-- Followup 1: **{{ page.dates.followup1 }}** **{{ page.dates.followup1time }}**
-- Followup 2: **{{ page.dates.followup2 }}** **{{ page.dates.followup2time }}**
-- Followup 3: **{{ page.dates.followup3 }}** **{{ page.dates.followup3time }}**
-- Final meeting: **{{ page.dates.followup4 }}** **{{ page.dates.followup4time }}**
+- Followup 1: **{{ page.dates.followup1 }}** {{ page.dates.followup1time }}
+- Followup 2: **{{ page.dates.followup2 }}** {{ page.dates.followup2time }}
+- Followup 3: **{{ page.dates.followup3 }}** {{ page.dates.followup3time }}
+- Final meeting: **{{ page.dates.followup4 }}** {{ page.dates.followup4time }}
 
 
 ## Start of work
