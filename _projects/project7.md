@@ -11,9 +11,16 @@ dates:
   followup2: 2026-04-21
   followup3: "as necessary"
   followup4: 2026-05-TBD
+  followup1time: "(6-7 PM Eastern)"
+  followup2time: "(6-7 PM Eastern)"
+  followup3time: ""
+  followup4time: ""
   peermentor1: 2026-04-13
   peermentor2: 2026-04-15
   peermentor3: 2026-04-17
+  peermentor1time: "(6-7 PM Eastern)"
+  peermentor2time: "(6-7 PM Eastern)"
+  peermentor3time: "(6-7 PM Eastern)"
 locations:
   training: "Wellesley College"
 ---
@@ -144,19 +151,19 @@ Test cases are worked through, and jointly handled, including with repeated peer
 - each test article should take you no more than 5 hours of work (decreasing as you progress)
 - each session is **live** on **Zoom** (for details, see calendar invite).
 
-- Test article 1 peer-mentoring session: **{{ page.dates.peermentor1 }}** (6-7 PM Eastern)
-- Test article 2 peer-mentoring session: **{{ page.dates.peermentor2 }}** (6-7 PM Eastern)
-- Test article 3 peer-mentoring session: **{{ page.dates.peermentor3 }}** (6-7 PM Eastern)
+- Test article 1 peer-mentoring session: **{{ page.dates.peermentor1 }}** **{{ page.dates.peermentor1time }}**
+- Test article 2 peer-mentoring session: **{{ page.dates.peermentor2 }}** **{{ page.dates.peermentor2time }}**
+- Test article 3 peer-mentoring session: **{{ page.dates.peermentor3 }}** **{{ page.dates.peermentor3time }}**
 
 
 ### Follow-up meetings:
 
 Meetings with Lars, which include both follow-up to any further questions interns have after the peer mentoring sessions, as well as any other relevant discussions. These are also on **Zoom**, see calendar invites for details.
 
-- Followup 1: **{{ page.dates.followup1 }}** (6-7 PM Eastern)
-- Followup 2: **{{ page.dates.followup2 }}** (6-7 PM Eastern)
-- Followup 3: **{{ page.dates.followup3 }}** (6-7 PM Eastern)
-- Final meeting: **{{ page.dates.followup4 }}** (6-7 PM Eastern)
+- Followup 1: **{{ page.dates.followup1 }}** **{{ page.dates.followup1time }}**
+- Followup 2: **{{ page.dates.followup2 }}** **{{ page.dates.followup2time }}**
+- Followup 3: **{{ page.dates.followup3 }}** **{{ page.dates.followup3time }}**
+- Final meeting: **{{ page.dates.followup4 }}** **{{ page.dates.followup4time }}**
 
 
 ## Start of work
