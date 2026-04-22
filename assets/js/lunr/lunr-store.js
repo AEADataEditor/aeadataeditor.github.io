@@ -408,7 +408,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Internship with the AEA Data Editor Summer 2026",
-        "excerpt":"We are planning to have another round of an internship with the AEA Data Editor.. Collaborating institutions are Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College, with additional support from the World Bank (DIME) and PREDOC.org program. NOTE:...","categories": [],
+        "excerpt":"This page describes the internship with the AEA Data Editor. Collaborating institutions are Cornell University (AEA Data Editor, ILR Kenneth F. Kahn ’69 Dean), Wellesley College, Haverford College, University of Notre Dame, University of Colorado Boulder, and Hamilton College, with additional support from the World Bank (DIME) and PREDOC.org program....","categories": [],
         "tags": [],
         "url": "/projects/project7",
         "teaser": null
