@@ -33,13 +33,15 @@ This page is best viewed at <https://aeadataeditor.github.io/projects/project7>.
 {% endcomment %}
 
 <!-- The AEA Data Editor is happy to announce an **internship with the AEA Data Editor.**-->
-We are planning to have another round of an **internship with the AEA Data Editor.**.  Collaborating institutions are **Cornell University (AEA Data Editor), Wellesley College, Haverford College, University of Notre Dame,  University of Colorado Boulder**, and **Hamilton College**, with additional support from the **World Bank (DIME)** and  **[PREDOC.org](https://www.predoc.org/)** program.
+This page describes the **internship with the AEA Data Editor.** Collaborating institutions are **Cornell University (AEA Data Editor, ILR Kenneth F. Kahn ’69 Dean), Wellesley College, Haverford College, University of Notre Dame,  University of Colorado Boulder**, and **Hamilton College**, with additional support from the **World Bank (DIME)** and  **[PREDOC.org](https://www.predoc.org/)** program.
 
 
 
 > NOTE: Interns cannot apply independently at this time. If you are an interested local organizer, please contact Lars Vilhuber for further details on how to join in 2026 or later. Previous rounds have been held in [2024](https://aeadataeditor.github.io/projects/project5) and [2025](https://aeadataeditor.github.io/projects/project6). 
 
-The internship will be a 10-12 week, part-time (20 hours per week) *paid* position. 
+> Sign-up for this year is closed. There are **16 interns** in 2026.
+
+The internship is a 10-12 week, part-time (20 hours per week) *paid* position. 
 
 ## Description
 
