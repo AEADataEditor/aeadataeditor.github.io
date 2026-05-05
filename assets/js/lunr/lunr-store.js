@@ -371,6 +371,12 @@ var store = [{
         "url": "/posts/2026-01-19-preparing-pandp-replication-packages",
         "teaser": null
       },{
+        "title": "What to do when PII is detected in a replication package?",
+        "excerpt":"I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to do when personally identifiable information (PII) is detected in a replication package. This reprises a lot of the same...","categories": [],
+        "tags": ["data editor tips","replication packages","terms of use","PII"],
+        "url": "/posts/2026-05-05-pii",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

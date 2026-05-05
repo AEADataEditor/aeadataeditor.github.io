@@ -1,0 +1,741 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>What to do when PII is detected in a replication package? - Office of the AEA Data Editor</title>
+<meta name="description" content="I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to do when personally identifiable information (PII) is detected in a replication package. This reprises a lot of the same tasks as the earlier post.">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="What to do when PII is detected in a replication package?">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2026-05-05-pii">
+
+
+  <meta property="og:description" content="I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to do when personally identifiable information (PII) is detected in a replication package. This reprises a lot of the same tasks as the earlier post.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-05-05T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2026-05-05-pii">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="What to do when PII is detected in a replication package?">
+    <meta itemprop="description" content="I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to do when personally identifiable information (PII) is detected in a replication package. This reprises a lot of the same tasks as the earlier post.">
+    <meta itemprop="datePublished" content="2026-05-05T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">What to do when PII is detected in a replication package?
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  8 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-05-05T00:00:00-04:00">May 05, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>I had previously described a very similar scenario in a <a href="2024-11-01-psid-requests">blog post about the PSID</a>, but I thought it would be useful to write a more general post about what to do when personally identifiable information (PII) is detected in a replication package. This reprises a lot of the same tasks as the earlier post.</p>
+
+<!-- more -->
+
+<p>The <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data.</p>
+
+<p>In principle, Personally Identifiable Information (PII) should never be included in replication packages. There are multiple checks for this. Since the start of creating reports, we would (manually, or semi-automatically) run PII checks (based on <a href="https://github.com/J-PAL/stata_PII_scan">J-PAL’s PII_stata_scan.do</a>, and the replicator would add notes on that. More recent reports (since 2024) persistently include text alerting authors to check their data, regardless of the outcome of the check. When depositing data, authors are required to assert that <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#can-individuals-be-identified">individuals cannot be identified</a>.</p>
+
+<p>But… <strong>it happens</strong>. Authors believe that their team has removed all PII, and yet some leaks in. Sometimes, it’s because they forgot to remove the verbatim answer to “who takes care of your child when you are at work”. Sometimes, it’s the IP address of the respondent.</p>
+
+<p>So what happens when an author inadvertently does share such data, and now needs to remove it? As a reminder, the author is committed (by <a href="https://www.aeaweb.org/journals/forms/data-code-archive-agreement">signing an agreement</a>) to not withdrawing the replication package. How to proceed? Read on!</p>
+
+<h2 id="in-a-nutshell">In a nutshell</h2>
+
+<p>The gist of the solution is the following, for AEA publications.</p>
+
+<ul>
+  <li>The author requests that the deposit (in the AEA case, ICPSR) <strong>unpublish</strong> the original replication package (call it V1) (also called “de-accessioning”), i.e., remove the ability to download the package. The journal (data editor, me) should be notified at the same time.</li>
+  <li>Remove the infringing data from V1 of the replication package.</li>
+  <li>[Ideally] Create a new, separate deposit that is compliant with IRB restrictions on PII. I expand on this below.</li>
+  <li>Document the new location of the now absent data in the README of the replication package, and how somebody can access it.</li>
+  <li>Revise your V1 replication package to take into account changed location, or coding of variables, as per our <a href="https://www.aeaweb.org/journals/data/revisions-policy">Policy on Revisions of Data and Code Deposits in the AEA Data and Code Repository</a>.</li>
+  <li>Submit the revised replication package to the journal.</li>
+  <li>The <strong>journal</strong> publishes V2 of the replication package, which is now compliant.</li>
+</ul>
+
+<p>Important notes:</p>
+
+<ul>
+  <li>At no time should any code be removed from the package. If at all, minimal changes should be made.</li>
+  <li>It is never acceptable to simply remove the old package, without handling replacement.</li>
+</ul>
+
+<h3 id="preliminary-steps">Preliminary steps</h3>
+
+<p>The first steps involve getting access to your own replication package. This may differ by when the replication package was published.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<ul>
+  <li>For authors with papers published before 2019 (approximately)
+    <ul>
+      <li>All authors will need to get an openICPSR login, which will serve them both for the changes to the AEA and for creating the new PSID deposit.</li>
+      <li>They will need to request access to the deposit. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may be able to help with that. The authors should mention the URL or DOI, and the openICPSR login they want the deposit associated with.</li>
+    </ul>
+  </li>
+  <li>
+    <p>For authors with more recent papers:</p>
+
+    <ul>
+      <li>They will need to re-create an ICPSR account <strong>with the same email as previously used</strong> since <a href="https://researcherpassport.icpsr.umich.edu/help">ICPSR changed their login system in Feb 2024</a>. The <a href="https://www.openicpsr.org/openicpsr/contactUs">openICPSR helpdesk</a> may help with that.</li>
+      <li>They need to then <a href="https://www.aeaweb.org/journals/data/revisions-policy#createnewversion">create a new version</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/icpsr-create-new-version.png" alt="Create a new version" />]</p>
+
+<h3 id="rules-that-apply-to-revisions-of-replication-packages">Rules that apply to revisions of replication packages</h3>
+
+<p>Here are a few simple rules:</p>
+
+<ul>
+  <li>The modified package should differ only as necessary from the original package. Less work for the author, greater clarity for replicators, everybody wins.</li>
+  <li>Journal-specific policies may apply. For instance, the AEA has a <a href="https://www.aeaweb.org/journals/data/revisions-policy">Policy on Revisions of Data and Code Deposits in the AEA Data and Code Repository</a>. Among other things, it requires that all changes be clearly identified.</li>
+</ul>
+
+<h3 id="fixing-the-problem-where-to-put-the-data">Fixing the problem: where to put the data?</h3>
+
+<p>Once the preliminaries are done, here’s what authors need to do to remain compliant with AEA policy (similar rules may apply at other journals):</p>
+
+<ul>
+  <li>Consider how to preserve the PII-laden data.</li>
+</ul>
+
+<p>Ideally, you already have a copy of the data, to be compliant with AEA policy (5 years post-publication). There are options for preserving the data at your institution, or archives like ICPSR, but they vary over time. Talk to your data librarian, or to data custodians at ICPSR. Talk to the Data Editor.</p>
+
+<ul>
+  <li>The AEA prefers strongly that such deposits NOT require the authors’ consent to access.</li>
+</ul>
+
+<p>Rather, access should be granted based on clear terms of use (“provide IRB approval”), vetted by individuals not connected to the author, and likely to be present long after the author has retired. Institutions, like your own university or ICPSR, are ideal.</p>
+
+<h3 id="fixing-the-problem-what-data-to-include">Fixing the problem: what data to include?</h3>
+
+<p>If the variables that contain PII are not essential to the replication of the paper, then they can simply be removed from the replication package. This must still be documented!</p>
+
+<p>If however, they are important to the analysis (left-hand side or right-hand side), you will need to be more creative. You may document that certain analyses are no longer feasible without the PII-laden, but should ensure that the code continues to run for all other analyses (for instance, because the PII-laden variables only affect one out of a gazillion robustness checks).</p>
+
+<p>You may also be able to recode the PII, replacing them with innocuous but still unique identifiers. Finally, you may need to replace variables with fake or synthetic data, which will ensure the code runs, but may not produce the right results. Again, very important that this is documented in the README!</p>
+
+<h4 id="back-in-the-aea-deposit">Back in the AEA deposit</h4>
+
+<ul>
+  <li>Log on to the V1 deposit. You should be in “Modifying” mode.</li>
+  <li>Remove (delete) the PII data (<code class="language-plaintext highlighter-rouge">my_survey_1.dta</code>)</li>
+  <li>Update the README with “PII-laden data for this package can be obtained from ICPSR upon provision of an IRB approval.” in an appropriate location. The ideal README follows the <a href="https://doi.org/10.5281/zenodo.7293838">Template README published by the Social Science Data Editors</a>, but make only minimal changes to the README in this deposit.
+    <ul>
+      <li>Delete the old README (<em>completely</em>),</li>
+      <li>Upload the new README (in PDF format) to the same location the original one was</li>
+    </ul>
+  </li>
+  <li><a href="https://www.aeaweb.org/journals/data/revisions-policy#identifying">Create a <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</a>  Identify changes made. E.g. “V2: Removed PII-laden data, adjusted code.”.  It should look something like this:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>V1: Original deposit
+V2: Removed PII-laden data, adjusted code.
+</code></pre></div></div>
+
+<ul>
+  <li>Upload the <code class="language-plaintext highlighter-rouge">CHANGES.txt</code>.</li>
+  <li>(If possible) Link to the DOI of the PII-laden deposit in the “Related publications” section of the deposit (use the <code class="language-plaintext highlighter-rouge">Import from DOI</code> functionality, choose <code class="language-plaintext highlighter-rouge">is supplemented by</code> for the <code class="language-plaintext highlighter-rouge">Relationship</code> field)</li>
+  <li>You <em>may</em> have to add the “manuscript number” to the metadata, see <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#scope-of-project-section">this link</a>. Use the last part of the DOI of the paper, e.g. if the paper DOI is <code class="language-plaintext highlighter-rouge">https://doi.org/10.1257/aer.p20161120</code> then the “manuscript number” should be <code class="language-plaintext highlighter-rouge">aer.p20161120</code>.</li>
+  <li><a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#submitting-to-the-data-editor">Re-Submit to the AEA</a></li>
+</ul>
+
+<p><img src="/images/project-submit.png" alt="(Re-)Submit to the AEA" /></p>
+
+<h2 id="the-end-state">The end state</h2>
+
+<p>After all the fixes,</p>
+
+<ul>
+  <li>V1 is still visible, but can no longer be downloaded.</li>
+</ul>
+
+<p><img src="/images/openICPSR-study-unpublished.png" alt="Unpublished deposit shows banner" /></p>
+
+<ul>
+  <li>V2 is published, contains no PII data, (possibly) links to the deposit of the restricted data, and remains otherwise available to replicators. You are still in compliance with the AEA publication agreements and your obligations as an AEA author!</li>
+</ul>
+
+<h2 id="final-comments">Final comments</h2>
+
+<p>Authors should feel free to reach out to their journal’s data and reproducibility editor with questions about the available options.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:2">
+      <p>The dividing line is approximately Oct 1, 2019. In 2019, <a href="https://aeadataeditor.github.io/aea-supplement-migration/programs/aea201910-migration.html">we migrated approximately 2,500 older replication packages into openICPSR</a>. Authors were not involved in this process, and so do not have operational access to the replication package. They do, however, have ownership of the deposit, and can request access to it. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#pii" class="page__taxonomy-item" rel="tag">PII</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#terms-of-use" class="page__taxonomy-item" rel="tag">terms of use</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-05-05T00:00:00-04:00">May 5, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=What+to+do+when+PII+is+detected+in+a+replication+package%3F%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-05-05-pii" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-05-05-pii" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-01-19-preparing-pandp-replication-packages" rel="permalink">Preparing Replication Packages for 2026 AEA Papers and Proceedings
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">For authors preparing the replication packages that accompany their 2026 AEA Papers and Proceedings publication www.aeaweb.org/journals/pandp: Here are some ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2025-08-18-dropbox-etc" rel="permalink">On the Dangers of Online Storage
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2025-01-17-tables-in-excel" rel="permalink">On the use of Excel for reproducible tables
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I sometimes see researchers doing much copy-pasting between output from Stata/R/MATLAB and Excel, to create tables. This is a lot of work, the source of many...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2024-11-01-psid-requests" rel="permalink">How to respond to data provider requests for data removal (take-down requests)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cas...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2026-05-05-pii.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://twitter.com/messages/compose?recipient_id=1115329171121680385" data-screen-name="@AEAData">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> @AEAData</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
