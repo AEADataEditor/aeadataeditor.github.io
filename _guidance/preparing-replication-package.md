@@ -21,6 +21,13 @@ Much more extensive guidance on the issues addressed here is available at <https
 
 <div style="page-break-after: always;"></div>
 
+## Using an AI assistant
+
+You can use an AI assistant (such as Claude, ChatGPT, or GitHub Copilot) to guide you through this checklist. Give your AI the following instruction:
+
+> Use <https://aeadataeditor.github.io/aea-de-guidance/preparing-replication-package.agent.md> to review my replication package and help me prepare it for submission to the AEA Data Editor.
+
+The AI will work through each step with you, identify issues, and suggest specific fixes.
 
 ## Checklist
 
