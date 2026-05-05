@@ -3,6 +3,7 @@ title: "CEA Summer School on Research Reproducibility"
 collection: talks
 type: "Workshop"
 date: 2026-05-28
+participants: 48
 joint: 
   - Marie Connolly
 location: "Vancouver, Canada"
