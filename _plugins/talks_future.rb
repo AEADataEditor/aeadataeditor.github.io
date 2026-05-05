@@ -5,11 +5,11 @@ module Jekyll
   class Publisher
     def hidden_in_the_future?(document)
       future = if document.respond_to?(:collection) && document.collection
-                 document.collection.metadata.fetch("future", site.future)
+                 document.collection.metadata.fetch("future", @site.future)
                else
-                 site.future
+                 @site.future
                end
-      !future && document.respond_to?(:date) && document.date.to_i > site.time.to_i
+      !future && document.respond_to?(:date) && document.date.to_i > @site.time.to_i
     end
   end
 end
