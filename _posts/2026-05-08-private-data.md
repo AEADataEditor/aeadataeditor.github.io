@@ -11,7 +11,7 @@ tags:
   - private data
 ---
 
-In economics, it is not uncommon to have data that are so private, that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves with the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might compromise a follow-up study. 
+In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves in the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might compromise a follow-up study. 
 
 Of course, it is the first claim a fraudster would make, too. So how can we help legitimate authors separate themselves from the fraudsters, and still publish interesting and **real** research in journals? 
 
@@ -38,17 +38,17 @@ In a nutshell, our first preference is that authors are allowed to share the dat
 
 [^nopub]: To be clear, **we** actually never publish data or code regardless of when or how authors have provided it. The authors publish their data and their code, but in a space that we make available. We never touch their draft deposits, only review them, and we certainly never add anything to it. In some rare cases, we may help the authors by removing files that should not be there (obvious junk files).
 
-We provide a secure upload link, different from the draft deposit. Readers can view our template email with which we reach out to authors at [here](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Restricted-Access-Data.html). Of course, authors should  check with their data provider if provision of data is OK. We can also sign a non-disclosure agreement (NDA) if necessary (referenced in the email), but we stand by our word, and most authors take us up on that.
+We provide a secure upload link, different from the draft deposit. Readers can view our template email with which we reach out to authors at [here](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Restricted-Access-Data.html). Of course, authors should check with their data provider if provision of data is OK. We can also sign a non-disclosure agreement (NDA) if necessary (referenced in the email), but we stand by our word, and most authors take us up on that.
 
 ### Name of the provider
 
-For the name of the company, we may sign a separate NDA, to protect both us and the authors. Again, we have an SOP for that, here's the (separate) [template email](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Unknown-Provider-Info.html) for that. Important: the data provider should be aware of us signing the NDA, as we will publish the fact that the authors revealed the name to me.
+For the name of the company, we may sign a separate NDA, to protect both us and the authors. Again, we have an SOP for that; here's the (separate) [template email](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Unknown-Provider-Info.html) for that. Important: the data provider should be aware of us signing the NDA, as we will publish the fact that the authors revealed the name to me.
 
 ### Verification
 
-Usually, I then contact the data provider, or a representative of the provider, directly. I keep no records of identity or other means of contact, and usually make video or phone calls, possibly using WhatsApp or Signal. I validate the representative's identity through independent means (are they really who they claim to be). I ask questions regarding the authors' access to the data: Did they actually get access, how, can others get access, why is the provider's identity meant to be secret.
+Usually, I then contact the data provider, or a representative of the provider, directly. I keep no records of identity or other means of contact, and usually make video or phone calls, possibly using WhatsApp or Signal. I validate the representative's identity through independent means (are they really who they claim to be). I ask questions regarding the authors' access to the data: Did they actually get access? How? Can others get access? Why is the provider's identity meant to be secret?
 
-Once I have satisfied my professional curiosity, I report back to the editor in charge of the paper, and convey my opinion regarding the legitimacy of the data provider and of the data. The editor then makes a decision on whether to proceed with publication. If we got the data, we will then proceed to verify computational reproducibility. We will also work with the authors to make the restrictions and possibilities clear in the README. 
+Once I have satisfied my professional curiosity, I report back to the editor in charge of the paper, and convey my opinion regarding the legitimacy of the data provider and of the data. The editor then makes a decision on whether to proceed with publication. Once we have obtained the data, we proceed to verify computational reproducibility. We will also work with the authors to make the restrictions and possibilities clear in the README. 
 
 ### Publication
 
