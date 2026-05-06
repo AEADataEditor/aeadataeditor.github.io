@@ -46,7 +46,7 @@ We provide a secure upload link, different from the draft deposit. Readers can v
 
 ### Name of the provider
 
-For the name of the company, we may sign a separate NDA, to protect both us and the authors. Again, we have an SOP for that; here's the (separate) [template email](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Unknown-Provider-Info.html) for that. Important: the data provider should be aware of us signing the NDA, as we will publish the fact that the authors revealed the name to me.
+For the name of the company, we may sign a separate NDA, to protect both us and the authors. Again, we have an SOP (Standard Operating Procedure) for that; here's the (separate) [template email](https://aeadataeditor.github.io/LDI-Research-Aide/docs/emails/Request-Unknown-Provider-Info.html) for that. Important: the data provider should be aware of us signing the NDA, as we will publish the fact that the authors revealed the name to me.
 
 ### Verification
 
