@@ -26,7 +26,11 @@ The [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/data
 
 ## How often does this happen?
 
-A legitimate question is: does this happen often? The answer is no. Upon ingest, data access is classified into five categories: included (fully open data), and four categories of restricted access, going from "very easy to access" to "very difficult".[^dcaf] The "anonymous data" obviously falls into the last category, and in the last twelve months, we've had 5 such cases.
+A legitimate question is: does this happen often? The answer is no. Upon ingest, data access is classified into five categories: included (fully open data), and four categories of restricted access, going from "very easy to access" to "very difficult".[^dcaf] 
+
+![Data access classification](/images/figure_access_provision.png)
+
+The "anonymous data" obviously falls into the last category, and in the last twelve months, we've had 5 such cases.
 
 [^dcaf]: The first pass at this is made by authors self-classifying their data, on the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability). We may revisit this once we've seen the replication package, and will recode this in our internal database.
 
