@@ -17,7 +17,9 @@ We will describe a few checks and edits you should make to your code, in order t
 
 Much more extensive guidance on the issues addressed here is available at <https://larsvilhuber.github.io/self-checking-reproducibility/>. We reference specific chapters there at each of the steps.
 
-> ⚠️❗ **IMPORTANT:** All but the last steps can be done by anybody, no special system requirements required, and independent of your ability to share confidential data. However, the last step may not be possible in an institution that does not allow you to install container software (Docker, OrbStack, etc.), and does not have such technology installed on a Linux cluster. We provide a public website where you can leverage containers for verification, but you should not use it for confidential data. In that case, please do all the other steps. 
+> ⚠️❗ **IMPORTANT:** All but the last steps can be done by anybody, no special system requirements required, and independent of your ability to share confidential data. 
+>
+> However, the last step (online or offline validation) may not be possible in some circumstances: You should not upload sensitive data to the SIVACOR system we describe, and you may not be able to run a container-based validation in an institution that does not allow you to install container software (Docker, OrbStack, etc.). Nevertheless, do still implement the first steps, and let the Data Editor know if you cannot do the final step.
 
 <div style="page-break-after: always;"></div>
 
