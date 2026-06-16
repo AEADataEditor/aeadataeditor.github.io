@@ -377,6 +377,12 @@ var store = [{
         "url": "/posts/2026-05-05-pii",
         "teaser": null
       },{
+        "title": "What to do when you have private, even anonymous data as part of your analysis?",
+        "excerpt":"In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves in the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might...","categories": [],
+        "tags": ["data editor tips","replication packages","terms of use","private data"],
+        "url": "/posts/2026-05-08-private-data",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
