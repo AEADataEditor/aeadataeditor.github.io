@@ -2,7 +2,6 @@
 title:  "Random notes from the AMAs"
 date: 2024-04-11
 mastodon: 
-twitter:
 bluesky: https://bsky.app/profile/aeadata.bsky.social/post/3kppyo5fj7v2g
 tags:
   - data editor tips

@@ -4,7 +4,6 @@ date: 2024-04-10
 classes: wide
 datatable: true
 mastodon: 
-twitter:
 bluesky:
 tags:
   - best papers

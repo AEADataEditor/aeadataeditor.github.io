@@ -2,7 +2,6 @@
 title:  "How to respond to data provider requests for data removal (take-down requests)"
 date: 2024-11-01
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

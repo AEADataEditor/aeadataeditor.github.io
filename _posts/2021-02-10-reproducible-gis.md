@@ -4,7 +4,6 @@ layout: single-withtoc
 date: 2021-02-10
 tags:
   - FAQ
-  - Twitter
   - GIS
 ---
 

@@ -2,7 +2,6 @@
 title:  "On the use of Excel for reproducible tables"
 date: 2025-01-17
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

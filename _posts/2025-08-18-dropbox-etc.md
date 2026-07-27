@@ -2,7 +2,6 @@
 title:  "On the Dangers of Online Storage"
 date: 2025-08-18
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

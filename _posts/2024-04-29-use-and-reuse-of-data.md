@@ -2,7 +2,6 @@
 title:  "On the use and redistribution of data"
 date: 2024-04-29
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

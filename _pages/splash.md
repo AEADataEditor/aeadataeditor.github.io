@@ -50,9 +50,9 @@ feature_row2:
     image_path: /images/template-readme-700x433.png
     btn_label: "Go there now"
     btn_class: "btn--primary"
-twitter_row:
-  - title: "Most Recent Tweets"
-    excerpt: '<a href="https://twitter.com/aeadata?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aeadata</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/><a class="twitter-timeline" href="https://twitter.com/AeaData?ref_src=twsrc%5Etfw">Tweets by AeaData</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+social_row:
+  - title: "Follow us"
+    excerpt: 'Follow us on <a href="https://bsky.app/profile/aeadata.bsky.social"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i>Bluesky</a> or <a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>Mastodon</a>.'
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -65,4 +65,4 @@ twitter_row:
 
 
 
-{% include feature_row id="twitter_row" type="center" %}
+{% include feature_row id="social_row" type="center" %}

@@ -4,7 +4,6 @@ layout: single-withtoc
 date: 2021-06-17
 tags:
   - FAQ
-  - Twitter
   - Software
   - Code
 ---

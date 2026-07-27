@@ -2,7 +2,6 @@
 title:  "Preparing Replication Packages for 2026 AEA Papers and Proceedings"
 date: 2026-01-19
 mastodon: 
-twitter:
 bluesky: https://bsky.app/profile/aeadata.bsky.social/post/3mcsdm6gs4c2f
 tags:
   - data editor tips

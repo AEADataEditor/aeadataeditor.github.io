@@ -2,7 +2,6 @@
 title:  "On the use and reuse of within-project code"
 date: 2024-07-19
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

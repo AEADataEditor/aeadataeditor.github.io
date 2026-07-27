@@ -4,7 +4,6 @@ layout: single-withtoc
 date: 2020-12-08
 tags:
   - README
-  - Twitter
 ---
 
 We have released the first version of a template README for social sciences at <https://social-science-data-editors.github.io/template_README/>.

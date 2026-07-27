@@ -42,7 +42,7 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "First Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         
-        {% if page.twitter or page.mastodon %}
+        {% if page.bluesky or page.mastodon %}
            {% include page-links.html %}
         {% endif %}
              

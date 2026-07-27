@@ -2,7 +2,6 @@
 title:  "On access to restricted data by journals and others"
 date: 2025-02-18
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

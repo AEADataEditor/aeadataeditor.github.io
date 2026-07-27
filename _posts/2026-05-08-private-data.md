@@ -2,7 +2,6 @@
 title:  "What to do when you have private, even anonymous data as part of your analysis?"
 date: 2026-05-08
 mastodon: 
-twitter:
 bluesky: 
 tags:
   - data editor tips

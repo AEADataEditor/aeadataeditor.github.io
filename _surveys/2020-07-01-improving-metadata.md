@@ -36,8 +36,6 @@ Authors have the best knowledge of the data they used. We are thus asking author
 
 ## Frequently asked questions
 
-Also see the [Twitter thread on this topic](https://twitter.com/AeaData/status/1290465041498726400).
-
 ### FAQ 1
 
 > Deposit is not actually a data set, just code that simulates data

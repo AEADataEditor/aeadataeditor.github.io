@@ -4,7 +4,6 @@ layout: single-withtoc
 date: 2021-01-19
 tags:
   - FAQ
-  - Twitter
   - Fireside Chat
 ---
 

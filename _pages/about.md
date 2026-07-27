@@ -41,9 +41,4 @@ The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/ae
 
 ---
 
-<a href="https://twitter.com/aeadata?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aeadata</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-
-
-## Most Recent Tweets
-<a class="twitter-timeline" href="https://twitter.com/AeaData?ref_src=twsrc%5Etfw">Tweets by AeaData</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+Follow us on [Bluesky](https://bsky.app/profile/aeadata.bsky.social) or [Mastodon](https://mstdn.social/@aeadata).
