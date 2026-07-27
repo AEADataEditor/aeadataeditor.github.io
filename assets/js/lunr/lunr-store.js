@@ -181,7 +181,7 @@ var store = [{
       },{
         "title": "Release of a template README",
         "excerpt":"We have released the first version of a template README for social sciences at https://social-science-data-editors.github.io/template_README/. Release The template README provided on this website is in a form that follows best practices as defined by a number of data editors at social science journals. Contributors Joint work with the Review of...","categories": [],
-        "tags": ["README","Twitter"],
+        "tags": ["README"],
         "url": "/posts/2020-12-08-template-readme",
         "teaser": null
       },{
@@ -193,37 +193,37 @@ var store = [{
       },{
         "title": "Follow-up to Fireside Chat",
         "excerpt":"In this post, I’ll pick up questions that have been asked over Twitter or during the 2021-01-19 Fireside chat, in long form (Twitter is not always the best medium). Over time, you might see some of these questions and answers be migrated to FAQ and/or best practices documents. Starting a...","categories": [],
-        "tags": ["FAQ","Twitter","Fireside Chat"],
+        "tags": ["FAQ","Fireside Chat"],
         "url": "/posts/2021-01-19-fireside-chat",
         "teaser": null
       },{
         "title": "A Day in the Life of a Data Editor",
         "excerpt":"I wanted to illustrate the range of the various topics that a Data Editor might face, by taking a fairly random day (2021-01-29) and listing all the various (distinct) activities that are in-scope for my job at the AEA. A day in the life… All in all, I worked on...","categories": [],
-        "tags": ["FAQ","Twitter","Tasks"],
+        "tags": ["FAQ","Tasks"],
         "url": "/posts/2021-01-31-day-in-the-life",
         "teaser": null
       },{
         "title": "Reproducible GIS",
         "excerpt":"A note on reproducible GIS by economists: it’s mostly absent. Here are some tips. Reproducibility and GIS Reproducibility means that the inputs and methods can be repeated by a (somewhat) knowledgeable person. For GIS, that might (should) mean code, but it definitely means at least SOME instructions. Even if they...","categories": [],
-        "tags": ["FAQ","Twitter","GIS"],
+        "tags": ["FAQ","GIS"],
         "url": "/posts/2021-02-10-reproducible-gis",
         "teaser": null
       },{
         "title": "What data to provide",
         "excerpt":"What do we mean by “data”? What data should be provided? One of my data editor colleagues at Social Science Data Editors relayed a question to me recently (“asking for a friend…”): “do extract files need to be included in AEA data replication submissions?” They noted “The closest I could...","categories": [],
-        "tags": ["FAQ","Twitter","Data"],
+        "tags": ["FAQ","Data"],
         "url": "/posts/2021-03-31-what-data",
         "teaser": null
       },{
         "title": "File paths in statistical software",
         "excerpt":"A short thread (PSA) on a FOC (frequently occurring problem) that shouldn’t be one: file paths in statistical software. Comment in a recent reply to one of our replication reports (note: this was not actually a problem): “We use a HPC and a Linux environment. Therefore, the folders are separated...","categories": [],
-        "tags": ["FAQ","Twitter","Data","Code"],
+        "tags": ["FAQ","Data","Code"],
         "url": "/posts/2021-04-09-paths",
         "teaser": null
       },{
         "title": "Software, code, and repositories",
         "excerpt":"A short thread on software, code, versioning, citation, and repositories. Only very few AEA articles reference Github/Gitlab/Bitbucket repositories. More should do so. A few notes. Replication packages and version control Fact: all replication packages contain code. Note: sometimes, that’s an Excel file, but that’s still code. But few seem to...","categories": [],
-        "tags": ["FAQ","Twitter","Software","Code"],
+        "tags": ["FAQ","Software","Code"],
         "url": "/posts/2021-06-17-software-citations",
         "teaser": null
       },{
@@ -241,7 +241,7 @@ var store = [{
       },{
         "title": "Use of Docker for Reproducibility in Economics",
         "excerpt":"In reproducibility verification, a common scenario is the author response “but-it-works-on-my-machine”. Finding common environments is important in such situations, to demonstrate that the error does arise, reproducibly, but also to share with the author the exact environment so that the issue can be fixed. Shipping around laptops probably isn’t the...","categories": [],
-        "tags": ["FAQ","Twitter","Docker","Code"],
+        "tags": ["FAQ","Docker","Code"],
         "url": "/posts/2021-11-16-docker",
         "teaser": null
       },{
