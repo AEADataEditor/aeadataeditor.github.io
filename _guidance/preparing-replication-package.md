@@ -9,9 +9,9 @@ date: 2025-12-04
 This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts. Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](#authorized-containers)). 
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts (see [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step)). Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](#authorized-containers)). 
 >
-> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). 
+> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). See [Step 5 section: Using the SIVACOR website](#using-the-sivacor-website).
 
 ## Overview
 
