@@ -6,7 +6,7 @@ date: 2026-02-16
 
 [◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 4](preparing-replication-package-step4)
 
-After you have made all the above changes, you should test your code in an appropriate **authorized** container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.
+After you have made all the  changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.
 
 ## Using the SIVACOR website
 
@@ -16,14 +16,20 @@ We have developed the [SIVACOR](https://sivacor.org) service, which allows you t
 
 [![SIVACOR landing page](/images/sivacor-login.png)](https://sivacor.org)
 
-For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.
+For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor (via import to your openICPSR draft deposit). A TRO does not need to be re-run by the Data Editor.
 
 
 ## Authorized containers
 
 SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at <https://docs.sivacor.org/docs/images/>. In general, Stata, R, and MATLAB (with Dynare) are supported.
 
-If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked..
+If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked. However, we do not allow for arbitrary (user-created) containers on SIVACOR, though if you think that they are useful for your replication package, please reach out.
+
+## A note about multi-software workflows
+
+We are not currently attempting to generalize this to all multi-software replication packages. Building multi-software containers  [definitely](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [with some effort](https://github.com/AEADataEditor/docker-aer-2023-0700). 
+
+However, SIVACOR does allow for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step).
 
 
 ## Testing using Docker locally (advanced)
