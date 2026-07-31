@@ -162,7 +162,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Step 5: Testing in containers",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 4 After you have made all the above changes, you should test your code in an appropriate authorized container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 4 After you have made all the changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software,...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step5",
         "teaser": null

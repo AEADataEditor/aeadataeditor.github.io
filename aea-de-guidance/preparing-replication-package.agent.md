@@ -29,7 +29,9 @@ follow those links.
 This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software. Admissible containers are listed in the [Step 5 section: authorized containers](#authorized-containers). We are not currently attempting to generalize this to multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts. Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](#authorized-containers)). 
+>
+> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). 
 
 ## Overview
 
@@ -478,7 +480,7 @@ For more complex tables, it may be easier to simply write out entire matrices, o
 
 
 
-After you have made all the above changes, you should test your code in an appropriate **authorized** container. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.
+After you have made all the  changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.
 
 ## Using the SIVACOR website
 
@@ -487,14 +489,20 @@ We have developed the [SIVACOR](https://sivacor.org) service, which allows you t
 > In fact, we will run your code using this same system to verify compliance with all of the above steps!
 
 
-For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor. A TRO does not need to be re-run by the Data Editor.
+For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor (via import to your openICPSR draft deposit). A TRO does not need to be re-run by the Data Editor.
 
 
 ## Authorized containers
 
 SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at <https://docs.sivacor.org/docs/images/>. In general, Stata, R, and MATLAB (with Dynare) are supported.
 
-If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked..
+If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked. However, we do not allow for arbitrary (user-created) containers on SIVACOR, though if you think that they are useful for your replication package, please reach out.
+
+## A note about multi-software workflows
+
+We are not currently attempting to generalize this to all multi-software replication packages. Building multi-software containers  [definitely](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [with some effort](https://github.com/AEADataEditor/docker-aer-2023-0700). 
+
+However, SIVACOR does allow for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step).
 
 
 ## Testing using Docker locally (advanced)
