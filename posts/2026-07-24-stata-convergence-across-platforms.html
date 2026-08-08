@@ -1,0 +1,733 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Same Code, a Different Answer: Stata Convergence Across Platforms - Office of the AEA Data Editor</title>
+<meta name="description" content="A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="The Same Code, a Different Answer: Stata Convergence Across Platforms">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms">
+
+
+  <meta property="og:description" content="A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-24T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://bsky.app/profile/aeadata.bsky.social" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span class="label">Bluesky</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Same Code, a Different Answer: Stata Convergence Across Platforms">
+    <meta itemprop="description" content="A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).">
+    <meta itemprop="datePublished" content="2026-07-24T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">The Same Code, a Different Answer: Stata Convergence Across Platforms
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-07-24T00:00:00-04:00">July 24, 2026</time></p>
+        
+        
+        
+               <p><ul class="author__urls social-icons">
+      
+      
+        <li>
+          <a href="https://bsky.app/profile/aeadata.bsky.social/post/3mreaq7ll4k2v" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span class="label">On Bluesky</span>
+          </a>
+        </li>
+      
+
+      
+
+    </ul>
+</p>
+
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).</p>
+
+<!-- more -->
+
+<h2 id="first-do-not-hide-the-output">First: do not hide the output!</h2>
+
+<p>The immediate problem was not the regression itself. It was that we could not see the regression output, and thus the error.</p>
+
+<p>The offending line was, in essence:</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">quietly</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">regression_55</span><span class="o">.</span><span class="n">do</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">quietly</code> suppressed exactly the output that would have explained the failure. The code simply stopped completing, with nothing on screen to say why. Diagnosing it meant unwinding the suppression before we could even start on the econometrics.</p>
+
+<h2 id="its-not-exactly-the-code">It’s not exactly the code</h2>
+
+<p>After some back and forth, the authors provided (credible) evidence that the code did run on their system. So we reduced their several hundred lines to a minimal working example of about two dozen, and sent it to Stata support, who responded promptly!</p>
+
+<h2 id="it-is-not-the-operating-system">It is not the operating system</h2>
+
+<p>Our first hypothesis was the obvious one. We had run on Windows Server (StataNow 19) and Linux (StataNow 19); the authors had run on Windows Enterprise (Stata 19). Operating system, then. Or version.</p>
+
+<p>That was not enough. Stata’s technical staff ran the example across their internal collection of hardware and software, and reported:</p>
+
+<blockquote>
+  <p>convergence on Windows box running Stata 18 MP32 and Stata 19 MP8, but <code class="language-plaintext highlighter-rouge">set processors</code> to any number less than 8 cause not converging….Mac mini Apple M2 pro/ S19MP16 NOT…Linux/S19MP16, S19SE, S18MP2, S17MP2, S16MP2, NOT converged for any number of processors</p>
+</blockquote>
+
+<p>One should take particular note of this fact: On the <em>same</em> Windows machine, with the <em>same</em> Stata, the model converges or does not converge depending on how many processors you let it use. The authors, it turned out, had run Stata 19 MP10 — one of the <strong>few</strong> combinations in which the model converged at all.</p>
+
+<p>The determining variable was not the operating system, and not the Stata version. It was the number of processors.</p>
+
+<h2 id="what-was-actually-wrong">What was actually wrong</h2>
+
+<p>Stata’s statisticians examined the code and the data, and the answer is that it’s not “a bug.” Mostly. Quoting from their reply:</p>
+
+<blockquote>
+  <p>Stata, like any other software package, has fixed criteria to convergence declaration. It’s not foolproof. There will be always cases where convergence will be “declared” and it shouldn’t.</p>
+</blockquote>
+
+<blockquote>
+  <p>This is why we insist on the importance of examining the output and make sure that it makes sense. I looked at the output it shows several problems.</p>
+</blockquote>
+
+<p>Three symptoms, all visible in the output that <code class="language-plaintext highlighter-rouge">quietly</code> had been hiding:</p>
+
+<blockquote>
+  <p>1) there are missing standard errors. … an indication that there is a problem with the Hessian (either it has missing values, or for some reason it can’t be inverted), so you can’t trust your results.</p>
+
+  <p>2) There are huge confidence intervals,… coefficients are poorly identified.”
+3) The problem is the matrix of second derivatives, that
+is non invertible. In the cases where we get ‘convergence’,
+we get huge or missing standard errors, meaning that it can’t really be inverted.”</p>
+</blockquote>
+
+<p>The mechanism is worth spelling out, because it explains the platform sensitivity. Stata declares convergence when the scaled gradient satisfies <code class="language-plaintext highlighter-rouge">g*inv(H)*g' &lt; nrtolerance()</code>, with a default of <code class="language-plaintext highlighter-rouge">1e-5</code>. That criterion <em>requires inverting the Hessian</em>. When the Hessian is numerically singular, the criterion cannot be evaluated in a meaningful way — and whether it happens to be evaluated as satisfied comes down to floating-point details that differ with the number of processors, the BLAS in use, and the order in which sums are accumulated (my words, not theirs).</p>
+
+<p>They continued.</p>
+
+<blockquote>
+  <p>On Mac, I don’t get convergence by default, but I get it if I disable the <code class="language-plaintext highlighter-rouge">nrtolerance</code>, meaning that this is the tolerance that the model fails to meet.</p>
+</blockquote>
+
+<blockquote>
+  <p>If I write <code class="language-plaintext highlighter-rouge">shownrtol</code> option instead, I will see that (the “minimum” of all tolerances) is 0, but exact zero means that something can’t be computed, in this case the nrtol (which requires inverting the Hessian).</p>
+</blockquote>
+
+<p>So the model was not identified on any platform. On most configurations Stata correctly refused to declare victory. On a few — including the authors’ — it declared convergence it should not have.</p>
+
+<h2 id="why-this-matters-beyond-one-paper">Why this matters beyond one paper</h2>
+
+<p>Two observations:</p>
+
+<p>This was one regression out of many dozens in the paper. The rest converged. <em>How well</em> they converged we did not investigate — that remains for the authors, and for future replicators.</p>
+
+<p>More importantly, consider what would have happened had our replication machines been configured slightly differently. <strong>We only detect some of these issues.</strong> If we happen to land on the same sweet-spot hardware and software configuration as the authors, we never see a discrepancy, and the paper passes. The non-identification is still there; we just never trip over it. And it is genuinely hard for authors to diagnose on their own, unless they happen to maintain the same museum of hardware and software versions that Stata does.</p>
+
+<h2 id="lessons">Lessons</h2>
+
+<p>I will not pronounce on the econometrics — that is the authors’ problem, and for future replicators (who have a reproducible package to work with!) But two things are general:</p>
+
+<p><strong>Know your regressions.</strong> Missing standard errors and implausibly wide confidence intervals are not cosmetic blemishes to be tidied up in the table. They are the software telling you the model is not identified. Look at the output.</p>
+
+<p><strong>Do not suppress your output.</strong> In Stata, that means thinking twice about <code class="language-plaintext highlighter-rouge">quietly</code>. The equivalents elsewhere are just as effective at hiding a problem: <code class="language-plaintext highlighter-rouge">source()</code> without <code class="language-plaintext highlighter-rouge">echo=TRUE</code> in R, or a stray <code class="language-plaintext highlighter-rouge">;</code> in MATLAB. Silence during a long run feels tidy. It is not tidy — it is a diagnostic you have thrown away, and you will want it back at precisely the moment it is gone.</p>
+
+<p>Thanks to <a href="https://bsky.app/profile/stata.bsky.social">@stata.bsky.social</a>, whose helpdesk responded quickly and then very thoroughly, and did a fantastic job diagnosing this.</p>
+
+<p>Good night, and good computing!</p>
+
+<hr />
+
+<p><em>This post is adapted from <a href="https://bsky.app/profile/aeadata.bsky.social/post/3mreaq7ll4k2v">a thread</a> originally posted on Bluesky.</em></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#code" class="page__taxonomy-item" rel="tag">Code</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#reproducibility" class="page__taxonomy-item" rel="tag">reproducibility</a><span class="sep">, </span>
+    
+      <a href="/tags/#stata" class="page__taxonomy-item" rel="tag">Stata</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#dataeditor" class="page__taxonomy-item" rel="tag">dataeditor</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-07-24T00:00:00-04:00">July 24, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://bsky.app/intent/compose?text=The+Same+Code%2C+a+Different+Answer%3A+Stata+Convergence+Across+Platforms%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-07-24-stata-convergence-across-platforms" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-07-24-stata-convergence-across-platforms" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-05-08-private-data" rel="permalink">What to do when you have private, even anonymous data as part of your analysis?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-05-05-pii" rel="permalink">What to do when PII is detected in a replication package?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-01-19-preparing-pandp-replication-packages" rel="permalink">Preparing Replication Packages for 2026 AEA Papers and Proceedings
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">For authors preparing the replication packages that accompany their 2026 AEA Papers and Proceedings publication www.aeaweb.org/journals/pandp: Here are some ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2025-08-18-dropbox-etc" rel="permalink">On the Dangers of Online Storage
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We see this far too often: When we go to check the deposit that authors submit to us, all the files are there, but somewhere halfway through the process, the...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2026-07-24-stata-convergence-across-platforms.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://bsky.app/profile/aeadata.bsky.social">
+              <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> @aeadata.bsky.social</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

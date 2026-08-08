@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-07-31T16:58:55-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">What to do when you have private, even anonymous data as part of your analysis?</title><link href="https://aeadataeditor.github.io/posts/2026-05-08-private-data" rel="alternate" type="text/html" title="What to do when you have private, even anonymous data as part of your analysis?" /><published>2026-05-08T00:00:00-04:00</published><updated>2026-05-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/private-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-05-08-private-data"><![CDATA[<p>In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves in the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might compromise a follow-up study.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-08-07T22:36:13-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">The Same Code, a Different Answer: Stata Convergence Across Platforms</title><link href="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms" rel="alternate" type="text/html" title="The Same Code, a Different Answer: Stata Convergence Across Platforms" /><published>2026-07-24T00:00:00-04:00</published><updated>2026-07-24T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/stata-convergence-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms"><![CDATA[<p>A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).</p>
+
+<!-- more -->
+
+<h2 id="first-do-not-hide-the-output">First: do not hide the output!</h2>
+
+<p>The immediate problem was not the regression itself. It was that we could not see the regression output, and thus the error.</p>
+
+<p>The offending line was, in essence:</p>
+
+<div class="language-stata highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">quietly</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">regression_55</span><span class="o">.</span><span class="n">do</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">quietly</code> suppressed exactly the output that would have explained the failure. The code simply stopped completing, with nothing on screen to say why. Diagnosing it meant unwinding the suppression before we could even start on the econometrics.</p>
+
+<h2 id="its-not-exactly-the-code">It’s not exactly the code</h2>
+
+<p>After some back and forth, the authors provided (credible) evidence that the code did run on their system. So we reduced their several hundred lines to a minimal working example of about two dozen, and sent it to Stata support, who responded promptly!</p>
+
+<h2 id="it-is-not-the-operating-system">It is not the operating system</h2>
+
+<p>Our first hypothesis was the obvious one. We had run on Windows Server (StataNow 19) and Linux (StataNow 19); the authors had run on Windows Enterprise (Stata 19). Operating system, then. Or version.</p>
+
+<p>That was not enough. Stata’s technical staff ran the example across their internal collection of hardware and software, and reported:</p>
+
+<blockquote>
+  <p>convergence on Windows box running Stata 18 MP32 and Stata 19 MP8, but <code class="language-plaintext highlighter-rouge">set processors</code> to any number less than 8 cause not converging….Mac mini Apple M2 pro/ S19MP16 NOT…Linux/S19MP16, S19SE, S18MP2, S17MP2, S16MP2, NOT converged for any number of processors</p>
+</blockquote>
+
+<p>One should take particular note of this fact: On the <em>same</em> Windows machine, with the <em>same</em> Stata, the model converges or does not converge depending on how many processors you let it use. The authors, it turned out, had run Stata 19 MP10 — one of the <strong>few</strong> combinations in which the model converged at all.</p>
+
+<p>The determining variable was not the operating system, and not the Stata version. It was the number of processors.</p>
+
+<h2 id="what-was-actually-wrong">What was actually wrong</h2>
+
+<p>Stata’s statisticians examined the code and the data, and the answer is that it’s not “a bug.” Mostly. Quoting from their reply:</p>
+
+<blockquote>
+  <p>Stata, like any other software package, has fixed criteria to convergence declaration. It’s not foolproof. There will be always cases where convergence will be “declared” and it shouldn’t.</p>
+</blockquote>
+
+<blockquote>
+  <p>This is why we insist on the importance of examining the output and make sure that it makes sense. I looked at the output it shows several problems.</p>
+</blockquote>
+
+<p>Three symptoms, all visible in the output that <code class="language-plaintext highlighter-rouge">quietly</code> had been hiding:</p>
+
+<blockquote>
+  <p>1) there are missing standard errors. … an indication that there is a problem with the Hessian (either it has missing values, or for some reason it can’t be inverted), so you can’t trust your results.</p>
+
+  <p>2) There are huge confidence intervals,… coefficients are poorly identified.”
+3) The problem is the matrix of second derivatives, that
+is non invertible. In the cases where we get ‘convergence’,
+we get huge or missing standard errors, meaning that it can’t really be inverted.”</p>
+</blockquote>
+
+<p>The mechanism is worth spelling out, because it explains the platform sensitivity. Stata declares convergence when the scaled gradient satisfies <code class="language-plaintext highlighter-rouge">g*inv(H)*g' &lt; nrtolerance()</code>, with a default of <code class="language-plaintext highlighter-rouge">1e-5</code>. That criterion <em>requires inverting the Hessian</em>. When the Hessian is numerically singular, the criterion cannot be evaluated in a meaningful way — and whether it happens to be evaluated as satisfied comes down to floating-point details that differ with the number of processors, the BLAS in use, and the order in which sums are accumulated (my words, not theirs).</p>
+
+<p>They continued.</p>
+
+<blockquote>
+  <p>On Mac, I don’t get convergence by default, but I get it if I disable the <code class="language-plaintext highlighter-rouge">nrtolerance</code>, meaning that this is the tolerance that the model fails to meet.</p>
+</blockquote>
+
+<blockquote>
+  <p>If I write <code class="language-plaintext highlighter-rouge">shownrtol</code> option instead, I will see that (the “minimum” of all tolerances) is 0, but exact zero means that something can’t be computed, in this case the nrtol (which requires inverting the Hessian).</p>
+</blockquote>
+
+<p>So the model was not identified on any platform. On most configurations Stata correctly refused to declare victory. On a few — including the authors’ — it declared convergence it should not have.</p>
+
+<h2 id="why-this-matters-beyond-one-paper">Why this matters beyond one paper</h2>
+
+<p>Two observations:</p>
+
+<p>This was one regression out of many dozens in the paper. The rest converged. <em>How well</em> they converged we did not investigate — that remains for the authors, and for future replicators.</p>
+
+<p>More importantly, consider what would have happened had our replication machines been configured slightly differently. <strong>We only detect some of these issues.</strong> If we happen to land on the same sweet-spot hardware and software configuration as the authors, we never see a discrepancy, and the paper passes. The non-identification is still there; we just never trip over it. And it is genuinely hard for authors to diagnose on their own, unless they happen to maintain the same museum of hardware and software versions that Stata does.</p>
+
+<h2 id="lessons">Lessons</h2>
+
+<p>I will not pronounce on the econometrics — that is the authors’ problem, and for future replicators (who have a reproducible package to work with!) But two things are general:</p>
+
+<p><strong>Know your regressions.</strong> Missing standard errors and implausibly wide confidence intervals are not cosmetic blemishes to be tidied up in the table. They are the software telling you the model is not identified. Look at the output.</p>
+
+<p><strong>Do not suppress your output.</strong> In Stata, that means thinking twice about <code class="language-plaintext highlighter-rouge">quietly</code>. The equivalents elsewhere are just as effective at hiding a problem: <code class="language-plaintext highlighter-rouge">source()</code> without <code class="language-plaintext highlighter-rouge">echo=TRUE</code> in R, or a stray <code class="language-plaintext highlighter-rouge">;</code> in MATLAB. Silence during a long run feels tidy. It is not tidy — it is a diagnostic you have thrown away, and you will want it back at precisely the moment it is gone.</p>
+
+<p>Thanks to <a href="https://bsky.app/profile/stata.bsky.social">@stata.bsky.social</a>, whose helpdesk responded quickly and then very thoroughly, and did a fantastic job diagnosing this.</p>
+
+<p>Good night, and good computing!</p>
+
+<hr />
+
+<p><em>This post is adapted from <a href="https://bsky.app/profile/aeadata.bsky.social/post/3mreaq7ll4k2v">a thread</a> originally posted on Bluesky.</em></p>]]></content><author><name>AEA Data Editor</name></author><category term="dataeditor" /><category term="data editor tips" /><category term="reproducibility" /><category term="replication packages" /><category term="Stata" /><category term="Code" /><summary type="html"><![CDATA[A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).]]></summary></entry><entry><title type="html">What to do when you have private, even anonymous data as part of your analysis?</title><link href="https://aeadataeditor.github.io/posts/2026-05-08-private-data" rel="alternate" type="text/html" title="What to do when you have private, even anonymous data as part of your analysis?" /><published>2026-05-08T00:00:00-04:00</published><updated>2026-05-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/private-data</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-05-08-private-data"><![CDATA[<p>In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves in the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might compromise a follow-up study.</p>
 
 <p>Of course, it is the first claim a fraudster would make, too. So how can we help legitimate authors separate themselves from the fraudsters, and still publish interesting and <strong>real</strong> research in journals?</p>
 
@@ -1116,63 +1208,4 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
 
 <h2 id="crediting-others-software-citations">Crediting others (software citations)</h2>
 
-<p>R package to generate a bibliography file (bib, etc.) from all the citable packages used in an R-based replication package:  <a href="https://github.com/Pakillo/grateful">https://github.com/Pakillo/grateful</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><summary type="html"><![CDATA[In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.]]></summary></entry><entry><title type="html">AEJ Best Papers 2024 and replication packages</title><link href="https://aeadataeditor.github.io/posts/2024-04-10-aej-best-papers-2024" rel="alternate" type="text/html" title="AEJ Best Papers 2024 and replication packages" /><published>2024-04-10T00:00:00-04:00</published><updated>2024-04-10T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/aej-best-papers-2024</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-10-aej-best-papers-2024"><![CDATA[<p>The annual <strong>American Economic Journal (AEJ) Best Paper Awards</strong> highlight the best paper published in each of the American Economic Journals: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics over the last three years. Nominations are provided by AEA members, and winners are selected by the journals’ Boards of Editors. More information, including links to the papers, at  <a href="https://www.aeaweb.org/about-aea/honors-awards/aej-best-papers">https://www.aeaweb.org/about-aea/honors-awards/aej-best-papers</a>.</p>
-
-<p>The decision process is on the overall scientific merit. On this page, I list the replication packages for each of these.</p>
-
-<!-- more -->
-
-<p><!-- manually constructing table -->
-  <!-- "Journal","Title","Authors","DOI","Date","Package DOI","Requires confidential or proprietary data","Data Editor ran","Notes" --></p>
-
-<h2 id="aej-applied-economics">AEJ Applied Economics</h2>
-
-<blockquote>
-  <p>Manasi Deshpande, Tal Gross, and Yalun Su. “Disability and Distress: The Effect of Disability Programs on Financial Outcomes” <em>AEJ Applied Economics</em> (April 2021). <a href="https://doi.org/10.1257/app.20190709">10.1257/app.20190709</a></p>
-</blockquote>
-
-<ul>
-  <li>Replication package: <a href="https://doi.org/10.3886/E118462V1">10.3886/E118462V1</a></li>
-  <li>Does the replication package require confidential or proprietary data? <strong>Yes</strong></li>
-  <li>Did the Data Editor run the package? <strong>Partially</strong></li>
-  <li>Additional notes:    <em>Requires ZTRAX data, which are no longer accessible.</em></li>
-</ul>
-
-<h2 id="aej-economic-policy">AEJ Economic Policy</h2>
-
-<blockquote>
-  <p>Barbara Biasi. “The Labor Market for Teachers under Different Pay Schemes” <em>AEJ Economic Policy</em> (August 2021). <a href="https://doi.org/10.1257/pol.20200295">10.1257/pol.20200295</a></p>
-</blockquote>
-
-<ul>
-  <li>Replication package: <a href="https://doi.org/10.3886/E119844V1">10.3886/E119844V1</a></li>
-  <li>Does the replication package require confidential or proprietary data? <strong>Yes</strong></li>
-  <li>Did the Data Editor run the package? <strong>No</strong></li>
-  <li>Additional notes:    <em>Uses restricted data from the Wisconsin Department of Public Instruction and New York City Department of Education.</em></li>
-</ul>
-
-<h2 id="aej-macroeconomics">AEJ Macroeconomics</h2>
-
-<blockquote>
-  <p>Silvia Miranda-Agrippino, and Giovanni Ricco. “The Transmission of Monetary Policy Shocks” <em>AEJ Macroeconomics</em> (July 2021). <a href="https://doi.org/10.1257/mac.20180124">10.1257/mac.20180124</a></p>
-</blockquote>
-
-<ul>
-  <li>Replication package: <a href="https://doi.org/10.3886/E116841V1">10.3886/E116841V1</a></li>
-  <li>Does the replication package require confidential or proprietary data? <strong>Yes</strong></li>
-  <li>Did the Data Editor run the package? <strong>Yes</strong></li>
-  <li>Additional notes:    <em>Only a small fraction of the data are proprietary, but can be accessed from the typical business school library. The remaining data are included.</em></li>
-</ul>
-
-<h2 id="aej-microeconomics">AEJ Microeconomics</h2>
-
-<blockquote>
-  <p>Board and Meyer-ter-Vehn. “A Reputational Theory of Firm Dynamics” <em>AEJ Microeconomics</em> (May 2022). <a href="https://doi.org/10.1257/mic.20190376">10.1257/mic.20190376</a></p>
-</blockquote>
-
-<ul>
-  <li>Replication package: <a href="https://doi.org/10.3886/E118970V1">10.3886/E118970V1</a></li>
-  <li>Does the replication package require confidential or proprietary data? <strong>No</strong></li>
-  <li>Did the Data Editor run the package? <strong>Yes</strong></li>
-  <li>Additional notes:    <em>Only uses (creates) simulated data.</em></li>
-</ul>]]></content><author><name>AEA Data Editor</name></author><category term="best papers" /><category term="replication packages" /><summary type="html"><![CDATA[The annual American Economic Journal (AEJ) Best Paper Awards highlight the best paper published in each of the American Economic Journals: Applied Economics, Economic Policy, Macroeconomics, and Microeconomics over the last three years. Nominations are provided by AEA members, and winners are selected by the journals’ Boards of Editors. More information, including links to the papers, at https://www.aeaweb.org/about-aea/honors-awards/aej-best-papers. The decision process is on the overall scientific merit. On this page, I list the replication packages for each of these.]]></summary></entry></feed>
+<p>R package to generate a bibliography file (bib, etc.) from all the citable packages used in an R-based replication package:  <a href="https://github.com/Pakillo/grateful">https://github.com/Pakillo/grateful</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><summary type="html"><![CDATA[In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.]]></summary></entry></feed>

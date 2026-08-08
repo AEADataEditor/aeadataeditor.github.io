@@ -383,6 +383,12 @@ var store = [{
         "url": "/posts/2026-05-08-private-data",
         "teaser": null
       },{
+        "title": "The Same Code, a Different Answer: Stata Convergence Across Platforms",
+        "excerpt":"A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?). First: do not...","categories": ["dataeditor"],
+        "tags": ["data editor tips","reproducibility","replication packages","Stata","Code"],
+        "url": "/posts/2026-07-24-stata-convergence-across-platforms",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],
