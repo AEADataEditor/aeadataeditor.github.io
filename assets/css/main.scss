@@ -6,6 +6,7 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "custom-print"; // site-specific print styles, kept separate from the theme
 
 .greedy-nav {
    font-size: 0.8em;
