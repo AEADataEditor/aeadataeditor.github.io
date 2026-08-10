@@ -1,0 +1,40 @@
+# Build website for pull requests
+# Builds the Jekyll site and uploads it as a downloadable workflow artifact,
+# without publishing it anywhere. Lets reviewers download and inspect the
+# rendered site before it goes live via the main "Build website" workflow.
+
+name: Build PR preview
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.3.4
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Build Jekyll website
+      run: |
+        set -xo pipefail
+        rm -rf _site/*
+        gem install bundler -v 2.6.3
+        bundle install
+        bundle exec jekyll build
+    - name: Generate agent instruction file
+      run: python3 .github/scripts/generate_agent_md.py
+    - name: Upload site as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: site-preview-${{ github.event.pull_request.number }}
+        path: _site
+        retention-days: 14
