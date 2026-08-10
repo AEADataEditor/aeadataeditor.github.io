@@ -39,4 +39,10 @@
   .checklist-list ul {
     page-break-inside: auto;
   }
+
+  // Second-level items (e.g. the Step 3 sub-bullets) are on-screen detail
+  // only and shouldn't print.
+  .checklist-list ul ul {
+    display: none;
+  }
 }
