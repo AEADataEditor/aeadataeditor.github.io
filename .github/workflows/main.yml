@@ -5,7 +5,10 @@
 # The site is always built - on pushes to main, on pull requests, and on
 # manual runs - and the rendered _site is uploaded as a downloadable
 # workflow artifact. Publishing to gh-pages only happens on pushes to main,
-# or on a manual run with the "publish" option checked.
+# or on a manual run with the "publish" option checked. Pull requests from
+# branches of this repository (not forks) additionally get a live preview
+# deployed to Cloudflare Pages, with the link posted as a PR comment. See
+# README-DEPLOYMENT.md for the one-time Cloudflare setup.
 
 name: Build website
 
@@ -74,3 +77,40 @@ jobs:
          user_email: 'lars.vilhuber@cornell.edu'
          publish_branch: gh-pages
          keep_files: false
+
+  preview:
+    needs: build
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write     # only for the PR comment
+    steps:
+    - name: Download site artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: site
+        path: _site
+    - name: Deploy PR preview
+      id: preview
+      # Forked PRs cannot read secrets, and handing a deploy token to
+      # unreviewed code is a bad trade for a preview.
+      if: github.event.pull_request.head.repo.full_name == github.repository
+      uses: cloudflare/wrangler-action@v4
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: >-
+          pages deploy ./_site
+          --project-name=aeadataeditor-preview
+          --branch=pr-${{ github.event.pull_request.number }}
+    - name: Publish preview link
+      if: steps.preview.outcome == 'success'
+      env:
+        GH_TOKEN: ${{ github.token }}
+        PR: ${{ github.event.pull_request.number }}
+        URL: ${{ steps.preview.outputs.pages-deployment-alias-url }}
+      run: |
+        echo "📖 Preview: $URL" >> "$GITHUB_STEP_SUMMARY"
+        gh pr comment "$PR" --edit-last --create-if-none \
+          --body "📖 **Preview:** $URL — commit \`${GITHUB_SHA:0:7}\`"
