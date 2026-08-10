@@ -51,14 +51,14 @@ deploy anything.
    ```
 
 4. **Create the Cloudflare Pages project**, if it doesn't already exist.
-   The workflow deploys to a project named `aeadataeditor-preview`
+   The workflow deploys to a project named `aeamain`
    (see the `--project-name` flag in the `preview` job). Create it once with
    [Wrangler](https://developers.cloudflare.com/workers/wrangler/) (requires
    Node.js):
 
    ```bash
    npx wrangler login
-   npx wrangler pages project create aeadataeditor-preview
+   npx wrangler pages project create aeamain
    ```
 
    If you'd rather not install anything locally, you can instead just open a

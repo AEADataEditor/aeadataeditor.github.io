@@ -102,7 +102,7 @@ jobs:
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         command: >-
           pages deploy ./_site
-          --project-name=aeadataeditor-preview
+          --project-name=aeamain
           --branch=pr-${{ github.event.pull_request.number }}
     - name: Publish preview link
       if: steps.preview.outcome == 'success'
