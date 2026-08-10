@@ -1,12 +1,26 @@
-# Publish to gh-pages
+# Build and (conditionally) publish to gh-pages
 # This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
 # For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+#
+# The site is always built - on pushes to main, on pull requests, and on
+# manual runs - and the rendered _site is uploaded as a downloadable
+# workflow artifact. Publishing to gh-pages only happens on pushes to main,
+# or on a manual run with the "publish" option checked.
 
 name: Build website
 
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish to gh-pages'
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   build:
@@ -34,6 +48,23 @@ jobs:
         bundle exec jekyll build
     - name: Generate agent instruction file
       run: python3 .github/scripts/generate_agent_md.py
+    - name: Upload site artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: site
+        path: _site
+        retention-days: 14
+
+  publish:
+    needs: build
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download site artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: site
+        path: _site
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
