@@ -12,6 +12,10 @@ date: 2026-02-16
 
 Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:
 
+> The adjustments described on this page also apply to a **small number (2-4) of single-software main files** that are run in sequence.
+> 
+> If using SIVACOR in [Step 5](preparing-replication-package-step5): SIVACOR allows for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step). Each of the main files should be structured as outlined on this page.
+
 ## Scenario A: `main` is in the `code` directory
 
 The most frequent scenario we see (which we call **Scenario A**) amongst economists is that the main file is in the `code` directory:

@@ -9,7 +9,7 @@ date: 2026-01-07
 This document describes how to prepare your code for verification in detail, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software. Admissible containers are listed in the [Step 5 section: authorized containers](#authorized-containers). We are not currently attempting to generalize this to multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software, or a **small number of single-software steps**. Admissible software are listed in the [Step 5 section: authorized containers](preparing-replication-package-step5#authorized-containers). We are not currently attempting to generalize this to arbitrary multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
 
 
 
