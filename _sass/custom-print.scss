@@ -32,4 +32,11 @@
       font-weight: bold;
     }
   }
+
+  // Let the checklist flow across pages instead of the whole list jumping
+  // to the next page (the theme sets page-break-inside: avoid on all <ul>).
+  // Individual <li> items still avoid breaking mid-item.
+  .checklist-list ul {
+    page-break-inside: auto;
+  }
 }

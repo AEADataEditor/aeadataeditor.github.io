@@ -42,6 +42,7 @@ The AI will work through each step with you, identify issues, and suggest specif
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
+<div class="checklist-list" markdown="1">
 - [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file is provided that runs all code.  [Details](preparing-replication-package-step1)
 - [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).  [Details](preparing-replication-package-step2)
 - [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once.  [Details](preparing-replication-package-step3)
@@ -51,8 +52,9 @@ Print off (as PDF or on paper) the following checklist, and tick off each item a
 - [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [Details](preparing-replication-package-step4)
 - [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [Details](preparing-replication-package-step5)
 - [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
+</div>
 
-
+<div style="page-break-before: always;"></div>
 
 ## Submitting
 
