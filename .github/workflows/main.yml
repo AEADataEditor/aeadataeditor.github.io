@@ -108,9 +108,10 @@ jobs:
       if: steps.preview.outcome == 'success'
       env:
         GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
         PR: ${{ github.event.pull_request.number }}
         URL: ${{ steps.preview.outputs.pages-deployment-alias-url }}
       run: |
         echo "📖 Preview: $URL" >> "$GITHUB_STEP_SUMMARY"
-        gh pr comment "$PR" --edit-last --create-if-none \
+        gh pr comment "$PR" --repo "$REPO" --edit-last --create-if-none \
           --body "📖 **Preview:** $URL — commit \`${GITHUB_SHA:0:7}\`"
