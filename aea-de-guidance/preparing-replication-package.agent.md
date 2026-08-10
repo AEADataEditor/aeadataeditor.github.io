@@ -53,6 +53,11 @@ You can use an AI assistant (such as Claude, ChatGPT, or GitHub Copilot) to guid
 
 The AI will work through each step with you, identify issues, and suggest specific fixes.
 
+<div class="page-break-before print-only print-header">
+  <img src="/images/logo-aea-88x88.jpg" alt="AEA Data Editor logo">
+  <span>Office of the AEA Data Editor</span>
+</div>
+
 ## Checklist
 
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
