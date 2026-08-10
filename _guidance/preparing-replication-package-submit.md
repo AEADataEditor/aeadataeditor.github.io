@@ -32,3 +32,5 @@ However, if you prefer, you can submit the generated logfiles as evidence by ema
 ## Mark the deposit as complete
 
 In all cases, you should mark the openICPSR deposit as **complete** by [re-submitting it](faq#i-was-asked-to-modify-files-in-my-repository-not-yet-published-but-i-cannot-upload-or-edit-anything). 
+
+## You are done.

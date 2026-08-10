@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 4](preparing-replication-package-step4)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 4](preparing-replication-package-step4) | [Next: Finalize README ▶](preparing-replication-package-finalize)
 
 After you have made all the  changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software, the system will run the properly configured code automatically.
 
@@ -16,8 +16,7 @@ We have developed the [SIVACOR](https://sivacor.org) service, which allows you t
 
 [![SIVACOR landing page](/images/sivacor-login.png)](https://sivacor.org)
 
-For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, you can proceed directly to  
-[▶ Submitting](preparing-replication-package-submit#sivacor). A TRO does not need to be re-run by the Data Editor.
+For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, you can proceed directly to  [Submitting](preparing-replication-package-submit#sivacor). A TRO does not need to be re-run by the Data Editor.
 
 
 ## Authorized containers

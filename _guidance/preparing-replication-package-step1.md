@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [Next: Step 2 ▶](preparing-replication-package-step2)
 
 > You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called `main.do` if you already have one, but you may need to update your existing main file.
 

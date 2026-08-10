@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 5](preparing-replication-package-step5)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 5](preparing-replication-package-step5) | [Next: Submitting ▶](preparing-replication-package-submit)
 
 ### Finalize README
 
