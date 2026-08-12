@@ -398,7 +398,7 @@ var store = [{
         "title": "PSA: Please be precise when using Github as input to scientific articles.",
         "excerpt":"If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts… From a recent (draft) replication package: Data on Kelly et al. (2021)’s patent indicator are downloaded from the authors’ GitHub repository. A copy of...","categories": ["dataeditor"],
         "tags": ["data editor tips","reproducibility","data citation","Github","licenses"],
-        "url": "/posts/2026-08-12-psm-github",
+        "url": "/posts/2026-08-12-psa-github",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",
