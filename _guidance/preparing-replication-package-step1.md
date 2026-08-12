@@ -4,13 +4,17 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [Next: Step 2 ▶](preparing-replication-package-step2)
 
 > You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called `main.do` if you already have one, but you may need to update your existing main file.
 
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html>
 
 Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:
+
+> The adjustments described on this page also apply to a **small number (2-4) of single-software main files** that are run in sequence.
+> 
+> If using SIVACOR in [Step 5](preparing-replication-package-step5): SIVACOR allows for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step). Each of the main files should be structured as outlined on this page.
 
 ## Scenario A: `main` is in the `code` directory
 

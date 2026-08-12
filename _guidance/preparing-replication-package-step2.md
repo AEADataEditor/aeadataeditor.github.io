@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 1](preparing-replication-package-step1)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 1](preparing-replication-package-step1) | [Next: Step 3 ▶](preparing-replication-package-step3)
 
 Two issues:
 

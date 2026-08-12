@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 2](preparing-replication-package-step2)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 2](preparing-replication-package-step2) | [Next: Step 4 ▶](preparing-replication-package-step4)
 
 ## Stata packages
 

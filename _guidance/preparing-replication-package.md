@@ -9,9 +9,9 @@ date: 2025-12-04
 This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts (see [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step)). Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](#authorized-containers)). 
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts (see [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step)). Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](preparing-replication-package-step5#authorized-containers)). 
 >
-> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). See [Step 5 section: Using the SIVACOR website](#using-the-sivacor-website).
+> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). See [Step 5 section: Using the SIVACOR website](preparing-replication-package-step5#using-the-sivacor-website).
 
 ## Overview
 
@@ -43,22 +43,22 @@ The AI will work through each step with you, identify issues, and suggest specif
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
 <div class="checklist-list" markdown="1">
-- [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file is provided that runs all code.  [Details](preparing-replication-package-step1)
-- [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).  [Details](preparing-replication-package-step2)
-- [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once.  [Details](preparing-replication-package-step3)
+- [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file (or a very small number of single-software main files) is provided that runs all code.  [▶](preparing-replication-package-step1)
+- [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).  [▶](preparing-replication-package-step2)
+- [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once.  [▶](preparing-replication-package-step3)
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
-- [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [Details](preparing-replication-package-step4)
-- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [Details](preparing-replication-package-step5)
-- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
+- [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [▶](preparing-replication-package-step4)
+- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [▶](preparing-replication-package-step5)
+- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime.  [▶](preparing-replication-package-finalize)
 </div>
 
 <div style="page-break-before: always;"></div>
 
 ## Submitting
 
-You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence.
+You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence. See the [Submitting](preparing-replication-package-submit) page for details.
 
 ## Problems?
 

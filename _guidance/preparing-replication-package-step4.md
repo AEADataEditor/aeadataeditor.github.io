@@ -4,7 +4,7 @@ toc: true
 date: 2026-02-16
 ---
 
-[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 3](preparing-replication-package-step3)
+[◀ Back to Checklist](preparing-replication-package) | [Back to Details](preparing-replication-package-details) | [◀ Previous: Step 3](preparing-replication-package-step3) | [Next: Step 5 ▶](preparing-replication-package-step5)
 
 Displays (figures and tables) should be written out to external files, and the authors' versions, as used in the manuscript, should be provided. In the prototypical replication package structure above, these files would be in the `results` directory.
 
