@@ -29,9 +29,9 @@ follow those links.
 This document describes how to prepare your code for verification, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts (see [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step)). Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](#authorized-containers)). 
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so. If using multiple software in the replication package, you must be able to split the processing into a reasonably small set of single-software master scripts (see [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step)). Only a limited set of software are feasible at this time (see [Step 5 section: authorized containers](preparing-replication-package-step5#authorized-containers)). 
 >
-> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). See [Step 5 section: Using the SIVACOR website](#using-the-sivacor-website).
+> You do NOT need to know how Docker or similar software works, nor do you need to be able to run containers on your own computer (though it helps). See [Step 5 section: Using the SIVACOR website](preparing-replication-package-step5#using-the-sivacor-website).
 
 ## Overview
 
@@ -63,22 +63,22 @@ The AI will work through each step with you, identify issues, and suggest specif
 Print off (as PDF or on paper) the following checklist, and tick off each item as you complete it. Provide the completed checklist as part of the replication package.
 
 <div class="checklist-list" markdown="1">
-- [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file is provided that runs all code.  [Details](preparing-replication-package-step1)
-- [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).  [Details](preparing-replication-package-step2)
-- [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once.  [Details](preparing-replication-package-step3)
+- [ ] [**Step 1: Main file**](preparing-replication-package-step1): A single main file (or a very small number of single-software main files) is provided that runs all code.  [▶](preparing-replication-package-step1)
+- [ ] [**Step 2: Path names**](preparing-replication-package-step2): All paths in code use `/` (forward slashes) relative to a single top-level project directory (`$rootdir`, `$basedir`, etc.). The top-level project directory is set dynamically, not hard-coded (explanations below).  [▶](preparing-replication-package-step2)
+- [ ] [**Step 3: Dependencies**](preparing-replication-package-step3): All packages/libraries/dependencies are installed via code once.  [▶](preparing-replication-package-step3)
   - [ ] For Stata, these packages are installed into a subdirectory in the project (`$rootdir/ado`, `$basedir/adofiles`, etc.), and used by the code.
   - [ ] For R, `renv` is used (exceptions made for other package management systems if such a system is explained).
   - [ ] For Python, environments are used (native `venv` or `conda`), and the necessary top-level requirements specified (no OS-specific dependencies are included).
-- [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [Details](preparing-replication-package-step4)
-- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [Details](preparing-replication-package-step5)
-- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime. 
+- [ ] [**Step 4: Displays**](preparing-replication-package-step4): All figures and tables are written out to clearly identified external files, and the authors' versions, as used in the manuscript, are provided.  [▶](preparing-replication-package-step4)
+- [ ] [**Step 5: Testing on AEA-maintained website**](preparing-replication-package-step5): After all changes were made, the code was run  using the referenced website, a certified ZIP file was created, and is provided instead of the original replication package (alternatives exist for certain situations).  [▶](preparing-replication-package-step5)
+- [ ] (usually not necessary) [**Finalize**](preparing-replication-package-finalize): Update the README with the necessary information about computer specifications, Docker image used, memory and disk space requirements, and expected runtime.  [▶](preparing-replication-package-finalize)
 </div>
 
 <div style="page-break-before: always;"></div>
 
 ## Submitting
 
-You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence.
+You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence. See the [Submitting](preparing-replication-package-submit) page for details.
 
 ## Problems?
 
@@ -94,6 +94,10 @@ If you run into problems at any step, please reach out. If you only run into pro
 > Reference: <https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html>
 
 Creating a single main file is straightforward. However, you will want to make some minor edits depending on where, in the above template setup, the file is located:
+
+> The adjustments described on this page also apply to a **small number (2-4) of single-software main files** that are run in sequence.
+> 
+> If using SIVACOR in [Step 5](preparing-replication-package-step5): SIVACOR allows for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step). Each of the main files should be structured as outlined on this page.
 
 ## Scenario A: `main` is in the `code` directory
 
@@ -493,30 +497,32 @@ After you have made all the  changes, you should test your code. To make this si
 
 We have developed the [SIVACOR](https://sivacor.org) service, which allows you to run your code using authorized containers without the need to install software on your own computer, producing a Trusted Research Object (TRO).
 
-> In fact, we will run your code using this same system to verify compliance with all of the above steps!
+> If successful, your last run on SIVACOR will be the package you [submit](preparing-replication-package-submit#sivacor) to the Data Editor!
 
 
-For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, provide the generated certified ZIP file  instead of the original replication package to the Data Editor (via import to your openICPSR draft deposit). A TRO does not need to be re-run by the Data Editor.
+For more information on how to use SIVACOR, see <https://docs.sivacor.org/>. Once you have successfully run your code on SIVACOR, you can proceed directly to  [Submitting](preparing-replication-package-submit#sivacor). A TRO does not need to be re-run by the Data Editor.
 
 
 ## Authorized containers
 
-SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at <https://docs.sivacor.org/docs/images/>. In general, Stata, R, and MATLAB (with Dynare) are supported.
+SIVACOR uses a curated list of containers, chosen because  they are reliably available, and achieve the desired transparency. You can inspect the most current list at <https://docs.sivacor.org/docs/images/>. At the moment, Stata, R, and MATLAB (with Dynare) are supported.
 
-If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked. However, we do not allow for arbitrary (user-created) containers on SIVACOR, though if you think that they are useful for your replication package, please reach out.
+> If you know of a different container that we should add to this list, please let us know. The [AEA Data Editor's Github profile](https://github.com/AEADataEditor/) has a few other containers that have worked. However, we do not allow for arbitrary (user-created) containers on SIVACOR, though if you think that they are useful for your replication package, please reach out.
+
+> SIVACOR  allows for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step).
+
 
 ## A note about multi-software workflows
 
 We are not currently attempting to generalize this to all multi-software replication packages. Building multi-software containers  [definitely](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [with some effort](https://github.com/AEADataEditor/docker-aer-2023-0700). 
 
-However, SIVACOR does allow for multi-step software flows, where a **small** number of single-software containers are run in sequence, with the output of one container being used as the input to the next. See [SIVACOR documentation](https://docs.sivacor.org/docs/step0-prepare/#your-replication-package-only-uses-a-single-software-application-per-step).
 
 
 ## Testing using Docker locally (advanced)
 
-If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody's needs.
+If SIVACOR does not work for you, you can either attempt to run it in Docker on your own computer, or skip this step entirely and revert back to the standard (manual) verification process. Installing and running Docker on your computer is straightforward (undergraduate students in the AEA Data Editor team have done this in under half an hour), but may not meet everybody's needs, or your institution's IT policies. 
 
-> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight [to the alternative approach](#alternative-approach).
+> ⚠️❗ **IMPORTANT:** If you do not have Docker installed on your computer, do not have the rights to install Docker on your computer, or do not have access otherwise to Docker, please do not attempt this, and skip straight [to the alternative approach](#fallback-run-on-a-different-computer).
 
 > ⚠️❗ **IMPORTANT:** Do not provide us with a custom container that is not  on the above list. Transparency requires that the container be built, using a `Dockerfile` or `apptainer.def` file, from publicly available sources. While we will happily use your container, it must be built from one of the above sources, or well-known "standard" sources, such as "Docker Official Images" in the Dockerhub `library` space (e.g., <https://hub.docker.com/_/python>).
 
@@ -653,10 +659,11 @@ Code ran for about 35 hours.
 Code runs about 10 minutes for Stata portion, and about 5 days for MATLAB portion.
 ```
 
+> NOTE about SIVACOR here: You should not modify your README after your last run on SIVACOR, as the TRO generated by SIVACOR contains a checksum that would highlight the modification to the README. However, the auxiliary files generated by SIVACOR (the `.jsonld` file) contain all the necessary information. 
 
-### Submitting
 
-You can now submit your replication package to the Data Editor, along with the completed checklist from above, and the generated `main.log`/`main.Rout` as evidence.
+[▶ Next: Submitting](preparing-replication-package-submit)
+
 ---
 
 
@@ -664,7 +671,7 @@ You can now submit your replication package to the Data Editor, along with the c
 This document describes how to prepare your code for verification in detail, taking into account some of the most frequent issues that the Data Editor and his team have encountered in submitted replication packages.
 
 
-> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software. Admissible containers are listed in the [Step 5 section: authorized containers](#authorized-containers). We are not currently attempting to generalize this to multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
+> ⚠️❗ **IMPORTANT:** At this point, you should only be seeing this page if you were asked by the Data Editor team to do so, and if your replication package relies on a single software, or a **small number of single-software steps**. Admissible software are listed in the [Step 5 section: authorized containers](preparing-replication-package-step5#authorized-containers). We are not currently attempting to generalize this to arbitrary multi-software replication packages, though [it](https://github.com/AEADataEditor/docker-r-gurobi) [is](https://github.com/AEADataEditor/docker-aer-2022-0276) [possible](https://github.com/AEADataEditor/docker-aer-2023-0505) [to do so](https://github.com/AEADataEditor/docker-aer-2023-0700).
 
 
 

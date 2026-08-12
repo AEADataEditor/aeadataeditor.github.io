@@ -23,12 +23,6 @@ var store = [{
         "url": "/aea-de-guidance/addtl-data-citation-guidance",
         "teaser": null
       },{
-        "title": "Preparing your files for verification",
-        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
-        "tags": [],
-        "url": "/aea-de-guidance/preparing-for-data-deposit",
-        "teaser": null
-      },{
         "title": "Guidance on testing replicability of code",
         "excerpt":"The code and data that have been archived should be reproducible and replicable. How do we test that? Generic guidance Generic guidance is provided at the Social Science Data Editors’ Guidance website. At the AEA We use this template to guide our replicators. Example 1 We assess software availability data...","categories": [],
         "tags": [],
@@ -113,6 +107,12 @@ var store = [{
         "url": "/aea-de-guidance/next",
         "teaser": null
       },{
+        "title": "Preparing your files for verification",
+        "excerpt":"This document describes how to best prepare a replication package for an AEA journal. Much of the guidance here is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-for-data-deposit",
+        "teaser": null
+      },{
         "title": "Preparing your replication package for Papers and Proceedings",
         "excerpt":"Much of the preparation for the replication packages for papers published in Papers and Proceedings is the same as for the AEA journals, see Step 1 and Step 2. However, our compliance check is more limited than the checks conducted for peer-reviewed papers. Your replication package must nevertheless be fully...","categories": [],
         "tags": [],
@@ -132,39 +132,45 @@ var store = [{
         "teaser": null
       },{
         "title": "Finalize README",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 5 Finalize README Reference: https://social-science-data-editors.github.io/template_README/template-README.html This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above. Software: If you...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 5 Next: Submitting ▶ Finalize README Reference: https://social-science-data-editors.github.io/template_README/template-README.html This step is usually not necessary, but you want to just make sure that your README has the necessary information that help set expectations about computational feasibility, based on the steps above....","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-finalize",
         "teaser": null
       },{
         "title": "Step 1: Main file",
-        "excerpt":"◀ Back to Checklist Back to Details You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to update your existing main...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details Next: Step 2 ▶ You may or may not have a main file. The following should be adapted to your circumstances. You do not need to create a file that is called main.do if you already have one, but you may need to...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step1",
         "teaser": null
       },{
         "title": "Step 2: Path names and case",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 1 Two issues: Windows computers use \\ (backslashes) in path names, while Mac and Linux computers use / (forward slashes). The use of \\ (backslashes) in path names breaks code on Mac and Linux computers. Windows and Mac computers use...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 1 Next: Step 3 ▶ Two issues: Windows computers use \\ (backslashes) in path names, while Mac and Linux computers use / (forward slashes). The use of \\ (backslashes) in path names breaks code on Mac and Linux computers. Windows...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step2",
         "teaser": null
       },{
         "title": "Step 3: Dependencies",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 2 Stata packages Stata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the net install command (including...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 2 Next: Step 4 ▶ Stata packages Stata users frequently use user-written packages, which are made available to the Stata community via the Stata Journal, SSC, or Github. They are typically installed using a small number of variants of the...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step3",
         "teaser": null
       },{
         "title": "Step 4: Displays",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 3 Displays (figures and tables) should be written out to external files, and the authors’ versions, as used in the manuscript, should be provided. In the prototypical replication package structure above, these files would be in the results directory. Reference:...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 3 Next: Step 5 ▶ Displays (figures and tables) should be written out to external files, and the authors’ versions, as used in the manuscript, should be provided. In the prototypical replication package structure above, these files would be in...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step4",
         "teaser": null
       },{
         "title": "Step 5: Testing in containers",
-        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 4 After you have made all the changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need to choose the software,...","categories": [],
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Step 4 Next: Finalize README ▶ After you have made all the changes, you should test your code. To make this simple, we have set up a public website that hides the complexity of running containers from you. You only need...","categories": [],
         "tags": [],
         "url": "/aea-de-guidance/preparing-replication-package-step5",
+        "teaser": null
+      },{
+        "title": "Submitting",
+        "excerpt":"◀ Back to Checklist Back to Details ◀ Previous: Finalize README You can now submit your replication package to the Data Editor. In all cases, the completed checklist should be sent directly to the Data Editor, using reply-all to the email that you received from the Data Editor. If you...","categories": [],
+        "tags": [],
+        "url": "/aea-de-guidance/preparing-replication-package-submit",
         "teaser": null
       },{
         "title": "Data deposit guidance",
@@ -387,6 +393,12 @@ var store = [{
         "excerpt":"A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?). First: do not...","categories": ["dataeditor"],
         "tags": ["data editor tips","reproducibility","replication packages","Stata","Code"],
         "url": "/posts/2026-07-24-stata-convergence-across-platforms",
+        "teaser": null
+      },{
+        "title": "PSA: Please be precise when using Github as input to scientific articles.",
+        "excerpt":"If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts… From a recent (draft) replication package: Data on Kelly et al. (2021)’s patent indicator are downloaded from the authors’ GitHub repository. A copy of...","categories": ["dataeditor"],
+        "tags": ["data editor tips","reproducibility","data citation","Github","licenses"],
+        "url": "/posts/2026-08-12-psm-github",
         "teaser": null
       },{
         "title": "Migration of legacy replication packages (pending last packages)",

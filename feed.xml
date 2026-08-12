@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-08-10T08:38:29-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">The Same Code, a Different Answer: Stata Convergence Across Platforms</title><link href="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms" rel="alternate" type="text/html" title="The Same Code, a Different Answer: Stata Convergence Across Platforms" /><published>2026-07-24T00:00:00-04:00</published><updated>2026-07-24T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/stata-convergence-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms"><![CDATA[<p>A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-08-12T10:43:49-04:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">PSA: Please be precise when using Github as input to scientific articles.</title><link href="https://aeadataeditor.github.io/posts/2026-08-12-psm-github" rel="alternate" type="text/html" title="PSA: Please be precise when using Github as input to scientific articles." /><published>2026-08-12T00:00:00-04:00</published><updated>2026-08-12T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/PSM-Github</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-08-12-psm-github"><![CDATA[<p>If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts…</p>
+
+<!-- more -->
+
+<p>From a recent (draft) replication package:</p>
+
+<blockquote>
+  <p>Data on Kelly et al. (2021)’s patent indicator are downloaded from the authors’ GitHub repository. A copy of the data is provided as part of this archive. The data are in the public domain. To download, visit at https://github.com/KPSS2017, click the pinned repository named “Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data,” and download “PatentSimilarityImportanceBreakthrough_forPost2022.csv.zip”.</p>
+</blockquote>
+
+<p>A few things, first for those re-using the data, and then for those providing the data.</p>
+
+<h2 id="for-re-users">For re-users</h2>
+
+<h3 id="citing">Citing</h3>
+
+<p>If using the Github data, and not the replication package to the original article, the Github data must be cited. Here, that would be</p>
+
+<blockquote>
+  <p>Kelly, B., Papanikolaou, D., Seru, A. and Taddy, M. 2023. <em>Updates and Extension of Measuring Technological Innovation Over the Long Run</em>. https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data, version from November 2023.</p>
+</blockquote>
+
+<p>On the <a href="https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/blob/main/README.md">Github README</a>, the authors actually say</p>
+
+<blockquote>
+  <p>The version released on Sept 29, 2023 is the latest.</p>
+</blockquote>
+
+<p>but the <a href="https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/commits/main/">commits</a> on the Github actually tell a different story: there are September and November updates to the deposit. Whether those are materially different is not clear (these are ZIP files), but as a re-user, you should identify the version you ACTUALLY used.</p>
+
+<p>Note that the authors ask that their published article be cited as a source. That is fine, as long as the re-user ALSO cites the actual source of the data, which is Github.</p>
+
+<h3 id="downloading">Downloading</h3>
+
+<p>The very verbose description is actually not the best way. First, the actual Github repository has a direct link. The <em>pinned</em> repositories can change over time, without any reason. Re-users should not rely on that. In fact, as I mentioned above, there are multiple commits. Unless the Github owners manipulate those commits (possible), the specific commit is what should be identified, possibly in the citation, but definitely in the download instructions. Here is the same verbose instructions expressed as a single URL:</p>
+
+<blockquote>
+  <p>Download
+<a href="https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/blob/42f283517d72d90272f151867bb7b22744e23b2f/PatentSimilarityImportanceBreakthrough_forPost2022.csv.zip">https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/blob/42f283517d72d90272f151867bb7b22744e23b2f/PatentSimilarityImportanceBreakthrough_forPost2022.csv.zip</a></p>
+</blockquote>
+
+<p>which preserves the metadata (it doesn’t directly download the data, but rather, allows you to see the context in which you are downloading the data). Much simpler.</p>
+
+<h3 id="distributing">Distributing</h3>
+
+<p>The quote I provided mentions “data are in the public domain.” That is incorrect. The data are downloadable by anybody without registration. However, “public domain”  is a legal term that means that nobody has the copyright on the data. Possibly because the entity producing the data is legally excluded from claiming copyright (oversimplifying somewhat, in the US, the federal government), or because the person producing the data has explicitly relinquished this (often under a “CC0”  license).</p>
+
+<p>But in the absence of true “public domain”, the data are copyrighted by the original authors. Fair-use is fine (so using the data is likely the intent of posting it on the internet here), but re-purposing the data may not be. Copyright = all rights reserved does not need an explicit mention! So strictly speaking, you need the authors’ permission to redistribute the data, or you might have to claim “fair use” explicitly. We usually send the re-users to ask permission, which is cleaner.</p>
+
+<h2 id="for-authors">For authors</h2>
+
+<p>All of the above can be greatly simplified if authors (those posting on Github) followed some simple best practices:</p>
+
+<h3 id="define-a-license">Define a license</h3>
+
+<p>Authors should clearly specify the license under which the data are released. Common licenses include Creative Commons (CC) licenses, which allow for various levels of reuse of data, or open-source software licenses like MIT or GPL, which might be more relevant for code. A dual-license setup can work. See <a href="https://aeadataeditor.github.io/aea-de-guidance/Licensing_guidance">guidance</a> on my website. The license should be expressed as a <code class="language-plaintext highlighter-rouge">LICENSE.txt</code> or <code class="language-plaintext highlighter-rouge">LICENSE.md</code> file in the root of the repository, it will be picked up and displayed in the sidebar by Github.</p>
+
+<p>If authors do NOT want to provide a general license, that is also fine, but they should likely explicitly say it, to be clear, although that may not be legally required: “Copyright John Doe and Alice Smith, all rights reserved. Permission to redistribute or reuse this data must be obtained from the authors.”</p>
+
+<h3 id="versioning">Versioning</h3>
+
+<p>Rather than having re-users guess at versions, and have long commit-based URLs, create tags or releases. Very easy to do in both <code class="language-plaintext highlighter-rouge">git</code>  and on Github. That would allow for much simpler URLs:</p>
+
+<blockquote>
+  <p>Download <a href="https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/blob/v1.1/PatentSimilarityImportanceBreakthrough_forPost2022.csv.zip">https://github.com/KPSS2017/Measuring-Technological-Innovation-Over-the-Long-Run-Extended-Data/blob/ <strong>v1.1</strong> /PatentSimilarityImportanceBreakthrough_forPost2022.csv.zip</a></p>
+</blockquote>
+
+<p>(OK, that’s not much shorter in this case, because of the long repository and file names, but it is easier to read).</p>
+
+<h3 id="citation">Citation</h3>
+
+<p>Authors in general prefer that you cite the article, because under current academic norms (at least in economics), is the only thing that counts. Nevertheless, if the article is published in 2021, and the data in 2023, re-users are misleading their readers because they materially reference data that does not exist at the cited location (the article, or its replication package), and cannot be easily linked. The solution is to cite both.</p>
+
+<p>And to make that easy, use the <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">CITATION.cff</a> file. It, too, is highlighted by Github in the right panel.</p>
+
+<h3 id="preserving">Preserving</h3>
+
+<p>And finally, if you have license and citation all tidied up, why not preserve it, and get a DOI to boot? This does away with the fragility of deposits and commits (anybody can delete their Github repo forever, in 30 seconds flat), and simplifies citation as well. You can do so nearly automatically (if creating releases) <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">via Zenodo</a>, or to <a href="https://github.com/marketplace/actions/dataverse-uploader-action">Dataverse</a>.</p>
+
+<p>Re-users can then simply use the Zenodo version, which has a DOI, and is guaranteed to be preserved.</p>]]></content><author><name>AEA Data Editor</name></author><category term="dataeditor" /><category term="data editor tips" /><category term="reproducibility" /><category term="data citation" /><category term="Github" /><category term="licenses" /><summary type="html"><![CDATA[If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts…]]></summary></entry><entry><title type="html">The Same Code, a Different Answer: Stata Convergence Across Platforms</title><link href="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms" rel="alternate" type="text/html" title="The Same Code, a Different Answer: Stata Convergence Across Platforms" /><published>2026-07-24T00:00:00-04:00</published><updated>2026-07-24T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/stata-convergence-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-07-24-stata-convergence-across-platforms"><![CDATA[<p>A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data, same software package — different answer. Here is what it took to find out why, and some thoughts (lessons?).</p>
 
 <!-- more -->
 
@@ -1140,72 +1219,4 @@ patch code/robustness-check-1/base-model.m &lt; patch.diff
       <p>See <a href="https://techcrunch.com/2022/04/18/web-scraping-legal-court/">https://techcrunch.com/2022/04/18/web-scraping-legal-court/</a>. <a href="#fnref:webscraping" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="licenses" /><summary type="html"><![CDATA[Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.]]></summary></entry><entry><title type="html">Random notes from the AMAs</title><link href="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama" rel="alternate" type="text/html" title="Random notes from the AMAs" /><published>2024-04-11T00:00:00-04:00</published><updated>2024-04-11T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/random-notes-ama</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-04-11-random-notes-ama"><![CDATA[<p>In the AMAs (<a href="https://aeadataeditor.github.io/talks/">see past and future AMAs</a>), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.</p>
-
-<!-- more -->
-
-<h2 id="aea-data-and-code-availability-policy">AEA Data and Code Availability Policy</h2>
-
-<p><a href="https://www.aeaweb.org/journals/data/data-code-policy">https://www.aeaweb.org/journals/data/data-code-policy</a>, and if revising a package, <a href="https://www.aeaweb.org/journals/data/revisions-policy">https://www.aeaweb.org/journals/data/revisions-policy</a></p>
-
-<h2 id="restricted-data">Restricted data</h2>
-
-<p>To access restricted data, the author and Editor may start here: <a href="https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data/">https://aeadataeditor.github.io/aea-de-guidance/sharing-restricted-data/</a></p>
-
-<p>If the AEA Data Editor cannot access the data, but somebody else can, we follow the “third party” policy <a href="https://www.aeaweb.org/journals/data/policy-third-party">https://www.aeaweb.org/journals/data/policy-third-party</a></p>
-
-<h2 id="common-documentation-by-social-science-data-editors">Common documentation by Social Science Data Editors</h2>
-
-<ul>
-  <li>
-    <p>“The” README: 
-<a href="https://social-science-data-editors.github.io/template_README/template-README.html">https://social-science-data-editors.github.io/template_README/template-README.html</a></p>
-  </li>
-  <li>
-    <p>The common policy guidelines:
-<a href="https://datacodestandard.org/">https://datacodestandard.org/</a></p>
-  </li>
-</ul>
-
-<h2 id="better-code-and-readmes">Better code and READMEs</h2>
-
-<p>Example of graphical interface to select data (and the difficulty of describing how to do that concisely):</p>
-
-<p><a href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators</a></p>
-
-<p>Stata package to do the same much more succinctly:</p>
-
-<ul>
-  <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-data">https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-data</a></li>
-  <li><a href="https://ideas.repec.org/c/boc/bocode/s457234.html">Package on RePEc</a></li>
-</ul>
-
-<p>Similar tension between the FRED graphical interface <a href="https://fred.stlouisfed.org/">https://fred.stlouisfed.org/</a> and the FRED API, which can be used via</p>
-
-<ul>
-  <li>Stata  <a href="https://www.stata.com/manuals/dimportfred.pdf">https://www.stata.com/manuals/dimportfred.pdf</a></li>
-  <li>MATLAB  <a href="https://www.mathworks.com/help/datafeed/fred.fetch.html">https://www.mathworks.com/help/datafeed/fred.fetch.html</a></li>
-  <li>R <a href="https://cran.r-project.org/web/packages/fredr/vignettes/fredr.html">https://cran.r-project.org/web/packages/fredr/vignettes/fredr.html</a></li>
-</ul>
-
-<h2 id="difficult-data-citations">Difficult data citations</h2>
-
-<p>Example of restricted access data with DOI, and a long list of DOIs (problems with data citations):</p>
-
-<p><a href="https://www.casd.eu/source/statistique-structurelle-annuelle-dentreprises-issue-du-dispositif-esane/">https://www.casd.eu/source/statistique-structurelle-annuelle-dentreprises-issue-du-dispositif-esane/</a></p>
-
-<p>and a <a href="https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#many-related-datasets">possible solution</a>.</p>
-
-<h2 id="versioning-of-stata-packages">Versioning of Stata packages</h2>
-
-<p><a href="https://github.com/labordynamicsinstitute/ssc-mirror/">https://github.com/labordynamicsinstitute/ssc-mirror/</a></p>
-
-<h2 id="improving-yourself">Improving yourself</h2>
-
-<p>Draft tutorial on how to self-check reproducibility (and also how to ensure it in the first place), still quite preliminary right now:</p>
-
-<p><a href="https://larsvilhuber.github.io/self-checking-reproducibility/">https://larsvilhuber.github.io/self-checking-reproducibility/</a></p>
-
-<h2 id="crediting-others-software-citations">Crediting others (software citations)</h2>
-
-<p>R package to generate a bibliography file (bib, etc.) from all the citable packages used in an R-based replication package:  <a href="https://github.com/Pakillo/grateful">https://github.com/Pakillo/grateful</a></p>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><summary type="html"><![CDATA[In the AMAs (see past and future AMAs), we talked about many things. No transcript, but here’s a raw dump of the various websites that were used.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="licenses" /><summary type="html"><![CDATA[Many researchers are confused by the difference between “use” and “(re-)distribution” of data. In a nutshell, just because you are able to freely use the data for your own research purposes does not give you the right to distribute the data to others. The devil is in the details.]]></summary></entry></feed>
