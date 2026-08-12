@@ -1,5 +1,5 @@
 ---
-title: "PSM: Please be precise when using Github as input to scientific articles."
+title: "PSA: Please be precise when using Github as input to scientific articles."
 categories: dataeditor
 date: 2026-08-12
 mastodon:
