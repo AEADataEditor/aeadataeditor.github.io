@@ -12,7 +12,9 @@ tags:
 
 In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling to reveal themselves in the analysis. Sometimes, this also applies to locations, when revealing the location might reveal sensitive information, or might compromise a follow-up study. 
 
-Of course, it is the first claim a fraudster would make, too. So how can we help legitimate authors separate themselves from the fraudsters, and still publish interesting and **real** research in journals? 
+Of course, it is the first claim a fraudster would make, too. So how can we help legitimate authors separate themselves from the fraudsters, and still publish interesting and **real** research in journals?[^updated]
+
+[^updated]: This post was updated on 2026-08-18 with an example article.
 
 <!-- more -->
 
@@ -58,6 +60,12 @@ Once I have satisfied my professional curiosity, I report back to the editor in 
 Once all the other pieces fall into place, and the article is published, readers can find this information (for now) in the title page footnote:
 
 > "As part of the reproducibility checks conducted by the AEA, the identity of the anonymous data provider was revealed to the Data Editor, who verified legitimacy of the data use agreement and of access to the data."
+
+An example (albeit membership-gated) is 
+
+> Haegele, Ingrid. 2026. "Talent Hoarding in Organizations." American Economic Review 116 (8): 3110–51. <https://doi.org/10.1257/aer.20220264>
+
+![Screenshot of the title page footnote](/images/Screenshot-private-aer.20220264.png)
 
 ## Closing remarks
 
