@@ -1061,6 +1061,12 @@ var store = [{
         "url": "/talks/2026-08-31-eale-barcelona",
         "teaser": null
       },{
+        "title": "Reproducibility in research – Ensuring the transparency and credibility of your work",
+        "excerpt":"Date/Time 8 September 2026 (9:00 to 12:00) and 9 September 2026 (9:00 to 12:00) Abstract This intensive training explores the fundamental principles of reproducibility, a pillar of open science that ensures the transparency and credibility of scientific research. You will discover best practices to make your work reproducible, from data...","categories": ["dataeditor"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-09-08-uppsala",
+        "teaser": null
+      },{
         "title": "AEA/ES Data Editors' Tutorial 1",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
