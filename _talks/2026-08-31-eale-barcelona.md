@@ -7,7 +7,7 @@ location: "Barcelona, Spain"
 mode: "In-person"
 joint: 
     - Marie Connolly (Canadian Journal of Economics)  
-    - Joan Llull (Econometric Society) 
+    - Maia Güell (European Economic Association) 
 language:
     - en
     - es
@@ -15,7 +15,8 @@ language:
 venue: "EALE 2026 conference"
 mainurl: https://www.ub.edu/eale2026/the-conference/
 doi: 
-maindoi: 
+maindoi:
+participants: 75
 ---
 
 ## Time
@@ -29,5 +30,5 @@ maindoi:
 The conference includes a Data and Replication Session, open to all participants and led by Data Editors from leading academic journals: 
 
 - Marie Connolly (Canadian Journal of Economics)  
-- Joan Llull (Econometric Society) 
+- Maia Güell (European Economic Association) 
 - Lars Vilhuber (American Economic Association) 
