@@ -1056,7 +1056,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Data and Replication Panel",
-        "excerpt":"Time   Monday August 31st,     13:00   (just before the opening of the conference)   Abstract   The conference includes a Data and Replication Session, open to all participants and led by Data Editors from leading academic journals:      Marie Connolly (Canadian Journal of Economics)   Joan Llull (Econometric Society)   Lars Vilhuber (American Economic Association)  ","categories": [],
+        "excerpt":"Time   Monday August 31st,     13:00   (just before the opening of the conference)   Abstract   The conference includes a Data and Replication Session, open to all participants and led by Data Editors from leading academic journals:      Marie Connolly (Canadian Journal of Economics)   Maia Güell (European Economic Association)   Lars Vilhuber (American Economic Association)  ","categories": [],
         "tags": [],
         "url": "/talks/2026-08-31-eale-barcelona",
         "teaser": null
