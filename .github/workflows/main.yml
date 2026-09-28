@@ -47,12 +47,23 @@ jobs:
         ruby-version: 3.3.4
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Build Jekyll website
+      env:
+        EVENT_NAME: ${{ github.event_name }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
       run: |
         set -xo pipefail
         rm -rf _site/*
         gem install bundler -v 2.6.3
         bundle install
-        bundle exec jekyll build
+        config=_config.yml
+        if [ "$EVENT_NAME" = "pull_request" ]; then
+          # Absolute links (site.url) must point at the preview deployment,
+          # not at the production site. The alias matches the
+          # --branch=pr-<number> used by the preview job.
+          echo "url: https://pr-${PR_NUMBER}.aeamain.pages.dev" > "$RUNNER_TEMP/_config_preview.yml"
+          config="$config,$RUNNER_TEMP/_config_preview.yml"
+        fi
+        bundle exec jekyll build --config "$config"
     - name: Generate agent instruction file
       run: python3 .github/scripts/generate_agent_md.py
     - name: Generate ICS calendar files
