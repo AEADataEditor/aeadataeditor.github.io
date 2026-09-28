@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Generate ICS calendar files from talk front matter.
 
-Any file in _talks/ whose YAML front matter has an `ics` key gets a calendar
-file written to _site/ics/<ics value>. The event links back to the talk page
-on the website. Front matter keys used:
+Every file in _talks/ with a date gets a calendar file written to
+_site/ics/. The event links back to the talk page on the website. The file
+name is the `ics` front matter key if set, else <talk file name>.ics (the
+Jekyll plugin _plugins/talks_ics.rb sets the same default for the layout).
+Front matter keys used:
 
-  ics         file name of the calendar file (e.g. "2027-01-05-dc.ics"); required
+  ics         optional file name of the calendar file (default "<slug>.ics")
   title       event summary
   date        event date (all-day event unless start_time is given)
   end_date    optional last day of a multi-day event
@@ -133,12 +135,10 @@ def main():
     count = 0
     for path in sorted(TALKS_DIR.glob("*.md")):
         fm = parse_front_matter(path)
-        name = fm.get("ics")
-        if not name:
-            continue
         if not fm.get("date"):
-            print(f"warning: {path} has ics but no date; skipped", file=sys.stderr)
+            print(f"warning: {path} has no date; skipped", file=sys.stderr)
             continue
+        name = fm.get("ics") or f"{path.stem}.ics"
         name = Path(str(name)).name  # no path components
         if not name.endswith(".ics"):
             name += ".ics"
