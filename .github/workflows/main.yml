@@ -51,6 +51,10 @@ jobs:
         bundle exec jekyll build
     - name: Generate agent instruction file
       run: python3 .github/scripts/generate_agent_md.py
+    - name: Generate ICS calendar files
+      run: |
+        pip install pyyaml
+        python3 .github/scripts/generate_ics.py
     - name: Upload site artifact
       uses: actions/upload-artifact@v4
       with:

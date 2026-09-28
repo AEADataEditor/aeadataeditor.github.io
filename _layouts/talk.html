@@ -58,6 +58,9 @@ layout: default
               {% if page.maindoi %}
                 <li> Part of a <a href="https://doi.org/{{ page.maindoi }}" alt="Series DOI">series</a> </li>
               {% endif %}
+              {% if page.ics %}
+                <li><i class="fa-solid fa-calendar-plus" aria-hidden="true"></i> <a href="{{ site.baseurl }}/ics/{{ page.ics }}">Add to calendar (ICS)</a></li>
+              {% endif %}
               {% if page.mainurl %}
                 <li>For more information, see <a href="{{ page.mainurl }}" alt="mainpage">{{ page.mainurl }}</a> </li>
               {% endif %}
