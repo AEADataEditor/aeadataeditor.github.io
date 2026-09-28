@@ -80,6 +80,7 @@ Once the secrets exist, every PR from a repo branch (not a fork) will get:
 
 - A live preview at a Cloudflare Pages URL specific to that PR
   (`--branch=pr-<PR number>`), rebuilt on every push to the PR.
+- A site built with `url` set to that preview URL, so absolute links stay on the preview instead of pointing at production
 - A PR comment with the preview link, edited in place on each new commit
   rather than re-posted.
 
