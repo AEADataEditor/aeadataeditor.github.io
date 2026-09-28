@@ -16,7 +16,8 @@ Front matter keys used:
   title       event summary
   date        event date (all-day event unless start_time is given)
   end_date    optional last day of a multi-day event
-  start_time  optional, "HH:MM" (24h)
+  time        optional, "HH:MM - HH:MM" (24h) or just "HH:MM"; sets start and end
+  start_time  optional, "HH:MM" (24h); overrides the start given in time
   end_time    optional, "HH:MM" (24h); defaults to one hour after start_time
   timezone    optional IANA zone for start/end_time (default America/New_York)
   location, venue, joint, mainurl   included in location/description
@@ -81,6 +82,16 @@ def to_time(value):
     return datetime.strptime(str(value).strip(), "%H:%M").time()
 
 
+def split_time(fm):
+    """Return (start, end) strings from `time` ("08:00 - 10:00"), overridden by start_time/end_time."""
+    start = end = None
+    if fm.get("time"):
+        parts = [p.strip() for p in re.split(r"\s*[-\u2013\u2014]\s*|\s+to\s+", str(fm["time"]).strip()) if p.strip()]
+        start = parts[0] if parts else None
+        end = parts[1] if len(parts) > 1 else None
+    return fm.get("start_time") or start, fm.get("end_time") or end
+
+
 def build_event(path, fm):
     slug = path.stem
     start_day = to_date(fm["date"])
@@ -89,12 +100,13 @@ def build_event(path, fm):
     now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
     lines = ["BEGIN:VEVENT", f"UID:{uid}", f"DTSTAMP:{now}"]
-    if fm.get("start_time"):
+    start_str, end_str = split_time(fm)
+    if start_str:
         tz = ZoneInfo(fm.get("timezone") or DEFAULT_TZ)
-        start = datetime.combine(start_day, to_time(fm["start_time"]), tz)
-        if fm.get("end_time"):
+        start = datetime.combine(start_day, to_time(start_str), tz)
+        if end_str:
             end_day = to_date(fm["end_date"]) if fm.get("end_date") else start_day
-            end = datetime.combine(end_day, to_time(fm["end_time"]), tz)
+            end = datetime.combine(end_day, to_time(end_str), tz)
         else:
             end = start + timedelta(hours=1)
         fmt = "%Y%m%dT%H%M%SZ"
