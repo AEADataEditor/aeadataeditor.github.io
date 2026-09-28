@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Generate ICS calendar files from talk front matter.
 
-Every file in _talks/ with a date gets a calendar file written to
-_site/ics/. The event links back to the talk page on the website. The file
-name is the `ics` front matter key if set, else <talk file name>.ics (the
-Jekyll plugin _plugins/talks_ics.rb sets the same default for the layout).
+Two steps, both run from the build workflow:
+
+  generate_ics.py --add-metadata   before the Jekyll build: adds
+      `ics: <talk file name>.ics` to the front matter of every talk lacking
+      it (in the checkout only), so the talk layout links to the file.
+  generate_ics.py                  after the Jekyll build: writes a calendar
+      file to _site/ics/ for every dated talk. The event links back to the
+      talk page on the website.
+
 Front matter keys used:
 
   ics         optional file name of the calendar file (default "<slug>.ics")
@@ -131,7 +136,26 @@ def build_calendar(path, fm):
     return "\r\n".join(fold(l) for l in lines) + "\r\n"
 
 
+def add_metadata():
+    """Insert `ics: <slug>.ics` into the front matter of talks lacking it."""
+    count = 0
+    for path in sorted(TALKS_DIR.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        m = FRONT_MATTER.match(text)
+        if not m or parse_front_matter(path).get("ics"):
+            continue
+        # drop an empty `ics:` line, if any, then add the entry
+        block = re.sub(r"^ics:[ \t]*$\n?", "", m.group(1), flags=re.MULTILINE)
+        block += f"\nics: {path.stem}.ics"
+        path.write_text(text[:m.start(1)] + block + text[m.end(1):], encoding="utf-8")
+        count += 1
+    print(f"added ics metadata to {count} talk(s)")
+
+
 def main():
+    if "--add-metadata" in sys.argv[1:]:
+        add_metadata()
+        return
     count = 0
     for path in sorted(TALKS_DIR.glob("*.md")):
         fm = parse_front_matter(path)

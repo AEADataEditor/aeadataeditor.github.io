@@ -34,6 +34,10 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+    - name: Add ICS metadata to talks
+      run: |
+        pip install pyyaml
+        python3 .github/scripts/generate_ics.py --add-metadata
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -53,7 +57,6 @@ jobs:
       run: python3 .github/scripts/generate_agent_md.py
     - name: Generate ICS calendar files
       run: |
-        pip install pyyaml
         python3 .github/scripts/generate_ics.py
     - name: Upload site artifact
       uses: actions/upload-artifact@v4
