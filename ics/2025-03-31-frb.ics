@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-03-31-frb@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
+SUMMARY:Discussion with the Research Publication Group at the Federal Reser
+ ve Board
+LOCATION:Federal Reserve Board\, Washington\, DC
+DESCRIPTION:AMA\nMode: Online\nMore information: https://aeadataeditor.gith
+ ub.io/talks/2025-03-31-frb
+URL:https://aeadataeditor.github.io/talks/2025-03-31-frb
+END:VEVENT
+END:VCALENDAR

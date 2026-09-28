@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-10-29-mont2@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20211029
+DTEND;VALUE=DATE:20211030
+SUMMARY:Data Science Tools Workshop: Working with confidential data
+LOCATION:McGill University - MONT^2\, Montréal\, Canada
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.mont2-econla
+ b.com\nMore information: https://aeadataeditor.github.io/talks/2021-10-29-
+ mont2
+URL:https://aeadataeditor.github.io/talks/2021-10-29-mont2
+END:VEVENT
+END:VCALENDAR

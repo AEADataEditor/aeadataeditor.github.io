@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-12-02-mcmaster@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20221202
+DTEND;VALUE=DATE:20221203
+SUMMARY:Transparency and Reproducibility in Economics: Context and Lessons 
+ learned from 1\,000 papers
+LOCATION:McMaster University's Spark Talks\, online
+DESCRIPTION:Talk\nMode: Online\nMore information: https://aeadataeditor.git
+ hub.io/talks/2022-12-02-mcmaster
+URL:https://aeadataeditor.github.io/talks/2022-12-02-mcmaster
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-05-14-montreal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240514
+DTEND;VALUE=DATE:20240515
+SUMMARY:École d’été du CIQSS en reproductibilité de la recherche (in 
+ French)
+LOCATION:Centre interuniversitaire québécois de statistiques sociales (CI
+ QSS)\, Montréal\, Canada
+DESCRIPTION:Workshop\nJoint with: Marie Connolly\nMode: In-Person\nEvent in
+ formation: https://www.ciqss.org/evenement/ecole-d-ete/ecole-d-ete-du-ciqs
+ s-en-reproductibilite-de-la-recherche\nMore information: https://aeadataed
+ itor.github.io/talks/2024-05-14-montreal
+URL:https://aeadataeditor.github.io/talks/2024-05-14-montreal
+END:VEVENT
+END:VCALENDAR

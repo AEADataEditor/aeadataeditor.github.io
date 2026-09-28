@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:replicability-presentation-2020-6@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20200627
+DTEND;VALUE=DATE:20200628
+SUMMARY:Implementing Increased Transparency and Reproducibility in Economic
+ s
+LOCATION:WEAI Virtual 95th Conference\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://github.com/labor
+ dynamicsinstitute/replicability-presentation-2020\nMore information: https
+ ://aeadataeditor.github.io/talks/replicability-presentation-2020-6
+URL:https://aeadataeditor.github.io/talks/replicability-presentation-2020-6
+END:VEVENT
+END:VCALENDAR

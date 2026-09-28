@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-05-11-uva@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230511
+DTEND;VALUE=DATE:20230512
+SUMMARY:Transparency and Reproducibility in Economics: Context and Lessons 
+ learned from 1\,663 papers
+LOCATION:University of Virginia Biocomplexity Institute\, Washington\, DC
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/2023-05-11-uva
+URL:https://aeadataeditor.github.io/talks/2023-05-11-uva
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-05-14-orford@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250514
+DTEND;VALUE=DATE:20250515
+SUMMARY:La crédibilité de la recherche : comment améliorer la reproducti
+ bilité en sciences économiques
+LOCATION:64e congrès annuel de la Société canadienne de science économi
+ que\, Orford\, Canada
+DESCRIPTION:Talk\nJoint with: Marie Connolly\nMode: In-Person\nEvent inform
+ ation: https://scsecongresannuel.com/congres-2025-orford.html\nMore inform
+ ation: https://aeadataeditor.github.io/talks/2025-05-14-orford
+URL:https://aeadataeditor.github.io/talks/2025-05-14-orford
+END:VEVENT
+END:VCALENDAR

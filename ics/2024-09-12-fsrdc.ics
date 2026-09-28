@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-09-12-fsrdc@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240912
+DTEND;VALUE=DATE:20240913
+SUMMARY:Training on reproducible methods in empirical economics when data a
+ re confidential
+LOCATION:University of Utah and Federal Statistical Research Data Centers\,
+  Salt Lake City\, UT
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://rdc.nexus.uta
+ h.edu/2024-fsrdc-conference.php\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2024-09-12-fsrdc
+URL:https://aeadataeditor.github.io/talks/2024-09-12-fsrdc
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-02-14@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240214
+DTEND;VALUE=DATE:20240215
+SUMMARY:Ask a Data Editor Anything
+LOCATION:NYU Data Services Love Data Week\, New York\, NY\, USA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://nyu.libcal.com/e
+ vent/11939853\nMore information: https://aeadataeditor.github.io/talks/202
+ 4-02-14
+URL:https://aeadataeditor.github.io/talks/2024-02-14
+END:VEVENT
+END:VCALENDAR

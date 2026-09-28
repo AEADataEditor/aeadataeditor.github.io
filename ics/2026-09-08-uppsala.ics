@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-09-08-uppsala@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:Reproducibility in research – Ensuring the transparency and credi
+ bility of your work
+LOCATION:IFAU\, Uppsala University\, Uppsala\, Sweden
+DESCRIPTION:Workshop\nMode: In-person\nEvent information: https://larsvilhu
+ ber.github.io/workshop-uppsala-2026/\nMore information: https://aeadataedi
+ tor.github.io/talks/2026-09-08-uppsala
+URL:https://aeadataeditor.github.io/talks/2026-09-08-uppsala
+END:VEVENT
+END:VCALENDAR

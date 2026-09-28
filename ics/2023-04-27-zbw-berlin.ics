@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-04-27-zbw-berlin@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230427
+DTEND;VALUE=DATE:20230428
+SUMMARY:Kontinuierliche Transparenz und Reproduzierbarkeit bei akademischen
+  Publikationen: Ansätze und Techniken
+LOCATION:Symposium: Open Science – Forschungstransparenz in den Wirtschaf
+ tswissenschaften (Transparency in Economics)\, Berlin\, Germany
+DESCRIPTION:Panel\nMode: In-Person\nEvent information: https://www.zbw.eu/d
+ e/ueber-zbw/veranstaltungen/symposium-open-science-forschungstransparenz-i
+ n-den-wirtschaftswissenschaften\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2023-04-27-zbw-berlin
+URL:https://aeadataeditor.github.io/talks/2023-04-27-zbw-berlin
+END:VEVENT
+END:VCALENDAR

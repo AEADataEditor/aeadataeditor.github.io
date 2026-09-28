@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-09-03-rt2@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210903
+DTEND;VALUE=DATE:20210904
+SUMMARY:Tutorial: Data Sharing and Archiving for Reproducibility
+LOCATION:Research Transparency and Reproducibility Training (RT2)\, Washing
+ ton\, DC\, USA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.bitss.org/wp
+ -content/uploads/2021/06/RT2_Agenda.pdf\nMore information: https://aeadata
+ editor.github.io/talks/2021-09-03-rt2
+URL:https://aeadataeditor.github.io/talks/2021-09-03-rt2
+END:VEVENT
+END:VCALENDAR

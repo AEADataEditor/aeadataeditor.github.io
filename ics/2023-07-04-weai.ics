@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-07-04-weai@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230704
+DTEND;VALUE=DATE:20230705
+SUMMARY:Ten Simple Rules for creating a replication package
+LOCATION:Western Economic Association 2023 Annual Conference\, San Diego\, 
+ CA\, USA
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/2023-07-04-weai
+URL:https://aeadataeditor.github.io/talks/2023-07-04-weai
+END:VEVENT
+END:VCALENDAR

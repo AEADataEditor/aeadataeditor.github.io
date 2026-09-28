@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-01-23-atc26@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260123
+DTEND;VALUE=DATE:20260124
+SUMMARY:Reproducibilidad con Impacto: Cómo la Ciencia Abierta Puede Cambia
+ r el Mundo
+LOCATION:Abre tu Ciencia\, Santiago\, Chile
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://atc26.com/progra
+ ma.html\nMore information: https://aeadataeditor.github.io/talks/2026-01-2
+ 3-atc26
+URL:https://aeadataeditor.github.io/talks/2026-01-23-atc26
+END:VEVENT
+END:VCALENDAR

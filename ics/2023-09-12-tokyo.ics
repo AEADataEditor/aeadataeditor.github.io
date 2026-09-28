@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-09-12-tokyo@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230912
+DTEND;VALUE=DATE:20230913
+SUMMARY:Transparency and Reproducibility in Economics: Context and Lessons 
+ learned from 1\,000 papers
+LOCATION:University of Tokyo\, Tokyo\, Japan
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/2023-09-12-tokyo
+URL:https://aeadataeditor.github.io/talks/2023-09-12-tokyo
+END:VEVENT
+END:VCALENDAR

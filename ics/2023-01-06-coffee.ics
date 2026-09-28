@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-01-06-coffee@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230106
+DTEND;VALUE=DATE:20230107
+SUMMARY:Coffee with Data Editors
+LOCATION:2023 Allied Social Sciences Associations Meetings\, New Orleans\, 
+ LA
+DESCRIPTION:AMA\nMode: In-Person\nEvent information: https://www.aeaweb.org
+ /conference/2023/program\nMore information: https://aeadataeditor.github.i
+ o/talks/2023-01-06-coffee
+URL:https://aeadataeditor.github.io/talks/2023-01-06-coffee
+END:VEVENT
+END:VCALENDAR

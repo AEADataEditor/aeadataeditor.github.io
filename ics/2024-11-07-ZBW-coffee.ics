@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-11-07-ZBW-coffee@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20241107
+DTEND;VALUE=DATE:20241108
+SUMMARY:ZBW Coffee Lecture on Open Science Education: A reproducibility int
+ ernship?
+LOCATION:Leibniz Informationszentrum Wirtschaft (ZBW)\, Hamburg\, Germany
+DESCRIPTION:Webinar\nMode: Online\nEvent information: https://openeconomics
+ .zbw.eu/en/coffee-lectures-on-open-science-education/\nMore information: h
+ ttps://aeadataeditor.github.io/talks/2024-11-07-ZBW-coffee
+URL:https://aeadataeditor.github.io/talks/2024-11-07-ZBW-coffee
+END:VEVENT
+END:VCALENDAR

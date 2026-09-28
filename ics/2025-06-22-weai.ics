@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-06-22-weai@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250622
+DTEND;VALUE=DATE:20250623
+SUMMARY:Reproducibility from Day 1 to Day T
+LOCATION:WEAI Professional Development\, San Francisco\, California
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://www.weai.org/
+ events/100th-annual-conference\nMore information: https://aeadataeditor.gi
+ thub.io/talks/2025-06-22-weai
+URL:https://aeadataeditor.github.io/talks/2025-06-22-weai
+END:VEVENT
+END:VCALENDAR

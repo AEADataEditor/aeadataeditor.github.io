@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-12-10-nber@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20211210
+DTEND;VALUE=DATE:20211211
+SUMMARY:Panel: Challenges and Opportunities of Reproducibility when Data ar
+ e Proprietary
+LOCATION:NBER: Innovative Data in Household Finance: Opportunities and Chal
+ lenges\, Boston\, MA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.nber.org/con
+ ferences/innovative-data-household-finance-opportunities-and-challenges-fa
+ ll-2021\nMore information: https://aeadataeditor.github.io/talks/2021-12-1
+ 0-nber
+URL:https://aeadataeditor.github.io/talks/2021-12-10-nber
+END:VEVENT
+END:VCALENDAR

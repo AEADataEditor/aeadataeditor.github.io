@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-04-26-hu-berlin-ama@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230426
+DTEND;VALUE=DATE:20230427
+SUMMARY:Data Editor AMA
+LOCATION:Humbold University\, Economics Department\, Berlin\, Germany
+DESCRIPTION:AMA\nMode: In-Person\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2023-04-26-hu-berlin-ama
+URL:https://aeadataeditor.github.io/talks/2023-04-26-hu-berlin-ama
+END:VEVENT
+END:VCALENDAR

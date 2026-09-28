@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-04-02-insee@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+SUMMARY:Replication packages en économie : préparation\, bonnes pratiques
+  et attentes des revues - surtout lorsque les données sont confidentielle
+ s
+LOCATION:Open Science Meet-Up de l'INSEE\, Paris\, France
+DESCRIPTION:Talk\nMode: Online\nMore information: https://aeadataeditor.git
+ hub.io/talks/2026-04-02-insee
+URL:https://aeadataeditor.github.io/talks/2026-04-02-insee
+END:VEVENT
+END:VCALENDAR

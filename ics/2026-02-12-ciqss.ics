@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-02-12-ciqss@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260213
+SUMMARY:La reproductibilité en économie pourquoi et comment
+LOCATION:CIQSS-QICSS Brownbag webinar\, Montreal\, Canada
+DESCRIPTION:Talk\nJoint with: Marie Connolly\nMode: Online\nEvent informati
+ on: https://ciqss.org/en/events/brownbag-webinars/\nMore information: http
+ s://aeadataeditor.github.io/talks/2026-02-12-ciqss
+URL:https://aeadataeditor.github.io/talks/2026-02-12-ciqss
+END:VEVENT
+END:VCALENDAR

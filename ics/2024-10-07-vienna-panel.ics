@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-10-07-vienna-panel@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20241007
+DTEND;VALUE=DATE:20241008
+SUMMARY:TBD
+LOCATION:Wirtschaftsuniversität Wien\, Vienna\, Austria
+DESCRIPTION:Panel\nMode: In-Person\nEvent information: https://bsky.app/pro
+ file/ariedamuco.bsky.social/post/3l4tun2kqsb2a\nMore information: https://
+ aeadataeditor.github.io/talks/2024-10-07-vienna-panel
+URL:https://aeadataeditor.github.io/talks/2024-10-07-vienna-panel
+END:VEVENT
+END:VCALENDAR

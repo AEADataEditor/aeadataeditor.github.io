@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-06-30-weai@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220630
+DTEND;VALUE=DATE:20220701
+SUMMARY:Transparency and Reproducibility in Economics: Lessons learned from
+  1\,000 papers
+LOCATION:97th WEAI Meetings\, Portland\, OR
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://weai.org/asse
+ ts/1443.pdf\nMore information: https://aeadataeditor.github.io/talks/2022-
+ 06-30-weai
+URL:https://aeadataeditor.github.io/talks/2022-06-30-weai
+END:VEVENT
+END:VCALENDAR

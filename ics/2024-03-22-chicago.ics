@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-03-22-chicago@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240322
+DTEND;VALUE=DATE:20240323
+SUMMARY:Data Editor AMA
+LOCATION:Economics Department\, Chicago\, Illinois
+DESCRIPTION:AMA\nMode: In-Person\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2024-03-22-chicago
+URL:https://aeadataeditor.github.io/talks/2024-03-22-chicago
+END:VEVENT
+END:VCALENDAR

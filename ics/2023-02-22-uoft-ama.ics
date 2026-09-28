@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-02-22-uoft-ama@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230222
+DTEND;VALUE=DATE:20230223
+SUMMARY:Data Editor AMA
+LOCATION:University of Toronto Economics Department\, Toronto\, ON\, Canada
+DESCRIPTION:AMA\nMode: In-Person\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2023-02-22-uoft-ama
+URL:https://aeadataeditor.github.io/talks/2023-02-22-uoft-ama
+END:VEVENT
+END:VCALENDAR

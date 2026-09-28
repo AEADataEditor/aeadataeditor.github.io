@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-05-07-sole@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220507
+DTEND;VALUE=DATE:20220508
+SUMMARY:Challenges in Reproducibility and Replicability in Labor Economics
+LOCATION:Society of Labor Economists\, Minneapolis\, MN
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://docs.google.c
+ om/presentation/d/13Pp_y0gbSyJTWONtLBG0TfxJnScIoPHq7KWQcvI-5Qg/edit?usp=sh
+ aring\nMore information: https://aeadataeditor.github.io/talks/2022-05-07-
+ sole
+URL:https://aeadataeditor.github.io/talks/2022-05-07-sole
+END:VEVENT
+END:VCALENDAR

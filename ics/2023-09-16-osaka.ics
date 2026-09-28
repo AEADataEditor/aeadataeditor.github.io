@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-09-16-osaka@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230916
+DTEND;VALUE=DATE:20230917
+SUMMARY:Transparency and Reproducibility in Economics: Context and Lessons 
+ learned from 1\,000 papers
+LOCATION:Japanese Economic Association 2023 Annual Conference at Kansai Uni
+ versity Senriyama Campus\, Osaka\, Japan
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://confit.atlas.
+ jp/guide/event/jeaf2023/session/1G201-01/tables?MjbzKIDcSt\nMore informati
+ on: https://aeadataeditor.github.io/talks/2023-09-16-osaka
+URL:https://aeadataeditor.github.io/talks/2023-09-16-osaka
+END:VEVENT
+END:VCALENDAR

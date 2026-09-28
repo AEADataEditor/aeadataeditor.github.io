@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-05-26-register@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210526
+DTEND;VALUE=DATE:20210527
+SUMMARY:Implementing Increased Transparency and Reproducibility in Economic
+ s: Lessons for Register based Research
+LOCATION:Research with German and Norwegian Register Data on Family Economi
+ cs\, Bergen\, Norway
+DESCRIPTION:Talk\nMode: Online\nMore information: https://aeadataeditor.git
+ hub.io/talks/2021-05-26-register
+URL:https://aeadataeditor.github.io/talks/2021-05-26-register
+END:VEVENT
+END:VCALENDAR

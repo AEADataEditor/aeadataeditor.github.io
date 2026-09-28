@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-09-20-tokyo@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230920
+DTEND;VALUE=DATE:20230921
+SUMMARY:(Full day) Reproducibility Workshop Nihon
+LOCATION:University of Tokyo\, Tokyo\, Japan
+DESCRIPTION:Workshop\nMode: In-Person\nEvent information: https://labordyna
+ micsinstitute.github.io/workshop-nihon-2023/\nMore information: https://ae
+ adataeditor.github.io/talks/2023-09-20-tokyo
+URL:https://aeadataeditor.github.io/talks/2023-09-20-tokyo
+END:VEVENT
+END:VCALENDAR

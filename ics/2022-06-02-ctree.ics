@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-06-02-ctree@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220602
+DTEND;VALUE=DATE:20220603
+SUMMARY:Teaching for Large-scale Reproducibility Verification
+LOCATION:Eleventh Annual AEA Conference on Teaching and Research in Economi
+ c Education (CTREE)\, Chicago\, IL
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/2022-06-02-ctree
+URL:https://aeadataeditor.github.io/talks/2022-06-02-ctree
+END:VEVENT
+END:VCALENDAR

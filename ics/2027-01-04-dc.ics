@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-04-dc@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:AEA/ES Data Editors' Tutorial 1
+LOCATION:American Economic Association 2027 Annual Conference\, Washington\
+ , DC\, USA
+DESCRIPTION:Talk\nJoint with: Marie Connolly\nMode: In-Person\nEvent inform
+ ation: https://www.aeaweb.org/conference/2027/preliminary/1021\nMore infor
+ mation: https://aeadataeditor.github.io/talks/2027-01-04-dc
+URL:https://aeadataeditor.github.io/talks/2027-01-04-dc
+END:VEVENT
+END:VCALENDAR

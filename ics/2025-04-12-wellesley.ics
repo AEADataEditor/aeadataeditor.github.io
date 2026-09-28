@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-04-12-wellesley@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250412
+DTEND;VALUE=DATE:20250413
+SUMMARY:Training for AEA Data Editor Internship Summer 2025
+LOCATION:Wellesley College\, Wellesley\, MA
+DESCRIPTION:Workshop\nMode: In-person\nEvent information: https://aeadataed
+ itor.github.io/projects/project6\nMore information: https://aeadataeditor.
+ github.io/talks/2025-04-12-wellesley
+URL:https://aeadataeditor.github.io/talks/2025-04-12-wellesley
+END:VEVENT
+END:VCALENDAR

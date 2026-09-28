@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-05-25-imls-stanford@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230525
+DTEND;VALUE=DATE:20230526
+SUMMARY:Reproducibility and Preservation: Lessons learned from 1\,663 paper
+ s in Economics
+LOCATION:IMLS National Forums on Data Quality\, Stanford\, CA\, USA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://sites.google.com
+ /view/imls2022-data-quality/home\nMore information: https://aeadataeditor.
+ github.io/talks/2023-05-25-imls-stanford
+URL:https://aeadataeditor.github.io/talks/2023-05-25-imls-stanford
+END:VEVENT
+END:VCALENDAR

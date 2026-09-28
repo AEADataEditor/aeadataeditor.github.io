@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-09-14-vfs@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250914
+DTEND;VALUE=DATE:20250915
+SUMMARY:Practical Guidance for Open Science in Your Research
+LOCATION:Verein für Socialpolitik (VfS)\, Cologne\, Germany
+DESCRIPTION:Workshop\nJoint with: Levent Neyse\nMode: In-Person\nEvent info
+ rmation: https://www.socialpolitik.de/de/workshops-mentoring-and-networkin
+ g-2025\nMore information: https://aeadataeditor.github.io/talks/2025-09-14
+ -vfs
+URL:https://aeadataeditor.github.io/talks/2025-09-14-vfs
+END:VEVENT
+END:VCALENDAR

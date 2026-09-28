@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:practices-presentation-2020-3@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20201106
+DTEND;VALUE=DATE:20201107
+SUMMARY:Practices for Data Transparency and Reproducibility
+LOCATION:University of Waterloo\, Canada (SWORDC Data Talk)\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://github.com/labor
+ dynamicsinstitute/practices-presentation-2020\nMore information: https://a
+ eadataeditor.github.io/talks/practices-presentation-2020-3
+URL:https://aeadataeditor.github.io/talks/practices-presentation-2020-3
+END:VEVENT
+END:VCALENDAR

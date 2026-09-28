@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-11-23-appam@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20241123
+DTEND;VALUE=DATE:20241124
+SUMMARY:Open Q&A with the American Economic Association's Data Editor
+LOCATION:APPAM 2024 Fall Research Conference\, National Harbor\, MD
+DESCRIPTION:AMA\nMode: In-Person\nEvent information: https://bsky.app/profi
+ le/aeadata.bsky.social/post/3l7oh3b2rqu2r\nMore information: https://aeada
+ taeditor.github.io/talks/2024-11-23-appam
+URL:https://aeadataeditor.github.io/talks/2024-11-23-appam
+END:VEVENT
+END:VCALENDAR

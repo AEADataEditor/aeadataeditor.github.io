@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-12-15-banco-de-portugal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20211215
+DTEND;VALUE=DATE:20211216
+SUMMARY:Overview of reproducibility and replicability in economics\, with a
+  side trip to provenance
+LOCATION:Banco de Portugal Workshop on Reproducibility of Scientific Result
+ s\, Lisbon\, Portugal
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://github.com/BPLIM
+ /Workshops/tree/master/BPLIM2021\nMore information: https://aeadataeditor.
+ github.io/talks/2021-12-15-banco-de-portugal
+URL:https://aeadataeditor.github.io/talks/2021-12-15-banco-de-portugal
+END:VEVENT
+END:VCALENDAR

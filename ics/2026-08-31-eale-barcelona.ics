@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-08-31-eale-barcelona@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:Data and Replication Panel
+LOCATION:EALE 2026 conference\, Barcelona\, Spain
+DESCRIPTION:panel\nJoint with: Marie Connolly (Canadian Journal of Economic
+ s)\, Maia Güell (European Economic Association)\nMode: In-person\nEvent i
+ nformation: https://www.ub.edu/eale2026/the-conference/\nMore information:
+  https://aeadataeditor.github.io/talks/2026-08-31-eale-barcelona
+URL:https://aeadataeditor.github.io/talks/2026-08-31-eale-barcelona
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-05-30-cea@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250530
+DTEND;VALUE=DATE:20250531
+SUMMARY:CEA Panel on Reproducibility
+LOCATION:Canadian Economics Association meetings\, Montréal\, Canada
+DESCRIPTION:Panel\nJoint with: Marie Connolly (UQAM\, Moderator)\, Abel Bro
+ deur (UOttawa\, I4R)\, Joëlle Pineau (McGill University and Meta)\, Hugo 
+ Larochelle (Mila and Université de Montréal)\nMode: In-Person\nEvent inf
+ ormation: https://www.economics.ca/cea2025-highlights\nMore information: h
+ ttps://aeadataeditor.github.io/talks/2025-05-30-cea
+URL:https://aeadataeditor.github.io/talks/2025-05-30-cea
+END:VEVENT
+END:VCALENDAR

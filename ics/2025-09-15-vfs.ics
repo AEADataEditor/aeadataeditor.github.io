@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-09-15-vfs@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250915
+DTEND;VALUE=DATE:20250916
+SUMMARY:Open Science  - Increasing Research Transparency in Economics
+LOCATION:Verein für Socialpolitik (VfS) - President's Panel\, Cologne\, Ge
+ rmany
+DESCRIPTION:Panel\nJoint with: Marianne Saam (ZBW\; Moderator)\, Jörg Anke
+ l-Peters (RWI)\, Jan Marcus (Freie Universität Berlin)\, Severine Toussae
+ rt (University of Oxford)\nMode: In-Person\nEvent information: https://www
+ .socialpolitik.de/de/panels-2025\nMore information: https://aeadataeditor.
+ github.io/talks/2025-09-15-vfs
+URL:https://aeadataeditor.github.io/talks/2025-09-15-vfs
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2023-02-09-berkeley-ama@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20230209
+DTEND;VALUE=DATE:20230210
+SUMMARY:Data Editor AMA
+LOCATION:UC Berkeley Economics Department\, Berkeley\, CA
+DESCRIPTION:AMA\nMode: In-Person\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2023-02-09-berkeley-ama
+URL:https://aeadataeditor.github.io/talks/2023-02-09-berkeley-ama
+END:VEVENT
+END:VCALENDAR

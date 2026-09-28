@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-01-19-cswep@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210119
+DTEND;VALUE=DATE:20210120
+SUMMARY:Demystifying Replication Requirements and Processes: Best Practices
+  Viewed by AEA-Data Editor
+LOCATION:CSWEP Fireside Chat\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.aeaweb.org/a
+ bout-aea/committees/cswep/programs/resources/webinars\nMore information: h
+ ttps://aeadataeditor.github.io/talks/2021-01-19-cswep
+URL:https://aeadataeditor.github.io/talks/2021-01-19-cswep
+END:VEVENT
+END:VCALENDAR

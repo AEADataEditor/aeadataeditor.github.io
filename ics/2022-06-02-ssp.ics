@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-06-02-ssp@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220602
+DTEND;VALUE=DATE:20220603
+SUMMARY:Rethinking Reproducibility: Bridging the Gaps Between Research Cult
+ ures\, Publishing Workflows and Scholarly Infrastructures
+LOCATION:2022 Annual Meeting\, Society for Scholarly Publishing\, Chicago\,
+  IL
+DESCRIPTION:Panel\nMode: In-Person\nMore information: https://aeadataeditor
+ .github.io/talks/2022-06-02-ssp
+URL:https://aeadataeditor.github.io/talks/2022-06-02-ssp
+END:VEVENT
+END:VCALENDAR

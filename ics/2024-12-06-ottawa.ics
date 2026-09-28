@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-12-06-ottawa@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20241206
+DTEND;VALUE=DATE:20241207
+SUMMARY:Creating Reproducible Research Even When Data Are Confidential
+LOCATION:Bank of Canada\, Ottawa\, ON\, Canada
+DESCRIPTION:Talk\nJoint with: Marie Connolly\nMode: In-Person\nMore informa
+ tion: https://aeadataeditor.github.io/talks/2024-12-06-ottawa
+URL:https://aeadataeditor.github.io/talks/2024-12-06-ottawa
+END:VEVENT
+END:VCALENDAR

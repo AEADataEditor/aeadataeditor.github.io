@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:practices-presentation-2020-4@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20201009
+DTEND;VALUE=DATE:20201010
+SUMMARY:Practices for Data Transparency and Reproducibility
+LOCATION:Cornell Libraries\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://github.com/labor
+ dynamicsinstitute/practices-presentation-2020\nMore information: https://a
+ eadataeditor.github.io/talks/practices-presentation-2020-4
+URL:https://aeadataeditor.github.io/talks/practices-presentation-2020-4
+END:VEVENT
+END:VCALENDAR

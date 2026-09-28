@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:replicability-presentation-2021-1@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210510
+DTEND;VALUE=DATE:20210511
+SUMMARY:Implementing Increased Transparency and Reproducibility in Economic
+ s - Some Lessons
+LOCATION:CNSTAT Expert meeting on Guidance on Data Sharing for NIA Longitud
+ inal Studies\, Washington\, DC\, USA
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/replicability-presentation-2021-1
+URL:https://aeadataeditor.github.io/talks/replicability-presentation-2021-1
+END:VEVENT
+END:VCALENDAR

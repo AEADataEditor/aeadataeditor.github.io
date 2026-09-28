@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-04-20-rda17@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210420
+DTEND;VALUE=DATE:20210421
+SUMMARY:Improving reproducibility in the social sciences: Challenges
+LOCATION:RDA17\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.rd-alliance.
+ org/plenaries/rda-17th-plenary-meeting-edinburgh-virtual/experiments-prepa
+ ring-data-interchange-and\nMore information: https://aeadataeditor.github.
+ io/talks/2021-04-20-rda17
+URL:https://aeadataeditor.github.io/talks/2021-04-20-rda17
+END:VEVENT
+END:VCALENDAR

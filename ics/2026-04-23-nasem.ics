@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-04-23-nasem@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260423
+DTEND;VALUE=DATE:20260424
+SUMMARY:Enhancing Scientific Integrity: Progress and Opportunities in the S
+ ocial and Behavioral Sciences - A Workshop 
+LOCATION:Board on Behavioral\, Cognitive\, and Sensory Sciences at the Nati
+ onal Academies of Sciences\, Engineering\, and Medicine\, Washington\, DC
+DESCRIPTION:Workshop\nMode: Online\nEvent information: https://www.national
+ academies.org/projects/DBASSE-BBCSS-25-02\nMore information: https://aeada
+ taeditor.github.io/talks/2026-04-23-nasem
+URL:https://aeadataeditor.github.io/talks/2026-04-23-nasem
+END:VEVENT
+END:VCALENDAR

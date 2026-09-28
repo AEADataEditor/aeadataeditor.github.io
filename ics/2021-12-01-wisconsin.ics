@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-12-01-wisconsin@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20211201
+DTEND;VALUE=DATE:20211202
+SUMMARY:Improving Transparency and Reproducibility: Lessons from 1\,000 eco
+ nomics papers
+LOCATION:University of Wisconsin - Center for Demography of Health and Agin
+ g\, Madison\, Wisconsin
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://cdha.wisc.edu/tr
+ aining/\nMore information: https://aeadataeditor.github.io/talks/2021-12-0
+ 1-wisconsin
+URL:https://aeadataeditor.github.io/talks/2021-12-01-wisconsin
+END:VEVENT
+END:VCALENDAR

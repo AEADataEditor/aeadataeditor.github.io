@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-01-09-assa@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220109
+DTEND;VALUE=DATE:20220110
+SUMMARY:Reproducibility and Transparency versus Privacy and Confidentiality
+ : Reflections from a Data Editor
+LOCATION:Allied Social Science Associations: Journal of Econometrics Sessio
+ n:\, Online
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.aeaweb.org/c
+ onference/2022/preliminary/1639\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2022-01-09-assa
+URL:https://aeadataeditor.github.io/talks/2022-01-09-assa
+END:VEVENT
+END:VCALENDAR

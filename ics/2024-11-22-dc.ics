@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-11-22-dc@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20241122
+DTEND;VALUE=DATE:20241123
+SUMMARY:Open Q&A with Data Editors of the AEA\, ECTA\, and WEAI
+LOCATION:McCourt School of Public Policy | Georgetown University\, Washingt
+ on\, DC
+DESCRIPTION:AMA\nJoint with: Joan Llull\, Farasat Bokhari\nMode: In-Person\
+ nEvent information: https://bsky.app/profile/aeadata.bsky.social/post/3lbi
+ 7ppbpj22a\nMore information: https://aeadataeditor.github.io/talks/2024-11
+ -22-dc
+URL:https://aeadataeditor.github.io/talks/2024-11-22-dc
+END:VEVENT
+END:VCALENDAR

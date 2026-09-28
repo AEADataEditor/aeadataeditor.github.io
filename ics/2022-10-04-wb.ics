@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-10-04-wb@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20221004
+DTEND;VALUE=DATE:20221005
+SUMMARY:Reproducible Research Fundamentals: Why does reproducibility matter
+  for economics research
+LOCATION:2023 World Bank Reproducible Research Fundamentals course\, online
+DESCRIPTION:Talk\nMode: Online\nMore information: https://aeadataeditor.git
+ hub.io/talks/2022-10-04-wb
+URL:https://aeadataeditor.github.io/talks/2022-10-04-wb
+END:VEVENT
+END:VCALENDAR

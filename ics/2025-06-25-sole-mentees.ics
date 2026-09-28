@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-06-25-sole-mentees@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250625
+DTEND;VALUE=DATE:20250626
+SUMMARY:Conversation on Replication Packages with SOLE Mentees
+LOCATION:SOLE Mentoring Program\, Online\, by invitation
+DESCRIPTION:AMA\nMode: Online\nMore information: https://aeadataeditor.gith
+ ub.io/talks/2025-06-25-sole-mentees
+URL:https://aeadataeditor.github.io/talks/2025-06-25-sole-mentees
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-12-19-banco-de-portugal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20221219
+DTEND;VALUE=DATE:20221220
+SUMMARY:Reproducibility when data are confidential or big
+LOCATION:Banco de Portugal Workshop on Reproducibility of Scientific Result
+ s\, Porto\, Portugal
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://github.com/BP
+ LIM/Workshops/tree/master/BPLIM2022\nMore information: https://aeadataedit
+ or.github.io/talks/2022-12-19-banco-de-portugal
+URL:https://aeadataeditor.github.io/talks/2022-12-19-banco-de-portugal
+END:VEVENT
+END:VCALENDAR

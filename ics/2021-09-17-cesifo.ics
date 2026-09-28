@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-09-17-cesifo@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210917
+DTEND;VALUE=DATE:20210918
+SUMMARY:Firm-Academic Research Collaborations in Economics - Journals’ Pe
+ rspective
+LOCATION:CES-ifo\, New York\, USA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.cesifo.org/e
+ n/node/64947\nMore information: https://aeadataeditor.github.io/talks/2021
+ -09-17-cesifo
+URL:https://aeadataeditor.github.io/talks/2021-09-17-cesifo
+END:VEVENT
+END:VCALENDAR

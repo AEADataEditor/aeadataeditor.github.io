@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-06-17-mexico@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250617
+DTEND;VALUE=DATE:20250618
+SUMMARY:Reproducibility from the data editor's perspective
+LOCATION:CEMLA Seminar on Data Laboratory for Access to Microdata by Resear
+ chers\, Mexico City\, Mexico
+DESCRIPTION:talk\nMode: In-Person\nEvent information: https://www.cemla.org
+ /actividades/2025/2025-06-seminar-data-laboratory.html\nMore information: 
+ https://aeadataeditor.github.io/talks/2025-06-17-mexico
+URL:https://aeadataeditor.github.io/talks/2025-06-17-mexico
+END:VEVENT
+END:VCALENDAR

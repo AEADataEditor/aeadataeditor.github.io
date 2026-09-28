@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-05-11-montreal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260511
+DTEND;VALUE=DATE:20260512
+SUMMARY:École d’été du CIQSS: Reproductibilité en recherche – Garan
+ tir la transparence et la crédibilité de vos travaux  (in French)
+LOCATION:Centre interuniversitaire québécois de statistiques sociales (CI
+ QSS)\, Montréal\, Canada
+DESCRIPTION:Workshop\nJoint with: Marie Connolly\nMode: In-person\nEvent in
+ formation: https://larsvilhuber.github.io/ecole-d-ete-ciqss-2026/\nMore in
+ formation: https://aeadataeditor.github.io/talks/2026-05-11-montreal
+URL:https://aeadataeditor.github.io/talks/2026-05-11-montreal
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-02-24-toronto@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220224
+DTEND;VALUE=DATE:20220225
+SUMMARY:Teaching for Large-scale Reproducibility Verification
+LOCATION:Toronto Workshop on Reproducibility\, Toronto\, ON
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://rohanalexande
+ r.com/reproducibility.html\nMore information: https://aeadataeditor.github
+ .io/talks/2022-02-24-toronto
+URL:https://aeadataeditor.github.io/talks/2022-02-24-toronto
+END:VEVENT
+END:VCALENDAR

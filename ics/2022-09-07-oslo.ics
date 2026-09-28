@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-09-07-oslo@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220907
+DTEND;VALUE=DATE:20220908
+SUMMARY:Reproducibility in the Social Sciences: Lessons learned for student
+ s\, researchers\, and institutions from 1\,000 articles
+LOCATION:Ragnar Frisch Centre for Economic Research\, Oslo\, Norway
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://www.frisch.ui
+ o.no/english/\nMore information: https://aeadataeditor.github.io/talks/202
+ 2-09-07-oslo
+URL:https://aeadataeditor.github.io/talks/2022-09-07-oslo
+END:VEVENT
+END:VCALENDAR

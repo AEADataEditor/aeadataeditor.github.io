@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-03-18-syracuse@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260318
+DTEND;VALUE=DATE:20260319
+SUMMARY:Reproducible Research with Sensitive and Restricted Data
+LOCATION:Syracuse University  Campbell Public Affairs Institute\, Syracuse\
+ , NY
+DESCRIPTION:Workshop\nMode: In-Person\nMore information: https://aeadataedi
+ tor.github.io/talks/2026-03-18-syracuse
+URL:https://aeadataeditor.github.io/talks/2026-03-18-syracuse
+END:VEVENT
+END:VCALENDAR

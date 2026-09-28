@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-09-29-cleveland@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250929
+DTEND;VALUE=DATE:20250930
+SUMMARY:Preparing for Reproducibility
+LOCATION:Federal Reserve Bank of Cleveland\, Cleveland\, Ohio\, USA
+DESCRIPTION:Workshop\nMode: In-person\nMore information: https://aeadataedi
+ tor.github.io/talks/2025-09-29-cleveland
+URL:https://aeadataeditor.github.io/talks/2025-09-29-cleveland
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2021-01-08-potpourri@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20210108
+DTEND;VALUE=DATE:20210109
+SUMMARY:Reproducibility Potpourri - or why we need a standard README
+LOCATION:BITSS Annual Meeting\, Berkeley\, CA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://www.bitss.org/ev
+ ents/9thbitssam/\nMore information: https://aeadataeditor.github.io/talks/
+ 2021-01-08-potpourri
+URL:https://aeadataeditor.github.io/talks/2021-01-08-potpourri
+END:VEVENT
+END:VCALENDAR

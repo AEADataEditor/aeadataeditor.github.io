@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-09-13-vfs-panel@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220913
+DTEND;VALUE=DATE:20220914
+SUMMARY:Replication and Research Transparency
+LOCATION:Verein für Socialpolitik \, Basel\, Switzerland
+DESCRIPTION:Panel\nMode: In-Person\nEvent information: https://www.socialpo
+ litik.de/en/tagungsprogramm-2022\nMore information: https://aeadataeditor.
+ github.io/talks/2022-09-13-vfs-panel
+URL:https://aeadataeditor.github.io/talks/2022-09-13-vfs-panel
+END:VEVENT
+END:VCALENDAR

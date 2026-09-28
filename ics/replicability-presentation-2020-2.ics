@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:replicability-presentation-2020-2@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20200212
+DTEND;VALUE=DATE:20200213
+SUMMARY:Implementing Increased Transparency and Reproducibility in Economic
+ s
+LOCATION:HEC Paris\, Paris\, France
+DESCRIPTION:Talk\nMode: In-Person\nEvent information: https://github.com/la
+ bordynamicsinstitute/replicability-presentation-2020\nMore information: ht
+ tps://aeadataeditor.github.io/talks/replicability-presentation-2020-2
+URL:https://aeadataeditor.github.io/talks/replicability-presentation-2020-2
+END:VEVENT
+END:VCALENDAR

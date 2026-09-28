@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-05-21-montreal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240521
+DTEND;VALUE=DATE:20240522
+SUMMARY:QICSS Summer School on Research Reproducibility
+LOCATION:Quebec inter-University Centre for Social Statistics (QICSS)\, Mon
+ tréal\, Canada
+DESCRIPTION:Workshop\nJoint with: Marie Connolly\nMode: In-Person\nEvent in
+ formation: https://www.ciqss.org/en/evenement/ecole-d-ete/qicss-summer-sch
+ ool-on-research-reproducibility\nMore information: https://aeadataeditor.g
+ ithub.io/talks/2024-05-21-montreal
+URL:https://aeadataeditor.github.io/talks/2024-05-21-montreal
+END:VEVENT
+END:VCALENDAR

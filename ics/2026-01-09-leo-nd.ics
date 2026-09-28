@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-01-09-leo-nd@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20260109
+DTEND;VALUE=DATE:20260110
+SUMMARY:Notre Dame Lab for Economic Opportunities Pre-docs
+LOCATION:Wilson Sheehan Lab for Economic Opportunities\, Notre Dame\, IN\, 
+ USA
+DESCRIPTION:Talk\nMode: Online\nEvent information: https://leo.nd.edu/\nMor
+ e information: https://aeadataeditor.github.io/talks/2026-01-09-leo-nd
+URL:https://aeadataeditor.github.io/talks/2026-01-09-leo-nd
+END:VEVENT
+END:VCALENDAR

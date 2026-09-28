@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2024-05-30-cea@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20240531
+DTEND;VALUE=DATE:20240601
+SUMMARY:Training on reproducible methods in empirical economics
+LOCATION:58th Annual Meetings of the Canadian Economics Association\, Toron
+ to\, Canada
+DESCRIPTION:Talk\nJoint with: Marie Connolly\nMode: In-Person\nEvent inform
+ ation: https://www.economics.ca/cpages/cea2024\nMore information: https://
+ aeadataeditor.github.io/talks/2024-05-30-cea
+URL:https://aeadataeditor.github.io/talks/2024-05-30-cea
+END:VEVENT
+END:VCALENDAR

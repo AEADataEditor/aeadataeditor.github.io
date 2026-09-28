@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2022-06-04-cea@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20220604
+DTEND;VALUE=DATE:20220605
+SUMMARY:Lessons Learned from Implementing AEA Reproducibility
+LOCATION:56th Annual Canadian Economics Association Meeting\, Ottawa\, ON
+DESCRIPTION:Talk\nMode: In-Person\nMore information: https://aeadataeditor.
+ github.io/talks/2022-06-04-cea
+URL:https://aeadataeditor.github.io/talks/2022-06-04-cea
+END:VEVENT
+END:VCALENDAR

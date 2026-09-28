@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2025-05-26-montreal@aeadataeditor.github.io
+DTSTAMP:20260928T231358Z
+DTSTART;VALUE=DATE:20250526
+DTEND;VALUE=DATE:20250527
+SUMMARY:QICSS Summer School on Research Reproducibility
+LOCATION:Canadian Economics Association meetings / Quebec inter-University 
+ Centre for Social Statistics (QICSS)\, Montréal\, Canada
+DESCRIPTION:Workshop\nJoint with: Michael Stepner\nMode: In-Person\nEvent i
+ nformation: https://larsvilhuber.github.io/summer-school-qicss-2025/\nMore
+  information: https://aeadataeditor.github.io/talks/2025-05-26-montreal
+URL:https://aeadataeditor.github.io/talks/2025-05-26-montreal
+END:VEVENT
+END:VCALENDAR
