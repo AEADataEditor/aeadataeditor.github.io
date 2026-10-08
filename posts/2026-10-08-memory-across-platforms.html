@@ -289,7 +289,7 @@
 
 
   
-	  11 minute read
+	  12 minute read
 	
 </p>
           
@@ -448,8 +448,13 @@ https://aeadataeditor.github.io/dataeditor/memory-across-platforms
 <p><strong>For authors:</strong></p>
 
 <ul>
-  <li><strong>Report computational requirements as measurements, and say where you measured them.</strong> “24 GB of RAM” is a fact about one Mac, with its memory compression and its swap. See also <a href="https://jpedataeditor.github.io/posts/20261001-ram-usage/">Florian Oswald’s post</a>. Measuring <strong>actual</strong> usage is important.</li>
-  <li><strong>If you can, try a second platform.</strong> Even a partial run, up to the most demanding step, would have revealed this problem (in fact, the Linux run can be made to fail very quickly). Many universities have Linux clusters available.</li>
+  <li><strong>Report computational requirements as measurements, and say where you measured them.</strong> “24 GB of RAM” is a fact about one Mac, with its memory compression and its swap. See also <a href="https://jpedataeditor.github.io/posts/20261001-ram-usage/">Florian Oswald’s post</a>. Measuring <strong>actual</strong> usage is important. It may also never matter, but is good to have when it does.
+    <ul>
+      <li>See <a href="https://github.com/reifjulian/my-project-template/blob/main/scripts/_config.do#L64">Julian Reif’s code</a> for a Python/Stata version of how to capture this.</li>
+      <li>Simply ask your coding agent to do so!</li>
+    </ul>
+  </li>
+  <li><strong>If you can, try a second platform.</strong> Even a partial run, up to the most demanding step, would have revealed this problem (in fact, the Linux run can be made to fail very quickly). Many universities have Linux clusters available. But: You have to think that it might matter. Not easy.</li>
   <li><strong>Provide the full list of dependencies with versions.</strong> It eliminates one set of suspects, but it will not solve platform differences: in our case, identical package versions worked on one platform and failed on the other.</li>
 </ul>
 
@@ -458,6 +463,12 @@ https://aeadataeditor.github.io/dataeditor/memory-across-platforms
 <ul>
   <li><strong>“Portable” has limits.</strong> Python, R, Julia, MATLAB code can be portable at the source level and still behave very differently at the level of the numerical libraries they call. When something fails on one platform, it is worth trying another before concluding the package is broken.</li>
   <li><strong>Memory requirements do not transfer across operating systems.</strong> We will be more careful about how we read, and how we ask authors to report, memory requirements.</li>
+</ul>
+
+<p><strong>For readers:</strong></p>
+
+<ul>
+  <li>Remember that even if it has been checked, it probably will not have been checked under all possible scenarios. Even replicators are only <strong>1</strong> more data point, not all possible data points.</li>
 </ul>
 
 <h2 id="about-the-ai-assistance">About the AI assistance</h2>
