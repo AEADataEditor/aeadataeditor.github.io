@@ -115,14 +115,20 @@ This echoes an [earlier post]({% post_url 2026-07-24-stata-convergence-across-pl
 
 **For authors:**
 
-- **Report computational requirements as measurements, and say where you measured them.** "24 GB of RAM" is a fact about one Mac, with its memory compression and its swap. See also [Florian Oswald's post](https://jpedataeditor.github.io/posts/20261001-ram-usage/). Measuring **actual** usage is important.
-- **If you can, try a second platform.** Even a partial run, up to the most demanding step, would have revealed this problem (in fact, the Linux run can be made to fail very quickly). Many universities have Linux clusters available.
+- **Report computational requirements as measurements, and say where you measured them.** "24 GB of RAM" is a fact about one Mac, with its memory compression and its swap. See also [Florian Oswald's post](https://jpedataeditor.github.io/posts/20261001-ram-usage/). Measuring **actual** usage is important. It may also never matter, but is good to have when it does.
+  - See [Julian Reif's code](https://github.com/reifjulian/my-project-template/blob/main/scripts/_config.do#L64) for a Python/Stata version of how to capture this.
+  - Simply ask your coding agent to do so!
+- **If you can, try a second platform.** Even a partial run, up to the most demanding step, would have revealed this problem (in fact, the Linux run can be made to fail very quickly). Many universities have Linux clusters available. But: You have to think that it might matter. Not easy.
 - **Provide the full list of dependencies with versions.** It eliminates one set of suspects, but it will not solve platform differences: in our case, identical package versions worked on one platform and failed on the other.
 
 **For replicators (us included):**
 
 - **"Portable" has limits.** Python, R, Julia, MATLAB code can be portable at the source level and still behave very differently at the level of the numerical libraries they call. When something fails on one platform, it is worth trying another before concluding the package is broken.
 - **Memory requirements do not transfer across operating systems.** We will be more careful about how we read, and how we ask authors to report, memory requirements.
+
+**For readers:**
+
+- Remember that even if it has been checked, it probably will not have been checked under all possible scenarios. Even replicators are only **1** more data point, not all possible data points.
 
 
 ## About the AI assistance
