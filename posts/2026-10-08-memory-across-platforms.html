@@ -1,0 +1,841 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Limits of Cross-Platform Code - Office of the AEA Data Editor</title>
+<meta name="description" content="A recent replication package came with a throw-away description in the README of one minor part of the processing: a Python notebook running in about 12 hours and 40 minutes on a MacBook Pro with 24 GB of RAM. We tried it first on a shared Windows machine with 128 GB, and it failed with some memory error. That happens all the time (too many people on the machine), so we switched to our Linux HPC cluster. One of the nodes has 1,000 GB. Surely that would solve that little problem.  Nothing worked.  Here is what we learned about the limits of “cross-platform” code.1                 With assistance from Claude Code; see About the AI assistance at the end of this post. The Windows run was done manually by one of our replicators. The decisions about what to test, and the final text, are mine, as are any remaining errors. &#8617;">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Limits of Cross-Platform Code">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms">
+
+
+  <meta property="og:description" content="A recent replication package came with a throw-away description in the README of one minor part of the processing: a Python notebook running in about 12 hours and 40 minutes on a MacBook Pro with 24 GB of RAM. We tried it first on a shared Windows machine with 128 GB, and it failed with some memory error. That happens all the time (too many people on the machine), so we switched to our Linux HPC cluster. One of the nodes has 1,000 GB. Surely that would solve that little problem.  Nothing worked.  Here is what we learned about the limits of “cross-platform” code.1                 With assistance from Claude Code; see About the AI assistance at the end of this post. The Windows run was done manually by one of our replicators. The decisions about what to test, and the final text, are mine, as are any remaining errors. &#8617;">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-10-08T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://bsky.app/profile/aeadata.bsky.social" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span class="label">Bluesky</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Limits of Cross-Platform Code">
+    <meta itemprop="description" content="A recent replication package came with a throw-away description in the README of one minor part of the processing: a Python notebook running in about 12 hours and 40 minutes on a MacBook Pro with 24 GB of RAM. We tried it first on a shared Windows machine with 128 GB, and it failed with some memory error. That happens all the time (too many people on the machine), so we switched to our Linux HPC cluster. One of the nodes has 1,000 GB. Surely that would solve that little problem.Nothing worked.Here is what we learned about the limits of “cross-platform” code.1            With assistance from Claude Code; see About the AI assistance at the end of this post. The Windows run was done manually by one of our replicators. The decisions about what to test, and the final text, are mine, as are any remaining errors. &#8617;      ">
+    <meta itemprop="datePublished" content="2026-10-08T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Limits of Cross-Platform Code
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  11 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-10-08T00:00:00-04:00">October 08, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <!--
+Bluesky version (each paragraph < 300 characters):
+
+1/ The authors' README: "Runs in 12h40m on a Mac with 24 GB of RAM." Our Linux server: crashed out of memory. With 64 GB. With 180 GB. With 1,000 GB. Same code, same data. A thread on the limits of cross-platform code. 🧵
+
+2/ The crash: same line every time, factoring one large sparse matrix with SciPy's splu (SuperLU). Peak ~150 GB, with 1,000 GB available. Reload the same matrix from disk: same error after 2 min, at <3 GB. SuperLU gives up; the RAM isn't full.
+
+3/ We (with AI help) ruled out six suspects: Python version, stale caches, wasted zeros in the matrix, the ordering heuristic, integer limits, MKL. Each change: same crash.
+
+4/ On a 64 GB Mac, the unmodified code got through that step 9 times. Process memory looks like <50 GB, but macOS is compressing ~92 GB of data into ~38 GB of RAM. The Mac doesn't need less memory. It hides it, and pays in time.
+
+5/ Same code. Same NumPy, SciPy, JAX versions on Mac and Linux. But the layers underneath differ: SciPy's bundled SuperLU sits on Apple's Accelerate on the Mac, on OpenBLAS on Linux. "Portable" code stops at those layers.
+
+6/ Lessons: report memory needs for the platform you used, and say so. If you can, test on a second OS. And, for us: computational requirements are measurements on one system, not guarantees for others.
+
+https://aeadataeditor.github.io/dataeditor/memory-across-platforms
+-->
+
+<p>A recent replication package came with a throw-away description in the README of one minor part of the processing: a Python notebook running in about 12 hours and 40 minutes on a MacBook Pro with 24 GB of RAM. We tried it first on a shared Windows machine with 128 GB, and it failed with some memory error. That happens all the time (too many people on the machine), so we switched to our Linux HPC cluster. One of the nodes has 1,000 GB. Surely that would solve that little problem.</p>
+
+<p>Nothing worked.</p>
+
+<p>Here is what we learned about the limits of “cross-platform” code.<sup id="fnref:claude"><a href="#fn:claude" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<!-- more -->
+
+<h2 id="the-setup">The setup</h2>
+
+<p>The relevant part of the code is a <a href="https://jupyter.org/">Jupyter</a> notebook using Python that solves a large dynamic model. It uses the standard scientific Python stack: <a href="https://numpy.org/">NumPy</a>, <a href="https://scipy.org/">SciPy</a>, and <a href="https://docs.jax.dev/">JAX</a>. Python, NumPy, and SciPy are all widely considered portable. You write the code once, and it runs anywhere.</p>
+
+<p>The authors ran it on an Apple Silicon Mac with 24 GB of RAM.</p>
+
+<h2 id="windows-out-of-memory">Windows: out of memory</h2>
+
+<p>Our first attempt was on a Windows server with 128 GB of RAM. It failed at the dynamic solve step:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JaxRuntimeError: INTERNAL: Error dispatching computation: Out of memory allocating 146669667649 bytes.
+</code></pre></div></div>
+
+<p>For those who do not read long numbers, that’s about 147 GB. Far more than the server has, and more than the code supposedly uses.</p>
+
+<h2 id="linux-same-result-but-a-more-complicated-story-emerges">Linux: same result, but a more complicated story emerges</h2>
+
+<p>We moved to a Linux compute cluster. Our <a href="https://biohpc.cornell.edu/Default.aspx">cluster</a> has nodes from 128 GB to 1,000 GB. That should work. Or so we thought. The RA submitted <a href="https://biohpc.cornell.edu/lab/userguide.aspx?a=bioslurm">SLURM</a> jobs reserving (for exclusive use) 24 GB. Then 64 GB. Then 180 GB, 240 GB, and finally 1,000 GB. Every run failed with some sort of memory error, though not always the same. The initial runs failed because the SLURM manager declared <a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM</a> and killed the job. But at 180 GB, a different error emerged: a <code class="language-plaintext highlighter-rouge">MemoryError</code> inside <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.splu.html"><code class="language-plaintext highlighter-rouge">scipy.sparse.linalg.splu</code></a>, while factoring one large sparse matrix (the Hessian of the optimization problem, 204,200 rows and columns). Each run climbed for <strong>about an hour</strong>, to a peak of roughly <strong>147-150 GB</strong>, and died at the same line. Note that the peak is very close to the 147 GB that JAX wanted on Windows.</p>
+
+<p>That happened even with 1,000 GB available, suggesting that it is NOT just “the computer ran out of memory.” Indeed, beyond 180 GB, the job was never killed by the operating system or the cluster scheduler. The error was persistently occurring within “SuperLU”, and Python itself was now reporting <code class="language-plaintext highlighter-rouge">MemoryError</code>.</p>
+
+<p>AI-assisted debugging<sup id="fnref:AI2"><a href="#fn:AI2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> pinpointed some additional info. Take the same matrix, saved to disk by the code, load it into a fresh Python session and call <code class="language-plaintext highlighter-rouge">splu</code> on it with the same options. It failed with the same error, but after about <strong>two minutes</strong>, having used <strong>less than 3 GB</strong>.</p>
+
+<h2 id="ruling-out-some-cases">Ruling out some cases</h2>
+
+<p>With help from an AI coding assistant, we went through the plausible suspects one at a time:</p>
+
+<ol>
+  <li><strong>The Python version.</strong> The initial Python version was the stock Python provided by the cluster (3.12). We rebuilt the environment with Python 3.14, which is the version recorded in the notebook’s metadata. We used <a href="https://docs.conda.io/en/latest/miniconda.html"><code class="language-plaintext highlighter-rouge">miniconda</code></a> to do so, but installed <a href="https://pypi.org/">PyPI</a> packages. Same crash.</li>
+  <li><strong>Stale cached files.</strong> The code caches intermediate results. We deleted them and started fresh. Same crash.</li>
+  <li><strong>Wasted space in the matrix.</strong> AI determined that a helper function was storing about 77% of the (sparse) matrix entries as explicit zeros (338 million stored entries, where the true density was 0.19%). Dropping them cut the stored entries to 79 million. But fixing it did not change the peak memory at the crash.</li>
+  <li><strong>The ordering heuristic.</strong> AI told me that sparse factorization reorders the matrix to limit “fill-in”, the new non-zero entries created during factorization. Switching SuperLU’s ordering from the default (<code class="language-plaintext highlighter-rouge">COLAMD</code>) to an alternative (<code class="language-plaintext highlighter-rouge">MMD_AT_PLUS_A</code>) produced an identical crash: same line, same ~148 GB, same runtime.</li>
+  <li><strong>Integer limits.</strong> SciPy’s SuperLU indexes matrices with 32-bit integers, which can overflow on very large problems. This matrix is comfortably within range.</li>
+  <li><strong>Back to conda: MKL.</strong> We tried to use the Intel MKL version of SciPy installed via conda, instead of the pip-installed version. Same crash.</li>
+</ol>
+
+<p>We did not go and try to refactor the code. That is a different problem for future users of this replication package. Nothing within the scope of purportedly cross-platform code worked.</p>
+
+<h2 id="back-to-a-mac">Back to a Mac</h2>
+
+<p>The authors ran this on “Apple M4 Pro, 24 GB RAM” for around 12h, according to their README. We then found a Mac Studio with “Apple M4 Max, 64 GB of RAM.” After more than 21 hours, it had not crashed, but also had not finished. AI analysis showed that it had gone through the <code class="language-plaintext highlighter-rouge">splu</code> factorization that killed every Linux run, and did so nine times, for different matrices, about 1h20m per case.</p>
+
+<p>How much memory is it using? That depends on how you count:</p>
+
+<ul>
+  <li>The process’s resident memory (RSS) is typically 15-27 GB, and peaked (in our 30-second sampling) at 48.5 GB.</li>
+  <li>Swap to disk (SSD) fluctuates between 2 and 13 GB.</li>
+  <li>But RSS on macOS does not count <em>compressed</em> memory. The AI checked: macOS’s memory compressor (system-wide, but this job is by far the largest thing running) was holding about <strong>92 GB of data, squeezed into about 38 GB of physical RAM</strong>.</li>
+</ul>
+
+<h2 id="why-does-it-fail">Why does it fail?</h2>
+
+<p>The Python code is identical on all systems. Even the versions of the key Python packages are identical between the Mac and Linux runs. What is <em>not</em> identical is everything underneath:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Our Mac</th>
+      <th>Our Linux</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hardware</td>
+      <td>Apple M4 Max (ARM), 64 GB</td>
+      <td>Intel Xeon (x86_64), up to 1,000 GB</td>
+    </tr>
+    <tr>
+      <td>Python</td>
+      <td>3.12.13 (pip)</td>
+      <td>3.14.8 (conda-forge); earlier also 3.12.7 (pip)</td>
+    </tr>
+    <tr>
+      <td>NumPy / SciPy / JAX</td>
+      <td>2.5.3 / 1.18.1 / 0.11.2</td>
+      <td>2.5.3 / 1.18.1 / 0.11.2</td>
+    </tr>
+    <tr>
+      <td>Sparse LU</td>
+      <td>SuperLU, bundled with SciPy</td>
+      <td>SuperLU, bundled with SciPy</td>
+    </tr>
+    <tr>
+      <td>BLAS/LAPACK</td>
+      <td>Apple Accelerate (version not reported)</td>
+      <td>OpenBLAS 0.3.x, bundled with NumPy and SciPy</td>
+    </tr>
+    <tr>
+      <td>Result at <code class="language-plaintext highlighter-rouge">splu</code></td>
+      <td>Succeeds (9 times so far, ~1h20m each)</td>
+      <td><code class="language-plaintext highlighter-rouge">MemoryError</code>, after ~1h at ~150 GB, or after 2 min at &lt;3 GB</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Some notes</strong></p>
+
+<ul>
+  <li><strong>SuperLU is bundled.</strong> The function that fails, <code class="language-plaintext highlighter-rouge">splu</code>, is a wrapper around <a href="https://portal.nersc.gov/project/sparse/superlu/">SuperLU</a>, a C library for sparse LU factorization. SciPy includes and compiles its own copy. Same <code class="language-plaintext highlighter-rouge">scipy</code> package, same <code class="language-plaintext highlighter-rouge">superlu</code>. That is good for consistency. But it also means that making system-level changes to numerical libraries is not a way out. We tried forcing Python to recognize MKL by installing it via <code class="language-plaintext highlighter-rouge">miniconda</code> (which includes it) vs. PyPI, which does not, but that did not work.<sup id="fnref:minicondamkl"><a href="#fn:minicondamkl" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
+  <li><strong>Linear algebra underneath differs by platform.</strong> But does it matter? SuperLU relies on BLAS routines for dense sub-blocks. On Apple Silicon, recent NumPy and SciPy builds use Apple’s <a href="https://developer.apple.com/documentation/accelerate">Accelerate</a> framework. On Linux (and Windows), the NumPy and SciPy packages include a copy of OpenBLAS. The AI tells me that these differ in floating-point details, and in a sparse factorization, small differences in which pivot gets picked can lead to very large differences in fill-in, and thus in memory.</li>
+  <li><strong>The operating system manages memory differently.</strong> macOS aggressively compresses memory and swaps to fast SSD storage. Windows also compresses memory by default; Linux can (via zswap or zram), but this is usually not enabled on HPC compute nodes. All three can swap to disk. If swap is used, speed declines. Our Mac run saw 92 GB compressed into 38 GB – which should fit in memory - and yet saw some swap usage as well. Almost certainly, the authors’ run also used swap. Linux on a compute cluster, managed by a scheduler like <a href="https://slurm.schedmd.com/">SLURM</a>, does not need to compress memory this way. In our case, the job was provided with far more memory than it used at the point of failure. Is that somehow hard-coded into <code class="language-plaintext highlighter-rouge">superlu</code>/<code class="language-plaintext highlighter-rouge">scipy</code>?</li>
+</ul>
+
+<p>This echoes an <a href="/posts/2026-07-24-stata-convergence-across-platforms">earlier post</a>, where the same Stata code converged or not depending on the number of processors used. Different software, different symptom, same lesson: “the code is the same” is not the same as “the computation is the same.”</p>
+
+<h2 id="lessons">Lessons</h2>
+
+<p><strong>For authors:</strong></p>
+
+<ul>
+  <li><strong>Report computational requirements as measurements, and say where you measured them.</strong> “24 GB of RAM” is a fact about one Mac, with its memory compression and its swap. See also <a href="https://jpedataeditor.github.io/posts/20261001-ram-usage/">Florian Oswald’s post</a>. Measuring <strong>actual</strong> usage is important.</li>
+  <li><strong>If you can, try a second platform.</strong> Even a partial run, up to the most demanding step, would have revealed this problem (in fact, the Linux run can be made to fail very quickly). Many universities have Linux clusters available.</li>
+  <li><strong>Provide the full list of dependencies with versions.</strong> It eliminates one set of suspects, but it will not solve platform differences: in our case, identical package versions worked on one platform and failed on the other.</li>
+</ul>
+
+<p><strong>For replicators (us included):</strong></p>
+
+<ul>
+  <li><strong>“Portable” has limits.</strong> Python, R, Julia, MATLAB code can be portable at the source level and still behave very differently at the level of the numerical libraries they call. When something fails on one platform, it is worth trying another before concluding the package is broken.</li>
+  <li><strong>Memory requirements do not transfer across operating systems.</strong> We will be more careful about how we read, and how we ask authors to report, memory requirements.</li>
+</ul>
+
+<h2 id="about-the-ai-assistance">About the AI assistance</h2>
+
+<p>[Editorial note by the AI: Lars made me write this…]</p>
+
+<p>Three separate <a href="https://claude.com/claude-code">Claude Code</a> sessions contributed to this post and to the work behind it. They did not share context. The drafting session asked the other two for technical details; the Mac session replied directly, and we relayed the Linux session’s answer by hand.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Session</th>
+      <th>Role</th>
+      <th>Models</th>
+      <th>Wall time</th>
+      <th>Active (API) time</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linux cluster</td>
+      <td>Set up environments, submitted jobs, tested the six hypotheses, wrote up diagnostics (146 lines of code added, 51 removed)</td>
+      <td>Claude Sonnet 5 (most), Claude Opus 5, Claude Haiku 4.5</td>
+      <td>1d 3h 46m</td>
+      <td>38m 31s</td>
+      <td>$11.50</td>
+    </tr>
+    <tr>
+      <td>Mac</td>
+      <td>Monitored the running job without interfering; collected memory statistics and software stack details</td>
+      <td>Claude Sonnet 5.5 (most), Claude Haiku 4.5</td>
+      <td>21h 24m</td>
+      <td>25m 29s</td>
+      <td>$10.51</td>
+    </tr>
+    <tr>
+      <td>This post</td>
+      <td>Drafted the post from our replication notes and the other two sessions’ reports</td>
+      <td>Claude Opus 5.5</td>
+      <td>n/a</td>
+      <td>n/a</td>
+      <td>$1.80 (estimated, via ccusage)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Costs are as reported by Claude Code itself, except for the drafting session, which ran in an editor that does not report them; that figure is an estimate from <a href="https://github.com/ryoppippi/ccusage">ccusage</a>, which came within about 7% of Claude Code’s own figure for the Linux session. Most of the wall time is waiting: for cluster jobs to fail, and for the Mac job to run. The time the models actually spent working is a small fraction of that.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:claude">
+      <p>With assistance from Claude Code; see <a href="#about-the-ai-assistance">About the AI assistance</a> at the end of this post. The Windows run was done manually by one of our replicators. The decisions about what to test, and the final text, are mine, as are any remaining errors. <a href="#fnref:claude" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:AI2">
+      <p>Claude ran various diagnostics on the Linux cluster and the Mac, collecting memory usage statistics and software stack details for both platforms. <a href="#fnref:AI2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:minicondamkl">
+      <p>We rebuilt the environment with <code class="language-plaintext highlighter-rouge">miniconda</code>. We only tried a simple test (load cached matrix → <code class="language-plaintext highlighter-rouge">splu</code> directly). The first conda build  resolved to OpenBLAS (reported generically via pkg-config,  confirmed as OpenBLAS by <code class="language-plaintext highlighter-rouge">conda list</code>). We then also tried with an MKL build. pip/OpenBLAS (job 865), conda-forge/OpenBLAS (job 866), and conda defaults/MKL (job 867, confirmed MKL 2025.0.0, defaults channel) completed, same result: <code class="language-plaintext highlighter-rouge">MemoryError</code>: Not enough memory to perform factorization, ~2.5GB peak RSS, ~1m28s. BLAS backend (OpenBLAS vs. MKL) makes no difference either, for this particular code path . See <a href="https://gist.github.com/larsvilhuber/de88073e7416f2009e38a0fdac745126">https://gist.github.com/larsvilhuber/de88073e7416f2009e38a0fdac745126</a>. <a href="#fnref:minicondamkl" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#code" class="page__taxonomy-item" rel="tag">Code</a><span class="sep">, </span>
+    
+      <a href="/tags/#computational-requirements" class="page__taxonomy-item" rel="tag">computational requirements</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#linux" class="page__taxonomy-item" rel="tag">Linux</a><span class="sep">, </span>
+    
+      <a href="/tags/#macos" class="page__taxonomy-item" rel="tag">MacOS</a><span class="sep">, </span>
+    
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#reproducibility" class="page__taxonomy-item" rel="tag">reproducibility</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#dataeditor" class="page__taxonomy-item" rel="tag">dataeditor</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-10-08T00:00:00-04:00">October 8, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://bsky.app/intent/compose?text=Limits+of+Cross-Platform+Code%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-10-08-memory-across-platforms" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-10-08-memory-across-platforms" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-08-12-psa-github" rel="permalink">PSA: Please be precise when using Github as input to scientific articles.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts…
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-07-24-stata-convergence-across-platforms" rel="permalink">The Same Code, a Different Answer: Stata Convergence Across Platforms
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-05-08-private-data" rel="permalink">What to do when you have private, even anonymous data as part of your analysis?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-05-05-pii" rel="permalink">What to do when PII is detected in a replication package?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I had previously described a very similar scenario in a blog post about the PSID, but I thought it would be useful to write a more general post about what to...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2026-10-08-memory-across-platforms.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://bsky.app/profile/aeadata.bsky.social">
+              <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> @aeadata.bsky.social</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
