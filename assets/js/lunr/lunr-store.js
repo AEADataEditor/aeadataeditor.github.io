@@ -633,13 +633,13 @@ var store = [{
         "excerpt":"Abstract   Some lessons learned for an academic audience.  ","categories": [],
         "tags": [],
         "url": "/talks/2022-06-04-cea",
-        "teaser": null
+        "teaser": "/images/cea-2022-ottawa-th.jpg"
       },{
         "title": "Transparency and Reproducibility in Economics: Lessons learned from 1,000 papers",
         "excerpt":"Abstract   Presentation by Lars Vilhuber at WEAI 2022, followed by Panel discussion with Tim Salmon, Editor for “Economic Inquiry”, and Kyrani Reneau, openICPSR.   ","categories": [],
         "tags": [],
         "url": "/talks/2022-06-30-weai",
-        "teaser": null
+        "teaser": "/images/weai-2022-portland-th.jpg"
       },{
         "title": "Reproducibility in the Social Sciences: Lessons learned for students, researchers, and institutions from 1,000 articles",
         "excerpt":"Abstract The American Economic Association’s Data Editor has reviewed more than 1,000 empirical articles since July 2019, and worked with authors to improve the reproducibility of their research compendia (replication packages). Some lessons emerge from this work. In this presentation, I will focus on lessons for young scholars (students and...","categories": [],
@@ -687,7 +687,7 @@ var store = [{
         "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with data editors from...","categories": [],
         "tags": [],
         "url": "/talks/2023-01-06-coffee",
-        "teaser": null
+        "teaser": "/images/assa-2023-th.jpg"
       },{
         "title": "Data Editor AMA",
         "excerpt":"Abstract Do you have questions how the data and code availability policy works at the AEA or other journals, or how to prepare a particularly challenging replication package? Are you a journal editor who is considering implementing a similar policy and have questions? Come and chat with Lars Vilhuber, Data...","categories": [],
@@ -747,7 +747,7 @@ var store = [{
         "excerpt":"Abstract We present a detailed and actionable guide on creating a replication package, relying on our expertise as data editors of leading journals. This is joint work with Miklós Koren (Data Editor for ReStud), Imola Csóka, Marie Connolly (Data Editor for the Canadian Journal of Economics) and Joan Llull (Data...","categories": [],
         "tags": [],
         "url": "/talks/2023-07-04-weai",
-        "teaser": null
+        "teaser": "/images/weai-2023-san-diego-th.jpg"
       },{
         "title": "Reproducible Research from Day 1",
         "excerpt":"Abstract Miklós Koren and Lars Vilhuber, data editors of the Review of Economic Studies and the American Economic Association Journals require that you share your code and data in a replication package at the end of your research project. Following some best practices from day 1 can not only help...","categories": [],
@@ -783,13 +783,13 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2024-01-05-san-antonio",
-        "teaser": null
+        "teaser": "/images/assa-2024-th.jpg"
       },{
         "title": "Advanced methods for self-verification of reproducibility",
         "excerpt":"Abstract In this second session, data editors describe a few possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to...","categories": [],
         "tags": [],
         "url": "/talks/2024-01-06-san-antonio",
-        "teaser": null
+        "teaser": "/images/assa-2024-th.jpg"
       },{
         "title": "Data Editor AMA",
         "excerpt":"Abstract Questions and Coffee with AEA Data Editor Lars Vilhuber Are you a researcher in the midst of preparing a replication package and are unsure about something? Are you a student wondering how complicated putting together a reproducible thesis may be? Are you unsure if the data you are using...","categories": [],
@@ -849,19 +849,19 @@ var store = [{
         "excerpt":"Preliminary! The session still needs to be confirmed. Details to follow. Abstract Session 1: “Reproducibility from Day 1” [May 31] Link to session Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following...","categories": [],
         "tags": [],
         "url": "/talks/2024-05-30-cea",
-        "teaser": null
+        "teaser": "/images/cea-2024-toronto-th.jpg"
       },{
         "title": "Reproducibility from Day 1 to Day T",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2024-06-29-weai",
-        "teaser": null
+        "teaser": "/images/weai-2024-seattle-th.jpg"
       },{
         "title": "Training on reproducible methods in empirical economics",
         "excerpt":"Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later,...","categories": [],
         "tags": [],
         "url": "/talks/2024-09-05-eale",
-        "teaser": null
+        "teaser": "/images/eale-2026-barcelona-th.jpg"
       },{
         "title": "Training on reproducible methods in empirical economics when data are confidential",
         "excerpt":"Abstract Session 1: “Reproducibility from Day 1” Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later,...","categories": [],
@@ -903,13 +903,13 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
         "url": "/talks/2025-01-03-san-francisco",
-        "teaser": null
+        "teaser": "/images/assa-2025-th.jpg"
       },{
         "title": "AEA/ES Data Editors' Tutorial 2",
         "excerpt":"Abstract Data editors describe possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to check that it works. Questions from...","categories": [],
         "tags": [],
         "url": "/talks/2025-01-04-san-francisco",
-        "teaser": null
+        "teaser": "/images/assa-2025-th.jpg"
       },{
         "title": "Reproducibility in Economics: Why and how",
         "excerpt":"Abstract Toute publication scientifique exige le partage du code et des données à l’origine des résultats d’un article avant sa publication et ce, afin d’en assurer la reproductibilité Or, une reproductibilité efficace commence dès le début du projet de recherche. Nous verrons comment le fait de suivre certaines bonnes pratiques...","categories": [],
@@ -945,7 +945,7 @@ var store = [{
         "excerpt":"Location 8:30am-10am, UQAM, Pavillon DS, 320, rue Ste-Catherine est, room DS-R510 Abstract Recent AI developments, particularly large language models (LLMs), came out in full force in the last couple of years, with an increasing use by researchers in all fields. How is this changing the way economists handle the reproducibility...","categories": [],
         "tags": [],
         "url": "/talks/2025-05-30-cea",
-        "teaser": null
+        "teaser": "/images/cea-2025-montreal-th.jpg"
       },{
         "title": "Reproducibility from the data editor's perspective",
         "excerpt":"Time   9:00-10:30 AM (Mexico City time)   Note   I may also be available for individual meetings June 16 and 19.  ","categories": [],
@@ -957,13 +957,13 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2025-06-22-weai",
-        "teaser": null
+        "teaser": "/images/weai-2025-san-francisco-th.jpg"
       },{
         "title": "Reproducibility from Day 1 to Day T (Part 2)",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2025-06-23-weai",
-        "teaser": null
+        "teaser": "/images/weai-2025-san-francisco-th.jpg"
       },{
         "title": "Conversation on Replication Packages with SOLE Mentees",
         "excerpt":"Time   11:00am - 12:30pm   Abstract   General Q&amp;A about replication packages, loosely based on topics available at https://larsvilhuber.github.io/tutorial-reproducibility-2025/.  ","categories": [],
@@ -993,13 +993,13 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
         "url": "/talks/2026-01-03-philadelphia",
-        "teaser": null
+        "teaser": "/images/assa-2026-th.jpg"
       },{
         "title": "AEA/ES Data Editors' Tutorial 2",
         "excerpt":"Abstract Data editors describe possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to check that it works. Questions from...","categories": [],
         "tags": [],
         "url": "/talks/2026-01-04-philadelphia",
-        "teaser": null
+        "teaser": "/images/assa-2026-th.jpg"
       },{
         "title": "Notre Dame Lab for Economic Opportunities Pre-docs",
         "excerpt":"Time   12:00pm - 1:30pm   Abstract   General talk about reproducibility in the work of pre-docs, loosely based on topics available at https://larsvilhuber.github.io/tutorial-reproducibility-2025/.  ","categories": [],
@@ -1053,19 +1053,19 @@ var store = [{
         "excerpt":"Abstract This intensive training explores the fundamental principles of reproducibility, a pillar of open science that ensures the transparency and credibility of scientific research. You will discover best practices to make your work reproducible, from data management to code documentation, version control, and results publication. OBJECTIVES Master the challenges and...","categories": [],
         "tags": [],
         "url": "/talks/2026-05-28-vancouver-cea",
-        "teaser": null
+        "teaser": "/images/cea-2026-vancouver-th.jpg"
       },{
         "title": "Reproducibility from Day 1 to Day T",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices from day 1 can not only help you prepare a replication package later, but also make you a more...","categories": [],
         "tags": [],
         "url": "/talks/2026-06-30-weai",
-        "teaser": null
+        "teaser": "/images/weai-2026-denver-th.jpg"
       },{
         "title": "Data and Replication Panel",
         "excerpt":"Time   Monday August 31st,     13:00   (just before the opening of the conference)   Abstract   The conference includes a Data and Replication Session, open to all participants and led by Data Editors from leading academic journals:      Marie Connolly (Canadian Journal of Economics)   Maia Güell (European Economic Association)   Lars Vilhuber (American Economic Association)  ","categories": [],
         "tags": [],
         "url": "/talks/2026-08-31-eale-barcelona",
-        "teaser": null
+        "teaser": "/images/eale-2026-barcelona-th.jpg"
       },{
         "title": "Reproducibility in research – Ensuring the transparency and credibility of your work",
         "excerpt":"Date/Time 8 September 2026 (9:00 to 12:00) and 9 September 2026 (9:00 to 12:00) Abstract This intensive training explores the fundamental principles of reproducibility, a pillar of open science that ensures the transparency and credibility of scientific research. You will discover best practices to make your work reproducible, from data...","categories": ["dataeditor"],
@@ -1083,11 +1083,11 @@ var store = [{
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
         "url": "/talks/2027-01-04-dc",
-        "teaser": null
+        "teaser": "/images/assa-2027-th.jpg"
       },{
         "title": "AEA/ES Data Editors' Tutorial 2",
         "excerpt":"Abstract Data editors describe possible steps to self-check replication packages before submitting them to a journal. It is not meant to be exhaustive, and it is not meant to be prescriptive. There are many ways to construct a replication package, and many more to check that it works. Questions from...","categories": [],
         "tags": [],
         "url": "/talks/2027-01-05-dc",
-        "teaser": null
+        "teaser": "/images/assa-2027-th.jpg"
       }]

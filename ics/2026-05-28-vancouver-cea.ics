@@ -5,14 +5,15 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-05-28-vancouver-cea@aeadataeditor.github.io
-DTSTAMP:20261111T193108Z
+DTSTAMP:20261111T200008Z
 DTSTART;VALUE=DATE:20260528
 DTEND;VALUE=DATE:20260529
 SUMMARY:CEA Summer School on Research Reproducibility
 LOCATION:Canadian Economics Association meetings\, Vancouver\, Canada
-DESCRIPTION:Workshop\nJoint with: Marie Connolly\nEvent information: https:
- //larsvilhuber.github.io/summer-school-sfu-ubc-2026/\nMore information: ht
- tps://aeadataeditor.github.io/talks/2026-05-28-vancouver-cea
+DESCRIPTION:Workshop\nJoint with: Marie Connolly\nMode: In-person\nEvent in
+ formation: https://larsvilhuber.github.io/summer-school-sfu-ubc-2026/\nMor
+ e information: https://aeadataeditor.github.io/talks/2026-05-28-vancouver-
+ cea
 URL:https://aeadataeditor.github.io/talks/2026-05-28-vancouver-cea
 END:VEVENT
 END:VCALENDAR
