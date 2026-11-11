@@ -1,4 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-11-11T15:00:05-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Limits of Cross-Platform Code</title><link href="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms" rel="alternate" type="text/html" title="Limits of Cross-Platform Code" /><published>2026-10-08T00:00:00-04:00</published><updated>2026-10-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/memory-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms"><![CDATA[<!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-11-11T16:50:59-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Creating a restricted-access deposit for data that cannot go into the main replication package</title><link href="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit" rel="alternate" type="text/html" title="Creating a restricted-access deposit for data that cannot go into the main replication package" /><published>2026-11-11T00:00:00-05:00</published><updated>2026-11-11T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/zenodo-restricted-deposit</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit"><![CDATA[<p>Sometimes, authors have data that they are allowed to share, but <strong>not openly/without restrictions</strong>.</p>
+
+<p>This post describes one solution: a <strong>restricted, but shareable</strong> supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).</p>
+
+<!-- more -->
+
+<h2 id="when-is-this-the-right-solution">When is this the right solution?</h2>
+
+<p>The data use agreement may say that the data can be given to other researchers who agree to certain conditions, but not posted for anybody to download. Or the data may contain information that is too sensitive for an open deposit, but not so sensitive that it needs to sit in a secure enclave.</p>
+
+<p>Most repositories only allow for deposit-wide permissions: Either all the files are restricted, or none of them are. So restricting the deposit because one data file is restricted would make the code, and documentation, inaccessible to others.<sup id="fnref:exceptions"><a href="#fn:exceptions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author’s laptop either. Here we describe how to proceed.  In earlier posts, I described what to do with <a href="2026-05-08-private-data">data from unnamed providers</a> and with <a href="2026-05-05-pii">data containing PII</a>, which almost certainly require additional permissions, and for which this is not appropriate. A very similar scenario with a specific data provider was described <a href="2024-11-01-psid-requests">in the case of the PSID</a>. A restricted deposit, in this example on Zenodo, fits a specific case in between:</p>
+
+<ul>
+  <li>the <strong>author</strong> has the right to redistribute the data, but only under conditions (e.g., “for non-commercial research only”, “users must agree not to re-identify respondents”, “users must cite the original source”);</li>
+  <li>no additional conditions (e.g., by IRB or data provider) have been imposed.</li>
+</ul>
+
+<p>It is <strong>not</strong> the right solution when:</p>
+
+<ul>
+  <li>the data are licensed from a third party that does not allow redistribution at all (then the data are not yours to deposit; document how to obtain them from the provider instead);</li>
+  <li>the data are so sensitive that they require a secure environment (enclave, FSRDC, or a curated archive with restricted-use agreements, such as ICPSR’s restricted data services);</li>
+  <li>the data provider requires a specific deposit (e.g., PSID), though many of the other documentation mechanisms here apply.</li>
+</ul>
+
+<p>If you have data files from multiple data sources, you should create separate restricted deposits for each source, rather than combining them into a single Zenodo deposit, for better metadata and findability; it may also be necessary if the cumulative size of the files exceeds repository limits.</p>
+
+<h2 id="setup-here">Setup here</h2>
+
+<p>We will use</p>
+
+<ul>
+  <li>a main deposit on openICPSR (the main AEA deposit)</li>
+  <li>a secondary deposit on Zenodo (which allows for access requests)</li>
+</ul>
+
+<p>We will not describe how to create the main deposit, which is described <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html">elsewhere</a>.</p>
+
+<h2 id="in-a-nutshell">In a nutshell</h2>
+
+<ol>
+  <li>Create a new upload on Zenodo, containing only the data that cannot be in the main deposit, plus a short README.</li>
+  <li>Set the <strong>files</strong> to “Restricted”. This maintains public <strong>metadata</strong>. Note however that the README will NOT be readable.</li>
+  <li>Enable <strong>access requests</strong>, and write clear, objective conditions for access.</li>
+  <li>Link the Zenodo record to the main deposit and to the article, and vice versa.</li>
+  <li>Submit the Zenodo record to the <a href="https://zenodo.org/communities/aeajournals">AEA Community</a>.</li>
+  <li>Document everything in the README of the openICPSR deposit.</li>
+</ol>
+
+<h2 id="step-by-step">Step by step</h2>
+
+<h3 id="prepare-the-files">Prepare the files</h3>
+
+<p>Separate the data that must be restricted from everything else. Everything that <strong>can</strong> be public (code, public data, documentation, codebooks,  variable lists for the restricted data) stays in the openICPSR deposit. The Zenodo deposit should contain only:</p>
+
+<ul>
+  <li>the restricted data files, with two options as to their structure:
+    <ul>
+      <li>A ZIP file that keeps the original directory structure of the restricted data, so that a user can simply unzip the files and obtain the correct directory structure</li>
+      <li>Individual files, subject to repository-specific limits<sup id="fnref:zenodo-limits"><a href="#fn:zenodo-limits" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
+    </ul>
+  </li>
+  <li>a short <code class="language-plaintext highlighter-rouge">README</code> that describes the files, points back to the main replication package, and repeats the terms of use;</li>
+  <li>if the data come with their own license or data use agreement text, a copy of it.</li>
+</ul>
+
+<p>Do <strong>not</strong> put code in the restricted deposit. Code goes into the main replication package, even if it depends on the presence of the restricted data. Ideally, code is structured to test for the presence of the files, and only run parts of the code that do not require the restricted data if the data are absent.</p>
+
+<h3 id="create-the-zenodo-upload">Create the Zenodo upload</h3>
+
+<p>Log in to Zenodo, and click on “New upload”. See <a href="https://help.zenodo.org/docs/deposit/create-new-upload/">Create new upload</a>.</p>
+
+<p>Fill in the usual metadata: title, authors, description, resource type (“Dataset”), and a license. A few recommendations:</p>
+
+<ul>
+  <li><strong>Title</strong>: make it obvious that this is a supplement, e.g., “Supplemental data for: <em>Title of the article</em>”.</li>
+  <li><strong>Description</strong>: this is <strong>public</strong>, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (we will also link to it in the metadata).</li>
+  <li><strong>License</strong>: choose a license that is consistent with the restrictions. Do not use CC-BY or similar open licenses for data that are not, in fact, open.</li>
+  <li><strong>DOI</strong>: let Zenodo reserve a DOI (“Get a DOI now!”), so you can reference it in the openICPSR README before the record is published.</li>
+</ul>
+
+<p>Upload the files.</p>
+
+<h3 id="restrict-the-files">Restrict the files</h3>
+
+<p>In the “Visibility” section, select “Restricted”. This means that anybody can find the record and read its description, but only people you grant access to can download the files.</p>
+
+<p><img src="/images/zenodo-select-restricted.png" alt="Zenodo visibility settings" /></p>
+
+<p>You may choose to use an embargo, if the sensitivity declines over time. At the end of an embargo, all access restrictions are lifted.</p>
+
+<h3 id="enable-access-requests">Enable access requests</h3>
+
+<p>Choose “Save Draft”. The record will then be created (but not yet published), and a “Share” button becomes available. Click on it: the “Share access” dialog opens on the “People” tab (we will come back to it below). Switch to the “Settings” tab.</p>
+
+<p><img src="/images/zenodo-access-requests.png" alt="Zenodo share access settings" /></p>
+
+<p>Choose the relevant options, and fill out the “Accept conditions”. These will be presented to the user who asks for access.</p>
+
+<ul>
+  <li>We recommend choosing <strong>Allow authenticated users to request access to restricted files</strong>, so that a record of who is asking for access is kept.</li>
+  <li>Reasonable access conditions must comply with journal policy, and be objective and consistent. For instance,</li>
+</ul>
+
+<blockquote>
+  <p>Access is granted to researchers affiliated with an academic or non-profit research institution, for non-commercial research purposes. Requesters must state their affiliation and intended use, and agree not to attempt to re-identify any individual or firm, and not to redistribute the data. To request access, follow instructions at <a href="https://help.zenodo.org/docs/share/access-requests/request-access/">https://help.zenodo.org/docs/share/access-requests/request-access/</a>.</p>
+</blockquote>
+
+<p>Data editors might reject the supplementary deposit if access is granted at the discretion of the authors, and may require that the deposit be in their community, where they will also see requests.</p>
+
+<h3 id="make-sure-somebody-other-than-you-can-approve-requests">Make sure somebody other than you can approve requests</h3>
+
+<p>By default, access requests go to the owner of the record, i.e., you. To make sure requests continue to be handled when you change jobs, change email addresses, or are simply on vacation, share <strong>management</strong> rights for the record with at least one other person, and ideally the journal’s data editor. Choose the  “People” menu, add the person by email, and select “Can manage” permission.</p>
+
+<p><img src="/images/zenodo-share-people.png" alt="Zenodo share with people" /></p>
+
+<h3 id="document-in-the-readme">Document in the README</h3>
+
+<p>In the README of the <strong>openICPSR</strong> deposit (ideally following the <a href="https://doi.org/10.5281/zenodo.7293838">Template README</a>), in the “Data Availability and Provenance Statements” section:</p>
+
+<ul>
+  <li>name the restricted files, and say where they are (the Zenodo DOI, e.g, <a href="https://doi.org/10.5281/zenodo.1234567">https://doi.org/10.5281/zenodo.1234567</a>);</li>
+  <li>state the conditions for access, and how to request access (via the Zenodo record’s “Request access” button, or the specific instructions at <a href="https://help.zenodo.org/docs/share/access-requests/request-access/">https://help.zenodo.org/docs/share/access-requests/request-access/</a>);</li>
+  <li>say where the files need to be placed for the code to run (e.g., <code class="language-plaintext highlighter-rouge">data/raw/restricted/</code>); or</li>
+  <li>say which code file unpacks the restricted data;</li>
+  <li>describe which results can, and which cannot, be reproduced without the restricted data. Ideally, the code checks for the presence of the restricted data and skips (with a clear message) the parts that need it, so that the rest of the package still runs.</li>
+</ul>
+
+<p>The Zenodo record’s own README should, in turn, point back to the openICPSR deposit, since that is where the code and full documentation live.</p>
+
+<h3 id="do-not-publish-yet">Do not publish yet</h3>
+
+<p>You can choose to publish, but you do not need to publish just yet. Inclusion in the AEA Community makes it available to the AEA Data Editor (similarly for other journals), without explicit sharing. The Data Editor may ask you later to publish it, or the journal staff may publish it synchronously with the main deposit.</p>
+
+<h3 id="link-the-deposits">Link the deposits</h3>
+
+<p>Both deposits should point to each other, and to the article. This may sometimes happen much later.</p>
+
+<ul>
+  <li><strong>On Zenodo</strong>: under “Related works”,
+    <ul>
+      <li>add the <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#citing-your-deposit">DOI of the openICPSR deposit</a> (Type: <code class="language-plaintext highlighter-rouge">Software</code>) with relation “Is part of”</li>
+      <li>add the DOI of the article (once known, Type: <code class="language-plaintext highlighter-rouge">Journal Article</code>) with relation “Is supplement to”.</li>
+    </ul>
+  </li>
+  <li><strong>On openICPSR</strong>: in the “Related publications” section, use “Import from DOI” with the Zenodo DOI (once published), and choose <code class="language-plaintext highlighter-rouge">is supplemented by</code> for the <code class="language-plaintext highlighter-rouge">Relationship</code> field.</li>
+</ul>
+
+<h2 id="the-end-state">The end state</h2>
+
+<p>At the end:</p>
+
+<ul>
+  <li>The openICPSR deposit is public, contains all code and all non-restricted data, and its README explains how to obtain the rest.</li>
+  <li>The Zenodo record is public and findable, with a DOI and a clear description, but its files are only available to users who request access and agree to the conditions.</li>
+  <li>More than one person can approve access requests, and the conditions do not depend on the author’s discretion.</li>
+  <li>And incidentally, the Data Editor had the ability to verify reproducibility using the restricted data.</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:exceptions">
+      <p>Some repositories, like Dataverse, allow for file-level restrictions within a single deposit. <a href="#fnref:exceptions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:zenodo-limits">
+      <p>See <a href="https://help.zenodo.org/docs/deposit/manage-quota/">Zenodo file upload limits</a> for details. <a href="#fnref:zenodo-limits" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="private data" /><category term="Zenodo" /><category term="openICPSR" /><summary type="html"><![CDATA[Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).]]></summary></entry><entry><title type="html">Limits of Cross-Platform Code</title><link href="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms" rel="alternate" type="text/html" title="Limits of Cross-Platform Code" /><published>2026-10-08T00:00:00-04:00</published><updated>2026-10-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/memory-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms"><![CDATA[<!--
 Bluesky version (each paragraph < 300 characters):
 
 1/ The authors' README: "Runs in 12h40m on a Mac with 24 GB of RAM." Our Linux server: crashed out of memory. With 64 GB. With 180 GB. With 1,000 GB. Same code, same data. A thread on the limits of cross-platform code. 🧵
@@ -1175,171 +1345,4 @@ V2: Moved PSID data to https://doi.org/10.3886/E210483V1 and updated README.
       <p>A shorter and perfectly acceptable name would have been “Supplementary for: The Gender Wage Gap: Extent, Trends, and Explanations”. The supplementary data could also be linked back to the original replication package, for clarity. <a href="#fnref:note" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><summary type="html"><![CDATA[The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data. So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!]]></summary></entry><entry><title type="html">On the use and reuse of within-project code</title><link href="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication" rel="alternate" type="text/html" title="On the use and reuse of within-project code" /><published>2024-07-19T00:00:00-04:00</published><updated>2024-07-19T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/functions-and-code-duplication</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2024-07-19-functions-and-code-duplication"><![CDATA[<p>We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.</p>
-
-<!-- more -->
-
-<p>It introduces lots of failure points - not necessarily in the final package, but in the development process.</p>
-
-<h2 id="the-example">The example</h2>
-
-<p>Consider that you are halfway through your project. You have a base model, and three variants thereof. Each of which is the base model, copied into three different directories, with minimal modifications in the code. For sake of clarity, and with no loss of generality intended:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code/
-    base-model/
-            base-model.m
-    robustness-check-1/
-            base-model.m
-    robustness-check-2/
-            base-model.m
-    robustness-check-3/
-            base-model.m
-</code></pre></div></div>
-
-<p>where a <code class="language-plaintext highlighter-rouge">diff</code> between <code class="language-plaintext highlighter-rouge">base-model.m</code> and <code class="language-plaintext highlighter-rouge">robustness-check-1/base-model.m</code> would show only a few lines changed:</p>
-
-<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff code/base-model/base-model.m code/robustness-check-1/base-model.m
-</span><span class="p">13073c13073
-</span><span class="gd">&lt; a=1;
-</span><span class="p">---
-</span><span class="gi">&gt; a=2;
-</span></code></pre></div></div>
-
-<blockquote>
-  <p>Note: the change would appear to be in line 13073, which is awfully subtle… this is inspired by real-life examples!</p>
-</blockquote>
-
-<h2 id="the-problem">The problem</h2>
-
-<p>Now imagine that your thesis advisor, or a reviewer, identifies a key problem in the implemented algorithm. You fix it in <code class="language-plaintext highlighter-rouge">base-model.m</code>, but now need to fix it in all the other modified copies too. Will there be any typos when you implement the patch? What if there are not three robustness checks, but 30? Or 300 different parameterizations of a simulation?</p>
-
-<p>The techy programmer might decide to do this with <code class="language-plaintext highlighter-rouge">patch</code> in conjunction with <code class="language-plaintext highlighter-rouge">git</code>, but that already counts as advanced functionality (I probably lost a lot of readers with the first part of that sentence…)</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create a patch from the updates to the base model</span>
-git diff d362f6..3bd22 <span class="o">&gt;</span> patch.diff
-<span class="c"># apply the patch to the robustness check</span>
-patch code/robustness-check-1/base-model.m &lt; patch.diff
-</code></pre></div></div>
-
-<p>but that is not a robust solution that scales to the 30 or 300 robustness checks.</p>
-
-<h2 id="a-possible-solution">A possible solution</h2>
-
-<p>The core solution is to apply elementary best programming practices: <strong>write functions</strong>.<sup id="fnref:functions"><a href="#fn:functions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
-
-<p>So should one go about the above problem? My rule of thumb is:</p>
-
-<ul>
-  <li>Copy code once, fine, don’t do it again.</li>
-  <li>Copy it twice, stop, and create a function.</li>
-  <li>Copy it three times: don’t even go there!</li>
-</ul>
-
-<p>Assuming that you are using MATLAB (where we seem to see this often), you should treat the core model code as a “function” (even if you do not explicitly program it that way), and then call that “function” multiple times. In a nutshell:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code/
-    core-simulation/
-            parametrized-simulation.m
-    base-model.m
-    robustness-check-1.m
-    robustness-check-2.m
-    robustness-check-3.m
-</code></pre></div></div>
-
-<p>where</p>
-
-<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% base-model.m</span>
-
-<span class="c1">% We set the base model to have the following parameters,</span>
-<span class="c1">% as per Section 2 of the paper:</span>
-<span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-<span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
-<span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
-
-<span class="c1">% We then call the core simulation code</span>
-<span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
-</code></pre></div></div>
-
-<p>will call the code in “parametrized-simulation.m” with parameters <code class="language-plaintext highlighter-rouge">a,b,c</code> already set. The simulation itself assumes those parameters are set.<sup id="fnref:proper-function"><a href="#fn:proper-function" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
-
-<p>The robustness checks might then have</p>
-
-<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% robustness-check-1.m</span>
-
-<span class="c1">% We set the model to have the following parameters,</span>
-<span class="c1">% as per Section 3 of the paper:</span>
-
-<span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="c1">% This differs from the base model</span>
-<span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
-<span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
-
-<span class="c1">% We then call the core simulation code</span>
-<span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
-</code></pre></div></div>
-
-<p>or go through a loop of multiple values:</p>
-
-<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% robustness-check-2.m</span>
-
-
-<span class="c1">% We set the model to have the following parameters,</span>
-<span class="c1">% as per Section 4 of the paper:</span>
-
-<span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
-<span class="n">c</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
-
-<span class="c1">% We now explore the space of a within this context.</span>
-<span class="k">for</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span>
-    <span class="n">parametrized</span><span class="o">-</span><span class="n">simulation</span>
-<span class="k">end</span>
-
-<span class="c1">% Summarize results from exploration</span>
-
-<span class="n">summarize</span><span class="o">-</span><span class="n">results</span>
-
-</code></pre></div></div>
-
-<h2 id="other-languages">Other languages</h2>
-
-<p>Is that a MATLAB-specific problem? No. We see similar issues in Stata, R, Python, and other languages. The core solution is the same: write functions, and call them multiple times, instead of copying code around, and hard-coding parameters.</p>
-
-<h2 id="other-situations">Other situations</h2>
-
-<p>The above example had continuous (well, kind of) parameter spaces. What if they are discontinuous? You can still loop over a whole set of specifications by storing them in a file - yes, an Excel file is fine! - and reading them in (in MATLAB, <a href="https://www.mathworks.com/help/matlab/import_export/ways-to-import-spreadsheets.html"><code class="language-plaintext highlighter-rouge">readtable</code></a>). For example,</p>
-
-<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">% Read the Excel spreadsheet</span>
-<span class="p">[</span><span class="n">num</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">raw</span><span class="p">]</span> <span class="o">=</span> <span class="nb">xlsread</span><span class="p">(</span><span class="s1">'your_spreadsheet.xlsx'</span><span class="p">);</span>
-
-<span class="c1">% Get the number of rows in the data</span>
-<span class="p">[</span><span class="n">numRows</span><span class="p">,</span> <span class="o">~</span><span class="p">]</span> <span class="o">=</span> <span class="nb">size</span><span class="p">(</span><span class="n">raw</span><span class="p">);</span>
-
-<span class="c1">% Loop over each row, starting from the second row (assuming first row is header)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">:</span><span class="n">numRows</span>
-    <span class="c1">% Extract values from columns A, B, and C</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>  <span class="c1">% Column A</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>  <span class="c1">% Column B</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">raw</span><span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>  <span class="c1">% Column C</span>
-    
-    <span class="c1">% Call the function something() with the extracted values</span>
-    <span class="nb">result</span> <span class="o">=</span> <span class="n">something</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
-    
-    <span class="c1">% You can do something with the result here if needed</span>
-    <span class="c1">% For example, store it in an array or print it</span>
-    <span class="nb">disp</span><span class="p">([</span><span class="s1">'Result for row '</span><span class="p">,</span> <span class="nb">num2str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">': '</span><span class="p">,</span> <span class="nb">num2str</span><span class="p">(</span><span class="nb">result</span><span class="p">)]);</span>
-<span class="k">end</span>
-</code></pre></div></div>
-<p>(straight from <a href="https://claude.ai/">Claude AI</a>)</p>
-
-<h2 id="summarizing-it-and-creating-tables">Summarizing it and creating tables</h2>
-
-<p>Of course, you now also have  to properly capture all those results, store them, and be able to summarize them, and create tables from them. That’s another story.</p>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:functions">
-      <p>See for instance <a href="https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e">https://medium.com/@josueparra2892/20-best-programming-practices-407df688b96e</a>, but this will be repeated many times. I was personally influenced by reading the (very accessible, but 900 pages!) “<a href="https://bookshop.org/p/books/code-complete-steve-mcconnell/12551815?ean=9780735619678">Code Complete</a>” by Steve McConnell. Desirable internal design characteristics include “minimal complexity” (KISS), “ease of maintenance”, and “reusability” <a href="#fnref:functions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:proper-function">
-      <p>In a proper function, you would pass the parameters as arguments, and validate that they are the right ones, etc.: <code class="language-plaintext highlighter-rouge">core-model(a,b,c)</code>. Read the programming language specific manual on how to properly write functions: <a href="https://www.stata.com/manuals/u17.pdf">Stata</a>, <a href="https://adv-r.hadley.nz/functions.html#functions">R via Hadley</a>, <a href="https://www.mathworks.com/help/matlab/ref/function.html">MATLAB</a>, etc. <a href="#fnref:proper-function" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="code" /><category term="function libraries" /><summary type="html"><![CDATA[We often see researchers handle variants of their analysis by copying and pasting code, or by copying code files into separate directories, and making only minimal modifications. Some folks do this for robustness checks - same data, different analysis method, or a variant of the dependent variable - others for simulation of various scenarios - an economy without banks, an economy with credit-constrained banks, an economy with unconstrained banks. I won’t point to particular examples, to protect the (somewhat) innocent, but this is not a good idea.]]></summary></entry></feed>
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><summary type="html"><![CDATA[The AEA Data and Code Availability Policy asks that authors provide access to all data used in a published paper. But it also acknowledges that there are cases where data cannot be shared. This may be due to privacy concerns, proprietary rights to the data that are not the author’s, or terms of use that prohibit the sharing, redistribution, or publication of data. So what happens when an author inadvertently does share such data, and the data provider finds out, and is not happy? Let’s call this a “take-down request.” The data provider asks that the author remove the data from the replication package. But the author is committed (by signing an agreement) to not withdrawing the replication package. How to proceed? Read on!]]></summary></entry></feed>

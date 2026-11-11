@@ -407,6 +407,12 @@ var store = [{
         "url": "/posts/2026-10-08-memory-across-platforms",
         "teaser": null
       },{
+        "title": "Creating a restricted-access deposit for data that cannot go into the main replication package",
+        "excerpt":"Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can...","categories": [],
+        "tags": ["data editor tips","replication packages","terms of use","private data","Zenodo","openICPSR"],
+        "url": "/posts/2026-11-11-zenodo-restricted-deposit",
+        "teaser": null
+      },{
         "title": "Migration of legacy replication packages (pending last packages)",
         "excerpt":"Since July 16, 2019, the American Economic Association has used the AEA Data and Code Repository as the default archive for its supplements. The AEA also announced that it would migrate the historical supplements, hitherto stored as ZIP files on the AEA website, into the AEA Data and Code Repository....","categories": [],
         "tags": [],

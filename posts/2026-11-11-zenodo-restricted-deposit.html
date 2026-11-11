@@ -1,0 +1,786 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Creating a restricted-access deposit for data that cannot go into the main replication package - Office of the AEA Data Editor</title>
+<meta name="description" content="Sometimes, authors have data that they are allowed to share, but not openly/without restrictions.  This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).">
+
+
+  <meta name="author" content="AEA Data Editor">
+  
+  <meta property="article:author" content="AEA Data Editor">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Office of the AEA Data Editor">
+<meta property="og:title" content="Creating a restricted-access deposit for data that cannot go into the main replication package">
+<meta property="og:url" content="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit">
+
+
+  <meta property="og:description" content="Sometimes, authors have data that they are allowed to share, but not openly/without restrictions.  This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-11-11T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEA Data Editor",
+      "url": "https://aeadataeditor.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Office of the AEA Data Editor Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/logo-aea-88x88.jpg" alt="Office of the AEA Data Editor"></a>
+        
+        <a class="site-title" href="/">
+          Office of the AEA Data Editor
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/">START REPLICATION PACKAGE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aea-de-guidance/FAQ.html">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/surveys/">Surveys</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/logo-aea.jpg" alt="AEA Data Editor" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">AEA Data Editor</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>The AEA Data Editor’s mission is to design and oversee the AEA journals’ strategy for archiving and curating research data and promoting reproducible research.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://bsky.app/profile/aeadata.bsky.social" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span class="label">Bluesky</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://mstdn.social/@aeadata" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">Mastodon</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/aeadataeditor" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Creating a restricted-access deposit for data that cannot go into the main replication package">
+    <meta itemprop="description" content="Sometimes, authors have data that they are allowed to share, but not openly/without restrictions.This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).">
+    <meta itemprop="datePublished" content="2026-11-11T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Creating a restricted-access deposit for data that cannot go into the main replication package
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  10 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2026-11-11T00:00:00-05:00">November 11, 2026</time></p>
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+       
+        
+
+      
+        <p>Sometimes, authors have data that they are allowed to share, but <strong>not openly/without restrictions</strong>.</p>
+
+<p>This post describes one solution: a <strong>restricted, but shareable</strong> supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).</p>
+
+<!-- more -->
+
+<h2 id="when-is-this-the-right-solution">When is this the right solution?</h2>
+
+<p>The data use agreement may say that the data can be given to other researchers who agree to certain conditions, but not posted for anybody to download. Or the data may contain information that is too sensitive for an open deposit, but not so sensitive that it needs to sit in a secure enclave.</p>
+
+<p>Most repositories only allow for deposit-wide permissions: Either all the files are restricted, or none of them are. So restricting the deposit because one data file is restricted would make the code, and documentation, inaccessible to others.<sup id="fnref:exceptions"><a href="#fn:exceptions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author’s laptop either. Here we describe how to proceed.  In earlier posts, I described what to do with <a href="2026-05-08-private-data">data from unnamed providers</a> and with <a href="2026-05-05-pii">data containing PII</a>, which almost certainly require additional permissions, and for which this is not appropriate. A very similar scenario with a specific data provider was described <a href="2024-11-01-psid-requests">in the case of the PSID</a>. A restricted deposit, in this example on Zenodo, fits a specific case in between:</p>
+
+<ul>
+  <li>the <strong>author</strong> has the right to redistribute the data, but only under conditions (e.g., “for non-commercial research only”, “users must agree not to re-identify respondents”, “users must cite the original source”);</li>
+  <li>no additional conditions (e.g., by IRB or data provider) have been imposed.</li>
+</ul>
+
+<p>It is <strong>not</strong> the right solution when:</p>
+
+<ul>
+  <li>the data are licensed from a third party that does not allow redistribution at all (then the data are not yours to deposit; document how to obtain them from the provider instead);</li>
+  <li>the data are so sensitive that they require a secure environment (enclave, FSRDC, or a curated archive with restricted-use agreements, such as ICPSR’s restricted data services);</li>
+  <li>the data provider requires a specific deposit (e.g., PSID), though many of the other documentation mechanisms here apply.</li>
+</ul>
+
+<p>If you have data files from multiple data sources, you should create separate restricted deposits for each source, rather than combining them into a single Zenodo deposit, for better metadata and findability; it may also be necessary if the cumulative size of the files exceeds repository limits.</p>
+
+<h2 id="setup-here">Setup here</h2>
+
+<p>We will use</p>
+
+<ul>
+  <li>a main deposit on openICPSR (the main AEA deposit)</li>
+  <li>a secondary deposit on Zenodo (which allows for access requests)</li>
+</ul>
+
+<p>We will not describe how to create the main deposit, which is described <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html">elsewhere</a>.</p>
+
+<h2 id="in-a-nutshell">In a nutshell</h2>
+
+<ol>
+  <li>Create a new upload on Zenodo, containing only the data that cannot be in the main deposit, plus a short README.</li>
+  <li>Set the <strong>files</strong> to “Restricted”. This maintains public <strong>metadata</strong>. Note however that the README will NOT be readable.</li>
+  <li>Enable <strong>access requests</strong>, and write clear, objective conditions for access.</li>
+  <li>Link the Zenodo record to the main deposit and to the article, and vice versa.</li>
+  <li>Submit the Zenodo record to the <a href="https://zenodo.org/communities/aeajournals">AEA Community</a>.</li>
+  <li>Document everything in the README of the openICPSR deposit.</li>
+</ol>
+
+<h2 id="step-by-step">Step by step</h2>
+
+<h3 id="prepare-the-files">Prepare the files</h3>
+
+<p>Separate the data that must be restricted from everything else. Everything that <strong>can</strong> be public (code, public data, documentation, codebooks,  variable lists for the restricted data) stays in the openICPSR deposit. The Zenodo deposit should contain only:</p>
+
+<ul>
+  <li>the restricted data files, with two options as to their structure:
+    <ul>
+      <li>A ZIP file that keeps the original directory structure of the restricted data, so that a user can simply unzip the files and obtain the correct directory structure</li>
+      <li>Individual files, subject to repository-specific limits<sup id="fnref:zenodo-limits"><a href="#fn:zenodo-limits" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
+    </ul>
+  </li>
+  <li>a short <code class="language-plaintext highlighter-rouge">README</code> that describes the files, points back to the main replication package, and repeats the terms of use;</li>
+  <li>if the data come with their own license or data use agreement text, a copy of it.</li>
+</ul>
+
+<p>Do <strong>not</strong> put code in the restricted deposit. Code goes into the main replication package, even if it depends on the presence of the restricted data. Ideally, code is structured to test for the presence of the files, and only run parts of the code that do not require the restricted data if the data are absent.</p>
+
+<h3 id="create-the-zenodo-upload">Create the Zenodo upload</h3>
+
+<p>Log in to Zenodo, and click on “New upload”. See <a href="https://help.zenodo.org/docs/deposit/create-new-upload/">Create new upload</a>.</p>
+
+<p>Fill in the usual metadata: title, authors, description, resource type (“Dataset”), and a license. A few recommendations:</p>
+
+<ul>
+  <li><strong>Title</strong>: make it obvious that this is a supplement, e.g., “Supplemental data for: <em>Title of the article</em>”.</li>
+  <li><strong>Description</strong>: this is <strong>public</strong>, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (we will also link to it in the metadata).</li>
+  <li><strong>License</strong>: choose a license that is consistent with the restrictions. Do not use CC-BY or similar open licenses for data that are not, in fact, open.</li>
+  <li><strong>DOI</strong>: let Zenodo reserve a DOI (“Get a DOI now!”), so you can reference it in the openICPSR README before the record is published.</li>
+</ul>
+
+<p>Upload the files.</p>
+
+<h3 id="restrict-the-files">Restrict the files</h3>
+
+<p>In the “Visibility” section, select “Restricted”. This means that anybody can find the record and read its description, but only people you grant access to can download the files.</p>
+
+<p><img src="/images/zenodo-select-restricted.png" alt="Zenodo visibility settings" /></p>
+
+<p>You may choose to use an embargo, if the sensitivity declines over time. At the end of an embargo, all access restrictions are lifted.</p>
+
+<h3 id="enable-access-requests">Enable access requests</h3>
+
+<p>Choose “Save Draft”. The record will then be created (but not yet published), and a “Share” button becomes available. Click on it: the “Share access” dialog opens on the “People” tab (we will come back to it below). Switch to the “Settings” tab.</p>
+
+<p><img src="/images/zenodo-access-requests.png" alt="Zenodo share access settings" /></p>
+
+<p>Choose the relevant options, and fill out the “Accept conditions”. These will be presented to the user who asks for access.</p>
+
+<ul>
+  <li>We recommend choosing <strong>Allow authenticated users to request access to restricted files</strong>, so that a record of who is asking for access is kept.</li>
+  <li>Reasonable access conditions must comply with journal policy, and be objective and consistent. For instance,</li>
+</ul>
+
+<blockquote>
+  <p>Access is granted to researchers affiliated with an academic or non-profit research institution, for non-commercial research purposes. Requesters must state their affiliation and intended use, and agree not to attempt to re-identify any individual or firm, and not to redistribute the data. To request access, follow instructions at <a href="https://help.zenodo.org/docs/share/access-requests/request-access/">https://help.zenodo.org/docs/share/access-requests/request-access/</a>.</p>
+</blockquote>
+
+<p>Data editors might reject the supplementary deposit if access is granted at the discretion of the authors, and may require that the deposit be in their community, where they will also see requests.</p>
+
+<h3 id="make-sure-somebody-other-than-you-can-approve-requests">Make sure somebody other than you can approve requests</h3>
+
+<p>By default, access requests go to the owner of the record, i.e., you. To make sure requests continue to be handled when you change jobs, change email addresses, or are simply on vacation, share <strong>management</strong> rights for the record with at least one other person, and ideally the journal’s data editor. Choose the  “People” menu, add the person by email, and select “Can manage” permission.</p>
+
+<p><img src="/images/zenodo-share-people.png" alt="Zenodo share with people" /></p>
+
+<h3 id="document-in-the-readme">Document in the README</h3>
+
+<p>In the README of the <strong>openICPSR</strong> deposit (ideally following the <a href="https://doi.org/10.5281/zenodo.7293838">Template README</a>), in the “Data Availability and Provenance Statements” section:</p>
+
+<ul>
+  <li>name the restricted files, and say where they are (the Zenodo DOI, e.g, <a href="https://doi.org/10.5281/zenodo.1234567">https://doi.org/10.5281/zenodo.1234567</a>);</li>
+  <li>state the conditions for access, and how to request access (via the Zenodo record’s “Request access” button, or the specific instructions at <a href="https://help.zenodo.org/docs/share/access-requests/request-access/">https://help.zenodo.org/docs/share/access-requests/request-access/</a>);</li>
+  <li>say where the files need to be placed for the code to run (e.g., <code class="language-plaintext highlighter-rouge">data/raw/restricted/</code>); or</li>
+  <li>say which code file unpacks the restricted data;</li>
+  <li>describe which results can, and which cannot, be reproduced without the restricted data. Ideally, the code checks for the presence of the restricted data and skips (with a clear message) the parts that need it, so that the rest of the package still runs.</li>
+</ul>
+
+<p>The Zenodo record’s own README should, in turn, point back to the openICPSR deposit, since that is where the code and full documentation live.</p>
+
+<h3 id="do-not-publish-yet">Do not publish yet</h3>
+
+<p>You can choose to publish, but you do not need to publish just yet. Inclusion in the AEA Community makes it available to the AEA Data Editor (similarly for other journals), without explicit sharing. The Data Editor may ask you later to publish it, or the journal staff may publish it synchronously with the main deposit.</p>
+
+<h3 id="link-the-deposits">Link the deposits</h3>
+
+<p>Both deposits should point to each other, and to the article. This may sometimes happen much later.</p>
+
+<ul>
+  <li><strong>On Zenodo</strong>: under “Related works”,
+    <ul>
+      <li>add the <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html#citing-your-deposit">DOI of the openICPSR deposit</a> (Type: <code class="language-plaintext highlighter-rouge">Software</code>) with relation “Is part of”</li>
+      <li>add the DOI of the article (once known, Type: <code class="language-plaintext highlighter-rouge">Journal Article</code>) with relation “Is supplement to”.</li>
+    </ul>
+  </li>
+  <li><strong>On openICPSR</strong>: in the “Related publications” section, use “Import from DOI” with the Zenodo DOI (once published), and choose <code class="language-plaintext highlighter-rouge">is supplemented by</code> for the <code class="language-plaintext highlighter-rouge">Relationship</code> field.</li>
+</ul>
+
+<h2 id="the-end-state">The end state</h2>
+
+<p>At the end:</p>
+
+<ul>
+  <li>The openICPSR deposit is public, contains all code and all non-restricted data, and its README explains how to obtain the rest.</li>
+  <li>The Zenodo record is public and findable, with a DOI and a clear description, but its files are only available to users who request access and agree to the conditions.</li>
+  <li>More than one person can approve access requests, and the conditions do not depend on the author’s discretion.</li>
+  <li>And incidentally, the Data Editor had the ability to verify reproducibility using the restricted data.</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:exceptions">
+      <p>Some repositories, like Dataverse, allow for file-level restrictions within a single deposit. <a href="#fnref:exceptions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:zenodo-limits">
+      <p>See <a href="https://help.zenodo.org/docs/deposit/manage-quota/">Zenodo file upload limits</a> for details. <a href="#fnref:zenodo-limits" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#data-editor-tips" class="page__taxonomy-item" rel="tag">data editor tips</a><span class="sep">, </span>
+    
+      <a href="/tags/#openicpsr" class="page__taxonomy-item" rel="tag">openICPSR</a><span class="sep">, </span>
+    
+      <a href="/tags/#private-data" class="page__taxonomy-item" rel="tag">private data</a><span class="sep">, </span>
+    
+      <a href="/tags/#replication-packages" class="page__taxonomy-item" rel="tag">replication packages</a><span class="sep">, </span>
+    
+      <a href="/tags/#terms-of-use" class="page__taxonomy-item" rel="tag">terms of use</a><span class="sep">, </span>
+    
+      <a href="/tags/#zenodo" class="page__taxonomy-item" rel="tag">Zenodo</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Published:</strong> <time datetime="2026-11-11T00:00:00-05:00">November 11, 2026</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://bsky.app/intent/compose?text=Creating+a+restricted-access+deposit+for+data+that+cannot+go+into+the+main+replication+package%20https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-11-11-zenodo-restricted-deposit" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faeadataeditor.github.io%2Fposts%2F2026-11-11-zenodo-restricted-deposit" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-10-08-memory-across-platforms" rel="permalink">Limits of Cross-Platform Code
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+A recent replication package came with a throw-away description in the README of one minor part of the processing: a Python notebook running in about 12 ho...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-08-12-psa-github" rel="permalink">PSA: Please be precise when using Github as input to scientific articles.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you use Github as an deposit for your scientific output, or you are re-using somebody else’s Github deposit, please be precise. I have some thoughts…
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-07-24-stata-convergence-across-platforms" rel="permalink">The Same Code, a Different Answer: Stata Convergence Across Platforms
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A recent replication came to a halt on a first-stage regression. The authors’ code ran fine on the authors’ computer. It failed on ours. Same code, same data...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/2026-05-08-private-data" rel="permalink">What to do when you have private, even anonymous data as part of your analysis?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In economics, it is not uncommon to have data that are so private that the provider cannot be named. Firms (because usually these are firms) may be unwilling...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-follow page__footer-custom">
+    <ul class="social-icons">
+      <li><strong>Suggestions and comments:</strong></li>
+             <li><a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/_posts/2026-11-11-zenodo-restricted-deposit.md"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Edit</a></li>
+             <li><a href="https://bsky.app/profile/aeadata.bsky.social">
+              <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> @aeadata.bsky.social</a></li>
+             <li><a rel="me" href="https://mstdn.social/@aeadata"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i>aeadata@mstdn.social</a></li>
+            <li><a href="https://www.aeaweb.org/contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Email</a></li>
+
+    </ul>
+  </div>
+  
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    <!-- 
+      <li><strong>Follow:</strong></li>
+     -->
+    <li><strong><a href="/disclosures.html">Disclosures</a></strong></li>
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/aeadata.bsky.social" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+        
+      
+        
+          <li><a href="https://mstdn.social/@aeadata" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://github.com/aeadataeditor" rel="me nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 American Economic Association. 
+  <a href="https://github.com/AEADataEditor/aeadataeditor.github.io/blob/main/LICENSE.md">
+    
+    <img src="/images/ccby80x15.png" width="80px" height="15px" alt="CC BY 4.0" />
+    </a>
+  
+   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
