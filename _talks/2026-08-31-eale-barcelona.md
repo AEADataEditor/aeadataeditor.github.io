@@ -17,6 +17,10 @@ mainurl: https://www.ub.edu/eale2026/the-conference/
 doi: 
 maindoi:
 participants: 75
+header:
+  image: /images/eale-2026-barcelona.jpg
+  teaser: /images/eale-2026-barcelona-th.jpg
+  caption: "Image: EALE 2026 conference, ub.edu/eale2026"
 ---
 
 ## Time

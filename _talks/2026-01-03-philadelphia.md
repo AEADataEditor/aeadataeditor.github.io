@@ -12,6 +12,10 @@ venue: "American Economic Association 2026 Annual Conference"
 mainurl: https://www.aeaweb.org/conference/2026/preliminary/1057
 doi: 
 maindoi: 
+header:
+  image: /images/assa-2026.jpg
+  teaser: /images/assa-2026-th.jpg
+  caption: "Image: ASSA Annual Meeting, aeaweb.org"
 ---
 
 ## Abstract
