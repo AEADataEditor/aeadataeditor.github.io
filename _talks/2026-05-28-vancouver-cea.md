@@ -4,6 +4,7 @@ collection: talks
 type: "Workshop"
 date: 2026-05-28
 participants: 48
+mode: "In-person" 
 joint: 
   - Marie Connolly
 location: "Vancouver, Canada"
