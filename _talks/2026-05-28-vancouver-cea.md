@@ -12,6 +12,10 @@ venue: "Canadian Economics Association meetings"
 mainurl: https://larsvilhuber.github.io/summer-school-sfu-ubc-2026/
 doi: 
 maindoi: 
+header:
+  image: /images/cea-2026-vancouver.jpg
+  teaser: /images/cea-2026-vancouver-th.jpg
+  caption: "Image: CEA Annual Meeting, economics.ca"
 ---
 
 ## Abstract
