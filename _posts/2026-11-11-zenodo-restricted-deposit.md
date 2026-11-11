@@ -99,9 +99,9 @@ You may choose to use an embargo, if the sensitivity declines over time. At the 
 
 ### Enable access requests
 
-Choose "Save Draft". The record will then be created (but not yet published). You can now select the record's "Share" menu. Open the "Settings" tab. 
+Choose "Save Draft". The record will then be created (but not yet published), and a "Share" button becomes available. Click on it: the "Share access" dialog opens on the "People" tab (we will come back to it below). Switch to the "Settings" tab.
 
-![Zenodo share menu settings](/images/zenodo-share-settings.png)
+![Zenodo share access settings](/images/zenodo-access-requests.png)
 
 Choose the relevant options, and fill out the "Accept conditions". These will be presented to the user who asks for access.
 
@@ -112,8 +112,6 @@ Choose the relevant options, and fill out the "Accept conditions". These will be
 
 Data editors might reject the supplementary deposit if access is granted at the discretion of the authors, and may require that the deposit be in their community, where they will also see requests.
 
-
-![Zenodo access request settings](/images/zenodo-access-requests.png)
 
 ### Make sure somebody other than you can approve requests
 
