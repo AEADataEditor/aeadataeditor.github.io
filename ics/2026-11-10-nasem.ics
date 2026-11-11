@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEA Data Editor//aeadataeditor.github.io//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-10-nasem@aeadataeditor.github.io
+DTSTAMP:20261111T193108Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:AI\, LLMs\, and the Responsible Use of Public Research Data: A Jour
+ nal (Data) Editor's Perspective
+LOCATION:National Academies of Sciences\, Engineering\, and Medicine\, Wash
+ ington\, DC
+DESCRIPTION:Workshop\nMode: online\nEvent information: https://github.com/l
+ arsvilhuber/nasem-ai-public-data\nMore information: https://aeadataeditor.
+ github.io/talks/2026-11-10-nasem
+URL:https://aeadataeditor.github.io/talks/2026-11-10-nasem
+END:VEVENT
+END:VCALENDAR

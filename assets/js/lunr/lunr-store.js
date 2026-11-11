@@ -1073,6 +1073,12 @@ var store = [{
         "url": "/talks/2026-09-08-uppsala",
         "teaser": null
       },{
+        "title": "AI, LLMs, and the Responsible Use of Public Research Data: A Journal (Data) Editor's Perspective",
+        "excerpt":"As part of “Super/Artificial Intelligence, Large Language Models, and the Responsible Use of Public Research Data Meeting of Experts”, a meeting organized by CNSTAT for the National Institute on Aging (NIA), Division of Behavioral and Social Research (BSR), I presented in Session 4: Journal Editor Perspective. How can journals ensure...","categories": ["dataeditor","open-science","reproducibility","ai"],
+        "tags": ["workshop"],
+        "url": "/talks/2026-11-10-nasem",
+        "teaser": null
+      },{
         "title": "AEA/ES Data Editors' Tutorial 1",
         "excerpt":"Abstract Journals require that you share your code and data in a replication package upon acceptance. However, efficient reproducibility starts at the beginning of the research project. Following some best practices can not only help you prepare a replication package later, but also make you a more productive researcher. In...","categories": [],
         "tags": [],
