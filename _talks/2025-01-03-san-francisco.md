@@ -12,6 +12,10 @@ mainurl: https://www.aeaweb.org/conference/2025/program/1294
 doi: 
 maindoi:
 participants: 20
+header:
+  image: /images/assa-2025.jpg
+  teaser: /images/assa-2025.jpg
+  caption: "Image: ASSA Annual Meeting, aeaweb.org"
 ---
 
 ## Abstract
