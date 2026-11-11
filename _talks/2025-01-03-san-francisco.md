@@ -14,7 +14,7 @@ maindoi:
 participants: 20
 header:
   image: /images/assa-2025.jpg
-  teaser: /images/assa-2025.jpg
+  teaser: /images/assa-2025-th.jpg
   caption: "Image: ASSA Annual Meeting, aeaweb.org"
 ---
 
