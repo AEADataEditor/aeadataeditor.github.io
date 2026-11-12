@@ -14,7 +14,7 @@ tags:
 
 Sometimes, authors have data that they are allowed to share, but **not openly/without restrictions**. 
 
-This post describes one solution: a **restricted, but shareable** supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).
+This post describes one solution: a **restricted, but shareable** supplementary deposit, which is linked to the main replication package. I will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).
 
 <!-- more -->
 
@@ -27,28 +27,34 @@ Most repositories only allow for deposit-wide permissions: Either all the files 
 
 [^exceptions]: Some repositories, like Dataverse, allow for file-level restrictions within a single deposit.
 
-Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author's laptop either. Here we describe how to proceed.  In earlier posts, I described what to do with [data from unnamed providers](2026-05-08-private-data) and with [data containing PII](2026-05-05-pii), which almost certainly require additional permissions, and for which this is not appropriate. A very similar scenario with a specific data provider was described [in the case of the PSID](2024-11-01-psid-requests). A restricted deposit, in this example on Zenodo, fits a specific case in between:
+Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author's laptop either. Here I describe how to proceed. In earlier posts, I described what to do with [data from unnamed providers](2026-05-08-private-data) and with [data containing PII](2026-05-05-pii) that were obtained under additional permissions (IRB, data use agreements), for which this is typically not appropriate. A very similar scenario with a specific data provider was described [in the case of the PSID](2024-11-01-psid-requests). The instructions here expand on [my guidance page](https://aeadataeditor.github.io/aea-de-guidance/creating-restricted-data-deposit-icpsr), with much more detail. 
+
+A restricted deposit, in this example on Zenodo, fits a specific case in between:
 
 - the **author** has the right to redistribute the data, but only under conditions (e.g., "for non-commercial research only", "users must agree not to re-identify respondents", "users must cite the original source");
 - no additional conditions (e.g., by IRB or data provider) have been imposed. 
 
+Note that the presence of PII does not, by itself, rule out this solution. For instance, data obtained through **public records requests** may not have redistribution restrictions, and (implicitly or explicitly) be in the public domain. But *combining* several such sources may produce files with sensitive identifiable information on private citizens. Authors (or the repository) may then reasonably decide that an open deposit is not appropriate, even though nothing legally prevents it. A restricted deposit, with generous access conditions, fits such cases well. See the [example](#an-example) below.
+
 It is **not** the right solution when:
 
 - the data are licensed from a third party that does not allow redistribution at all (then the data are not yours to deposit; document how to obtain them from the provider instead);
+- legal requirements impose more stringent obligations (e.g., GDPR, HIPAA).[^gdpr]
 - the data are so sensitive that they require a secure environment (enclave, FSRDC, or a curated archive with restricted-use agreements, such as ICPSR's restricted data services);
 - the data provider requires a specific deposit (e.g., PSID), though many of the other documentation mechanisms here apply.
 
+[^gdpr]: For an example of a connected restricted deposit using a GDPR-compliant archive, see {% cite ahrsjoIdentityCourtDecisionMaking2024 --file zenodo-restricted-deposit %}. The primary deposit is on openICPSR (<https://doi.org/10.3886/E193364V1>), and a secondary restricted deposit on the Swedish National Data Service (SND) (<https://doi.org/10.58141/27j7-8606>) contains identified data that the authors collected from public sources. The combined data fall under GDPR, so using Zenodo (or openICPSR) for them would not be appropriate.
 
 If you have data files from multiple data sources, you should create separate restricted deposits for each source, rather than combining them into a single Zenodo deposit, for better metadata and findability; it may also be necessary if the cumulative size of the files exceeds repository limits.
 
 ## Setup here
 
-We will use
+I will use
 
 - a main deposit on openICPSR (the main AEA deposit)
 - a secondary deposit on Zenodo (which allows for access requests)
 
-We will not describe how to create the main deposit, which is described [elsewhere](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html).
+I will not describe how to create the main deposit, which is described [elsewhere](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html). I previously recommended [using openICPSR](https://aeadataeditor.github.io/aea-de-guidance/creating-separate-data-deposit#restrictions), but that model is in flux, and cannot accept all data.
 
 ## In a nutshell
 
@@ -83,7 +89,7 @@ Log in to Zenodo, and click on "New upload". See [Create new upload](https://hel
 Fill in the usual metadata: title, authors, description, resource type ("Dataset"), and a license. A few recommendations:
 
 - **Title**: make it obvious that this is a supplement, e.g., "Supplemental data for: *Title of the article*".
-- **Description**: this is **public**, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (we will also link to it in the metadata).
+- **Description**: this is **public**, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (you will also link to it in the metadata).
 - **License**: choose a license that is consistent with the restrictions. Do not use CC-BY or similar open licenses for data that are not, in fact, open.
 - **DOI**: let Zenodo reserve a DOI ("Get a DOI now!"), so you can reference it in the openICPSR README before the record is published.
 
@@ -99,16 +105,20 @@ You may choose to use an embargo, if the sensitivity declines over time. At the 
 
 ### Enable access requests
 
-Choose "Save Draft". The record will then be created (but not yet published), and a "Share" button becomes available. Click on it: the "Share access" dialog opens on the "People" tab (we will come back to it below). Switch to the "Settings" tab.
+Choose "Save Draft". The record will then be created (but not yet published), and a "Share" button becomes available. Click on it: the "Share access" dialog opens on the "People" tab (I will come back to it below). Switch to the "Settings" tab.
 
 ![Zenodo share access settings](/images/zenodo-access-requests.png)
 
 Choose the relevant options, and fill out the "Accept conditions". These will be presented to the user who asks for access.
 
-- We recommend choosing **Allow authenticated users to request access to restricted files**, so that a record of who is asking for access is kept.
+- I recommend choosing **Allow authenticated users to request access to restricted files**, so that a record of who is asking for access is kept.
 - Reasonable access conditions must comply with journal policy, and be objective and consistent. For instance,
 
 > Access is granted to researchers affiliated with an academic or non-profit research institution, for non-commercial research purposes. Requesters must state their affiliation and intended use, and agree not to attempt to re-identify any individual or firm, and not to redistribute the data. To request access, follow instructions at <https://help.zenodo.org/docs/share/access-requests/request-access/>.
+
+or, for data that are restricted out of caution rather than by obligation (from the [example](#an-example) below):
+
+> These records were obtained through public records requests, and are not subject to republication restrictions. However, the files contain identifiable information combined from public records. Out of an abundance of caution, we have chosen to limit access to protect the privacy of individuals in the data, though others can re-obtain the data from the original sources. [...] Access will be approved for all reproducibility and robustness studies; other use will be evaluated on a case-by-case basis.
 
 Data editors might reject the supplementary deposit if access is granted at the discretion of the authors, and may require that the deposit be in their community, where they will also see requests.
 
@@ -132,6 +142,13 @@ In the README of the **openICPSR** deposit (ideally following the [Template READ
 The Zenodo record's own README should, in turn, point back to the openICPSR deposit, since that is where the code and full documentation live.
 
 
+### Submit to the AEA Community
+
+Request inclusion of the record in the [AEA Community](https://zenodo.org/communities/aeajournals) (the "Communities" section of the upload form, or the "Submit to community" button on the draft). Two things to know:
+
+- You can request inclusion for an **existing** (already published) record; there is no need to create a new deposit.
+- Once the record is in the community, the community curators (i.e., the AEA Data Editor team) can **edit** the record. We may use that to fix metadata or link the record to the article once it is published. 
+
 ### Do not publish yet
 
 You can choose to publish, but you do not need to publish just yet. Inclusion in the AEA Community makes it available to the AEA Data Editor (similarly for other journals), without explicit sharing. The Data Editor may ask you later to publish it, or the journal staff may publish it synchronously with the main deposit. 
@@ -153,4 +170,17 @@ At the end:
 - The Zenodo record is public and findable, with a DOI and a clear description, but its files are only available to users who request access and agree to the conditions.
 - More than one person can approve access requests, and the conditions do not depend on the author's discretion.
 - And incidentally, the Data Editor had the ability to verify reproducibility using the restricted data.
+
+## An example
+
+"The Effect of Field Training Officers on Police Use of Force" {% cite adgerEffectFieldTraining2026 --file zenodo-restricted-deposit %} uses police department and state personnel records obtained through public records requests. The combined files contain identifiable information on private individuals, so the raw data were placed in a restricted deposit:
+
+- main replication package on openICPSR: <https://doi.org/10.3886/E238225V1>
+- restricted supplemental data on Zenodo: <https://doi.org/10.5281/zenodo.23696803>
+
+The Zenodo record's public description explains what the files are, why access is limited, how to request access, and points back to the main replication package. 
+
+## References
+
+{% bibliography --file zenodo-restricted-deposit %}
 
