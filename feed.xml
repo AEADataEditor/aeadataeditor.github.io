@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-11-11T16:50:59-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Creating a restricted-access deposit for data that cannot go into the main replication package</title><link href="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit" rel="alternate" type="text/html" title="Creating a restricted-access deposit for data that cannot go into the main replication package" /><published>2026-11-11T00:00:00-05:00</published><updated>2026-11-11T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/zenodo-restricted-deposit</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit"><![CDATA[<p>Sometimes, authors have data that they are allowed to share, but <strong>not openly/without restrictions</strong>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aeadataeditor.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aeadataeditor.github.io/" rel="alternate" type="text/html" /><updated>2026-11-12T16:33:53-05:00</updated><id>https://aeadataeditor.github.io/feed.xml</id><title type="html">Office of the AEA Data Editor</title><subtitle>(current: Lars Vilhuber)</subtitle><author><name>AEA Data Editor</name></author><entry><title type="html">Creating a restricted-access deposit for data that cannot go into the main replication package</title><link href="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit" rel="alternate" type="text/html" title="Creating a restricted-access deposit for data that cannot go into the main replication package" /><published>2026-11-11T00:00:00-05:00</published><updated>2026-11-11T00:00:00-05:00</updated><id>https://aeadataeditor.github.io/posts/zenodo-restricted-deposit</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-11-11-zenodo-restricted-deposit"><![CDATA[<p>Sometimes, authors have data that they are allowed to share, but <strong>not openly/without restrictions</strong>.</p>
 
-<p>This post describes one solution: a <strong>restricted, but shareable</strong> supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).</p>
+<p>This post describes one solution: a <strong>restricted, but shareable</strong> supplementary deposit, which is linked to the main replication package. I will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).</p>
 
 <!-- more -->
 
@@ -10,17 +10,22 @@
 
 <p>Most repositories only allow for deposit-wide permissions: Either all the files are restricted, or none of them are. So restricting the deposit because one data file is restricted would make the code, and documentation, inaccessible to others.<sup id="fnref:exceptions"><a href="#fn:exceptions" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
-<p>Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author’s laptop either. Here we describe how to proceed.  In earlier posts, I described what to do with <a href="2026-05-08-private-data">data from unnamed providers</a> and with <a href="2026-05-05-pii">data containing PII</a>, which almost certainly require additional permissions, and for which this is not appropriate. A very similar scenario with a specific data provider was described <a href="2024-11-01-psid-requests">in the case of the PSID</a>. A restricted deposit, in this example on Zenodo, fits a specific case in between:</p>
+<p>Restricted but shareable data thus cannot go into the primary replication package. But the data should also not just sit on the author’s laptop either. Here I describe how to proceed. In earlier posts, I described what to do with <a href="2026-05-08-private-data">data from unnamed providers</a> and with <a href="2026-05-05-pii">data containing PII</a> that were obtained under additional permissions (IRB, data use agreements), for which this is typically not appropriate. A very similar scenario with a specific data provider was described <a href="2024-11-01-psid-requests">in the case of the PSID</a>. The instructions here expand on <a href="https://aeadataeditor.github.io/aea-de-guidance/creating-restricted-data-deposit-icpsr">my guidance page</a>, with much more detail.</p>
+
+<p>A restricted deposit, in this example on Zenodo, fits a specific case in between:</p>
 
 <ul>
   <li>the <strong>author</strong> has the right to redistribute the data, but only under conditions (e.g., “for non-commercial research only”, “users must agree not to re-identify respondents”, “users must cite the original source”);</li>
   <li>no additional conditions (e.g., by IRB or data provider) have been imposed.</li>
 </ul>
 
+<p>Note that the presence of PII does not, by itself, rule out this solution. For instance, data obtained through <strong>public records requests</strong> may not have redistribution restrictions, and (implicitly or explicitly) be in the public domain. But <em>combining</em> several such sources may produce files with sensitive identifiable information on private citizens. Authors (or the repository) may then reasonably decide that an open deposit is not appropriate, even though nothing legally prevents it. A restricted deposit, with generous access conditions, fits such cases well. See the <a href="#an-example">example</a> below.</p>
+
 <p>It is <strong>not</strong> the right solution when:</p>
 
 <ul>
   <li>the data are licensed from a third party that does not allow redistribution at all (then the data are not yours to deposit; document how to obtain them from the provider instead);</li>
+  <li>legal requirements impose more stringent obligations (e.g., GDPR, HIPAA).<sup id="fnref:gdpr"><a href="#fn:gdpr" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
   <li>the data are so sensitive that they require a secure environment (enclave, FSRDC, or a curated archive with restricted-use agreements, such as ICPSR’s restricted data services);</li>
   <li>the data provider requires a specific deposit (e.g., PSID), though many of the other documentation mechanisms here apply.</li>
 </ul>
@@ -29,14 +34,14 @@
 
 <h2 id="setup-here">Setup here</h2>
 
-<p>We will use</p>
+<p>I will use</p>
 
 <ul>
   <li>a main deposit on openICPSR (the main AEA deposit)</li>
   <li>a secondary deposit on Zenodo (which allows for access requests)</li>
 </ul>
 
-<p>We will not describe how to create the main deposit, which is described <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html">elsewhere</a>.</p>
+<p>I will not describe how to create the main deposit, which is described <a href="https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea.html">elsewhere</a>. I previously recommended <a href="https://aeadataeditor.github.io/aea-de-guidance/creating-separate-data-deposit#restrictions">using openICPSR</a>, but that model is in flux, and cannot accept all data.</p>
 
 <h2 id="in-a-nutshell">In a nutshell</h2>
 
@@ -59,7 +64,7 @@
   <li>the restricted data files, with two options as to their structure:
     <ul>
       <li>A ZIP file that keeps the original directory structure of the restricted data, so that a user can simply unzip the files and obtain the correct directory structure</li>
-      <li>Individual files, subject to repository-specific limits<sup id="fnref:zenodo-limits"><a href="#fn:zenodo-limits" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
+      <li>Individual files, subject to repository-specific limits<sup id="fnref:zenodo-limits"><a href="#fn:zenodo-limits" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
     </ul>
   </li>
   <li>a short <code class="language-plaintext highlighter-rouge">README</code> that describes the files, points back to the main replication package, and repeats the terms of use;</li>
@@ -76,7 +81,7 @@
 
 <ul>
   <li><strong>Title</strong>: make it obvious that this is a supplement, e.g., “Supplemental data for: <em>Title of the article</em>”.</li>
-  <li><strong>Description</strong>: this is <strong>public</strong>, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (we will also link to it in the metadata).</li>
+  <li><strong>Description</strong>: this is <strong>public</strong>, even if the files are not. Describe what the data are, why they are restricted, and what the conditions for access are. You can mention the main replication package by DOI (you will also link to it in the metadata).</li>
   <li><strong>License</strong>: choose a license that is consistent with the restrictions. Do not use CC-BY or similar open licenses for data that are not, in fact, open.</li>
   <li><strong>DOI</strong>: let Zenodo reserve a DOI (“Get a DOI now!”), so you can reference it in the openICPSR README before the record is published.</li>
 </ul>
@@ -93,19 +98,25 @@
 
 <h3 id="enable-access-requests">Enable access requests</h3>
 
-<p>Choose “Save Draft”. The record will then be created (but not yet published), and a “Share” button becomes available. Click on it: the “Share access” dialog opens on the “People” tab (we will come back to it below). Switch to the “Settings” tab.</p>
+<p>Choose “Save Draft”. The record will then be created (but not yet published), and a “Share” button becomes available. Click on it: the “Share access” dialog opens on the “People” tab (I will come back to it below). Switch to the “Settings” tab.</p>
 
 <p><img src="/images/zenodo-access-requests.png" alt="Zenodo share access settings" /></p>
 
 <p>Choose the relevant options, and fill out the “Accept conditions”. These will be presented to the user who asks for access.</p>
 
 <ul>
-  <li>We recommend choosing <strong>Allow authenticated users to request access to restricted files</strong>, so that a record of who is asking for access is kept.</li>
+  <li>I recommend choosing <strong>Allow authenticated users to request access to restricted files</strong>, so that a record of who is asking for access is kept.</li>
   <li>Reasonable access conditions must comply with journal policy, and be objective and consistent. For instance,</li>
 </ul>
 
 <blockquote>
   <p>Access is granted to researchers affiliated with an academic or non-profit research institution, for non-commercial research purposes. Requesters must state their affiliation and intended use, and agree not to attempt to re-identify any individual or firm, and not to redistribute the data. To request access, follow instructions at <a href="https://help.zenodo.org/docs/share/access-requests/request-access/">https://help.zenodo.org/docs/share/access-requests/request-access/</a>.</p>
+</blockquote>
+
+<p>or, for data that are restricted out of caution rather than by obligation (from the <a href="#an-example">example</a> below):</p>
+
+<blockquote>
+  <p>These records were obtained through public records requests, and are not subject to republication restrictions. However, the files contain identifiable information combined from public records. Out of an abundance of caution, we have chosen to limit access to protect the privacy of individuals in the data, though others can re-obtain the data from the original sources. […] Access will be approved for all reproducibility and robustness studies; other use will be evaluated on a case-by-case basis.</p>
 </blockquote>
 
 <p>Data editors might reject the supplementary deposit if access is granted at the discretion of the authors, and may require that the deposit be in their community, where they will also see requests.</p>
@@ -129,6 +140,15 @@
 </ul>
 
 <p>The Zenodo record’s own README should, in turn, point back to the openICPSR deposit, since that is where the code and full documentation live.</p>
+
+<h3 id="submit-to-the-aea-community">Submit to the AEA Community</h3>
+
+<p>Request inclusion of the record in the <a href="https://zenodo.org/communities/aeajournals">AEA Community</a> (the “Communities” section of the upload form, or the “Submit to community” button on the draft). Two things to know:</p>
+
+<ul>
+  <li>You can request inclusion for an <strong>existing</strong> (already published) record; there is no need to create a new deposit.</li>
+  <li>Once the record is in the community, the community curators (i.e., the AEA Data Editor team) can <strong>edit</strong> the record. We may use that to fix metadata or link the record to the article once it is published.</li>
+</ul>
 
 <h3 id="do-not-publish-yet">Do not publish yet</h3>
 
@@ -159,16 +179,39 @@
   <li>And incidentally, the Data Editor had the ability to verify reproducibility using the restricted data.</li>
 </ul>
 
+<h2 id="an-example">An example</h2>
+
+<p>“The Effect of Field Training Officers on Police Use of Force” <a class="citation" href="#adgerEffectFieldTraining2026">(Adger, Ross, and Sloan 2026)</a> uses police department and state personnel records obtained through public records requests. The combined files contain identifiable information on private individuals, so the raw data were placed in a restricted deposit:</p>
+
+<ul>
+  <li>main replication package on openICPSR: <a href="https://doi.org/10.3886/E238225V1">https://doi.org/10.3886/E238225V1</a></li>
+  <li>restricted supplemental data on Zenodo: <a href="https://doi.org/10.5281/zenodo.23696803">https://doi.org/10.5281/zenodo.23696803</a></li>
+</ul>
+
+<p>The Zenodo record’s public description explains what the files are, why access is limited, how to request access, and points back to the main replication package.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="adgerDataCodeEffect2026">Adger, Chandon, Matthew B. Ross, and CarlyWill Sloan. 2026. “Data and Code for: The Effect of Field Training Officers on Police Use of Force.” [Replication package]. American Economic Association [publisher]. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E238225V1.</span></li>
+<li><span id="adgerSupplementalDataEffect2026">———. 2026. “Supplemental Data for: The Effect of Field Training Officers on Police Use of Force.” Zenodo. https://doi.org/10.5281/zenodo.23696803.</span></li>
+<li><span id="adgerEffectFieldTraining2026">———. 2026. “The Effect of Field Training Officers on Police Use of Force.” <i>American Economic Review</i> 116 (5): 1837–75. https://doi.org/10.1257/aer.20240785.</span></li>
+<li><span id="ahrsjoDataIdentityCourt2023">Ahrsjö, Ulrika, Susan Niknami, and Mårten Palme. 2023. “Data for: Identity in Court Decision-Making.” Stockholm University. https://doi.org/10.58141/27j7-8606.</span></li>
+<li><span id="ahrsjoCodeIdentityCourt2024">———. 2024. “Code for Identity in Court Decision-Making.” American Economic Association [Publisher]. ICPSR - Interuniversity Consortium for Political and Social Research. https://doi.org/10.3886/E193364V1.</span></li>
+<li><span id="ahrsjoIdentityCourtDecisionMaking2024">———. 2024. “Identity in Court Decision-Making.” <i>American Economic Journal: Economic Policy</i> 16 (4): 142–64. https://doi.org/10.1257/pol.20220802.</span></li></ol>
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:exceptions">
       <p>Some repositories, like Dataverse, allow for file-level restrictions within a single deposit. <a href="#fnref:exceptions" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
+    <li id="fn:gdpr">
+      <p>For an example of a connected restricted deposit using a GDPR-compliant archive, see <a class="citation" href="#ahrsjoIdentityCourtDecisionMaking2024">(Ahrsjö, Niknami, and Palme 2024)</a>. The primary deposit is on openICPSR (<a href="https://doi.org/10.3886/E193364V1">https://doi.org/10.3886/E193364V1</a>), and a secondary restricted deposit on the Swedish National Data Service (SND) (<a href="https://doi.org/10.58141/27j7-8606">https://doi.org/10.58141/27j7-8606</a>) contains identified data that the authors collected from public sources. The combined data fall under GDPR, so using Zenodo (or openICPSR) for them would not be appropriate. <a href="#fnref:gdpr" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
     <li id="fn:zenodo-limits">
       <p>See <a href="https://help.zenodo.org/docs/deposit/manage-quota/">Zenodo file upload limits</a> for details. <a href="#fnref:zenodo-limits" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="private data" /><category term="Zenodo" /><category term="openICPSR" /><summary type="html"><![CDATA[Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).]]></summary></entry><entry><title type="html">Limits of Cross-Platform Code</title><link href="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms" rel="alternate" type="text/html" title="Limits of Cross-Platform Code" /><published>2026-10-08T00:00:00-04:00</published><updated>2026-10-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/memory-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms"><![CDATA[<!--
+</div>]]></content><author><name>AEA Data Editor</name></author><category term="data editor tips" /><category term="replication packages" /><category term="terms of use" /><category term="private data" /><category term="Zenodo" /><category term="openICPSR" /><summary type="html"><![CDATA[Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. I will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can be used within a single repository, or across different pairs of repositories (though details will be different).]]></summary></entry><entry><title type="html">Limits of Cross-Platform Code</title><link href="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms" rel="alternate" type="text/html" title="Limits of Cross-Platform Code" /><published>2026-10-08T00:00:00-04:00</published><updated>2026-10-08T00:00:00-04:00</updated><id>https://aeadataeditor.github.io/posts/memory-across-platforms</id><content type="html" xml:base="https://aeadataeditor.github.io/posts/2026-10-08-memory-across-platforms"><![CDATA[<!--
 Bluesky version (each paragraph < 300 characters):
 
 1/ The authors' README: "Runs in 12h40m on a Mac with 24 GB of RAM." Our Linux server: crashed out of memory. With 64 GB. With 180 GB. With 1,000 GB. Same code, same data. A thread on the limits of cross-platform code. 🧵

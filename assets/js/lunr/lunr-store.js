@@ -408,7 +408,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Creating a restricted-access deposit for data that cannot go into the main replication package",
-        "excerpt":"Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. We will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can...","categories": [],
+        "excerpt":"Sometimes, authors have data that they are allowed to share, but not openly/without restrictions. This post describes one solution: a restricted, but shareable supplementary deposit, which is linked to the main replication package. I will use openICPSR (the AEA main repository) and Zenodo (for the supplement) but similar methods can...","categories": [],
         "tags": ["data editor tips","replication packages","terms of use","private data","Zenodo","openICPSR"],
         "url": "/posts/2026-11-11-zenodo-restricted-deposit",
         "teaser": null
